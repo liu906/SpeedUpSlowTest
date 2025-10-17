@@ -1,0 +1,13 @@
+https://github.com/ProjectTech4DevAI/ai-platform/pull/325
+
+cd ~/LLM/SlowTestOpt/versions/ai-platform_325/before
+./scripts/test-local.sh
+
+energibridge --summary bash test.sh
+before
+Energy consumption in joules: 1348.2940103769308 for 76.4437 sec of execution.
+Energy consumption in joules: 1311.5810683898933 for 75.711044 sec of execution.
+after
+Energy consumption in joules: 5.253644378662109 for 0.6382784 sec of execution.
+Energy consumption in joules: 4.876381046295165 for 0.63746446 sec of execution.
+
