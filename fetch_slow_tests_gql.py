@@ -49,21 +49,7 @@ query ($q: String!, $first: Int!, $after: String) {
             pushedAt
           }
           # timeline 中的 cross-references 可能包含来自 PR 的引用
-          timelineItems(itemTypes: CROSS_REFERENCED_EVENT, first: 10) {
-            nodes {
-              ... on CrossReferencedEvent {
-                source {
-                  __typename
-                  ... on PullRequest {
-                    url
-                    number
-                    title
-                    repository { nameWithOwner }
-                  }
-                }
-              }
-            }
-          }
+
         }
       }
     }
@@ -122,13 +108,13 @@ def make_date_str(dt):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="slow_test_issues_by_year.csv", type=str, help="Output CSV path")
+    ap.add_argument("--out", default="slow_test_issues_by_year_only_python.csv", type=str, help="Output CSV path")
     # per-year limit (软编码，默认 1000)
-    ap.add_argument("--per_year_max", type=int, default=100, help="Max results per year (soft limit)")
-    ap.add_argument("--years", type=int, default=2, help="Number of years to go back (starting from today)")
-    ap.add_argument("--q", default='"slow test" is:issue is:closed linked:pr', help="Base query (GraphQL uses Best match)")
+    ap.add_argument("--per_year_max", type=int, default=200, help="Max results per year (soft limit)")
+    ap.add_argument("--years", type=int, default=5, help="Number of years to go back (starting from today)")
+    ap.add_argument("--q", default='"slow test" is:issue is:closed linked:pr language:Python', help="Base query (GraphQL uses Best match)")
     ap.add_argument("--min_stars", type=int, default=5, help="Client-side repo stargazer filter (strictly greater than)")
-    ap.add_argument("--page_size", type=int, default=100, help="GraphQL search page size (max 100)")
+    ap.add_argument("--page_size", type=int, default=50, help="GraphQL search page size (max 100)")
     args = ap.parse_args()
 
     token = os.environ.get("GITHUB_TOKEN")
@@ -187,15 +173,15 @@ def main():
                 if stars <= args.min_stars:
                     continue  # 客户端执行 stars > min_stars 过滤
 
-                # 解析 timelineItems 中的 cross-referenced PR 来源
-                linked_prs = []
-                timeline = node.get("timelineItems") or {}
-                for tnode in timeline.get("nodes", []) or []:
-                    if not tnode:
-                        continue
-                    src = tnode.get("source") or {}
-                    if (src.get("__typename") == "PullRequest") and src.get("url"):
-                        linked_prs.append(src.get("url"))
+                # # 解析 timelineItems 中的 cross-referenced PR 来源
+                # linked_prs = []
+                # timeline = node.get("timelineItems") or {}
+                # for tnode in timeline.get("nodes", []) or []:
+                #     if not tnode:
+                #         continue
+                #     src = tnode.get("source") or {}
+                #     if (src.get("__typename") == "PullRequest") and src.get("url"):
+                #         linked_prs.append(src.get("url"))
 
                 row = {
                     "repo_full_name": repo.get("nameWithOwner"),
@@ -217,7 +203,8 @@ def main():
                         [n["name"] for n in (node.get("labels") or {}).get("nodes", []) if n and n.get("name")]
                     ),
                     "issue_author_login": (node.get("author") or {}).get("login"),
-                    "linked_pr_urls": ";".join(linked_prs),
+                    # "linked_pr_urls": ";".join(linked_prs),
+                    "linked_pr_urls": "",
                     "slice_start": make_date_str(start_dt),
                     "slice_end": make_date_str(end_dt),
                     "slice_year_index": i
@@ -236,7 +223,7 @@ def main():
             if rl and rl.get("remaining", 1) < 50:
                 # resetAt 是 ISO 时间；简单保险等 10 秒（可按需改）
                 print("Low rate limit remaining; sleeping 10s")
-                time.sleep(10)
+                time.sleep(20)
 
         print(f"[Year slice {i}] Collected {collected} rows (requested per_year_max={args.per_year_max})")
 
