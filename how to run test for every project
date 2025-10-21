@@ -11,3 +11,5 @@ after
 Energy consumption in joules: 5.253644378662109 for 0.6382784 sec of execution.
 Energy consumption in joules: 4.876381046295165 for 0.63746446 sec of execution.
 
+BuffaLogs
+exec buffalogs python manage.py test
