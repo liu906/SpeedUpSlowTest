@@ -66,6 +66,41 @@ import shutil
 import os, subprocess, shutil, tarfile, requests
 
 
+def smart_copy_tree(src, dst, symlinks=True):
+    """
+    智能复制目录树：
+    - 如果dst不存在，完整复制src到dst
+    - 如果dst存在，只更新src中存在的文件，保留dst中额外的文件
+    """
+    if not os.path.exists(dst):
+        # 目标目录不存在，直接完整复制
+        shutil.copytree(src, dst, symlinks=symlinks, ignore=shutil.ignore_patterns('.git'))
+        return
+
+    # 目标目录存在，执行智能合并
+    for item in os.listdir(src):
+        if item == '.git':
+            continue
+
+        src_item = os.path.join(src, item)
+        dst_item = os.path.join(dst, item)
+
+        if os.path.isdir(src_item):
+            # 递归处理子目录
+            smart_copy_tree(src_item, dst_item, symlinks=symlinks)
+        else:
+            # 复制/覆盖文件
+            os.makedirs(os.path.dirname(dst_item), exist_ok=True)
+            if symlinks and os.path.islink(src_item):
+                # 处理符号链接
+                if os.path.exists(dst_item) or os.path.islink(dst_item):
+                    os.remove(dst_item)
+                linkto = os.readlink(src_item)
+                os.symlink(linkto, dst_item)
+            else:
+                shutil.copy2(src_item, dst_item)
+
+
 def get_pr_versions(repo, pr_number, github_token=None):
     headers = {}
     if github_token:
@@ -86,22 +121,17 @@ def get_pr_versions(repo, pr_number, github_token=None):
     repo_name = repo.split('/')[-1]
     versions_dir = f"versions/{repo_name}_{pr_number}"
 
-    if os.path.exists(versions_dir):
-        before_dir = os.path.join(versions_dir, "before")
-        after_dir = os.path.join(versions_dir, "after")
-        print(f"版本目录已存在,跳过处理: {versions_dir}")
-        return before_dir, after_dir
-
     os.makedirs(versions_dir, exist_ok=True)
 
     before_dir = os.path.join(versions_dir, "before")
     after_dir = os.path.join(versions_dir, "after")
 
-    # 清理旧的版本目录
-    if os.path.exists(before_dir):
-        shutil.rmtree(before_dir)
-    if os.path.exists(after_dir):
-        shutil.rmtree(after_dir)
+    # 检查是否已经处理过（目录存在且非空）
+    if os.path.exists(before_dir) and os.path.exists(after_dir):
+        if os.listdir(before_dir) and os.listdir(after_dir):
+            print(f"版本目录已存在且非空，将更新仓库文件但保留你的自定义文件: {versions_dir}")
+        else:
+            print(f"版本目录存在但为空，将重新下载")
 
     # 临时克隆目录
     temp_clone = f"temp_{repo_name}"
@@ -111,17 +141,13 @@ def get_pr_versions(repo, pr_number, github_token=None):
     # 克隆仓库到临时目录
     subprocess.run(['git', 'clone', f'https://github.com/{repo}.git', temp_clone])
 
-    # 检出PR前版本并保存
+    # 检出PR前版本并智能保存（只更新仓库文件，保留用户文件）
     subprocess.run(['git', 'checkout', base_sha], cwd=temp_clone)
-    shutil.copytree(temp_clone, before_dir,
-                    symlinks=True,  # 添加这个参数
-                    ignore=shutil.ignore_patterns('.git'))
+    smart_copy_tree(temp_clone, before_dir, symlinks=True)
 
-    # 检出PR后版本并保存
+    # 检出PR后版本并智能保存（只更新仓库文件，保留用户文件）
     subprocess.run(['git', 'checkout', merge_sha], cwd=temp_clone)
-    shutil.copytree(temp_clone, after_dir,
-                    symlinks=True,  # 添加这个参数
-                    ignore=shutil.ignore_patterns('.git'))
+    smart_copy_tree(temp_clone, after_dir, symlinks=True)
 
     # 清理临时目录
     shutil.rmtree(temp_clone)
@@ -129,6 +155,7 @@ def get_pr_versions(repo, pr_number, github_token=None):
     print("版本提取完成!")
     print(f"PR前版本保存在: {before_dir}")
     print(f"PR后版本保存在: {after_dir}")
+    print("注意: 你创建的自定义文件已被保留")
 
     return before_dir, after_dir
 
