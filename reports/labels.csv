@@ -1,0 +1,1915 @@
+label,issues
+bug,361
+enhancement,237
+skipped,110
+triaged,108
+module: flaky-tests,88
+good first issue,67
+performance,61
+testing,58
+C-test-failure,58
+help wanted,57
+O-robot,51
+module: rocm,46
+tests,40
+kind/bug,36
+C-bug,32
+module: c10d,32
+branch-master,30
+type/bug,29
+module: cuda,24
+test,24
+priority: low,24
+feature,22
+T-sql-foundations,21
+P1,21
+A-testing,19
+released,19
+oncall: pt2,19
+maintenance,18
+ci,18
+Bug,18
+type: bug,17
+documentation,17
+O-roachtest,17
+T-kv,16
+module: inductor,15
+Performance,14
+kind/flake,14
+optimization,13
+P-2,13
+technical-debt,13
+needs-triage,12
+kind/failing-test,12
+refactoring,12
+refactor,12
+P0,12
+platform: NXP,12
+module: sdpa,11
+accepting prs,11
+CI,11
+component/test,11
+triage/accepted,11
+feature request,11
+C-enhancement,10
+area: SPI,10
+T-sql-queries,10
+Backport candidate,10
+Enhancement,10
+locked due to age,10
+backend,10
+type/enhancement,9
+build,9
+Testing,9
+repo maintenance,9
+ci-failure,9
+type:bug,9
+area/testing,9
+severity/moderate,9
+flaky-test,9
+module: xpu,9
+symptom/ci stability,9
+area/ci,8
+Tests,8
+high priority,8
+sig/node,8
+release-blocker,8
+regression,8
+question,8
+target-release-25.4.0,8
+P2,8
+Type: Bug,7
+improvement,7
+type: enhancement,7
+flaky test,7
+sig/network,7
+stale,7
+priority/important-soon,7
+P3,7
+kind/feature,7
+Regression,7
+sweep,7
+T-bug,7
+bug 🐛,6
+area: Tests,6
+level/task,6
+t/bug,6
+Task,6
+>test-failure,6
+skipped-test,6
+tenet-performance,6
+branch-release-25.3,6
+branch-release-22.2,6
+failed-test,6
+🐛 bug,5
+v25.3.0,5
+needs triage,5
+Type: bug,5
+api,5
+triage,5
+tech-debt,5
+chore,5
+area/test,5
+locked - please file new issue/PR,5
+priority: high,5
+Stale,5
+branch-release-25.2,5
+severity/minor,5
+💎 Bounty,5
+branch-release-23.1,5
+OS/Desktop,5
+sig/planner,5
+area/tablets,4
+💰 Rewarded,4
+affects-7.5,4
+(S2 - Confirmed),4
+FrozenDueToAge,4
+priority: medium,4
+java,4
+area/tests,4
+I-slow,4
+confirmed,4
+Code: Tests,4
+area/alternator,4
+resolution/fixed,4
+infrastructure,4
+core,4
+verified,4
+T: task,4
+Team:Elastic-Agent,4
+devops,4
+is:bug,4
+high,4
+kind/enhancement,4
+closed:done,4
+low priority,4
+tech debt,4
+topic:editor,4
+in-pr,4
+task,4
+github_actions,4
+docs,4
+ci/cd,4
+Feature,4
+defect,4
+e2e,4
+Infrastructure,4
+python,4
+feature-request,4
+bug 🐞,3
+integrations,3
+Ready,3
+legibility,3
+database,3
+T-feature,3
+Cmd-forge-test,3
+xERC20 🪙,3
+platform: NXP S32,3
+cleanup,3
+Priority: High,3
+proposal,3
+tests/flaky,3
+flakes,3
+area: enhancement :wrench:,3
+type:enhancement,3
+in progress,3
+[Type] Bug,3
+branch-release-25.1,3
+component/zeebe,3
+feature-test-runner,3
+up-for-grabs,3
+T-testeng,3
+type:refactor,3
+sev/low,3
+platform: STM32,3
+T-storage,3
+C-testing,3
+A-storage,3
+version:8.6.0,3
+databuilder-1,3
+Type: Enhancement,3
+v25.2.3,3
+Mend: dependency security vulnerability,3
+Component: Continuous Integration,3
+todo,3
+component/ddl,3
+OLM Sprint,3
+area-testing,3
+Team:Defend Workflows,3
+test-failure,3
+BUG,3
+fixed,3
+triaged: bug,3
+P-3,3
+branch: master,3
+perf,3
+technical debt,3
+M,3
+priority:high,3
+Type: Tests,3
+area/topology changes,3
+internal,3
+kind/performance,3
+UC Mode / CDP Mode,3
+👍 lgtm,3
+release-notes/include,3
+os-windows,3
+B-runtime-assertions-enabled,3
+scipy.stats,3
+QA/Yes,3
+role: dev,3
+Proposal,3
+debt,3
+kind/health,3
+Status: Needs Triage,3
+area:testing,3
+test_runner,3
+blackhole,3
+topic: performance,3
+sig/windows,3
+kind/engineering,3
+type:task,3
+investigate,3
+exp/intermediate,3
+locked,3
+Maintenance,3
+WIP,3
+A-LLVM,3
+typescript,3
+sig/sql-infra,3
+severity/major,3
+platform/windows,3
+Team:obs-ux-logs,3
+developer experience,3
+reason:flaky-test,3
+platform/ios,3
+Priority:P2,3
+T-cdc,3
+QA/No,3
+release-notes/exclude,3
+branch-release-24.1,3
+nifgen,2
+area: DMA,2
+area/storage,2
+bounty,2
+A-cdc,2
+no-test-failure-activity,2
+browser-firefox,2
+C-forge,2
+test-suite,2
+community,2
+sequencer,2
+team-tool,2
+v25.2.0-prerelease,2
+type: imperfection,2
+authentication,2
+branch-release-24.3,2
+S,2
+module: dynamo,2
+auto-triaged,2
+pr welcome,2
+v25.3.0-prerelease,2
+comp:infinitest-eclipse,2
+kind/task,2
+CT,2
+has_pr,2
+Docs,2
+Priority: Blocker,2
+✨ enhancement,2
+tooling,2
+arch-x64,2
+layer/storage,2
+devex,2
+platform/arm,2
+conclusion: resolved,2
+🐛 Bug,2
+Hangs_Taskforce,2
+4.x,2
+type: performance 🏃‍♀️,2
+area/testsuite,2
+lifecycle/stale,2
+flaky-tests,2
+insiders-released,2
+codegen,2
+topic: code,2
+gui,2
+perf/general,2
+dependencies,2
+UI,2
+p2,2
+CI & Testing,2
+blocking-clean-ci-optional,2
+type: chore,2
+T-perf,2
+A-rpc,2
+💻 aspect: code,2
+regression-from-stable-to-stable,2
+A-build-system,2
+Optimization,2
+kind/chore,2
+bug :bug:,2
+DevOps,2
+code health,2
+High Priority,2
+Test,2
+>test,2
+Feature Request,2
+memory-leak,2
+team-wallet-framework,2
+area:core,2
+T-compiler,2
+new feature,2
+Urgent,2
+needs-backport,2
+Build Tested: Dev,2
+type/ci,2
+Audio,2
+forecasting,2
+p2-edge-case,2
+c/storage/pageserver,2
+speed,2
+bug :beetle:,2
+😌 QoL,2
+is:enhancement,2
+A-kv-distribution,2
+Type: Testing,2
+change,2
+O-remote-execution,2
+T-dev-inf,2
+C-cleanup,2
+I-CICD,2
+Component: C++,2
+oncall: export,2
+C-Bug,2
+Team:ML,2
+status/release blocker,2
+low-risk,2
+Team:Data Management,2
+A-concurrency,2
+tool,2
+package: eslint-plugin,2
+p1,2
+status: accepted,2
+metric: flaky e2e test,2
+go,2
+lifecycle/rotten,2
+needs-review,2
+area/build,2
+sig/testing,2
+Low priority,2
+I-integration-fail,2
+Consistency Issue,2
+area: Continuous Integration,2
+Known Build Error,2
+comp:test,2
+in testing,2
+area-Codegen-AOT-mono,2
+🏁 status: ready for dev,2
+arch-wasm,2
+Needs Triage,2
+frontend,2
+android,2
+vaults_triage,2
+component-crypto,2
+A-doctests,2
+initiative:codelist-builder,2
+cli,2
+framework 🏗️,2
+release/26.2.3,2
+GA-blocker,2
+release/26.3.0,2
+D4-test,2
+QA Pass-Win64,2
+demo,2
+tests/test.py,2
+C0-bug,2
+P1-asap,2
+status/regression,2
+type-bug,2
+flaky-job,2
+package: nextcloud,2
+team/cloud-native,2
+Type: Test-Failure,2
+high-priority,2
+dx,2
+Performance Pod,2
+s: accepted,2
+new,2
+triage/master,2
+T-rustdoc,2
+ingestion,2
+wgsl,2
+Tally,2
+QualityOfLife,2
+priority/P3,2
+mode:prerenewal,2
+status:confirmed,2
+Source: Internal,2
+triage review,2
+Team: SQL,2
+theme: tests,2
+A-constellation,2
+p2-nice-to-have,2
+p/1,2
+🧪 testing,2
+O-community,2
+duplicate,2
+performance 🚀,2
+libcudf,2
+Python,2
+backport/none,2
+wontfix,2
+Enhance 🧘,2
+bun:test,2
+agoric-cosmos,2
+difficulty: easy,2
+examples,2
+dev,2
+area-perf,2
+p: 1-normal,2
+Z-Refactoring,2
+Difficulty: Intermediate,2
+area/cloud-storage,2
+integration-tests,2
+0.kind: bug,2
+P-1,2
+3.x,2
+OS/Android,2
+under review,2
+New model,2
+topic:import,2
+Team:Analytics,2
+solved,2
+Frontend,2
+A-kv-replication,2
+Team: SecuritySolution,2
+discuss,2
+status:ready,2
+:ml,2
+type/tests,2
+target-release-25.3.3,2
+P3-collecting-feedback,2
+scope: data grid,2
+fuzzer,2
+cicd,2
+triage/sa,2
+good-title,2
+state:tested,2
+team-ecosystem,2
+I-cost,2
+module,2
+help-wanted,2
+package,2
+C-test,2
+Proposal-Accepted,2
+crypto,1
+primer,1
+state:verified_fixed,1
+contracts,1
+project: import / export,1
+📱mobile app,1
+area/agent,1
+Caliptra v1.0,1
+O-Community,1
+kind/community-report,1
+OS: MacOs,1
+easy,1
+category: documentation,1
+parquet,1
+P: Undetermined,1
+GPU-AV,1
+ROM Test,1
+Needs PR,1
+T-Bug,1
+lang/ruby,1
+priority/P2,1
+kind/feat,1
+Reviewed,1
+area/plugin/destination/sqlite,1
+feature: previews and thumbnails,1
+area-PAL-coreclr,1
+2. developing,1
+Quest,1
+automation,1
+C: Client,1
+Questions and Help,1
+feature/conntrack,1
+Enhancement ✨,1
+mast,1
+critical,1
+from/connector-ops,1
+Documentation :green_book:,1
+component:admin_tools,1
+repository:addons-server,1
+backport 1.8.latest,1
+highpri,1
+pri:high,1
+version:8.4.7,1
+goals: sick CI,1
+-compiler,1
+sprint6,1
+i18n,1
+fuzzer-found,1
+type: customer issue,1
+darwin,1
+code/feature,1
+build issue,1
+clean code,1
+low prio,1
+continuous integration,1
+test automation,1
+ONNX,1
+status/skip-changelog,1
+x-chore,1
+p-medium,1
+I-usability,1
+module-blockchain,1
+platform: Tizen,1
+sig/scheduling,1
+block-producer,1
+C: Internals,1
+package: parser,1
+area: testing ✅,1
+inactive,1
+-tooling,1
+area-Codegen-Interpreter-mono,1
+tokenization,1
+CLI,1
+structured generation,1
+transformers,1
+d-easy,1
+version:8.2.27,1
+version:8.5.1,1
+team-mobile-platform,1
+physics.mechanics,1
+abortcontroller,1
+type: feature,1
+scope: testing tools,1
+freeze-slow-crash-leak,1
+slurm,1
+papercut :drop_of_blood:,1
+hypothesis-tests,1
+triaged-tool,1
+c: new feature,1
+Build,1
+SeleniumBase 4,1
+comp: ci visibility,1
+🏎️ perf,1
+🛝 playground,1
+Benchmarks,1
+not sure,1
+dfp,1
+<Suggestion / Discussion>,1
+E-easy,1
+version:8.3.11,1
+Mechanics: Character / Player,1
+C-feature-request,1
+serve,1
+T-bootstrap,1
+E-mentor,1
+Team Carbon-11,1
+Post-100%,1
+code_health,1
+refactor/optimization,1
+TFTP,1
+Z-Performance,1
+T-Testing,1
+e/IDE,1
+scipy.optimize,1
+QA/Test-All-Platforms,1
+requested-by-gold,1
+:rocket: Feature Request,1
+ui,1
+low-priority,1
+not-a-bug,1
+user issue,1
+asn.1,1
+A-windows,1
+A-dev,1
+tests/dtest,1
+app,1
+area: Storage,1
+platform: nRF,1
+area: Samples,1
+squish,1
+scope: toolpad-studio,1
+module: nn,1
+inprogress,1
+TypeScript,1
+matching,1
+area/cql,1
+A-temporal,1
+D: 5 Core PIDs,1
+Size: 80,1
+Module: jaspTTests,1
+NIH OTA: 1.2.1,1
+Bug: Medium,1
+requires:docs,1
+S: NewThings,1
+is:idea,1
+type::testing,1
+in-progress,1
+C-investigation,1
+tag::performance,1
+type::tech-debt,1
+resolved,1
+module: padding,1
+type: testing,1
+🎨 sdk,1
+Priority: Must Have,1
+mlos-core,1
+dirmonitor,1
+🔥 PyTorch,1
+area/engine,1
+hard,1
+affects-0.3,1
+integration: fritz,1
+states/oh,1
+tax,1
+feature suggestion,1
+no-stale,1
+feature/rewards,1
+QA Pass-macOS,1
+QA Pass-Linux,1
+html5,1
+demoed,1
+ODS,1
+Area: Scripting,1
+orange,1
+Area: Protocol Analysis,1
+Complexity: Modest,1
+tag: webgl,1
+tag: component: bokehjs,1
+Build / CI,1
+urgent,1
+Bot,1
+reso: completed,1
+ci-rca/infra,1
+topic:navigation,1
+rest,1
+topic:2d,1
+presentation,1
+-,1
+spike:1,1
+[Plugin] Performance Lab,1
+pm.GREI-d-1.2.1,1
+FY26 Sprint 4,1
+windows,1
+crash,1
+Highest Priority,1
+c: contributor-productivity,1
+triaged-ecosystem,1
+🔧 internal task,1
+area/windows_client,1
+complexity/medium,1
+area-CodeGen-coreclr,1
+A: Test & bench,1
+T: Backlog,1
+untriaged,1
+team-Performance,1
+wavecorr,1
+MAC-OS,1
+team_periwinkle,1
+service/api-management,1
+gibraltar release,1
+[Plugin] Modern Image Formats,1
+DX,1
+☁️ azure,1
+Labeling,1
+P2P,1
+Brainstorming,1
+kind/quality,1
+Linux,1
+area/authentication,1
+Comp: Docs,1
+Accepting PRs,1
+Project: Signals,1
+component/e2e,1
+T-disaster-recovery,1
+component:skill,1
+mode:renewal,1
+❗ p4-important,1
+ControlNet,1
+mipsevm,1
+rejected,1
+author action required,1
+delighter-sc,1
+FalsePositive,1
+theme: blueprint :paw_prints:,1
+theme: jhipster-internals,1
+Ray-2.4,1
+release-test,1
+topic: parallel,1
+Development Process 🚀,1
+package: patrol,1
+[Type] Enhancement,1
+medium impact,1
+low effort,1
+selected for development,1
+optimizer,1
+performance :racehorse:,1
+add-on,1
+fixed-in-8.0.20,1
+fixed-in-9.0.0-preview.3.10457,1
+platform/android,1
+pre-review,1
+AAP,1
+type:possible-component,1
+feature:st.text_input,1
+Software Affected: resample_spec,1
+Software Affected: wavecorr,1
+Anaconda,1
+Bug 🐞,1
+TIFF,1
+partner/cat 😻,1
+area-controls-collectionview,1
+Proposal-FinalCommentPeriod,1
+GoCommand,1
+Builders,1
+Help wanted,1
+VM,1
+Vaults,1
+Component: Python,1
+issue:backend,1
+in:RooFit/RooStats,1
+affects:master,1
+build cop,1
+nightly correctness bugs,1
+X-blathers-triaged,1
+area/replication,1
+kind/test,1
+accepted 🚀,1
+feature ✨,1
+Oversight,1
+seQUESTered,1
+doc-enhancement,1
+Source - Docs.ms,1
+requestor: METplus Team,1
+component: code cleanup,1
+alert: NEED CYCLE ASSIGNMENT,1
+alert: NEED ACCOUNT KEY,1
+component: logging,1
+--regression,1
+--bug,1
+regression ⚠️,1
+shell completion,1
+third-party,1
+compat,1
+Testing 📈,1
+B-testing,1
+has workaround,1
+c: bug,1
+closed-by-bot,1
+Close?,1
+Bug: Test/Tool,1
+OS: macOS,1
+Area: Testing,1
+Core: Tokenization,1
+do-not-reopen,1
+ci-ignore,1
+A-bug,1
+Epic,1
+hackathon,1
+HLE/Kernel,1
+@ Client / Audiovisuals,1
+TAG: performance,1
+DEV: frontend,1
+TAG: ux update,1
+P1 - important,1
+🔬 testing-utilities,1
+🧞‍♂️ enhancement,1
+RFE 🎁,1
+topic-chore,1
+topic-tests,1
+c: docs,1
+area/executor,1
+topic/ci,1
+area/screen/explore,1
+effort/days,1
+type-enhancement,1
+📚 documentation,1
+JitStress,1
+area-System.IO,1
+feedback requested,1
+strings,1
+0 - Backlog,1
+type/regression,1
+theme: execution,1
+A-Testing,1
+Z-Dev-Wishlist,1
+Z-Flake,1
+T-Task,1
+A-Federated-Join,1
+size-s,1
+🤖 aspect: dx,1
+✨ goal: improvement,1
+🟩 priority: low,1
+priority:low,1
+wontfix :see_no_evil:,1
+component: Vintage,1
+Package: ember,1
+2,1
+CI: testing,1
+Good first issue,1
+Mail,1
+A-devops,1
+version-patch,1
+dev experience,1
+browser: Firefox,1
+feature: frontend 🖌️,1
+papercut,1
+1. to develop,1
+pm/core capability,1
+3rd-party: Gradle,1
+area/tail,1
+machine learning,1
+area: refactoring,1
+theme: database,1
+server: spring boot,1
+Expo Modules Core,1
+Issue accepted,1
+Android,1
+parent,1
+table,1
+T-lang,1
+A-floating-point,1
+A-target-feature,1
+E-needs-test,1
+scheduling,1
+status/confirmed,1
+status:resolved,1
+component:network,1
+category:bug,1
+VCell-7.5.0,1
+OnlyDust,1
+fallout3,1
+I-heavy,1
+P-low,1
+A-codegen,1
+receiver/riak,1
+:Data Management/Ingest Node,1
+:bug: Bug,1
+consensus,1
+sig/autoscaling,1
+needs/triage,1
+c/storage,1
+SW:cryptolib,1
+technology,1
+wmbusmeters,1
+00 - Bug,1
+upstream,1
+platform:windows,1
+Send & Receive,1
+Component: Query Serving,1
+relies on sdk changes,1
+in flutter,1
+is bug,1
+bugbash/q4-2022,1
+kind/todo,1
+meta/test-flake,1
+priority/p3,1
+feature/egress-gateway,1
+sig/policy,1
+area/datapath,1
+test bug,1
+topic:buildsystem,1
+noproductcode,1
+A-read-committed,1
+A-kv-transactions,1
+prio: low,1
+vdr,1
+runtime-coreclr,1
+area-System.Text.Encoding,1
+desktop,1
+dev bug,1
+non-breaking,1
+pinned,1
+ASP.NET,1
+O-x86_32,1
+component: Platform,1
+linear,1
+Auto-Assign,1
+CXP Attention,1
+customer-reported,1
+MySQL,1
+Effort - medium,1
+performance - run time,1
+feature_request,1
+theme: suites,1
+theme: discovery,1
+version:8.2.0,1
+Impact: High,1
+version:8.2.0-alpha1,1
+area-System.Runtime,1
+fuzz,1
+forc-test,1
+forc,1
+topic-developer,1
+hi-ml-histopathology,1
+x11,1
+bug report,1
+area:catalog,1
+High priority,1
+Complexity: High,1
+-libs,1
+context: graphics,1
+level/subtask,1
+type/research,1
+blocked,1
+Deploy to Production,1
+Urgent Priority 1,1
+Taxon Management,1
+SIZE 2,1
+CrashReports,1
+context: performance,1
+context: game logic,1
+immunizations,1
+known-issue,1
+major,1
+qa-verified,1
+solvers.solve,1
+bazel,1
+Feature: ctest,1
+area-Diagnostics-coreclr,1
+usgs,1
+A-cryptography,1
+area/streaming,1
+sev/high,1
+bugweek,1
+stale-issue,1
+MetricFlow,1
+author-verification-requested,1
+area/coverage,1
+Backend,1
+comp: metrics,1
+comp: trainer,1
+prio: high,1
+objective: speed,1
+prio-high,1
+unconfirmed,1
+Team:Uptime - DEPRECATED,1
+db-cy-23,1
+ci-app,1
+testing 🧪,1
+DS - X11,1
+S - I/O and PTY,1
+P - high,1
+B - bug,1
+Tooling,1
+O-support,1
+Note:Tooling,1
+Level:Starter,1
+App:Backend,1
+App:Frontend,1
+No QA Needed,1
+car,1
+macOS,1
+release pro 2.0.0,1
+stat:awaiting response,1
+discussion,1
+verification-needed,1
+P-critical,1
+I-unsound,1
+p:needs triage,1
+SW:Build System,1
+Type:Enhancement,1
+component: tests,1
+v1.34,1
+topic: performance/queries,1
+subaru,1
+domain/client,1
+kind/improvement,1
+A-needs-triaging,1
+I-defect,1
+C-java,1
+blend,1
+intermittent,1
+🧱 stack: frontend,1
+🧰 goal: internal improvement,1
+🟧 priority: high,1
+contribfest,1
+cosmic-swingset,1
+comp:lite,1
+training,1
+fixed - ready for validation,1
+api: spanner,1
+priority: p2,1
+Stack: Back End,1
+State: open,1
+Duration: weeks,1
+Difficulty: hard,1
+Context: intricated,1
+Techno: python,1
+Type: performance,1
+[Focus] Accessibility (a11y),1
+:rocket: Enhancement,1
+T-server-and-security,1
+prio-list,1
+Issue,1
+spring cleaning,1
+collections,1
+tests :blue_book:,1
+T: Performance,1
+treesitter,1
+@barba/core,1
+Component: DevOps,1
+:Analytics/Aggregations,1
+Area: Concurrent,1
+v1.37,1
+prio/medium,1
+c: algebra,1
+t: bug,1
+p: major / 3,1
+Package: replay,1
+difficulty/easy,1
+doris-future,1
+product:ocw,1
+type/debt,1
+v1.33,1
+area/logs,1
+Status: Needs Review,1
+comp-skipidx,1
+Console,1
+core 🧬,1
+bug :lady_beetle:,1
+is performance,1
+in dart,1
+developer,1
+array types,1
+Component: JavaScript,1
+testsuite,1
+unexpected behaviour,1
+type:build/install,1
+TF 2.11,1
+Team:Adapters,1
+testing 🛠️,1
+area/fuzz,1
+code/chore,1
+interpreter-core,1
+🔢 points: 1,1
+🛠 goal: fix,1
+🟥 priority: critical,1
+standard: zaken 1.6,1
+substrate,1
+difficulty: medium 🚩,1
+optimization ⚙️,1
+p2 🟡,1
+feature/developing,1
+displayio,1
+quality/testing,1
+Matrix-free,1
+tag:Performance,1
+pkg:notebook,1
+Mission-critical,1
+[Type] Developer Experience,1
+Has MCVE,1
+is-bug,1
+X-duplicate,1
+type/new-feature,1
+semver: bug,1
+area/ttl,1
+a: layout,1
+version:7.20.0-alpha3,1
+version:7.20.0,1
+scope:ci,1
+group:build-failure,1
+Team:Core/Infra,1
+:Core/Infra/Core,1
+found in release: 3.7,1
+found in release: 3.3,1
+r: fixed,1
+has reproducible steps,1
+customer: google,1
+needs help,1
+customer: crowd,1
+customer: splashbulb,1
+a: fidelity,1
+engine,1
+framework,1
+platform-ios,1
+v8.5.0,1
+v8.4.0,1
+v8.3.0,1
+--low-performance,1
+area:front,1
+severity:major,1
+test/system,1
+release:230010,1
+feature/shields/fingerprint,1
+node compat,1
+Data Platform Pod,1
+Query & JS Pod,1
+Core Query Execution,1
+:beetle: bug,1
+Needs Info,1
+Datetime,1
+component:Plugins,1
+type:Enhancement,1
+release bug,1
+module: micrometer-observation-test,1
+in:MicroProfile/OpenAPI,1
+v1.32,1
+fixed-in-8.0.0-preview.1.7762,1
+s/try-latest-version,1
+s/needs-attention,1
+area-controls-button,1
+reliability,1
+📚 documentation / examples,1
+A-internal-devex,1
+priority-2-low,1
+customer request,1
+unit test,1
+kind:bug,1
+harness,1
+severity::1,1
+source::anaconda,1
+type::bug,1
+cpp,1
+question :question:,1
+1 - Nice to Have,1
+dev tooling,1
+package: client,1
+type: tests,1
+permared,1
+awaiting triage,1
+Housekeeping,1
+failing test,1
+scope:typescript,1
+scope:documentation,1
+needs-decision,1
+a:tests,1
+C: Modules/Navier Stokes,1
+P: normal,1
+C: Framework,1
+no QC knowledge needed,1
+playback,1
+platform: Cast,1
+area/integration,1
+status: archived,1
+type: code health,1
+TODO,1
+area | check,1
+plugin | reportportal,1
+step | report,1
+platform: ESP32,1
+WebUI 2.0,1
+Type: Main feature,1
+type: improvement,1
+sig/cli,1
+lifecycle/active,1
+type/tech-debt,1
+area: RTIO,1
+module: nestedtensor,1
+good first pr,1
+help welcome,1
+.CI & Tests,1
+I4,1
+S4,1
+U1,1
+priority-p2,1
+medium-risk,1
+A-Client,1
+I-Test,1
+Status: Accepted,1
+area/registry,1
+priority-urgent,1
+size L,1
+kind:performance,1
+module:stdcm,1
+area/cri,1
+name lookup,1
+A-webdriver,1
+scipy.ndimage,1
+severity/blocker,1
+[Linear] Untangling Calypso,1
+Platform: Bukkit,1
+[Feature] API,1
+[Feature Group] Site Performance,1
+[Status] Auto-allocated,1
+[Experiment] AI labels added,1
+[Feature] Jetpack Connection Errors,1
+[Feature] Site Performance,1
+Triaged,1
+[Pri] Normal,1
+Type: Performance,1
+🌿 intermediate,1
+🟠 major,1
+class::performance,1
+type-feature,1
+uki,1
+CI/CD,1
+css,1
+ci flakiness,1
+area/API,1
+P-Unsound,1
+C-Code-Quality,1
+C-Dependencies,1
+A-Rendering,1
+module: dataloader,1
+test flake,1
+team-web,1
+fyi-tool,1
+c: disabled test,1
+Feature:Dataset Health,1
+rdt,1
+needs reproduction,1
+area:test,1
+module: bs.spline,1
+⚡️ Enhancement,1
+BHx1-DVT,1
+module: optimizer,1
+class::improvement,1
+regression:perf,1
+loc::python interface,1
+MMM,1
+PRD,1
+azure,1
+needs-investigation,1
+team:Sirius,1
+in:Web Components,1
+in:Transport,1
+T:testing,1
+type/change,1
+module: mps,1
+Area: Broker,1
+Area: CI/Testing,1
+Area: Input,1
+unavailable,1
+existing spider,1
+area/cel,1
+v1.50,1
+area:CI,1
+area:helm-chart,1
+Feature:Discover,1
+loe:needs-research,1
+impact:medium,1
+help needed,1
+O-Uncommon,1
+A-Logout,1
+S-Critical,1
+X-Cannot-Reproduce,1
+T-Defect,1
+:Data Management/Data streams,1
+triage/consider-closing,1
+area/amazon-lambda,1
+Vision,1
+Code: Build,1
+WH,1
+NPC / Factions,1
+size-xs,1
+component-platform,1
+RFC,1
+- Developer -,1
+Documentation,1
+QA Pass - iPhone,1
+feature/vpn,1
+OS/iOS,1
+ttnn,1
+platform: NXP Drivers,1
+Severity: Hotfix,1
+sub-area/testing,1
+feature: build,1
+ethan,1
+complexity: medium,1
+feature: Onboarding/Contributing.md,1
+milestone: missing,1
+s: PD team,1
+size: 2pt,1
+maintainer,1
+area/contribution,1
+kind/duplicate,1
+Team:Search Foundations,1
+subsystem: common,1
+v24.1.21,1
+v24.3.14,1
+v25.1.7,1
+target-release-25.3.0,1
+Metafix,1
+Dev Infrastructure,1
+swc-angular,1
+:Search Foundations/Search,1
+serialization,1
+Team Ruru 🦉,1
+Team:DataDiscovery,1
+branch-release-25.2.2-rc,1
+pyspark,1
+Good Contribution,1
+Simulator,1
+stage/triaged,1
+type/flake,1
+ai,1
+git,1
+dev-ready,1
+miniflare,1
+Medium Priority,1
+2⭐️⭐️,1
+Simple,1
+test improvement,1
+gdunit4.api,1
+topic/performance,1
+module: pt2-dispatcher,1
+module: custom-operators,1
+op_cat: fused,1
+Team:ESQL,1
+Feature:ES|QL,1
+osci,1
+cuda.bindings,1
+compliance,1
+has-repro-gist,1
+Medium,1
+graphiql,1
+Video,1
+CI/Tests,1
+pending triage,1
+s/triaged,1
+s/verified,1
+area-controls-shell,1
+35-x-y,1
+crash :boom:,1
+platform-linux,1
+component/devtools,1
+reproduced,1
+MTP,1
+frozen-due-to-age,1
+tool-still-valid,1
+triaged-linux,1
+team-linux,1
+a: desktop,1
+c: proposal,1
+framework/playwright,1
+v9.1.0,1
+Team:AI Infra,1
+type: new feature,1
+type: docs,1
+server,1
+archived coursework,1
+platform: learn,1
+scope: curriculum,1
+website,1
+codesmell,1
+ready to take,1
+package: codemod,1
+more info needed,1
+topic-importlib,1
+Improvement,1
+ready,1
+type: technical improvement,1
+Contribution wanted,1
+Low risk,1
+A-linter,1
+meta/workflow,1
+gempyor,1
+RFC / discussion,1
+type: infrastructure,1
+P3: Standard,1
+Feature - Test,1
+type:test,1
+QA/Test-Plan-Specified,1
+dev-concern,1
+v25.4.0-prerelease,1
+branch-release-25.3.2-rc,1
+target-release-25.2.7,1
+development-process,1
+area/automation-api,1
+project: backend,1
+CI failed,1
+kind/bug-report,1
+A: Integration Tests,1
+triage/discuss,1
+pre-initial-release,1
+code | logging,1
+$2.5K,1
+priority/important-longterm,1
+runtime,1
+asyncio,1
+in:MicroProfile/Telemetry,1
+need/triage,1
+bug_fix_stage1,1
+[C] Documentation,1
+M: Thunderbird Accounts Beta,1
+Team:Detection Rule Management,1
+T.2 - Maintenance,1
+T.1 - Enhancement,1
+severity: regression,1
+asm,1
+autonomous-operation,1
+work:completed,1
+package: autogram,1
+invalid,1
+9.2 candidate,1
+Team:Detections and Resp,1
+sev:S2,1
+reporter :memo:,1
+App Clusters: Closures,1
+workflows,1
+investigating,1
+CRAN,1
+type: refactor,1
+type: Maintenance,1
+operations,1
+Quality Improvement,1
+addon: interactions,1
+addon: vitest,1
+[E] User Experience,1
+Q3-involved,1
+dev ops,1
+roadmap,1
+C: Python,1
+module: regression,1
+module: mkl,1
+cloudflare,1
+steampipe,1
+D7-performance,1
+D6-gas,1
+D2-node,1
+upgrade:9.0,1
+T-cosmonic,1
+EOC: Effects On Condition,1
+Mechanics: Effects / Skills / Stats,1
+energy evse,1
+energy,1
+cert blocker,1
+privacy/feature/email-aliases,1
+regression in 2.6.4,1
+type-checking,1
+resource,1
+Nextjs,1
+07 - Deprecation,1
+scope: x-telemetry,1
+component/DXF,1
+area/mcp,1
+area/frontend,1
+priority/important,1
+exporter/kafka,1
+size/small,1
+pyop2,1
+area:api,1
+tier 1,1
+support: premium standard,1
+Inference,1
+topic:CI,1
+topic:tests,1
+Computational Efficiency,1
+status: users notified,1
+status: completed,1
+component: dependencies,1
+component: registry,1
+area: core,1
+functional tests,1
+affects-8.5,1
+ttir-builder,1
+Priority Medium,1
+plasmapy.diagnostics,1
+2.0,1
+TOPIC RD,1
+Medium Prio,1
+Status: Triaged,1
+issue: bug,1
+type: performance,1
+topic: collection,1
+Plasma Lv2 | Intermediate,1
+Python Lv3 | Proficient,1
+Priority,1
+package: styled-engine,1
+Component: Hooks,1
+Priority: Medium,1
+hacktoberfest,1
+research needed,1
+dependency: dart plugin,1
+dependency: dart,1
+category: unit tests,1
+type: technical debt,1
+node,1
+bindings/java,1
+s390x-test-failure,1
+scope:testing,1
+6.topic: reproducible builds,1
+WebdriverIO,1
+Issue/PR - Triage,1
+UI/UX,1
+C: TestHarness,1
+potential-bug,1
+priority/normal,1
+status/auto-bump,1
+status/auto-expire,1
+team/continuous-testing,1
+6.topic: python,1
+Subtyping,1
+Task (new),1
+woocommerce-subscriptions-core,1
+reporting,1
+ci / tests,1
+dnsdist,1
+User Story,1
+nightly-builds,1
+xbrl,1
+ferc1,1
+security/encryption at rest,1
+enhancement⚡️,1
+dev-productivity,1
+Core prototype⚙️,1
+component-tests,1
+Lang:Script,1
+dependencies: level_zero,1
+codegen: gemm,1
+module: __torch_function__,1
+bug-non-critical,1
+cuIO,1
+area/quality,1
+V4,1
+A-network,1
+TYPE: bug,1
+I-perf-slow,1
+parallel ⇶,1
+component/tests,1
+component/scraping,1
+area.protocol,1
+released on @master,1
+Type: CI & Testing,1
+bulk-import-module,1
+COMP: runtime,1
+not-stale,1
+changelog: dev,1
+External contributors,1
+Windows,1
+not in release notes,1
+OCI,1
+Flatpak,1
+Qt,1
+Driver: Intel,1
+X-infra-flake,1
+skill::rust,1
+skill::move,1
+area::testing,1
+Fun,1
+💜 customer support,1
+team-engine,1
+e: impeller,1
+needs:risk,1
+:Analytics/ES|QL,1
+Chore,1
+build-package,1
+branch: 3.2,1
+branch: 3.1,1
+branch: 3.0,1
+✨ feature-request,1
+needs PR,1
+C-Moderate Effort,1
+needs reproducible example,1
+30-feedback,1
+29-feedback,1
+28-feedback,1
+0. Needs triage,1
+Limechain,1
+Test Flake,1
+mock,1
+processor/deltatocumulative,1
+priority:p1,1
+Needs Documentation,1
+🧑‍💻 dev experience,1
+Technical Debt,1
+p3-minor-bug,1
+feat: browser,1
+terraform test,1
+explained,1
+kind/dept,1
+pytest-lsp,1
+:ship: CI,1
+🏎️ Quick Issue,1
+L-Type inference,1
+statestore-module,1
+type: feature request,1
+fixed-in-9.0.0-preview.7.24407.4,1
+area-System.Text.Json,1
+effort: medium,1
+Content:WebAPI,1
+branch-release-23.2,1
+esasky,1
+C-good-first-issue,1
+status/ready,1
+ci.jenkins.io,1
+Enhancement: Feature,1
+fixed-in-8.0.70,1
+area/test and release,1
+area-essentials,1
+area/schema changes,1
+Bug (unconfirmed),1
+debug,1
+rib,1
+1.20.6,1
+Platform: iOS,1
+Platform: Android,1
+Missing repro,1
+area: Display,1
+lifecycle/automatically-closed,1
+search,1
+Area: MTP,1
+medium priority,1
+activejob,1
+s: stale,1
+node.js,1
+area/test/flakiness,1
+Product: Highcharts Dashboards,1
+fixed-dev,1
+kind/tests,1
+FlowMachine,1
+disabled via hotfix,1
+FTF,1
+safari,1
+Please! ♥︎,1
+firefox,1
+c: tech-debt,1
+will need additional triage,1
+waiting for PR to land (fixed),1
+a: tests,1
+DB client,1
+next-release,1
+type: qa,1
+01 type: bug,1
+@aws-cdk/aws-codebuild,1
+stale-bot-ignore,1
+topic/packages,1
+performance/speed,1
+module-testsetgen,1
+v1.48,1
+open-to-a-pull-request,1
+feat: coverage,1
+Core,1
+Module: SQL,1
+to-jira,1
+jpa/jta,1
+Evaluated Value,1
+cdi,1
+MP,1
+Complexity: Large,1
+Feature: Infrastructure,1
+size: 1pt,1
+Role: Back End,1
+clang-format,1
+accepted,1
+released on @beta,1
+Javascript Product,1
+module:tests,1
+component:database,1
+mod/yr*,1
+standard library,1
+S-Needs-Investigation,1
+P-Regression,1
+C-Performance,1
+wrangler,1
+O: backlog 🤖,1
+Work: Medium,1
+Impact: Medium,1
+tests/build/CI,1
+solved-by/optimized-control-loading,1
+area/mysql,1
+mod*,1
+type/performance,1
+status/merged,1
+metrics,1
+need feedback,1
+new collector,1
+Design,1
+Weekly,1
+Reviewing,1
+c-iroh,1
+:crab: rust :crab:,1
+v3.0.0,1
+area/materialized views,1
+I-Rust,1
+area-System.Net.Quic,1
+wgpu,1
+State: WIP,1
+Prio: High,1
+processor/resourcedetection,1
+os:windows,1
+priority:p2,1
+automation 🤖,1
+team efficiency,1
+tech,1
+code,1
+blocker,1
+contributor guide,1
+component: framework,1
+release-12.3.0,1
+team-extension-platform,1
+area/raft,1
+v2.14.0,1
+Other,1
+transformations,1
+Help Wanted,1
+service/network,1
+models,1
+software,1
+Firmware: HLE,1
+device compatibility,1
+domain,1
+v1.46,1
+Performance 🏃‍♀️,1
+Investigate,1
+priority/P4,1
+feature/tor,1
+development,1
+publish,1
+accessibility,1
+kind/cleanup,1
+area/sa,1
+area/tools,1
+stage/accepted,1
+theme/deployments,1
+theme/consul,1
+jira,1
+kind/epic,1
+effort/medium,1
+os-browser,1
+Maintainer - Josué Soto,1
+compiler/runtime,1
+Querying/X-rays,1
+.Performance,1
+Priority:P1,1
+Type:Bug,1
+design document,1
+version:8.6.0-alpha1,1
+area/performance,1
+kind/toil,1
+sig/cluster-management,1
+NeedsFix,1
+.Team/Workflows,1
+lifecycle,1
+c/storage/controller,1
+LLK,1
+area: Modem Drivers,1
+s2n-core,1
+size/medium,1
+priority/low,1
+🏷 status: label work required,1
+⭐ goal: addition,1
+.Backend,1
+plugins,1
+acknowledged,1
+Duplicate,1
+affect-version: 5.0.1,1
+fix-version: 5.0.2,1
+qa: done successfully,1
+component: engine,1
+sandboxes,1
+testing🧪,1
+lua,1
+octave,1
+upstream bug,1
+S: in progress,1
+railsconf-hackday,1
+Design needed,1
+X-unactionable,1
+type: community contribution,1
+sprint/unplanned,1
+kind/bug 🐞,1
+area/rust,1
+techdebt,1
+project: grants.gov,1
+minimal,1
+Confluent,1
+area/continuous-testing,1
+affect-version: 4.0.5,1
+Install,1
+enhancement: plugin rule option,1
+branch-release-24.2,1
+general,1
+tech-improvement,1
+priority:medium,1
+effort:low,1
+Squad/Blue,1
+TestCase failing,1
+provider-TRANSIP,1
+Question,1
+area: C Library,1
+area / websites,1
+area / infra,1
+v25.2.5,1
+v24.3.19,1
+target-release-24.1.24,1
+target-release-25.1.11,1
+branch-release-24.3.15-rc,1
+pdd,1
+ODHack14,1
+platform: X86,1
+area: Toolchains,1
+area/config,1
+platform: ITE,1
+Canvas,1
+area/e2e-test,1
+testing :test_tube:,1
+performance :rocket:,1
+c: commutative algebra,1
+Subject(s),1
+Refactor,1
+dev-tooling,1
+gh-actions,1
+area: Kernel,1
+area/networking,1
+platform: nRF BSIM,1
+A-import,1
+Wallet,1
+Release : 24.04.24 v8,1
+Release : 23.10.24 v16,1
+Release : 24.09.21,1
+Team : Maintenance,1
+OKR : Code Maintenance,1
+Type : Defect,1
+affect-version: 3.0.12,1
+fix-version: 3.0.13,1
+blocking-clean-ci,1
+need more information,1
+O: ics29-fee,1
+CSS & UI,1
+🟨 Priority: Medium,1
+🖰 GUI,1
+📈 Improvement,1
+IDE Navigation,1
+IDE Pod,1
+IDE Product,1
+feat,1
+algebras,1
+TR1,1
+Easy to Fix,1
+visualization,1
+stateful_dataloader,1
+Revive: Keep,1
+Category: Build/CI,1
+Category: Doc,1
+Milestone:SV2,1
+Component:SiliconValidation,1
+TOP:earlgrey,1
+O: testability,1
+product,1
+CI :gear:,1
+New Feature,1
+topic:gdscript,1
+module/fim,1
+topic:performance,1
+unit-test-failure,1
+awaiting:discussion,1
+team/grafana-dashboards,1
+area/scenes,1
+area/dashboard,1
+Testing / QA,1
+Design Review,1
+focus: e2e tests,1
+documentation 📚,1
+extensions 🔋,1
+theme: java,1
+area/ticdc,1
+Accepted,1
+owner: utrecht,1
+PC,1
+block: product collection,1
+Kirigami,1
+Component:DV,1
+enhancement :rocket:,1
+fix-version: 4.0.6,1
+:construction: in-progress,1
+system-test-module,1
+category: engineering,1
+performances :1st_place_medal:,1
+area | hardware,1
+plugin | testcloud,1
+step | provision,1
+compilation,1
+area/virtual-threads,1
+:rocket: enhancement,1
+priority-p1,1
+student programmer,1
+needs discussion,1
+E-less-complex,1
+test-explorer,1
+priority-low,1
+🏚 stale,1
+🎉 enhancement,1
+MusicXML,1
+needs review,1
+area: Networking,1
+CI & scripts,1
+P-high,1
+Performance-related,1
+S-Ready-For-Implementation,1
+v8.14.0,1
+:ml/Transform,1
+v2,1
+workitem,1
+area/bots,1
+function:data,1
+I-compiletime,1
+prototype :hammer_and_wrench:,1
+A-Picking,1
+A-UI,1
+area-VM-coreclr,1
+D-average,1
+housekeeping,1
+infra,1
+topic:core,1
+0.kind: build failure,1
+P3: important,1
+Bug: Validated,1
+engineering,1
+oncall: cpu inductor,1
+COMP/Library Testing,1
