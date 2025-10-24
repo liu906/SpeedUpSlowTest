@@ -139,7 +139,7 @@ def get_pr_versions(repo, pr_number, github_token=None):
         shutil.rmtree(temp_clone)
 
     # 克隆仓库到临时目录
-    subprocess.run(['git', 'clone', f'https://github.com/{repo}.git', temp_clone])
+    subprocess.run(['git', 'clone', '--recursive', f'https://github.com/{repo}.git', temp_clone])
 
     # 检出PR前版本并智能保存（只更新仓库文件，保留用户文件）
     subprocess.run(['git', 'checkout', base_sha], cwd=temp_clone)
@@ -325,3 +325,4 @@ if __name__ == "__main__":
 
 
 
+ 

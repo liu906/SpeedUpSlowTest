@@ -83,8 +83,13 @@ run_tests_for_version() {
         echo "Waiting ${WAIT_TIME}s for containers to be ready..." | tee -a "$LOG_FILE"
         sleep $WAIT_TIME
     fi
-    docker compose exec buffalogs pip install pytest pytest-django
-    sleep 5
+
+    # Run setup command if specified in config
+    if [ ! -z "$SETUP_COMMAND" ]; then
+        echo "Running setup command..." | tee -a "$LOG_FILE"
+        eval "$SETUP_COMMAND" 2>&1 | tee -a "$LOG_FILE"
+        sleep 5
+    fi
 
     # Run tests N times
     for i in $(seq 1 $N); do
@@ -121,5 +126,5 @@ echo "========================================" | tee -a "$LOG_FILE"
 
 echo ""
 echo "Next steps:"
-echo "1. Parse the results: python3 parse_results_generic.py $PROJECT_PATH"
+echo "1. Parse the results: python3 parse_results_generic_optimized.py $PROJECT_PATH"
 echo "2. Visualize the data: python3 visualize_results_generic.py $PROJECT_PATH"
