@@ -4,7 +4,7 @@
 
 # Test command to run (without energibridge prefix)
 # Note: For uv-based projects, we use 'uv run' to handle the environment automatically
-TEST_COMMAND="uv run pytest -n auto --dist loadgroup tests/ert/unit_tests --hypothesis-profile=fast -m 'not (integration_test or flaky)' --durations=0"
+TEST_COMMAND="uv run pytest tests/everest/functional/test_main_everest_entry.py --durations=0"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 # For uv-based projects, the venv is managed by uv in .venv

@@ -28,7 +28,7 @@ def parse_log_file(log_file_path):
     energy_pattern = re.compile(r'Energy consumption in joules: ([\d.]+) for ([\d.]+) sec of execution\.')
     slowest_start_pattern = re.compile(r'={20,}\s+slowest durations\s+={20,}')
     test_duration_pattern = re.compile(r'([\d.]+)s\s+(\w+)\s+(.+?)$')
-    total_time_pattern = re.compile(r'={10,}.*?\s+in\s+([\d.]+)s\s+={10,}')
+    total_time_pattern = re.compile(r'={10,}.*?\s+in\s+([\d.]+)s\s')
 
     # Process file line by line instead of loading entire file
     with open(log_file_path, 'r') as f:
@@ -169,6 +169,35 @@ def print_summary(energy_data, duration_data):
     if duration_before and duration_after:
         time_improvement = ((avg_duration_before - avg_duration_after) / avg_duration_before) * 100
         print(f"  Time improvement: {time_improvement:.2f}%")
+
+    # Calculate total test time (average across runs)
+    if duration_before:
+        # Get unique run numbers and their total_test_time
+        before_runs = {}
+        for d in duration_before:
+            run_num = d['run_number']
+            if run_num not in before_runs and d['total_test_time'] is not None:
+                before_runs[run_num] = d['total_test_time']
+
+        if before_runs:
+            avg_total_before = sum(before_runs.values()) / len(before_runs)
+            print(f"  Average total test time (before): {avg_total_before:.2f}s")
+
+    if duration_after:
+        # Get unique run numbers and their total_test_time
+        after_runs = {}
+        for d in duration_after:
+            run_num = d['run_number']
+            if run_num not in after_runs and d['total_test_time'] is not None:
+                after_runs[run_num] = d['total_test_time']
+
+        if after_runs:
+            avg_total_after = sum(after_runs.values()) / len(after_runs)
+            print(f"  Average total test time (after): {avg_total_after:.2f}s")
+
+    if duration_before and duration_after and before_runs and after_runs:
+        total_time_improvement = ((avg_total_before - avg_total_after) / avg_total_before) * 100
+        print(f"  Total test time improvement: {total_time_improvement:.2f}%")
 
     print("\n" + "="*60 + "\n")
 
