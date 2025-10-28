@@ -1,0 +1,335 @@
+========================================
+Starting test runs for project: core_60348
+Iterations: 1
+Test command: python -X dev -m pytest tests/components/fritzbox/test_config_flow.py --durations=0
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/core_60348/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Virtual environment not found at '.venv', creating...
+Using Python: python3.10
+Virtual environment created successfully
+Installing dependencies from requirements.txt...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (22.2.2)
+Collecting pip
+  Using cached pip-25.2-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.2.2
+    Uninstalling pip-22.2.2:
+      Successfully uninstalled pip-22.2.2
+Successfully installed pip-25.2
+WARNING: There was an error checking the latest version of pip.
+Ignoring backports.zoneinfo: markers 'python_version < "3.9"' don't match your environment
+Collecting aiohttp==3.8.0 (from -r requirements.txt (line 4))
+  Using cached aiohttp-3.8.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (7.3 kB)
+Collecting astral==2.2 (from -r requirements.txt (line 5))
+  Using cached astral-2.2-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting async_timeout==4.0.0 (from -r requirements.txt (line 6))
+  Using cached async_timeout-4.0.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting attrs==21.2.0 (from -r requirements.txt (line 7))
+  Using cached attrs-21.2.0-py2.py3-none-any.whl.metadata (9.1 kB)
+Collecting atomicwrites==1.4.0 (from -r requirements.txt (line 8))
+  Using cached atomicwrites-1.4.0-py2.py3-none-any.whl.metadata (5.6 kB)
+Collecting awesomeversion==21.10.1 (from -r requirements.txt (line 9))
+  Using cached awesomeversion-21.10.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting bcrypt==3.1.7 (from -r requirements.txt (line 11))
+  Using cached bcrypt-3.1.7-cp310-cp310-macosx_10_9_universal2.whl
+Collecting certifi>=2021.5.30 (from -r requirements.txt (line 12))
+  Using cached certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+Collecting ciso8601==2.2.0 (from -r requirements.txt (line 13))
+  Using cached ciso8601-2.2.0-cp310-cp310-macosx_10_9_universal2.whl
+Collecting httpx==0.21.0 (from -r requirements.txt (line 14))
+  Using cached httpx-0.21.0-py3-none-any.whl.metadata (49 kB)
+Collecting ifaddr==0.1.7 (from -r requirements.txt (line 15))
+  Using cached ifaddr-0.1.7-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting jinja2==3.0.3 (from -r requirements.txt (line 16))
+  Using cached Jinja2-3.0.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting PyJWT==2.1.0 (from -r requirements.txt (line 17))
+  Using cached PyJWT-2.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting cryptography==35.0.0 (from -r requirements.txt (line 18))
+  Using cached cryptography-35.0.0-cp36-abi3-macosx_11_0_arm64.whl.metadata (5.4 kB)
+Collecting pip<20.3,>=8.0.3 (from -r requirements.txt (line 19))
+  Using cached pip-20.2.4-py2.py3-none-any.whl.metadata (3.7 kB)
+Collecting python-slugify==4.0.1 (from -r requirements.txt (line 20))
+  Using cached python_slugify-4.0.1-py2.py3-none-any.whl
+Collecting pyyaml==6.0 (from -r requirements.txt (line 21))
+  Using cached PyYAML-6.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (2.0 kB)
+Collecting requests==2.26.0 (from -r requirements.txt (line 22))
+  Using cached requests-2.26.0-py2.py3-none-any.whl.metadata (4.8 kB)
+Collecting voluptuous==0.12.2 (from -r requirements.txt (line 23))
+  Using cached voluptuous-0.12.2-py3-none-any.whl
+Collecting voluptuous-serialize==2.4.0 (from -r requirements.txt (line 24))
+  Using cached voluptuous_serialize-2.4.0-py3-none-any.whl.metadata (322 bytes)
+Collecting yarl==1.6.3 (from -r requirements.txt (line 25))
+  Using cached yarl-1.6.3-cp310-cp310-macosx_10_9_universal2.whl
+Collecting charset-normalizer<3.0,>=2.0 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached charset_normalizer-2.1.1-py3-none-any.whl.metadata (11 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached multidict-6.7.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (5.3 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached frozenlist-1.8.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (20 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting typing-extensions>=3.6.5 (from async_timeout==4.0.0->-r requirements.txt (line 6))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting idna>=2.0 (from yarl==1.6.3->-r requirements.txt (line 25))
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz (from astral==2.2->-r requirements.txt (line 5))
+  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting cffi>=1.1 (from bcrypt==3.1.7->-r requirements.txt (line 11))
+  Using cached cffi-2.0.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (2.6 kB)
+Collecting six>=1.4.1 (from bcrypt==3.1.7->-r requirements.txt (line 11))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting sniffio (from httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting rfc3986<2,>=1.3 (from rfc3986[idna2008]<2,>=1.3->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting httpcore<0.15.0,>=0.14.0 (from httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached httpcore-0.14.7-py3-none-any.whl.metadata (15 kB)
+Collecting MarkupSafe>=2.0 (from jinja2==3.0.3->-r requirements.txt (line 16))
+  Using cached markupsafe-3.0.3-cp310-cp310-macosx_11_0_arm64.whl.metadata (2.7 kB)
+Collecting text-unidecode>=1.3 (from python-slugify==4.0.1->-r requirements.txt (line 20))
+  Using cached text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting urllib3<1.27,>=1.21.1 (from requests==2.26.0->-r requirements.txt (line 22))
+  Using cached urllib3-1.26.20-py2.py3-none-any.whl.metadata (50 kB)
+Collecting charset-normalizer<3.0,>=2.0 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached charset_normalizer-2.0.12-py3-none-any.whl.metadata (11 kB)
+Collecting h11<0.13,>=0.11 (from httpcore<0.15.0,>=0.14.0->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached h11-0.12.0-py3-none-any.whl.metadata (8.1 kB)
+Collecting anyio==3.* (from httpcore<0.15.0,>=0.14.0->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached anyio-3.7.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting exceptiongroup (from anyio==3.*->httpcore<0.15.0,>=0.14.0->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting pycparser (from cffi>=1.1->bcrypt==3.1.7->-r requirements.txt (line 11))
+  Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Using cached aiohttp-3.8.0-cp310-cp310-macosx_11_0_arm64.whl (568 kB)
+Using cached async_timeout-4.0.0-py3-none-any.whl (6.1 kB)
+Using cached astral-2.2-py2.py3-none-any.whl (30 kB)
+Using cached attrs-21.2.0-py2.py3-none-any.whl (53 kB)
+Using cached atomicwrites-1.4.0-py2.py3-none-any.whl (6.8 kB)
+Using cached awesomeversion-21.10.1-py3-none-any.whl (13 kB)
+Using cached httpx-0.21.0-py3-none-any.whl (83 kB)
+Using cached ifaddr-0.1.7-py2.py3-none-any.whl (10 kB)
+Using cached Jinja2-3.0.3-py3-none-any.whl (133 kB)
+Using cached PyJWT-2.1.0-py3-none-any.whl (16 kB)
+Using cached cryptography-35.0.0-cp36-abi3-macosx_11_0_arm64.whl (2.4 MB)
+Using cached PyYAML-6.0-cp310-cp310-macosx_11_0_arm64.whl (173 kB)
+Using cached requests-2.26.0-py2.py3-none-any.whl (62 kB)
+Using cached voluptuous_serialize-2.4.0-py3-none-any.whl (6.7 kB)
+Using cached pip-20.2.4-py2.py3-none-any.whl (1.5 MB)
+Using cached charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Using cached httpcore-0.14.7-py3-none-any.whl (68 kB)
+Using cached anyio-3.7.1-py3-none-any.whl (80 kB)
+Using cached h11-0.12.0-py3-none-any.whl (54 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Using cached multidict-6.7.0-cp310-cp310-macosx_11_0_arm64.whl (44 kB)
+Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+Using cached certifi-2025.10.5-py3-none-any.whl (163 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Using cached cffi-2.0.0-cp310-cp310-macosx_11_0_arm64.whl (180 kB)
+Using cached frozenlist-1.8.0-cp310-cp310-macosx_11_0_arm64.whl (49 kB)
+Using cached markupsafe-3.0.3-cp310-cp310-macosx_11_0_arm64.whl (12 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Installing collected packages: voluptuous, text-unidecode, rfc3986, pytz, ifaddr, ciso8601, awesomeversion, voluptuous-serialize, urllib3, typing-extensions, sniffio, six, pyyaml, python-slugify, PyJWT, pycparser, pip, MarkupSafe, idna, h11, frozenlist, charset-normalizer, certifi, attrs, atomicwrites, astral, requests, multidict, jinja2, exceptiongroup, cffi, async_timeout, aiosignal, yarl, cryptography, bcrypt, anyio, httpcore, aiohttp, httpx
+  Attempting uninstall: pip
+    Found existing installation: pip 25.2
+    Uninstalling pip-25.2:
+      Successfully uninstalled pip-25.2
+
+Successfully installed MarkupSafe-3.0.3 PyJWT-2.1.0 aiohttp-3.8.0 aiosignal-1.4.0 anyio-3.7.1 astral-2.2 async_timeout-4.0.0 atomicwrites-1.4.0 attrs-21.2.0 awesomeversion-21.10.1 bcrypt-3.1.7 certifi-2025.10.5 cffi-2.0.0 charset-normalizer-2.0.12 ciso8601-2.2.0 cryptography-35.0.0 exceptiongroup-1.3.0 frozenlist-1.8.0 h11-0.12.0 httpcore-0.14.7 httpx-0.21.0 idna-3.11 ifaddr-0.1.7 jinja2-3.0.3 multidict-6.7.0 pip-20.2.4 pycparser-2.23 python-slugify-4.0.1 pytz-2025.2 pyyaml-6.0 requests-2.26.0 rfc3986-1.5.0 six-1.17.0 sniffio-1.3.1 text-unidecode-1.3 typing-extensions-4.15.0 urllib3-1.26.20 voluptuous-0.12.2 voluptuous-serialize-2.4.0 yarl-1.6.3
+Virtual environment setup complete
+Running setup command...
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: '/tmp/requirements_test.txt'
+
+=========================================
+Test run 1/1 for before
+Time: Fri Oct 24 11:09:25 CEST 2025
+=========================================
+Delta,Time,CPU_FREQUENCY_0,CPU_FREQUENCY_1,CPU_FREQUENCY_10,CPU_FREQUENCY_11,CPU_FREQUENCY_2,CPU_FREQUENCY_3,CPU_FREQUENCY_4,CPU_FREQUENCY_5,CPU_FREQUENCY_6,CPU_FREQUENCY_7,CPU_FREQUENCY_8,CPU_FREQUENCY_9,CPU_TEMP_0,CPU_TEMP_1,CPU_TEMP_10,CPU_TEMP_11,CPU_TEMP_2,CPU_TEMP_3,CPU_TEMP_4,CPU_TEMP_5,CPU_TEMP_6,CPU_TEMP_7,CPU_TEMP_8,CPU_TEMP_9,CPU_USAGE_0,CPU_USAGE_1,CPU_USAGE_10,CPU_USAGE_11,CPU_USAGE_2,CPU_USAGE_3,CPU_USAGE_4,CPU_USAGE_5,CPU_USAGE_6,CPU_USAGE_7,CPU_USAGE_8,CPU_USAGE_9,SYSTEM_POWER (Watts),TOTAL_MEMORY,TOTAL_SWAP,USED_MEMORY,USED_SWAP
+0,1761296966355,4,4,4,4,4,4,4,4,4,4,4,4,72.97899627685547,86.17529296875,72.734375,77.8125,79.28382110595703,83.40741729736328,74.32636260986328,80.8348159790039,83.7688980102539,81.97119903564453,78.15191650390625,79.50228881835938,100,50,100,NaN,0,0,0,100,0,0,NaN,NaN,43.90304183959961,25769803776,5368709120,20396376064,4286382080
+/Users/xutongliu/LLM/SlowTestOpt/versions/core_60348/before/.venv/bin/python: No module named pytest
+204,1761296966355,4,4,4,4,4,4,4,4,4,4,4,4,72.97899627685547,86.17529296875,72.734375,77.8125,79.28382110595703,83.40741729736328,74.32636260986328,80.8348159790039,83.7688980102539,81.97119903564453,78.15191650390625,79.50228881835938,NaN,100,NaN,100,NaN,0,100,0,NaN,100,66.66667175292969,100,43.90304183959961,25769803776,5368709120,20394524672,4286382080
+7,1761296966560,4,4,4,4,4,4,4,4,4,4,4,4,72.97899627685547,86.17529296875,72.734375,77.8125,79.28382110595703,83.40741729736328,74.32636260986328,80.8348159790039,83.7688980102539,81.97119903564453,78.15191650390625,79.50228881835938,47.619049072265625,21.052631378173828,42.85714340209961,42.85714340209961,14.285715103149414,10,23.809524536132813,25,22.72727394104004,15.000000953674316,47.36842346191406,30.000001907348633,48.783348083496094,25769803776,5368709120,20394524672,4286382080
+Energy consumption in joules: 8.95622053527832 for 0.22055629 sec of execution.
+
+
+========================================
+Completed before version at: Fri Oct 24 11:09:26 CEST 2025
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Virtual environment not found at '.venv', creating...
+Using Python: python3.10
+Virtual environment created successfully
+Installing dependencies from requirements.txt...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (22.2.2)
+Collecting pip
+  Using cached pip-25.2-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.2.2
+    Uninstalling pip-22.2.2:
+      Successfully uninstalled pip-22.2.2
+Successfully installed pip-25.2
+WARNING: There was an error checking the latest version of pip.
+Ignoring backports.zoneinfo: markers 'python_version < "3.9"' don't match your environment
+Collecting aiohttp==3.8.0 (from -r requirements.txt (line 4))
+  Using cached aiohttp-3.8.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (7.3 kB)
+Collecting astral==2.2 (from -r requirements.txt (line 5))
+  Using cached astral-2.2-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting async_timeout==4.0.0 (from -r requirements.txt (line 6))
+  Using cached async_timeout-4.0.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting attrs==21.2.0 (from -r requirements.txt (line 7))
+  Using cached attrs-21.2.0-py2.py3-none-any.whl.metadata (9.1 kB)
+Collecting atomicwrites==1.4.0 (from -r requirements.txt (line 8))
+  Using cached atomicwrites-1.4.0-py2.py3-none-any.whl.metadata (5.6 kB)
+Collecting awesomeversion==21.10.1 (from -r requirements.txt (line 9))
+  Using cached awesomeversion-21.10.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting bcrypt==3.1.7 (from -r requirements.txt (line 11))
+  Using cached bcrypt-3.1.7-cp310-cp310-macosx_10_9_universal2.whl
+Collecting certifi>=2021.5.30 (from -r requirements.txt (line 12))
+  Using cached certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+Collecting ciso8601==2.2.0 (from -r requirements.txt (line 13))
+  Using cached ciso8601-2.2.0-cp310-cp310-macosx_10_9_universal2.whl
+Collecting httpx==0.21.0 (from -r requirements.txt (line 14))
+  Using cached httpx-0.21.0-py3-none-any.whl.metadata (49 kB)
+Collecting ifaddr==0.1.7 (from -r requirements.txt (line 15))
+  Using cached ifaddr-0.1.7-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting jinja2==3.0.3 (from -r requirements.txt (line 16))
+  Using cached Jinja2-3.0.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting PyJWT==2.1.0 (from -r requirements.txt (line 17))
+  Using cached PyJWT-2.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting cryptography==35.0.0 (from -r requirements.txt (line 18))
+  Using cached cryptography-35.0.0-cp36-abi3-macosx_11_0_arm64.whl.metadata (5.4 kB)
+Collecting pip<20.3,>=8.0.3 (from -r requirements.txt (line 19))
+  Using cached pip-20.2.4-py2.py3-none-any.whl.metadata (3.7 kB)
+Collecting python-slugify==4.0.1 (from -r requirements.txt (line 20))
+  Using cached python_slugify-4.0.1-py2.py3-none-any.whl
+Collecting pyyaml==6.0 (from -r requirements.txt (line 21))
+  Using cached PyYAML-6.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (2.0 kB)
+Collecting requests==2.26.0 (from -r requirements.txt (line 22))
+  Using cached requests-2.26.0-py2.py3-none-any.whl.metadata (4.8 kB)
+Collecting voluptuous==0.12.2 (from -r requirements.txt (line 23))
+  Using cached voluptuous-0.12.2-py3-none-any.whl
+Collecting voluptuous-serialize==2.4.0 (from -r requirements.txt (line 24))
+  Using cached voluptuous_serialize-2.4.0-py3-none-any.whl.metadata (322 bytes)
+Collecting yarl==1.6.3 (from -r requirements.txt (line 25))
+  Using cached yarl-1.6.3-cp310-cp310-macosx_10_9_universal2.whl
+Collecting charset-normalizer<3.0,>=2.0 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached charset_normalizer-2.1.1-py3-none-any.whl.metadata (11 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached multidict-6.7.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (5.3 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached frozenlist-1.8.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (20 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting typing-extensions>=3.6.5 (from async_timeout==4.0.0->-r requirements.txt (line 6))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting idna>=2.0 (from yarl==1.6.3->-r requirements.txt (line 25))
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz (from astral==2.2->-r requirements.txt (line 5))
+  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting cffi>=1.1 (from bcrypt==3.1.7->-r requirements.txt (line 11))
+  Using cached cffi-2.0.0-cp310-cp310-macosx_11_0_arm64.whl.metadata (2.6 kB)
+Collecting six>=1.4.1 (from bcrypt==3.1.7->-r requirements.txt (line 11))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting sniffio (from httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting rfc3986<2,>=1.3 (from rfc3986[idna2008]<2,>=1.3->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting httpcore<0.15.0,>=0.14.0 (from httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached httpcore-0.14.7-py3-none-any.whl.metadata (15 kB)
+Collecting MarkupSafe>=2.0 (from jinja2==3.0.3->-r requirements.txt (line 16))
+  Using cached markupsafe-3.0.3-cp310-cp310-macosx_11_0_arm64.whl.metadata (2.7 kB)
+Collecting text-unidecode>=1.3 (from python-slugify==4.0.1->-r requirements.txt (line 20))
+  Using cached text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting urllib3<1.27,>=1.21.1 (from requests==2.26.0->-r requirements.txt (line 22))
+  Using cached urllib3-1.26.20-py2.py3-none-any.whl.metadata (50 kB)
+Collecting charset-normalizer<3.0,>=2.0 (from aiohttp==3.8.0->-r requirements.txt (line 4))
+  Using cached charset_normalizer-2.0.12-py3-none-any.whl.metadata (11 kB)
+Collecting h11<0.13,>=0.11 (from httpcore<0.15.0,>=0.14.0->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached h11-0.12.0-py3-none-any.whl.metadata (8.1 kB)
+Collecting anyio==3.* (from httpcore<0.15.0,>=0.14.0->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached anyio-3.7.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting exceptiongroup (from anyio==3.*->httpcore<0.15.0,>=0.14.0->httpx==0.21.0->-r requirements.txt (line 14))
+  Using cached exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting pycparser (from cffi>=1.1->bcrypt==3.1.7->-r requirements.txt (line 11))
+  Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Using cached aiohttp-3.8.0-cp310-cp310-macosx_11_0_arm64.whl (568 kB)
+Using cached async_timeout-4.0.0-py3-none-any.whl (6.1 kB)
+Using cached astral-2.2-py2.py3-none-any.whl (30 kB)
+Using cached attrs-21.2.0-py2.py3-none-any.whl (53 kB)
+Using cached atomicwrites-1.4.0-py2.py3-none-any.whl (6.8 kB)
+Using cached awesomeversion-21.10.1-py3-none-any.whl (13 kB)
+Using cached httpx-0.21.0-py3-none-any.whl (83 kB)
+Using cached ifaddr-0.1.7-py2.py3-none-any.whl (10 kB)
+Using cached Jinja2-3.0.3-py3-none-any.whl (133 kB)
+Using cached PyJWT-2.1.0-py3-none-any.whl (16 kB)
+Using cached cryptography-35.0.0-cp36-abi3-macosx_11_0_arm64.whl (2.4 MB)
+Using cached PyYAML-6.0-cp310-cp310-macosx_11_0_arm64.whl (173 kB)
+Using cached requests-2.26.0-py2.py3-none-any.whl (62 kB)
+Using cached voluptuous_serialize-2.4.0-py3-none-any.whl (6.7 kB)
+Using cached pip-20.2.4-py2.py3-none-any.whl (1.5 MB)
+Using cached charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Using cached httpcore-0.14.7-py3-none-any.whl (68 kB)
+Using cached anyio-3.7.1-py3-none-any.whl (80 kB)
+Using cached h11-0.12.0-py3-none-any.whl (54 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Using cached multidict-6.7.0-cp310-cp310-macosx_11_0_arm64.whl (44 kB)
+Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+Using cached certifi-2025.10.5-py3-none-any.whl (163 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Using cached cffi-2.0.0-cp310-cp310-macosx_11_0_arm64.whl (180 kB)
+Using cached frozenlist-1.8.0-cp310-cp310-macosx_11_0_arm64.whl (49 kB)
+Using cached markupsafe-3.0.3-cp310-cp310-macosx_11_0_arm64.whl (12 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Installing collected packages: voluptuous, text-unidecode, rfc3986, pytz, ifaddr, ciso8601, awesomeversion, voluptuous-serialize, urllib3, typing-extensions, sniffio, six, pyyaml, python-slugify, PyJWT, pycparser, pip, MarkupSafe, idna, h11, frozenlist, charset-normalizer, certifi, attrs, atomicwrites, astral, requests, multidict, jinja2, exceptiongroup, cffi, async_timeout, aiosignal, yarl, cryptography, bcrypt, anyio, httpcore, aiohttp, httpx
+  Attempting uninstall: pip
+    Found existing installation: pip 25.2
+    Uninstalling pip-25.2:
+      Successfully uninstalled pip-25.2
+
+Successfully installed MarkupSafe-3.0.3 PyJWT-2.1.0 aiohttp-3.8.0 aiosignal-1.4.0 anyio-3.7.1 astral-2.2 async_timeout-4.0.0 atomicwrites-1.4.0 attrs-21.2.0 awesomeversion-21.10.1 bcrypt-3.1.7 certifi-2025.10.5 cffi-2.0.0 charset-normalizer-2.0.12 ciso8601-2.2.0 cryptography-35.0.0 exceptiongroup-1.3.0 frozenlist-1.8.0 h11-0.12.0 httpcore-0.14.7 httpx-0.21.0 idna-3.11 ifaddr-0.1.7 jinja2-3.0.3 multidict-6.7.0 pip-20.2.4 pycparser-2.23 python-slugify-4.0.1 pytz-2025.2 pyyaml-6.0 requests-2.26.0 rfc3986-1.5.0 six-1.17.0 sniffio-1.3.1 text-unidecode-1.3 typing-extensions-4.15.0 urllib3-1.26.20 voluptuous-0.12.2 voluptuous-serialize-2.4.0 yarl-1.6.3
+Virtual environment setup complete
+Running setup command...
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: '/tmp/requirements_test.txt'
+
+=========================================
+Test run 1/1 for after
+Time: Fri Oct 24 11:09:44 CEST 2025
+=========================================
+Delta,Time,CPU_FREQUENCY_0,CPU_FREQUENCY_1,CPU_FREQUENCY_10,CPU_FREQUENCY_11,CPU_FREQUENCY_2,CPU_FREQUENCY_3,CPU_FREQUENCY_4,CPU_FREQUENCY_5,CPU_FREQUENCY_6,CPU_FREQUENCY_7,CPU_FREQUENCY_8,CPU_FREQUENCY_9,CPU_TEMP_0,CPU_TEMP_1,CPU_TEMP_2,CPU_TEMP_3,CPU_TEMP_4,CPU_TEMP_5,CPU_TEMP_6,CPU_TEMP_7,CPU_TEMP_8,CPU_TEMP_9,CPU_USAGE_0,CPU_USAGE_1,CPU_USAGE_10,CPU_USAGE_11,CPU_USAGE_2,CPU_USAGE_3,CPU_USAGE_4,CPU_USAGE_5,CPU_USAGE_6,CPU_USAGE_7,CPU_USAGE_8,CPU_USAGE_9,SYSTEM_POWER (Watts),TOTAL_MEMORY,TOTAL_SWAP,USED_MEMORY,USED_SWAP
+0,1761296985282,4,4,4,4,4,4,4,4,4,4,4,4,2.1999998092651367,1.5,2.1999998092651367,1.5,1.5,2.1999998092651367,1.5,2.1999998092651367,2.1999998092651367,1.5,50,0,0,0,50,50,0,0,0,0,0,100,40.41764831542969,25769803776,5368709120,20415021056,4286382080
+/Users/xutongliu/LLM/SlowTestOpt/versions/core_60348/after/.venv/bin/python: No module named pytest
+204,1761296985282,4,4,4,4,4,4,4,4,4,4,4,4,2.1999998092651367,1.5,2.1999998092651367,1.5,1.5,2.1999998092651367,1.5,2.1999998092651367,2.1999998092651367,1.5,100,50,NaN,50,NaN,0,0,0,0,0,50,NaN,40.41764831542969,25769803776,5368709120,20415021056,4286382080
+14,1761296985487,4,4,4,4,4,4,4,4,4,4,4,4,2.1999998092651367,1.5,2.1999998092651367,1.5,1.5,2.1999998092651367,1.5,2.1999998092651367,2.1999998092651367,1.5,38.095237731933594,35,19.047618865966797,47.36842346191406,28.571430206298828,28.571430206298828,0,0,0,0,35,18.18181800842285,47.22794723510742,25769803776,5368709120,20415021056,4286382080
+Energy consumption in joules: 8.245200256347657 for 0.23217392 sec of execution.
+
+
+========================================
+Completed after version at: Fri Oct 24 11:09:45 CEST 2025
+========================================
+
+========================================
+All tests completed at: Fri Oct 24 11:09:45 CEST 2025
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/core_60348/test_results.log
+========================================

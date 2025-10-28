@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
 """
 Optimized script to parse test results and extract energy and duration data.
+
 Usage: python3 parse_results_generic_optimized.py <project_path>
 Example: python3 parse_results_generic_optimized.py BuffaLogs_400
+
+This script parses test result logs to extract:
+- Energy consumption data (joules, watts, execution time)
+- Test duration data (individual test times, total test time)
+
+The script handles various pytest output formats automatically.
+
+Version: 2.1 (Added energibridge execution time tracking)
 """
 
 import re
@@ -11,10 +20,19 @@ import sys
 from pathlib import Path
 
 
-def parse_log_file(log_file_path):
-    """Parse the test results log file and extract energy and duration data (optimized)."""
+def parse_log_file(log_file_path, debug=False):
+    """Parse the test results log file and extract energy and duration data (optimized).
+
+    Args:
+        log_file_path: Path to the test results log file
+        debug: If True, print debug information during parsing
+
+    Returns:
+        Tuple of (energy_data, duration_data, execution_time_data) lists
+    """
     energy_data = []
     duration_data = []
+    execution_time_data = []  # New: Track energibridge-measured execution times
 
     # State machine variables
     current_version = None
@@ -22,13 +40,25 @@ def parse_log_file(log_file_path):
     in_slowest_durations = False
     pending_durations = []  # Temporary storage for durations in current test run
 
+    # Debug counters
+    debug_counters = {
+        'total_time_matches': 0,
+        'duration_entries': 0,
+        'energy_entries': 0,
+        'execution_time_entries': 0,
+    } if debug else None
+
     # Pre-compiled regex patterns for better performance
     version_pattern = re.compile(r'Starting tests for (before|after) version')
     test_run_pattern = re.compile(r'Test run (\d+)/\d+ for (before|after)')
     energy_pattern = re.compile(r'Energy consumption in joules: ([\d.]+) for ([\d.]+) sec of execution\.')
     slowest_start_pattern = re.compile(r'={20,}\s+slowest durations\s+={20,}')
     test_duration_pattern = re.compile(r'([\d.]+)s\s+(\w+)\s+(.+?)$')
-    total_time_pattern = re.compile(r'={10,}.*?\s+in\s+([\d.]+)s\s')
+    # Improved pattern to match various pytest output formats:
+    # - "in 30.24s =" (with = after s)
+    # - "in 30.24s " (with space after s)
+    # - "in 30.24s" (nothing after s, end of line or more =)
+    total_time_pattern = re.compile(r'in\s+([\d.]+)s(?:\s|=|$)')
 
     # Process file line by line instead of loading entire file
     with open(log_file_path, 'r') as f:
@@ -64,6 +94,18 @@ def parse_log_file(log_file_path):
                         'execution_time_sec': execution_time_sec,
                         'average_power_watts': average_power_watts
                     })
+
+                    # Also track execution time separately for comparison with pytest times
+                    execution_time_data.append({
+                        'version': current_version,
+                        'run_number': current_run_number,
+                        'energibridge_time_sec': execution_time_sec
+                    })
+
+                    if debug:
+                        debug_counters['energy_entries'] += 1
+                        debug_counters['execution_time_entries'] += 1
+
                     continue
 
             # Check for slowest durations section start
@@ -76,6 +118,11 @@ def parse_log_file(log_file_path):
                 total_time_match = total_time_pattern.search(line)
                 if total_time_match:
                     total_test_time = float(total_time_match.group(1))
+
+                    if debug:
+                        debug_counters['total_time_matches'] += 1
+                        print(f"[DEBUG] Found total time: {total_test_time}s for {current_version} run {current_run_number}")
+                        print(f"[DEBUG] Updating {len(pending_durations)} pending duration entries")
 
                     # Update all pending durations with the total test time
                     for duration_entry in pending_durations:
@@ -112,7 +159,18 @@ def parse_log_file(log_file_path):
                         'total_test_time': None  # Will be filled in when we find the total time
                     })
 
-    return energy_data, duration_data
+                    if debug:
+                        debug_counters['duration_entries'] += 1
+
+    # Print debug summary if enabled
+    if debug and debug_counters:
+        print("\n[DEBUG] Parsing Summary:")
+        print(f"  Total time matches found: {debug_counters['total_time_matches']}")
+        print(f"  Duration entries parsed: {debug_counters['duration_entries']}")
+        print(f"  Energy entries parsed: {debug_counters['energy_entries']}")
+        print(f"  Execution time entries parsed: {debug_counters['execution_time_entries']}")
+
+    return energy_data, duration_data, execution_time_data
 
 
 def save_to_csv(data, csv_file_path, fieldnames):
@@ -123,7 +181,7 @@ def save_to_csv(data, csv_file_path, fieldnames):
         writer.writerows(data)
 
 
-def print_summary(energy_data, duration_data):
+def print_summary(energy_data, duration_data, execution_time_data):
     """Print summary statistics."""
     print("\n" + "="*60)
     print("EXTRACTION SUMMARY")
@@ -199,6 +257,36 @@ def print_summary(energy_data, duration_data):
         total_time_improvement = ((avg_total_before - avg_total_after) / avg_total_before) * 100
         print(f"  Total test time improvement: {total_time_improvement:.2f}%")
 
+    # Execution time comparison (energibridge vs pytest)
+    exec_time_before = [d for d in execution_time_data if d['version'] == 'before']
+    exec_time_after = [d for d in execution_time_data if d['version'] == 'after']
+
+    print(f"\nExecution time comparison (Energibridge vs Pytest):")
+    print(f"  Energibridge entries: before={len(exec_time_before)}, after={len(exec_time_after)}")
+
+    if exec_time_before:
+        avg_exec_time_before = sum(d['energibridge_time_sec'] for d in exec_time_before) / len(exec_time_before)
+        print(f"  Average energibridge time (before): {avg_exec_time_before:.2f}s")
+
+    if exec_time_after:
+        avg_exec_time_after = sum(d['energibridge_time_sec'] for d in exec_time_after) / len(exec_time_after)
+        print(f"  Average energibridge time (after): {avg_exec_time_after:.2f}s")
+
+    if exec_time_before and exec_time_after:
+        exec_time_improvement = ((avg_exec_time_before - avg_exec_time_after) / avg_exec_time_before) * 100
+        print(f"  Energibridge time improvement: {exec_time_improvement:.2f}%")
+
+    # Compare energibridge time vs pytest time
+    if exec_time_before and duration_before and before_runs:
+        time_diff_before = avg_exec_time_before - avg_total_before
+        time_diff_pct_before = (time_diff_before / avg_total_before) * 100
+        print(f"  Time difference before (energibridge - pytest): {time_diff_before:+.2f}s ({time_diff_pct_before:+.2f}%)")
+
+    if exec_time_after and duration_after and after_runs:
+        time_diff_after = avg_exec_time_after - avg_total_after
+        time_diff_pct_after = (time_diff_after / avg_total_after) * 100
+        print(f"  Time difference after (energibridge - pytest): {time_diff_after:+.2f}s ({time_diff_pct_after:+.2f}%)")
+
     print("\n" + "="*60 + "\n")
 
 
@@ -206,11 +294,14 @@ def main():
     # Check if project path is provided
     if len(sys.argv) < 2:
         print("Error: Project path is required")
-        print("Usage: python3 parse_results_generic_optimized.py <project_path>")
+        print("Usage: python3 parse_results_generic_optimized.py <project_path> [--debug]")
         print("Example: python3 parse_results_generic_optimized.py BuffaLogs_400")
+        print("\nOptions:")
+        print("  --debug    Enable debug output during parsing")
         sys.exit(1)
 
     project_path = sys.argv[1]
+    debug_mode = '--debug' in sys.argv
     script_dir = Path(__file__).parent
     project_dir = script_dir / project_path
 
@@ -222,6 +313,7 @@ def main():
     log_file = project_dir / "test_results.log"
     energy_csv = project_dir / "energy_data.csv"
     duration_csv = project_dir / "duration_data.csv"
+    execution_time_csv = project_dir / "execution_time_data.csv"
 
     # Check if log file exists
     if not log_file.exists():
@@ -230,9 +322,11 @@ def main():
         sys.exit(1)
 
     print(f"Parsing test results from: {log_file}")
+    if debug_mode:
+        print("[DEBUG] Debug mode enabled")
 
     # Parse the log file
-    energy_data, duration_data = parse_log_file(log_file)
+    energy_data, duration_data, execution_time_data = parse_log_file(log_file, debug=debug_mode)
 
     # Save to CSV files
     if energy_data:
@@ -249,8 +343,15 @@ def main():
     else:
         print("Warning: No duration data found in log file")
 
+    if execution_time_data:
+        save_to_csv(execution_time_data, execution_time_csv,
+                   ['version', 'run_number', 'energibridge_time_sec'])
+        print(f"Execution time data saved to: {execution_time_csv}")
+    else:
+        print("Warning: No execution time data found in log file")
+
     # Print summary
-    print_summary(energy_data, duration_data)
+    print_summary(energy_data, duration_data, execution_time_data)
 
     print(f"Next step: python3 visualize_results_generic.py {project_path}")
 
