@@ -1,0 +1,33 @@
+========================================
+Starting test runs for project: sonic-mgmt_6122
+Iterations: 2
+Test command: echo 'ERROR: sFlow tests require PTF testbed environment. See test_config.sh for details.' && exit 1
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/sonic-mgmt_6122/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Note: Full PTF test environment requires Docker container setup
+
+=========================================
+Test run 1/2 for before
+Time: Wed Oct 29 22:41:01 CET 2025
+=========================================
+ERROR: sFlow tests require PTF testbed environment. See test_config.sh for details.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/2 for before
+Time: Wed Oct 29 22:41:07 CET 2025
+=========================================
+ERROR: sFlow tests require PTF testbed environment. See test_config.sh for details.
+
+
+========================================
+Completed before version at: Wed Oct 29 22:41:07 CET 2025
+========================================

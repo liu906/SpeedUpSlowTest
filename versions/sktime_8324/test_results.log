@@ -1,0 +1,697 @@
+========================================
+Starting test runs for project: sktime_8324
+Iterations: 1
+Test command: python -m pytest sktime/classification/tests/test_all_classifiers.py -k ShapeDTW -v -vv --durations=0 --matrixdesign=False --only_changed_modules=False -n 0
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Collecting scipy
+  Downloading scipy-1.15.3-cp310-cp310-macosx_14_0_arm64.whl.metadata (61 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.7.2-cp310-cp310-macosx_12_0_arm64.whl.metadata (11 kB)
+Collecting numpy<2.5,>=1.23.5 (from scipy)
+  Downloading numpy-2.2.6-cp310-cp310-macosx_14_0_arm64.whl.metadata (62 kB)
+Collecting joblib>=1.2.0 (from scikit-learn)
+  Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Downloading scipy-1.15.3-cp310-cp310-macosx_14_0_arm64.whl (22.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.4/22.4 MB 1.1 MB/s  0:00:20
+Downloading numpy-2.2.6-cp310-cp310-macosx_14_0_arm64.whl (5.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 1.0 MB/s  0:00:05
+Downloading scikit_learn-1.7.2-cp310-cp310-macosx_12_0_arm64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 1.1 MB/s  0:00:07
+Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, numpy, joblib, scipy, scikit-learn
+  Attempting uninstall: threadpoolctl
+    Found existing installation: threadpoolctl 3.6.0
+    Uninstalling threadpoolctl-3.6.0:
+      Successfully uninstalled threadpoolctl-3.6.0
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.4
+    Uninstalling numpy-1.26.4:
+      Successfully uninstalled numpy-1.26.4
+  Attempting uninstall: joblib
+    Found existing installation: joblib 1.5.2
+    Uninstalling joblib-1.5.2:
+      Successfully uninstalled joblib-1.5.2
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.15.3
+    Uninstalling scipy-1.15.3:
+      Successfully uninstalled scipy-1.15.3
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.6.1
+    Uninstalling scikit-learn-1.6.1:
+      Successfully uninstalled scikit-learn-1.6.1
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gluonts 0.16.2 requires numpy<2.2,>=1.16, but you have numpy 2.2.6 which is incompatible.
+skpro 2.9.4 requires scikit-learn<1.7.0,>=0.24.0, but you have scikit-learn 1.7.2 which is incompatible.
+sktime 0.37.0 requires scikit-learn<1.7.0,>=0.24, but you have scikit-learn 1.7.2 which is incompatible.
+tensorflow 2.19.1 requires numpy<2.2.0,>=1.26.0, but you have numpy 2.2.6 which is incompatible.
+tslearn 0.6.4 requires scikit-learn<1.7,>=1.3.2, but you have scikit-learn 1.7.2 which is incompatible.
+u8darts 0.31.0 requires numpy<2.0.0,>=1.19.0, but you have numpy 2.2.6 which is incompatible.
+Successfully installed joblib-1.5.2 numpy-2.2.6 scikit-learn-1.7.2 scipy-1.15.3 threadpoolctl-3.6.0
+Obtaining file:///Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: joblib<1.6,>=1.2.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.5.2)
+Requirement already satisfied: numpy<2.3,>=1.21 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.2.6)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (25.0)
+Requirement already satisfied: pandas<2.3.0,>=1.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.2.3)
+Requirement already satisfied: scikit-base<0.13.0,>=0.6.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.12.6)
+Collecting scikit-learn<1.7.0,>=0.24 (from sktime==0.37.0)
+  Downloading scikit_learn-1.6.1-cp310-cp310-macosx_12_0_arm64.whl.metadata (31 kB)
+Requirement already satisfied: scipy<2.0.0,>=1.2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.15.3)
+Requirement already satisfied: backoff in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.2.1)
+Requirement already satisfied: httpx in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.28.1)
+Requirement already satisfied: pre-commit in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (4.3.0)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (8.4.2)
+Requirement already satisfied: pytest-randomly in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (4.0.1)
+Requirement already satisfied: pytest-timeout in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.4.0)
+Requirement already satisfied: pytest-xdist in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.8.0)
+Requirement already satisfied: wheel in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.45.1)
+Requirement already satisfied: arch<7.1.0,>=5.6 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (7.0.0)
+Requirement already satisfied: autots<0.7,>=0.6.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.6.21)
+Requirement already satisfied: cloudpickle in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.1.1)
+Requirement already satisfied: dash!=2.9.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.2.0)
+Requirement already satisfied: dtaidistance<2.4 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.3.13)
+Requirement already satisfied: dtw-python in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.5.3)
+Requirement already satisfied: filterpy>=1.4.5 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.4.5)
+Requirement already satisfied: gluonts>=0.9 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.16.2)
+Requirement already satisfied: h5py in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.15.1)
+Requirement already satisfied: hmmlearn>=0.2.7 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.3.3)
+Requirement already satisfied: holidays in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.83)
+Requirement already satisfied: matplotlib!=3.9.1,>=3.3.2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.10.7)
+Requirement already satisfied: mne in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.10.2)
+Requirement already satisfied: numba<0.62,>=0.53 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.61.2)
+Requirement already satisfied: optuna<4.4 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (4.3.0)
+Requirement already satisfied: pmdarima!=1.8.1,<3.0.0,>=1.8 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.0.4)
+Requirement already satisfied: polars<2.0,>=0.20 in ./.venv/lib/python3.10/site-packages (from polars[pandas]<2.0,>=0.20; python_version < "3.13" and extra == "all-extras-pandas2"->sktime==0.37.0) (1.34.0)
+Requirement already satisfied: prophet>=1.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.2.1)
+Requirement already satisfied: pycatch22<0.4.6 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.4.5)
+Requirement already satisfied: pyod>=0.8 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.0.5)
+Requirement already satisfied: ray>=2.40.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.51.0)
+Requirement already satisfied: scikit_posthocs>=0.6.5 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.11.4)
+Requirement already satisfied: seaborn>=0.11 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.13.2)
+Requirement already satisfied: seasonal in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.3.1)
+Requirement already satisfied: simdkalman in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.0.4)
+Requirement already satisfied: skforecast<0.15,>=0.12.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.14.0)
+Requirement already satisfied: skpro<2.10.0,>=2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.9.4)
+Requirement already satisfied: statsforecast<2.1.0,>=1.0.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.0.3)
+Requirement already satisfied: statsmodels>=0.12.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.14.5)
+Requirement already satisfied: stumpy>=1.5.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.13.0)
+Requirement already satisfied: tbats>=1.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.1.3)
+Requirement already satisfied: temporian!=0.8.0,<0.9.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.8.1)
+Requirement already satisfied: tensorflow<2.20,>=2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.19.1)
+Requirement already satisfied: tsfresh>=0.17 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.21.1)
+Requirement already satisfied: tslearn!=0.6.0,<0.7.0,>=0.5.2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.6.4)
+Requirement already satisfied: u8darts<0.32.0,>=0.29.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.31.0)
+Requirement already satisfied: xarray in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2025.6.1)
+Requirement already satisfied: llvmlite<0.45,>=0.44.0dev0 in ./.venv/lib/python3.10/site-packages (from numba<0.62,>=0.53->sktime==0.37.0) (0.44.0)
+Requirement already satisfied: alembic>=1.5.0 in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (1.17.1)
+Requirement already satisfied: colorlog in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (6.10.1)
+Requirement already satisfied: sqlalchemy>=1.4.2 in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (2.0.44)
+Requirement already satisfied: tqdm in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (4.67.1)
+Requirement already satisfied: PyYAML in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (6.0.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas<2.3.0,>=1.1->sktime==0.37.0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas<2.3.0,>=1.1->sktime==0.37.0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas<2.3.0,>=1.1->sktime==0.37.0) (2025.2)
+Requirement already satisfied: Cython!=0.29.18,!=0.29.31,>=0.29 in ./.venv/lib/python3.10/site-packages (from pmdarima!=1.8.1,<3.0.0,>=1.8->sktime==0.37.0) (3.1.6)
+Requirement already satisfied: urllib3 in ./.venv/lib/python3.10/site-packages (from pmdarima!=1.8.1,<3.0.0,>=1.8->sktime==0.37.0) (2.5.0)
+Requirement already satisfied: setuptools!=50.0.0,>=38.6.0 in ./.venv/lib/python3.10/site-packages (from pmdarima!=1.8.1,<3.0.0,>=1.8->sktime==0.37.0) (63.2.0)
+Requirement already satisfied: polars-runtime-32==1.34.0 in ./.venv/lib/python3.10/site-packages (from polars<2.0,>=0.20->polars[pandas]<2.0,>=0.20; python_version < "3.13" and extra == "all-extras-pandas2"->sktime==0.37.0) (1.34.0)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./.venv/lib/python3.10/site-packages (from scikit-learn<1.7.0,>=0.24->sktime==0.37.0) (3.6.0)
+Requirement already satisfied: coreforecast>=0.0.12 in ./.venv/lib/python3.10/site-packages (from statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.0.16)
+Requirement already satisfied: fugue>=0.8.1 in ./.venv/lib/python3.10/site-packages (from statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.9.1)
+Requirement already satisfied: utilsforecast>=0.1.4 in ./.venv/lib/python3.10/site-packages (from statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.2.14)
+Requirement already satisfied: absl-py<2.0.0,>=1.3.0 in ./.venv/lib/python3.10/site-packages (from temporian!=0.8.0,<0.9.0,>=0.7.0->sktime==0.37.0) (1.4.0)
+Requirement already satisfied: protobuf>=3.20.3 in ./.venv/lib/python3.10/site-packages (from temporian!=0.8.0,<0.9.0,>=0.7.0->sktime==0.37.0) (5.29.5)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (3.2.5)
+Requirement already satisfied: astunparse>=1.6.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (1.6.3)
+Requirement already satisfied: flatbuffers>=24.3.25 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (25.9.23)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.6.0)
+Requirement already satisfied: google-pasta>=0.1.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (18.1.1)
+Requirement already satisfied: opt-einsum>=2.3.2 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (3.4.0)
+Requirement already satisfied: requests<3,>=2.21.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (2.32.5)
+Requirement already satisfied: six>=1.12.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (1.17.0)
+Requirement already satisfied: termcolor>=1.1.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (3.2.0)
+Requirement already satisfied: typing-extensions>=3.6.6 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (4.15.0)
+Requirement already satisfied: wrapt>=1.11.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (2.0.0)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (1.76.0)
+Requirement already satisfied: tensorboard~=2.19.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (2.19.0)
+Requirement already satisfied: keras>=3.5.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (3.12.0)
+Collecting numpy<2.3,>=1.21 (from sktime==0.37.0)
+  Downloading numpy-2.1.3-cp310-cp310-macosx_14_0_arm64.whl.metadata (62 kB)
+Requirement already satisfied: ml-dtypes<1.0.0,>=0.5.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.5.3)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.37.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.20,>=2->sktime==0.37.0) (2025.10.5)
+Requirement already satisfied: markdown>=2.6.8 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.19.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.9)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.19.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.19.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.1.3)
+Requirement already satisfied: nfoursid>=1.0.0 in ./.venv/lib/python3.10/site-packages (from u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (1.0.2)
+  Downloading numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl.metadata (61 kB)
+Requirement already satisfied: shap>=0.40.0 in ./.venv/lib/python3.10/site-packages (from u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (0.49.1)
+Requirement already satisfied: xgboost>=1.6.0 in ./.venv/lib/python3.10/site-packages (from u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (3.1.1)
+Requirement already satisfied: Mako in ./.venv/lib/python3.10/site-packages (from alembic>=1.5.0->optuna<4.4->sktime==0.37.0) (1.3.10)
+Requirement already satisfied: tomli in ./.venv/lib/python3.10/site-packages (from alembic>=1.5.0->optuna<4.4->sktime==0.37.0) (2.3.0)
+Requirement already satisfied: Flask<3.2,>=1.0.4 in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (3.1.2)
+Requirement already satisfied: plotly>=5.0.0 in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (6.3.1)
+Requirement already satisfied: importlib-metadata in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (8.7.0)
+Requirement already satisfied: retrying in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (1.4.2)
+Requirement already satisfied: nest-asyncio in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (1.6.0)
+Requirement already satisfied: blinker>=1.9.0 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (8.2.1)
+Requirement already satisfied: itsdangerous>=2.2.0 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (3.0.3)
+Requirement already satisfied: triad>=0.9.7 in ./.venv/lib/python3.10/site-packages (from fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.9.8)
+Requirement already satisfied: adagio>=0.2.4 in ./.venv/lib/python3.10/site-packages (from fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.2.6)
+Requirement already satisfied: pydantic<3,>=1.7 in ./.venv/lib/python3.10/site-packages (from gluonts>=0.9->sktime==0.37.0) (2.12.3)
+Requirement already satisfied: toolz~=0.10 in ./.venv/lib/python3.10/site-packages (from gluonts>=0.9->sktime==0.37.0) (0.12.1)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.10/site-packages (from pydantic<3,>=1.7->gluonts>=0.9->sktime==0.37.0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.4 in ./.venv/lib/python3.10/site-packages (from pydantic<3,>=1.7->gluonts>=0.9->sktime==0.37.0) (2.41.4)
+Requirement already satisfied: typing-inspection>=0.4.2 in ./.venv/lib/python3.10/site-packages (from pydantic<3,>=1.7->gluonts>=0.9->sktime==0.37.0) (0.4.2)
+Requirement already satisfied: rich in ./.venv/lib/python3.10/site-packages (from keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (14.2.0)
+Requirement already satisfied: namex in ./.venv/lib/python3.10/site-packages (from keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.1.0)
+Requirement already satisfied: optree in ./.venv/lib/python3.10/site-packages (from keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.17.0)
+Requirement already satisfied: narwhals>=1.15.1 in ./.venv/lib/python3.10/site-packages (from plotly>=5.0.0->dash!=2.9.0->sktime==0.37.0) (2.10.0)
+Requirement already satisfied: cmdstanpy>=1.0.4 in ./.venv/lib/python3.10/site-packages (from prophet>=1.1->sktime==0.37.0) (1.3.0)
+Requirement already satisfied: importlib_resources in ./.venv/lib/python3.10/site-packages (from prophet>=1.1->sktime==0.37.0) (6.5.2)
+Requirement already satisfied: stanio<2.0.0,>=0.4.0 in ./.venv/lib/python3.10/site-packages (from cmdstanpy>=1.0.4->prophet>=1.1->sktime==0.37.0) (0.5.1)
+Requirement already satisfied: filelock in ./.venv/lib/python3.10/site-packages (from ray>=2.40.0->sktime==0.37.0) (3.20.0)
+Requirement already satisfied: jsonschema in ./.venv/lib/python3.10/site-packages (from ray>=2.40.0->sktime==0.37.0) (4.25.1)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in ./.venv/lib/python3.10/site-packages (from ray>=2.40.0->sktime==0.37.0) (1.1.2)
+Requirement already satisfied: slicer==0.0.8 in ./.venv/lib/python3.10/site-packages (from shap>=0.40.0->u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (0.0.8)
+Requirement already satisfied: patsy>=0.5.6 in ./.venv/lib/python3.10/site-packages (from statsmodels>=0.12.1->sktime==0.37.0) (1.0.2)
+Requirement already satisfied: pyarrow>=6.0.1 in ./.venv/lib/python3.10/site-packages (from triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (22.0.0)
+Requirement already satisfied: fsspec>=2022.5.0 in ./.venv/lib/python3.10/site-packages (from triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (2025.9.0)
+Requirement already satisfied: fs in ./.venv/lib/python3.10/site-packages (from triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (2.4.16)
+Requirement already satisfied: pywavelets in ./.venv/lib/python3.10/site-packages (from tsfresh>=0.17->sktime==0.37.0) (1.8.0)
+Requirement already satisfied: appdirs~=1.4.3 in ./.venv/lib/python3.10/site-packages (from fs->triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (1.4.4)
+Requirement already satisfied: anyio in ./.venv/lib/python3.10/site-packages (from httpx->sktime==0.37.0) (4.11.0)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.10/site-packages (from httpx->sktime==0.37.0) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.10/site-packages (from httpcore==1.*->httpx->sktime==0.37.0) (0.16.0)
+Requirement already satisfied: exceptiongroup>=1.0.2 in ./.venv/lib/python3.10/site-packages (from anyio->httpx->sktime==0.37.0) (1.3.0)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.10/site-packages (from anyio->httpx->sktime==0.37.0) (1.3.1)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib-metadata->dash!=2.9.0->sktime==0.37.0) (3.23.0)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (0.28.0)
+Requirement already satisfied: decorator in ./.venv/lib/python3.10/site-packages (from mne->sktime==0.37.0) (5.2.1)
+Requirement already satisfied: lazy-loader>=0.3 in ./.venv/lib/python3.10/site-packages (from mne->sktime==0.37.0) (0.4)
+Requirement already satisfied: pooch>=1.5 in ./.venv/lib/python3.10/site-packages (from mne->sktime==0.37.0) (1.8.2)
+Requirement already satisfied: platformdirs>=2.5.0 in ./.venv/lib/python3.10/site-packages (from pooch>=1.5->mne->sktime==0.37.0) (4.5.0)
+Requirement already satisfied: cfgv>=2.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (2.6.15)
+Requirement already satisfied: nodeenv>=0.11.1 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (1.9.1)
+Requirement already satisfied: virtualenv>=20.10.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (20.35.4)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->sktime==0.37.0) (0.4.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest->sktime==0.37.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest->sktime==0.37.0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest->sktime==0.37.0) (2.19.2)
+Requirement already satisfied: execnet>=2.1 in ./.venv/lib/python3.10/site-packages (from pytest-xdist->sktime==0.37.0) (2.1.1)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.10/site-packages (from rich->keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.1.2)
+Downloading scikit_learn-1.6.1-cp310-cp310-macosx_12_0_arm64.whl (11.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 1.2 MB/s  0:00:09
+Downloading numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl (14.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.0/14.0 MB 1.2 MB/s  0:00:11
+Building wheels for collected packages: sktime
+  Building editable for sktime (pyproject.toml): started
+  Building editable for sktime (pyproject.toml): finished with status 'done'
+  Created wheel for sktime: filename=sktime-0.37.0-0.editable-py3-none-any.whl size=12947 sha256=c697f09978998ae8d86e4f4664217f09bc374043691b0cb96558795ec96bb3c5
+  Stored in directory: /private/var/folders/zg/50vg7j4d2_5406pxjrgx4pz5xwm3dw/T/pip-ephem-wheel-cache-8nk2es0z/wheels/e2/0b/11/1a20cf05299a1e973ec6ee302922b4c9a931feb8d5bccc395c
+Successfully built sktime
+Installing collected packages: numpy, scikit-learn, sktime
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.2.6
+    Uninstalling numpy-2.2.6:
+      Successfully uninstalled numpy-2.2.6
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.7.2
+    Uninstalling scikit-learn-1.7.2:
+      Successfully uninstalled scikit-learn-1.7.2
+  Attempting uninstall: sktime
+    Found existing installation: sktime 0.37.0
+    Uninstalling sktime-0.37.0:
+      Successfully uninstalled sktime-0.37.0
+
+Successfully installed numpy-1.26.4 scikit-learn-1.6.1 sktime-0.37.0
+
+=========================================
+Test run 1/1 for before
+Time: Wed Oct 29 22:28:02 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/before/.venv/bin/python
+cachedir: .pytest_cache
+Using --randomly-seed=2139967373
+Fugue tests will be initialized with options:
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/before
+configfile: setup.cfg
+plugins: anyio-4.11.0, xdist-3.8.0, timeout-2.4.0, randomly-4.0.1, fugue-0.9.1, dash-3.2.0
+timeout: 600.0s
+timeout method: signal
+timeout func_only: False
+collecting ... fatal: bad revision 'remotes/origin/main'
+collected 521 items / 509 deselected / 12 selected
+
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1] PASSED [  8%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0] PASSED [ 16%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW] PASSED [ 25%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict] PASSED [ 33%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1] PASSED [ 41%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0] PASSED [ 50%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses] PASSED [ 58%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1] PASSED [ 66%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0] PASSED [ 75%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict] PASSED [ 83%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW] PASSED [ 91%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses] PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/skbase/base/_base.py:1342: 4 warnings
+sktime/classification/tests/test_all_classifiers.py: 907 warnings
+  /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/before/.venv/lib/python3.10/site-packages/skbase/base/_base.py:1342: FutureWarning: tag 'handles-missing-data' will be removed in version 1.0.0 and replaced by 'capability:missing_values', please use 'capability:missing_values' instead
+    self._deprecate_tag_warn(collected_tags)
+
+.venv/lib/python3.10/site-packages/sklearn/base.py:411: 240 warnings
+  /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/before/.venv/lib/python3.10/site-packages/sklearn/base.py:411: DeprecationWarning: The `_get_tags` method is deprecated in 1.6 and will be removed in 1.7. Please implement the `__sklearn_tags__` method.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+38.81s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1]
+18.02s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses]
+12.28s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict]
+0.44s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW]
+0.42s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0]
+0.19s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses]
+0.14s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict]
+0.01s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1]
+0.01s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0]
+0.01s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1]
+0.00s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW]
+0.00s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW]
+========= 12 passed, 509 deselected, 1151 warnings in 77.81s (0:01:17) =========
+Energy consumption in joules: 2233.906407438279 for 99.3821 sec of execution.
+
+
+========================================
+Completed before version at: Wed Oct 29 22:29:42 CET 2025
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Collecting scipy
+  Downloading scipy-1.15.3-cp310-cp310-macosx_14_0_arm64.whl.metadata (61 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.7.2-cp310-cp310-macosx_12_0_arm64.whl.metadata (11 kB)
+Collecting numpy<2.5,>=1.23.5 (from scipy)
+  Downloading numpy-2.2.6-cp310-cp310-macosx_14_0_arm64.whl.metadata (62 kB)
+Collecting joblib>=1.2.0 (from scikit-learn)
+  Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Downloading scipy-1.15.3-cp310-cp310-macosx_14_0_arm64.whl (22.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.4/22.4 MB 1.1 MB/s  0:00:20
+Downloading numpy-2.2.6-cp310-cp310-macosx_14_0_arm64.whl (5.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 1.1 MB/s  0:00:04
+Downloading scikit_learn-1.7.2-cp310-cp310-macosx_12_0_arm64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 1.0 MB/s  0:00:08
+Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, numpy, joblib, scipy, scikit-learn
+  Attempting uninstall: threadpoolctl
+    Found existing installation: threadpoolctl 3.6.0
+    Uninstalling threadpoolctl-3.6.0:
+      Successfully uninstalled threadpoolctl-3.6.0
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.4
+    Uninstalling numpy-1.26.4:
+      Successfully uninstalled numpy-1.26.4
+  Attempting uninstall: joblib
+    Found existing installation: joblib 1.5.2
+    Uninstalling joblib-1.5.2:
+      Successfully uninstalled joblib-1.5.2
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.15.3
+    Uninstalling scipy-1.15.3:
+      Successfully uninstalled scipy-1.15.3
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.6.1
+    Uninstalling scikit-learn-1.6.1:
+      Successfully uninstalled scikit-learn-1.6.1
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gluonts 0.16.2 requires numpy<2.2,>=1.16, but you have numpy 2.2.6 which is incompatible.
+skpro 2.9.4 requires scikit-learn<1.7.0,>=0.24.0, but you have scikit-learn 1.7.2 which is incompatible.
+sktime 0.37.0 requires scikit-learn<1.7.0,>=0.24, but you have scikit-learn 1.7.2 which is incompatible.
+tensorflow 2.19.1 requires numpy<2.2.0,>=1.26.0, but you have numpy 2.2.6 which is incompatible.
+tslearn 0.6.4 requires scikit-learn<1.7,>=1.3.2, but you have scikit-learn 1.7.2 which is incompatible.
+u8darts 0.31.0 requires numpy<2.0.0,>=1.19.0, but you have numpy 2.2.6 which is incompatible.
+Successfully installed joblib-1.5.2 numpy-2.2.6 scikit-learn-1.7.2 scipy-1.15.3 threadpoolctl-3.6.0
+Obtaining file:///Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/after
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: joblib<1.6,>=1.2.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.5.2)
+Requirement already satisfied: numpy<2.3,>=1.21 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.2.6)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (25.0)
+Requirement already satisfied: pandas<2.3.0,>=1.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.2.3)
+Requirement already satisfied: scikit-base<0.13.0,>=0.6.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.12.6)
+Collecting scikit-learn<1.7.0,>=0.24 (from sktime==0.37.0)
+  Downloading scikit_learn-1.6.1-cp310-cp310-macosx_12_0_arm64.whl.metadata (31 kB)
+Requirement already satisfied: scipy<2.0.0,>=1.2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.15.3)
+Requirement already satisfied: backoff in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.2.1)
+Requirement already satisfied: httpx in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.28.1)
+Requirement already satisfied: pre-commit in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (4.3.0)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (8.4.2)
+Requirement already satisfied: pytest-randomly in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (4.0.1)
+Requirement already satisfied: pytest-timeout in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.4.0)
+Requirement already satisfied: pytest-xdist in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.8.0)
+Requirement already satisfied: wheel in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.45.1)
+Requirement already satisfied: arch<7.1.0,>=5.6 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (7.0.0)
+Requirement already satisfied: autots<0.7,>=0.6.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.6.21)
+Requirement already satisfied: cloudpickle in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.1.1)
+Requirement already satisfied: dash!=2.9.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.2.0)
+Requirement already satisfied: dtaidistance<2.4 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.3.13)
+Requirement already satisfied: dtw-python in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.5.3)
+Requirement already satisfied: filterpy>=1.4.5 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.4.5)
+Requirement already satisfied: gluonts>=0.9 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.16.2)
+Requirement already satisfied: h5py in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.15.1)
+Requirement already satisfied: hmmlearn>=0.2.7 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.3.3)
+Requirement already satisfied: holidays in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.83)
+Requirement already satisfied: matplotlib!=3.9.1,>=3.3.2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (3.10.7)
+Requirement already satisfied: mne in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.10.2)
+Requirement already satisfied: numba<0.62,>=0.53 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.61.2)
+Requirement already satisfied: optuna<4.4 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (4.3.0)
+Requirement already satisfied: pmdarima!=1.8.1,<3.0.0,>=1.8 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.0.4)
+Requirement already satisfied: polars<2.0,>=0.20 in ./.venv/lib/python3.10/site-packages (from polars[pandas]<2.0,>=0.20; python_version < "3.13" and extra == "all-extras-pandas2"->sktime==0.37.0) (1.34.0)
+Requirement already satisfied: prophet>=1.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.2.1)
+Requirement already satisfied: pycatch22<0.4.6 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.4.5)
+Requirement already satisfied: pyod>=0.8 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.0.5)
+Requirement already satisfied: ray>=2.40.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.51.0)
+Requirement already satisfied: scikit_posthocs>=0.6.5 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.11.4)
+Requirement already satisfied: seaborn>=0.11 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.13.2)
+Requirement already satisfied: seasonal in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.3.1)
+Requirement already satisfied: simdkalman in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.0.4)
+Requirement already satisfied: skforecast<0.15,>=0.12.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.14.0)
+Requirement already satisfied: skpro<2.10.0,>=2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.9.4)
+Requirement already satisfied: statsforecast<2.1.0,>=1.0.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.0.3)
+Requirement already satisfied: statsmodels>=0.12.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.14.5)
+Requirement already satisfied: stumpy>=1.5.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.13.0)
+Requirement already satisfied: tbats>=1.1 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (1.1.3)
+Requirement already satisfied: temporian!=0.8.0,<0.9.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.8.1)
+Requirement already satisfied: tensorflow<2.20,>=2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2.19.1)
+Requirement already satisfied: tsfresh>=0.17 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.21.1)
+Requirement already satisfied: tslearn!=0.6.0,<0.7.0,>=0.5.2 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.6.4)
+Requirement already satisfied: u8darts<0.32.0,>=0.29.0 in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (0.31.0)
+Requirement already satisfied: xarray in ./.venv/lib/python3.10/site-packages (from sktime==0.37.0) (2025.6.1)
+Requirement already satisfied: llvmlite<0.45,>=0.44.0dev0 in ./.venv/lib/python3.10/site-packages (from numba<0.62,>=0.53->sktime==0.37.0) (0.44.0)
+Requirement already satisfied: alembic>=1.5.0 in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (1.17.1)
+Requirement already satisfied: colorlog in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (6.10.1)
+Requirement already satisfied: sqlalchemy>=1.4.2 in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (2.0.44)
+Requirement already satisfied: tqdm in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (4.67.1)
+Requirement already satisfied: PyYAML in ./.venv/lib/python3.10/site-packages (from optuna<4.4->sktime==0.37.0) (6.0.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas<2.3.0,>=1.1->sktime==0.37.0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas<2.3.0,>=1.1->sktime==0.37.0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas<2.3.0,>=1.1->sktime==0.37.0) (2025.2)
+Requirement already satisfied: Cython!=0.29.18,!=0.29.31,>=0.29 in ./.venv/lib/python3.10/site-packages (from pmdarima!=1.8.1,<3.0.0,>=1.8->sktime==0.37.0) (3.1.6)
+Requirement already satisfied: urllib3 in ./.venv/lib/python3.10/site-packages (from pmdarima!=1.8.1,<3.0.0,>=1.8->sktime==0.37.0) (2.5.0)
+Requirement already satisfied: setuptools!=50.0.0,>=38.6.0 in ./.venv/lib/python3.10/site-packages (from pmdarima!=1.8.1,<3.0.0,>=1.8->sktime==0.37.0) (63.2.0)
+Requirement already satisfied: polars-runtime-32==1.34.0 in ./.venv/lib/python3.10/site-packages (from polars<2.0,>=0.20->polars[pandas]<2.0,>=0.20; python_version < "3.13" and extra == "all-extras-pandas2"->sktime==0.37.0) (1.34.0)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./.venv/lib/python3.10/site-packages (from scikit-learn<1.7.0,>=0.24->sktime==0.37.0) (3.6.0)
+Requirement already satisfied: coreforecast>=0.0.12 in ./.venv/lib/python3.10/site-packages (from statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.0.16)
+Requirement already satisfied: fugue>=0.8.1 in ./.venv/lib/python3.10/site-packages (from statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.9.1)
+Requirement already satisfied: utilsforecast>=0.1.4 in ./.venv/lib/python3.10/site-packages (from statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.2.14)
+Requirement already satisfied: absl-py<2.0.0,>=1.3.0 in ./.venv/lib/python3.10/site-packages (from temporian!=0.8.0,<0.9.0,>=0.7.0->sktime==0.37.0) (1.4.0)
+Requirement already satisfied: protobuf>=3.20.3 in ./.venv/lib/python3.10/site-packages (from temporian!=0.8.0,<0.9.0,>=0.7.0->sktime==0.37.0) (5.29.5)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.9.1,>=3.3.2->sktime==0.37.0) (3.2.5)
+Requirement already satisfied: astunparse>=1.6.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (1.6.3)
+Requirement already satisfied: flatbuffers>=24.3.25 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (25.9.23)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.6.0)
+Requirement already satisfied: google-pasta>=0.1.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (18.1.1)
+Requirement already satisfied: opt-einsum>=2.3.2 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (3.4.0)
+Requirement already satisfied: requests<3,>=2.21.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (2.32.5)
+Requirement already satisfied: six>=1.12.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (1.17.0)
+Requirement already satisfied: termcolor>=1.1.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (3.2.0)
+Requirement already satisfied: typing-extensions>=3.6.6 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (4.15.0)
+Requirement already satisfied: wrapt>=1.11.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (2.0.0)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (1.76.0)
+Requirement already satisfied: tensorboard~=2.19.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (2.19.0)
+Requirement already satisfied: keras>=3.5.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (3.12.0)
+Collecting numpy<2.3,>=1.21 (from sktime==0.37.0)
+  Downloading numpy-2.1.3-cp310-cp310-macosx_14_0_arm64.whl.metadata (62 kB)
+Requirement already satisfied: ml-dtypes<1.0.0,>=0.5.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.5.3)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.20,>=2->sktime==0.37.0) (0.37.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.20,>=2->sktime==0.37.0) (2025.10.5)
+Requirement already satisfied: markdown>=2.6.8 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.19.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.9)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.19.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.19.0->tensorflow<2.20,>=2->sktime==0.37.0) (3.1.3)
+Requirement already satisfied: nfoursid>=1.0.0 in ./.venv/lib/python3.10/site-packages (from u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (1.0.2)
+  Downloading numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl.metadata (61 kB)
+Requirement already satisfied: shap>=0.40.0 in ./.venv/lib/python3.10/site-packages (from u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (0.49.1)
+Requirement already satisfied: xgboost>=1.6.0 in ./.venv/lib/python3.10/site-packages (from u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (3.1.1)
+Requirement already satisfied: Mako in ./.venv/lib/python3.10/site-packages (from alembic>=1.5.0->optuna<4.4->sktime==0.37.0) (1.3.10)
+Requirement already satisfied: tomli in ./.venv/lib/python3.10/site-packages (from alembic>=1.5.0->optuna<4.4->sktime==0.37.0) (2.3.0)
+Requirement already satisfied: Flask<3.2,>=1.0.4 in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (3.1.2)
+Requirement already satisfied: plotly>=5.0.0 in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (6.3.1)
+Requirement already satisfied: importlib-metadata in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (8.7.0)
+Requirement already satisfied: retrying in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (1.4.2)
+Requirement already satisfied: nest-asyncio in ./.venv/lib/python3.10/site-packages (from dash!=2.9.0->sktime==0.37.0) (1.6.0)
+Requirement already satisfied: blinker>=1.9.0 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (8.2.1)
+Requirement already satisfied: itsdangerous>=2.2.0 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in ./.venv/lib/python3.10/site-packages (from Flask<3.2,>=1.0.4->dash!=2.9.0->sktime==0.37.0) (3.0.3)
+Requirement already satisfied: triad>=0.9.7 in ./.venv/lib/python3.10/site-packages (from fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.9.8)
+Requirement already satisfied: adagio>=0.2.4 in ./.venv/lib/python3.10/site-packages (from fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (0.2.6)
+Requirement already satisfied: pydantic<3,>=1.7 in ./.venv/lib/python3.10/site-packages (from gluonts>=0.9->sktime==0.37.0) (2.12.3)
+Requirement already satisfied: toolz~=0.10 in ./.venv/lib/python3.10/site-packages (from gluonts>=0.9->sktime==0.37.0) (0.12.1)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.10/site-packages (from pydantic<3,>=1.7->gluonts>=0.9->sktime==0.37.0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.4 in ./.venv/lib/python3.10/site-packages (from pydantic<3,>=1.7->gluonts>=0.9->sktime==0.37.0) (2.41.4)
+Requirement already satisfied: typing-inspection>=0.4.2 in ./.venv/lib/python3.10/site-packages (from pydantic<3,>=1.7->gluonts>=0.9->sktime==0.37.0) (0.4.2)
+Requirement already satisfied: rich in ./.venv/lib/python3.10/site-packages (from keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (14.2.0)
+Requirement already satisfied: namex in ./.venv/lib/python3.10/site-packages (from keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.1.0)
+Requirement already satisfied: optree in ./.venv/lib/python3.10/site-packages (from keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.17.0)
+Requirement already satisfied: narwhals>=1.15.1 in ./.venv/lib/python3.10/site-packages (from plotly>=5.0.0->dash!=2.9.0->sktime==0.37.0) (2.10.0)
+Requirement already satisfied: cmdstanpy>=1.0.4 in ./.venv/lib/python3.10/site-packages (from prophet>=1.1->sktime==0.37.0) (1.3.0)
+Requirement already satisfied: importlib_resources in ./.venv/lib/python3.10/site-packages (from prophet>=1.1->sktime==0.37.0) (6.5.2)
+Requirement already satisfied: stanio<2.0.0,>=0.4.0 in ./.venv/lib/python3.10/site-packages (from cmdstanpy>=1.0.4->prophet>=1.1->sktime==0.37.0) (0.5.1)
+Requirement already satisfied: filelock in ./.venv/lib/python3.10/site-packages (from ray>=2.40.0->sktime==0.37.0) (3.20.0)
+Requirement already satisfied: jsonschema in ./.venv/lib/python3.10/site-packages (from ray>=2.40.0->sktime==0.37.0) (4.25.1)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in ./.venv/lib/python3.10/site-packages (from ray>=2.40.0->sktime==0.37.0) (1.1.2)
+Requirement already satisfied: slicer==0.0.8 in ./.venv/lib/python3.10/site-packages (from shap>=0.40.0->u8darts<0.32.0,>=0.29.0->sktime==0.37.0) (0.0.8)
+Requirement already satisfied: patsy>=0.5.6 in ./.venv/lib/python3.10/site-packages (from statsmodels>=0.12.1->sktime==0.37.0) (1.0.2)
+Requirement already satisfied: pyarrow>=6.0.1 in ./.venv/lib/python3.10/site-packages (from triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (22.0.0)
+Requirement already satisfied: fsspec>=2022.5.0 in ./.venv/lib/python3.10/site-packages (from triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (2025.9.0)
+Requirement already satisfied: fs in ./.venv/lib/python3.10/site-packages (from triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (2.4.16)
+Requirement already satisfied: pywavelets in ./.venv/lib/python3.10/site-packages (from tsfresh>=0.17->sktime==0.37.0) (1.8.0)
+Requirement already satisfied: appdirs~=1.4.3 in ./.venv/lib/python3.10/site-packages (from fs->triad>=0.9.7->fugue>=0.8.1->statsforecast<2.1.0,>=1.0.0->sktime==0.37.0) (1.4.4)
+Requirement already satisfied: anyio in ./.venv/lib/python3.10/site-packages (from httpx->sktime==0.37.0) (4.11.0)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.10/site-packages (from httpx->sktime==0.37.0) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.10/site-packages (from httpcore==1.*->httpx->sktime==0.37.0) (0.16.0)
+Requirement already satisfied: exceptiongroup>=1.0.2 in ./.venv/lib/python3.10/site-packages (from anyio->httpx->sktime==0.37.0) (1.3.0)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.10/site-packages (from anyio->httpx->sktime==0.37.0) (1.3.1)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib-metadata->dash!=2.9.0->sktime==0.37.0) (3.23.0)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.10/site-packages (from jsonschema->ray>=2.40.0->sktime==0.37.0) (0.28.0)
+Requirement already satisfied: decorator in ./.venv/lib/python3.10/site-packages (from mne->sktime==0.37.0) (5.2.1)
+Requirement already satisfied: lazy-loader>=0.3 in ./.venv/lib/python3.10/site-packages (from mne->sktime==0.37.0) (0.4)
+Requirement already satisfied: pooch>=1.5 in ./.venv/lib/python3.10/site-packages (from mne->sktime==0.37.0) (1.8.2)
+Requirement already satisfied: platformdirs>=2.5.0 in ./.venv/lib/python3.10/site-packages (from pooch>=1.5->mne->sktime==0.37.0) (4.5.0)
+Requirement already satisfied: cfgv>=2.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (2.6.15)
+Requirement already satisfied: nodeenv>=0.11.1 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (1.9.1)
+Requirement already satisfied: virtualenv>=20.10.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->sktime==0.37.0) (20.35.4)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->sktime==0.37.0) (0.4.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest->sktime==0.37.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest->sktime==0.37.0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest->sktime==0.37.0) (2.19.2)
+Requirement already satisfied: execnet>=2.1 in ./.venv/lib/python3.10/site-packages (from pytest-xdist->sktime==0.37.0) (2.1.1)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.10/site-packages (from rich->keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow<2.20,>=2->sktime==0.37.0) (0.1.2)
+Downloading scikit_learn-1.6.1-cp310-cp310-macosx_12_0_arm64.whl (11.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 1.1 MB/s  0:00:09
+Downloading numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl (14.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.0/14.0 MB 1.1 MB/s  0:00:12
+Building wheels for collected packages: sktime
+  Building editable for sktime (pyproject.toml): started
+  Building editable for sktime (pyproject.toml): finished with status 'done'
+  Created wheel for sktime: filename=sktime-0.37.0-0.editable-py3-none-any.whl size=13015 sha256=e88c959a37c95ebc25957ad0ed2e1125259527de7aec394d7a63e348ada1b944
+  Stored in directory: /private/var/folders/zg/50vg7j4d2_5406pxjrgx4pz5xwm3dw/T/pip-ephem-wheel-cache-eht5mudj/wheels/91/81/8a/06133434671f33c52636f0189ae4398679f49884a9eec0ccc5
+Successfully built sktime
+Installing collected packages: numpy, scikit-learn, sktime
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.2.6
+    Uninstalling numpy-2.2.6:
+      Successfully uninstalled numpy-2.2.6
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.7.2
+    Uninstalling scikit-learn-1.7.2:
+      Successfully uninstalled scikit-learn-1.7.2
+  Attempting uninstall: sktime
+    Found existing installation: sktime 0.37.0
+    Uninstalling sktime-0.37.0:
+      Successfully uninstalled sktime-0.37.0
+
+Successfully installed numpy-1.26.4 scikit-learn-1.6.1 sktime-0.37.0
+
+=========================================
+Test run 1/1 for after
+Time: Wed Oct 29 22:31:10 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/after/.venv/bin/python
+cachedir: .pytest_cache
+Using --randomly-seed=4049632025
+Fugue tests will be initialized with options:
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/after
+configfile: setup.cfg
+plugins: anyio-4.11.0, xdist-3.8.0, timeout-2.4.0, randomly-4.0.1, fugue-0.9.1, dash-3.2.0
+timeout: 600.0s
+timeout method: signal
+timeout func_only: False
+collecting ... fatal: bad revision 'remotes/origin/main'
+collected 521 items / 509 deselected / 12 selected
+
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses] PASSED [  8%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict] PASSED [ 16%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW] PASSED [ 25%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0] PASSED [ 33%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1] PASSED [ 41%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0] PASSED [ 50%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1] PASSED [ 58%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1] PASSED [ 66%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict] PASSED [ 75%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0] PASSED [ 83%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses] PASSED [ 91%]
+sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW] PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/skbase/base/_base.py:1342: 4 warnings
+sktime/classification/tests/test_all_classifiers.py: 159 warnings
+  /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/after/.venv/lib/python3.10/site-packages/skbase/base/_base.py:1342: FutureWarning: tag 'handles-missing-data' will be removed in version 1.0.0 and replaced by 'capability:missing_values', please use 'capability:missing_values' instead
+    self._deprecate_tag_warn(collected_tags)
+
+.venv/lib/python3.10/site-packages/sklearn/base.py:411: 240 warnings
+  /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/after/.venv/lib/python3.10/site-packages/sklearn/base.py:411: DeprecationWarning: The `_get_tags` method is deprecated in 1.6 and will be removed in 1.7. Please implement the `__sklearn_tags__` method.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.56s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1]
+4.35s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses]
+0.42s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0]
+0.39s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict]
+0.26s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW]
+0.18s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict]
+0.17s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses]
+0.01s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1]
+0.01s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0]
+0.00s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1]
+0.00s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-1]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredictThreeClasses]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredict]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW]
+0.00s setup    sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-0-ClassifierFitPredictThreeClasses]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multivariate_input_exception[ShapeDTW-0]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-1]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_multioutput[ShapeDTW-0]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_output[ShapeDTW-1-ClassifierFitPredict]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_unit_test_data[ShapeDTW]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-1]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_handles_single_class[ShapeDTW-0]
+0.00s teardown sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW]
+0.00s call     sktime/classification/tests/test_all_classifiers.py::TestAllClassifiers::test_classifier_on_basic_motions[ShapeDTW]
+============== 12 passed, 509 deselected, 403 warnings in 40.02s ===============
+Energy consumption in joules: 1371.9074921607967 for 61.080723 sec of execution.
+
+
+========================================
+Completed after version at: Wed Oct 29 22:32:12 CET 2025
+========================================
+
+========================================
+All tests completed at: Wed Oct 29 22:32:12 CET 2025
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/sktime_8324/test_results.log
+========================================
