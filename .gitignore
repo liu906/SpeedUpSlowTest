@@ -1,0 +1,10 @@
+# Ignore everything in versions/
+versions/**
+*.zip
+# But allow the specific files we want to track
+!versions/**/test_config.sh
+!versions/**/test_results.log
+
+# This requires us to not ignore the directories themselves
+!versions/
+!versions/*/

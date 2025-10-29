@@ -1,0 +1,177 @@
+========================================
+Starting test runs for project: opensearch-build_595
+Iterations: 2
+Test command: bash -c 'cd bundle-workflow && PYTHONPATH=src pytest -v --durations=0 tests/test_integ_workflow/integ_test/test_local_test_cluster.py'
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Requirement already satisfied: pyyaml>=6.0 in ./.venv/lib/python3.10/site-packages (6.0.3)
+Requirement already satisfied: requests>=2.26 in ./.venv/lib/python3.10/site-packages (2.32.5)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
+Requirement already satisfied: boto3>=1.18 in ./.venv/lib/python3.10/site-packages (1.40.61)
+Requirement already satisfied: botocore>=1.21 in ./.venv/lib/python3.10/site-packages (1.40.61)
+Requirement already satisfied: coverage>=4.5 in ./.venv/lib/python3.10/site-packages (7.11.0)
+Requirement already satisfied: pytest-cov>=2.10 in ./.venv/lib/python3.10/site-packages (7.0.0)
+Requirement already satisfied: jproperties>=2.1 in ./.venv/lib/python3.10/site-packages (2.1.2)
+Requirement already satisfied: sortedcontainers in ./.venv/lib/python3.10/site-packages (2.4.0)
+Requirement already satisfied: cerberus>=1.3 in ./.venv/lib/python3.10/site-packages (1.3.7)
+Requirement already satisfied: psutil>=5.8 in ./.venv/lib/python3.10/site-packages (7.1.2)
+Requirement already satisfied: semantic-version>=2.8 in ./.venv/lib/python3.10/site-packages (2.10.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (2025.10.5)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./.venv/lib/python3.10/site-packages (from boto3>=1.18) (1.0.1)
+Requirement already satisfied: s3transfer<0.15.0,>=0.14.0 in ./.venv/lib/python3.10/site-packages (from boto3>=1.18) (0.14.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in ./.venv/lib/python3.10/site-packages (from botocore>=1.21) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil<3.0.0,>=2.1->botocore>=1.21) (1.17.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+
+=========================================
+Test run 1/2 for before
+Time: Wed Oct 29 13:17:43 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.05s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+
+(19 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.67s (0:01:40) =========================
+Energy consumption in joules: 1402.8068572154054 for 101.52846 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/2 for before
+Time: Wed Oct 29 13:19:30 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.05s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+
+(19 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.19s (0:01:40) =========================
+Energy consumption in joules: 1202.534767171383 for 100.57729 sec of execution.
+
+
+========================================
+Completed before version at: Wed Oct 29 13:21:11 CET 2025
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Requirement already satisfied: pyyaml>=6.0 in ./.venv/lib/python3.10/site-packages (6.0.3)
+Requirement already satisfied: requests>=2.26 in ./.venv/lib/python3.10/site-packages (2.32.5)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
+Requirement already satisfied: boto3>=1.18 in ./.venv/lib/python3.10/site-packages (1.40.61)
+Requirement already satisfied: botocore>=1.21 in ./.venv/lib/python3.10/site-packages (1.40.61)
+Requirement already satisfied: coverage>=4.5 in ./.venv/lib/python3.10/site-packages (7.11.0)
+Requirement already satisfied: pytest-cov>=2.10 in ./.venv/lib/python3.10/site-packages (7.0.0)
+Requirement already satisfied: jproperties>=2.1 in ./.venv/lib/python3.10/site-packages (2.1.2)
+Requirement already satisfied: sortedcontainers in ./.venv/lib/python3.10/site-packages (2.4.0)
+Requirement already satisfied: cerberus>=1.3 in ./.venv/lib/python3.10/site-packages (1.3.7)
+Requirement already satisfied: psutil>=5.8 in ./.venv/lib/python3.10/site-packages (7.1.2)
+Requirement already satisfied: semantic-version>=2.8 in ./.venv/lib/python3.10/site-packages (2.10.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests>=2.26) (2025.10.5)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./.venv/lib/python3.10/site-packages (from boto3>=1.18) (1.0.1)
+Requirement already satisfied: s3transfer<0.15.0,>=0.14.0 in ./.venv/lib/python3.10/site-packages (from boto3>=1.18) (0.14.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in ./.venv/lib/python3.10/site-packages (from botocore>=1.21) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil<3.0.0,>=2.1->botocore>=1.21) (1.17.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+
+=========================================
+Test run 1/2 for after
+Time: Wed Oct 29 13:21:30 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+
+(18 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 1.32s ===============================
+Energy consumption in joules: 23.326901285171505 for 2.061733 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/2 for after
+Time: Wed Oct 29 13:21:38 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+
+(20 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.14s ===============================
+Energy consumption in joules: 3.2714160394668577 for 0.42632684 sec of execution.
+
+
+========================================
+Completed after version at: Wed Oct 29 13:21:39 CET 2025
+========================================
+
+========================================
+All tests completed at: Wed Oct 29 13:21:39 CET 2025
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/test_results.log
+========================================

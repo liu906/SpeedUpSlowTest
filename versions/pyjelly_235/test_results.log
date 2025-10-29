@@ -1,0 +1,561 @@
+========================================
+Starting test runs for project: pyjelly_235
+Iterations: 2
+Test command: uv run pytest tests/integration_tests/test_rdflib/test_examples.py -vv --durations=0
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+Using CPython 3.9.6 interpreter at: /Library/Developer/CommandLineTools/usr/bin/python3
+Creating virtual environment at: .venv
+Resolved 105 packages in 6ms
+   Building pyjelly @ file:///Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before
+Downloading pygments (1.2MiB)
+Downloading ruff (10.0MiB)
+Downloading mypy (9.4MiB)
+      Built pyjelly @ file:///Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before
+ Downloading pygments
+ Downloading mypy
+ Downloading ruff
+Prepared 23 packages in 32.23s
+Installed 43 packages in 75ms
+ + asttokens==3.0.0
+ + attrs==25.3.0
+ + cfgv==3.4.0
+ + coverage==7.9.2
+ + detect-test-pollution==1.2.0
+ + distlib==0.3.9
+ + exceptiongroup==1.3.0
+ + executing==2.2.0
+ + filelock==3.18.0
+ + hypothesis==6.131.17
+ + identify==2.6.10
+ + iniconfig==2.1.0
+ + inline-snapshot==0.23.0
+ + isodate==0.7.2
+ + markdown-it-py==3.0.0
+ + mdurl==0.1.2
+ + mypy==1.15.0
+ + mypy-extensions==1.1.0
+ + nodeenv==1.9.1
+ + packaging==25.0
+ + platformdirs==4.3.8
+ + pluggy==1.6.0
+ + pre-commit==4.2.0
+ + protobuf==6.31.1
+ + pygments==2.19.1
+ + pyjelly==0.4.0 (from file:///Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before)
+ + pyparsing==3.2.3
+ + pytest==8.3.5
+ + pytest-accept==0.1.12
+ + pytest-cov==6.2.1
+ + pytest-mock==3.14.0
+ + pytest-subtests==0.14.1
+ + pytest-sugar==1.0.0
+ + pyyaml==6.0.2
+ + rdflib==7.1.4
+ + rich==14.0.0
+ + ruff==0.11.10
+ + sortedcontainers==2.4.0
+ + termcolor==3.1.0
+ + tomli==2.2.1
+ + types-protobuf==6.30.2.20250516
+ + typing-extensions==4.13.2
+ + virtualenv==20.31.2
+
+=========================================
+Test run 1/2 for before
+Time: Wed Oct 29 15:25:58 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.3.5, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.hypothesis/examples'))
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before
+configfile: pyproject.toml
+plugins: subtests-0.14.1, inline-snapshot-0.23.0, accept-0.1.12, sugar-1.0.0, cov-6.2.1, hypothesis-6.131.17, mock-3.14.0
+collecting ... collected 7 items
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [ 14%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py] PASSED [ 28%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] FAILED [ 42%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py] PASSED [ 57%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py] PASSED [ 71%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py] PASSED [ 85%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py] PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ test_rdflib_examples[03_parse_autodetect.py] _________________
+
+script = PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/examples/rdflib/03_parse_autodetect.py')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x104680910>
+
+    @pytest.mark.parametrize("script", scripts, ids=lambda p: p.name)
+    def test_rdflib_examples(script: pathlib.Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        # Run the examples in a temporary directory to avoid polluting the repository
+        monkeypatch.chdir(pathlib.Path(__file__, "..", "temp").resolve())
+>       runpy.run_path(str(script))
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/tests/integration_tests/test_rdflib/test_examples.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:268: in run_path
+    return _run_module_code(code, init_globals, run_name,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:97: in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:87: in _run_code
+    exec(code, run_globals)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/examples/rdflib/03_parse_autodetect.py:5: in <module>
+    g.parse("foaf.jelly")
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/graph.py:1553: in parse
+    parser.parse(source, self, **args)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:2020: in parse
+    p.loadStream(stream)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:479: in loadStream
+    return self.loadBuf(stream.read())  # Not ideal
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:485: in loadBuf
+    self.feed(buf)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rdflib.plugins.parsers.notation3.SinkParser object at 0x103d8f280>
+octets = b'\x83,\n\x10\n\x0e\x10\x01H\xa0\x1fP\x96\x01X p\x01x\x01\n\x1eR\x1c\x12\x1ahttp://xmlns.com/foaf/0.1/\n\x12J\x10\x12\...\x16\n\x0c\x12\n\n\x04\x08\x01\x10cJ\x02\x10\x1c\n\x12\x12\x10\n\x02\x10\x0c*\x04\x08\x04\x10\x15J\x04\x08\x01\x10\x1d'
+
+    def feed(self, octets: Union[str, bytes]) -> None:
+        """Feed an octet stream to the parser
+    
+        if BadSyntax is raised, the string
+        passed in the exception object is the
+        remainder after any statements have been parsed.
+        So if there is more data to feed to the
+        parser, it should be straightforward to recover."""
+    
+        if not isinstance(octets, str):
+>           s = octets.decode("utf-8")
+E           UnicodeDecodeError: 'utf-8' codec can't decode byte 0x83 in position 0: invalid start byte
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:498: UnicodeDecodeError
+=============================== warnings summary ===============================
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+  /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/jsonld.py:168: DeprecationWarning: ConjunctiveGraph is deprecated, use Dataset instead.
+    conj_sink = ConjunctiveGraph(store=sink.store, identifier=sink.identifier)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+5.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+1.33s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.35s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] - UnicodeDecodeError: 'utf-8' codec can't decode byte 0x83 in position 0: invalid start byte
+==================== 1 failed, 6 passed, 1 warning in 7.12s ====================
+Energy consumption in joules: 154.66348576259617 for 8.803444 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/2 for before
+Time: Wed Oct 29 15:26:13 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.3.5, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.hypothesis/examples'))
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before
+configfile: pyproject.toml
+plugins: subtests-0.14.1, inline-snapshot-0.23.0, accept-0.1.12, sugar-1.0.0, cov-6.2.1, hypothesis-6.131.17, mock-3.14.0
+collecting ... collected 7 items
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [ 14%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py] PASSED [ 28%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] FAILED [ 42%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py] PASSED [ 57%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py] PASSED [ 71%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py] PASSED [ 85%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py] PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ test_rdflib_examples[03_parse_autodetect.py] _________________
+
+script = PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/examples/rdflib/03_parse_autodetect.py')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1027a7100>
+
+    @pytest.mark.parametrize("script", scripts, ids=lambda p: p.name)
+    def test_rdflib_examples(script: pathlib.Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        # Run the examples in a temporary directory to avoid polluting the repository
+        monkeypatch.chdir(pathlib.Path(__file__, "..", "temp").resolve())
+>       runpy.run_path(str(script))
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/tests/integration_tests/test_rdflib/test_examples.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:268: in run_path
+    return _run_module_code(code, init_globals, run_name,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:97: in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:87: in _run_code
+    exec(code, run_globals)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/examples/rdflib/03_parse_autodetect.py:5: in <module>
+    g.parse("foaf.jelly")
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/graph.py:1553: in parse
+    parser.parse(source, self, **args)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:2020: in parse
+    p.loadStream(stream)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:479: in loadStream
+    return self.loadBuf(stream.read())  # Not ideal
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:485: in loadBuf
+    self.feed(buf)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rdflib.plugins.parsers.notation3.SinkParser object at 0x10332bd00>
+octets = b'\xac)\n\x10\n\x0e\x10\x01H\xa0\x1fP\x96\x01X p\x01x\x01\n\x1eR\x1c\x12\x1ahttp://xmlns.com/foaf/0.1/\n\nJ\x08\x12\x0...\n\x04\x08\x01\x108*\x04\x08\x02\x10\x02J\x02\x10+\n\x17\x12\x15\n\x04\x08\x01\x10&*\x04\x08\x04\x10\nZ\x07\n\x05phone'
+
+    def feed(self, octets: Union[str, bytes]) -> None:
+        """Feed an octet stream to the parser
+    
+        if BadSyntax is raised, the string
+        passed in the exception object is the
+        remainder after any statements have been parsed.
+        So if there is more data to feed to the
+        parser, it should be straightforward to recover."""
+    
+        if not isinstance(octets, str):
+>           s = octets.decode("utf-8")
+E           UnicodeDecodeError: 'utf-8' codec can't decode byte 0xac in position 0: invalid start byte
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:498: UnicodeDecodeError
+=============================== warnings summary ===============================
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+  /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/before/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/jsonld.py:168: DeprecationWarning: ConjunctiveGraph is deprecated, use Dataset instead.
+    conj_sink = ConjunctiveGraph(store=sink.store, identifier=sink.identifier)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+6.04s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+1.20s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.17s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] - UnicodeDecodeError: 'utf-8' codec can't decode byte 0xac in position 0: invalid start byte
+==================== 1 failed, 6 passed, 1 warning in 7.57s ====================
+Energy consumption in joules: 101.41732972431188 for 7.9947133 sec of execution.
+
+
+========================================
+Completed before version at: Wed Oct 29 15:26:21 CET 2025
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+Using CPython 3.9.6 interpreter at: /Library/Developer/CommandLineTools/usr/bin/python3
+Creating virtual environment at: .venv
+Resolved 105 packages in 4ms
+   Building pyjelly @ file:///Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after
+      Built pyjelly @ file:///Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after
+Prepared 1 package in 197ms
+Installed 43 packages in 40ms
+ + asttokens==3.0.0
+ + attrs==25.3.0
+ + cfgv==3.4.0
+ + coverage==7.9.2
+ + detect-test-pollution==1.2.0
+ + distlib==0.3.9
+ + exceptiongroup==1.3.0
+ + executing==2.2.0
+ + filelock==3.18.0
+ + hypothesis==6.131.17
+ + identify==2.6.10
+ + iniconfig==2.1.0
+ + inline-snapshot==0.23.0
+ + isodate==0.7.2
+ + markdown-it-py==3.0.0
+ + mdurl==0.1.2
+ + mypy==1.15.0
+ + mypy-extensions==1.1.0
+ + nodeenv==1.9.1
+ + packaging==25.0
+ + platformdirs==4.3.8
+ + pluggy==1.6.0
+ + pre-commit==4.2.0
+ + protobuf==6.31.1
+ + pygments==2.19.1
+ + pyjelly==0.4.0 (from file:///Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after)
+ + pyparsing==3.2.3
+ + pytest==8.3.5
+ + pytest-accept==0.1.12
+ + pytest-cov==6.2.1
+ + pytest-mock==3.14.0
+ + pytest-subtests==0.14.1
+ + pytest-sugar==1.0.0
+ + pyyaml==6.0.2
+ + rdflib==7.1.4
+ + rich==14.0.0
+ + ruff==0.11.10
+ + sortedcontainers==2.4.0
+ + termcolor==3.1.0
+ + tomli==2.2.1
+ + types-protobuf==6.30.2.20250516
+ + typing-extensions==4.13.2
+ + virtualenv==20.31.2
+
+=========================================
+Test run 1/2 for after
+Time: Wed Oct 29 15:26:32 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.3.5, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.hypothesis/examples'))
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after
+configfile: pyproject.toml
+plugins: subtests-0.14.1, inline-snapshot-0.23.0, accept-0.1.12, sugar-1.0.0, cov-6.2.1, hypothesis-6.131.17, mock-3.14.0
+collecting ... collected 7 items
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [ 14%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py] PASSED [ 28%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] FAILED [ 42%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py] PASSED [ 57%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py] PASSED [ 71%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py] PASSED [ 85%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py] PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ test_rdflib_examples[03_parse_autodetect.py] _________________
+
+script = PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/examples/rdflib/03_parse_autodetect.py')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x107a04580>
+
+    @pytest.mark.parametrize("script", scripts, ids=lambda p: p.name)
+    def test_rdflib_examples(script: pathlib.Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        # Run the examples in a temporary directory to avoid polluting the repository
+        monkeypatch.chdir(pathlib.Path(__file__, "..", "temp").resolve())
+        # Mock HTTP requests to avoid network calls during tests
+        monkeypatch.setattr(urllib.request, "urlopen", urlopen_mock)
+>       runpy.run_path(str(script))
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/tests/integration_tests/test_rdflib/test_examples.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:268: in run_path
+    return _run_module_code(code, init_globals, run_name,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:97: in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:87: in _run_code
+    exec(code, run_globals)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/examples/rdflib/03_parse_autodetect.py:5: in <module>
+    g.parse("foaf.jelly")
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/graph.py:1553: in parse
+    parser.parse(source, self, **args)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:2020: in parse
+    p.loadStream(stream)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:479: in loadStream
+    return self.loadBuf(stream.read())  # Not ideal
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:485: in loadBuf
+    self.feed(buf)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rdflib.plugins.parsers.notation3.SinkParser object at 0x107c4fa30>
+octets = b'\xb0.\n\x10\n\x0e\x10\x01H\xa0\x1fP\x96\x01X p\x01x\x01\n\x1eR\x1c\x12\x1ahttp://xmlns.com/foaf/0.1/\n\tJ\x07\x12\x0...x04\x08\x04\x10\rJ\x00\n\x08\x12\x06\n\x04\x08\x01\x10*\n\x18\x12\x16\n\x02\x10C*\x04\x08\x02\x10\x15Z\n\n\x08interest'
+
+    def feed(self, octets: Union[str, bytes]) -> None:
+        """Feed an octet stream to the parser
+    
+        if BadSyntax is raised, the string
+        passed in the exception object is the
+        remainder after any statements have been parsed.
+        So if there is more data to feed to the
+        parser, it should be straightforward to recover."""
+    
+        if not isinstance(octets, str):
+>           s = octets.decode("utf-8")
+E           UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 0: invalid start byte
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:498: UnicodeDecodeError
+=============================== warnings summary ===============================
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+  /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/jsonld.py:168: DeprecationWarning: ConjunctiveGraph is deprecated, use Dataset instead.
+    conj_sink = ConjunctiveGraph(store=sink.store, identifier=sink.identifier)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+0.18s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] - UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 0: invalid start byte
+==================== 1 failed, 6 passed, 1 warning in 0.63s ====================
+Energy consumption in joules: 40.449377835273744 for 2.0415523 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/2 for after
+Time: Wed Oct 29 15:26:39 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.3.5, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.hypothesis/examples'))
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after
+configfile: pyproject.toml
+plugins: subtests-0.14.1, inline-snapshot-0.23.0, accept-0.1.12, sugar-1.0.0, cov-6.2.1, hypothesis-6.131.17, mock-3.14.0
+collecting ... collected 7 items
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [ 14%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py] PASSED [ 28%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] FAILED [ 42%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py] PASSED [ 57%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py] PASSED [ 71%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py] PASSED [ 85%]
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py] PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ test_rdflib_examples[03_parse_autodetect.py] _________________
+
+script = PosixPath('/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/examples/rdflib/03_parse_autodetect.py')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1072a74c0>
+
+    @pytest.mark.parametrize("script", scripts, ids=lambda p: p.name)
+    def test_rdflib_examples(script: pathlib.Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        # Run the examples in a temporary directory to avoid polluting the repository
+        monkeypatch.chdir(pathlib.Path(__file__, "..", "temp").resolve())
+        # Mock HTTP requests to avoid network calls during tests
+        monkeypatch.setattr(urllib.request, "urlopen", urlopen_mock)
+>       runpy.run_path(str(script))
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/tests/integration_tests/test_rdflib/test_examples.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:268: in run_path
+    return _run_module_code(code, init_globals, run_name,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:97: in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py:87: in _run_code
+    exec(code, run_globals)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/examples/rdflib/03_parse_autodetect.py:5: in <module>
+    g.parse("foaf.jelly")
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/graph.py:1553: in parse
+    parser.parse(source, self, **args)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:2020: in parse
+    p.loadStream(stream)
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:479: in loadStream
+    return self.loadBuf(stream.read())  # Not ideal
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:485: in loadBuf
+    self.feed(buf)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rdflib.plugins.parsers.notation3.SinkParser object at 0x107531be0>
+octets = b'\x93/\n\x10\n\x0e\x10\x01H\xa0\x1fP\x96\x01X p\x01x\x01\n\x1eR\x1c\x12\x1ahttp://xmlns.com/foaf/0.1/\n\x12J\x10\x12\...2\x10\x0e\n\x0e\x12\x0c\n\x04\x08\x01\x10\x19J\x04\x08\x05\x10\t\n\x0e\x12\x0c\n\x04\x08\x01\x108J\x04\x08\x05\x10\x1e'
+
+    def feed(self, octets: Union[str, bytes]) -> None:
+        """Feed an octet stream to the parser
+    
+        if BadSyntax is raised, the string
+        passed in the exception object is the
+        remainder after any statements have been parsed.
+        So if there is more data to feed to the
+        parser, it should be straightforward to recover."""
+    
+        if not isinstance(octets, str):
+>           s = octets.decode("utf-8")
+E           UnicodeDecodeError: 'utf-8' codec can't decode byte 0x93 in position 0: invalid start byte
+
+/Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/notation3.py:498: UnicodeDecodeError
+=============================== warnings summary ===============================
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+  /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/after/.venv/lib/python3.9/site-packages/rdflib/plugins/parsers/jsonld.py:168: DeprecationWarning: ConjunctiveGraph is deprecated, use Dataset instead.
+    conj_sink = ConjunctiveGraph(store=sink.store, identifier=sink.identifier)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+0.17s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[02_parse.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+0.00s setup    tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[04_parse_grouped.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[07_serialize_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[05_parse_flat.py]
+0.00s teardown tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[06_serialize_grouped.py]
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[03_parse_autodetect.py] - UnicodeDecodeError: 'utf-8' codec can't decode byte 0x93 in position 0: invalid start byte
+==================== 1 failed, 6 passed, 1 warning in 0.33s ====================
+Energy consumption in joules: 11.722560215950013 for 0.83063465 sec of execution.
+
+
+========================================
+Completed after version at: Wed Oct 29 15:26:41 CET 2025
+========================================
+
+========================================
+All tests completed at: Wed Oct 29 15:26:41 CET 2025
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/pyjelly_235/test_results.log
+========================================

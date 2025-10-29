@@ -1,0 +1,971 @@
+========================================
+Starting test runs for project: ophyd-async_316
+Iterations: 1
+Test command: pytest tests/core/test_mock_signal_backend.py tests/epics/demo/test_demo.py tests/epics/motion/test_motor.py -v --durations=0 || true
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Obtaining file:///Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: networkx>=2.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.4.2)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.2.6)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (25.0)
+Requirement already satisfied: pint in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.24.4)
+Requirement already satisfied: bluesky>=1.13.0a3 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.14.4)
+Requirement already satisfied: event-model<1.21.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.20.0)
+Requirement already satisfied: p4p in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.2.1)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.0.3)
+Requirement already satisfied: colorlog in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.10.1)
+Requirement already satisfied: black in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (25.9.0)
+Requirement already satisfied: flake8 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.3.0)
+Requirement already satisfied: flake8-isort in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: Flake8-pyproject in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.2.3)
+Requirement already satisfied: h5py in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.15.1)
+Requirement already satisfied: inflection in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.5.1)
+Requirement already satisfied: ipython in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.37.0)
+Requirement already satisfied: ipywidgets in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.1.7)
+Requirement already satisfied: matplotlib in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.10.7)
+Requirement already satisfied: myst-parser in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.0.1)
+Requirement already satisfied: numpydoc in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.9.0)
+Requirement already satisfied: ophyd in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pickleshare in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.7.5)
+Requirement already satisfied: pipdeptree in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.29.0)
+Requirement already satisfied: pre-commit in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.3.0)
+Requirement already satisfied: pydata-sphinx-theme>=0.12 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.16.1)
+Requirement already satisfied: pyepics>=3.4.2 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.5.8)
+Requirement already satisfied: pyside6==6.7.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.4.2)
+Requirement already satisfied: pytest-asyncio in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.2.0)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: pytest-faulthandler in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.0.1)
+Requirement already satisfied: pytest-rerunfailures in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (16.1)
+Requirement already satisfied: pytest-timeout in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.4.0)
+Requirement already satisfied: ruff in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.14.2)
+Requirement already satisfied: sphinx-autobuild in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2024.10.3)
+Requirement already satisfied: sphinxcontrib-mermaid in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: sphinx-copybutton in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.5.2)
+Requirement already satisfied: sphinx-design in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.6.1)
+Requirement already satisfied: tox-direct in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: types-mock in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (5.2.0.20250924)
+Requirement already satisfied: types-pyyaml in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.0.12.20250915)
+Requirement already satisfied: shiboken6==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Essentials==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Addons==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: importlib-resources in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (6.5.2)
+Requirement already satisfied: jsonschema>=3 in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.25.1)
+Requirement already satisfied: typing-extensions in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.15.0)
+Requirement already satisfied: cycler in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: historydict in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.2.6)
+Requirement already satisfied: msgpack in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.2)
+Requirement already satisfied: msgpack-numpy in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.4.8)
+Requirement already satisfied: opentelemetry-api in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.38.0)
+Requirement already satisfied: toolz in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: tqdm>=4.44 in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (4.67.1)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.28.0)
+Requirement already satisfied: sphinx>=6.1 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (8.1.3)
+Requirement already satisfied: beautifulsoup4 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (4.14.2)
+Requirement already satisfied: docutils!=0.17.0 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.21.2)
+Requirement already satisfied: Babel in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.17.0)
+Requirement already satisfied: pygments>=2.7 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.19.2)
+Requirement already satisfied: accessible-pygments in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.0.5)
+Requirement already satisfied: pyparsing in ./.venv/lib/python3.10/site-packages (from pyepics>=3.4.2->ophyd-async==0.6.0) (3.2.5)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.1.6)
+Requirement already satisfied: snowballstemmer>=2.2 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.1)
+Requirement already satisfied: alabaster>=0.7.14 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: requests>=2.30.0 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.32.5)
+Requirement already satisfied: tomli>=2 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.10/site-packages (from Jinja2>=3.1->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2025.10.5)
+Requirement already satisfied: soupsieve>1.2 in ./.venv/lib/python3.10/site-packages (from beautifulsoup4->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.8)
+Requirement already satisfied: click>=8.0.0 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (8.3.0)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: platformdirs>=2 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (4.5.0)
+Requirement already satisfied: pytokens>=0.1.10 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (0.2.0)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: pycodestyle<2.15.0,>=2.14.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (2.14.0)
+Requirement already satisfied: pyflakes<3.5.0,>=3.4.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: isort>=5.0.0 in ./.venv/lib/python3.10/site-packages (from flake8-isort->ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: decorator in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.19.2)
+Requirement already satisfied: matplotlib-inline in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.2.1)
+Requirement already satisfied: pexpect>4.3 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (3.0.52)
+Requirement already satisfied: stack_data in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (5.14.3)
+Requirement already satisfied: wcwidth in ./.venv/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython->ophyd-async==0.6.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./.venv/lib/python3.10/site-packages (from jedi>=0.16->ipython->ophyd-async==0.6.0) (0.8.5)
+Requirement already satisfied: ptyprocess>=0.5 in ./.venv/lib/python3.10/site-packages (from pexpect>4.3->ipython->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: comm>=0.1.3 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (4.0.14)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (3.0.15)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (12.0.0)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->ophyd-async==0.6.0) (1.17.0)
+Requirement already satisfied: markdown-it-py~=3.0 in ./.venv/lib/python3.10/site-packages (from myst-parser->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: mdit-py-plugins>=0.4.1,~=0.4 in ./.venv/lib/python3.10/site-packages (from myst-parser->ophyd-async==0.6.0) (0.5.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py~=3.0->myst-parser->ophyd-async==0.6.0) (0.1.2)
+Requirement already satisfied: importlib-metadata<8.8.0,>=6.0 in ./.venv/lib/python3.10/site-packages (from opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (8.7.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (3.23.0)
+Requirement already satisfied: aioca>=1.6 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.8.1)
+Requirement already satisfied: epicscorelibs>=7.0.3.99.4.0 in ./.venv/lib/python3.10/site-packages (from aioca>=1.6->ophyd-async==0.6.0) (7.0.7.99.1.2)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (63.2.0)
+Requirement already satisfied: setuptools-dso>=2.11a2 in ./.venv/lib/python3.10/site-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (2.12.2)
+Requirement already satisfied: pvxslibs<1.5.0a1,>=1.4.0 in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: nose2>=0.8.0 in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (0.15.1)
+Requirement already satisfied: ply in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: flexcache>=0.3 in ./.venv/lib/python3.10/site-packages (from pint->ophyd-async==0.6.0) (0.3)
+Requirement already satisfied: flexparser>=0.4 in ./.venv/lib/python3.10/site-packages (from pint->ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: pip>=25.2 in ./.venv/lib/python3.10/site-packages (from pipdeptree->ophyd-async==0.6.0) (25.3)
+Requirement already satisfied: cfgv>=2.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (2.6.15)
+Requirement already satisfied: nodeenv>=0.11.1 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (1.9.1)
+Requirement already satisfied: virtualenv>=20.10.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (20.35.4)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.12.2 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (3.20.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest->ophyd-async==0.6.0) (1.6.0)
+Requirement already satisfied: backports-asyncio-runner<2,>=1.1 in ./.venv/lib/python3.10/site-packages (from pytest-asyncio->ophyd-async==0.6.0) (1.2.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov->ophyd-async==0.6.0) (7.11.0)
+Requirement already satisfied: colorama>=0.4.6 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.4.6)
+Requirement already satisfied: starlette>=0.35 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.49.1)
+Requirement already satisfied: uvicorn>=0.25 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.38.0)
+Requirement already satisfied: watchfiles>=0.20 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (1.1.1)
+Requirement already satisfied: websockets>=11 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (15.0.1)
+Requirement already satisfied: anyio<5,>=3.6.2 in ./.venv/lib/python3.10/site-packages (from starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (4.11.0)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.10/site-packages (from anyio<5,>=3.6.2->starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (1.3.1)
+Requirement already satisfied: h11>=0.8 in ./.venv/lib/python3.10/site-packages (from uvicorn>=0.25->sphinx-autobuild->ophyd-async==0.6.0) (0.16.0)
+Requirement already satisfied: executing>=1.2.0 in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: pure-eval in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: tox<4,>=3.12 in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (3.28.0)
+Requirement already satisfied: py in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pathlib2 in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (2.3.7.post1)
+Building wheels for collected packages: ophyd-async
+  Building editable for ophyd-async (pyproject.toml): started
+  Building editable for ophyd-async (pyproject.toml): finished with status 'done'
+  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4833 sha256=88c4154c6c7c4aa98029b2279f011a7ad74c1c079f4d3ed03094884676da0547
+  Stored in directory: /private/var/folders/zg/50vg7j4d2_5406pxjrgx4pz5xwm3dw/T/pip-ephem-wheel-cache-c8pmn0le/wheels/b0/58/be/f6bb9ebfe4d3a865b42413575bf7bdadebb8b52001789ebb3c
+Successfully built ophyd-async
+Installing collected packages: ophyd-async
+  Attempting uninstall: ophyd-async
+    Found existing installation: ophyd-async 0.6.0
+    Uninstalling ophyd-async-0.6.0:
+      Successfully uninstalled ophyd-async-0.6.0
+Successfully installed ophyd-async-0.6.0
+
+=========================================
+Test run 1/1 for before
+Time: Wed Oct 29 14:24:43 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before
+configfile: pyproject.toml
+plugins: asyncio-1.2.0, anyio-4.11.0, timeout-2.4.0, rerunfailures-16.1, cov-7.0.0
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 37 items
+
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True] PASSED [  2%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False] PASSED [  5%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca] PASSED [  8%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva] PASSED [ 10%]
+tests/core/test_mock_signal_backend.py::test_set_mock_value PASSED       [ 13%]
+tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds PASSED [ 16%]
+tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout PASSED [ 18%]
+tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout PASSED [ 21%]
+tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend PASSED [ 24%]
+tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with PASSED [ 27%]
+tests/core/test_mock_signal_backend.py::test_blocks_during_put PASSED    [ 29%]
+tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt PASSED [ 32%]
+tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx PASSED [ 35%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values PASSED      [ 37%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes PASSED [ 40%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails PASSED [ 43%]
+tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls PASSED [ 45%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value PASSED [ 48%]
+tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock PASSED [ 51%]
+tests/epics/demo/test_demo.py::test_mover_stopped PASSED                 [ 54%]
+tests/epics/demo/test_demo.py::test_mover_moving_well PASSED             [ 56%]
+tests/epics/demo/test_demo.py::test_sensor_reading_shows_value PASSED    [ 59%]
+tests/epics/demo/test_demo.py::test_read_mover PASSED                    [ 62%]
+tests/epics/demo/test_demo.py::test_set_velocity PASSED                  [ 64%]
+tests/epics/demo/test_demo.py::test_mover_disconncted PASSED             [ 67%]
+tests/epics/demo/test_demo.py::test_sensor_disconnected PASSED           [ 70%]
+tests/epics/demo/test_demo.py::test_read_sensor PASSED                   [ 72%]
+tests/epics/demo/test_demo.py::test_sensor_in_plan PASSED                [ 75%]
+tests/epics/demo/test_demo.py::test_assembly_renaming PASSED             [ 78%]
+tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected PASSED [ 81%]
+tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe PASSED [ 83%]
+tests/epics/demo/test_demo.py::test_ioc_starts PASSED                    [ 86%]
+tests/epics/motion/test_motor.py::test_motor_moving_well PASSED          [ 89%]
+tests/epics/motion/test_motor.py::test_motor_moving_well_2 PASSED        [ 91%]
+tests/epics/motion/test_motor.py::test_motor_moving_stopped PASSED       [ 94%]
+tests/epics/motion/test_motor.py::test_read_motor PASSED                 [ 97%]
+tests/epics/motion/test_motor.py::test_set_velocity PASSED               [100%]
+
+============================== slowest durations ===============================
+1.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.64s setup    tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.23s call     tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.22s call     tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.14s call     tests/epics/motion/test_motor.py::test_motor_moving_well
+0.13s call     tests/epics/demo/test_demo.py::test_mover_disconncted
+0.11s call     tests/epics/demo/test_demo.py::test_mover_moving_well
+0.10s call     tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.10s call     tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.02s call     tests/epics/demo/test_demo.py::test_assembly_renaming
+0.02s call     tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.02s setup    tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.01s setup    tests/epics/motion/test_motor.py::test_read_motor
+0.01s call     tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.01s setup    tests/epics/motion/test_motor.py::test_set_velocity
+0.01s setup    tests/epics/motion/test_motor.py::test_motor_moving_well
+0.01s setup    tests/epics/demo/test_demo.py::test_read_mover
+0.00s setup    tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s setup    tests/epics/demo/test_demo.py::test_set_velocity
+0.00s setup    tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s call     tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s call     tests/epics/motion/test_motor.py::test_read_motor
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_moving_well
+0.00s call     tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s setup    tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s setup    tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s setup    tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s call     tests/epics/demo/test_demo.py::test_read_mover
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s setup    tests/epics/demo/test_demo.py::test_read_sensor
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.00s setup    tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.00s call     tests/epics/motion/test_motor.py::test_set_velocity
+0.00s call     tests/epics/demo/test_demo.py::test_read_sensor
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.00s call     tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s call     tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s call     tests/epics/demo/test_demo.py::test_set_velocity
+0.00s call     tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s call     tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s call     tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s teardown tests/epics/motion/test_motor.py::test_set_velocity
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s call     tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s teardown tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s teardown tests/epics/motion/test_motor.py::test_read_motor
+0.00s call     tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+0.00s setup    tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s teardown tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s call     tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_disconncted
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_moving_well
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_well
+0.00s setup    tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s teardown tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s teardown tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+0.00s teardown tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.00s teardown tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s teardown tests/epics/demo/test_demo.py::test_assembly_renaming
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s setup    tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s teardown tests/epics/demo/test_demo.py::test_read_mover
+0.00s teardown tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s teardown tests/epics/demo/test_demo.py::test_read_sensor
+0.00s teardown tests/epics/demo/test_demo.py::test_set_velocity
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s teardown tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s setup    tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s teardown tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s teardown tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s setup    tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_disconncted
+0.00s setup    tests/epics/demo/test_demo.py::test_assembly_renaming
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+============================== 37 passed in 2.96s ==============================
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x106f0beb0>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/before/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+libc++abi: terminating due to uncaught exception of type epicsMutex::invalidMutex: epicsMutex::invalidMutex()
+
+thread 'main' panicked at src/main.rs:167:45:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+========================================
+Completed before version at: Wed Oct 29 14:24:49 CET 2025
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Obtaining file:///Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: networkx>=2.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.4.2)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.2.6)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (25.0)
+Requirement already satisfied: pint in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.24.4)
+Requirement already satisfied: bluesky>=1.13.0a3 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.14.4)
+Requirement already satisfied: event-model<1.21.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.20.0)
+Requirement already satisfied: p4p in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.2.1)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.0.3)
+Requirement already satisfied: colorlog in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.10.1)
+Requirement already satisfied: black in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (25.9.0)
+Requirement already satisfied: flake8 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.3.0)
+Requirement already satisfied: flake8-isort in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: Flake8-pyproject in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.2.3)
+Requirement already satisfied: h5py in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.15.1)
+Requirement already satisfied: inflection in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.5.1)
+Requirement already satisfied: ipython in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.37.0)
+Requirement already satisfied: ipywidgets in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.1.7)
+Requirement already satisfied: matplotlib in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.10.7)
+Requirement already satisfied: myst-parser in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.0.1)
+Requirement already satisfied: numpydoc in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.9.0)
+Requirement already satisfied: ophyd in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pickleshare in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.7.5)
+Requirement already satisfied: pipdeptree in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.29.0)
+Requirement already satisfied: pre-commit in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.3.0)
+Requirement already satisfied: pydata-sphinx-theme>=0.12 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.16.1)
+Requirement already satisfied: pyepics>=3.4.2 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.5.8)
+Requirement already satisfied: pyside6==6.7.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.4.2)
+Requirement already satisfied: pytest-asyncio in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.2.0)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: pytest-faulthandler in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.0.1)
+Requirement already satisfied: pytest-rerunfailures in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (16.1)
+Requirement already satisfied: pytest-timeout in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.4.0)
+Requirement already satisfied: ruff in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.14.2)
+Requirement already satisfied: sphinx-autobuild in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2024.10.3)
+Requirement already satisfied: sphinxcontrib-mermaid in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: sphinx-copybutton in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.5.2)
+Requirement already satisfied: sphinx-design in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.6.1)
+Requirement already satisfied: tox-direct in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: types-mock in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (5.2.0.20250924)
+Requirement already satisfied: types-pyyaml in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.0.12.20250915)
+Requirement already satisfied: shiboken6==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Essentials==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Addons==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: importlib-resources in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (6.5.2)
+Requirement already satisfied: jsonschema>=3 in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.25.1)
+Requirement already satisfied: typing-extensions in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.15.0)
+Requirement already satisfied: cycler in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: historydict in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.2.6)
+Requirement already satisfied: msgpack in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.2)
+Requirement already satisfied: msgpack-numpy in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.4.8)
+Requirement already satisfied: opentelemetry-api in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.38.0)
+Requirement already satisfied: toolz in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: tqdm>=4.44 in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (4.67.1)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.28.0)
+Requirement already satisfied: sphinx>=6.1 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (8.1.3)
+Requirement already satisfied: beautifulsoup4 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (4.14.2)
+Requirement already satisfied: docutils!=0.17.0 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.21.2)
+Requirement already satisfied: Babel in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.17.0)
+Requirement already satisfied: pygments>=2.7 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.19.2)
+Requirement already satisfied: accessible-pygments in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.0.5)
+Requirement already satisfied: pyparsing in ./.venv/lib/python3.10/site-packages (from pyepics>=3.4.2->ophyd-async==0.6.0) (3.2.5)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.1.6)
+Requirement already satisfied: snowballstemmer>=2.2 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.1)
+Requirement already satisfied: alabaster>=0.7.14 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: requests>=2.30.0 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.32.5)
+Requirement already satisfied: tomli>=2 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.10/site-packages (from Jinja2>=3.1->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2025.10.5)
+Requirement already satisfied: soupsieve>1.2 in ./.venv/lib/python3.10/site-packages (from beautifulsoup4->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.8)
+Requirement already satisfied: click>=8.0.0 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (8.3.0)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: platformdirs>=2 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (4.5.0)
+Requirement already satisfied: pytokens>=0.1.10 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (0.2.0)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: pycodestyle<2.15.0,>=2.14.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (2.14.0)
+Requirement already satisfied: pyflakes<3.5.0,>=3.4.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: isort>=5.0.0 in ./.venv/lib/python3.10/site-packages (from flake8-isort->ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: decorator in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.19.2)
+Requirement already satisfied: matplotlib-inline in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.2.1)
+Requirement already satisfied: pexpect>4.3 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (3.0.52)
+Requirement already satisfied: stack_data in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (5.14.3)
+Requirement already satisfied: wcwidth in ./.venv/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython->ophyd-async==0.6.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./.venv/lib/python3.10/site-packages (from jedi>=0.16->ipython->ophyd-async==0.6.0) (0.8.5)
+Requirement already satisfied: ptyprocess>=0.5 in ./.venv/lib/python3.10/site-packages (from pexpect>4.3->ipython->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: comm>=0.1.3 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (4.0.14)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (3.0.15)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (12.0.0)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->ophyd-async==0.6.0) (1.17.0)
+Requirement already satisfied: markdown-it-py~=3.0 in ./.venv/lib/python3.10/site-packages (from myst-parser->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: mdit-py-plugins>=0.4.1,~=0.4 in ./.venv/lib/python3.10/site-packages (from myst-parser->ophyd-async==0.6.0) (0.5.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py~=3.0->myst-parser->ophyd-async==0.6.0) (0.1.2)
+Requirement already satisfied: importlib-metadata<8.8.0,>=6.0 in ./.venv/lib/python3.10/site-packages (from opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (8.7.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (3.23.0)
+Requirement already satisfied: aioca>=1.6 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.8.1)
+Requirement already satisfied: epicscorelibs>=7.0.3.99.4.0 in ./.venv/lib/python3.10/site-packages (from aioca>=1.6->ophyd-async==0.6.0) (7.0.7.99.1.2)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (63.2.0)
+Requirement already satisfied: setuptools-dso>=2.11a2 in ./.venv/lib/python3.10/site-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (2.12.2)
+Requirement already satisfied: pvxslibs<1.5.0a1,>=1.4.0 in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: nose2>=0.8.0 in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (0.15.1)
+Requirement already satisfied: ply in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: flexcache>=0.3 in ./.venv/lib/python3.10/site-packages (from pint->ophyd-async==0.6.0) (0.3)
+Requirement already satisfied: flexparser>=0.4 in ./.venv/lib/python3.10/site-packages (from pint->ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: pip>=25.2 in ./.venv/lib/python3.10/site-packages (from pipdeptree->ophyd-async==0.6.0) (25.3)
+Requirement already satisfied: cfgv>=2.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (2.6.15)
+Requirement already satisfied: nodeenv>=0.11.1 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (1.9.1)
+Requirement already satisfied: virtualenv>=20.10.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (20.35.4)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.12.2 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (3.20.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest->ophyd-async==0.6.0) (1.6.0)
+Requirement already satisfied: backports-asyncio-runner<2,>=1.1 in ./.venv/lib/python3.10/site-packages (from pytest-asyncio->ophyd-async==0.6.0) (1.2.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov->ophyd-async==0.6.0) (7.11.0)
+Requirement already satisfied: colorama>=0.4.6 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.4.6)
+Requirement already satisfied: starlette>=0.35 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.49.1)
+Requirement already satisfied: uvicorn>=0.25 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.38.0)
+Requirement already satisfied: watchfiles>=0.20 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (1.1.1)
+Requirement already satisfied: websockets>=11 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (15.0.1)
+Requirement already satisfied: anyio<5,>=3.6.2 in ./.venv/lib/python3.10/site-packages (from starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (4.11.0)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.10/site-packages (from anyio<5,>=3.6.2->starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (1.3.1)
+Requirement already satisfied: h11>=0.8 in ./.venv/lib/python3.10/site-packages (from uvicorn>=0.25->sphinx-autobuild->ophyd-async==0.6.0) (0.16.0)
+Requirement already satisfied: executing>=1.2.0 in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: pure-eval in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: tox<4,>=3.12 in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (3.28.0)
+Requirement already satisfied: py in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pathlib2 in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (2.3.7.post1)
+Building wheels for collected packages: ophyd-async
+  Building editable for ophyd-async (pyproject.toml): started
+  Building editable for ophyd-async (pyproject.toml): finished with status 'done'
+  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4833 sha256=c7300309841186d9123949af3fc7d4e292f3cb192d8b7168e2f28d558c20084e
+  Stored in directory: /private/var/folders/zg/50vg7j4d2_5406pxjrgx4pz5xwm3dw/T/pip-ephem-wheel-cache-w7ysoqae/wheels/19/8f/28/9e8fef2e1bc663a0cd9b00ceb5b89e6109dc22afb02f9530b0
+Successfully built ophyd-async
+Installing collected packages: ophyd-async
+  Attempting uninstall: ophyd-async
+    Found existing installation: ophyd-async 0.6.0
+    Uninstalling ophyd-async-0.6.0:
+      Successfully uninstalled ophyd-async-0.6.0
+Successfully installed ophyd-async-0.6.0
+
+=========================================
+Test run 1/1 for after
+Time: Wed Oct 29 14:25:02 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after
+configfile: pyproject.toml
+plugins: asyncio-1.2.0, anyio-4.11.0, timeout-2.4.0, rerunfailures-16.1, cov-7.0.0
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 37 items
+
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True] PASSED [  2%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False] PASSED [  5%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca] PASSED [  8%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva] PASSED [ 10%]
+tests/core/test_mock_signal_backend.py::test_set_mock_value PASSED       [ 13%]
+tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds PASSED [ 16%]
+tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout PASSED [ 18%]
+tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout PASSED [ 21%]
+tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend PASSED [ 24%]
+tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with PASSED [ 27%]
+tests/core/test_mock_signal_backend.py::test_blocks_during_put PASSED    [ 29%]
+tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt PASSED [ 32%]
+tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx PASSED [ 35%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values PASSED      [ 37%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes PASSED [ 40%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails PASSED [ 43%]
+tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls PASSED [ 45%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value PASSED [ 48%]
+tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock PASSED [ 51%]
+tests/epics/demo/test_demo.py::test_mover_stopped PASSED                 [ 54%]
+tests/epics/demo/test_demo.py::test_mover_moving_well PASSED             [ 56%]
+tests/epics/demo/test_demo.py::test_sensor_reading_shows_value PASSED    [ 59%]
+tests/epics/demo/test_demo.py::test_read_mover PASSED                    [ 62%]
+tests/epics/demo/test_demo.py::test_set_velocity PASSED                  [ 64%]
+tests/epics/demo/test_demo.py::test_mover_disconncted PASSED             [ 67%]
+tests/epics/demo/test_demo.py::test_sensor_disconnected PASSED           [ 70%]
+tests/epics/demo/test_demo.py::test_read_sensor PASSED                   [ 72%]
+tests/epics/demo/test_demo.py::test_sensor_in_plan PASSED                [ 75%]
+tests/epics/demo/test_demo.py::test_assembly_renaming PASSED             [ 78%]
+tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected PASSED [ 81%]
+tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe PASSED [ 83%]
+tests/epics/demo/test_demo.py::test_ioc_starts PASSED                    [ 86%]
+tests/epics/motion/test_motor.py::test_motor_moving_well PASSED          [ 89%]
+tests/epics/motion/test_motor.py::test_motor_moving_well_2 PASSED        [ 91%]
+tests/epics/motion/test_motor.py::test_motor_moving_stopped PASSED       [ 94%]
+tests/epics/motion/test_motor.py::test_read_motor PASSED                 [ 97%]
+tests/epics/motion/test_motor.py::test_set_velocity PASSED               [100%]
+
+============================== slowest durations ===============================
+1.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.25s setup    tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.21s call     tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.20s call     tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.14s call     tests/epics/demo/test_demo.py::test_mover_disconncted
+0.11s call     tests/epics/motion/test_motor.py::test_motor_moving_well
+0.10s call     tests/epics/demo/test_demo.py::test_mover_moving_well
+0.10s call     tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.10s call     tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.01s call     tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.00s setup    tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.00s call     tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s setup    tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s setup    tests/epics/motion/test_motor.py::test_read_motor
+0.00s setup    tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s call     tests/epics/motion/test_motor.py::test_read_motor
+0.00s setup    tests/epics/demo/test_demo.py::test_read_mover
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s setup    tests/epics/motion/test_motor.py::test_set_velocity
+0.00s call     tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s setup    tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s setup    tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s call     tests/epics/demo/test_demo.py::test_read_mover
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s setup    tests/epics/demo/test_demo.py::test_set_velocity
+0.00s call     tests/epics/demo/test_demo.py::test_assembly_renaming
+0.00s call     tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.00s setup    tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s setup    tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s setup    tests/epics/motion/test_motor.py::test_motor_moving_well
+0.00s teardown tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s setup    tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_moving_well
+0.00s call     tests/epics/motion/test_motor.py::test_set_velocity
+0.00s call     tests/epics/demo/test_demo.py::test_read_sensor
+0.00s setup    tests/epics/demo/test_demo.py::test_read_sensor
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s call     tests/epics/demo/test_demo.py::test_set_velocity
+0.00s call     tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s call     tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s call     tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s call     tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s call     tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s teardown tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.00s teardown tests/epics/motion/test_motor.py::test_set_velocity
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_well
+0.00s call     tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.00s teardown tests/epics/motion/test_motor.py::test_read_motor
+0.00s teardown tests/epics/demo/test_demo.py::test_read_mover
+0.00s call     tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s setup    tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s teardown tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_moving_well
+0.00s teardown tests/epics/demo/test_demo.py::test_set_velocity
+0.00s call     tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s teardown tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.00s teardown tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s teardown tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.00s teardown tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_disconncted
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s teardown tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s teardown tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_disconncted
+0.00s setup    tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.00s teardown tests/epics/demo/test_demo.py::test_read_sensor
+0.00s teardown tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.00s setup    tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s teardown tests/epics/demo/test_demo.py::test_assembly_renaming
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s setup    tests/epics/demo/test_demo.py::test_assembly_renaming
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+0.00s setup    tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+============================== 37 passed in 2.39s ==============================
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored on calling ctypes callback function: <function Channel.on_ca_connect at 0x105dc3f40>
+Traceback (most recent call last):
+  File "/Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/after/.venv/lib/python3.10/site-packages/aioca/_catools.py", line 208, in on_ca_connect
+    self.__event_loop.call_soon_threadsafe(self.on_ca_connect_, op)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 795, in call_soon_threadsafe
+    self._check_closed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+libc++abi: terminating due to uncaught exception of type epicsMutex::invalidMutex: epicsMutex::invalidMutex()
+
+thread 'main' panicked at src/main.rs:167:45:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+========================================
+Completed after version at: Wed Oct 29 14:25:05 CET 2025
+========================================
+
+========================================
+All tests completed at: Wed Oct 29 14:25:05 CET 2025
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/ophyd-async_316/test_results.log
+========================================

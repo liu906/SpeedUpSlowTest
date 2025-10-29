@@ -1,0 +1,274 @@
+========================================
+Starting test runs for project: roms-tools_107
+Iterations: 1
+Test command: env NUMBA_NUM_THREADS=1 DASK_NUM_WORKERS=1 OMP_NUM_THREADS=1 python -m pytest roms_tools/tests/test_setup/test_boundary_forcing.py -v --durations=0
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: xarray>=2022.6.0 in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (2025.6.1)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (2.2.6)
+Requirement already satisfied: netcdf4 in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (1.7.3)
+Requirement already satisfied: pooch in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (1.8.2)
+Requirement already satisfied: matplotlib in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (3.10.7)
+Requirement already satisfied: cartopy in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (0.25.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (25.0)
+Requirement already satisfied: scipy in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (1.15.3)
+Requirement already satisfied: gcm_filters in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (0.5.1)
+Requirement already satisfied: numba in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (0.62.1)
+Requirement already satisfied: pandas>=2.1 in ./.venv/lib/python3.10/site-packages (from xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.3.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (1.17.0)
+Requirement already satisfied: shapely>=2.0 in ./.venv/lib/python3.10/site-packages (from cartopy->roms-tools==0.1.0.dev0) (2.1.2)
+Requirement already satisfied: pyshp>=2.3 in ./.venv/lib/python3.10/site-packages (from cartopy->roms-tools==0.1.0.dev0) (3.0.2.post1)
+Requirement already satisfied: pyproj>=3.3.1 in ./.venv/lib/python3.10/site-packages (from cartopy->roms-tools==0.1.0.dev0) (3.7.1)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (3.2.5)
+Requirement already satisfied: certifi in ./.venv/lib/python3.10/site-packages (from pyproj>=3.3.1->cartopy->roms-tools==0.1.0.dev0) (2025.10.5)
+Requirement already satisfied: cftime in ./.venv/lib/python3.10/site-packages (from netcdf4->roms-tools==0.1.0.dev0) (1.6.5)
+Requirement already satisfied: llvmlite<0.46,>=0.45.0dev0 in ./.venv/lib/python3.10/site-packages (from numba->roms-tools==0.1.0.dev0) (0.45.1)
+Requirement already satisfied: platformdirs>=2.5.0 in ./.venv/lib/python3.10/site-packages (from pooch->roms-tools==0.1.0.dev0) (4.5.0)
+Requirement already satisfied: requests>=2.19.0 in ./.venv/lib/python3.10/site-packages (from pooch->roms-tools==0.1.0.dev0) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (2.5.0)
+Building wheels for collected packages: roms-tools
+  Building editable for roms-tools (pyproject.toml): started
+  Building editable for roms-tools (pyproject.toml): finished with status 'done'
+  Created wheel for roms-tools: filename=roms_tools-0.1.0.dev0-0.editable-py3-none-any.whl size=16292 sha256=d0c8717e0954da78b944f8cf1f4fffded4c01446da773e9e4dd405959136d025
+  Stored in directory: /private/var/folders/zg/50vg7j4d2_5406pxjrgx4pz5xwm3dw/T/pip-ephem-wheel-cache-j_8uq1qq/wheels/b9/bf/3a/3ed98d33e3f95bca2e71f2de6932e077fd2f0b3b116cca6553
+Successfully built roms-tools
+Installing collected packages: roms-tools
+  Attempting uninstall: roms-tools
+    Found existing installation: roms-tools 0.1.0.dev0
+    Uninstalling roms-tools-0.1.0.dev0:
+      Successfully uninstalled roms-tools-0.1.0.dev0
+Successfully installed roms-tools-0.1.0.dev0
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
+Requirement already satisfied: coverage in ./.venv/lib/python3.10/site-packages (7.11.0)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (6.0.3)
+Requirement already satisfied: dask in ./.venv/lib/python3.10/site-packages (2025.10.0)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: click>=8.1 in ./.venv/lib/python3.10/site-packages (from dask) (8.3.0)
+Requirement already satisfied: cloudpickle>=3.0.0 in ./.venv/lib/python3.10/site-packages (from dask) (3.1.1)
+Requirement already satisfied: fsspec>=2021.09.0 in ./.venv/lib/python3.10/site-packages (from dask) (2025.9.0)
+Requirement already satisfied: partd>=1.4.0 in ./.venv/lib/python3.10/site-packages (from dask) (1.4.2)
+Requirement already satisfied: toolz>=0.10.0 in ./.venv/lib/python3.10/site-packages (from dask) (1.1.0)
+Requirement already satisfied: importlib_metadata>=4.13.0 in ./.venv/lib/python3.10/site-packages (from dask) (8.7.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib_metadata>=4.13.0->dask) (3.23.0)
+Requirement already satisfied: locket in ./.venv/lib/python3.10/site-packages (from partd>=1.4.0->dask) (1.0.0)
+
+=========================================
+Test run 1/1 for before
+Time: Wed Oct 29 17:38:53 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/before/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/before
+configfile: pyproject.toml
+collecting ... collected 9 items
+
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation PASSED [ 11%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation_with_bgc PASSED [ 22%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_coordinates_existence_and_values[boundary_forcing-expected_coords0] PASSED [ 33%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_coordinates_existence_and_values[bgc_boundary_forcing_from_climatology-expected_coords1] PASSED [ 44%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save PASSED [ 55%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save PASSED [ 66%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing] PASSED [ 77%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[bgc_boundary_forcing_from_climatology] PASSED [ 88%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_from_yaml_missing_boundary_forcing PASSED [100%]
+
+=============================== warnings summary ===============================
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_coordinates_existence_and_values[boundary_forcing-expected_coords0]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing]
+  /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/before/roms_tools/setup/datasets.py:302: UserWarning: No records found at or after the end_time.
+    warnings.warn("No records found at or after the end_time.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+117.56s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+49.74s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+1.43s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[bgc_boundary_forcing_from_climatology]
+0.79s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation_with_bgc
+0.77s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+0.76s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_coordinates_existence_and_values[bgc_boundary_forcing_from_climatology-expected_coords1]
+0.47s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing]
+0.41s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+0.24s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_coordinates_existence_and_values[boundary_forcing-expected_coords0]
+0.24s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+0.03s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+0.02s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation_with_bgc
+
+(15 durations < 0.005s hidden.  Use -vv to show these durations.)
+================== 9 passed, 6 warnings in 173.74s (0:02:53) ===================
+Energy consumption in joules: 3804.4154997100854 for 174.51152 sec of execution.
+
+
+========================================
+Completed before version at: Wed Oct 29 17:41:48 CET 2025
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/after
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: xarray>=2022.6.0 in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (2025.6.1)
+Requirement already satisfied: zarr in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (2.18.3)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (2.2.6)
+Requirement already satisfied: netcdf4 in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (1.7.3)
+Requirement already satisfied: pooch in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (1.8.2)
+Requirement already satisfied: matplotlib in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (3.10.7)
+Requirement already satisfied: cartopy in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (0.25.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (25.0)
+Requirement already satisfied: scipy in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (1.15.3)
+Requirement already satisfied: gcm_filters in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (0.5.1)
+Requirement already satisfied: numba in ./.venv/lib/python3.10/site-packages (from roms-tools==0.1.0.dev0) (0.62.1)
+Requirement already satisfied: pandas>=2.1 in ./.venv/lib/python3.10/site-packages (from xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.3.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (1.17.0)
+Requirement already satisfied: shapely>=2.0 in ./.venv/lib/python3.10/site-packages (from cartopy->roms-tools==0.1.0.dev0) (2.1.2)
+Requirement already satisfied: pyshp>=2.3 in ./.venv/lib/python3.10/site-packages (from cartopy->roms-tools==0.1.0.dev0) (3.0.2.post1)
+Requirement already satisfied: pyproj>=3.3.1 in ./.venv/lib/python3.10/site-packages (from cartopy->roms-tools==0.1.0.dev0) (3.7.1)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib->roms-tools==0.1.0.dev0) (3.2.5)
+Requirement already satisfied: certifi in ./.venv/lib/python3.10/site-packages (from pyproj>=3.3.1->cartopy->roms-tools==0.1.0.dev0) (2025.10.5)
+Requirement already satisfied: cftime in ./.venv/lib/python3.10/site-packages (from netcdf4->roms-tools==0.1.0.dev0) (1.6.5)
+Requirement already satisfied: llvmlite<0.46,>=0.45.0dev0 in ./.venv/lib/python3.10/site-packages (from numba->roms-tools==0.1.0.dev0) (0.45.1)
+Requirement already satisfied: platformdirs>=2.5.0 in ./.venv/lib/python3.10/site-packages (from pooch->roms-tools==0.1.0.dev0) (4.5.0)
+Requirement already satisfied: requests>=2.19.0 in ./.venv/lib/python3.10/site-packages (from pooch->roms-tools==0.1.0.dev0) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (2.5.0)
+Requirement already satisfied: asciitree in ./.venv/lib/python3.10/site-packages (from zarr->roms-tools==0.1.0.dev0) (0.3.3)
+Requirement already satisfied: numcodecs>=0.10.0 in ./.venv/lib/python3.10/site-packages (from zarr->roms-tools==0.1.0.dev0) (0.13.1)
+Requirement already satisfied: fasteners in ./.venv/lib/python3.10/site-packages (from zarr->roms-tools==0.1.0.dev0) (0.20)
+Building wheels for collected packages: roms-tools
+  Building editable for roms-tools (pyproject.toml): started
+  Building editable for roms-tools (pyproject.toml): finished with status 'done'
+  Created wheel for roms-tools: filename=roms_tools-0.1.0.dev0-0.editable-py3-none-any.whl size=16326 sha256=0cce252b243baf2f9bf6e638b3d18de09081e68c51b54a90a98f6335550c1752
+  Stored in directory: /private/var/folders/zg/50vg7j4d2_5406pxjrgx4pz5xwm3dw/T/pip-ephem-wheel-cache-a_qes1ki/wheels/a8/58/e5/2f85d46463abb1fe89a9eac30f70577a8be40176bad4ecd8dc
+Successfully built roms-tools
+Installing collected packages: roms-tools
+  Attempting uninstall: roms-tools
+    Found existing installation: roms-tools 0.1.0.dev0
+    Uninstalling roms-tools-0.1.0.dev0:
+      Successfully uninstalled roms-tools-0.1.0.dev0
+Successfully installed roms-tools-0.1.0.dev0
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
+Requirement already satisfied: coverage in ./.venv/lib/python3.10/site-packages (7.11.0)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (6.0.3)
+Requirement already satisfied: dask in ./.venv/lib/python3.10/site-packages (2025.10.0)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: click>=8.1 in ./.venv/lib/python3.10/site-packages (from dask) (8.3.0)
+Requirement already satisfied: cloudpickle>=3.0.0 in ./.venv/lib/python3.10/site-packages (from dask) (3.1.1)
+Requirement already satisfied: fsspec>=2021.09.0 in ./.venv/lib/python3.10/site-packages (from dask) (2025.9.0)
+Requirement already satisfied: partd>=1.4.0 in ./.venv/lib/python3.10/site-packages (from dask) (1.4.2)
+Requirement already satisfied: toolz>=0.10.0 in ./.venv/lib/python3.10/site-packages (from dask) (1.1.0)
+Requirement already satisfied: importlib_metadata>=4.13.0 in ./.venv/lib/python3.10/site-packages (from dask) (8.7.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib_metadata>=4.13.0->dask) (3.23.0)
+Requirement already satisfied: locket in ./.venv/lib/python3.10/site-packages (from partd>=1.4.0->dask) (1.0.0)
+
+=========================================
+Test run 1/1 for after
+Time: Wed Oct 29 17:42:01 CET 2025
+=========================================
+============================= test session starts ==============================
+platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0 -- /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/after/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/after
+configfile: pyproject.toml
+collecting ... collected 7 items
+
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation PASSED [ 14%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation_with_bgc PASSED [ 28%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_plot_save PASSED [ 42%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save PASSED [ 57%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing] PASSED [ 71%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[bgc_boundary_forcing_from_climatology] PASSED [ 85%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_from_yaml_missing_boundary_forcing PASSED [100%]
+
+=============================== warnings summary ===============================
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing]
+  /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/after/roms_tools/setup/datasets.py:302: UserWarning: No records found at or after the end_time.
+    warnings.warn("No records found at or after the end_time.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+6.05s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+3.89s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_plot_save
+0.75s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[bgc_boundary_forcing_from_climatology]
+0.64s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation_with_bgc
+0.33s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+0.22s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing]
+
+(15 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed, 3 warnings in 11.91s ========================
+Energy consumption in joules: 327.98224395465854 for 16.182205 sec of execution.
+
+
+========================================
+Completed after version at: Wed Oct 29 17:42:17 CET 2025
+========================================
+
+========================================
+All tests completed at: Wed Oct 29 17:42:17 CET 2025
+Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/roms-tools_107/test_results.log
+========================================

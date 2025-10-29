@@ -144,10 +144,10 @@ run_version_tests() {
         # For uv projects, don't source venv as uv run handles it
         if [ "$USE_UV" = "true" ]; then
             # Use eval to properly handle complex commands with arguments
-            eval "energibridge --summary $TEST_COMMAND" 2>&1 | tee -a "$LOG_FILE"
+            eval "energibridge --summary --quiet $TEST_COMMAND" 2>&1 | tee -a "$LOG_FILE"
         else
             # Use bash -c to ensure the virtualenv PATH is used
-            bash -c "source '$VENV_PATH/bin/activate' && energibridge --summary $TEST_COMMAND" 2>&1 | tee -a "$LOG_FILE"
+            bash -c "source '$VENV_PATH/bin/activate' && energibridge --summary --quiet $TEST_COMMAND" 2>&1 | tee -a "$LOG_FILE"
         fi
 
         echo "" | tee -a "$LOG_FILE"
