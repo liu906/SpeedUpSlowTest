@@ -14,8 +14,8 @@ VENV_PATH=".venv"
 PYTHON_VERSION="python3.10"
 
 # Optional: Setup command to run after activating venv
-# Reinstall pip (after auto-install downgrades it), then install test requirements, then homeassistant without deps
-SETUP_COMMAND="python -m pip install --upgrade --force-reinstall pip && grep -v '^pip<' requirements_test_all.txt > /tmp/ha_requirements.txt && pip install -r /tmp/ha_requirements.txt && python setup.py develop --no-deps"
+# Install pytest first, then upgrade pip, filter out pip constraints, install test requirements, and install homeassistant without deps
+SETUP_COMMAND="pip install pytest && python -m pip install --upgrade pip && grep -v '^pip<' requirements_test_all.txt > /tmp/ha_requirements.txt && pip install -r /tmp/ha_requirements.txt && python setup.py develop --no-deps"
 
 # Optional: Wait time in seconds before starting tests
 # WAIT_TIME=2
