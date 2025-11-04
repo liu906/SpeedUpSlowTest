@@ -1,0 +1,1149 @@
+========================================
+Starting test runs for project: armi_1737
+Iterations: 1
+Test command: python -m pytest armi/bookkeeping/db/tests/test_comparedb3.py armi/bookkeeping/db/tests/test_database3.py armi/bookkeeping/db/tests/test_databaseInterface.py armi/bookkeeping/report/tests/test_newReport.py armi/bookkeeping/report/tests/test_report.py armi/bookkeeping/tests/test_memoryProfiler.py armi/bookkeeping/visualization/tests/test_vis.py armi/cases/tests/test_cases.py armi/cli/tests/test_runEntryPoint.py armi/operators/tests/test_operatorSnapshots.py armi/operators/tests/test_operators.py armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py armi/physics/neutronics/tests/test_crossSectionManager.py armi/physics/neutronics/tests/test_crossSectionTable.py armi/physics/neutronics/tests/test_macroXSGenerationInterface.py armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py armi/tests/refSmallReactorShuffleLogic.py armi/tests/test_mpiActions.py armi/tests/test_mpiFeatures.py armi/tests/test_plugins.py armi/tests/test_user_plugins.py armi/utils/tests/test_plotting.py armi/utils/tests/test_reportPlotting.py armi/utils/tests/test_utils.py --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/armi_1737//test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/armi_1737/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: coverage>=7.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.11.0)
+Requirement already satisfied: h5py<=3.9,>=3.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.9.0)
+Requirement already satisfied: htmltree>=0.7.6 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.6)
+Requirement already satisfied: matplotlib<3.8.0,>=3.5.3 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.7.5)
+Requirement already satisfied: numpy<=1.23.5,>=1.21 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.23.5)
+Requirement already satisfied: ordered-set>=3.1.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (4.1.0)
+Requirement already satisfied: pluggy>=1.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: pyDOE>=0.3.8 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.3.8)
+Requirement already satisfied: pyevtk>=1.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: ruamel.yaml.clib<=0.2.7 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.2.7)
+Requirement already satisfied: ruamel.yaml<=0.17.21 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.17.21)
+Requirement already satisfied: scipy>=1.7.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.15.3)
+Requirement already satisfied: tabulate>=0.8.9 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.9.0)
+Requirement already satisfied: toml>0.9.5 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.10.2)
+Requirement already satisfied: voluptuous>=0.12.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.15.2)
+Requirement already satisfied: yamlize==0.7.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.1)
+Requirement already satisfied: black==22.6.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (22.6.0)
+Requirement already satisfied: ipykernel>=6.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.1.0)
+Requirement already satisfied: jupyter_client>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (8.6.3)
+Requirement already satisfied: nbconvert>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.16.6)
+Requirement already satisfied: pytest>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (8.4.2)
+Requirement already satisfied: pytest-cov>=4.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.0.0)
+Requirement already satisfied: pytest-xdist>=3.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.8.0)
+Requirement already satisfied: ruff==0.0.272 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.0.272)
+Requirement already satisfied: click>=8.0.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (8.3.0)
+Requirement already satisfied: platformdirs>=2 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (4.5.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (0.12.1)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (1.1.0)
+Requirement already satisfied: tomli>=1.1.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: contourpy>=1.0.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (25.0)
+Requirement already satisfied: pillow>=6.2.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (12.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (2.9.0.post0)
+Requirement already satisfied: comm>=0.1.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.8.17)
+Requirement already satisfied: ipython>=7.23.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (8.37.0)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.9.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.1)
+Requirement already satisfied: nest-asyncio>=1.4 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.6.0)
+Requirement already satisfied: psutil>=5.7 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (7.1.3)
+Requirement already satisfied: pyzmq>=25 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (27.1.0)
+Requirement already satisfied: tornado>=6.2 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.14.3)
+Requirement already satisfied: decorator in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.19.2)
+Requirement already satisfied: pexpect>4.3 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.52)
+Requirement already satisfied: pygments>=2.4.0 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.19.2)
+Requirement already satisfied: stack_data in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.15.0)
+Requirement already satisfied: wcwidth in ./venv/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./venv/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.8.5)
+Requirement already satisfied: beautifulsoup4 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (4.14.2)
+Requirement already satisfied: bleach!=5.0.0 in ./venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (6.3.0)
+Requirement already satisfied: defusedxml in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.7.1)
+Requirement already satisfied: jinja2>=3.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.6)
+Requirement already satisfied: jupyterlab-pygments in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.3.0)
+Requirement already satisfied: markupsafe>=2.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.0.3)
+Requirement already satisfied: mistune<4,>=2.0.3 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.4)
+Requirement already satisfied: nbclient>=0.5.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.10.2)
+Requirement already satisfied: nbformat>=5.7 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (5.10.4)
+Requirement already satisfied: pandocfilters>=1.4.1 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (1.5.1)
+Requirement already satisfied: webencodings in ./venv/lib/python3.10/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in ./venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in ./venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2.21.2)
+Requirement already satisfied: jsonschema>=2.6 in ./venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (4.25.1)
+Requirement already satisfied: attrs>=22.2.0 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.28.0)
+Requirement already satisfied: ptyprocess>=0.5 in ./venv/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.7.0)
+Requirement already satisfied: iniconfig>=1 in ./venv/lib/python3.10/site-packages (from pytest>=7.0.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: execnet>=2.1 in ./venv/lib/python3.10/site-packages (from pytest-xdist>=3.0.0->armi==0.3.0) (2.1.1)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.17.0)
+Requirement already satisfied: soupsieve>1.2 in ./venv/lib/python3.10/site-packages (from beautifulsoup4->nbconvert>=7.0.0->armi==0.3.0) (2.8)
+Requirement already satisfied: executing>=1.2.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.0)
+Requirement already satisfied: pure-eval in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Building wheels for collected packages: armi
+  Building editable for armi (pyproject.toml): started
+  Building editable for armi (pyproject.toml): finished with status 'done'
+  Created wheel for armi: filename=armi-0.3.0-0.editable-py3-none-any.whl size=20961 sha256=b73643d1bd1013d1aada13acae109bd9a9be952b3df323a5396aa6b582428bf4
+  Stored in directory: /tmp/pip-ephem-wheel-cache-p_fqrlm7/wheels/31/45/c5/174e31a7ebf50f9c2abe08df798978a1a4da2a8c6794a92f2f
+Successfully built armi
+Installing collected packages: armi
+  Attempting uninstall: armi
+    Found existing installation: armi 0.3.0
+    Uninstalling armi-0.3.0:
+      Successfully uninstalled armi-0.3.0
+Successfully installed armi-0.3.0
+
+=========================================
+Test run 1/1 for before
+Time: di  4 nov 2025 14:39:47 CET
+=========================================
+Initializing generic ARMI Framework application
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/armi_1737/before
+configfile: pyproject.toml
+plugins: xdist-3.8.0, cov-7.0.0
+collected 307 items
+
+armi/bookkeeping/db/tests/test_comparedb3.py ........                    [  2%]
+armi/bookkeeping/db/tests/test_database3.py ..................           [  8%]
+armi/bookkeeping/db/tests/test_databaseInterface.py ..................   [ 14%]
+armi/bookkeeping/report/tests/test_newReport.py ........                 [ 16%]
+armi/bookkeeping/report/tests/test_report.py .................           [ 22%]
+armi/bookkeeping/tests/test_memoryProfiler.py ........                   [ 25%]
+armi/bookkeeping/visualization/tests/test_vis.py .....                   [ 26%]
+armi/cases/tests/test_cases.py ............................              [ 35%]
+armi/cli/tests/test_runEntryPoint.py ........................            [ 43%]
+armi/operators/tests/test_operatorSnapshots.py ......                    [ 45%]
+armi/operators/tests/test_operators.py ...........................       [ 54%]
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py . [ 54%]
+.....                                                                    [ 56%]
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py ... [ 57%]
+....................                                                     [ 63%]
+armi/physics/neutronics/tests/test_crossSectionManager.py .............. [ 68%]
+...................                                                      [ 74%]
+armi/physics/neutronics/tests/test_crossSectionTable.py ..               [ 75%]
+armi/physics/neutronics/tests/test_macroXSGenerationInterface.py .       [ 75%]
+armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py . [ 75%]
+...                                                                      [ 76%]
+armi/tests/test_mpiActions.py ...........                                [ 80%]
+armi/tests/test_mpiFeatures.py ssssssssss                                [ 83%]
+armi/tests/test_plugins.py ......                                        [ 85%]
+armi/tests/test_user_plugins.py ........                                 [ 88%]
+armi/utils/tests/test_plotting.py .....                                  [ 89%]
+armi/utils/tests/test_reportPlotting.py ........                         [ 92%]
+armi/utils/tests/test_utils.py .......................                   [100%]
+
+=============================== warnings summary ===============================
+armi/bookkeeping/db/tests/test_comparedb3.py: 170 warnings
+armi/bookkeeping/db/tests/test_database3.py: 1740 warnings
+armi/bookkeeping/db/tests/test_databaseInterface.py: 367 warnings
+armi/bookkeeping/report/tests/test_newReport.py: 8 warnings
+armi/bookkeeping/tests/test_memoryProfiler.py: 510 warnings
+armi/cases/tests/test_cases.py: 264 warnings
+armi/cli/tests/test_runEntryPoint.py: 100 warnings
+armi/operators/tests/test_operatorSnapshots.py: 425 warnings
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py: 258 warnings
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py: 158 warnings
+armi/physics/neutronics/tests/test_crossSectionManager.py: 15 warnings
+armi/utils/tests/test_plotting.py: 12 warnings
+  /usr/lib/python3.10/random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+    return self.randrange(a, b+1)
+
+armi/bookkeeping/db/tests/test_comparedb3.py: 16 warnings
+armi/bookkeeping/db/tests/test_database3.py: 200 warnings
+armi/bookkeeping/db/tests/test_databaseInterface.py: 80 warnings
+armi/bookkeeping/tests/test_memoryProfiler.py: 48 warnings
+armi/cases/tests/test_cases.py: 24 warnings
+armi/cli/tests/test_runEntryPoint.py: 16 warnings
+armi/operators/tests/test_operatorSnapshots.py: 40 warnings
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py: 24 warnings
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py: 8 warnings
+armi/physics/neutronics/tests/test_crossSectionManager.py: 3 warnings
+armi/utils/tests/test_plotting.py: 3 warnings
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/reactor/blueprints/assemblyBlueprint.py:208: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(len(blocks))
+
+armi/bookkeeping/db/tests/test_comparedb3.py: 80 warnings
+armi/bookkeeping/db/tests/test_database3.py: 1330 warnings
+armi/bookkeeping/db/tests/test_databaseInterface.py: 754 warnings
+armi/bookkeeping/tests/test_memoryProfiler.py: 240 warnings
+armi/cases/tests/test_cases.py: 120 warnings
+armi/cli/tests/test_runEntryPoint.py: 115 warnings
+armi/operators/tests/test_operatorSnapshots.py: 200 warnings
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py: 123 warnings
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py: 698 warnings
+armi/physics/neutronics/tests/test_crossSectionManager.py: 26 warnings
+armi/physics/neutronics/tests/test_crossSectionTable.py: 1 warning
+armi/utils/tests/test_plotting.py: 12 warnings
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/reactor/assemblies.py:1192: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    self.spatialGrid = grids.axialUnitGrid(len(self))
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_diffSimpleData
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/compareDB3.py:442: RuntimeWarning: invalid value encountered in divide
+    diff = (src[()] - ref[()]) / mean
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/compareDB3.py:463: RuntimeWarning: Mean of empty slice
+    mean = numpy.nanmean(diff)
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/compareDB3.py:464: RuntimeWarning: All-NaN slice encountered
+    absMax = numpy.nanmax(absDiff)
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/compareDB3.py:465: RuntimeWarning: Mean of empty slice
+    absMean = numpy.nanmean(absDiff)
+
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/database3.py:915: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+    data = numpy.array(temp)
+
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/database3.py:945: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+    if parameters.NoDefault in data:
+
+armi/cli/tests/test_runEntryPoint.py::TestExtractInputs::test_extractInputsBasics
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <function Database3.__del__ at 0x7795268d3a30>
+  
+  Traceback (most recent call last):
+    File "/usr/lib/python3.10/shutil.py", line 816, in move
+      os.rename(src, real_dst)
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144120676941/temp-02SgkrodOe/test_extractInputsBasics.h5' -> '/root/.armi/0-20251104144120676941/temp-02SgkrodOe/test_extractInputsBasics.h5'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/database3.py", line 582, in __del__
+      self.close(False)
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/database3.py", line 315, in close
+      newPath = shutil.move(self._fullPath, self._fileName)
+    File "/usr/lib/python3.10/shutil.py", line 836, in move
+      copy_function(src, real_dst)
+    File "/usr/lib/python3.10/shutil.py", line 434, in copy2
+      copyfile(src, dst, follow_symlinks=follow_symlinks)
+    File "/usr/lib/python3.10/shutil.py", line 254, in copyfile
+      with open(src, 'rb') as fsrc:
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144120676941/temp-02SgkrodOe/test_extractInputsBasics.h5'
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+armi/cli/tests/test_runEntryPoint.py::TestVisFileEntryPointCommand::test_visFileEntryPointBasics
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <function Database3.__del__ at 0x7795268d3a30>
+  
+  Traceback (most recent call last):
+    File "/usr/lib/python3.10/shutil.py", line 816, in move
+      os.rename(src, real_dst)
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144120676941/temp-mkifG3Qkht/test_visFileEntryPointBasics.h5' -> '/root/.armi/0-20251104144120676941/temp-mkifG3Qkht/test_visFileEntryPointBasics.h5'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/database3.py", line 582, in __del__
+      self.close(False)
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/bookkeeping/db/database3.py", line 315, in close
+      newPath = shutil.move(self._fullPath, self._fileName)
+    File "/usr/lib/python3.10/shutil.py", line 836, in move
+      copy_function(src, real_dst)
+    File "/usr/lib/python3.10/shutil.py", line 434, in copy2
+      copyfile(src, dst, follow_symlinks=follow_symlinks)
+    File "/usr/lib/python3.10/shutil.py", line 254, in copyfile
+      with open(src, 'rb') as fsrc:
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144120676941/temp-mkifG3Qkht/test_visFileEntryPointBasics.h5'
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_fpApplication
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_getAllFissionProductNames
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_loadGlobalLFPsFromFile
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/reactor/tests/test_reactors.py:75: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(1)
+
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py: 73 warnings
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/reactor/converters/uniformMesh.py:1030: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(len(sourceAssembly))
+
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxUtils::test_calcReactionRates
+armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_checkBlockSimilarity
+armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_createRepresentativeBlockDissimilar
+armi/physics/neutronics/tests/test_crossSectionTable.py::TestCrossSectionTable::test_makeTable
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/reactor/tests/test_assemblies.py:187: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(numBlocks)
+
+armi/utils/tests/test_reportPlotting.py::TestRadar::test_plotAxialProfile
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/utils/reportPlotting.py:730: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
+    colormap = cm.get_cmap("jet")
+
+armi/utils/tests/test_reportPlotting.py::TestRadar::test_xsHistoryVsTime
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/utils/reportPlotting.py:312: UserWarning: Glyph 1 () missing from current font.
+    plt.savefig(figName)
+
+armi/utils/tests/test_reportPlotting.py::TestRadar::test_xsHistoryVsTime
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/armi/utils/reportPlotting.py:312: UserWarning: Glyph 2 () missing from current font.
+    plt.savefig(figName)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+9.08s call     armi/cases/tests/test_cases.py::TestArmiCase::test_summarizeDesign
+4.88s call     armi/cli/tests/test_runEntryPoint.py::TestVisFileEntryPointCommand::test_visFileEntryPointBasics
+4.72s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportContents
+4.59s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_prepRestartRun
+3.87s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_radar
+3.77s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_mapper
+3.41s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_load
+3.23s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelExplicitMC2Library::test_nuclideFlags
+3.18s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_createInterfaces
+3.17s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_setStateToDefault
+3.11s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelExplicitMC2Library::test_nuclidesInModelAllDepletableBlocks
+3.10s call     armi/cases/tests/test_cases.py::TestCaseSuiteComparison::test_compareNoDiffs
+3.09s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_mainOperate
+3.08s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_createInterfacesDisabled
+3.08s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_atEOL
+3.07s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelExplicitMC2Library::test_nuclidesInModelFuel
+3.03s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_mergeHistory
+2.85s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_loadSortSetting
+2.82s call     armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+2.77s call     armi/tests/test_mpiActions.py::MpiIterTests::test_diagnosePickleErrorTestReactor
+2.73s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_history
+2.34s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_printFullMemoryBreakdown
+2.25s setup    armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+2.21s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_fullBreakdown
+2.21s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_displayMemoryUsage
+2.18s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_createRepresentativeBlocksUsingExistingBlocks
+2.16s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_splitDatabase
+1.94s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactBOLReportInt
+1.82s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_writeToDB
+1.79s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_loadCS
+1.77s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_readInputsFromDB
+1.76s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_getH5File
+1.75s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_open
+1.74s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_loadBlueprints
+1.73s call     armi/physics/neutronics/tests/test_macroXSGenerationInterface.py::TestMacroXSGenerationInterface::test_macroXSGenerationInterfaceBasics
+1.72s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_deleting
+1.71s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_fileName
+1.71s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_auxData
+1.71s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_grabLocalCommitHash
+1.69s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_replaceNones
+1.66s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_computeParents
+1.62s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_getRepresentativeBlocks
+1.60s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotCartesianBlock
+1.57s call     armi/cases/tests/test_cases.py::TestArmiCase::test_run
+1.52s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotBlockFlux
+1.50s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_distributable
+1.39s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotAssemblyTypes
+1.36s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecutersNonUniform::test_calculateKeff
+1.30s call     armi/cli/tests/test_runEntryPoint.py::TestExtractInputs::test_extractInputsBasics
+1.27s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactEveryNode
+1.26s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_checkForDuplicateObjectsOnArmiModel
+1.24s call     armi/operators/tests/test_operators.py::OperatorTests::test_interfaceIsActive
+1.21s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_copyPregeneratedFiles
+1.21s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_getReferrers
+1.21s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactAllCoupled
+1.20s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_profileMemoryUsageAction
+1.15s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_keffVsTime
+1.15s call     armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseDuplicate
+1.13s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_timeNodeLoop_tightCoupling
+1.11s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactFirstCoupledIteration
+1.10s call     armi/utils/tests/test_utils.py::TestGeneralUtils::test_classesInHierarchy
+1.09s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_plotAxialProfile
+1.07s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_buVsTime
+0.95s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_userPluginWithInterfaces
+0.92s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_customModifier
+0.91s call     armi/operators/tests/test_operators.py::OperatorTests::test_operatorData
+0.91s call     armi/bookkeeping/visualization/tests/test_vis.py::TestVisDump::test_dumpReactorXdmf
+0.90s setup    armi/utils/tests/test_plotting.py::TestPlotting::test_plotAssemblyTypes
+0.90s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_updateBurnupGroups
+0.89s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_paramSweepConverter
+0.89s call     armi/physics/neutronics/tests/test_crossSectionTable.py::TestCrossSectionTable::test_isotopicDepletionInterface
+0.88s call     armi/tests/test_plugins.py::TestPluginBasics::test_pluginsExposeInterfaces
+0.83s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_userPluginOnProcessCoreLoading
+0.81s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_calcWeightedBurnup
+0.80s call     armi/tests/test_mpiActions.py::MpiIterTests::test_runActionsDistributeStateAction
+0.79s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionComponentAverage1DCylinder::test_checkComponentConsistency
+0.78s call     armi/bookkeeping/report/tests/test_report.py::TestReport::test_reactorSpecificReporting
+0.77s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionComponentAverage1DCylinder::test_ComponentAverage1DCylinder
+0.76s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionMedian::test_createRepresentativeBlock
+0.76s setup    armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecuters::test_calculateKeff
+0.75s setup    armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionFluxWeightedAverage::test_createRepresentativeBlock
+0.74s call     armi/cases/tests/test_cases.py::TestExtraInputWriting::test_writeInput
+0.74s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactEOL
+0.74s call     armi/operators/tests/test_operators.py::OperatorTests::test_setStateToDefault
+0.74s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_updateLoadpadDose
+0.71s call     armi/operators/tests/test_operators.py::OperatorTests::test_snapshotRequest
+0.71s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_fpApplication
+0.70s setup    armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentNumberDensities
+0.69s setup    armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_checkBlockSimilarity
+0.68s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollection::test_getBlocksInGroup
+0.68s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactBOC
+0.68s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactBOL
+0.67s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollection::test_add
+0.66s call     armi/operators/tests/test_operators.py::OperatorTests::test_orderedInterfaces
+0.62s call     armi/operators/tests/test_operators.py::OperatorTests::test_getActiveInterfaces
+0.61s setup    armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecutersNonUniform::test_calculateKeff
+0.60s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportContentsEnd
+0.60s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+0.60s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterface::test_interaction
+0.60s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_interactEveryNodeReturn
+0.59s call     armi/operators/tests/test_operators.py::OperatorTests::test_addInterfaceSubclassCollision
+0.59s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterface::test_checkEnergyBalance
+0.54s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCoreWithCS
+0.53s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_valueVsTime
+0.53s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCoreFromFactoryWithCS
+0.53s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotDepthMap
+0.53s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCoreFromFactory
+0.52s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_interactBOL
+0.51s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_xsHistoryVsTime
+0.50s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_movesVsCycle
+0.48s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_tableCreation
+0.48s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_timeSeries
+0.48s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_writeReports
+0.48s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactBOC
+0.47s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_updateCycleDoseParams
+0.47s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportLogs
+0.44s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_readWritten
+0.42s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactEOC
+0.42s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_neutronicsPlotFunctions
+0.41s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_readWithoutInputs
+0.41s call     armi/bookkeeping/report/tests/test_report.py::TestReport::test_writeWelcomeHeaders
+0.40s call     armi/utils/tests/test_utils.py::TestGeneralUtils::test_plotMatrix
+0.40s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactEveryNode
+0.40s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollection::test_is_pickleable
+0.40s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_setBuGroupBounds
+0.40s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportBasics
+0.39s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_variousTypesWork
+0.39s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_settingsModifier
+0.39s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_neutronicConvergenceModifier
+0.39s setup    armi/bookkeeping/visualization/tests/test_vis.py::TestVisDump::test_cartesianMesh
+0.39s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionComponentAverage::test_ComponentAverageRepBlock
+0.39s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_getNextAvailableXsType
+0.39s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_xsgmIsRunBeforeXS
+0.38s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_addXsGroupsFromBlocks
+0.38s call     armi/tests/test_mpiActions.py::MpiIterTests::test_runActionsDistributionAction
+0.38s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_createPlotMetaData
+0.37s call     armi/operators/tests/test_operators.py::OperatorTests::test_loadStateError
+0.36s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotHexBlock
+0.35s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestStandardFollowOn::test_standardRestart
+0.29s call     armi/cases/tests/test_cases.py::TestArmiCase::test_independentVariables
+0.28s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_clone
+0.25s call     armi/cli/tests/test_runEntryPoint.py::TestModifyCaseSettingsCommand::test_modifyCaseSettingsCommandInvoke
+0.23s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_absPath
+0.21s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_getHistory
+0.17s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_getHistoryByLocation
+0.17s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_metaData_endSuccessfully
+0.17s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_metaDataEndFail
+0.13s call     armi/physics/neutronics/tests/test_crossSectionTable.py::TestCrossSectionTable::test_makeTable
+0.12s call     armi/cli/tests/test_runEntryPoint.py::TestCloneArmiRunCommandBatch::test_cloneArmiRunCommandBatchInvokeMedium
+0.11s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxUtils::test_calcReactionRates
+0.10s call     armi/cases/tests/test_cases.py::TestArmiCase::test_clone
+0.10s call     armi/cli/tests/test_runEntryPoint.py::TestCloneArmiRunCommandBatch::test_cloneArmiRunCommandBatchInvokeShort
+0.10s call     armi/bookkeeping/visualization/tests/test_vis.py::TestVisDump::test_dumpReactorVtk
+0.07s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_multipleFiles
+0.07s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_wildcardFile
+0.07s call     armi/cli/tests/test_runEntryPoint.py::TestInitializationEntryPoints::test_entryPointInitialization
+0.06s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_dependencyFromDBName
+0.06s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_dependenciesWithObscurePaths
+0.06s call     armi/cli/tests/test_runEntryPoint.py::TestRunSuiteCommand::test_runSuiteCommandBasics
+0.05s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_writeSystemAttributes
+0.05s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_relPath
+0.05s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_nonFilePath
+0.04s call     armi/cli/tests/test_runEntryPoint.py::TestCloneArmiRunCommandBatch::test_cloneArmiRunCommandBatchBasics
+0.04s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_getAllFissionProductNames
+0.04s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInputsHelper
+0.03s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_loadGlobalLFPsFromFile
+0.03s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_singleFile
+0.03s call     armi/cli/tests/test_runEntryPoint.py::TestCheckInputEntryPoint::test_checkInputEntryPointInvoke
+0.03s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_dependencyFromExplictRepeatShuffles
+0.03s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentTemperatureNoMass
+0.03s call     armi/cli/tests/test_runEntryPoint.py::TestRunEntryPoint::test_runEntryPointBasics
+0.03s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_createRepresentativeBlockDissimilar
+0.02s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_registerRepeatedUserPlugins
+0.02s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_WriteDB
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_createRepresentativeBlock
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_startCoverage
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getBurnSteps
+0.02s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_registerUserPluginsFromSettings
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getPowerFractions
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_startProfiling
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getStepLengths
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getCycleLengths
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getCycleNames
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getMaxBurnSteps
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_hasBurnup
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getAvailabilityFactors
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getAvailabilityFactors
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentTemperatureVariedWeights
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getPowerFractions
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentTemperature
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getBurnSteps
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleNodeFromCumulativeStep
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCumulativeNodeNum
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleLengths
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getPreviousTimeNode
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleNames
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getMaxBurnSteps
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentNumberDensities
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getStepLengths
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getNodesPerCycle
+0.02s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshotsSettings::test_getOperatorClassFromSettings
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleNodeFromCumulativeNode
+0.02s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_NoWriteDB
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_endCoverage
+0.02s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestBadName::test_badDBName
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_endProfiling
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_checkInputs
+0.01s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_checkBlockSimilarity
+0.01s call     armi/cli/tests/test_runEntryPoint.py::TestModifyCaseSettingsCommand::test_modifyCaseSettingsCommandBasics
+0.01s call     armi/operators/tests/test_operators.py::TestCreateOperator::test_createOperator
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_notConverged
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_computeTightCouplingConvergence
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_explicitDependency
+0.01s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionFluxWeightedAverage::test_createRepresentativeBlock
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_buildCommand
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_titleSetterGetter
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_couplingIsActive
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_getStepLengths
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_skip
+0.01s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_writeReports
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_Inactive
+0.01s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecutersNonUniform::test_executerInteractionNonUniformAssems
+0.01s call     armi/bookkeeping/report/tests/test_report.py::TestReport::test_setData
+0.01s call     armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_diffSpecialData
+0.01s call     armi/utils/tests/test_utils.py::TestGeneralUtils::test_safeCopy
+0.01s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_failOnDuplicateSetting
+0.01s call     armi/bookkeeping/report/tests/test_report.py::TestReportingUtils::test_getSystemInfo
+
+(694 durations < 0.005s hidden.  Use -vv to show these durations.)
+========== 297 passed, 10 skipped, 8285 warnings in 192.95s (0:03:12) ==========
+Energy consumption in joules: 3253.8540954589844 for 198.30132 sec of execution.
+
+
+========================================
+Completed before version at: di  4 nov 2025 14:43:06 CET
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/armi_1737/after
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: coverage>=7.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.11.0)
+Requirement already satisfied: h5py<=3.9,>=3.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.9.0)
+Requirement already satisfied: htmltree>=0.7.6 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.6)
+Requirement already satisfied: matplotlib<3.8.0,>=3.5.3 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.7.5)
+Requirement already satisfied: numpy<=1.23.5,>=1.21 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.23.5)
+Requirement already satisfied: ordered-set>=3.1.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (4.1.0)
+Requirement already satisfied: pluggy>=1.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: pyDOE>=0.3.8 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.3.8)
+Requirement already satisfied: pyevtk>=1.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: ruamel.yaml.clib<=0.2.7 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.2.7)
+Requirement already satisfied: ruamel.yaml<=0.17.21 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.17.21)
+Requirement already satisfied: scipy>=1.7.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.15.3)
+Requirement already satisfied: tabulate>=0.8.9 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.9.0)
+Requirement already satisfied: toml>0.9.5 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.10.2)
+Requirement already satisfied: voluptuous>=0.12.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.15.2)
+Requirement already satisfied: yamlize==0.7.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.1)
+Requirement already satisfied: black==22.6.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (22.6.0)
+Requirement already satisfied: ipykernel>=6.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.1.0)
+Requirement already satisfied: jupyter_client>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (8.6.3)
+Requirement already satisfied: nbconvert>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.16.6)
+Requirement already satisfied: pytest>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (8.4.2)
+Requirement already satisfied: pytest-cov>=4.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.0.0)
+Requirement already satisfied: pytest-xdist>=3.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.8.0)
+Requirement already satisfied: ruff==0.0.272 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.0.272)
+Requirement already satisfied: click>=8.0.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (8.3.0)
+Requirement already satisfied: platformdirs>=2 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (4.5.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (0.12.1)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (1.1.0)
+Requirement already satisfied: tomli>=1.1.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: contourpy>=1.0.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (25.0)
+Requirement already satisfied: pillow>=6.2.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (12.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (2.9.0.post0)
+Requirement already satisfied: comm>=0.1.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.8.17)
+Requirement already satisfied: ipython>=7.23.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (8.37.0)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.9.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.1)
+Requirement already satisfied: nest-asyncio>=1.4 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.6.0)
+Requirement already satisfied: psutil>=5.7 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (7.1.3)
+Requirement already satisfied: pyzmq>=25 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (27.1.0)
+Requirement already satisfied: tornado>=6.2 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.14.3)
+Requirement already satisfied: decorator in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.19.2)
+Requirement already satisfied: pexpect>4.3 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.52)
+Requirement already satisfied: pygments>=2.4.0 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.19.2)
+Requirement already satisfied: stack_data in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.15.0)
+Requirement already satisfied: wcwidth in ./venv/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./venv/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.8.5)
+Requirement already satisfied: beautifulsoup4 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (4.14.2)
+Requirement already satisfied: bleach!=5.0.0 in ./venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (6.3.0)
+Requirement already satisfied: defusedxml in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.7.1)
+Requirement already satisfied: jinja2>=3.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.6)
+Requirement already satisfied: jupyterlab-pygments in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.3.0)
+Requirement already satisfied: markupsafe>=2.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.0.3)
+Requirement already satisfied: mistune<4,>=2.0.3 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.4)
+Requirement already satisfied: nbclient>=0.5.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.10.2)
+Requirement already satisfied: nbformat>=5.7 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (5.10.4)
+Requirement already satisfied: pandocfilters>=1.4.1 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (1.5.1)
+Requirement already satisfied: webencodings in ./venv/lib/python3.10/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in ./venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in ./venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2.21.2)
+Requirement already satisfied: jsonschema>=2.6 in ./venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (4.25.1)
+Requirement already satisfied: attrs>=22.2.0 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.28.0)
+Requirement already satisfied: ptyprocess>=0.5 in ./venv/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.7.0)
+Requirement already satisfied: iniconfig>=1 in ./venv/lib/python3.10/site-packages (from pytest>=7.0.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: execnet>=2.1 in ./venv/lib/python3.10/site-packages (from pytest-xdist>=3.0.0->armi==0.3.0) (2.1.1)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.17.0)
+Requirement already satisfied: soupsieve>1.2 in ./venv/lib/python3.10/site-packages (from beautifulsoup4->nbconvert>=7.0.0->armi==0.3.0) (2.8)
+Requirement already satisfied: executing>=1.2.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.0)
+Requirement already satisfied: pure-eval in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Building wheels for collected packages: armi
+  Building editable for armi (pyproject.toml): started
+  Building editable for armi (pyproject.toml): finished with status 'done'
+  Created wheel for armi: filename=armi-0.3.0-0.editable-py3-none-any.whl size=20977 sha256=bb90c43c889f3dc68ba744303b8d3564dec8e40ed4e82c577cb29907f4837146
+  Stored in directory: /tmp/pip-ephem-wheel-cache-vknaut_o/wheels/f8/50/16/f739e0d136777a75612b5b74854e77c902602dfb0fe0ba4203
+Successfully built armi
+Installing collected packages: armi
+  Attempting uninstall: armi
+    Found existing installation: armi 0.3.0
+    Uninstalling armi-0.3.0:
+      Successfully uninstalled armi-0.3.0
+Successfully installed armi-0.3.0
+
+=========================================
+Test run 1/1 for after
+Time: di  4 nov 2025 14:43:18 CET
+=========================================
+Initializing generic ARMI Framework application
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/armi_1737/after
+configfile: pyproject.toml
+plugins: xdist-3.8.0, cov-7.0.0
+collected 307 items
+
+armi/bookkeeping/db/tests/test_comparedb3.py ........                    [  2%]
+armi/bookkeeping/db/tests/test_database3.py ..................           [  8%]
+armi/bookkeeping/db/tests/test_databaseInterface.py ..................   [ 14%]
+armi/bookkeeping/report/tests/test_newReport.py ........                 [ 16%]
+armi/bookkeeping/report/tests/test_report.py .................           [ 22%]
+armi/bookkeeping/tests/test_memoryProfiler.py ........                   [ 25%]
+armi/bookkeeping/visualization/tests/test_vis.py .....                   [ 26%]
+armi/cases/tests/test_cases.py ............................              [ 35%]
+armi/cli/tests/test_runEntryPoint.py ........................            [ 43%]
+armi/operators/tests/test_operatorSnapshots.py ......                    [ 45%]
+armi/operators/tests/test_operators.py ...........................       [ 54%]
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py . [ 54%]
+.....                                                                    [ 56%]
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py ... [ 57%]
+....................                                                     [ 63%]
+armi/physics/neutronics/tests/test_crossSectionManager.py .............. [ 68%]
+...................                                                      [ 74%]
+armi/physics/neutronics/tests/test_crossSectionTable.py ..               [ 75%]
+armi/physics/neutronics/tests/test_macroXSGenerationInterface.py .       [ 75%]
+armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py . [ 75%]
+...                                                                      [ 76%]
+armi/tests/test_mpiActions.py ...........                                [ 80%]
+armi/tests/test_mpiFeatures.py ssssssssss                                [ 83%]
+armi/tests/test_plugins.py ......                                        [ 85%]
+armi/tests/test_user_plugins.py ........                                 [ 88%]
+armi/utils/tests/test_plotting.py .....                                  [ 89%]
+armi/utils/tests/test_reportPlotting.py ........                         [ 92%]
+armi/utils/tests/test_utils.py .......................                   [100%]
+
+=============================== warnings summary ===============================
+armi/bookkeeping/db/tests/test_comparedb3.py: 4 warnings
+armi/bookkeeping/db/tests/test_database3.py: 488 warnings
+armi/bookkeeping/db/tests/test_databaseInterface.py: 290 warnings
+armi/bookkeeping/report/tests/test_newReport.py: 17 warnings
+armi/bookkeeping/report/tests/test_report.py: 14 warnings
+armi/bookkeeping/tests/test_memoryProfiler.py: 12 warnings
+armi/bookkeeping/visualization/tests/test_vis.py: 2 warnings
+armi/cases/tests/test_cases.py: 181 warnings
+armi/cli/tests/test_runEntryPoint.py: 6 warnings
+armi/operators/tests/test_operatorSnapshots.py: 10 warnings
+armi/operators/tests/test_operators.py: 18 warnings
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py: 94 warnings
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py: 15 warnings
+armi/physics/neutronics/tests/test_crossSectionManager.py: 104 warnings
+armi/physics/neutronics/tests/test_crossSectionTable.py: 2 warnings
+armi/physics/neutronics/tests/test_macroXSGenerationInterface.py: 2 warnings
+armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py: 8 warnings
+armi/tests/test_mpiActions.py: 2 warnings
+armi/tests/test_plugins.py: 2 warnings
+armi/tests/test_user_plugins.py: 4 warnings
+armi/utils/tests/test_plotting.py: 14 warnings
+armi/utils/tests/test_reportPlotting.py: 16 warnings
+armi/utils/tests/test_utils.py: 2 warnings
+  /usr/lib/python3.10/random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+    return self.randrange(a, b+1)
+
+armi/bookkeeping/db/tests/test_comparedb3.py: 2 warnings
+armi/bookkeeping/db/tests/test_database3.py: 88 warnings
+armi/bookkeeping/db/tests/test_databaseInterface.py: 76 warnings
+armi/bookkeeping/report/tests/test_newReport.py: 8 warnings
+armi/bookkeeping/report/tests/test_report.py: 7 warnings
+armi/bookkeeping/tests/test_memoryProfiler.py: 6 warnings
+armi/bookkeeping/visualization/tests/test_vis.py: 1 warning
+armi/cases/tests/test_cases.py: 17 warnings
+armi/cli/tests/test_runEntryPoint.py: 3 warnings
+armi/operators/tests/test_operatorSnapshots.py: 5 warnings
+armi/operators/tests/test_operators.py: 9 warnings
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py: 11 warnings
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py: 7 warnings
+armi/physics/neutronics/tests/test_crossSectionManager.py: 13 warnings
+armi/physics/neutronics/tests/test_crossSectionTable.py: 1 warning
+armi/physics/neutronics/tests/test_macroXSGenerationInterface.py: 1 warning
+armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py: 4 warnings
+armi/tests/test_mpiActions.py: 1 warning
+armi/tests/test_plugins.py: 1 warning
+armi/tests/test_user_plugins.py: 2 warnings
+armi/utils/tests/test_plotting.py: 4 warnings
+armi/utils/tests/test_reportPlotting.py: 8 warnings
+armi/utils/tests/test_utils.py: 1 warning
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/reactor/blueprints/assemblyBlueprint.py:208: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(len(blocks))
+
+armi/bookkeeping/db/tests/test_comparedb3.py: 2 warnings
+armi/bookkeeping/db/tests/test_database3.py: 706 warnings
+armi/bookkeeping/db/tests/test_databaseInterface.py: 718 warnings
+armi/bookkeeping/report/tests/test_newReport.py: 8 warnings
+armi/bookkeeping/report/tests/test_report.py: 7 warnings
+armi/bookkeeping/tests/test_memoryProfiler.py: 6 warnings
+armi/bookkeeping/visualization/tests/test_vis.py: 1 warning
+armi/cases/tests/test_cases.py: 81 warnings
+armi/cli/tests/test_runEntryPoint.py: 4 warnings
+armi/operators/tests/test_operatorSnapshots.py: 5 warnings
+armi/operators/tests/test_operators.py: 9 warnings
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py: 46 warnings
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py: 10 warnings
+armi/physics/neutronics/tests/test_crossSectionManager.py: 68 warnings
+armi/physics/neutronics/tests/test_crossSectionTable.py: 2 warnings
+armi/physics/neutronics/tests/test_macroXSGenerationInterface.py: 1 warning
+armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py: 4 warnings
+armi/tests/test_mpiActions.py: 1 warning
+armi/tests/test_plugins.py: 1 warning
+armi/tests/test_user_plugins.py: 2 warnings
+armi/utils/tests/test_plotting.py: 13 warnings
+armi/utils/tests/test_reportPlotting.py: 8 warnings
+armi/utils/tests/test_utils.py: 1 warning
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/reactor/assemblies.py:1192: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    self.spatialGrid = grids.axialUnitGrid(len(self))
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_diffSimpleData
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/compareDB3.py:442: RuntimeWarning: invalid value encountered in divide
+    diff = (src[()] - ref[()]) / mean
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/compareDB3.py:463: RuntimeWarning: Mean of empty slice
+    mean = numpy.nanmean(diff)
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/compareDB3.py:464: RuntimeWarning: All-NaN slice encountered
+    absMax = numpy.nanmax(absDiff)
+
+armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/compareDB3.py:465: RuntimeWarning: Mean of empty slice
+    absMean = numpy.nanmean(absDiff)
+
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/database3.py:915: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+    data = numpy.array(temp)
+
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/database3.py:945: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+    if parameters.NoDefault in data:
+
+armi/cli/tests/test_runEntryPoint.py::TestExtractInputs::test_extractInputsBasics
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/venv/lib/python3.10/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <function Database3.__del__ at 0x70b7961a88b0>
+  
+  Traceback (most recent call last):
+    File "/usr/lib/python3.10/shutil.py", line 816, in move
+      os.rename(src, real_dst)
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144358034097/temp-3GgoYZbEVf/test_extractInputsBasics.h5' -> '/root/.armi/0-20251104144358034097/temp-3GgoYZbEVf/test_extractInputsBasics.h5'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/database3.py", line 582, in __del__
+      self.close(False)
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/database3.py", line 315, in close
+      newPath = shutil.move(self._fullPath, self._fileName)
+    File "/usr/lib/python3.10/shutil.py", line 836, in move
+      copy_function(src, real_dst)
+    File "/usr/lib/python3.10/shutil.py", line 434, in copy2
+      copyfile(src, dst, follow_symlinks=follow_symlinks)
+    File "/usr/lib/python3.10/shutil.py", line 254, in copyfile
+      with open(src, 'rb') as fsrc:
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144358034097/temp-3GgoYZbEVf/test_extractInputsBasics.h5'
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+armi/cli/tests/test_runEntryPoint.py::TestVisFileEntryPointCommand::test_visFileEntryPointBasics
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/venv/lib/python3.10/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <function Database3.__del__ at 0x70b7961a88b0>
+  
+  Traceback (most recent call last):
+    File "/usr/lib/python3.10/shutil.py", line 816, in move
+      os.rename(src, real_dst)
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144359870553/temp-ej6k7kRNwM/test_visFileEntryPointBasics.h5' -> '/root/.armi/0-20251104144359870553/temp-ej6k7kRNwM/test_visFileEntryPointBasics.h5'
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/database3.py", line 582, in __del__
+      self.close(False)
+    File "/home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/bookkeeping/db/database3.py", line 315, in close
+      newPath = shutil.move(self._fullPath, self._fileName)
+    File "/usr/lib/python3.10/shutil.py", line 836, in move
+      copy_function(src, real_dst)
+    File "/usr/lib/python3.10/shutil.py", line 434, in copy2
+      copyfile(src, dst, follow_symlinks=follow_symlinks)
+    File "/usr/lib/python3.10/shutil.py", line 254, in copyfile
+      with open(src, 'rb') as fsrc:
+  FileNotFoundError: [Errno 2] No such file or directory: '/root/.armi/0-20251104144359870553/temp-ej6k7kRNwM/test_visFileEntryPointBasics.h5'
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_fpApplication
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_getAllFissionProductNames
+armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_loadGlobalLFPsFromFile
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/reactor/tests/test_reactors.py:75: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(1)
+
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecutersNonUniform::test_calculateKeff
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/reactor/converters/uniformMesh.py:1030: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(len(sourceAssembly))
+
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_updateLoadpadDose
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/venv/lib/python3.10/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: invalid value encountered in divide
+    slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_updateLoadpadDose
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/physics/neutronics/globalFlux/globalFluxInterface.py:1211: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+    the requested tolerance from being achieved.  The error may be 
+    underestimated.
+    returns = scipy.integrate.quad(integrand, loadPadBottom, loadPadTop)
+
+armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxUtils::test_calcReactionRates
+armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_checkBlockSimilarity
+armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_createRepresentativeBlockDissimilar
+armi/physics/neutronics/tests/test_crossSectionTable.py::TestCrossSectionTable::test_makeTable
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/reactor/tests/test_assemblies.py:187: PendingDeprecationWarning: Use grids.AxialGrid class rather than function
+    a.spatialGrid = grids.axialUnitGrid(numBlocks)
+
+armi/utils/tests/test_reportPlotting.py::TestRadar::test_plotAxialProfile
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/utils/reportPlotting.py:730: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
+    colormap = cm.get_cmap("jet")
+
+armi/utils/tests/test_reportPlotting.py::TestRadar::test_xsHistoryVsTime
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/utils/reportPlotting.py:312: UserWarning: Glyph 1 () missing from current font.
+    plt.savefig(figName)
+
+armi/utils/tests/test_reportPlotting.py::TestRadar::test_xsHistoryVsTime
+  /home/xutong/SpeedUpSlowTest/versions/armi_1737/after/armi/utils/reportPlotting.py:312: UserWarning: Glyph 2 () missing from current font.
+    plt.savefig(figName)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+9.09s call     armi/cases/tests/test_cases.py::TestArmiCase::test_summarizeDesign
+3.23s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_load
+3.15s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollection::test_add
+2.95s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelExplicitMC2LibrarySlower::test_nuclidesInModelAllDepletableBlocks
+2.82s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_loadSortSetting
+2.75s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_prepRestartRun
+2.66s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3::test_history
+2.23s setup    armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+1.81s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotCartesianBlock
+1.58s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_createRepresentativeBlocksUsingExistingBlocks
+1.58s call     armi/cases/tests/test_cases.py::TestArmiCase::test_run
+1.42s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotBlockFlux
+1.28s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_getRepresentativeBlocks
+1.16s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_mergeHistory
+1.09s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotAssemblyTypes
+1.03s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportContents
+1.01s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactEveryNode
+0.99s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactAllCoupled
+0.94s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactBOC
+0.94s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactFirstCoupledIteration
+0.91s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionComponentAverage1DCylinder::test_ComponentAverage1DCylinder
+0.85s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_radar
+0.74s call     armi/cases/tests/test_cases.py::TestExtraInputWriting::test_writeInput
+0.72s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_printFullMemoryBreakdown
+0.68s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_copyPregeneratedFiles
+0.67s call     armi/utils/tests/test_utils.py::TestGeneralUtils::test_plotMatrix
+0.66s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactBOLReportInt
+0.66s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_interactBOL
+0.66s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_getNextAvailableXsType
+0.66s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_displayMemoryUsage
+0.65s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_setBuGroupBounds
+0.65s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_updateBurnupGroups
+0.64s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_fullBreakdown
+0.62s setup    armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_checkBlockSimilarity
+0.61s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollection::test_is_pickleable
+0.60s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionComponentAverage1DCylinder::test_checkComponentConsistency
+0.59s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_calcWeightedBurnup
+0.57s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCoreFromFactoryWithCS
+0.56s setup    armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionFluxWeightedAverage::test_createRepresentativeBlock
+0.55s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_addXsGroupsFromBlocks
+0.53s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionMedian::test_createRepresentativeBlock
+0.52s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCoreWithCS
+0.52s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCore
+0.51s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_growToFullCoreFromFactory
+0.51s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollection::test_getBlocksInGroup
+0.51s setup    armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentNumberDensities
+0.44s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_neutronicConvergenceModifier
+0.43s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_readWritten
+0.41s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_readWithoutInputs
+0.39s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseReading::test_variousTypesWork
+0.38s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionComponentAverage::test_ComponentAverageRepBlock
+0.36s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestCrossSectionGroupManager::test_xsgmIsRunBeforeXS
+0.36s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotHexBlock
+0.35s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestStandardFollowOn::test_standardRestart
+0.31s call     armi/utils/tests/test_plotting.py::TestPlotting::test_plotDepthMap
+0.31s call     armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseSim
+0.30s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_keffVsTime
+0.28s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactEOL
+0.27s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_buVsTime
+0.24s call     armi/cli/tests/test_runEntryPoint.py::TestVisFileEntryPointCommand::test_visFileEntryPointBasics
+0.24s call     armi/operators/tests/test_operators.py::OperatorTests::test_interfaceIsActive
+0.23s call     armi/cli/tests/test_runEntryPoint.py::TestExtractInputs::test_extractInputsBasics
+0.21s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_dependencyFromDBName
+0.21s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_splitDatabase
+0.21s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_getHistory
+0.20s setup    armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecutersNonUniform::test_calculateKeff
+0.20s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_xsHistoryVsTime
+0.20s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_mapper
+0.19s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_movesVsCycle
+0.19s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_plotAxialProfile
+0.19s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportContentsEnd
+0.18s call     armi/physics/neutronics/tests/test_macroXSGenerationInterface.py::TestMacroXSGenerationInterface::test_macroXSGenerationInterfaceBasics
+0.18s call     armi/tests/test_mpiActions.py::MpiIterTests::test_diagnosePickleErrorTestReactor
+0.18s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelExplicitMC2Library::test_nuclidesInModelFuel
+0.18s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_valueVsTime
+0.18s call     armi/cases/tests/test_cases.py::TestCaseSuiteComparison::test_compareNoDiffs
+0.18s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_updateCycleDoseParams
+0.17s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_getHistoryByLocation
+0.17s call     armi/cases/tests/test_cases.py::TestArmiCase::test_independentVariables
+0.17s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_metaData_endSuccessfully
+0.16s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_metaDataEndFail
+0.15s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_setStateToDefault
+0.13s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_absPath
+0.13s call     armi/physics/neutronics/tests/test_crossSectionTable.py::TestCrossSectionTable::test_makeTable
+0.12s call     armi/bookkeeping/report/tests/test_report.py::TestReport::test_reactorSpecificReporting
+0.12s call     armi/cli/tests/test_runEntryPoint.py::TestCloneArmiRunCommandBatch::test_cloneArmiRunCommandBatchInvokeMedium
+0.12s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_fpApplication
+0.11s call     armi/operators/tests/test_operators.py::OperatorTests::test_setStateToDefault
+0.11s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_userPluginWithInterfaces
+0.11s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxUtils::test_calcReactionRates
+0.11s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_timeSeries
+0.11s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_createInterfacesDisabled
+0.11s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_createInterfaces
+0.11s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_mainOperate
+0.10s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshots::test_atEOL
+0.10s call     armi/cases/tests/test_cases.py::TestArmiCase::test_clone
+0.10s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelExplicitMC2Library::test_nuclideFlags
+0.10s call     armi/cli/tests/test_runEntryPoint.py::TestCloneArmiRunCommandBatch::test_cloneArmiRunCommandBatchInvokeShort
+0.10s call     armi/operators/tests/test_operators.py::OperatorTests::test_orderedInterfaces
+0.10s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_settingsModifier
+0.09s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxResultMapper::test_updateLoadpadDose
+0.09s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_writeToDB
+0.08s call     armi/utils/tests/test_reportPlotting.py::TestRadar::test_createPlotMetaData
+0.08s call     armi/physics/neutronics/tests/test_crossSectionTable.py::TestCrossSectionTable::test_isotopicDepletionInterface
+0.08s setup    armi/utils/tests/test_plotting.py::TestPlotting::test_plotAssemblyTypes
+0.08s call     armi/utils/tests/test_utils.py::TestGeneralUtils::test_classesInHierarchy
+0.08s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_userPluginOnProcessCoreLoading
+0.08s call     armi/operators/tests/test_operators.py::OperatorTests::test_addInterfaceSubclassCollision
+0.08s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterface::test_checkEnergyBalance
+0.08s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_timeNodeLoop_tightCoupling
+0.08s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterface::test_interaction
+0.08s call     armi/operators/tests/test_operators.py::OperatorTests::test_snapshotRequest
+0.08s call     armi/tests/test_plugins.py::TestPluginBasics::test_pluginsExposeInterfaces
+0.08s setup    armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecuters::test_calculateKeff
+0.08s call     armi/operators/tests/test_operators.py::OperatorTests::test_loadStateError
+0.08s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_paramSweepConverter
+0.08s call     armi/operators/tests/test_operators.py::OperatorTests::test_getActiveInterfaces
+0.08s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecutersNonUniform::test_calculateKeff
+0.08s call     armi/operators/tests/test_operators.py::OperatorTests::test_operatorData
+0.08s call     armi/reactor/converters/parameterSweeps/tests/test_paramSweepConverters.py::TestParamSweepConverters::test_customModifier
+0.07s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_multipleFiles
+0.07s call     armi/cli/tests/test_runEntryPoint.py::TestInitializationEntryPoints::test_entryPointInitialization
+0.07s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_wildcardFile
+0.07s call     armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_compareDatabaseDuplicate
+0.07s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_grabLocalCommitHash
+0.06s call     armi/bookkeeping/visualization/tests/test_vis.py::TestVisDump::test_dumpReactorXdmf
+0.06s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_loadCS
+0.06s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_clone
+0.06s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_dependenciesWithObscurePaths
+0.06s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_loadBlueprints
+0.06s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_getReferrers
+0.06s call     armi/cli/tests/test_runEntryPoint.py::TestRunSuiteCommand::test_runSuiteCommandBasics
+0.06s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseWriter::test_writeSystemAttributes
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_getH5File
+0.05s call     armi/cli/tests/test_runEntryPoint.py::TestModifyCaseSettingsCommand::test_modifyCaseSettingsCommandInvoke
+0.05s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_interactBOL
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_open
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_computeParents
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_replaceNones
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_deleting
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_fileName
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_auxData
+0.05s call     armi/bookkeeping/db/tests/test_database3.py::TestDatabase3Smaller::test_readInputsFromDB
+0.05s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_relPath
+0.05s call     armi/tests/test_mpiActions.py::MpiIterTests::test_runActionsDistributeStateAction
+0.05s call     armi/tests/test_mpiActions.py::MpiIterTests::test_runActionsDistributionAction
+0.05s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_nonFilePath
+0.05s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_distributable
+0.05s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestDatabaseInterface::test_interactEveryNodeReturn
+0.04s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_checkForDuplicateObjectsOnArmiModel
+0.04s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_writeReports
+0.04s call     armi/bookkeeping/report/tests/test_report.py::TestReport::test_writeWelcomeHeaders
+0.04s call     armi/bookkeeping/tests/test_memoryProfiler.py::TestMemoryProfiler::test_profileMemoryUsageAction
+0.04s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactEveryNode
+0.04s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportLogs
+0.04s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactEOC
+0.04s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_neutronicsPlotFunctions
+0.04s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_reportBasics
+0.04s setup    armi/bookkeeping/visualization/tests/test_vis.py::TestVisDump::test_cartesianMesh
+0.04s call     armi/cli/tests/test_runEntryPoint.py::TestCloneArmiRunCommandBatch::test_cloneArmiRunCommandBatchBasics
+0.04s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInputsHelper
+0.04s call     armi/bookkeeping/report/tests/test_report.py::TestReportInterface::test_interactBOC
+0.04s call     armi/bookkeeping/report/tests/test_newReport.py::TestReportContentCreation::test_tableCreation
+0.03s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_getAllFissionProductNames
+0.03s call     armi/physics/neutronics/fissionProductModel/tests/test_fissionProductModel.py::TestFissionProductModelLumpedFissionProducts::test_loadGlobalLFPsFromFile
+0.03s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_copyInterfaceInputs_singleFile
+0.03s call     armi/cli/tests/test_runEntryPoint.py::TestCheckInputEntryPoint::test_checkInputEntryPointInvoke
+0.03s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentTemperatureNoMass
+0.03s call     armi/cli/tests/test_runEntryPoint.py::TestRunEntryPoint::test_runEntryPointBasics
+0.03s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_dependencyFromExplictRepeatShuffles
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_createRepresentativeBlockDissimilar
+0.02s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_registerRepeatedUserPlugins
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_startCoverage
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_startProfiling
+0.02s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_WriteDB
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_createRepresentativeBlock
+0.02s call     armi/tests/test_user_plugins.py::TestUserPlugins::test_registerUserPluginsFromSettings
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getAvailabilityFactors
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleNames
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getBurnSteps
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCumulativeNodeNum
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleNodeFromCumulativeNode
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleLengths
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getCycleNodeFromCumulativeStep
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getStepLengths
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getPowerFractions
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getMaxBurnSteps
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getBurnSteps
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getPreviousTimeNode
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getCycleLengths
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getMaxBurnSteps
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getStepLengths
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentNumberDensities
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_getNodesPerCycle
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentTemperature
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getAvailabilityFactors
+0.02s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestComponentAveraging::test_getAverageComponentTemperatureVariedWeights
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getPowerFractions
+0.02s call     armi/utils/tests/test_utils.py::CyclesSettingsTests::test_hasBurnup
+0.02s call     armi/operators/tests/test_operatorSnapshots.py::TestOperatorSnapshotsSettings::test_getOperatorClassFromSettings
+0.02s call     armi/operators/tests/test_operators.py::CyclesSettingsTests::test_getCycleNames
+0.02s call     armi/bookkeeping/db/tests/test_databaseInterface.py::TestBadName::test_badDBName
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_endCoverage
+0.02s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_NoWriteDB
+0.02s call     armi/cases/tests/test_cases.py::TestArmiCase::test_endProfiling
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_checkInputs
+0.01s call     armi/cli/tests/test_runEntryPoint.py::TestModifyCaseSettingsCommand::test_modifyCaseSettingsCommandBasics
+0.01s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionAverage::test_checkBlockSimilarity
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_buildCommand
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_explicitDependency
+0.01s call     armi/cases/tests/test_cases.py::TestCaseSuiteDependencies::test_titleSetterGetter
+0.01s call     armi/physics/neutronics/tests/test_crossSectionManager.py::TestBlockCollectionFluxWeightedAverage::test_createRepresentativeBlock
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_notConverged
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_skip
+0.01s call     armi/operators/tests/test_operators.py::TestCreateOperator::test_createOperator
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_computeTightCouplingConvergence
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_couplingIsActive
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_performTightCoupling_Inactive
+0.01s call     armi/operators/tests/test_operators.py::TestTightCoupling::test_getStepLengths
+0.01s call     armi/bookkeeping/report/tests/test_report.py::TestReportingUtils::test_getSystemInfo
+0.01s call     armi/physics/neutronics/globalFlux/tests/test_globalFluxInterface.py::TestGlobalFluxInterfaceWithExecutersNonUniform::test_executerInteractionNonUniformAssems
+0.01s call     armi/bookkeeping/report/tests/test_report.py::TestReport::test_setData
+0.01s call     armi/bookkeeping/db/tests/test_comparedb3.py::TestCompareDB3::test_diffSpecialData
+0.01s call     armi/utils/tests/test_utils.py::TestGeneralUtils::test_safeCopy
+0.01s call     armi/cases/tests/test_cases.py::TestCopyInterfaceInputs::test_failOnDuplicateSetting
+
+(696 durations < 0.005s hidden.  Use -vv to show these durations.)
+========== 297 passed, 10 skipped, 3314 warnings in 76.64s (0:01:16) ===========
+Energy consumption in joules: 1346.7762908935547 for 80.24167 sec of execution.
+
+
+========================================
+Completed after version at: di  4 nov 2025 14:44:39 CET
+========================================
+
+========================================
+All tests completed at: di  4 nov 2025 14:44:39 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/armi_1737//test_results.log
+========================================

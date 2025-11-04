@@ -1,0 +1,34 @@
+========================================
+Starting test runs for project: gyrinx_914
+Iterations: 1
+Test command: docker compose exec -T app pytest gyrinx/content/tests/test_default_assignment.py gyrinx/content/tests/test_equipment_list.py gyrinx/content/tests/test_migrations.py gyrinx/content/tests/test_policy.py gyrinx/content/tests/test_weapons.py gyrinx/core/tests/test_assignment_deletion_cost.py gyrinx/core/tests/test_captured_fighters.py gyrinx/core/tests/test_models_core.py --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/gyrinx_914/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Starting Docker containers...
+ Network gyrinx_default  Creating
+ Network gyrinx_default  Created
+ Volume gyrinx_pgadmin-data  Creating
+ Volume gyrinx_pgadmin-data  Created
+ Volume gyrinx_postgres_data  Creating
+ Volume gyrinx_postgres_data  Created
+ Container postgres  Creating
+ Container postgres  Created
+ Container pgadmin  Creating
+ Container gyrinx-app-1  Creating
+ Container pgadmin  Created
+ Container gyrinx-app-1  Created
+ Container postgres  Starting
+ Container postgres  Started
+ Container postgres  Waiting
+ Container postgres  Waiting
+ Container postgres  Healthy
+ Container postgres  Healthy
+ Container gyrinx-app-1  Starting
+ Container pgadmin  Starting
+ Container pgadmin  Started
+ Container gyrinx-app-1  Started
+Waiting 30s for containers to be ready...

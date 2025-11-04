@@ -1,0 +1,265 @@
+========================================
+Starting test runs for project: sentry-python_4822
+Iterations: 1
+Test command: python -m pytest tests/integrations/spark/test_spark.py --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 1)) (25.3)
+Requirement already satisfied: pytest>=6.0.0 in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 2)) (8.4.2)
+Requirement already satisfied: tomli in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 3)) (2.3.0)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 4)) (7.0.0)
+Requirement already satisfied: pytest-forked in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 5)) (1.6.0)
+Requirement already satisfied: pytest-localserver in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 6)) (0.9.0.post0)
+Requirement already satisfied: pytest-watch in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 7)) (4.2.0)
+Requirement already satisfied: jsonschema in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 8)) (4.25.1)
+Requirement already satisfied: executing in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 9)) (2.2.1)
+Requirement already satisfied: asttokens in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 10)) (3.0.0)
+Requirement already satisfied: responses in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 11)) (0.25.8)
+Requirement already satisfied: pysocks in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 12)) (1.7.1)
+Requirement already satisfied: socksio in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 13)) (1.0.0)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 15)) (59.6.0)
+Requirement already satisfied: Brotli in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 16)) (1.1.0)
+Requirement already satisfied: docker in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 17)) (7.1.0)
+Requirement already satisfied: httpcore[http2] in ./.venv/lib/python3.10/site-packages (from -r requirements-testing.txt (line 14)) (1.0.9)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->-r requirements-testing.txt (line 2)) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->-r requirements-testing.txt (line 2)) (2.3.0)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->-r requirements-testing.txt (line 2)) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->-r requirements-testing.txt (line 2)) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->-r requirements-testing.txt (line 2)) (2.19.2)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov->-r requirements-testing.txt (line 4)) (7.11.0)
+Requirement already satisfied: py in ./.venv/lib/python3.10/site-packages (from pytest-forked->-r requirements-testing.txt (line 5)) (1.11.0)
+Requirement already satisfied: werkzeug>=0.10 in ./.venv/lib/python3.10/site-packages (from pytest-localserver->-r requirements-testing.txt (line 6)) (3.1.3)
+Requirement already satisfied: docopt>=0.4.0 in ./.venv/lib/python3.10/site-packages (from pytest-watch->-r requirements-testing.txt (line 7)) (0.6.2)
+Requirement already satisfied: colorama>=0.3.3 in ./.venv/lib/python3.10/site-packages (from pytest-watch->-r requirements-testing.txt (line 7)) (0.4.6)
+Requirement already satisfied: watchdog>=0.6.0 in ./.venv/lib/python3.10/site-packages (from pytest-watch->-r requirements-testing.txt (line 7)) (6.0.0)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema->-r requirements-testing.txt (line 8)) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.10/site-packages (from jsonschema->-r requirements-testing.txt (line 8)) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib/python3.10/site-packages (from jsonschema->-r requirements-testing.txt (line 8)) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.10/site-packages (from jsonschema->-r requirements-testing.txt (line 8)) (0.28.0)
+Requirement already satisfied: requests<3.0,>=2.30.0 in ./.venv/lib/python3.10/site-packages (from responses->-r requirements-testing.txt (line 11)) (2.32.5)
+Requirement already satisfied: urllib3<3.0,>=1.25.10 in ./.venv/lib/python3.10/site-packages (from responses->-r requirements-testing.txt (line 11)) (2.5.0)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (from responses->-r requirements-testing.txt (line 11)) (6.0.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests<3.0,>=2.30.0->responses->-r requirements-testing.txt (line 11)) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests<3.0,>=2.30.0->responses->-r requirements-testing.txt (line 11)) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests<3.0,>=2.30.0->responses->-r requirements-testing.txt (line 11)) (2025.10.5)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.10/site-packages (from httpcore[http2]->-r requirements-testing.txt (line 14)) (0.16.0)
+Requirement already satisfied: h2<5,>=3 in ./.venv/lib/python3.10/site-packages (from httpcore[http2]->-r requirements-testing.txt (line 14)) (4.3.0)
+Requirement already satisfied: hyperframe<7,>=6.1 in ./.venv/lib/python3.10/site-packages (from h2<5,>=3->httpcore[http2]->-r requirements-testing.txt (line 14)) (6.1.0)
+Requirement already satisfied: hpack<5,>=4.1 in ./.venv/lib/python3.10/site-packages (from h2<5,>=3->httpcore[http2]->-r requirements-testing.txt (line 14)) (4.1.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest>=6.0.0->-r requirements-testing.txt (line 2)) (4.15.0)
+Requirement already satisfied: MarkupSafe>=2.1.1 in ./.venv/lib/python3.10/site-packages (from werkzeug>=0.10->pytest-localserver->-r requirements-testing.txt (line 6)) (3.0.3)
+Requirement already satisfied: pyspark in ./.venv/lib/python3.10/site-packages (4.0.1)
+Requirement already satisfied: py4j==0.10.9.9 in ./.venv/lib/python3.10/site-packages (from pyspark) (0.10.9.9)
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: urllib3>=1.26.11 in ./.venv/lib/python3.10/site-packages (from sentry-sdk==2.38.0) (2.5.0)
+Requirement already satisfied: certifi in ./.venv/lib/python3.10/site-packages (from sentry-sdk==2.38.0) (2025.10.5)
+Building wheels for collected packages: sentry-sdk
+  Building editable for sentry-sdk (pyproject.toml): started
+  Building editable for sentry-sdk (pyproject.toml): finished with status 'done'
+  Created wheel for sentry-sdk: filename=sentry_sdk-2.38.0-0.editable-py2.py3-none-any.whl size=7414 sha256=dae55fe196cd61e8e129dc5e2d1ad8c1b6f97589dcc3ed15a936f1b708ffebfd
+  Stored in directory: /tmp/pip-ephem-wheel-cache-rw7217sl/wheels/ad/58/fe/41a650ee9084974e81d2969fe00675dd48d214a3963586019b
+Successfully built sentry-sdk
+Installing collected packages: sentry-sdk
+  Attempting uninstall: sentry-sdk
+    Found existing installation: sentry-sdk 2.38.0
+    Uninstalling sentry-sdk-2.38.0:
+      Successfully uninstalled sentry-sdk-2.38.0
+Successfully installed sentry-sdk-2.38.0
+
+=========================================
+Test run 1/1 for before
+Time: di  4 nov 2025 16:39:35 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before
+configfile: pyproject.toml
+plugins: forked-1.6.0, localserver-0.9.0.post0, cov-7.0.0
+collecting ... collected 13 items
+
+tests/integrations/spark/test_spark.py::test_set_app_properties Error: LinkageError occurred while loading main class org.apache.spark.launcher.Main
+	java.lang.UnsupportedClassVersionError: org/apache/spark/launcher/Main has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+/home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.venv/lib/python3.10/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript
+FAILED
+tests/integrations/spark/test_spark.py::test_set_app_properties ERROR
+tests/integrations/spark/test_spark.py::test_start_sentry_listener Error: LinkageError occurred while loading main class org.apache.spark.launcher.Main
+	java.lang.UnsupportedClassVersionError: org/apache/spark/launcher/Main has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+/home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.venv/lib/python3.10/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript
+FAILED
+tests/integrations/spark/test_spark.py::test_start_sentry_listener ERROR
+tests/integrations/spark/test_spark.py::test_initialize_spark_integration_before_spark_context_init Error: LinkageError occurred while loading main class org.apache.spark.launcher.Main
+	java.lang.UnsupportedClassVersionError: org/apache/spark/launcher/Main has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+/home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.venv/lib/python3.10/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript
+FAILED
+tests/integrations/spark/test_spark.py::test_initialize_spark_integration_before_spark_context_init ERROR
+tests/integrations/spark/test_spark.py::test_initialize_spark_integration_after_spark_context_init Error: LinkageError occurred while loading main class org.apache.spark.launcher.Main
+	java.lang.UnsupportedClassVersionError: org/apache/spark/launcher/Main has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+/home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.venv/lib/python3.10/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript
+FAILED
+tests/integrations/spark/test_spark.py::test_initialize_spark_integration_after_spark_context_init ERROR
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_start PASSED
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobSucceeded-info] PASSED
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobFailed-warning] PASSED
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted PASSED
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id PASSED
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id_or_number PASSED
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_success PASSED
+tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_failure PASSED
+tests/integrations/spark/test_spark.py::test_spark_worker PASSED
+
+==================================== ERRORS ====================================
+_________________ ERROR at teardown of test_set_app_properties _________________
+tests/integrations/spark/test_spark.py:35: in create_spark_context
+    SparkContext._active_spark_context.stop()
+E   AttributeError: 'NoneType' object has no attribute 'stop'
+_______________ ERROR at teardown of test_start_sentry_listener ________________
+tests/integrations/spark/test_spark.py:35: in create_spark_context
+    SparkContext._active_spark_context.stop()
+E   AttributeError: 'NoneType' object has no attribute 'stop'
+_ ERROR at teardown of test_initialize_spark_integration_before_spark_context_init _
+tests/integrations/spark/test_spark.py:35: in create_spark_context
+    SparkContext._active_spark_context.stop()
+E   AttributeError: 'NoneType' object has no attribute 'stop'
+_ ERROR at teardown of test_initialize_spark_integration_after_spark_context_init _
+tests/integrations/spark/test_spark.py:35: in create_spark_context
+    SparkContext._active_spark_context.stop()
+E   AttributeError: 'NoneType' object has no attribute 'stop'
+=================================== FAILURES ===================================
+___________________________ test_set_app_properties ____________________________
+tests/integrations/spark/test_spark.py:39: in test_set_app_properties
+    spark_context = create_spark_context()
+tests/integrations/spark/test_spark.py:34: in <lambda>
+    yield lambda: SparkContext(conf=conf, appName="Testing123")
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:205: in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:444: in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+.venv/lib/python3.10/site-packages/pyspark/java_gateway.py:111: in launch_gateway
+    raise PySparkRuntimeError(
+E   pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+__________________________ test_start_sentry_listener __________________________
+tests/integrations/spark/test_spark.py:51: in test_start_sentry_listener
+    spark_context = create_spark_context()
+tests/integrations/spark/test_spark.py:34: in <lambda>
+    yield lambda: SparkContext(conf=conf, appName="Testing123")
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:205: in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:444: in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+.venv/lib/python3.10/site-packages/pyspark/java_gateway.py:111: in launch_gateway
+    raise PySparkRuntimeError(
+E   pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+_________ test_initialize_spark_integration_before_spark_context_init __________
+tests/integrations/spark/test_spark.py:67: in test_initialize_spark_integration_before_spark_context_init
+    create_spark_context()
+tests/integrations/spark/test_spark.py:34: in <lambda>
+    yield lambda: SparkContext(conf=conf, appName="Testing123")
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:205: in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:444: in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+.venv/lib/python3.10/site-packages/pyspark/java_gateway.py:111: in launch_gateway
+    raise PySparkRuntimeError(
+E   pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+__________ test_initialize_spark_integration_after_spark_context_init __________
+tests/integrations/spark/test_spark.py:78: in test_initialize_spark_integration_after_spark_context_init
+    create_spark_context()
+tests/integrations/spark/test_spark.py:34: in <lambda>
+    yield lambda: SparkContext(conf=conf, appName="Testing123")
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:205: in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+.venv/lib/python3.10/site-packages/pyspark/core/context.py:444: in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+.venv/lib/python3.10/site-packages/pyspark/java_gateway.py:111: in launch_gateway
+    raise PySparkRuntimeError(
+E   pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/_pytest/config/__init__.py:1474
+  /home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.venv/lib/python3.10/site-packages/_pytest/config/__init__.py:1474: PytestConfigWarning: Unknown config option: asyncio_default_fixture_loop_scope
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+.venv/lib/python3.10/site-packages/_pytest/config/__init__.py:1474
+  /home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.venv/lib/python3.10/site-packages/_pytest/config/__init__.py:1474: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/xutong/SpeedUpSlowTest/versions/sentry-python_4822/before/.junitxml -
+============================== slowest durations ===============================
+0.41s call     tests/integrations/spark/test_spark.py::test_set_app_properties
+0.24s call     tests/integrations/spark/test_spark.py::test_initialize_spark_integration_before_spark_context_init
+0.21s call     tests/integrations/spark/test_spark.py::test_initialize_spark_integration_after_spark_context_init
+0.21s call     tests/integrations/spark/test_spark.py::test_start_sentry_listener
+0.07s call     tests/integrations/spark/test_spark.py::test_spark_worker
+0.00s setup    tests/integrations/spark/test_spark.py::test_set_app_properties
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_start
+0.00s setup    tests/integrations/spark/test_spark.py::test_initialize_spark_integration_before_spark_context_init
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobSucceeded-info]
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_failure
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id_or_number
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_success
+0.00s setup    tests/integrations/spark/test_spark.py::test_initialize_spark_integration_after_spark_context_init
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobFailed-warning]
+0.00s call     tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id
+0.00s setup    tests/integrations/spark/test_spark.py::test_spark_worker
+0.00s setup    tests/integrations/spark/test_spark.py::test_start_sentry_listener
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_start
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobSucceeded-info]
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobFailed-warning]
+0.00s teardown tests/integrations/spark/test_spark.py::test_spark_worker
+0.00s teardown tests/integrations/spark/test_spark.py::test_initialize_spark_integration_after_spark_context_init
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_success
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_failure
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id
+0.00s teardown tests/integrations/spark/test_spark.py::test_set_app_properties
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted
+0.00s teardown tests/integrations/spark/test_spark.py::test_start_sentry_listener
+0.00s setup    tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id_or_number
+0.00s teardown tests/integrations/spark/test_spark.py::test_initialize_spark_integration_before_spark_context_init
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobFailed-warning]
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_start
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_job_end[JobSucceeded-info]
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_failure
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_completed_success
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id_or_number
+0.00s teardown tests/integrations/spark/test_spark.py::test_sentry_listener_on_stage_submitted_no_attempt_id
+=========================== short test summary info ============================
+FAILED tests/integrations/spark/test_spark.py::test_set_app_properties - pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+FAILED tests/integrations/spark/test_spark.py::test_start_sentry_listener - pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+FAILED tests/integrations/spark/test_spark.py::test_initialize_spark_integration_before_spark_context_init - pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+FAILED tests/integrations/spark/test_spark.py::test_initialize_spark_integration_after_spark_context_init - pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+ERROR tests/integrations/spark/test_spark.py::test_set_app_properties - AttributeError: 'NoneType' object has no attribute 'stop'
+ERROR tests/integrations/spark/test_spark.py::test_start_sentry_listener - AttributeError: 'NoneType' object has no attribute 'stop'
+ERROR tests/integrations/spark/test_spark.py::test_initialize_spark_integration_before_spark_context_init - AttributeError: 'NoneType' object has no attribute 'stop'
+ERROR tests/integrations/spark/test_spark.py::test_initialize_spark_integration_after_spark_context_init - AttributeError: 'NoneType' object has no attribute 'stop'
+============== 4 failed, 9 passed, 2 warnings, 4 errors in 1.50s ===============
+Energy consumption in joules: 29.34735107421875 for 2.203661 sec of execution.
+
+
+========================================
+Completed before version at: di  4 nov 2025 16:39:38 CET
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Activating virtual environment...
+Running setup command...

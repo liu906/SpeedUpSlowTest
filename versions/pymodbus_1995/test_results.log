@@ -1,0 +1,66 @@
+========================================
+Starting test runs for project: pymodbus_1995
+Iterations: 1
+Test command: python -m pytest test/sub_server/test_simulator.py --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/pymodbus_1995/test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
+Requirement already satisfied: pytest-asyncio in ./.venv/lib/python3.10/site-packages (1.2.0)
+Requirement already satisfied: pytest-timeout in ./.venv/lib/python3.10/site-packages (2.4.0)
+Requirement already satisfied: pytest-xdist in ./.venv/lib/python3.10/site-packages (3.8.0)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (7.0.0)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: backports-asyncio-runner<2,>=1.1 in ./.venv/lib/python3.10/site-packages (from pytest-asyncio) (1.2.0)
+Requirement already satisfied: typing-extensions>=4.12 in ./.venv/lib/python3.10/site-packages (from pytest-asyncio) (4.15.0)
+Requirement already satisfied: execnet>=2.1 in ./.venv/lib/python3.10/site-packages (from pytest-xdist) (2.1.1)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.11.0)
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/pymodbus_1995/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pymodbus
+  Building editable for pymodbus (pyproject.toml): started
+  Building editable for pymodbus (pyproject.toml): finished with status 'done'
+  Created wheel for pymodbus: filename=pymodbus-3.7.0.dev0-0.editable-py3-none-any.whl size=10810 sha256=2e03aa448ff6604c57507d1d216ccdc78f59445bbe132fcaa75efefa6856e5c7
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ppzz8k61/wheels/80/4b/41/0843ee2eb3c9133ceb5e1c73d0a45c11382acd607ff838d621
+Successfully built pymodbus
+Installing collected packages: pymodbus
+  Attempting uninstall: pymodbus
+    Found existing installation: pymodbus 3.7.0.dev0
+    Uninstalling pymodbus-3.7.0.dev0:
+      Successfully uninstalled pymodbus-3.7.0.dev0
+Successfully installed pymodbus-3.7.0.dev0
+
+=========================================
+Test run 1/1 for before
+Time: di  4 nov 2025 16:39:06 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pymodbus_1995/before
+configfile: pyproject.toml
+plugins: timeout-2.4.0, xdist-3.8.0, cov-7.0.0, asyncio-1.2.0
+timeout: 120.0s
+timeout method: signal
+timeout func_only: False
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+created: 16/16 workers
+16 workers [37 items]
+
+...............................
