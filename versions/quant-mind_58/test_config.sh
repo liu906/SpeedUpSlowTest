@@ -15,7 +15,7 @@ VENV_PATH=".venv"
 # Use uv pip install -e . to install in editable mode with all dependencies
 # IMPORTANT: Set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 to work around tiktoken/PyO3 compatibility issue
 # tiktoken v0.7.0 uses PyO3 v0.20.3 which only supports Python <=3.12
-SETUP_COMMAND="export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 && uv pip install -e ."
+SETUP_COMMAND=" pip install --upgrade pip && export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 && uv pip install -e ."
 
 # Flag to indicate this IS a uv-based project
 USE_UV="true"

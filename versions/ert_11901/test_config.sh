@@ -14,7 +14,7 @@ VENV_PATH=".venv"
 # For uv projects, we need to sync dependencies which creates and manages the venv
 # The git submodule is required for test data
 # IMPORTANT: Set SETUPTOOLS_SCM_PRETEND_VERSION_FOR_ERT to avoid git metadata requirement
-SETUP_COMMAND="git init 2>/dev/null || true && export SETUPTOOLS_SCM_PRETEND_VERSION_FOR_ERT=11901.0.0 && uv sync --all-extras && git submodule update --init --recursive"
+SETUP_COMMAND="git init 2>/dev/null || true && export SETUPTOOLS_SCM_PRETEND_VERSION_FOR_ERT=11901.0.0 && uv sync --all-extras && git submodule update --init --recursive && uv pip install PyQt6"
 
 # Flag to indicate this is a uv-based project
 # When set to "true", the generic script should skip pip installation

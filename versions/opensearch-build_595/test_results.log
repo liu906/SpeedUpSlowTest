@@ -1,8 +1,8 @@
 ========================================
 Starting test runs for project: opensearch-build_595
-Iterations: 2
+Iterations: 40
 Test command: bash -c 'cd bundle-workflow && PYTHONPATH=src pytest -v --durations=0 tests/test_integ_workflow/integ_test/test_local_test_cluster.py'
-Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/test_results.log
+Log file: /home/xutong/versions/opensearch-build_595/test_results.log
 ========================================
 
 ========================================
@@ -14,8 +14,8 @@ Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3
 Requirement already satisfied: pyyaml>=6.0 in ./.venv/lib/python3.10/site-packages (6.0.3)
 Requirement already satisfied: requests>=2.26 in ./.venv/lib/python3.10/site-packages (2.32.5)
 Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
-Requirement already satisfied: boto3>=1.18 in ./.venv/lib/python3.10/site-packages (1.40.61)
-Requirement already satisfied: botocore>=1.21 in ./.venv/lib/python3.10/site-packages (1.40.61)
+Requirement already satisfied: boto3>=1.18 in ./.venv/lib/python3.10/site-packages (1.40.62)
+Requirement already satisfied: botocore>=1.21 in ./.venv/lib/python3.10/site-packages (1.40.62)
 Requirement already satisfied: coverage>=4.5 in ./.venv/lib/python3.10/site-packages (7.11.0)
 Requirement already satisfied: pytest-cov>=2.10 in ./.venv/lib/python3.10/site-packages (7.0.0)
 Requirement already satisfied: jproperties>=2.1 in ./.venv/lib/python3.10/site-packages (2.1.2)
@@ -40,12 +40,12 @@ Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages 
 Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
 
 =========================================
-Test run 1/2 for before
-Time: Wed Oct 29 13:17:43 CET 2025
+Test run 1/40 for before
+Time: vr 31 okt 2025  0:22:31 CET
 =========================================
 ============================= test session starts ==============================
-platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
-rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/before/bundle-workflow
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
 configfile: pytest.ini
 plugins: cov-7.0.0
 collected 7 items
@@ -53,22 +53,27 @@ collected 7 items
 tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
 
 ============================== slowest durations ===============================
-100.05s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
-0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
 
-(19 durations < 0.005s hidden.  Use -vv to show these durations.)
-======================== 7 passed in 100.67s (0:01:40) =========================
-Energy consumption in joules: 1402.8068572154054 for 101.52846 sec of execution.
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.30s (0:01:40) =========================
+Energy consumption in joules: 205.7518310546875 for 100.6388 sec of execution.
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 2/2 for before
-Time: Wed Oct 29 13:19:30 CET 2025
+Test run 2/40 for before
+Time: vr 31 okt 2025  0:24:17 CET
 =========================================
 ============================= test session starts ==============================
-platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
-rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/before/bundle-workflow
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
 configfile: pytest.ini
 plugins: cov-7.0.0
 collected 7 items
@@ -76,16 +81,1084 @@ collected 7 items
 tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
 
 ============================== slowest durations ===============================
-100.05s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
-0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
 
-(19 durations < 0.005s hidden.  Use -vv to show these durations.)
-======================== 7 passed in 100.19s (0:01:40) =========================
-Energy consumption in joules: 1202.534767171383 for 100.57729 sec of execution.
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for before
+Time: vr 31 okt 2025  0:26:03 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 204.50267028808594 for 100.43404 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for before
+Time: vr 31 okt 2025  0:27:49 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 203.26055908203125 for 100.63382 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for before
+Time: vr 31 okt 2025  0:29:35 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 201.5569305419922 for 100.43752 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for before
+Time: vr 31 okt 2025  0:31:21 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 202.1459503173828 for 100.43455 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for before
+Time: vr 31 okt 2025  0:33:06 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 201.38563537597656 for 100.45047 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for before
+Time: vr 31 okt 2025  0:34:52 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 202.5621795654297 for 100.612206 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for before
+Time: vr 31 okt 2025  0:36:38 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 203.1233673095703 for 100.63355 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: vr 31 okt 2025  0:38:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 202.61431884765625 for 100.43985 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for before
+Time: vr 31 okt 2025  0:40:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 202.8904266357422 for 100.45304 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: vr 31 okt 2025  0:41:55 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 201.06155395507813 for 100.44899 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: vr 31 okt 2025  0:43:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.1978759765625 for 100.450645 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for before
+Time: vr 31 okt 2025  0:45:27 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 201.5354766845703 for 100.45054 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for before
+Time: vr 31 okt 2025  0:47:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 202.84414672851563 for 100.63299 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for before
+Time: vr 31 okt 2025  0:48:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.1443634033203 for 100.43722 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for before
+Time: vr 31 okt 2025  0:50:44 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 202.113525390625 for 100.42772 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for before
+Time: vr 31 okt 2025  0:52:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.86801147460938 for 100.446815 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for before
+Time: vr 31 okt 2025  0:54:16 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.5861053466797 for 100.4578 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for before
+Time: vr 31 okt 2025  0:56:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 202.90748596191406 for 100.453804 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for before
+Time: vr 31 okt 2025  0:57:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.8853759765625 for 100.46131 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for before
+Time: vr 31 okt 2025  0:59:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 201.32415771484375 for 100.46099 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for before
+Time: vr 31 okt 2025  1:01:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.82302856445313 for 100.455124 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for before
+Time: vr 31 okt 2025  1:03:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.5904083251953 for 100.45621 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for before
+Time: vr 31 okt 2025  1:04:50 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 201.25318908691406 for 100.45152 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for before
+Time: vr 31 okt 2025  1:06:36 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 202.25357055664063 for 100.45952 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for before
+Time: vr 31 okt 2025  1:08:21 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 204.8981475830078 for 100.45796 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for before
+Time: vr 31 okt 2025  1:10:07 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 201.8499298095703 for 100.45259 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for before
+Time: vr 31 okt 2025  1:11:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 202.29080200195313 for 100.45566 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for before
+Time: vr 31 okt 2025  1:13:39 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.3129425048828 for 100.450356 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for before
+Time: vr 31 okt 2025  1:15:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.81256103515625 for 100.44672 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for before
+Time: vr 31 okt 2025  1:17:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 201.65478515625 for 100.43865 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for before
+Time: vr 31 okt 2025  1:18:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.75169372558594 for 100.441696 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for before
+Time: vr 31 okt 2025  1:20:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.27s (0:01:40) =========================
+Energy consumption in joules: 202.04232788085938 for 100.4378 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for before
+Time: vr 31 okt 2025  1:22:27 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 202.13436889648438 for 100.45025 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for before
+Time: vr 31 okt 2025  1:24:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 211.9759521484375 for 100.452065 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for before
+Time: vr 31 okt 2025  1:25:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 202.3860321044922 for 100.42633 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for before
+Time: vr 31 okt 2025  1:27:45 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 201.21058654785156 for 100.45307 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for before
+Time: vr 31 okt 2025  1:29:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.07135009765625 for 100.45408 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for before
+Time: vr 31 okt 2025  1:31:16 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 201.2367706298828 for 100.44913 sec of execution.
 
 
 ========================================
-Completed before version at: Wed Oct 29 13:21:11 CET 2025
+Completed before version at: vr 31 okt 2025  1:32:57 CET
 ========================================
 
 ========================================
@@ -97,8 +1170,8 @@ Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3
 Requirement already satisfied: pyyaml>=6.0 in ./.venv/lib/python3.10/site-packages (6.0.3)
 Requirement already satisfied: requests>=2.26 in ./.venv/lib/python3.10/site-packages (2.32.5)
 Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
-Requirement already satisfied: boto3>=1.18 in ./.venv/lib/python3.10/site-packages (1.40.61)
-Requirement already satisfied: botocore>=1.21 in ./.venv/lib/python3.10/site-packages (1.40.61)
+Requirement already satisfied: boto3>=1.18 in ./.venv/lib/python3.10/site-packages (1.40.62)
+Requirement already satisfied: botocore>=1.21 in ./.venv/lib/python3.10/site-packages (1.40.62)
 Requirement already satisfied: coverage>=4.5 in ./.venv/lib/python3.10/site-packages (7.11.0)
 Requirement already satisfied: pytest-cov>=2.10 in ./.venv/lib/python3.10/site-packages (7.0.0)
 Requirement already satisfied: jproperties>=2.1 in ./.venv/lib/python3.10/site-packages (2.1.2)
@@ -123,12 +1196,12 @@ Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages 
 Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
 
 =========================================
-Test run 1/2 for after
-Time: Wed Oct 29 13:21:30 CET 2025
+Test run 1/40 for after
+Time: vr 31 okt 2025  1:33:07 CET
 =========================================
 ============================= test session starts ==============================
-platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
-rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/after/bundle-workflow
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
 configfile: pytest.ini
 plugins: cov-7.0.0
 collected 7 items
@@ -139,20 +1212,24 @@ tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
 0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
 
-(18 durations < 0.005s hidden.  Use -vv to show these durations.)
-============================== 7 passed in 1.32s ===============================
-Energy consumption in joules: 23.326901285171505 for 2.061733 sec of execution.
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.21s ===============================
+Energy consumption in joules: 2.807861328125 for 0.40322846 sec of execution.
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 2/2 for after
-Time: Wed Oct 29 13:21:38 CET 2025
+Test run 2/40 for after
+Time: vr 31 okt 2025  1:33:13 CET
 =========================================
 ============================= test session starts ==============================
-platform darwin -- Python 3.10.7, pytest-8.4.2, pluggy-1.6.0
-rootdir: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/after/bundle-workflow
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
 configfile: pytest.ini
 plugins: cov-7.0.0
 collected 7 items
@@ -161,17 +1238,1087 @@ tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
 
 ============================== slowest durations ===============================
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
 
-(20 durations < 0.005s hidden.  Use -vv to show these durations.)
-============================== 7 passed in 0.14s ===============================
-Energy consumption in joules: 3.2714160394668577 for 0.42632684 sec of execution.
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.0413360595703125 for 0.4029107 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for after
+Time: vr 31 okt 2025  1:33:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.0835723876953125 for 0.40331727 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for after
+Time: vr 31 okt 2025  1:33:25 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.188690185546875 for 0.40296325 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for after
+Time: vr 31 okt 2025  1:33:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.244476318359375 for 0.40346497 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for after
+Time: vr 31 okt 2025  1:33:36 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.0694427490234375 for 0.4032506 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for after
+Time: vr 31 okt 2025  1:33:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.313995361328125 for 0.40318194 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for after
+Time: vr 31 okt 2025  1:33:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.2934417724609375 for 0.40331078 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for after
+Time: vr 31 okt 2025  1:33:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.109954833984375 for 0.40328053 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for after
+Time: vr 31 okt 2025  1:33:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1376953125 for 0.40280896 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for after
+Time: vr 31 okt 2025  1:34:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.211700439453125 for 0.40352976 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for after
+Time: vr 31 okt 2025  1:34:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.052764892578125 for 0.403488 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for after
+Time: vr 31 okt 2025  1:34:16 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.206817626953125 for 0.4030872 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for after
+Time: vr 31 okt 2025  1:34:21 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1700439453125 for 0.40336075 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for after
+Time: vr 31 okt 2025  1:34:27 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.225677490234375 for 0.40283543 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for after
+Time: vr 31 okt 2025  1:34:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.230682373046875 for 0.4028639 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for after
+Time: vr 31 okt 2025  1:34:39 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.17s ===============================
+Energy consumption in joules: 3.142120361328125 for 0.40382046 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for after
+Time: vr 31 okt 2025  1:34:44 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.157928466796875 for 0.40320227 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for after
+Time: vr 31 okt 2025  1:34:50 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.097747802734375 for 0.4028555 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for after
+Time: vr 31 okt 2025  1:34:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.15399169921875 for 0.40279624 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for after
+Time: vr 31 okt 2025  1:35:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1408843994140625 for 0.40371376 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for after
+Time: vr 31 okt 2025  1:35:07 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1203155517578125 for 0.4028919 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for after
+Time: vr 31 okt 2025  1:35:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1065826416015625 for 0.40334427 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for after
+Time: vr 31 okt 2025  1:35:18 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.136627197265625 for 0.40286902 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for after
+Time: vr 31 okt 2025  1:35:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1684112548828125 for 0.4037438 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for after
+Time: vr 31 okt 2025  1:35:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1549835205078125 for 0.40272227 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for after
+Time: vr 31 okt 2025  1:35:35 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.281951904296875 for 0.40267953 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for after
+Time: vr 31 okt 2025  1:35:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.07049560546875 for 0.40264493 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for after
+Time: vr 31 okt 2025  1:35:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.1313629150390625 for 0.40300754 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for after
+Time: vr 31 okt 2025  1:35:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.10931396484375 for 0.4029019 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for after
+Time: vr 31 okt 2025  1:35:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.11871337890625 for 0.40286085 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for after
+Time: vr 31 okt 2025  1:36:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.0891265869140625 for 0.40328887 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for after
+Time: vr 31 okt 2025  1:36:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.243316650390625 for 0.40425953 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for after
+Time: vr 31 okt 2025  1:36:15 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.161163330078125 for 0.4037375 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for after
+Time: vr 31 okt 2025  1:36:21 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.100128173828125 for 0.40325496 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for after
+Time: vr 31 okt 2025  1:36:27 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.167877197265625 for 0.40343922 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for after
+Time: vr 31 okt 2025  1:36:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.205413818359375 for 0.4026722 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for after
+Time: vr 31 okt 2025  1:36:38 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.2501220703125 for 0.40382716 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for after
+Time: vr 31 okt 2025  1:36:44 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 3.115142822265625 for 0.40334925 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for after
+Time: vr 31 okt 2025  1:36:49 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/versions/opensearch-build_595/after/bundle-workflow
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 2.984588623046875 for 0.4028557 sec of execution.
 
 
 ========================================
-Completed after version at: Wed Oct 29 13:21:39 CET 2025
+Completed after version at: vr 31 okt 2025  1:36:50 CET
 ========================================
 
 ========================================
-All tests completed at: Wed Oct 29 13:21:39 CET 2025
-Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/opensearch-build_595/test_results.log
+All tests completed at: vr 31 okt 2025  1:36:50 CET
+Log file: /home/xutong/versions/opensearch-build_595/test_results.log
 ========================================

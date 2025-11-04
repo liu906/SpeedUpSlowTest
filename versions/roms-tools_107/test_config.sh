@@ -9,7 +9,7 @@
 # All three are needed: NUMBA_NUM_THREADS, DASK_NUM_WORKERS, and OMP_NUM_THREADS
 # NOTE: Using 'env' command to properly pass environment variables to energibridge
 # Using 'python -m pytest' instead of 'pytest' to work with venv activation
-TEST_COMMAND="env NUMBA_NUM_THREADS=1 DASK_NUM_WORKERS=1 OMP_NUM_THREADS=1 python -m pytest roms_tools/tests/test_setup/test_boundary_forcing.py -v --durations=0"
+TEST_COMMAND="env NUMBA_NUM_THREADS=1 DASK_NUM_WORKERS=1 OMP_NUM_THREADS=1 python3.10 -m pytest roms_tools/tests/test_setup/test_boundary_forcing.py -v --durations=0"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"

@@ -1,0 +1,9 @@
+https://github.com/pymodbus-dev/pymodbus/pull/1995
+https://github.com/xarray-contrib/xarray-regrid/pull/45
+https://github.com/proxystore/proxystore/pull/173
+https://github.com/equinor/ert/pull/11206
+https://github.com/getsentry/sentry-python/pull/4822
+https://github.com/gyrinx-app/gyrinx/pull/914
+https://github.com/JeschkeLab/DeerLab/pull/141
+https://github.com/nilearn/nilearn/pull/5768
+https://github.com/grimme-lab/dxtb/pull/74

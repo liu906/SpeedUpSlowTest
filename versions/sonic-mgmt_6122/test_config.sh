@@ -30,9 +30,8 @@
 #   --relax --debug info --log-file /tmp/TestSflowCollector.log --socket-recv-size 16384
 #
 # Since this is a network integration test requiring special infrastructure,
-# we cannot run the actual test without a PTF testbed.
-# Instead, we'll use a placeholder that returns success and documents the limitation.
-TEST_COMMAND="echo 'SKIP: sFlow tests require PTF testbed (see test_config.sh for details)' && exit 0"
+# we'll create a placeholder command that documents the proper test execution
+TEST_COMMAND="echo 'ERROR: sFlow tests require PTF testbed environment. See test_config.sh for details.' && exit 1"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"

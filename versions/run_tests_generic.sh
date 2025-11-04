@@ -99,7 +99,7 @@ run_tests_for_version() {
         echo "----------------------------------------" | tee -a "$LOG_FILE"
 
         # Run the test command with energy measurement
-        energibridge --summary $TEST_COMMAND 2>&1 | tee -a "$LOG_FILE"
+        energibridge --summary --quiet $TEST_COMMAND 2>&1 | tee -a "$LOG_FILE"
 
         echo "Test run $i/$N completed" | tee -a "$LOG_FILE"
     done

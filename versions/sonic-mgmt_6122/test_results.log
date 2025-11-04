@@ -1,8 +1,8 @@
 ========================================
 Starting test runs for project: sonic-mgmt_6122
-Iterations: 2
+Iterations: 1
 Test command: echo 'ERROR: sFlow tests require PTF testbed environment. See test_config.sh for details.' && exit 1
-Log file: /Users/xutongliu/LLM/SlowTestOpt/versions/sonic-mgmt_6122/test_results.log
+Log file: /home/xutong/versions/sonic-mgmt_6122/test_results.log
 ========================================
 
 ========================================
@@ -14,20 +14,37 @@ Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3
 Note: Full PTF test environment requires Docker container setup
 
 =========================================
-Test run 1/2 for before
-Time: Wed Oct 29 22:41:01 CET 2025
+Test run 1/1 for before
+Time: vr 31 okt 2025 10:56:19 CET
 =========================================
 ERROR: sFlow tests require PTF testbed environment. See test_config.sh for details.
+Energy consumption in joules: 0.0110626220703125 for 0.20266613 sec of execution.
 
-Sleeping 5 seconds...
+
+========================================
+Completed before version at: vr 31 okt 2025 10:56:19 CET
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Note: Full PTF test environment requires Docker container setup
 
 =========================================
-Test run 2/2 for before
-Time: Wed Oct 29 22:41:07 CET 2025
+Test run 1/1 for after
+Time: vr 31 okt 2025 10:56:29 CET
 =========================================
 ERROR: sFlow tests require PTF testbed environment. See test_config.sh for details.
 
 
 ========================================
-Completed before version at: Wed Oct 29 22:41:07 CET 2025
+Completed after version at: vr 31 okt 2025 10:56:30 CET
+========================================
+
+========================================
+All tests completed at: vr 31 okt 2025 10:56:30 CET
+Log file: /home/xutong/versions/sonic-mgmt_6122/test_results.log
 ========================================
