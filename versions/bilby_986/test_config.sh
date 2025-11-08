@@ -9,7 +9,7 @@ TEST_COMMAND="pytest test/integration/noise_realisation_test.py --durations=0"
 VENV_PATH=".venv"
 
 # Optional: Setup command to run after activating venv (e.g., install dependencies)
-SETUP_COMMAND="pip install numpy scipy pytest && pip install -e ."
+SETUP_COMMAND="pip install numpy scipy pytest  parameterized  && pip install -e '.[all]' "
 
 # Optional: Wait time in seconds before starting tests
 # WAIT_TIME=2
