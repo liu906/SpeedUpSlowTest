@@ -1,0 +1,300 @@
+========================================
+Starting test runs for project: DeerLab_141
+Iterations: 1
+Test command: python -m pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/DeerLab_141//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: scipy<1.11.0 in ./.venv/lib/python3.10/site-packages (1.10.1)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (1.26.4)
+Requirement already satisfied: cvxopt in ./.venv/lib/python3.10/site-packages (1.3.2)
+Requirement already satisfied: matplotlib in ./.venv/lib/python3.10/site-packages (3.10.7)
+Requirement already satisfied: tqdm in ./.venv/lib/python3.10/site-packages (4.67.1)
+Requirement already satisfied: joblib in ./.venv/lib/python3.10/site-packages (1.5.2)
+Requirement already satisfied: memoization in ./.venv/lib/python3.10/site-packages (0.4.0)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib) (12.0.0)
+Requirement already satisfied: packaging>=20.0 in ./.venv/lib/python3.10/site-packages (from matplotlib) (25.0)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.10/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib) (3.2.5)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib) (1.4.9)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/DeerLab_141/before
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: DeerLab
+  Attempting uninstall: DeerLab
+    Found existing installation: DeerLab 0.13.0de
+    Uninstalling DeerLab-0.13.0de:
+      Successfully uninstalled DeerLab-0.13.0de
+  Running setup.py develop for DeerLab
+Successfully installed DeerLab-0.13.0de
+Waiting 0s before starting tests...
+
+=========================================
+Test run 1/1 for before
+Time: za  8 nov 2025 22:18:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/DeerLab_141/before
+collected 321 items
+
+test/test_bgmodels.py ..........                                         [  3%]
+test/test_bootan.py .....                                                [  4%]
+test/test_correctphase.py ......                                         [  6%]
+test/test_correctscale.py ...                                            [  7%]
+test/test_correctzerotime.py ....                                        [  8%]
+test/test_ddmodels.py .......................                            [ 15%]
+test/test_dipolarbackground.py .......                                   [ 18%]
+test/test_dipolarkernel.py ......................                        [ 24%]
+test/test_diststats.py ................................................. [ 40%]
+.....                                                                    [ 41%]
+test/test_fftspec.py ..                                                  [ 42%]
+test/test_fitmodel.py .............................................      [ 56%]
+test/test_fitmultimodel.py .......................                       [ 63%]
+test/test_fitparamodel.py ...........                                    [ 66%]
+test/test_fitregmodel.py ...............................                 [ 76%]
+test/test_mixmodels.py ..                                                [ 77%]
+test/test_nnls.py ...                                                    [ 78%]
+test/test_noiselevel.py .....                                            [ 79%]
+test/test_regoperator.py ............                                    [ 83%]
+test/test_regparamrange.py ..                                            [ 84%]
+test/test_selregparam.py ...........................                     [ 92%]
+test/test_snlls.py ....................                                  [ 98%]
+test/test_whitegaussnoise.py ....                                        [100%]
+
+============================== slowest durations ===============================
+10.38s call     test/test_snlls.py::test_confinter_scaling
+9.37s call     test/test_fitmodel.py::test_7pdeer
+7.82s call     test/test_fitmodel.py::test_5pdeer
+7.21s call     test/test_fitmodel.py::test_ridme5
+4.95s call     test/test_fitmodel.py::test_boundaries_adjust_ex
+4.37s call     test/test_snlls.py::test_confinter_linear
+4.35s call     test/test_fitmodel.py::test_ridme3
+4.09s call     test/test_fitmodel.py::test_ovl4pdeer
+3.94s call     test/test_fitmodel.py::test_cost_value
+3.57s call     test/test_fitmodel.py::test_global_scale_4pdeer
+3.46s call     test/test_snlls.py::test_regularized_global
+3.28s call     test/test_selregparam.py::test_gml_value
+3.05s call     test/test_fitmodel.py::test_ridme1
+2.86s call     test/test_snlls.py::test_confinter_model
+2.73s call     test/test_fitmodel.py::test_global_4pdeer
+2.45s call     test/test_snlls.py::test_cost_value
+2.39s call     test/test_snlls.py::test_plot
+2.38s call     test/test_fitmodel.py::test_plot
+2.32s call     test/test_snlls.py::test_confinter_nonlinear
+2.26s call     test/test_snlls.py::test_nnls_cvx
+2.21s call     test/test_fitmodel.py::test_convergence_criteria
+2.19s call     test/test_snlls.py::test_reg_tv
+2.02s call     test/test_snlls.py::test_nnls_nnlsbpp
+2.00s call     test/test_snlls.py::test_nnls_fnnls
+1.96s call     test/test_snlls.py::test_reg_tikh
+1.96s call     test/test_fitmodel.py::test_start_values
+1.94s call     test/test_snlls.py::test_reg_huber
+1.88s call     test/test_fitmodel.py::test_boundaries_adjust_bg
+1.86s call     test/test_fitmodel.py::test_phenomenological_bg_model
+1.86s call     test/test_selregparam.py::test_lr_value
+1.79s call     test/test_selregparam.py::test_lc_value
+1.78s call     test/test_fitmodel.py::test_4pdeer
+1.71s call     test/test_selregparam.py::test_algorithms
+1.69s call     test/test_snlls.py::test_regularized
+1.67s call     test/test_fitmodel.py::test_Vunmod
+1.65s call     test/test_fitmultimodel.py::test_background_fit
+1.64s call     test/test_fitregmodel.py::test_goodnes_of_fit
+1.63s call     test/test_selregparam.py::test_full_output_grid
+1.41s call     test/test_fitmodel.py::test_V_scale
+1.29s call     test/test_bootan.py::test_parallelization
+1.21s call     test/test_fitregmodel.py::test_tikh_solver_cvx
+1.16s call     test/test_fitregmodel.py::test_plot
+1.15s call     test/test_fitregmodel.py::test_huber_solver_fnnls
+1.02s call     test/test_fitregmodel.py::test_cost_value
+1.00s call     test/test_fitregmodel.py::test_nonuniform_r
+0.97s call     test/test_snlls.py::test_goodness_of_fit
+0.96s call     test/test_fitmodel.py::test_physical_bg_model
+0.93s call     test/test_fitmultimodel.py::test_multirice_split
+0.90s call     test/test_fitmultimodel.py::test_multirice
+0.89s call     test/test_fitregmodel.py::test_huber_solver_nnlsbpp
+0.88s call     test/test_fitmodel.py::test_V_scale_regularized
+0.87s call     test/test_fitregmodel.py::test_renormalize
+0.81s call     test/test_selregparam.py::test_compensate_condition
+0.81s call     test/test_selregparam.py::test_rgcv_value
+0.80s call     test/test_fitmultimodel.py::test_multirice_spread
+0.79s call     test/test_bootan.py::test_multiple_datasets
+0.77s call     test/test_selregparam.py::test_manual_candidates
+0.76s call     test/test_fitregmodel.py::test_scale_agnostic
+0.76s call     test/test_selregparam.py::test_nonuniform_r
+0.72s call     test/test_fitregmodel.py::test_convergence_criteria
+0.71s call     test/test_selregparam.py::test_tv_global
+0.71s call     test/test_fitregmodel.py::test_tv_solver_nnlsbpp
+0.70s call     test/test_selregparam.py::test_tv_value
+0.67s call     test/test_fitregmodel.py::test_tikh_solver_nnlsbpp
+0.65s call     test/test_bootan.py::test_resampling
+0.65s call     test/test_fitregmodel.py::test_obir_global
+0.64s call     test/test_fitregmodel.py::test_globalfit_scales
+0.61s call     test/test_selregparam.py::test_srgcv_value
+0.61s call     test/test_fitmodel.py::test_dipevo_function
+0.59s call     test/test_fitmultimodel.py::test_multirice_merge
+0.59s call     test/test_fitregmodel.py::test_confinter_tikh
+0.59s call     test/test_fitmodel.py::test_boundaries
+0.59s call     test/test_selregparam.py::test_mcl_value
+0.58s call     test/test_correctscale.py::test_correction
+0.57s call     test/test_fitregmodel.py::test_scale_fit
+0.57s call     test/test_selregparam.py::test_full_output_brent
+0.57s call     test/test_fitmultimodel.py::test_global_multirice
+0.57s call     test/test_bootan.py::test_basics
+0.57s call     test/test_fitregmodel.py::test_tikh_with_noise
+0.54s call     test/test_fitmodel.py::test_global_full_parametric
+0.53s call     test/test_fitmultimodel.py::test_rescaling
+0.53s call     test/test_fitregmodel.py::test_tv_solver_fnnls
+0.51s call     test/test_selregparam.py::test_bic_value
+0.50s call     test/test_dipolarkernel.py::test_excbandwidth_inf_integral
+0.47s call     test/test_snlls.py::test_const_nonlin_const_lin
+0.47s call     test/test_selregparam.py::test_huber_global
+0.46s call     test/test_fitregmodel.py::test_confinter_huber
+0.45s call     test/test_selregparam.py::test_aic_value
+0.45s call     test/test_selregparam.py::test_aicc_value
+0.44s call     test/test_fitmodel.py::test_form_factor
+0.44s call     test/test_fitregmodel.py::test_tv_solver_cvx
+0.44s call     test/test_selregparam.py::test_rm_value
+0.44s call     test/test_fitmodel.py::test_global_mixed_backgrounds
+0.44s call     test/test_selregparam.py::test_cv_value
+0.43s call     test/test_fitregmodel.py::test_tikh_solver_fnnls
+0.43s call     test/test_correctscale.py::test_tmax
+0.43s call     test/test_snlls.py::test_unconst_nonlin_const_lin
+0.42s call     test/test_snlls.py::test_unconst_nonlin_unconst_lin
+0.42s call     test/test_dipolarkernel.py::test_negative_time_integral
+0.42s call     test/test_snlls.py::test_const_nonlin_unconst_lin
+0.41s call     test/test_selregparam.py::test_gcv_value
+0.40s call     test/test_selregparam.py::test_ncp_value
+0.38s call     test/test_selregparam.py::test_ee_value
+0.37s call     test/test_fitregmodel.py::test_goodnes_of_fit_global
+0.36s call     test/test_fitmultimodel.py::test_multigauss_spread
+0.35s call     test/test_selregparam.py::test_huber_value
+0.35s call     test/test_fitmultimodel.py::test_multigauss_merge
+0.35s call     test/test_dipolarkernel.py::test_negative_time_grid
+0.32s call     test/test_fitmultimodel.py::test_plot
+0.32s call     test/test_fitregmodel.py::test_huber_solver_cvx
+0.32s call     test/test_fitregmodel.py::test_confinter_tv
+0.31s call     test/test_fitmultimodel.py::test_multigauss
+0.31s call     test/test_fitmultimodel.py::test_global_multigauss
+0.30s call     test/test_bootan.py::test_multiple_ouputs
+0.30s call     test/test_fitmodel.py::test_global_mixed_experiments
+0.28s call     test/test_fitmultimodel.py::test_globalfit_scales
+0.26s call     test/test_selregparam.py::test_tikh_value
+0.25s call     test/test_fitmultimodel.py::test_cost_value
+0.24s call     test/test_fitmultimodel.py::test_multigauss_split
+0.24s call     test/test_fitmultimodel.py::test_goodness_of_fit
+0.24s call     test/test_selregparam.py::test_tikh_global
+0.24s call     test/test_fitregmodel.py::test_obir
+0.24s call     test/test_fitregmodel.py::test_huber_with_noise
+0.22s call     test/test_fitregmodel.py::test_tv_with_noise
+0.22s call     test/test_fitmodel.py::test_boundaries_adjust_dd
+0.22s call     test/test_fitmodel.py::test_full_parametric
+0.21s call     test/test_fitmodel.py::test_V_scale_parametric
+0.21s call     test/test_fitmultimodel.py::test_convergence_criteria
+0.21s call     test/test_fitregmodel.py::test_confinter_Vfit
+0.19s call     test/test_fitregmodel.py::test_confinter_global
+0.18s call     test/test_fitparamodel.py::test_rescaling
+0.17s call     test/test_fitmultimodel.py::test_bounds
+0.13s call     test/test_regoperator.py::test_nonuniform_3rd_derivative
+0.13s call     test/test_regoperator.py::test_3rd_derivative
+0.12s call     test/test_fitparamodel.py::test_manual_covmatrix
+0.11s call     test/test_fitmodel.py::test_no_foreground
+0.11s call     test/test_fitparamodel.py::test_rice
+0.11s call     test/test_fitmultimodel.py::test_multigengauss
+0.10s call     test/test_fitparamodel.py::test_plot
+0.10s call     test/test_fitparamodel.py::test_unconstrained
+0.09s call     test/test_regoperator.py::test_2nd_derivative
+0.08s call     test/test_regoperator.py::test_nonuniform_2nd_derivative
+0.08s call     test/test_fitparamodel.py::test_globalfit_scales
+0.08s call     test/test_fitparamodel.py::test_globalfit
+0.07s call     test/test_diststats.py::test_kurtosis_uncertainty
+0.07s call     test/test_diststats.py::test_var_uncertainty
+0.07s call     test/test_diststats.py::test_moment1_uncertainty
+0.07s call     test/test_diststats.py::test_skewness_uncertainty
+0.07s call     test/test_diststats.py::test_median_uncertainty
+0.07s call     test/test_diststats.py::test_entropy_uncertainty
+0.07s call     test/test_diststats.py::test_moment2_uncertainty
+0.07s call     test/test_diststats.py::test_iqm_uncertainty
+0.07s call     test/test_diststats.py::test_moment4_uncertainty
+0.07s call     test/test_diststats.py::test_iqr_uncertainty
+0.07s call     test/test_diststats.py::test_std_uncertainty
+0.07s call     test/test_diststats.py::test_mad_uncertainty
+0.07s call     test/test_diststats.py::test_moment3_uncertainty
+0.07s call     test/test_diststats.py::test_mean_uncertainty
+0.07s call     test/test_fitparamodel.py::test_gaussian
+0.06s call     test/test_fitparamodel.py::test_cost_value
+0.06s call     test/test_fitparamodel.py::test_confinter_Pfit
+0.06s call     test/test_dipolarkernel.py::test_excbandwidth_inf_grid
+0.05s call     test/test_regoperator.py::test_1st_derivative
+0.05s call     test/test_regoperator.py::test_nonuniform_1st_derivative
+0.05s call     test/test_fitmultimodel.py::test_confinter_Vfit
+0.05s call     test/test_fitmultimodel.py::test_confinter_Pfit
+0.04s call     test/test_fitmultimodel.py::test_confinter_parfit
+0.04s call     test/test_fitmultimodel.py::test_Vfit
+0.04s call     test/test_fitregmodel.py::test_unconstrained
+0.04s call     test/test_dipolarkernel.py::test_excbandwidth
+0.03s call     test/test_dipolarkernel.py::test_value_grid
+0.03s call     test/test_selregparam.py::test_unconstrained
+0.02s call     test/test_regoperator.py::test_0th_derivative
+0.02s call     test/test_noiselevel.py::test_multiscan
+0.02s call     test/test_regoperator.py::test_nonuniform_0th_derivative
+0.01s call     test/test_correctscale.py::test_model_gauss
+0.01s call     test/test_correctzerotime.py::test_late_times
+0.01s call     test/test_correctphase.py::test_multiple_datasets
+0.01s call     test/test_nnls.py::test_multigauss_problem_cvxnnls
+0.01s call     test/test_mixmodels.py::test_gaussgauss
+0.01s call     test/test_nnls.py::test_multigauss_problem_fnnls
+0.01s call     test/test_mixmodels.py::test_gaussrice
+0.01s call     test/test_ddmodels.py::test_dd_rice3
+0.01s call     test/test_snlls.py::test_confinter_values
+0.01s call     test/test_dipolarkernel.py::test_multipath_harmonics
+0.01s call     test/test_noiselevel.py::test_reference
+0.01s call     test/test_dipolarkernel.py::test_multipath
+0.01s call     test/test_nnls.py::test_multigauss_problem_nnlsbpp
+0.01s call     test/test_regparamrange.py::test_resolution
+0.01s call     test/test_ddmodels.py::test_dd_rice2
+0.01s call     test/test_noiselevel.py::test_filtered_movmean
+0.01s call     test/test_ddmodels.py::test_dd_rice
+0.01s call     test/test_dipolarkernel.py::test_multipath_background
+0.01s call     test/test_fitregmodel.py::test_confinter_values
+0.01s call     test/test_noiselevel.py::test_complex
+0.01s call     test/test_noiselevel.py::test_filtered_savgol
+0.01s call     test/test_ddmodels.py::test_dd_gauss3
+0.01s call     test/test_ddmodels.py::test_dd_gauss
+0.01s call     test/test_ddmodels.py::test_dd_skewgauss
+0.01s call     test/test_ddmodels.py::test_dd_gauss2
+0.01s call     test/test_ddmodels.py::test_dd_cos
+0.01s call     test/test_ddmodels.py::test_dd_gengauss
+0.01s call     test/test_ddmodels.py::test_dd_randcoil
+0.01s call     test/test_ddmodels.py::test_dd_circle
+0.01s call     test/test_dipolarkernel.py::test_value_integral
+
+(758 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================= 321 passed in 183.69s (0:03:03) ========================
+Energy consumption in joules: 5537.969161987305 for 184.40967 sec of execution.
+
+
+========================================
+Completed before version at: za  8 nov 2025 22:22:03 CET
+========================================
+
+========================================
+All tests completed at: za  8 nov 2025 22:22:03 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/DeerLab_141//test_results_test_suite.log
+========================================

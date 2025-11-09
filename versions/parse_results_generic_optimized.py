@@ -2,8 +2,8 @@
 """
 Optimized script to parse test results and extract energy and duration data.
 
-Usage: python3 parse_results_generic_optimized.py <project_path>
-Example: python3 parse_results_generic_optimized.py BuffaLogs_400
+Usage: python3 parse_results_generic_optimized.py <project_path> <log_suffix> [--debug]
+Example: python3 parse_results_generic_optimized.py bilby_986 mock
 
 This script parses test result logs to extract:
 - Energy consumption data (joules, watts, execution time)
@@ -11,7 +11,11 @@ This script parses test result logs to extract:
 
 The script handles various pytest output formats automatically.
 
-Version: 2.1 (Added energibridge execution time tracking)
+File naming:
+- Input: test_results_<log_suffix>.log (e.g., test_results_mock.log)
+- Output: energy_data_<log_suffix>.csv, duration_data_<log_suffix>.csv, etc.
+
+Version: 2.3 (Simplified to use log suffix parameter)
 """
 
 import re
@@ -48,9 +52,10 @@ def parse_log_file(log_file_path, debug=False):
         'execution_time_entries': 0,
     } if debug else None
 
-    # Pre-compiled regex patterns for better performance
-    version_pattern = re.compile(r'Starting tests for (before|after) version')
-    test_run_pattern = re.compile(r'Test run (\d+)/\d+ for (before|after)')
+    # Pre-compiled regex patterns for better performance (flexible to match any version name)
+    # Updated to match version names with underscores (e.g., "after_mock")
+    version_pattern = re.compile(r'Starting tests for ([\w_]+) version')
+    test_run_pattern = re.compile(r'Test run (\d+)/\d+ for ([\w_]+)')
     energy_pattern = re.compile(r'Energy consumption in joules: ([\d.]+) for ([\d.]+) sec of execution\.')
     slowest_start_pattern = re.compile(r'={20,}\s+slowest durations\s+={20,}')
     test_duration_pattern = re.compile(r'([\d.]+)s\s+(\w+)\s+(.+?)$')
@@ -187,42 +192,55 @@ def print_summary(energy_data, duration_data, execution_time_data):
     print("EXTRACTION SUMMARY")
     print("="*60)
 
+    # Detect version names dynamically from the data
+    version_names = list(set(d['version'] for d in energy_data))
+
+    # Sort versions: put "before" first if it exists, otherwise alphabetical
+    if 'before' in version_names:
+        version_names.sort(key=lambda x: (x != 'before', x))
+    else:
+        version_names.sort()
+
+    # Try to identify first and second versions
+    version1 = version_names[0] if len(version_names) > 0 else 'before'
+    version2 = version_names[1] if len(version_names) > 1 else 'after'
+
     # Energy summary
-    energy_before = [d for d in energy_data if d['version'] == 'before']
-    energy_after = [d for d in energy_data if d['version'] == 'after']
+    energy_before = [d for d in energy_data if d['version'] == version1]
+    energy_after = [d for d in energy_data if d['version'] == version2]
 
     print(f"\nEnergy data extracted:")
-    print(f"  Before version: {len(energy_before)} entries")
-    print(f"  After version: {len(energy_after)} entries")
+    print(f"  {version1} version: {len(energy_before)} entries")
+    print(f"  {version2} version: {len(energy_after)} entries")
 
     if energy_before:
         avg_energy_before = sum(d['energy_joules'] for d in energy_before) / len(energy_before)
-        print(f"  Average energy (before): {avg_energy_before:.2f} J")
+        print(f"  Average energy ({version1}): {avg_energy_before:.2f} J")
 
     if energy_after:
         avg_energy_after = sum(d['energy_joules'] for d in energy_after) / len(energy_after)
-        print(f"  Average energy (after): {avg_energy_after:.2f} J")
+        print(f"  Average energy ({version2}): {avg_energy_after:.2f} J")
 
     if energy_before and energy_after:
         improvement = ((avg_energy_before - avg_energy_after) / avg_energy_before) * 100
         print(f"  Energy improvement: {improvement:.2f}%")
 
     # Duration summary
-    duration_before = [d for d in duration_data if d['version'] == 'before']
-    duration_after = [d for d in duration_data if d['version'] == 'after']
+    duration_before = [d for d in duration_data if d['version'] == version1]
+    duration_after = [d for d in duration_data if d['version'] == version2]
 
     print(f"\nTest duration data extracted:")
-    print(f"  Before version: {len(duration_before)} entries")
-    print(f"  After version: {len(duration_after)} entries")
+    print(f"  {version1} version: {len(duration_before)} entries")
+    print(f"  {version2} version: {len(duration_after)} entries")
 
     # Calculate average test durations
     if duration_before:
         avg_duration_before = sum(d['duration_sec'] for d in duration_before) / len(duration_before)
-        print(f"  Average test duration (before): {avg_duration_before:.3f}s")
+        print(f"  Average test duration ({version1}): {avg_duration_before:.3f}s")
 
     if duration_after:
         avg_duration_after = sum(d['duration_sec'] for d in duration_after) / len(duration_after)
-        print(f"  Average test duration (after): {avg_duration_after:.3f}s")
+        print(f"  Average test duration ({version2}): {avg_duration_after:.3f}s")
 
     if duration_before and duration_after:
         time_improvement = ((avg_duration_before - avg_duration_after) / avg_duration_before) * 100
@@ -239,7 +257,7 @@ def print_summary(energy_data, duration_data, execution_time_data):
 
         if before_runs:
             avg_total_before = sum(before_runs.values()) / len(before_runs)
-            print(f"  Average total test time (before): {avg_total_before:.2f}s")
+            print(f"  Average total test time ({version1}): {avg_total_before:.2f}s")
 
     if duration_after:
         # Get unique run numbers and their total_test_time
@@ -251,26 +269,26 @@ def print_summary(energy_data, duration_data, execution_time_data):
 
         if after_runs:
             avg_total_after = sum(after_runs.values()) / len(after_runs)
-            print(f"  Average total test time (after): {avg_total_after:.2f}s")
+            print(f"  Average total test time ({version2}): {avg_total_after:.2f}s")
 
     if duration_before and duration_after and before_runs and after_runs:
         total_time_improvement = ((avg_total_before - avg_total_after) / avg_total_before) * 100
         print(f"  Total test time improvement: {total_time_improvement:.2f}%")
 
     # Execution time comparison (energibridge vs pytest)
-    exec_time_before = [d for d in execution_time_data if d['version'] == 'before']
-    exec_time_after = [d for d in execution_time_data if d['version'] == 'after']
+    exec_time_before = [d for d in execution_time_data if d['version'] == version1]
+    exec_time_after = [d for d in execution_time_data if d['version'] == version2]
 
     print(f"\nExecution time comparison (Energibridge vs Pytest):")
-    print(f"  Energibridge entries: before={len(exec_time_before)}, after={len(exec_time_after)}")
+    print(f"  Energibridge entries: {version1}={len(exec_time_before)}, {version2}={len(exec_time_after)}")
 
     if exec_time_before:
         avg_exec_time_before = sum(d['energibridge_time_sec'] for d in exec_time_before) / len(exec_time_before)
-        print(f"  Average energibridge time (before): {avg_exec_time_before:.2f}s")
+        print(f"  Average energibridge time ({version1}): {avg_exec_time_before:.2f}s")
 
     if exec_time_after:
         avg_exec_time_after = sum(d['energibridge_time_sec'] for d in exec_time_after) / len(exec_time_after)
-        print(f"  Average energibridge time (after): {avg_exec_time_after:.2f}s")
+        print(f"  Average energibridge time ({version2}): {avg_exec_time_after:.2f}s")
 
     if exec_time_before and exec_time_after:
         exec_time_improvement = ((avg_exec_time_before - avg_exec_time_after) / avg_exec_time_before) * 100
@@ -280,28 +298,35 @@ def print_summary(energy_data, duration_data, execution_time_data):
     if exec_time_before and duration_before and before_runs:
         time_diff_before = avg_exec_time_before - avg_total_before
         time_diff_pct_before = (time_diff_before / avg_total_before) * 100
-        print(f"  Time difference before (energibridge - pytest): {time_diff_before:+.2f}s ({time_diff_pct_before:+.2f}%)")
+        print(f"  Time difference {version1} (energibridge - pytest): {time_diff_before:+.2f}s ({time_diff_pct_before:+.2f}%)")
 
     if exec_time_after and duration_after and after_runs:
         time_diff_after = avg_exec_time_after - avg_total_after
         time_diff_pct_after = (time_diff_after / avg_total_after) * 100
-        print(f"  Time difference after (energibridge - pytest): {time_diff_after:+.2f}s ({time_diff_pct_after:+.2f}%)")
+        print(f"  Time difference {version2} (energibridge - pytest): {time_diff_after:+.2f}s ({time_diff_pct_after:+.2f}%)")
 
     print("\n" + "="*60 + "\n")
 
 
 def main():
-    # Check if project path is provided
-    if len(sys.argv) < 2:
-        print("Error: Project path is required")
-        print("Usage: python3 parse_results_generic_optimized.py <project_path> [--debug]")
-        print("Example: python3 parse_results_generic_optimized.py BuffaLogs_400")
+    # Check if required arguments are provided
+    if len(sys.argv) < 3:
+        print("Error: Missing required arguments")
+        print("Usage: python3 parse_results_generic_optimized.py <project_path> <log_suffix> [--debug]")
+        print("Example: python3 parse_results_generic_optimized.py bilby_986 mock")
+        print("\nArguments:")
+        print("  project_path    Project directory name (e.g., bilby_986)")
+        print("  log_suffix      Log file suffix (e.g., 'mock' for test_results_mock.log)")
         print("\nOptions:")
-        print("  --debug    Enable debug output during parsing")
+        print("  --debug         Enable debug output during parsing")
+        print("\nThe script will look for test_results_<log_suffix>.log")
+        print("and create CSV files with the same suffix pattern.")
         sys.exit(1)
 
     project_path = sys.argv[1]
+    log_suffix = sys.argv[2]
     debug_mode = '--debug' in sys.argv
+
     script_dir = Path(__file__).parent
     project_dir = script_dir / project_path
 
@@ -310,15 +335,16 @@ def main():
         print(f"Error: Project directory not found: {project_dir}")
         sys.exit(1)
 
-    log_file = project_dir / "test_results.log"
-    energy_csv = project_dir / "energy_data.csv"
-    duration_csv = project_dir / "duration_data.csv"
-    execution_time_csv = project_dir / "execution_time_data.csv"
+    # Construct file names using log_suffix parameter
+    log_file = project_dir / f"test_results_{log_suffix}.log"
+    energy_csv = project_dir / f"energy_data_{log_suffix}.csv"
+    duration_csv = project_dir / f"duration_data_{log_suffix}.csv"
+    execution_time_csv = project_dir / f"execution_time_data_{log_suffix}.csv"
 
     # Check if log file exists
     if not log_file.exists():
         print(f"Error: Log file not found: {log_file}")
-        print("Please run the tests first using run_tests_generic.sh")
+        print(f"Please run the tests first to generate the log file")
         sys.exit(1)
 
     print(f"Parsing test results from: {log_file}")
@@ -353,7 +379,7 @@ def main():
     # Print summary
     print_summary(energy_data, duration_data, execution_time_data)
 
-    print(f"Next step: python3 visualize_results_generic.py {project_path}")
+    print(f"\nNext step: python3 visualize_results_generic.py {project_path} {log_suffix}")
 
 
 if __name__ == "__main__":

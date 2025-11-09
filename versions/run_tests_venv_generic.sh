@@ -1,21 +1,37 @@
 #!/bin/bash
 # Generic test runner for Python virtual environment-based projects
-# Usage: ./run_tests_venv_generic.sh <project_name> [number_of_runs]
+# Usage: ./run_tests_venv_generic.sh <project_name> [number_of_runs] [folder1] [folder2] [config_file] [log_file]
 # Example: ./run_tests_venv_generic.sh autosubmit_2367 5
+# Example: ./run_tests_venv_generic.sh bilby_986 10 before after_mock
+# Example: ./run_tests_venv_generic.sh bilby_986 10 before after_mock test_config.sh test_results.log
+# Example: ./run_tests_venv_generic.sh bilby_986 5 after after_mock my_config.sh mock_results.log
 # If number_of_runs is not specified, defaults to 10
+# If folder names are not specified, defaults to "before" and "after"
+# If config_file is not specified, defaults to "test_config.sh"
+# If log_file is not specified, defaults to "test_results.log"
 
 set -e
 
 # Check arguments
-if [ $# -lt 1 ] || [ $# -gt 2 ]; then
-    echo "Usage: $0 <project_name> [number_of_runs]"
+if [ $# -lt 1 ] || [ $# -gt 6 ]; then
+    echo "Usage: $0 <project_name> [number_of_runs] [folder1] [folder2] [config_file] [log_file]"
     echo "Example: $0 autosubmit_2367 5"
+    echo "Example: $0 bilby_986 10 before after_mock"
+    echo "Example: $0 bilby_986 10 before after_mock test_config.sh test_results.log"
+    echo "Example: $0 bilby_986 5 after after_mock my_config.sh mock_results.log"
     echo "If number_of_runs is not specified, defaults to 10"
+    echo "If folder names are not specified, defaults to 'before' and 'after'"
+    echo "If config_file is not specified, defaults to 'test_config.sh'"
+    echo "If log_file is not specified, defaults to 'test_results.log'"
     exit 1
 fi
 
 PROJECT_NAME=$1
 N=${2:-10}  # Default to 10 if not specified
+FOLDER1=${3:-before}  # Default to "before" if not specified
+FOLDER2=${4:-after}   # Default to "after" if not specified
+CONFIG_FILE=${5:-test_config.sh}  # Default to "test_config.sh" if not specified
+LOG_FILE_NAME=${6:-test_results.log}  # Default to "test_results.log" if not specified
 BASE_DIR="$(pwd)"
 PROJECT_DIR="$BASE_DIR/$PROJECT_NAME"
 
@@ -25,34 +41,36 @@ if [ ! -d "$PROJECT_DIR" ]; then
     exit 1
 fi
 
-# Check if test_config.sh exists
-if [ ! -f "$PROJECT_DIR/test_config.sh" ]; then
-    echo "Error: test_config.sh not found in '$PROJECT_DIR'"
+# Check if config file exists
+if [ ! -f "$PROJECT_DIR/$CONFIG_FILE" ]; then
+    echo "Error: $CONFIG_FILE not found in '$PROJECT_DIR'"
     exit 1
 fi
 
 # Load project configuration
-source "$PROJECT_DIR/test_config.sh"
+source "$PROJECT_DIR/$CONFIG_FILE"
 
 # Validate required variables
 if [ -z "$TEST_COMMAND" ]; then
-    echo "Error: TEST_COMMAND not defined in test_config.sh"
+    echo "Error: TEST_COMMAND not defined in $CONFIG_FILE"
     exit 1
 fi
 
 if [ -z "$VENV_PATH" ]; then
-    echo "Error: VENV_PATH not defined in test_config.sh"
+    echo "Error: VENV_PATH not defined in $CONFIG_FILE"
     exit 1
 fi
 
 # Define log file
-LOG_FILE="$PROJECT_DIR/test_results.log"
+LOG_FILE="$PROJECT_DIR/$LOG_FILE_NAME"
 
 # Clear previous log file
 > "$LOG_FILE"
 
 echo "========================================" | tee -a "$LOG_FILE"
 echo "Starting test runs for project: $PROJECT_NAME" | tee -a "$LOG_FILE"
+echo "Config file: $CONFIG_FILE" | tee -a "$LOG_FILE"
+echo "Comparing: $FOLDER1 vs $FOLDER2" | tee -a "$LOG_FILE"
 echo "Iterations: $N" | tee -a "$LOG_FILE"
 echo "Test command: $TEST_COMMAND" | tee -a "$LOG_FILE"
 echo "Log file: $LOG_FILE" | tee -a "$LOG_FILE"
@@ -177,28 +195,32 @@ run_version_tests() {
 echo "========================================"
 echo "Generic Python Venv Test Runner"
 echo "Project: $PROJECT_NAME"
+echo "Config file: $CONFIG_FILE"
+echo "Log file: $LOG_FILE_NAME"
+echo "Comparing: $FOLDER1 vs $FOLDER2"
 echo "Runs per version: $N"
 echo "========================================"
 echo ""
 
-# Run tests for before version
-run_version_tests "before"
+# Run tests for first folder
+run_version_tests "$FOLDER1"
 
 echo ""
 echo "Sleeping 10 seconds between versions..."
 sleep 10
 echo ""
 
-# Run tests for after version
-run_version_tests "after"
+# Run tests for second folder
+run_version_tests "$FOLDER2"
 
 echo "" | tee -a "$LOG_FILE"
 echo "========================================" | tee -a "$LOG_FILE"
 echo "All tests completed at: $(date)" | tee -a "$LOG_FILE"
+echo "Compared: $FOLDER1 vs $FOLDER2" | tee -a "$LOG_FILE"
 echo "Log file: $LOG_FILE" | tee -a "$LOG_FILE"
 echo "========================================" | tee -a "$LOG_FILE"
 
 echo ""
 echo "Next steps:"
-echo "1. Parse the results: python3 parse_results_generic_optimized.py $PROJECT_NAME"
-echo "2. Visualize the data: python3 visualize_results_generic.py $PROJECT_NAME"
+echo "1. Parse the results: python3 parse_results_generic_optimized.py $PROJECT_NAME $FOLDER1 $FOLDER2"
+echo "2. Visualize the data: python3 visualize_results_generic.py $PROJECT_NAME $FOLDER1 $FOLDER2"
