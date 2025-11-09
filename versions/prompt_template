@@ -1,0 +1,12 @@
+1.i'll give you a slowest test list of project versions/bilby_986/before, copy a new project called versions/bilby_986/after_mock, and try to find locations that you can do mock to speed up one or several of those slowest tests. Mock should only be done on external call on test code. Use pytest-mock. Typical mock targets: Network calls, 
+Database access, File I/O, External APIs / subprocesses. Found 5 slow tests:
+--------------------------------------------------------------------------------
+  78.95s  test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+  20.26s  test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+  13.45s  test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+  13.02s  
+
+
+2.test all modified tests by you. like this:~/SpeedUpSlowTest/versions/bilby_986/after_mock$ sudo pytest test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal --durations=0. do improvement until they all pass. (only try external mock, but do not harm test effectivess. )
+
+3.create a summary of what was done.
