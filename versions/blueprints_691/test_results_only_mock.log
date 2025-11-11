@@ -1,0 +1,151 @@
+========================================
+Starting test runs for project: blueprints_691
+Config file: test_config_only_mock.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: pytest tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::TestCHSSteelProfile::test_plot_shapes tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::TestRHSSteelProfile::test_plot tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::TestISteelProfile::test_plot  --durations=0 -vv
+Log file: /home/xutong/SpeedUpSlowTest/versions/blueprints_691//test_results_only_mock.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: uv in /usr/local/lib/python3.10/dist-packages (0.9.8)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Resolved 138 packages in 0.90ms
+Audited 134 packages in 1ms
+
+=========================================
+Test run 1/1 for before
+Time: di 11 nov 2025 16:34:40 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.0, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/blueprints_691/before/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/blueprints_691/before
+configfile: pyproject.toml
+plugins: pspec-0.0.4, raises-0.11, cov-6.1.1, describe-2.2.0
+collecting ... collected 3 items
+
+tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes. PASSED [ 33%]
+tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors). PASSED [ 66%]
+tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors). PASSED [100%]
+
+============================== slowest durations ===============================
+25.40s call     tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes.
+24.45s call     tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors).
+22.35s call     tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors).
+0.00s setup    tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes.
+0.00s setup    tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors).
+0.00s setup    tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors).
+0.00s teardown tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors).
+0.00s teardown tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes.
+0.00s teardown tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors).
+========================= 3 passed in 72.22s (0:01:12) =========================
+Energy consumption in joules: 1351.4309692382813 for 73.44569 sec of execution.
+
+
+========================================
+Completed before version at: di 11 nov 2025 16:35:53 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: uv in /usr/local/lib/python3.10/dist-packages (0.9.8)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+warning: `VIRTUAL_ENV=/home/xutong/SpeedUpSlowTest/versions/blueprints_691/before/.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+Resolved 138 packages in 0.92ms
+Audited 134 packages in 1ms
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: di 11 nov 2025 16:36:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.0, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/blueprints_691/before/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/blueprints_691/after_careful_mock
+configfile: pyproject.toml
+plugins: pspec-0.0.4, raises-0.11, cov-6.1.1, describe-2.2.0
+collecting ... collected 3 items
+
+tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes.
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+ PASSED                                                                  [ 33%]
+tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+ PASSED                                                                  [ 66%]
+tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+ PASSED                                                                  [100%]
+
+============================== slowest durations ===============================
+0.03s call     tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.03s call     tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.02s call     tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes.
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.00s setup    tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes.
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.00s setup    tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.00s setup    tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.00s teardown tests/structural_sections/steel/steel_cross_sections/test_chs_profile.py::Test suite for CHSSteelProfile.::Test the plotting of the CHS profile shapes.
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.00s teardown tests/structural_sections/steel/steel_cross_sections/test_rhs_profile.py::Test suite for RHSSteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+0.00s teardown tests/structural_sections/steel/steel_cross_sections/test_i_profile.py::Test suite for ISteelProfile.::Test the plot method (ensure it runs without errors).
+
+MOCKED: section_properties() to avoid expensive FEM calculations (~20s+).
+This test verifies that plot() returns a Figure object, not calculation correctness.
+
+============================== 3 passed in 0.10s ===============================
+Energy consumption in joules: 16.2039794921875 for 1.0027775 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: di 11 nov 2025 16:36:05 CET
+========================================
+
+========================================
+All tests completed at: di 11 nov 2025 16:36:05 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/blueprints_691//test_results_only_mock.log
+========================================

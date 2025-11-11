@@ -3,7 +3,7 @@
 # This file is sourced by run_tests_venv_generic.sh
 
 # Test command to run (without energibridge prefix)
-TEST_COMMAND="pytest tests/ --durations=0"
+TEST_COMMAND="pytest tests/ --durations=0 -vv"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
