@@ -1,0 +1,231 @@
+========================================
+Starting test runs for project: blueprints_691
+Config file: test_config.sh
+Comparing: after_careful_mock vs test_suite
+Iterations: before
+Test command: pytest tests/ --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/blueprints_691//test_results.log
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Activating virtual environment...
+Running setup command...
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: uv in /home/xutong/.local/lib/python3.10/site-packages (0.9.8)
+Resolved 138 packages in 6ms
+   Building numpy==2.3.1
+   Building pyzmq==26.4.0
+   Building rpds-py==0.25.1
+   Building pydantic-core==2.33.2
+   Building cytriangle==2.0.0
+   Building contourpy==1.3.2
+   Building kiwisolver==1.4.8
+   Building shapely==2.1.1
+  × Failed to build `shapely==2.1.1`
+  ├─▶ The build backend returned an error
+  ╰─▶ Call to `setuptools.build_meta.build_wheel` failed (exit status: 1)
+
+      [stdout]
+      running bdist_wheel
+      running build
+      running build_py
+      copying shapely/wkb.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/geos.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/_coverage.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/io.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/coords.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/speedups.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/strtree.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/_ragged_array.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/affinity.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/conftest.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/set_operations.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/predicates.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/constructive.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/ops.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/decorators.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/creation.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/_enum.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/coordinates.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/linear.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/errors.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/plotting.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/validation.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/measurement.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/wkt.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/__init__.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/_geometry.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/testing.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/prepared.py -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/algorithms/polylabel.py -> build/lib.linux-x86_64-cpython-314/shapely/algorithms
+      copying shapely/algorithms/cga.py -> build/lib.linux-x86_64-cpython-314/shapely/algorithms
+      copying shapely/algorithms/_oriented_envelope.py -> build/lib.linux-x86_64-cpython-314/shapely/algorithms
+      copying shapely/algorithms/__init__.py -> build/lib.linux-x86_64-cpython-314/shapely/algorithms
+      copying shapely/vectorized/__init__.py -> build/lib.linux-x86_64-cpython-314/shapely/vectorized
+      copying shapely/geometry/polygon.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/geo.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/multipolygon.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/base.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/linestring.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/__init__.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/collection.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/multipoint.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/point.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/geometry/multilinestring.py -> build/lib.linux-x86_64-cpython-314/shapely/geometry
+      copying shapely/tests/test_misc.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_geometry.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/common.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_io.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_coverage.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_set_operations.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_decorators.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_plotting.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_testing.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_ragged_array.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_coordinates.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_strtree.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_creation_indices.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_measurement.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_linear.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_creation.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/__init__.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_predicates.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/test_constructive.py -> build/lib.linux-x86_64-cpython-314/shapely/tests
+      copying shapely/tests/legacy/test_pickle.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_snap.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_operations.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_singularity.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_vectorized.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_parallel_offset.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_union.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_mapping.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_linemerge.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/conftest.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_shape.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_split.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_affinity.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_equality.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_polylabel.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_invalid_geometries.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_validation.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_nearest.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_voronoi_diagram.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_minimum_clearance.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_persist.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_clip_by_rect.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_delaunay.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_empty_polygons.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_box.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_transform.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_polygonize.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_linear_referencing.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_svg.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_products_z.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_wkb.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_buffer.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_orient.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/threading_test.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_locale.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/__init__.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_shared_paths.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_wkt.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_operators.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_predicates.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_prepared.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_make_valid.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_cga.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_geointerface.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_substring.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_ndarrays.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/legacy/test_create_inconsistent_dimensionality.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/legacy
+      copying shapely/tests/geometry/test_hash.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_multi.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_multipoint.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_point.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_linestring.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_polygon.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_decimal.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_emptiness.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_equality.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_multilinestring.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_collection.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_coords.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/__init__.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_format.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_multipolygon.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/tests/geometry/test_geometry_base.py -> build/lib.linux-x86_64-cpython-314/shapely/tests/geometry
+      copying shapely/_geos.pxd -> build/lib.linux-x86_64-cpython-314/shapely
+      copying shapely/_pygeos_api.pxd -> build/lib.linux-x86_64-cpython-314/shapely
+      UPDATING build/lib.linux-x86_64-cpython-314/shapely/_version.py
+      set build/lib.linux-x86_64-cpython-314/shapely/_version.py to '2.1.1'
+      running build_ext
+      building 'shapely.lib' extension
+      cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fPIC -fPIC -I/home/xutong/.cache/uv/builds-v0/.tmp7Tsktj/include
+      -I/home/xutong/.local/share/uv/python/cpython-3.14.0-linux-x86_64-gnu/include/python3.14 -c src/c_api.c -o build/temp.linux-x86_64-cpython-314/src/c_api.o
+
+      [stderr]
+      Could not find geos-config executable. Either append the path to geos-config to PATH or manually provide the include_dirs, library_dirs, libraries and other link args for compiling against a GEOS
+      version >=3.9.
+      /home/xutong/.cache/uv/builds-v0/.tmp7Tsktj/lib/python3.14/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+      !!
+
+              ********************************************************************************
+              Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+              By 2026-Feb-18, you need to update your project and remove deprecated calls
+              or your builds will no longer be supported.
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+
+      !!
+        corresp(dist, value, root_dir)
+      /home/xutong/.cache/uv/builds-v0/.tmp7Tsktj/lib/python3.14/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+              License :: OSI Approved :: BSD License
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+
+      !!
+        dist._finalize_license_expression()
+      /home/xutong/.cache/uv/builds-v0/.tmp7Tsktj/lib/python3.14/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+              License :: OSI Approved :: BSD License
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+
+      !!
+        self._finalize_license_expression()
+      In file included from src/c_api.h:22,
+                       from src/c_api.c:14:
+      src/geos.h:5:10: fatal error: numpy/ndarraytypes.h: No such file or directory
+          5 | #include <numpy/ndarraytypes.h>
+            |          ^~~~~~~~~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/cc' failed with exit code 1
+
+      hint: This error likely indicates that you need to install a library that provides "numpy/ndarraytypes.h" for `shapely@2.1.1`
+  help: `shapely` (v2.1.1) was included because `blue-prints` (v0.4.1) depends on `shapely`
+
+========================================
+Completed after_careful_mock version at: di 11 nov 2025 16:09:16 CET
+========================================
+Warning: Version directory '/home/xutong/SpeedUpSlowTest/versions/blueprints_691//test_suite' not found, skipping...
+
+========================================
+All tests completed at: di 11 nov 2025 16:09:26 CET
+Compared: after_careful_mock vs test_suite
+Log file: /home/xutong/SpeedUpSlowTest/versions/blueprints_691//test_results.log
+========================================

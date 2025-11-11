@@ -258,7 +258,7 @@ def func_debug():
 if __name__ == "__main__":
     # debug_pr_response("huggingface/transformers", "38480")
     # 示例用法：把你的 txt 路径放这里
-    path_to_txt = "ListOptTestItself-batch3.txt"
+    path_to_txt = "ListOptTestItself-batch4.txt"
 
     # 示例：去重、每次调用后等 0.2 秒，最多处理 None（全部）
     process_prs_file(path_to_txt, deduplicate=True, delay_secs=0.2, max_calls=None)
