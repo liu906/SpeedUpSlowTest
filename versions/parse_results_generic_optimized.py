@@ -254,8 +254,11 @@ def print_summary(energy_data, duration_data, execution_time_data):
 
     if duration_before and duration_after:
         time_reduction_pct = ((avg_duration_before - avg_duration_after) / avg_duration_before) * 100
-        time_speedup = avg_duration_before / avg_duration_after
-        print(f"  Speed ratio: {time_speedup:.2f}x faster in '{version2}'")
+        if avg_duration_after > 0:
+            time_speedup = avg_duration_before / avg_duration_after
+            print(f"  Speed ratio: {time_speedup:.2f}x faster in '{version2}'")
+        else:
+            print(f"  Speed ratio: Unable to calculate (after duration is 0.00s - tests too fast to measure)")
         print(f"  Time reduction: {time_reduction_pct:.2f}%")
 
     # Calculate total test time (average across runs)

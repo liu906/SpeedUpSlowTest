@@ -1,0 +1,2349 @@
+========================================
+Starting test runs for project: autosubmit_2367
+Iterations: 1
+Test command: python -m pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
+Requirement already satisfied: pytest-mock in /usr/local/lib/python3.10/dist-packages (3.15.1)
+Requirement already satisfied: pytest-xdist in /usr/local/lib/python3.10/dist-packages (3.8.0)
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before
+Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+  Installing build dependencies: started
+Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: execnet>=2.1 in /usr/local/lib/python3.10/dist-packages (from pytest-xdist) (2.1.1)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: xlib==0.21 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (0.21)
+Requirement already satisfied: bscearth.utils<=0.5.2 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (0.5.2)
+Collecting requests<=2.32.3 (from autosubmit==4.1.14)
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: networkx<=3.2.1 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (3.2.1)
+Requirement already satisfied: portalocker<=3.1.1 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (3.1.1)
+Requirement already satisfied: paramiko>=3.5.0 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (4.0.0)
+Requirement already satisfied: pyparsing==3.2.3 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (3.2.3)
+Requirement already satisfied: matplotlib<=3.9.4 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (3.9.4)
+Requirement already satisfied: typing_extensions==4.* in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (4.15.0)
+Requirement already satisfied: psutil<=7.0.0 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (7.0.0)
+Requirement already satisfied: py3dotplus==1.1.0 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (1.1.0)
+Requirement already satisfied: numpy<3 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (1.26.4)
+Requirement already satisfied: rocrate==0.* in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (0.14.2)
+Requirement already satisfied: autosubmitconfigparser==1.0.79 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (1.0.79)
+Requirement already satisfied: configparser in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (7.2.0)
+Requirement already satisfied: setproctitle in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (1.3.7)
+Requirement already satisfied: invoke>=2.0 in /usr/local/lib/python3.10/dist-packages (from autosubmit==4.1.14) (2.2.1)
+Requirement already satisfied: ruamel.yaml==0.18.6 in /usr/local/lib/python3.10/dist-packages (from autosubmitconfigparser==1.0.79->autosubmit==4.1.14) (0.18.6)
+Requirement already satisfied: mock in /usr/local/lib/python3.10/dist-packages (from autosubmitconfigparser==1.0.79->autosubmit==4.1.14) (5.2.0)
+Requirement already satisfied: configobj in /usr/local/lib/python3.10/dist-packages (from autosubmitconfigparser==1.0.79->autosubmit==4.1.14) (5.0.9)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /usr/local/lib/python3.10/dist-packages (from ruamel.yaml==0.18.6->autosubmitconfigparser==1.0.79->autosubmit==4.1.14) (0.2.14)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python3/dist-packages (from xlib==0.21->autosubmit==4.1.14) (1.16.0)
+Requirement already satisfied: python-dateutil in /usr/local/lib/python3.10/dist-packages (from bscearth.utils<=0.5.2->autosubmit==4.1.14) (2.9.0.post0)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib<=3.9.4->autosubmit==4.1.14) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib<=3.9.4->autosubmit==4.1.14) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib<=3.9.4->autosubmit==4.1.14) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib<=3.9.4->autosubmit==4.1.14) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib<=3.9.4->autosubmit==4.1.14) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib<=3.9.4->autosubmit==4.1.14) (9.0.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests<=2.32.3->autosubmit==4.1.14) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests<=2.32.3->autosubmit==4.1.14) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests<=2.32.3->autosubmit==4.1.14) (1.26.5)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests<=2.32.3->autosubmit==4.1.14) (2020.6.20)
+Requirement already satisfied: arcp==0.2.1 in /usr/local/lib/python3.10/dist-packages (from rocrate==0.*->autosubmit==4.1.14) (0.2.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from rocrate==0.*->autosubmit==4.1.14) (3.1.6)
+Requirement already satisfied: click in /usr/local/lib/python3.10/dist-packages (from rocrate==0.*->autosubmit==4.1.14) (8.3.0)
+Requirement already satisfied: bcrypt>=3.2 in /usr/lib/python3/dist-packages (from paramiko>=3.5.0->autosubmit==4.1.14) (3.2.0)
+Requirement already satisfied: cryptography>=3.3 in /usr/local/lib/python3.10/dist-packages (from paramiko>=3.5.0->autosubmit==4.1.14) (46.0.3)
+Requirement already satisfied: pynacl>=1.5 in /usr/lib/python3/dist-packages (from paramiko>=3.5.0->autosubmit==4.1.14) (1.5.0)
+Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from cryptography>=3.3->paramiko>=3.5.0->autosubmit==4.1.14) (2.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi>=2.0.0->cryptography>=3.3->paramiko>=3.5.0->autosubmit==4.1.14) (2.23)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/lib/python3/dist-packages (from jinja2->rocrate==0.*->autosubmit==4.1.14) (2.0.1)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Building wheels for collected packages: autosubmit
+  Building editable for autosubmit (pyproject.toml): started
+  Building editable for autosubmit (pyproject.toml): finished with status 'done'
+  Created wheel for autosubmit: filename=autosubmit-4.1.14-0.editable-py3-none-any.whl size=31703 sha256=8c32e49c471435e419b6ef86e2f7486a2725bca41a599c5d0ba69929907bb7e3
+  Stored in directory: /tmp/pip-ephem-wheel-cache-qvaclvgq/wheels/87/a2/5f/ecfb495b23b4367a4c6ffe53f1c49319a05a3fccd39d346d5b
+Successfully built autosubmit
+Installing collected packages: requests, autosubmit
+  Attempting uninstall: requests
+    Found existing installation: requests 2.32.5
+    Uninstalling requests-2.32.5:
+      Successfully uninstalled requests-2.32.5
+  Attempting uninstall: autosubmit
+    Found existing installation: autosubmit 4.1.14
+    Uninstalling autosubmit-4.1.14:
+      Successfully uninstalled autosubmit-4.1.14
+
+Successfully installed autosubmit-4.1.14 requests-2.32.3
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: wo 12 nov 2025 15:02:26 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before
+configfile: pytest.ini
+testpaths: test/unit, autosubmit
+plugins: mock-3.15.1, xdist-3.8.0
+created: 8/8 workers
+8 workers [649 items]
+
+scheduling tests via LoadGroupScheduling
+
+test/unit/helpers/test_processes.py::test_retrieve_expids[No expids, none is retrieved] 
+test/unit/helpers/test_parameters.py::test_autosubmit_decorator_no_group 
+test/unit/helpers/test_processes.py::test_retrieve_expids[Two expids, two are retrieved] 
+test/unit/helpers/test_processes.py::test_retrieve_expids[One expid, one is retrieved] 
+test/unit/helpers/test_parameters.py::test_autosubmit_class_decorator 
+test/unit/helpers/test_parameters.py::test_autosubmit_decorator 
+test/unit/helpers/test_processes.py::test_retrieve_expids[One expid, but different (and invalid POSIX) user, none is retrieved] 
+test/unit/helpers/test_parameters.py::test_autosubmit_decorator_using_array 
+[gw1] [  0%] PASSED test/unit/helpers/test_parameters.py::test_autosubmit_decorator_using_array 
+[gw5] [  0%] PASSED test/unit/helpers/test_parameters.py::test_autosubmit_class_decorator 
+[gw0] [  0%] PASSED test/unit/helpers/test_parameters.py::test_autosubmit_decorator 
+[gw3] [  0%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids[No expids, none is retrieved] 
+[gw4] [  0%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids[One expid, one is retrieved] 
+test/unit/helpers/test_processes.py::test_retrieve_expids[Two expids, none are valid, so none is retrievd] 
+[gw6] [  0%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids[One expid, but different (and invalid POSIX) user, none is retrieved] 
+test/unit/helpers/test_processes.py::test_retrieve_expids_but_cmdline_raises_zombies 
+test/unit/helpers/test_processes.py::test_process_id[a000-run-100] 
+test/unit/helpers/test_processes.py::test_retrieve_expids[Three expids, but one expid is invalid, so only two are retrieved] 
+[gw7] [  1%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids[Two expids, two are retrieved] 
+[gw1] [  1%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids[Two expids, none are valid, so none is retrievd] 
+test/unit/helpers/test_processes.py::test_process_id[a000-create-123] 
+test/unit/helpers/test_processes.py::test_process_id_nothing_found 
+test/unit/helpers/test_processes.py::test_process_id_multiple_found 
+[gw3] [  1%] PASSED test/unit/helpers/test_processes.py::test_process_id[a000-run-100] 
+[gw6] [  1%] PASSED test/unit/helpers/test_processes.py::test_process_id_nothing_found 
+[gw5] [  1%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids_but_cmdline_raises_zombies 
+[gw0] [  1%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids[Three expids, but one expid is invalid, so only two are retrieved] 
+test/unit/helpers/test_processes.py::test_process_id_but_there_are_zombies 
+[gw4] [  2%] PASSED test/unit/helpers/test_processes.py::test_process_id[a000-create-123] 
+test/unit/helpers/test_utils.py::test_strtobool[y-1] 
+test/unit/helpers/test_utils.py::test_strtobool[t-1] 
+[gw1] [  2%] PASSED test/unit/helpers/test_processes.py::test_process_id_but_there_are_zombies 
+test/unit/helpers/test_utils.py::test_strtobool[on-1] 
+test/unit/helpers/test_utils.py::test_strtobool[yes-1] 
+[gw7] [  2%] PASSED test/unit/helpers/test_processes.py::test_process_id_multiple_found 
+[gw5] [  2%] PASSED test/unit/helpers/test_utils.py::test_strtobool[y-1] 
+[gw3] [  2%] PASSED test/unit/helpers/test_utils.py::test_strtobool[t-1] 
+[gw0] [  2%] PASSED test/unit/helpers/test_utils.py::test_strtobool[yes-1] 
+[gw6] [  2%] PASSED test/unit/helpers/test_utils.py::test_strtobool[on-1] 
+test/unit/helpers/test_utils.py::test_strtobool[true-1] 
+[gw4] [  3%] PASSED test/unit/helpers/test_utils.py::test_strtobool[true-1] 
+test/unit/helpers/test_utils.py::test_strtobool[YES-1] 
+test/unit/helpers/test_utils.py::test_strtobool[1-1] 
+test/unit/helpers/test_utils.py::test_strtobool[TrUE-1] 
+test/unit/helpers/test_utils.py::test_strtobool[no-0] 
+[gw5] [  3%] PASSED test/unit/helpers/test_utils.py::test_strtobool[TrUE-1] 
+[gw7] [  3%] PASSED test/unit/helpers/test_utils.py::test_strtobool[1-1] 
+test/unit/helpers/test_utils.py::test_strtobool[n-0] 
+test/unit/helpers/test_utils.py::test_strtobool[f-0] 
+[gw6] [  3%] PASSED test/unit/helpers/test_utils.py::test_strtobool[n-0] 
+test/unit/helpers/test_utils.py::test_strtobool[F-0] 
+[gw4] [  3%] PASSED test/unit/helpers/test_utils.py::test_strtobool[F-0] 
+[gw1] [  3%] PASSED test/unit/helpers/test_utils.py::test_strtobool[YES-1] 
+[gw3] [  4%] PASSED test/unit/helpers/test_utils.py::test_strtobool[no-0] 
+[gw0] [  4%] PASSED test/unit/helpers/test_utils.py::test_strtobool[f-0] 
+test/unit/helpers/test_utils.py::test_strtobool[OFF-0] 
+test/unit/helpers/test_utils.py::test_strtobool[off-0] 
+test/unit/helpers/test_utils.py::test_strtobool[Nay-ValueError] 
+test/unit/helpers/test_utils.py::test_strtobool[Nah-ValueError] 
+test/unit/helpers/test_utils.py::test_strtobool[Yay-ValueError] 
+test/unit/helpers/test_utils.py::test_strtobool[0-0] 
+test/unit/helpers/test_utils.py::test_strtobool[false-0] 
+[gw6] [  4%] PASSED test/unit/helpers/test_utils.py::test_strtobool[Nay-ValueError] 
+[gw5] [  4%] PASSED test/unit/helpers/test_utils.py::test_strtobool[OFF-0] 
+[gw1] [  4%] PASSED test/unit/helpers/test_utils.py::test_strtobool[false-0] 
+[gw0] [  4%] PASSED test/unit/helpers/test_utils.py::test_strtobool[Yay-ValueError] 
+[gw4] [  4%] PASSED test/unit/helpers/test_utils.py::test_strtobool[Nah-ValueError] 
+[gw3] [  5%] PASSED test/unit/helpers/test_utils.py::test_strtobool[0-0] 
+[gw7] [  5%] PASSED test/unit/helpers/test_utils.py::test_strtobool[off-0] 
+test/unit/helpers/test_utils.py::test_get_rc_path[Use machine, even if local is true] 
+[gw1] [  5%] PASSED test/unit/helpers/test_utils.py::test_get_rc_path[Use machine, even if local is true] 
+test/unit/history/platform_monitor/test_slurm_monitor.py::test_slurm_monitor_energy_values 
+test/unit/helpers/test_utils.py::test_get_rc_path[Use env var] 
+[gw5] [  5%] PASSED test/unit/helpers/test_utils.py::test_get_rc_path[Use env var] 
+test/unit/helpers/test_utils.py::test_get_rc_path[Use local] 
+[gw4] [  5%] PASSED test/unit/helpers/test_utils.py::test_get_rc_path[Use local] 
+test/unit/helpers/test_utils.py::test_get_rc_path[Use machine] 
+[gw6] [  5%] PASSED test/unit/helpers/test_utils.py::test_get_rc_path[Use machine] 
+test/unit/helpers/test_utils.py::test_get_rc_path[Use home] 
+[gw3] [  6%] PASSED test/unit/helpers/test_utils.py::test_get_rc_path[Use home] 
+[gw0] [  6%] PASSED test/unit/history/platform_monitor/test_slurm_monitor.py::test_slurm_monitor_energy_values 
+test/unit/helpers/test_utils.py::test_strtobool[2-ValueError] 
+[gw7] [  6%] PASSED test/unit/helpers/test_utils.py::test_strtobool[2-ValueError] 
+test/unit/history/test_strategies_straight_wrapper.py::test_straight_wrapper_distribution_no_wrappers 
+test/unit/history/test_single_association_strategy.py::test_straight_wrapper_distribution_with_wrappers 
+test/unit/job/test_job_utils.py::test_cancellation_without_target 
+test/unit/history/test_single_association_strategy.py::test_straight_wrapper_distribution 
+test/unit/job/test_job_utils.py::test_cancellation_with_invalid_active_states[active states is empty] 
+test/unit/history/test_strategies_straight_wrapper.py::test_straight_wrapper_distribution 
+test/unit/job/test_job_utils.py::test_cancellation_with_invalid_active_states[active states is None] 
+[gw1] [  6%] PASSED test/unit/history/test_strategies_straight_wrapper.py::test_straight_wrapper_distribution_no_wrappers 
+[gw6] [  6%] PASSED test/unit/history/test_single_association_strategy.py::test_straight_wrapper_distribution_with_wrappers 
+[gw5] [  6%] PASSED test/unit/history/test_single_association_strategy.py::test_straight_wrapper_distribution 
+[gw0] [  6%] PASSED test/unit/history/test_strategies_straight_wrapper.py::test_straight_wrapper_distribution 
+test/unit/job/test_job_utils.py::test_cancel_jobs 
+test/unit/job/test_job_utils.py::test_cancel_jobs_platform_error 
+test/unit/monitor/test_monitor.py::test_display_file_linux 
+test/unit/monitor/test_monitor.py::test_color_status 
+[gw0] [  7%] PASSED test/unit/monitor/test_monitor.py::test_color_status 
+test/unit/monitor/test_monitor.py::test_check_node_exists[within group, multiple job group elements, not hiding] 
+[gw6] [  7%] PASSED test/unit/monitor/test_monitor.py::test_display_file_linux 
+test/unit/monitor/test_monitor.py::test_check_node_exists[within group, single job group element, but hiding] 
+[gw0] [  7%] PASSED test/unit/monitor/test_monitor.py::test_check_node_exists[within group, multiple job group elements, not hiding] 
+test/unit/monitor/test_monitor.py::test_create_node[no groups] 
+[gw6] [  7%] PASSED test/unit/monitor/test_monitor.py::test_check_node_exists[within group, single job group element, but hiding] 
+[gw0] [  7%] PASSED test/unit/monitor/test_monitor.py::test_create_node[no groups] 
+test/unit/monitor/test_monitor.py::test_create_node[not in the group] 
+test/unit/monitor/test_monitor.py::test_create_node[within group, but hiding] 
+[gw0] [  7%] PASSED test/unit/monitor/test_monitor.py::test_create_node[within group, but hiding] 
+[gw6] [  8%] PASSED test/unit/monitor/test_monitor.py::test_create_node[not in the group] 
+test/unit/monitor/test_monitor.py::test_create_node[within group, not hiding, single element, no quotes] 
+test/unit/monitor/test_monitor.py::test_create_node[within group, not hiding, but more than one element] 
+[gw0] [  8%] PASSED test/unit/monitor/test_monitor.py::test_create_node[within group, not hiding, single element, no quotes] 
+[gw6] [  8%] PASSED test/unit/monitor/test_monitor.py::test_create_node[within group, not hiding, but more than one element] 
+test/unit/monitor/test_monitor.py::test_create_node[within group, not hiding, single element, quotes will be replaced] 
+test/unit/monitor/test_monitor.py::test_check_final_status[no child edge info] 
+[gw0] [  8%] PASSED test/unit/monitor/test_monitor.py::test_create_node[within group, not hiding, single element, quotes will be replaced] 
+[gw6] [  8%] PASSED test/unit/monitor/test_monitor.py::test_check_final_status[no child edge info] 
+test/unit/monitor/test_monitor.py::test_check_final_status[job name not found in edge info] 
+test/unit/monitor/test_monitor.py::test_check_final_status[job name found, but label is zero] 
+[gw0] [  8%] PASSED test/unit/monitor/test_monitor.py::test_check_final_status[job name not found in edge info] 
+test/unit/monitor/test_monitor.py::test_check_final_status[job name found, label is not zero] 
+[gw6] [  8%] PASSED test/unit/monitor/test_monitor.py::test_check_final_status[job name found, but label is zero] 
+[gw0] [  9%] PASSED test/unit/monitor/test_monitor.py::test_check_final_status[job name found, label is not zero] 
+test/unit/monitor/test_monitor.py::test_clean_plot 
+test/unit/monitor/test_monitor.py::test_clean_stats 
+[gw0] [  9%] PASSED test/unit/monitor/test_monitor.py::test_clean_stats 
+[gw6] [  9%] PASSED test/unit/monitor/test_monitor.py::test_clean_plot 
+test/unit/monitor/test_monitor.py::test_create_tree_list[jobs0] 
+test/unit/monitor/test_monitor.py::test_create_tree_list[jobs1] 
+[gw2] [  9%] PASSED test/unit/helpers/test_parameters.py::test_autosubmit_decorator_no_group 
+test/unit/helpers/test_processes.py::test_retrieve_expids_but_listing_raises_zombies 
+[gw0] [  9%] PASSED test/unit/monitor/test_monitor.py::test_create_tree_list[jobs1] 
+[gw6] [  9%] PASSED test/unit/monitor/test_monitor.py::test_create_tree_list[jobs0] 
+test/unit/monitor/test_monitor.py::test_generate_output[png-True-None-None] 
+[gw2] [ 10%] PASSED test/unit/helpers/test_processes.py::test_retrieve_expids_but_listing_raises_zombies 
+test/unit/monitor/test_monitor.py::test_create_tree_list_grouped_jobs 
+test/unit/monitor/test_monitor.py::test_generate_output[pdf-True-None-None] 
+[gw6] [ 10%] PASSED test/unit/monitor/test_monitor.py::test_create_tree_list_grouped_jobs 
+test/unit/monitor/test_monitor.py::test_generate_output[ps-True-display_error3-None] 
+[gw4] [ 10%] PASSED test/unit/job/test_job_utils.py::test_cancellation_without_target 
+test/unit/monitor/test_monitor.py::test_display_files_fallback 
+[gw4] [ 10%] PASSED test/unit/monitor/test_monitor.py::test_display_files_fallback 
+test/unit/monitor/test_monitor.py::test_generate_output[None-False-None-AutosubmitCritical] 
+[gw3] [ 10%] PASSED test/unit/job/test_job_utils.py::test_cancellation_with_invalid_active_states[active states is None] 
+test/unit/monitor/test_monitor.py::test_check_node_exists[no groups] 
+[gw7] [ 10%] PASSED test/unit/job/test_job_utils.py::test_cancellation_with_invalid_active_states[active states is empty] 
+[gw5] [ 10%] PASSED test/unit/job/test_job_utils.py::test_cancel_jobs_platform_error 
+[gw3] [ 11%] PASSED test/unit/monitor/test_monitor.py::test_check_node_exists[no groups] 
+test/unit/monitor/test_monitor.py::test_display_file_macos 
+test/unit/monitor/test_monitor.py::test_check_node_exists[within group, single job group element, not hiding] 
+test/unit/monitor/test_monitor.py::test_generate_output_unexpected_error[Something something, GraphViz, something else] 
+[gw7] [ 11%] PASSED test/unit/monitor/test_monitor.py::test_display_file_macos 
+[gw5] [ 11%] PASSED test/unit/monitor/test_monitor.py::test_check_node_exists[within group, single job group element, not hiding] 
+test/unit/monitor/test_monitor.py::test_generate_output_txt[no jobs, nothing written] 
+test/unit/monitor/test_monitor.py::test_generate_output_txt[jobs, classic, no jobs completed nor finished, one line written] 
+[gw3] [ 11%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_unexpected_error[Something something, GraphViz, something else] 
+[gw1] [ 11%] PASSED test/unit/job/test_job_utils.py::test_cancel_jobs 
+test/unit/monitor/test_monitor.py::test_generate_output_txt[jobs, classic, one job finished, one line written] 
+test/unit/monitor/test_monitor.py::test_check_node_exists[not in group] 
+[gw5] [ 11%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_txt[jobs, classic, no jobs completed nor finished, one line written] 
+test/unit/monitor/test_monitor.py::test_generate_output_txt[job list, not classic, two lines one being a note about a Job List used] 
+[gw7] [ 12%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_txt[no jobs, nothing written] 
+[gw1] [ 12%] PASSED test/unit/monitor/test_monitor.py::test_check_node_exists[not in group] 
+test/unit/monitor/test_monitor.py::test_generate_output_txt[no job list, not classic, two lines one being a log] 
+test/unit/monitor/test_monitor.py::test_generate_output_stats[no jobs, no report] 
+[gw3] [ 12%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_txt[jobs, classic, one job finished, one line written] 
+test/unit/monitor/test_monitor.py::test_generate_output_txt_job_with_children 
+[gw5] [ 12%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_txt[job list, not classic, two lines one being a note about a Job List used] 
+[gw7] [ 12%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_txt[no job list, not classic, two lines one being a log] 
+test/unit/monitor/test_monitor.py::test_generate_output_stats[no jobs, hiding, no report] 
+test/unit/monitor/test_monitor.py::test_generate_output_stats[jobs, but hiding, no report] 
+[gw3] [ 12%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_txt_job_with_children 
+test/unit/platforms/test_locplatform.py::test_local_platform_copy 
+[gw1] [ 12%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_stats[no jobs, no report] 
+test/unit/monitor/test_monitor.py::test_generate_output_stats[jobs, not hiding, output produced] 
+[gw5] [ 13%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_stats[no jobs, hiding, no report] 
+test/unit/platforms/test_locplatform.py::test_get_stat_file[use fail_count, delete stats_file, remote file transferred] 
+[gw3] [ 13%] PASSED test/unit/platforms/test_locplatform.py::test_local_platform_copy 
+test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, no stats_file, remote file transferred] 
+[gw3] [ 13%] PASSED test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, no stats_file, remote file transferred] 
+[gw5] [ 13%] PASSED test/unit/platforms/test_locplatform.py::test_get_stat_file[use fail_count, delete stats_file, remote file transferred] 
+test/unit/provenance/test_rocrate.py::test_add_dir_and_files 
+test/unit/provenance/test_rocrate.py::test_add_dir_and_files_empty_folder 
+[gw5] [ 13%] PASSED test/unit/provenance/test_rocrate.py::test_add_dir_and_files_empty_folder 
+test/unit/provenance/test_rocrate.py::test_get_action_status 
+[gw5] [ 13%] PASSED test/unit/provenance/test_rocrate.py::test_get_action_status 
+[gw3] [ 14%] PASSED test/unit/provenance/test_rocrate.py::test_add_dir_and_files 
+test/unit/provenance/test_rocrate.py::test_create_formal_parameter 
+[gw5] [ 14%] PASSED test/unit/provenance/test_rocrate.py::test_create_formal_parameter 
+test/unit/provenance/test_rocrate.py::test_add_dir_and_files_set_encoding 
+test/unit/provenance/test_rocrate.py::test_create_parameter 
+[gw5] [ 14%] PASSED test/unit/provenance/test_rocrate.py::test_create_parameter 
+[gw3] [ 14%] PASSED test/unit/provenance/test_rocrate.py::test_add_dir_and_files_set_encoding 
+test/unit/provenance/test_rocrate.py::test_get_dummy_project_entity 
+test/unit/provenance/test_rocrate.py::test_get_local_project_entity 
+[gw5] [ 14%] PASSED test/unit/provenance/test_rocrate.py::test_get_dummy_project_entity 
+test/unit/provenance/test_rocrate.py::test_get_subversion_or_other_project_entity 
+[gw3] [ 14%] PASSED test/unit/provenance/test_rocrate.py::test_get_local_project_entity 
+test/unit/provenance/test_rocrate.py::test_get_git_project_entity 
+[gw5] [ 14%] PASSED test/unit/provenance/test_rocrate.py::test_get_subversion_or_other_project_entity 
+test/unit/provenance/test_rocrate.py::test_get_git_branch_and_commit 
+[gw5] [ 15%] PASSED test/unit/provenance/test_rocrate.py::test_get_git_branch_and_commit 
+test/unit/provenance/test_rocrate.py::test_rocrate_invalid_project 
+[gw3] [ 15%] PASSED test/unit/provenance/test_rocrate.py::test_get_git_project_entity 
+test/unit/provenance/test_rocrate.py::test_rocrate 
+[gw5] [ 15%] PASSED test/unit/provenance/test_rocrate.py::test_rocrate_invalid_project 
+test/unit/provenance/test_rocrate.py::test_rocrate_invalid_parameter_type 
+[gw5] [ 15%] PASSED test/unit/provenance/test_rocrate.py::test_rocrate_invalid_parameter_type 
+test/unit/provenance/test_rocrate.py::test_rocrate_main 
+[gw3] [ 15%] PASSED test/unit/provenance/test_rocrate.py::test_rocrate 
+test/unit/provenance/test_rocrate.py::test_rocrate_main_fail_missing_rocrate 
+[gw3] [ 15%] PASSED test/unit/provenance/test_rocrate.py::test_rocrate_main_fail_missing_rocrate 
+test/unit/provenance/test_rocrate.py::test_no_duplicate_ids 
+[gw5] [ 16%] PASSED test/unit/provenance/test_rocrate.py::test_rocrate_main 
+test/unit/provenance/test_rocrate.py::test_custom_config_loaded_file 
+[gw3] [ 16%] PASSED test/unit/provenance/test_rocrate.py::test_no_duplicate_ids 
+test/unit/scripts/test_autosubmit.py::test_autosubmit_script_main 
+[gw5] [ 16%] PASSED test/unit/provenance/test_rocrate.py::test_custom_config_loaded_file 
+test/unit/scripts/test_autosubmit.py::test_autosubmit_script_readme 
+[gw3] [ 16%] PASSED test/unit/scripts/test_autosubmit.py::test_autosubmit_script_main 
+test/unit/scripts/test_autosubmit.py::test_autosubmit_script_error_raised 
+[gw3] [ 16%] PASSED test/unit/scripts/test_autosubmit.py::test_autosubmit_script_error_raised 
+test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, but tasks is, so we get ceil of processors by tasks] 
+[gw3] [ 16%] PASSED test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, but tasks is, so we get ceil of processors by tasks] 
+test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, tasks is not digit, processors per node is not digit, so we get 1] 
+[gw3] [ 16%] PASSED test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, tasks is not digit, processors per node is not digit, so we get 1] 
+[gw5] [ 17%] PASSED test/unit/scripts/test_autosubmit.py::test_autosubmit_script_readme 
+test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, tasks is not digit, processors per node is digit but processors is less than processors per node, so we get 1] 
+test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is digit, so we get nodes] 
+[gw3] [ 17%] PASSED test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, tasks is not digit, processors per node is digit but processors is less than processors per node, so we get 1] 
+[gw5] [ 17%] PASSED test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is digit, so we get nodes] 
+test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, tasks is not digit, processors per node is digit and processors is greater than processors per node, so we get ceil of processors by processors per node] 
+test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes as well, multiply both] 
+[gw3] [ 17%] PASSED test/unit/statistics/test_jobs_stat.py::test_estimate_requested_nodes[nodes is not digit, tasks is not digit, processors per node is digit and processors is greater than processors per node, so we get ceil of processors by processors per node] 
+test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes is not, exclusive, multiply estimated by processors per node] 
+[gw3] [ 17%] PASSED test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes is not, exclusive, multiply estimated by processors per node] 
+[gw5] [ 17%] PASSED test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes as well, multiply both] 
+test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes is not, not exclusive, estimated is one] 
+test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes is not, not exclusive, estimated is one,processors greater than processors per node, multiply estimated by processors per node] 
+[gw3] [ 18%] PASSED test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes is not, not exclusive, estimated is one] 
+[gw5] [ 18%] PASSED test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is digit, nodes is not, not exclusive, estimated is one,processors greater than processors per node, multiply estimated by processors per node] 
+test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is not digit, and tasks is digit, return processors] 
+test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is not digit, tasks is not digit, and nodes is digit, return processors] 
+[gw3] [ 18%] PASSED test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is not digit, and tasks is digit, return processors] 
+test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is not digit, tasks is not digit, nodes is not digit, return processors] 
+[gw5] [ 18%] PASSED test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is not digit, tasks is not digit, and nodes is digit, return processors] 
+test/unit/statistics/test_statistics.py::test_build_statistics_object[create_jobs0] 
+[gw3] [ 18%] PASSED test/unit/statistics/test_jobs_stat.py::test_calculate_processing_elements[processors per node is not digit, tasks is not digit, nodes is not digit, return processors] 
+test/unit/statistics/test_statistics.py::test_calculate_statistics[create_jobs0] 
+[gw5] [ 18%] PASSED test/unit/statistics/test_statistics.py::test_build_statistics_object[create_jobs0] 
+test/unit/statistics/test_statistics.py::test_calculate_summary[create_jobs0] 
+[gw3] [ 18%] PASSED test/unit/statistics/test_statistics.py::test_calculate_statistics[create_jobs0] 
+test/unit/statistics/test_statistics.py::test_get_summary_as_list[create_jobs0] 
+[gw5] [ 19%] PASSED test/unit/statistics/test_statistics.py::test_calculate_summary[create_jobs0] 
+test/unit/statistics/test_statistics.py::test_make_old_format[create_jobs0] 
+[gw3] [ 19%] PASSED test/unit/statistics/test_statistics.py::test_get_summary_as_list[create_jobs0] 
+test/unit/statistics/test_statistics.py::test_build_failed_job_only[create_jobs0] 
+[gw5] [ 19%] PASSED test/unit/statistics/test_statistics.py::test_make_old_format[create_jobs0] 
+test/unit/test_autosubmit.py::test_copy_as_config 
+[gw3] [ 19%] PASSED test/unit/statistics/test_statistics.py::test_build_failed_job_only[create_jobs0] 
+test/unit/test_autosubmit_git.py::test_submodules_fails_with_invalid_as_conf 
+[gw3] [ 19%] PASSED test/unit/test_autosubmit_git.py::test_submodules_fails_with_invalid_as_conf 
+test/unit/test_autosubmit_git.py::test_submodules_list_not_empty 
+[gw5] [ 19%] PASSED test/unit/test_autosubmit.py::test_copy_as_config 
+test/unit/test_autosubmit_git.py::test_submodules_empty_string 
+[gw3] [ 20%] PASSED test/unit/test_autosubmit_git.py::test_submodules_list_not_empty 
+test/unit/test_autosubmit_git.py::test_submodules_false_disables_submodules 
+[gw5] [ 20%] PASSED test/unit/test_autosubmit_git.py::test_submodules_empty_string 
+test/unit/test_autosubmit_git.py::test_copy_code[Git clone without type defined] 
+[gw3] [ 20%] PASSED test/unit/test_autosubmit_git.py::test_submodules_false_disables_submodules 
+[gw5] [ 20%] PASSED test/unit/test_autosubmit_git.py::test_copy_code[Git clone without type defined] 
+test/unit/test_autosubmit_git.py::test_copy_code[Git clone with the correct type defined] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[https://github.com/user/repo.git-True] 
+[gw5] [ 20%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[https://github.com/user/repo.git-True] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[not-a-repo-link-False] 
+[gw5] [ 20%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[not-a-repo-link-False] 
+[gw3] [ 20%] PASSED test/unit/test_autosubmit_git.py::test_copy_code[Git clone with the correct type defined] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[git@github.com:user/repo.git-True] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[file:///home/user/project-True] 
+[gw5] [ 21%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[git@github.com:user/repo.git-True] 
+[gw3] [ 21%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[file:///home/user/project-True] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[user@gitserver.com:user/repo.git-True] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[http://bitbucket.org/user/repo.git-True] 
+[gw5] [ 21%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[user@gitserver.com:user/repo.git-True] 
+[gw3] [ 21%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[http://bitbucket.org/user/repo.git-True] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[ftp://invalid/protocol/repo.git-False] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[-False] 
+[gw5] [ 21%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[ftp://invalid/protocol/repo.git-False] 
+[gw3] [ 21%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[-False] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[file://-False] 
+test/unit/test_autosubmit_git.py::test_valid_git_repo_check[https://github.com/user/repo-False] 
+[gw5] [ 22%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[file://-False] 
+[gw3] [ 22%] PASSED test/unit/test_autosubmit_git.py::test_valid_git_repo_check[https://github.com/user/repo-False] 
+test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-o001] 
+test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-a001] 
+[gw7] [ 22%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_stats[jobs, but hiding, no report] 
+[gw1] [ 22%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_stats[jobs, not hiding, output produced] 
+test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, no stats_file, failed to transfer] 
+test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, delete stats_file, remote file transferred] 
+[gw1] [ 22%] PASSED test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, delete stats_file, remote file transferred] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours] 
+[gw1] [ 22%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format] 
+[gw1] [ 22%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format] 
+[gw1] [ 23%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds] 
+[gw2] [ 23%] FAILED test/unit/monitor/test_monitor.py::test_generate_output[pdf-True-None-None] 
+test/unit/monitor/test_monitor.py::test_generate_output[svg-True-None-None] 
+[gw0] [ 23%] FAILED test/unit/monitor/test_monitor.py::test_generate_output[png-True-None-None] 
+test/unit/monitor/test_monitor.py::test_generate_output[ps-False-None-None] 
+[gw4] [ 23%] PASSED test/unit/monitor/test_monitor.py::test_generate_output[None-False-None-AutosubmitCritical] 
+test/unit/monitor/test_monitor.py::test_generate_output_unexpected_error[Unexpected] 
+[gw4] [ 23%] PASSED test/unit/monitor/test_monitor.py::test_generate_output_unexpected_error[Unexpected] 
+test/unit/test_autosubmit_helper.py::test_get_allowed_members[one ids] 
+[gw4] [ 23%] XPASS test/unit/test_autosubmit_helper.py::test_get_allowed_members[one ids] 
+test/unit/test_autosubmit_helper.py::test_get_allowed_members[multiple sent ids] 
+[gw4] [ 24%] XPASS test/unit/test_autosubmit_helper.py::test_get_allowed_members[multiple sent ids] 
+test/unit/test_autosubmit_helper.py::test_get_allowed_members[multiple return ids] 
+[gw4] [ 24%] XPASS test/unit/test_autosubmit_helper.py::test_get_allowed_members[multiple return ids] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_after[expid instead of time] 
+[gw4] [ 24%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_after[expid instead of time] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_after[wrong format hours] 
+[gw6] [ 24%] FAILED test/unit/monitor/test_monitor.py::test_generate_output[ps-True-display_error3-None] 
+[gw4] [ 24%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_after[wrong format hours] 
+test/unit/monitor/test_monitor.py::test_generate_output[txt-False-None-None] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_after[right format hours] 
+[gw4] [ 24%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_after[right format hours] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_after[fulldate wrong format false] 
+[gw4] [ 24%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_after[fulldate wrong format false] 
+test/unit/test_basic_config.py::test_update_config_set_the_right_db_path 
+[gw4] [ 25%] PASSED test/unit/test_basic_config.py::test_update_config_set_the_right_db_path 
+test/unit/test_basic_config.py::test_read_makes_the_right_method_calls 
+[gw4] [ 25%] PASSED test/unit/test_basic_config.py::test_read_makes_the_right_method_calls 
+test/unit/test_catlog.py::test_invalid_file 
+[gw4] [ 25%] PASSED test/unit/test_catlog.py::test_invalid_file 
+test/unit/test_catlog.py::test_invalid_mode 
+[gw4] [ 25%] PASSED test/unit/test_catlog.py::test_invalid_mode 
+test/unit/test_catlog.py::test_is_workflow_invalid_file 
+[gw4] [ 25%] PASSED test/unit/test_catlog.py::test_is_workflow_invalid_file 
+test/unit/test_catlog.py::test_is_workflow_not_found 
+[gw4] [ 25%] PASSED test/unit/test_catlog.py::test_is_workflow_not_found 
+test/unit/test_catlog.py::test_is_workflow_log_is_dir 
+[gw4] [ 26%] PASSED test/unit/test_catlog.py::test_is_workflow_log_is_dir 
+test/unit/test_catlog.py::test_is_workflow_out_cat 
+[gw4] [ 26%] PASSED test/unit/test_catlog.py::test_is_workflow_out_cat 
+test/unit/test_catlog.py::test_is_workflow_status_tail 
+[gw4] [ 26%] PASSED test/unit/test_catlog.py::test_is_workflow_status_tail 
+test/unit/test_catlog.py::test_is_jobs_not_found 
+[gw4] [ 26%] PASSED test/unit/test_catlog.py::test_is_jobs_not_found 
+test/unit/test_catlog.py::test_is_jobs_log_is_dir 
+[gw4] [ 26%] PASSED test/unit/test_catlog.py::test_is_jobs_log_is_dir 
+test/unit/test_catlog.py::test_is_jobs_out_tail 
+[gw4] [ 26%] PASSED test/unit/test_catlog.py::test_is_jobs_out_tail 
+test/unit/test_catlog.py::test_command_line_help 
+[gw3] [ 26%] PASSED test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-a001] 
+test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-e001] 
+[gw5] [ 27%] PASSED test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-o001] 
+[gw4] [ 27%] PASSED test/unit/test_catlog.py::test_command_line_help 
+test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-t001] 
+test/unit/test_checkpoints.py::test_add_edge_job 
+[gw7] [ 27%] PASSED test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, no stats_file, failed to transfer] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours] 
+[gw7] [ 27%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours] 
+test/unit/test_chunk_date_lib.py::test_add_years 
+[gw7] [ 27%] PASSED test/unit/test_chunk_date_lib.py::test_add_years 
+test/unit/test_chunk_date_lib.py::test_add_months 
+[gw7] [ 27%] PASSED test/unit/test_chunk_date_lib.py::test_add_months 
+test/unit/test_chunk_date_lib.py::test_add_days 
+[gw7] [ 28%] PASSED test/unit/test_chunk_date_lib.py::test_add_days 
+test/unit/test_chunk_date_lib.py::test_add_hours 
+[gw7] [ 28%] PASSED test/unit/test_chunk_date_lib.py::test_add_hours 
+test/unit/test_chunk_date_lib.py::test_subs_dates 
+[gw7] [ 28%] PASSED test/unit/test_chunk_date_lib.py::test_subs_dates 
+test/unit/test_chunk_date_lib.py::test_subs_days 
+[gw7] [ 28%] PASSED test/unit/test_chunk_date_lib.py::test_subs_days 
+test/unit/test_chunk_date_lib.py::test_chunk_start_date 
+[gw7] [ 28%] PASSED test/unit/test_chunk_date_lib.py::test_chunk_start_date 
+test/unit/test_chunk_date_lib.py::test_chunk_end_date 
+[gw7] [ 28%] PASSED test/unit/test_chunk_date_lib.py::test_chunk_end_date 
+test/unit/test_chunk_date_lib.py::test_previous_date 
+[gw7] [ 28%] PASSED test/unit/test_chunk_date_lib.py::test_previous_date 
+test/unit/test_chunk_date_lib.py::test_parse_date 
+[gw7] [ 29%] PASSED test/unit/test_chunk_date_lib.py::test_parse_date 
+test/unit/test_chunk_date_lib.py::test_date2str 
+[gw7] [ 29%] PASSED test/unit/test_chunk_date_lib.py::test_date2str 
+test/unit/test_chunk_date_lib.py::test_sum_str_hours 
+[gw7] [ 29%] PASSED test/unit/test_chunk_date_lib.py::test_sum_str_hours 
+test/unit/test_chunk_date_lib.py::test_split_str_hours 
+[gw7] [ 29%] PASSED test/unit/test_chunk_date_lib.py::test_split_str_hours 
+test/unit/test_commands.py::test_invalid_commands[Invalid args for create] 
+[gw7] [ 29%] PASSED test/unit/test_commands.py::test_invalid_commands[Invalid args for create] 
+test/unit/test_commands.py::test_invalid_commands[Invalid subcommand] 
+[gw7] [ 29%] PASSED test/unit/test_commands.py::test_invalid_commands[Invalid subcommand] 
+test/unit/test_commands.py::test_invalid_commands[No command provided] 
+[gw7] [ 30%] PASSED test/unit/test_commands.py::test_invalid_commands[No command provided] 
+[gw6] [ 30%] PASSED test/unit/monitor/test_monitor.py::test_generate_output[txt-False-None-None] 
+test/unit/test_commands.py::test_exceptions_raised[SystemExit-None-1] 
+test/unit/test_autosubmit_helper.py::teste_handle_start_after[fulldate wrong format] 
+[gw7] [ 30%] PASSED test/unit/test_commands.py::test_exceptions_raised[SystemExit-None-1] 
+[gw3] [ 30%] PASSED test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-e001] 
+test/unit/test_commands.py::test_exceptions_raised[BaseException-AutosubmitCritical-None] 
+test/unit/test_checkpoints.py::test_add_edge_info_joblist 
+[gw5] [ 30%] PASSED test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-t001] 
+[gw7] [ 30%] PASSED test/unit/test_commands.py::test_exceptions_raised[BaseException-AutosubmitCritical-None] 
+[gw0] [ 30%] FAILED test/unit/monitor/test_monitor.py::test_generate_output[ps-False-None-None] 
+test/unit/test_checkpoints.py::test_check_special_status 
+[gw2] [ 31%] FAILED test/unit/monitor/test_monitor.py::test_generate_output[svg-True-None-None] 
+[gw6] [ 31%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_after[fulldate wrong format] 
+test/unit/test_configure.py::test_configure[] 
+test/unit/test_autosubmit_helper.py::test_get_allowed_members[expected AScritical rmembers] 
+test/unit/test_autosubmit_helper.py::test_get_allowed_members[expected AScritical members] 
+test/unit/test_commands.py::test_exceptions_raised[ValueError-AutosubmitCritical-None] 
+[gw6] [ 31%] PASSED test/unit/test_commands.py::test_exceptions_raised[ValueError-AutosubmitCritical-None] 
+test/unit/test_dependencies.py::test_parse_filter_to_check 
+[gw7] [ 31%] PASSED test/unit/test_configure.py::test_configure[] 
+test/unit/test_dependencies.py::test_unify_to_filter 
+[gw0] [ 31%] XFAIL test/unit/test_autosubmit_helper.py::test_get_allowed_members[expected AScritical rmembers] 
+[gw2] [ 31%] XFAIL test/unit/test_autosubmit_helper.py::test_get_allowed_members[expected AScritical members] 
+test/unit/test_dependencies.py::test_simple_dependency 
+test/unit/test_dependencies.py::test_parse_filters_to_check 
+[gw2] [ 32%] PASSED test/unit/test_dependencies.py::test_parse_filters_to_check 
+[gw6] [ 32%] PASSED test/unit/test_dependencies.py::test_parse_filter_to_check 
+test/unit/test_dependencies.py::test_check_chunks 
+test/unit/test_dependencies.py::test_check_dates 
+[gw0] [ 32%] PASSED test/unit/test_dependencies.py::test_simple_dependency 
+[gw7] [ 32%] PASSED test/unit/test_dependencies.py::test_unify_to_filter 
+test/unit/test_dependencies.py::test_check_splits 
+test/unit/test_dependencies.py::test_check_members 
+[gw4] [ 32%] PASSED test/unit/test_checkpoints.py::test_add_edge_job 
+test/unit/test_chunk_date_lib.py::test_add_time 
+[gw4] [ 32%] PASSED test/unit/test_chunk_date_lib.py::test_add_time 
+test/unit/test_dependencies.py::test_job_dict_get_jobs_filtered 
+[gw2] [ 32%] PASSED test/unit/test_dependencies.py::test_check_chunks 
+[gw6] [ 33%] PASSED test/unit/test_dependencies.py::test_check_dates 
+test/unit/test_dependencies.py::test_check_general 
+test/unit/test_dependencies.py::test_check_relationship 
+[gw7] [ 33%] PASSED test/unit/test_dependencies.py::test_check_members 
+test/unit/test_dependencies.py::test_add_special_conditions_chunks_to_once 
+[gw4] [ 33%] PASSED test/unit/test_dependencies.py::test_job_dict_get_jobs_filtered 
+[gw0] [ 33%] PASSED test/unit/test_dependencies.py::test_check_splits 
+test/unit/test_dependencies.py::test_normalize_auto_keyword 
+test/unit/test_dependencies.py::test_add_special_conditions 
+[gw4] [ 33%] PASSED test/unit/test_dependencies.py::test_normalize_auto_keyword 
+test/unit/test_diagram.py::test_job_agg_data 
+[gw4] [ 33%] PASSED test/unit/test_diagram.py::test_job_agg_data 
+test/unit/test_diagram.py::test_populate_statistics[create_jobs0] 
+[gw4] [ 34%] PASSED test/unit/test_diagram.py::test_populate_statistics[create_jobs0] 
+test/unit/test_diagram.py::test_create_stats_report[create_jobs0] 
+[gw2] [ 34%] PASSED test/unit/test_dependencies.py::test_check_general 
+test/unit/test_detail_updater.py::test_details_properties 
+[gw2] [ 34%] PASSED test/unit/test_detail_updater.py::test_details_properties 
+test/unit/test_diagram.py::test_build_legends 
+[gw6] [ 34%] PASSED test/unit/test_dependencies.py::test_check_relationship 
+test/unit/test_detail_updater.py::test_details_repository 
+[gw0] [ 34%] PASSED test/unit/test_dependencies.py::test_add_special_conditions 
+[gw2] [ 34%] PASSED test/unit/test_diagram.py::test_build_legends 
+[gw7] [ 34%] PASSED test/unit/test_dependencies.py::test_add_special_conditions_chunks_to_once 
+test/unit/test_diagram.py::test_create_bar_diagram[all run] 
+test/unit/test_diagram.py::test_seq 
+test/unit/test_diagram.py::test_job_data 
+[gw7] [ 35%] PASSED test/unit/test_diagram.py::test_job_data 
+[gw0] [ 35%] PASSED test/unit/test_diagram.py::test_seq 
+test/unit/test_diagram.py::test_create_bar_diagram[fail job_dict] 
+test/unit/test_diagram.py::test_create_bar_diagram[no run] 
+[gw7] [ 35%] PASSED test/unit/test_diagram.py::test_create_bar_diagram[no run] 
+test/unit/test_diagram.py::test_create_stats_report_empty_jobs 
+[gw7] [ 35%] PASSED test/unit/test_diagram.py::test_create_stats_report_empty_jobs 
+test/unit/test_diagram.py::test_get_status[no jobs, return None] 
+[gw7] [ 35%] PASSED test/unit/test_diagram.py::test_get_status[no jobs, return None] 
+test/unit/test_diagram.py::test_get_status[jobs, but names do not match] 
+[gw7] [ 35%] PASSED test/unit/test_diagram.py::test_get_status[jobs, but names do not match] 
+test/unit/test_diagram.py::test_get_status[jobs, and names match] 
+[gw7] [ 36%] PASSED test/unit/test_diagram.py::test_get_status[jobs, and names match] 
+test/unit/test_diagram.py::test_filter_by_status[no jobs, empty list] 
+[gw7] [ 36%] PASSED test/unit/test_diagram.py::test_filter_by_status[no jobs, empty list] 
+test/unit/test_diagram.py::test_filter_by_status[jobs, but none completed or running] 
+[gw7] [ 36%] PASSED test/unit/test_diagram.py::test_filter_by_status[jobs, but none completed or running] 
+test/unit/test_diagram.py::test_filter_by_status[jobs, one completed] 
+[gw7] [ 36%] PASSED test/unit/test_diagram.py::test_filter_by_status[jobs, one completed] 
+[gw0] [ 36%] PASSED test/unit/test_diagram.py::test_create_bar_diagram[fail job_dict] 
+test/unit/test_diagram.py::test_filter_by_status[jobs, one running] 
+[gw7] [ 36%] PASSED test/unit/test_diagram.py::test_filter_by_status[jobs, one running] 
+test/unit/test_diagram.py::test_populate_statistics_error_returns_none 
+test/unit/test_diagram.py::test_filter_by_status[jobs, one completed and one running] 
+[gw7] [ 36%] PASSED test/unit/test_diagram.py::test_filter_by_status[jobs, one completed and one running] 
+test/unit/test_dic_jobs.py::test_read_section_running_date_create_jobs_startdate 
+[gw0] [ 37%] PASSED test/unit/test_diagram.py::test_populate_statistics_error_returns_none 
+test/unit/test_dic_jobs.py::test_read_section_running_once_create_jobs_once 
+[gw7] [ 37%] PASSED test/unit/test_dic_jobs.py::test_read_section_running_date_create_jobs_startdate 
+test/unit/test_dic_jobs.py::test_read_section_running_member_create_jobs_member 
+[gw0] [ 37%] PASSED test/unit/test_dic_jobs.py::test_read_section_running_once_create_jobs_once 
+test/unit/test_dic_jobs.py::test_read_section_running_chunk_create_jobs_chunk 
+[gw7] [ 37%] PASSED test/unit/test_dic_jobs.py::test_read_section_running_member_create_jobs_member 
+test/unit/test_dic_jobs.py::test_build_job_with_existent_job_list_status 
+[gw2] [ 37%] PASSED test/unit/test_diagram.py::test_create_bar_diagram[all run] 
+[gw0] [ 37%] PASSED test/unit/test_dic_jobs.py::test_read_section_running_chunk_create_jobs_chunk 
+test/unit/test_diagram.py::test_create_bar_diagram[run with continue] 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_startdate 
+[gw7] [ 38%] PASSED test/unit/test_dic_jobs.py::test_build_job_with_existent_job_list_status 
+[gw0] [ 38%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_startdate 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_member 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_frequency_3 
+[gw7] [ 38%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_member 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_frequency_4 
+[gw0] [ 38%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_frequency_3 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_date_synchronize 
+[gw7] [ 38%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_frequency_4 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_date_synchronize_and_frequency_4 
+[gw0] [ 38%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_date_synchronize 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_member_synchronize 
+[gw7] [ 38%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_date_synchronize_and_frequency_4 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_member_synchronize_and_frequency_4 
+[gw7] [ 39%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_member_synchronize_and_frequency_4 
+[gw6] [ 39%] PASSED test/unit/test_detail_updater.py::test_details_repository 
+test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_if_no_member 
+test/unit/test_diagram.py::test_create_bar_diagram[divided by zero] 
+[gw6] [ 39%] PASSED test/unit/test_diagram.py::test_create_bar_diagram[divided by zero] 
+[gw7] [ 39%] PASSED test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_if_no_member 
+test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_with_the_given_chunk_of_the_member 
+test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_with_the_member 
+[gw6] [ 39%] PASSED test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_with_the_given_chunk_of_the_member 
+[gw0] [ 39%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_member_synchronize 
+[gw7] [ 40%] PASSED test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_with_the_member 
+test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_if_no_date 
+test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_with_all_the_chunks_of_the_member 
+test/unit/test_dic_jobs.py::test_create_job_creates_a_job_with_right_parameters 
+[gw6] [ 40%] PASSED test/unit/test_dic_jobs.py::test_get_member_returns_the_jobs_with_all_the_chunks_of_the_member 
+[gw7] [ 40%] PASSED test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_if_no_date 
+test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_and_calls_get_member_once_with_the_given_member 
+test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_with_the_date 
+[gw0] [ 40%] PASSED test/unit/test_dic_jobs.py::test_create_job_creates_a_job_with_right_parameters 
+test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_and_calls_get_member_for_all_its_members 
+[gw6] [ 40%] PASSED test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_and_calls_get_member_once_with_the_given_member 
+[gw7] [ 40%] PASSED test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_with_the_date 
+test/unit/test_dic_jobs.py::test_get_jobs_returns_the_job_of_the_section 
+test/unit/test_dic_jobs.py::test_get_jobs_calls_get_date_with_given_date 
+[gw0] [ 40%] PASSED test/unit/test_dic_jobs.py::test_get_date_returns_the_jobs_and_calls_get_member_for_all_its_members 
+test/unit/test_dic_jobs.py::test_get_jobs_calls_get_date_for_all_its_dates 
+[gw7] [ 41%] PASSED test/unit/test_dic_jobs.py::test_get_jobs_calls_get_date_with_given_date 
+[gw6] [ 41%] PASSED test/unit/test_dic_jobs.py::test_get_jobs_returns_the_job_of_the_section 
+test/unit/test_dic_jobs.py::test_create_jobs_split 
+[gw0] [ 41%] PASSED test/unit/test_dic_jobs.py::test_get_jobs_calls_get_date_for_all_its_dates 
+test/unit/test_dic_jobs.py::test_job_list_returns_the_job_list_by_name 
+test/unit/test_expid.py::test_expid[success] 
+[gw6] [ 41%] PASSED test/unit/test_dic_jobs.py::test_job_list_returns_the_job_list_by_name 
+[gw7] [ 41%] PASSED test/unit/test_dic_jobs.py::test_create_jobs_split 
+test/unit/test_history.py::TestExperimentHistory::test_db_exists 
+[gw6] [ 41%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_db_exists 
+[gw2] [ 42%] PASSED test/unit/test_diagram.py::test_create_bar_diagram[run with continue] 
+test/unit/test_expid.py::test_expid[fail] 
+test/unit/test_history.py::TestExperimentHistory::test_detect_differences_job_list 
+test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk 
+[gw6] [ 42%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_detect_differences_job_list 
+test/unit/test_history.py::TestExperimentHistory::test_get_date_member_count 
+[gw6] [ 42%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_get_date_member_count 
+test/unit/test_history.py::TestExperimentHistory::test_status_counts 
+[gw7] [ 42%] PASSED test/unit/test_expid.py::test_expid[fail] 
+[gw6] [ 42%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_status_counts 
+test/unit/test_history.py::TestExperimentHistory::test_built_list_of_changes 
+test/unit/test_history.py::TestExperimentHistory::test_create_new_experiment_run_with_counts 
+[gw2] [ 42%] PASSED test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk 
+[gw7] [ 42%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_built_list_of_changes 
+[gw6] [ 43%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_create_new_experiment_run_with_counts 
+test/unit/test_history.py::TestExperimentHistory::test_should_we_create_new_run 
+test/unit/test_history.py::TestExperimentHistory::test_finish_current_run 
+[gw2] [ 43%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_should_we_create_new_run 
+test/unit/test_history.py::TestExperimentHistory::test_process_job_list_changes 
+[gw7] [ 43%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_finish_current_run 
+test/unit/test_history.py::TestExperimentHistory::test_calculated_weights 
+[gw6] [ 43%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_process_job_list_changes 
+test/unit/test_history.py::TestExperimentHistory::test_distribute_energy_in_wrapper_1_to_1 
+[gw2] [ 43%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_calculated_weights 
+test/unit/test_history.py::TestExperimentHistory::test_distribute_energy_in_wrapper_general_case 
+[gw7] [ 43%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_distribute_energy_in_wrapper_1_to_1 
+[gw6] [ 44%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_distribute_energy_in_wrapper_general_case 
+test/unit/test_history.py::TestExperimentHistory::test_process_status_changes 
+test/unit/test_history.py::TestExperimentHistory::test_write_submit_time 
+[gw2] [ 44%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_process_status_changes 
+[gw7] [ 44%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_write_submit_time 
+test/unit/test_history.py::TestExperimentHistory::test_write_start_time 
+[gw6] [ 44%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_write_start_time 
+test/unit/test_history.py::TestLogging::test_build_message 
+test/unit/test_history.py::TestLogging::test_log 
+[gw2] [ 44%] SKIPPED test/unit/test_history.py::TestLogging::test_build_message 
+[gw7] [ 44%] SKIPPED test/unit/test_history.py::TestLogging::test_log 
+test/unit/test_job.py::TestJob::test_when_the_job_has_more_than_one_processor_returns_the_parallel_platform 
+test/unit/test_job.py::TestJob::test_set_platform 
+test/unit/test_job.py::TestJob::test_when_the_job_has_only_one_processor_returns_the_serial_platform 
+[gw6] [ 44%] PASSED test/unit/test_job.py::TestJob::test_when_the_job_has_more_than_one_processor_returns_the_parallel_platform 
+test/unit/test_job.py::TestJob::test_when_the_job_has_a_queue_returns_that_queue 
+[gw7] [ 45%] PASSED test/unit/test_job.py::TestJob::test_set_platform 
+[gw6] [ 45%] PASSED test/unit/test_job.py::TestJob::test_when_the_job_has_a_queue_returns_that_queue 
+[gw2] [ 45%] PASSED test/unit/test_job.py::TestJob::test_when_the_job_has_only_one_processor_returns_the_serial_platform 
+test/unit/test_job.py::TestJob::test_when_the_job_has_not_a_queue_and_some_processors_returns_the_queue_of_the_platform 
+test/unit/test_job.py::TestJob::test_set_queue 
+test/unit/test_job.py::TestJob::test_when_the_job_has_not_a_queue_and_one_processor_returns_the_queue_of_the_serial_platform 
+[gw7] [ 45%] PASSED test/unit/test_job.py::TestJob::test_when_the_job_has_not_a_queue_and_some_processors_returns_the_queue_of_the_platform 
+test/unit/test_job.py::TestJob::test_that_the_increment_fails_count_only_adds_one 
+[gw6] [ 45%] PASSED test/unit/test_job.py::TestJob::test_set_queue 
+[gw2] [ 45%] PASSED test/unit/test_job.py::TestJob::test_when_the_job_has_not_a_queue_and_one_processor_returns_the_queue_of_the_serial_platform 
+[gw7] [ 46%] PASSED test/unit/test_job.py::TestJob::test_that_the_increment_fails_count_only_adds_one 
+test/unit/test_job.py::TestJob::test_hetjob 
+test/unit/test_job.py::TestJob::test_header_tailer 
+test/unit/test_job.py::TestJob::test_job_parameters 
+[gw6] [ 46%] PASSED test/unit/test_job.py::TestJob::test_hetjob 
+test/unit/test_job.py::TestJob::test_total_processors 
+[gw6] [ 46%] PASSED test/unit/test_job.py::TestJob::test_total_processors 
+test/unit/test_job.py::TestJob::test_sdate 
+[gw6] [ 46%] PASSED test/unit/test_job.py::TestJob::test_sdate 
+test/unit/test_job.py::TestJob::test__repr__ 
+[gw6] [ 46%] PASSED test/unit/test_job.py::TestJob::test__repr__ 
+test/unit/test_job.py::TestJob::test_add_child 
+[gw6] [ 46%] PASSED test/unit/test_job.py::TestJob::test_add_child 
+test/unit/test_job.py::TestJob::test_auto_calendar_split 
+[gw6] [ 46%] PASSED test/unit/test_job.py::TestJob::test_auto_calendar_split 
+test/unit/test_job.py::TestJob::test_calendar 
+[gw4] [ 47%] PASSED test/unit/test_diagram.py::test_create_stats_report[create_jobs0] 
+test/unit/test_diagram.py::test_create_csv_stats 
+[gw4] [ 47%] PASSED test/unit/test_diagram.py::test_create_csv_stats 
+test/unit/test_job.py::test_pytest_check_script 
+[gw4] [ 47%] PASSED test/unit/test_job.py::test_pytest_check_script 
+test/unit/test_job.py::test_create_script 
+[gw4] [ 47%] PASSED test/unit/test_job.py::test_create_script 
+test/unit/test_job.py::test_reset_logs 
+[gw4] [ 47%] PASSED test/unit/test_job.py::test_reset_logs 
+test/unit/test_job.py::test_pytest_that_check_script_returns_false_when_there_is_an_unbound_template_variable 
+[gw4] [ 47%] PASSED test/unit/test_job.py::test_pytest_that_check_script_returns_false_when_there_is_an_unbound_template_variable 
+test/unit/test_job.py::test_update_parameters_current_variables[experiment_data0-expected_data0] 
+[gw4] [ 48%] PASSED test/unit/test_job.py::test_update_parameters_current_variables[experiment_data0-expected_data0] 
+test/unit/test_job.py::test_recover_last_ready_date[no file] 
+[gw4] [ 48%] PASSED test/unit/test_job.py::test_recover_last_ready_date[no file] 
+test/unit/test_job.py::test_recover_last_ready_date[file is empty] 
+[gw4] [ 48%] PASSED test/unit/test_job.py::test_recover_last_ready_date[file is empty] 
+test/unit/test_job.py::test_recover_last_ready_date[file is correct] 
+[gw4] [ 48%] PASSED test/unit/test_job.py::test_recover_last_ready_date[file is correct] 
+test/unit/test_job.py::test_recover_last_ready_date[file last line is empty] 
+[gw4] [ 48%] PASSED test/unit/test_job.py::test_recover_last_ready_date[file last line is empty] 
+test/unit/test_job.py::test_recover_last_log_name[no file] 
+[gw4] [ 48%] PASSED test/unit/test_job.py::test_recover_last_log_name[no file] 
+test/unit/test_job.py::test_recover_last_log_name[log timestamp >= ready_date] 
+[gw4] [ 48%] PASSED test/unit/test_job.py::test_recover_last_log_name[log timestamp >= ready_date] 
+test/unit/test_job.py::test_recover_last_log_name[log timestamp < ready_date] 
+[gw4] [ 49%] PASSED test/unit/test_job.py::test_recover_last_log_name[log timestamp < ready_date] 
+test/unit/test_job.py::test_update_parameters_attributes[experiment_data0-attributes_to_check0] 
+[gw4] [ 49%] PASSED test/unit/test_job.py::test_update_parameters_attributes[experiment_data0-attributes_to_check0] 
+test/unit/test_job.py::test_custom_directives[Test str - platform] 
+[gw4] [ 49%] PASSED test/unit/test_job.py::test_custom_directives[Test str - platform] 
+test/unit/test_job.py::test_custom_directives[test_list - platform] 
+[gw4] [ 49%] PASSED test/unit/test_job.py::test_custom_directives[test_list - platform] 
+test/unit/test_job.py::test_custom_directives[test_list - job] 
+[gw4] [ 49%] PASSED test/unit/test_job.py::test_custom_directives[test_list - job] 
+[gw6] [ 49%] PASSED test/unit/test_job.py::TestJob::test_calendar 
+test/unit/test_job.py::test_update_stat_file 
+test/unit/test_job.py::test_custom_directives[test_str - job] 
+[gw6] [ 50%] PASSED test/unit/test_job.py::test_update_stat_file 
+test/unit/test_job.py::test_custom_directives[test_list - both] 
+[gw4] [ 50%] PASSED test/unit/test_job.py::test_custom_directives[test_str - job] 
+test/unit/test_job.py::test_custom_directives[test_str - both] 
+[gw6] [ 50%] PASSED test/unit/test_job.py::test_custom_directives[test_list - both] 
+test/unit/test_job.py::test_custom_directives[test_list - job - current_directive] 
+[gw4] [ 50%] PASSED test/unit/test_job.py::test_custom_directives[test_str - both] 
+[gw6] [ 50%] PASSED test/unit/test_job.py::test_custom_directives[test_list - job - current_directive] 
+test/unit/test_job.py::test_custom_directives[test_str_list - current_directive] 
+test/unit/test_job.py::test_no_start_time[Simple job] 
+[gw6] [ 50%] PASSED test/unit/test_job.py::test_no_start_time[Simple job] 
+[gw4] [ 51%] PASSED test/unit/test_job.py::test_custom_directives[test_str_list - current_directive] 
+test/unit/test_job.py::test_get_job_package_code 
+test/unit/test_job.py::test_sub_job_instantiation 
+[gw6] [ 51%] PASSED test/unit/test_job.py::test_sub_job_instantiation 
+test/unit/test_job.py::test_sub_job_manager[Current structure of the Job Manager without values] 
+[gw6] [ 51%] PASSED test/unit/test_job.py::test_sub_job_manager[Current structure of the Job Manager without values] 
+[gw4] [ 51%] PASSED test/unit/test_job.py::test_get_job_package_code 
+test/unit/test_job.py::test_update_parameters_reset_logs 
+test/unit/test_job.py::test_sub_job_manager[Current structure of the Job Manager with multiple values] 
+[gw4] [ 51%] PASSED test/unit/test_job.py::test_sub_job_manager[Current structure of the Job Manager with multiple values] 
+test/unit/test_job.py::test_is_parent_works_well 
+[gw4] [ 51%] PASSED test/unit/test_job.py::test_is_parent_works_well 
+test/unit/test_job.py::test_remove_redundant_parents_works_well 
+[gw4] [ 51%] PASSED test/unit/test_job.py::test_remove_redundant_parents_works_well 
+test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=0] 
+[gw6] [ 52%] PASSED test/unit/test_job.py::test_update_parameters_reset_logs 
+test/unit/test_job.py::test_is_ancestor_works_well 
+[gw4] [ 52%] PASSED test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=0] 
+[gw6] [ 52%] PASSED test/unit/test_job.py::test_is_ancestor_works_well 
+test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=1] 
+test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=0, fail_count=0] 
+[gw6] [ 52%] PASSED test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=0, fail_count=0] 
+[gw4] [ 52%] PASSED test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=1] 
+test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=0, fail_count=1] 
+test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=1, fail_count=0] 
+[gw4] [ 52%] PASSED test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=0, fail_count=1] 
+[gw6] [ 53%] PASSED test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=1, fail_count=0] 
+test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=1, fail_count=1] 
+test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=0] 
+[gw6] [ 53%] PASSED test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=0] 
+[gw4] [ 53%] PASSED test/unit/test_job.py::test_get_from_stat[File exists, index_timestamp=1, fail_count=1] 
+test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=0, fail_count=0] 
+test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=1] 
+[gw6] [ 53%] PASSED test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=0, fail_count=0] 
+[gw4] [ 53%] PASSED test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=1] 
+test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=0, fail_count=1] 
+test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=1, fail_count=0] 
+[gw6] [ 53%] PASSED test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=0, fail_count=1] 
+[gw4] [ 53%] PASSED test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=1, fail_count=0] 
+test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=1, fail_count=1] 
+test/unit/test_job.py::test_write_submit_time_ignore_exp_history[True] 
+[gw6] [ 54%] PASSED test/unit/test_job.py::test_get_from_stat[File does not exist, index_timestamp=1, fail_count=1] 
+test/unit/test_job.py::test_write_submit_time_ignore_exp_history[False] 
+[gw6] [ 54%] PASSED test/unit/test_job.py::test_write_submit_time_ignore_exp_history[False] 
+[gw4] [ 54%] PASSED test/unit/test_job.py::test_write_submit_time_ignore_exp_history[True] 
+test/unit/test_job.py::test_write_end_time_ignore_exp_history[job completed, empty file, no count] 
+test/unit/test_job.py::test_write_end_time_ignore_exp_history[job completed, two existing lines, no count] 
+[gw6] [ 54%] PASSED test/unit/test_job.py::test_write_end_time_ignore_exp_history[job completed, empty file, no count] 
+[gw4] [ 54%] PASSED test/unit/test_job.py::test_write_end_time_ignore_exp_history[job completed, two existing lines, no count] 
+test/unit/test_job.py::test_write_end_time_ignore_exp_history[job failed, one existing line, no count] 
+test/unit/test_job.py::test_write_end_time_ignore_exp_history[job failed, empty file, count is 100] 
+[gw6] [ 54%] PASSED test/unit/test_job.py::test_write_end_time_ignore_exp_history[job failed, one existing line, no count] 
+test/unit/test_job_common.py::test_value_to_key_has_the_same_values_as_status_constants 
+[gw4] [ 55%] PASSED test/unit/test_job.py::test_write_end_time_ignore_exp_history[job failed, empty file, count is 100] 
+[gw6] [ 55%] PASSED test/unit/test_job_common.py::test_value_to_key_has_the_same_values_as_status_constants 
+test/unit/test_job_graph.py::test_grouping_date 
+test/unit/test_job_graph.py::test_grouping_member 
+[gw7] [ 55%] PASSED test/unit/test_job.py::TestJob::test_job_parameters 
+test/unit/test_job.py::TestJob::test_get_from_total_stats 
+[gw7] [ 55%] PASSED test/unit/test_job.py::TestJob::test_get_from_total_stats 
+test/unit/test_job_graph.py::test_synchronize_member 
+[gw4] [ 55%] PASSED test/unit/test_job_graph.py::test_grouping_date 
+test/unit/test_job_graph.py::test_grouping_chunk 
+[gw6] [ 55%] PASSED test/unit/test_job_graph.py::test_grouping_member 
+test/unit/test_job_graph.py::test_grouping_automatic_hide 
+[gw6] [ 55%] PASSED test/unit/test_job_graph.py::test_grouping_automatic_hide 
+test/unit/test_job_graph.py::test_synchronize_member_group_member 
+[gw4] [ 56%] PASSED test/unit/test_job_graph.py::test_grouping_chunk 
+test/unit/test_job_graph.py::test_wrapper_package 
+[gw3] [ 56%] PASSED test/unit/test_checkpoints.py::test_add_edge_info_joblist 
+test/unit/test_configure.py::test_configure[/] 
+[gw7] [ 56%] PASSED test/unit/test_job_graph.py::test_synchronize_member 
+test/unit/test_job_graph.py::test_synchronize_date 
+[gw3] [ 56%] PASSED test/unit/test_configure.py::test_configure[/] 
+test/unit/test_job_graph.py::test_synchronize_date_group_member 
+[gw5] [ 56%] PASSED test/unit/test_checkpoints.py::test_check_special_status 
+test/unit/test_configure.py::test_configure[//] 
+[gw5] [ 56%] PASSED test/unit/test_configure.py::test_configure[//] 
+test/unit/test_job_graph.py::test_normal_workflow 
+[gw6] [ 57%] PASSED test/unit/test_job_graph.py::test_synchronize_member_group_member 
+test/unit/test_job_graph.py::test_synchronize_member_group_chunk 
+[gw4] [ 57%] PASSED test/unit/test_job_graph.py::test_wrapper_package 
+test/unit/test_job_graph.py::test_synchronize_member_group_date 
+[gw7] [ 57%] PASSED test/unit/test_job_graph.py::test_synchronize_date 
+[gw3] [ 57%] PASSED test/unit/test_job_graph.py::test_synchronize_date_group_member 
+test/unit/test_job_graph.py::test_synchronize_date_group_date 
+test/unit/test_job_graph.py::test_synchronize_date_group_chunk 
+[gw5] [ 57%] PASSED test/unit/test_job_graph.py::test_normal_workflow 
+test/unit/test_job_graph.py::test_wrapper_and_groups 
+[gw4] [ 57%] PASSED test/unit/test_job_graph.py::test_synchronize_member_group_date 
+test/unit/test_job_grouping.py::test_group_by_member 
+[gw6] [ 57%] PASSED test/unit/test_job_graph.py::test_synchronize_member_group_chunk 
+test/unit/test_job_grouping.py::test_group_by_date 
+[gw3] [ 58%] PASSED test/unit/test_job_graph.py::test_synchronize_date_group_date 
+test/unit/test_job_grouping.py::test_group_by_chunk 
+[gw7] [ 58%] PASSED test/unit/test_job_graph.py::test_synchronize_date_group_chunk 
+test/unit/test_job_grouping.py::test_group_by_split 
+[gw5] [ 58%] PASSED test/unit/test_job_graph.py::test_wrapper_and_groups 
+[gw4] [ 58%] PASSED test/unit/test_job_grouping.py::test_group_by_member 
+test/unit/test_job_grouping.py::test_automatic_grouping_all 
+test/unit/test_job_grouping.py::test_automatic_grouping_not_ini 
+[gw6] [ 58%] PASSED test/unit/test_job_grouping.py::test_group_by_date 
+test/unit/test_job_grouping.py::test_automatic_grouping_splits 
+[gw3] [ 58%] PASSED test/unit/test_job_grouping.py::test_group_by_chunk 
+test/unit/test_job_grouping.py::test_automatic_grouping_different_status_member 
+[gw7] [ 59%] PASSED test/unit/test_job_grouping.py::test_group_by_split 
+test/unit/test_job_grouping.py::test_automatic_grouping_different_status_chunk 
+[gw4] [ 59%] PASSED test/unit/test_job_grouping.py::test_automatic_grouping_not_ini 
+test/unit/test_job_grouping.py::test_group_by_chunk_expand_failed_running 
+[gw5] [ 59%] PASSED test/unit/test_job_grouping.py::test_automatic_grouping_all 
+[gw6] [ 59%] PASSED test/unit/test_job_grouping.py::test_automatic_grouping_splits 
+test/unit/test_job_grouping.py::test_group_by_member_expand_running 
+test/unit/test_job_grouping.py::test_group_by_member_expand 
+[gw3] [ 59%] PASSED test/unit/test_job_grouping.py::test_automatic_grouping_different_status_member 
+test/unit/test_job_grouping.py::test_group_by_member_expand_and_running 
+[gw7] [ 59%] PASSED test/unit/test_job_grouping.py::test_automatic_grouping_different_status_chunk 
+test/unit/test_job_grouping.py::test_group_by_chunk_expand 
+[gw4] [ 59%] PASSED test/unit/test_job_grouping.py::test_group_by_chunk_expand_failed_running 
+test/unit/test_job_grouping.py::test_synchronize_member_group_member 
+[gw6] [ 60%] PASSED test/unit/test_job_grouping.py::test_group_by_member_expand 
+test/unit/test_job_grouping.py::test_synchronize_member_group_date 
+[gw5] [ 60%] PASSED test/unit/test_job_grouping.py::test_group_by_member_expand_running 
+test/unit/test_job_grouping.py::test_synchronize_member_group_chunk 
+[gw3] [ 60%] PASSED test/unit/test_job_grouping.py::test_group_by_member_expand_and_running 
+test/unit/test_job_grouping.py::test_synchronize_date_group_member 
+[gw7] [ 60%] PASSED test/unit/test_job_grouping.py::test_group_by_chunk_expand 
+test/unit/test_job_grouping.py::test_synchronize_date_group_chunk 
+[gw6] [ 60%] PASSED test/unit/test_job_grouping.py::test_synchronize_member_group_date 
+test/unit/test_job_list.py::test_load 
+[gw4] [ 60%] PASSED test/unit/test_job_grouping.py::test_synchronize_member_group_member 
+test/unit/test_job_grouping.py::test_synchronize_date_group_date 
+[gw5] [ 61%] PASSED test/unit/test_job_grouping.py::test_synchronize_member_group_chunk 
+test/unit/test_job_list.py::test_get_job_list_returns_the_right_list 
+[gw5] [ 61%] PASSED test/unit/test_job_list.py::test_get_job_list_returns_the_right_list 
+test/unit/test_job_list.py::test_get_function_returns[-1] 
+[gw5] [ 61%] PASSED test/unit/test_job_list.py::test_get_function_returns[-1] 
+test/unit/test_job_list.py::test_get_function_returns[1] 
+[gw5] [ 61%] PASSED test/unit/test_job_list.py::test_get_function_returns[1] 
+test/unit/test_job_list.py::test_get_function_returns[0] 
+[gw5] [ 61%] PASSED test/unit/test_job_list.py::test_get_function_returns[0] 
+test/unit/test_job_list.py::test_get_function_returns[-2] 
+[gw5] [ 61%] PASSED test/unit/test_job_list.py::test_get_function_returns[-2] 
+test/unit/test_job_list.py::test_get_completed_returns_only_the_completed 
+[gw5] [ 61%] PASSED test/unit/test_job_list.py::test_get_completed_returns_only_the_completed 
+test/unit/test_job_list.py::test_get_in_queue_returns_only_which_are_queuing_submitted_and_running 
+[gw3] [ 62%] PASSED test/unit/test_job_grouping.py::test_synchronize_date_group_member 
+test/unit/test_job_list.py::test_get_function_returns[5] 
+[gw5] [ 62%] PASSED test/unit/test_job_list.py::test_get_in_queue_returns_only_which_are_queuing_submitted_and_running 
+test/unit/test_job_list.py::test_get_active_returns_only_which_are_in_queue_ready_and_unknown 
+[gw3] [ 62%] PASSED test/unit/test_job_list.py::test_get_function_returns[5] 
+test/unit/test_job_list.py::test_get_job_by_name_returns_the_expected_job 
+[gw7] [ 62%] PASSED test/unit/test_job_grouping.py::test_synchronize_date_group_chunk 
+[gw5] [ 62%] PASSED test/unit/test_job_list.py::test_get_active_returns_only_which_are_in_queue_ready_and_unknown 
+test/unit/test_job_list.py::test_get_function_returns[2] 
+test/unit/test_job_list.py::test_sort_by_name_returns_the_list_of_jobs_well_sorted 
+[gw3] [ 62%] PASSED test/unit/test_job_list.py::test_get_job_by_name_returns_the_expected_job 
+test/unit/test_job_list.py::test_sort_by_id_returns_the_list_of_jobs_well_sorted 
+[gw7] [ 63%] PASSED test/unit/test_job_list.py::test_get_function_returns[2] 
+[gw5] [ 63%] PASSED test/unit/test_job_list.py::test_sort_by_name_returns_the_list_of_jobs_well_sorted 
+test/unit/test_job_list.py::test_sort_by_type_returns_the_list_of_jobs_well_sorted 
+test/unit/test_job_list.py::test_sort_by_status_returns_the_list_of_jobs_well_sorted 
+[gw3] [ 63%] PASSED test/unit/test_job_list.py::test_sort_by_id_returns_the_list_of_jobs_well_sorted 
+test/unit/test_job_list.py::test_that_create_method_makes_the_correct_calls 
+[gw5] [ 63%] PASSED test/unit/test_job_list.py::test_sort_by_status_returns_the_list_of_jobs_well_sorted 
+[gw7] [ 63%] PASSED test/unit/test_job_list.py::test_sort_by_type_returns_the_list_of_jobs_well_sorted 
+test/unit/test_job_list.py::test_run_member 
+test/unit/test_job_list.py::test_that_create_job_method_calls_dic_jobs_method_with_increasing_priority 
+[gw7] [ 63%] PASSED test/unit/test_job_list.py::test_that_create_job_method_calls_dic_jobs_method_with_increasing_priority 
+test/unit/test_job_list.py::test_find_and_delete_redundant_relations 
+[gw4] [ 63%] PASSED test/unit/test_job_grouping.py::test_synchronize_date_group_date 
+[gw3] [ 64%] PASSED test/unit/test_job_list.py::test_that_create_method_makes_the_correct_calls 
+test/unit/test_job_list.py::test_get_function_returns[3] 
+test/unit/test_job_list.py::test_create_dictionary 
+[gw5] [ 64%] PASSED test/unit/test_job_list.py::test_run_member 
+[gw7] [ 64%] PASSED test/unit/test_job_list.py::test_find_and_delete_redundant_relations 
+test/unit/test_job_list.py::test_generate_job_list_from_monitor_run 
+[gw4] [ 64%] PASSED test/unit/test_job_list.py::test_get_function_returns[3] 
+test/unit/test_job_list.py::test_normalize_to_filters 
+test/unit/test_job_list.py::test_manage_dependencies 
+[gw7] [ 64%] PASSED test/unit/test_job_list.py::test_normalize_to_filters 
+[gw4] [ 64%] PASSED test/unit/test_job_list.py::test_manage_dependencies 
+[gw3] [ 65%] PASSED test/unit/test_job_list.py::test_create_dictionary 
+test/unit/test_job_list.py::test_get_jobs_by_section[non_completed_jobs_in_section1] 
+test/unit/test_job_list.py::test_get_jobs_by_section[non_completed_jobs_in_section2] 
+test/unit/test_job_list.py::test_get_jobs_by_section[all_jobs_in_section1] 
+[gw7] [ 65%] PASSED test/unit/test_job_list.py::test_get_jobs_by_section[non_completed_jobs_in_section1] 
+[gw4] [ 65%] PASSED test/unit/test_job_list.py::test_get_jobs_by_section[non_completed_jobs_in_section2] 
+[gw3] [ 65%] PASSED test/unit/test_job_list.py::test_get_jobs_by_section[all_jobs_in_section1] 
+[gw6] [ 65%] PASSED test/unit/test_job_list.py::test_load 
+test/unit/test_job_list.py::test_get_jobs_by_section[ban_job1] 
+test/unit/test_job_list.py::test_retrieve_times[True-True] 
+test/unit/test_job_list.py::test_retrieve_times[False-True] 
+test/unit/test_job_list.py::test_get_function_returns[4] 
+[gw7] [ 65%] PASSED test/unit/test_job_list.py::test_get_jobs_by_section[ban_job1] 
+[gw4] [ 65%] PASSED test/unit/test_job_list.py::test_retrieve_times[True-True] 
+[gw6] [ 66%] PASSED test/unit/test_job_list.py::test_get_function_returns[4] 
+[gw3] [ 66%] PASSED test/unit/test_job_list.py::test_retrieve_times[False-True] 
+test/unit/test_job_list.py::test_retrieve_times[True-False] 
+test/unit/test_job_package.py::test_job_package_default_init 
+test/unit/test_job_list.py::test_retrieve_times[False-False] 
+test/unit/test_job_package.py::test_default_parameters 
+[gw6] [ 66%] PASSED test/unit/test_job_package.py::test_job_package_default_init 
+test/unit/test_job_package.py::test_job_package_none_platforms_init 
+[gw6] [ 66%] PASSED test/unit/test_job_package.py::test_job_package_none_platforms_init 
+[gw7] [ 66%] PASSED test/unit/test_job_list.py::test_retrieve_times[True-False] 
+test/unit/test_job_package.py::test_job_package_platform_getter 
+test/unit/test_job_package.py::test_job_package_different_platforms_init 
+[gw3] [ 66%] PASSED test/unit/test_job_package.py::test_default_parameters 
+[gw6] [ 67%] PASSED test/unit/test_job_package.py::test_job_package_platform_getter 
+[gw4] [ 67%] PASSED test/unit/test_job_list.py::test_retrieve_times[False-False] 
+test/unit/test_job_package.py::test_job_package_jobs_getter 
+[gw7] [ 67%] PASSED test/unit/test_job_package.py::test_job_package_different_platforms_init 
+test/unit/test_job_package.py::test_jobs_in_wrapper_str 
+test/unit/test_job_package.py::test_job_package_submission 
+test/unit/test_job_package.py::test_job_package_length 
+[gw3] [ 67%] PASSED test/unit/test_job_package.py::test_job_package_jobs_getter 
+test/unit/test_job_packager.py::test_propagate_inner_jobs_ready_date 
+[gw4] [ 67%] PASSED test/unit/test_job_package.py::test_job_package_length 
+[gw6] [ 67%] PASSED test/unit/test_job_package.py::test_jobs_in_wrapper_str 
+test/unit/test_lockfile.py::test_log_debug_raises_error 
+test/unit/test_local_platform.py::test_file_read_size 
+[gw6] [ 67%] PASSED test/unit/test_local_platform.py::test_file_read_size 
+[gw3] [ 68%] PASSED test/unit/test_job_packager.py::test_propagate_inner_jobs_ready_date 
+test/unit/test_lockfile.py::test_exit_from_error[autosubmit_critical] 
+test/unit/test_lockfile.py::test_exit_from_error[normal_exception] 
+[gw4] [ 68%] PASSED test/unit/test_lockfile.py::test_log_debug_raises_error 
+test/unit/test_lockfile.py::test_exit_from_error[portalocker_exception] 
+[gw7] [ 68%] PASSED test/unit/test_job_package.py::test_job_package_submission 
+[gw6] [ 68%] PASSED test/unit/test_lockfile.py::test_exit_from_error[autosubmit_critical] 
+test/unit/test_lockfile.py::test_delete_lockfile 
+[gw3] [ 68%] PASSED test/unit/test_lockfile.py::test_exit_from_error[normal_exception] 
+test/unit/test_lockfile.py::test_exit_from_error[autosubmit_critical_with_trace] 
+[gw7] [ 68%] PASSED test/unit/test_lockfile.py::test_delete_lockfile 
+test/unit/test_lockfile.py::test_exit_from_error[autosubmit_error] 
+[gw4] [ 69%] PASSED test/unit/test_lockfile.py::test_exit_from_error[portalocker_exception] 
+test/unit/test_log.py::test_autosubmit_error_error_message 
+test/unit/test_log.py::test_autosubmit_error 
+[gw7] [ 69%] PASSED test/unit/test_log.py::test_autosubmit_error_error_message 
+[gw4] [ 69%] PASSED test/unit/test_log.py::test_autosubmit_error 
+test/unit/test_machinefiles_wrapper.py::test_job_less_than_48_cores_standard 
+test/unit/test_machinefiles_wrapper.py::test_job_more_than_48_cores_standard 
+[gw3] [ 69%] PASSED test/unit/test_lockfile.py::test_exit_from_error[autosubmit_error] 
+[gw6] [ 69%] PASSED test/unit/test_lockfile.py::test_exit_from_error[autosubmit_critical_with_trace] 
+[gw7] [ 69%] PASSED test/unit/test_machinefiles_wrapper.py::test_job_less_than_48_cores_standard 
+[gw4] [ 69%] PASSED test/unit/test_machinefiles_wrapper.py::test_job_more_than_48_cores_standard 
+test/unit/test_log.py::test_log_not_format 
+[gw3] [ 70%] PASSED test/unit/test_log.py::test_log_not_format 
+test/unit/test_log.py::test_autosubmit_critical 
+test/unit/test_mail.py::test_compress_file[No files. No errors] 
+test/unit/test_mail.py::test_compress_file[One file. Attach a single file. No errors] 
+[gw6] [ 70%] PASSED test/unit/test_log.py::test_autosubmit_critical 
+test/unit/test_mail.py::test_compress_file[Three files. Attach a single file. No errors] 
+test/unit/test_mail.py::test_compress_file[SMTP server error] 
+[gw7] [ 70%] PASSED test/unit/test_mail.py::test_compress_file[No files. No errors] 
+[gw6] [ 70%] PASSED test/unit/test_mail.py::test_compress_file[SMTP server error] 
+test/unit/test_mail.py::test_compress_file[Zip error] 
+[gw3] [ 70%] PASSED test/unit/test_mail.py::test_compress_file[Three files. Attach a single file. No errors] 
+test/unit/test_mail.py::test_notify_status_change[Log connection error (SMTP server error)] 
+[gw4] [ 70%] PASSED test/unit/test_mail.py::test_compress_file[One file. Attach a single file. No errors] 
+test/unit/test_mail.py::test_notify_status_change[Normal case: No errors] 
+test/unit/test_mail.py::test_compress_file[Attach error] 
+[gw6] [ 71%] PASSED test/unit/test_mail.py::test_notify_status_change[Log connection error (SMTP server error)] 
+test/unit/test_migrate.py::TestMigrate::test_migrate_no_platforms 
+[gw6] [ 71%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_no_platforms 
+[gw3] [ 71%] PASSED test/unit/test_mail.py::test_notify_status_change[Normal case: No errors] 
+[gw4] [ 71%] PASSED test/unit/test_mail.py::test_compress_file[Attach error] 
+test/unit/test_migrate.py::TestMigrate::test_migrate_no_same_user 
+[gw6] [ 71%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_no_same_user 
+[gw7] [ 71%] PASSED test/unit/test_mail.py::test_compress_file[Zip error] 
+test/unit/test_migrate.py::TestMigrate::test_migrate_no_scratch_dir 
+[gw3] [ 71%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_no_scratch_dir 
+test/unit/test_migrate.py::TestMigrate::test_migrate_no_user 
+test/unit/test_migrate.py::TestMigrate::test_migrate_no_project 
+[gw6] [ 72%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_no_user 
+test/unit/test_migrate.py::TestMigrate::test_migrate_no_host 
+test/unit/test_migrate.py::TestMigrate::test_migrate_conf_good_config 
+[gw4] [ 72%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_no_project 
+[gw3] [ 72%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_no_host 
+[gw7] [ 72%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_conf_good_config 
+test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Submitted] 
+test/unit/test_migrate.py::TestMigrate::test_migrate_remote 
+test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Running] 
+[gw4] [ 72%] SKIPPED test/unit/test_migrate.py::TestMigrate::test_migrate_remote 
+test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Queuing] 
+test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Completed] 
+[gw6] [ 72%] PASSED test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Submitted] 
+[gw3] [ 73%] PASSED test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Running] 
+[gw7] [ 73%] PASSED test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Queuing] 
+test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Failed] 
+test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Held] 
+[gw4] [ 73%] PASSED test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Completed] 
+test/unit/test_overwallclock.py::test_check_wrapper_stored_status[No packages] 
+test/unit/test_overwallclock.py::test_parse_time 
+[gw4] [ 73%] PASSED test/unit/test_overwallclock.py::test_parse_time 
+test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock[PjmPlatform] 
+[gw3] [ 73%] PASSED test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Held] 
+[gw7] [ 73%] PASSED test/unit/test_overwallclock.py::test_check_wrapper_stored_status[No packages] 
+test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock[SlurmPlatform] 
+[gw6] [ 73%] PASSED test/unit/test_overwallclock.py::test_check_wrapper_stored_status[Failed] 
+test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock[PsPlatform] 
+test/unit/test_overwallclock.py::test_is_over_wallclock 
+[gw6] [ 74%] PASSED test/unit/test_overwallclock.py::test_is_over_wallclock 
+test/unit/test_ownership.py::test_check_ownership_and_set_last_command_same_owner 
+[gw3] [ 74%] PASSED test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock[SlurmPlatform] 
+[gw4] [ 74%] PASSED test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock[PjmPlatform] 
+test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock_force_failure[PsPlatform] 
+[gw7] [ 74%] PASSED test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock[PsPlatform] 
+test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock_force_failure[SlurmPlatform] 
+test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock_force_failure[PjmPlatform] 
+[gw6] [ 74%] PASSED test/unit/test_ownership.py::test_check_ownership_and_set_last_command_same_owner 
+test/unit/test_ownership.py::test_check_ownership_and_set_last_command_diff_owner 
+[gw3] [ 74%] PASSED test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock_force_failure[PsPlatform] 
+[gw7] [ 75%] PASSED test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock_force_failure[PjmPlatform] 
+test/unit/test_packages.py::test_process_jobs_to_submit 
+test/unit/test_paramiko_platform.py::test_paramiko_platform_constructor 
+[gw6] [ 75%] PASSED test/unit/test_ownership.py::test_check_ownership_and_set_last_command_diff_owner 
+[gw7] [ 75%] PASSED test/unit/test_paramiko_platform.py::test_paramiko_platform_constructor 
+test/unit/test_paramiko_platform.py::test_check_all_jobs_send_command1_raises_autosubmit_error 
+test/unit/test_paramiko_platform.py::test_ps_get_submit_cmd 
+[gw7] [ 75%] PASSED test/unit/test_paramiko_platform.py::test_ps_get_submit_cmd 
+[gw3] [ 75%] PASSED test/unit/test_packages.py::test_process_jobs_to_submit 
+test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(exists) + AS_ENV_CONFIG_SSH_PATH(defined)] 
+[gw6] [ 75%] PASSED test/unit/test_paramiko_platform.py::test_check_all_jobs_send_command1_raises_autosubmit_error 
+test/unit/test_paramiko_platform.py::test_check_all_jobs_send_command2_raises_autosubmit_error 
+test/unit/test_paramiko_platform.py::test_map_user_config_file[OWNER] 
+[gw3] [ 75%] PASSED test/unit/test_paramiko_platform.py::test_check_all_jobs_send_command2_raises_autosubmit_error 
+[gw7] [ 76%] PASSED test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(exists) + AS_ENV_CONFIG_SSH_PATH(defined)] 
+test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(not exists) + AS_ENV_CONFIG_SSH_PATH(defined)] 
+test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(exists) + AS_ENV_CONFIG_SSH_PATH(not defined)] 
+[gw6] [ 76%] PASSED test/unit/test_paramiko_platform.py::test_map_user_config_file[OWNER] 
+test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(not exists) + AS_ENV_CONFIG_SSH_PATH(not defined)] 
+[gw3] [ 76%] PASSED test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(not exists) + AS_ENV_CONFIG_SSH_PATH(defined)] 
+[gw7] [ 76%] PASSED test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(exists) + AS_ENV_CONFIG_SSH_PATH(not defined)] 
+test/unit/test_paramiko_platform.py::test_submit_job 
+test/unit/test_paramiko_submitter.py::test_load_platforms[Undefined] 
+[gw6] [ 76%] PASSED test/unit/test_paramiko_platform.py::test_map_user_config_file[SUDO USER(not exists) + AS_ENV_CONFIG_SSH_PATH(not defined)] 
+test/unit/test_paramiko_submitter.py::test_load_platforms[Unsupported] 
+[gw3] [ 76%] PASSED test/unit/test_paramiko_platform.py::test_submit_job 
+[gw7] [ 77%] PASSED test/unit/test_paramiko_submitter.py::test_load_platforms[Undefined] 
+test/unit/test_pjm.py::test_parse_all_jobs_output 
+test/unit/test_pjm.py::test_get_submitted_job_id 
+[gw6] [ 77%] PASSED test/unit/test_paramiko_submitter.py::test_load_platforms[Unsupported] 
+test/unit/test_pjm.py::test_parse_queue_reason 
+[gw3] [ 77%] PASSED test/unit/test_pjm.py::test_parse_all_jobs_output 
+[gw6] [ 77%] PASSED test/unit/test_pjm.py::test_parse_queue_reason 
+[gw7] [ 77%] PASSED test/unit/test_pjm.py::test_get_submitted_job_id 
+test/unit/test_pjm.py::test_process_batch_ready_jobs_valid_packages_to_submit 
+test/unit/test_platform.py::TestJob::test_when_the_job_has_only_one_processor_returns_the_serial_platform 
+test/unit/test_platform.py::TestJob::test_when_the_job_has_more_than_one_processor_returns_the_parallel_platform 
+[gw6] [ 77%] PASSED test/unit/test_platform.py::TestJob::test_when_the_job_has_only_one_processor_returns_the_serial_platform 
+[gw7] [ 77%] PASSED test/unit/test_platform.py::TestJob::test_when_the_job_has_more_than_one_processor_returns_the_parallel_platform 
+test/unit/test_platform.py::TestJob::test_when_the_job_has_a_queue_returns_that_queue 
+test/unit/test_platform.py::TestJob::test_when_the_job_has_not_a_queue_and_some_processors_returns_the_queue_of_the_platform 
+[gw6] [ 78%] PASSED test/unit/test_platform.py::TestJob::test_when_the_job_has_a_queue_returns_that_queue 
+[gw7] [ 78%] PASSED test/unit/test_platform.py::TestJob::test_when_the_job_has_not_a_queue_and_some_processors_returns_the_queue_of_the_platform 
+test/unit/test_platform.py::TestJob::test_when_the_job_has_not_a_queue_and_one_processor_returns_the_queue_of_the_serial_platform 
+test/unit/test_platform.py::TestJob::test_set_queue 
+[gw7] [ 78%] PASSED test/unit/test_platform.py::TestJob::test_set_queue 
+[gw3] [ 78%] PASSED test/unit/test_pjm.py::test_process_batch_ready_jobs_valid_packages_to_submit 
+test/unit/test_platform.py::TestJob::test_header_tailer 
+[gw6] [ 78%] PASSED test/unit/test_platform.py::TestJob::test_when_the_job_has_not_a_queue_and_one_processor_returns_the_queue_of_the_serial_platform 
+test/unit/test_platform.py::TestJob::test_set_platform 
+test/unit/test_platform.py::TestJob::test_that_the_increment_fails_count_only_adds_one 
+[gw3] [ 78%] PASSED test/unit/test_platform.py::TestJob::test_set_platform 
+[gw6] [ 79%] PASSED test/unit/test_platform.py::TestJob::test_that_the_increment_fails_count_only_adds_one 
+test/unit/test_platform.py::TestJob::test_job_parameters 
+test/unit/test_platform.py::TestJob::test_total_processors 
+[gw6] [ 79%] PASSED test/unit/test_platform.py::TestJob::test_total_processors 
+test/unit/test_platform.py::TestJob::test_get_from_total_stats 
+[gw6] [ 79%] PASSED test/unit/test_platform.py::TestJob::test_get_from_total_stats 
+test/unit/test_platform.py::TestJob::test_sdate 
+[gw6] [ 79%] PASSED test/unit/test_platform.py::TestJob::test_sdate 
+test/unit/test_platform.py::TestJob::test__repr__ 
+[gw6] [ 79%] PASSED test/unit/test_platform.py::TestJob::test__repr__ 
+test/unit/test_platform.py::TestJob::test_add_child 
+[gw6] [ 79%] PASSED test/unit/test_platform.py::TestJob::test_add_child 
+test/unit/test_platform.py::TestJob::test_auto_calendar_split 
+[gw6] [ 79%] PASSED test/unit/test_platform.py::TestJob::test_auto_calendar_split 
+test/unit/test_platform.py::TestJob::test_calendar 
+[gw4] [ 80%] PASSED test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock_force_failure[SlurmPlatform] 
+test/unit/test_packages_persistence.py::test_load 
+[gw4] [ 80%] PASSED test/unit/test_packages_persistence.py::test_load 
+[gw3] [ 80%] PASSED test/unit/test_platform.py::TestJob::test_job_parameters 
+test/unit/test_platform.py::TestJob::test_job_script_checking_contains_the_right_variables 
+test/unit/test_platform.py::test_get_stat_file[True-0] 
+[gw4] [ 80%] PASSED test/unit/test_platform.py::test_get_stat_file[True-0] 
+test/unit/test_platform.py::test_get_stat_file[False--1] 
+[gw3] [ 80%] PASSED test/unit/test_platform.py::TestJob::test_job_script_checking_contains_the_right_variables 
+test/unit/test_platform.py::test_get_stat_file[True-1] 
+[gw3] [ 80%] PASSED test/unit/test_platform.py::test_get_stat_file[True-1] 
+test/unit/test_platform.py::test_get_stat_file[False-1] 
+[gw5] [ 81%] PASSED test/unit/test_job_list.py::test_generate_job_list_from_monitor_run 
+test/unit/test_job_list.py::test_get_jobs_by_section[all_jobs_in_section2] 
+[gw5] [ 81%] PASSED test/unit/test_job_list.py::test_get_jobs_by_section[all_jobs_in_section2] 
+test/unit/test_platform_monitor.py::test_reader_on_simple_wrapper_example_1 
+[gw5] [ 81%] PASSED test/unit/test_platform_monitor.py::test_reader_on_simple_wrapper_example_1 
+test/unit/test_platform_monitor.py::test_reader_on_simple_wrapper_example_2 
+[gw5] [ 81%] PASSED test/unit/test_platform_monitor.py::test_reader_on_simple_wrapper_example_2 
+test/unit/test_platform_monitor.py::test_reader_on_big_wrapper 
+[gw5] [ 81%] PASSED test/unit/test_platform_monitor.py::test_reader_on_big_wrapper 
+test/unit/test_profiler.py::test_transitions 
+[gw5] [ 81%] PASSED test/unit/test_profiler.py::test_transitions 
+test/unit/test_profiler.py::test_transitions_fail_cases 
+[gw5] [ 81%] PASSED test/unit/test_profiler.py::test_transitions_fail_cases 
+test/unit/test_profiler.py::test_writing_permission_check_fails 
+[gw5] [ 82%] PASSED test/unit/test_profiler.py::test_writing_permission_check_fails 
+test/unit/test_profiler.py::test_memory_profiling_loop 
+[gw5] [ 82%] PASSED test/unit/test_profiler.py::test_memory_profiling_loop 
+test/unit/test_provenance.py::test_provenance_rocrate_success 
+[gw5] [ 82%] PASSED test/unit/test_provenance.py::test_provenance_rocrate_success 
+test/unit/test_provenance.py::test_provenance_rocrate_failure 
+[gw5] [ 82%] PASSED test/unit/test_provenance.py::test_provenance_rocrate_failure 
+test/unit/test_provenance.py::test_provenance_no_rocrate 
+[gw5] [ 82%] PASSED test/unit/test_provenance.py::test_provenance_no_rocrate 
+test/unit/test_slurm_platform.py::test_properties 
+[gw6] [ 82%] PASSED test/unit/test_platform.py::TestJob::test_calendar 
+test/unit/test_platform.py::test_get_stat_file[True--1] 
+[gw5] [ 83%] PASSED test/unit/test_slurm_platform.py::test_properties 
+test/unit/test_slurm_platform.py::test_slurm_platform_submit_script_raises_autosubmit_critical_with_trace 
+[gw6] [ 83%] PASSED test/unit/test_platform.py::test_get_stat_file[True--1] 
+[gw5] [ 83%] PASSED test/unit/test_slurm_platform.py::test_slurm_platform_submit_script_raises_autosubmit_critical_with_trace 
+test/unit/test_slurm_platform.py::test_process_batch_ready_jobs_valid_packages_to_submit 
+test/unit/test_slurm_platform.py::test_submit_job 
+[gw5] [ 83%] PASSED test/unit/test_slurm_platform.py::test_submit_job 
+[gw6] [ 83%] PASSED test/unit/test_slurm_platform.py::test_process_batch_ready_jobs_valid_packages_to_submit 
+test/unit/test_stop.py::test_invalid_current_status[banana] 
+test/unit/test_stop.py::test_invalid_target_status 
+[gw5] [ 83%] PASSED test/unit/test_stop.py::test_invalid_current_status[banana] 
+[gw6] [ 83%] PASSED test/unit/test_stop.py::test_invalid_target_status 
+test/unit/test_stop.py::test_invalid_current_status[waiting2] 
+test/unit/test_stop.py::test_invalid_current_status[1] 
+[gw5] [ 84%] PASSED test/unit/test_stop.py::test_invalid_current_status[waiting2] 
+[gw6] [ 84%] PASSED test/unit/test_stop.py::test_invalid_current_status[1] 
+test/unit/test_stop.py::test_pid_not_found 
+test/unit/test_stop.py::test_ignored_pids[-1] 
+[gw5] [ 84%] PASSED test/unit/test_stop.py::test_pid_not_found 
+[gw6] [ 84%] PASSED test/unit/test_stop.py::test_ignored_pids[-1] 
+test/unit/test_stop.py::test_ignored_pids[0] 
+test/unit/test_stop.py::test_ignored_pids[1] 
+[gw5] [ 84%] PASSED test/unit/test_stop.py::test_ignored_pids[0] 
+test/unit/test_stop.py::test_os_kill_fails 
+[gw6] [ 84%] PASSED test/unit/test_stop.py::test_ignored_pids[1] 
+[gw5] [ 85%] PASSED test/unit/test_stop.py::test_os_kill_fails 
+test/unit/test_stop.py::test_stop_expids_no_cancel 
+test/unit/test_stop.py::test_stop_expids_force_all[a000-user_input0-1] 
+[gw5] [ 85%] PASSED test/unit/test_stop.py::test_stop_expids_force_all[a000-user_input0-1] 
+[gw6] [ 85%] PASSED test/unit/test_stop.py::test_stop_expids_no_cancel 
+test/unit/test_stop.py::test_stop_expids_force_all[a000 a001-user_input1-2] 
+test/unit/test_stop.py::test_stop_expids_force_all[t001, o001-user_input2-1] 
+[gw6] [ 85%] PASSED test/unit/test_stop.py::test_stop_expids_force_all[a000 a001-user_input1-2] 
+[gw5] [ 85%] PASSED test/unit/test_stop.py::test_stop_expids_force_all[t001, o001-user_input2-1] 
+test/unit/test_stop.py::test_stop_expids[one expid] 
+test/unit/test_stop.py::test_stop_expids_force_all[t001, o001-user_input3-0] 
+[gw6] [ 85%] PASSED test/unit/test_stop.py::test_stop_expids_force_all[t001, o001-user_input3-0] 
+test/unit/test_stop.py::test_stop_expids[three with commas] 
+[gw5] [ 85%] PASSED test/unit/test_stop.py::test_stop_expids[one expid] 
+test/unit/test_stop.py::test_stop_expids[two expids with spaces] 
+[gw6] [ 86%] PASSED test/unit/test_stop.py::test_stop_expids[three with commas] 
+test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_all_children 
+[gw6] [ 86%] PASSED test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_all_children 
+test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_level 
+[gw6] [ 86%] PASSED test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_level 
+[gw5] [ 86%] PASSED test/unit/test_stop.py::test_stop_expids[two expids with spaces] 
+test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_jobs_per_level 
+[gw6] [ 86%] PASSED test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_jobs_per_level 
+test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_roots 
+test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_energy_distribution 
+[gw5] [ 86%] PASSED test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_get_roots 
+test/unit/test_user_metrics.py::test_spec_selector_load_valid[None-expected0] 
+[gw6] [ 87%] PASSED test/unit/test_strategies.py::Test2DWrapperDistributionStrategy::test_energy_distribution 
+[gw5] [ 87%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_valid[None-expected0] 
+test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec1-expected1] 
+test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec2-expected2] 
+[gw6] [ 87%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec1-expected1] 
+[gw5] [ 87%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec2-expected2] 
+test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec3-expected3] 
+test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec4-expected4] 
+[gw6] [ 87%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec3-expected3] 
+[gw5] [ 87%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec4-expected4] 
+test/unit/test_user_metrics.py::test_spec_selector_load_invalid[invalid] 
+test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec5-expected5] 
+[gw5] [ 87%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_invalid[invalid] 
+[gw6] [ 88%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_valid[metric_selector_spec5-expected5] 
+test/unit/test_user_metrics.py::test_spec_selector_load_invalid[123] 
+test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec2] 
+[gw5] [ 88%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_invalid[123] 
+[gw6] [ 88%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec2] 
+test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec3] 
+[gw5] [ 88%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec3] 
+test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec4] 
+[gw6] [ 88%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec4] 
+test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec5] 
+[gw5] [ 88%] PASSED test/unit/test_user_metrics.py::test_spec_selector_load_invalid[metric_selector_spec5] 
+test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs0-expected0] 
+[gw6] [ 89%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs0-expected0] 
+test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs1-expected1] 
+[gw5] [ 89%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs1-expected1] 
+test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs2-expected2] 
+test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs3-expected3] 
+[gw6] [ 89%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs2-expected2] 
+[gw5] [ 89%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_valid[metric_specs3-expected3] 
+test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs0] 
+test/unit/test_user_metrics.py::test_metric_spec_load_invalid[invalid] 
+[gw6] [ 89%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs0] 
+[gw5] [ 89%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_invalid[invalid] 
+test/unit/test_user_metrics.py::test_metric_spec_load_invalid[None] 
+[gw6] [ 89%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_invalid[None] 
+test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs3] 
+test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs4] 
+[gw5] [ 90%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs3] 
+[gw6] [ 90%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs4] 
+test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs5] 
+test/unit/test_user_metrics.py::test_read_metrics_specs 
+[gw5] [ 90%] PASSED test/unit/test_user_metrics.py::test_metric_spec_load_invalid[metric_specs5] 
+test/unit/test_user_metrics.py::test_process_metrics 
+[gw6] [ 90%] PASSED test/unit/test_user_metrics.py::test_read_metrics_specs 
+test/unit/test_user_metrics.py::test_get_current_metric_folder 
+[gw5] [ 90%] PASSED test/unit/test_user_metrics.py::test_process_metrics 
+test/unit/test_user_metrics.py::test_get_current_metric_folder_placeholder 
+[gw6] [ 90%] PASSED test/unit/test_user_metrics.py::test_get_current_metric_folder 
+test/unit/test_user_metrics.py::test_store_metric 
+[gw5] [ 91%] PASSED test/unit/test_user_metrics.py::test_get_current_metric_folder_placeholder 
+test/unit/test_version.py::test_autosubmit_version 
+[gw6] [ 91%] PASSED test/unit/test_user_metrics.py::test_store_metric 
+test/unit/test_version.py::test_autosubmit_version_broken 
+[gw4] [ 91%] PASSED test/unit/test_platform.py::test_get_stat_file[False--1] 
+test/unit/test_platform.py::test_get_stat_file[False-0] 
+[gw3] [ 91%] PASSED test/unit/test_platform.py::test_get_stat_file[False-1] 
+test/unit/test_platform.py::test_local_platform_read_file 
+[gw3] [ 91%] PASSED test/unit/test_platform.py::test_local_platform_read_file 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wallclock 
+[gw3] [ 91%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wallclock 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_section_not_self_dependent 
+[gw3] [ 91%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_section_not_self_dependent 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_mixed_wrapper 
+[gw3] [ 92%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_parent_failed_mixed_wrapper 
+[gw3] [ 92%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_parent_failed_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_jobs_mixed_wrapper 
+[gw3] [ 92%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_jobs_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wrapped_jobs_mixed_wrapper 
+[gw3] [ 92%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wrapped_jobs_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wallclock_mixed_wrapper 
+[gw3] [ 92%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wallclock_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_first_chunks_completed_mixed_wrapper 
+[gw3] [ 92%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_first_chunks_completed_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_simple_workflow_mixed_wrapper 
+[gw3] [ 93%] PASSED test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_simple_workflow_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_running_date_mixed_wrapper 
+[gw3] [ 93%] PASSED test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_running_date_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_running_once_mixed_wrapper 
+[gw3] [ 93%] PASSED test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_running_once_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_synchronize_date_mixed_wrapper 
+[gw3] [ 93%] PASSED test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_synchronize_date_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_synchronize_member_mixed_wrapper 
+[gw3] [ 93%] PASSED test/unit/test_wrappers.py::TestWrappers::test_ordered_dict_jobs_synchronize_member_mixed_wrapper 
+test/unit/test_wrappers.py::TestWrappers::test_check_real_package_wrapper_limits 
+[gw3] [ 93%] PASSED test/unit/test_wrappers.py::TestWrappers::test_check_real_package_wrapper_limits 
+test/unit/test_wrappers.py::TestWrappers::test_check_jobs_to_run_first 
+[gw2] [ 93%] PASSED test/unit/test_job.py::TestJob::test_header_tailer 
+test/unit/test_job.py::TestJob::test_job_script_checking_contains_the_right_variables 
+[gw3] [ 94%] PASSED test/unit/test_wrappers.py::TestWrappers::test_check_jobs_to_run_first 
+test/unit/test_wrappers.py::TestWrappers::test_calculate_wrapper_bounds 
+[gw3] [ 94%] PASSED test/unit/test_wrappers.py::TestWrappers::test_calculate_wrapper_bounds 
+test/unit/test_wrappers.py::test_is_deadlock_jobs_in_queue[no_simple_packages] 
+[gw3] [ 94%] PASSED test/unit/test_wrappers.py::test_is_deadlock_jobs_in_queue[no_simple_packages] 
+test/unit/test_wrappers.py::test_is_deadlock_jobs_in_queue[simple_packages_exist] 
+[gw3] [ 94%] PASSED test/unit/test_wrappers.py::test_is_deadlock_jobs_in_queue[simple_packages_exist] 
+test/unit/test_wrappers.py::test_is_deadlock_jobs_in_queue[mismatch_in_package_info] 
+[gw3] [ 94%] PASSED test/unit/test_wrappers.py::test_is_deadlock_jobs_in_queue[mismatch_in_package_info] 
+test/unit/test_wrappers.py::test_is_deadlock_no_jobs_in_queue[no_simple_packages] 
+[gw2] [ 94%] PASSED test/unit/test_job.py::TestJob::test_job_script_checking_contains_the_right_variables 
+test/unit/test_wrappers.py::TestWrappers::test_check_packages_respect_wrapper_policy 
+[gw3] [ 95%] PASSED test/unit/test_wrappers.py::test_is_deadlock_no_jobs_in_queue[no_simple_packages] 
+test/unit/test_wrappers.py::test_is_deadlock_no_jobs_in_queue[simple_packages_exist] 
+[gw3] [ 95%] PASSED test/unit/test_wrappers.py::test_is_deadlock_no_jobs_in_queue[simple_packages_exist] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[strict_policy] 
+[gw2] [ 95%] PASSED test/unit/test_wrappers.py::TestWrappers::test_check_packages_respect_wrapper_policy 
+test/unit/test_wrappers.py::test_is_deadlock_no_jobs_in_queue[mismatch_in_package_info] 
+[gw3] [ 95%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[strict_policy] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[mixed_policy] 
+[gw2] [ 95%] PASSED test/unit/test_wrappers.py::test_is_deadlock_no_jobs_in_queue[mismatch_in_package_info] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[flexible_policy] 
+[gw3] [ 95%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[mixed_policy] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[strict_one_job] 
+[gw2] [ 95%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[flexible_policy] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[mixed_one_job] 
+[gw3] [ 96%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[strict_one_job] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[flexible_one_job] 
+[gw2] [ 96%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[mixed_one_job] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[strict_policy] 
+[gw3] [ 96%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_no_more_remaining_jobs[flexible_one_job] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[mixed_policy] 
+[gw2] [ 96%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[strict_policy] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[flexible_policy] 
+[gw3] [ 96%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[mixed_policy] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[mixed_policy_failed_job] 
+[gw2] [ 96%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[flexible_policy] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[default_policy] 
+[gw3] [ 97%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[mixed_policy_failed_job] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[strict_one_job] 
+[gw2] [ 97%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[default_policy] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[mixed_one_job] 
+[gw3] [ 97%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[strict_one_job] 
+test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[flexible_one_job] 
+[gw2] [ 97%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[mixed_one_job] 
+autosubmit/helpers/processes.py::autosubmit.helpers.processes._match_autosubmit_cmdline 
+[gw3] [ 97%] PASSED test/unit/test_wrappers.py::test_process_not_wrappeable_packages_more_jobs_of_that_section[flexible_one_job] 
+autosubmit/helpers/processes.py::autosubmit.helpers.processes._match_expid 
+[gw2] [ 97%] PASSED autosubmit/helpers/processes.py::autosubmit.helpers.processes._match_autosubmit_cmdline 
+autosubmit/helpers/utils.py::autosubmit.helpers.utils.NaturalSort 
+[gw3] [ 97%] PASSED autosubmit/helpers/processes.py::autosubmit.helpers.processes._match_expid 
+[gw2] [ 98%] PASSED autosubmit/helpers/utils.py::autosubmit.helpers.utils.NaturalSort 
+[gw5] [ 98%] PASSED test/unit/test_version.py::test_autosubmit_version 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages 
+[gw5] [ 98%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages 
+[gw6] [ 98%] PASSED test/unit/test_version.py::test_autosubmit_version_broken 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_jobs 
+[gw6] [ 98%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_jobs 
+[gw1] [ 98%] PASSED test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds] 
+test/unit/test_autosubmit_helper.py::test_get_allowed_members[None] 
+[gw1] [ 99%] XPASS test/unit/test_autosubmit_helper.py::test_get_allowed_members[None] 
+[gw7] [ 99%] PASSED test/unit/test_platform.py::TestJob::test_header_tailer 
+test/unit/test_platform.py::TestJob::test_hetjob 
+[gw7] [ 99%] PASSED test/unit/test_platform.py::TestJob::test_hetjob 
+[gw4] [ 99%] PASSED test/unit/test_platform.py::test_get_stat_file[False-0] 
+test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wrapped_jobs 
+[gw4] [ 99%] PASSED test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wrapped_jobs 
+[gw0] [ 99%] PASSED test/unit/test_expid.py::test_expid[success] 
+test/unit/test_history.py::TestExperimentHistory::test_is_header_ready 
+[gw0] [100%] SKIPPED test/unit/test_history.py::TestExperimentHistory::test_is_header_ready 
+
+=================================== FAILURES ===================================
+___________________ test_generate_output[pdf-True-None-None] ___________________
+[gw2] linux -- Python 3.10.12 /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/.venv/bin/python
+
+output_format = 'pdf', show = True, display_error = None, error_raised = None
+autosubmit_exp = <function autosubmit_exp.<locals>._create_autosubmit_exp at 0x73dccdb03130>
+mocker = <pytest_mock.plugin.MockerFixture object at 0x73dca042cd30>
+
+    @pytest.mark.parametrize(
+        "output_format,show,display_error,error_raised",
+        [
+            ('png', True, None, None),
+            ('pdf', True, None, None),
+            ('ps', False, None, None),
+            ('ps', True, CalledProcessError(1, 'test'), None),
+            ('svg', True, None, None),
+            ('txt', False, None, None),
+            (None, False, None, AutosubmitCritical)
+        ]
+    )
+    def test_generate_output(
+            output_format: str,
+            show: bool,
+            display_error: Optional[SubprocessError],
+            error_raised: Optional[BaseException],
+            autosubmit_exp,
+            mocker
+    ):
+        """Test that monitor generates its output in different formats."""
+        mocked_log = mocker.patch('autosubmit.monitor.monitor.Log')
+    
+        exp = autosubmit_exp(_EXPID, experiment_data={})
+        exp_path = Path(exp.as_conf.basic_config.LOCAL_ROOT_DIR) / _EXPID
+    
+        job_list_persistence = exp.autosubmit._get_job_list_persistence(_EXPID, exp.as_conf)
+        job_list = JobList(_EXPID, exp.as_conf, YAMLParserFactory(), job_list_persistence)
+        date_list = exp.as_conf.get_date_list()
+        # TODO: we can probably simplify our code, so that ``date_format`` is calculated more easily...
+        date_format = ''
+        if exp.as_conf.get_chunk_size_unit() == 'hour':
+            date_format = 'H'
+        for date in date_list:
+            if date.hour > 1:
+                date_format = 'H'
+            if date.minute > 1:
+                date_format = 'M'
+        wrapper_jobs = {}
+        job_list.generate(
+            exp.as_conf,
+            date_list,
+            exp.as_conf.get_member_list(),
+            exp.as_conf.get_num_chunks(),
+            exp.as_conf.get_chunk_ini(),
+            exp.as_conf.load_parameters(),
+            date_format,
+            exp.as_conf.get_retrials(),
+            exp.as_conf.get_default_job_type(),
+            wrapper_jobs,
+            run_only_members=exp.as_conf.get_member_list(run_only=True),
+            force=True,
+            create=True)
+    
+        monitor = Monitor()
+        if error_raised:
+            with pytest.raises(error_raised):
+                monitor.generate_output(
+                    expid=_EXPID,
+                    joblist=job_list.get_job_list(),
+                    path=exp_path / f'tmp/LOG_{_EXPID}',
+                    output_format=output_format,
+                    show=show,
+                    groups=None,
+                    job_list_object=job_list
+                )
+        else:
+            mock_display_file = mocker.patch('autosubmit.monitor.monitor._display_file')
+            if display_error:
+                mock_display_file.side_effect = display_error
+    
+            monitor.generate_output(
+                expid=_EXPID,
+                joblist=job_list.get_job_list(),
+                path=exp_path / f'tmp/LOG_{_EXPID}',
+                output_format=output_format,
+                show=show,
+                groups=None,
+                job_list_object=job_list
+            )
+    
+>           assert mock_display_file.called == show
+E           AssertionError: assert False == True
+E            +  where False = <MagicMock name='_display_file' id='127392179003328'>.called
+
+test/unit/monitor/test_monitor.py:428: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Creating autosubmit database...
+[32mAutosubmit database created successfully[0m[39m
+Writing configuration file...
+[32mConfiguration file written successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0/.autosubmitrc[0m[39m
+[32mDirectories configured successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0/logs 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0/metadata/structures 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0/metadata/data 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0/metadata/logs[0m[39m
+The new experiment "t000" has been registered.
+Generating folder structure...
+Experiment folder: /tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_pdf_True_0/t000
+Generating config files...
+[32mExperiment t000 created[0m[39m
+Autosubmit admin user: eadmin is not set
+Preparing .lock file to avoid multiple instances with same expid.
+
+Checking configuration files...
+[32mExpdef config file is correct[0m[39m
+[32mPlatforms sections: OK[0m[39m
+[32mJobs sections OK[0m[39m
+[32mAutosubmit general sections OK[0m[39m
+[32mPartial configuration validated correctly[0m[39m
+[32mConfiguration files OK
+[0m[39m
+Loading parameters...
+
+Creating the jobs list...
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+
+Saving the jobs list...
+[32m
+Job list created successfully[0m[39m
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+----------------------------- Captured stderr call -----------------------------
+/bin/sh: 1: sqlite3: not found
+___________________ test_generate_output[png-True-None-None] ___________________
+[gw0] linux -- Python 3.10.12 /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/.venv/bin/python
+
+output_format = 'png', show = True, display_error = None, error_raised = None
+autosubmit_exp = <function autosubmit_exp.<locals>._create_autosubmit_exp at 0x78e7c0c83d90>
+mocker = <pytest_mock.plugin.MockerFixture object at 0x78e7c0b4aa10>
+
+    @pytest.mark.parametrize(
+        "output_format,show,display_error,error_raised",
+        [
+            ('png', True, None, None),
+            ('pdf', True, None, None),
+            ('ps', False, None, None),
+            ('ps', True, CalledProcessError(1, 'test'), None),
+            ('svg', True, None, None),
+            ('txt', False, None, None),
+            (None, False, None, AutosubmitCritical)
+        ]
+    )
+    def test_generate_output(
+            output_format: str,
+            show: bool,
+            display_error: Optional[SubprocessError],
+            error_raised: Optional[BaseException],
+            autosubmit_exp,
+            mocker
+    ):
+        """Test that monitor generates its output in different formats."""
+        mocked_log = mocker.patch('autosubmit.monitor.monitor.Log')
+    
+        exp = autosubmit_exp(_EXPID, experiment_data={})
+        exp_path = Path(exp.as_conf.basic_config.LOCAL_ROOT_DIR) / _EXPID
+    
+        job_list_persistence = exp.autosubmit._get_job_list_persistence(_EXPID, exp.as_conf)
+        job_list = JobList(_EXPID, exp.as_conf, YAMLParserFactory(), job_list_persistence)
+        date_list = exp.as_conf.get_date_list()
+        # TODO: we can probably simplify our code, so that ``date_format`` is calculated more easily...
+        date_format = ''
+        if exp.as_conf.get_chunk_size_unit() == 'hour':
+            date_format = 'H'
+        for date in date_list:
+            if date.hour > 1:
+                date_format = 'H'
+            if date.minute > 1:
+                date_format = 'M'
+        wrapper_jobs = {}
+        job_list.generate(
+            exp.as_conf,
+            date_list,
+            exp.as_conf.get_member_list(),
+            exp.as_conf.get_num_chunks(),
+            exp.as_conf.get_chunk_ini(),
+            exp.as_conf.load_parameters(),
+            date_format,
+            exp.as_conf.get_retrials(),
+            exp.as_conf.get_default_job_type(),
+            wrapper_jobs,
+            run_only_members=exp.as_conf.get_member_list(run_only=True),
+            force=True,
+            create=True)
+    
+        monitor = Monitor()
+        if error_raised:
+            with pytest.raises(error_raised):
+                monitor.generate_output(
+                    expid=_EXPID,
+                    joblist=job_list.get_job_list(),
+                    path=exp_path / f'tmp/LOG_{_EXPID}',
+                    output_format=output_format,
+                    show=show,
+                    groups=None,
+                    job_list_object=job_list
+                )
+        else:
+            mock_display_file = mocker.patch('autosubmit.monitor.monitor._display_file')
+            if display_error:
+                mock_display_file.side_effect = display_error
+    
+            monitor.generate_output(
+                expid=_EXPID,
+                joblist=job_list.get_job_list(),
+                path=exp_path / f'tmp/LOG_{_EXPID}',
+                output_format=output_format,
+                show=show,
+                groups=None,
+                job_list_object=job_list
+            )
+    
+>           assert mock_display_file.called == show
+E           AssertionError: assert False == True
+E            +  where False = <MagicMock name='_display_file' id='132936767221920'>.called
+
+test/unit/monitor/test_monitor.py:428: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Creating autosubmit database...
+[32mAutosubmit database created successfully[0m[39m
+Writing configuration file...
+[32mConfiguration file written successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0/.autosubmitrc[0m[39m
+[32mDirectories configured successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0/logs 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0/metadata/structures 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0/metadata/data 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0/metadata/logs[0m[39m
+The new experiment "t000" has been registered.
+Generating folder structure...
+Experiment folder: /tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_png_True_0/t000
+Generating config files...
+[32mExperiment t000 created[0m[39m
+Autosubmit admin user: eadmin is not set
+Preparing .lock file to avoid multiple instances with same expid.
+
+Checking configuration files...
+[32mExpdef config file is correct[0m[39m
+[32mPlatforms sections: OK[0m[39m
+[32mJobs sections OK[0m[39m
+[32mAutosubmit general sections OK[0m[39m
+[32mPartial configuration validated correctly[0m[39m
+[32mConfiguration files OK
+[0m[39m
+Loading parameters...
+
+Creating the jobs list...
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+
+Saving the jobs list...
+[32m
+Job list created successfully[0m[39m
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+----------------------------- Captured stderr call -----------------------------
+/bin/sh: 1: sqlite3: not found
+______________ test_generate_output[ps-True-display_error3-None] _______________
+[gw6] linux -- Python 3.10.12 /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/.venv/bin/python
+
+output_format = 'ps', show = True, display_error = CalledProcessError(1, 'test')
+error_raised = None
+autosubmit_exp = <function autosubmit_exp.<locals>._create_autosubmit_exp at 0x7c6c094cb490>
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7c6c0927be50>
+
+    @pytest.mark.parametrize(
+        "output_format,show,display_error,error_raised",
+        [
+            ('png', True, None, None),
+            ('pdf', True, None, None),
+            ('ps', False, None, None),
+            ('ps', True, CalledProcessError(1, 'test'), None),
+            ('svg', True, None, None),
+            ('txt', False, None, None),
+            (None, False, None, AutosubmitCritical)
+        ]
+    )
+    def test_generate_output(
+            output_format: str,
+            show: bool,
+            display_error: Optional[SubprocessError],
+            error_raised: Optional[BaseException],
+            autosubmit_exp,
+            mocker
+    ):
+        """Test that monitor generates its output in different formats."""
+        mocked_log = mocker.patch('autosubmit.monitor.monitor.Log')
+    
+        exp = autosubmit_exp(_EXPID, experiment_data={})
+        exp_path = Path(exp.as_conf.basic_config.LOCAL_ROOT_DIR) / _EXPID
+    
+        job_list_persistence = exp.autosubmit._get_job_list_persistence(_EXPID, exp.as_conf)
+        job_list = JobList(_EXPID, exp.as_conf, YAMLParserFactory(), job_list_persistence)
+        date_list = exp.as_conf.get_date_list()
+        # TODO: we can probably simplify our code, so that ``date_format`` is calculated more easily...
+        date_format = ''
+        if exp.as_conf.get_chunk_size_unit() == 'hour':
+            date_format = 'H'
+        for date in date_list:
+            if date.hour > 1:
+                date_format = 'H'
+            if date.minute > 1:
+                date_format = 'M'
+        wrapper_jobs = {}
+        job_list.generate(
+            exp.as_conf,
+            date_list,
+            exp.as_conf.get_member_list(),
+            exp.as_conf.get_num_chunks(),
+            exp.as_conf.get_chunk_ini(),
+            exp.as_conf.load_parameters(),
+            date_format,
+            exp.as_conf.get_retrials(),
+            exp.as_conf.get_default_job_type(),
+            wrapper_jobs,
+            run_only_members=exp.as_conf.get_member_list(run_only=True),
+            force=True,
+            create=True)
+    
+        monitor = Monitor()
+        if error_raised:
+            with pytest.raises(error_raised):
+                monitor.generate_output(
+                    expid=_EXPID,
+                    joblist=job_list.get_job_list(),
+                    path=exp_path / f'tmp/LOG_{_EXPID}',
+                    output_format=output_format,
+                    show=show,
+                    groups=None,
+                    job_list_object=job_list
+                )
+        else:
+            mock_display_file = mocker.patch('autosubmit.monitor.monitor._display_file')
+            if display_error:
+                mock_display_file.side_effect = display_error
+    
+            monitor.generate_output(
+                expid=_EXPID,
+                joblist=job_list.get_job_list(),
+                path=exp_path / f'tmp/LOG_{_EXPID}',
+                output_format=output_format,
+                show=show,
+                groups=None,
+                job_list_object=job_list
+            )
+    
+>           assert mock_display_file.called == show
+E           AssertionError: assert False == True
+E            +  where False = <MagicMock name='_display_file' id='136803451327760'>.called
+
+test/unit/monitor/test_monitor.py:428: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Creating autosubmit database...
+[32mAutosubmit database created successfully[0m[39m
+Writing configuration file...
+[32mConfiguration file written successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0/.autosubmitrc[0m[39m
+[32mDirectories configured successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0 
+	/tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0 
+	/tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0/logs 
+	/tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0/metadata/structures 
+	/tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0/metadata/data 
+	/tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0/metadata/logs[0m[39m
+The new experiment "t000" has been registered.
+Generating folder structure...
+Experiment folder: /tmp/pytest-of-root/pytest-270/popen-gw6/test_generate_output_ps_True_d0/t000
+Generating config files...
+[32mExperiment t000 created[0m[39m
+Autosubmit admin user: eadmin is not set
+Preparing .lock file to avoid multiple instances with same expid.
+
+Checking configuration files...
+[32mExpdef config file is correct[0m[39m
+[32mPlatforms sections: OK[0m[39m
+[32mJobs sections OK[0m[39m
+[32mAutosubmit general sections OK[0m[39m
+[32mPartial configuration validated correctly[0m[39m
+[32mConfiguration files OK
+[0m[39m
+Loading parameters...
+
+Creating the jobs list...
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+
+Saving the jobs list...
+[32m
+Job list created successfully[0m[39m
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+----------------------------- Captured stderr call -----------------------------
+/bin/sh: 1: sqlite3: not found
+___________________ test_generate_output[ps-False-None-None] ___________________
+[gw0] linux -- Python 3.10.12 /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/.venv/bin/python
+
+output_format = 'ps', show = False, display_error = None, error_raised = None
+autosubmit_exp = <function autosubmit_exp.<locals>._create_autosubmit_exp at 0x78e7cadd3eb0>
+mocker = <pytest_mock.plugin.MockerFixture object at 0x78e7cada4a00>
+
+    @pytest.mark.parametrize(
+        "output_format,show,display_error,error_raised",
+        [
+            ('png', True, None, None),
+            ('pdf', True, None, None),
+            ('ps', False, None, None),
+            ('ps', True, CalledProcessError(1, 'test'), None),
+            ('svg', True, None, None),
+            ('txt', False, None, None),
+            (None, False, None, AutosubmitCritical)
+        ]
+    )
+    def test_generate_output(
+            output_format: str,
+            show: bool,
+            display_error: Optional[SubprocessError],
+            error_raised: Optional[BaseException],
+            autosubmit_exp,
+            mocker
+    ):
+        """Test that monitor generates its output in different formats."""
+        mocked_log = mocker.patch('autosubmit.monitor.monitor.Log')
+    
+        exp = autosubmit_exp(_EXPID, experiment_data={})
+        exp_path = Path(exp.as_conf.basic_config.LOCAL_ROOT_DIR) / _EXPID
+    
+        job_list_persistence = exp.autosubmit._get_job_list_persistence(_EXPID, exp.as_conf)
+        job_list = JobList(_EXPID, exp.as_conf, YAMLParserFactory(), job_list_persistence)
+        date_list = exp.as_conf.get_date_list()
+        # TODO: we can probably simplify our code, so that ``date_format`` is calculated more easily...
+        date_format = ''
+        if exp.as_conf.get_chunk_size_unit() == 'hour':
+            date_format = 'H'
+        for date in date_list:
+            if date.hour > 1:
+                date_format = 'H'
+            if date.minute > 1:
+                date_format = 'M'
+        wrapper_jobs = {}
+        job_list.generate(
+            exp.as_conf,
+            date_list,
+            exp.as_conf.get_member_list(),
+            exp.as_conf.get_num_chunks(),
+            exp.as_conf.get_chunk_ini(),
+            exp.as_conf.load_parameters(),
+            date_format,
+            exp.as_conf.get_retrials(),
+            exp.as_conf.get_default_job_type(),
+            wrapper_jobs,
+            run_only_members=exp.as_conf.get_member_list(run_only=True),
+            force=True,
+            create=True)
+    
+        monitor = Monitor()
+        if error_raised:
+            with pytest.raises(error_raised):
+                monitor.generate_output(
+                    expid=_EXPID,
+                    joblist=job_list.get_job_list(),
+                    path=exp_path / f'tmp/LOG_{_EXPID}',
+                    output_format=output_format,
+                    show=show,
+                    groups=None,
+                    job_list_object=job_list
+                )
+        else:
+            mock_display_file = mocker.patch('autosubmit.monitor.monitor._display_file')
+            if display_error:
+                mock_display_file.side_effect = display_error
+    
+            monitor.generate_output(
+                expid=_EXPID,
+                joblist=job_list.get_job_list(),
+                path=exp_path / f'tmp/LOG_{_EXPID}',
+                output_format=output_format,
+                show=show,
+                groups=None,
+                job_list_object=job_list
+            )
+    
+            assert mock_display_file.called == show
+            if display_error:
+                assert mocked_log.printlog.call_count > 0
+                logged_message = mocked_log.printlog.call_args_list[-1].args[0]
+                assert 'could not be opened' in logged_message
+    
+            if output_format == 'txt':
+                plots_dir = Path(exp_path, 'status')
+            else:
+                plots_dir = Path(exp_path, 'plot')
+            plots = list(plots_dir.iterdir())
+    
+            assert len(plots) == 1
+            assert plots[0].name.endswith(output_format)
+    
+            # TODO: txt is creating an empty file, whereas the other formats create
+            #       something that tells the user what are the jobs in the workflow.
+            #       So txt format gives less information to the user, thus the 0 size.
+            if output_format != 'txt':
+>               assert plots[0].stat().st_size > 0
+E               AssertionError: assert 0 > 0
+E                +  where 0 = os.stat_result(st_mode=33206, st_ino=10530224, st_dev=66309, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1762956152, st_mtime=1762956152, st_ctime=1762956152).st_size
+E                +    where os.stat_result(st_mode=33206, st_ino=10530224, st_dev=66309, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1762956152, st_mtime=1762956152, st_ctime=1762956152) = stat()
+E                +      where stat = PosixPath('/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0/t000/plot/t000_20251112_1502.ps').stat
+
+test/unit/monitor/test_monitor.py:447: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Creating autosubmit database...
+[32mAutosubmit database created successfully[0m[39m
+Writing configuration file...
+[32mConfiguration file written successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0/.autosubmitrc[0m[39m
+[32mDirectories configured successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0/logs 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0/metadata/structures 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0/metadata/data 
+	/tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0/metadata/logs[0m[39m
+The new experiment "t000" has been registered.
+Generating folder structure...
+Experiment folder: /tmp/pytest-of-root/pytest-270/popen-gw0/test_generate_output_ps_False_0/t000
+Generating config files...
+[32mExperiment t000 created[0m[39m
+Autosubmit admin user: eadmin is not set
+Preparing .lock file to avoid multiple instances with same expid.
+
+Checking configuration files...
+[32mExpdef config file is correct[0m[39m
+[32mPlatforms sections: OK[0m[39m
+[32mJobs sections OK[0m[39m
+[32mAutosubmit general sections OK[0m[39m
+[32mPartial configuration validated correctly[0m[39m
+[32mConfiguration files OK
+[0m[39m
+Loading parameters...
+
+Creating the jobs list...
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+
+Saving the jobs list...
+[32m
+Job list created successfully[0m[39m
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+----------------------------- Captured stderr call -----------------------------
+/bin/sh: 1: sqlite3: not found
+___________________ test_generate_output[svg-True-None-None] ___________________
+[gw2] linux -- Python 3.10.12 /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/.venv/bin/python
+
+output_format = 'svg', show = True, display_error = None, error_raised = None
+autosubmit_exp = <function autosubmit_exp.<locals>._create_autosubmit_exp at 0x73dca0541d80>
+mocker = <pytest_mock.plugin.MockerFixture object at 0x73dcaa788ca0>
+
+    @pytest.mark.parametrize(
+        "output_format,show,display_error,error_raised",
+        [
+            ('png', True, None, None),
+            ('pdf', True, None, None),
+            ('ps', False, None, None),
+            ('ps', True, CalledProcessError(1, 'test'), None),
+            ('svg', True, None, None),
+            ('txt', False, None, None),
+            (None, False, None, AutosubmitCritical)
+        ]
+    )
+    def test_generate_output(
+            output_format: str,
+            show: bool,
+            display_error: Optional[SubprocessError],
+            error_raised: Optional[BaseException],
+            autosubmit_exp,
+            mocker
+    ):
+        """Test that monitor generates its output in different formats."""
+        mocked_log = mocker.patch('autosubmit.monitor.monitor.Log')
+    
+        exp = autosubmit_exp(_EXPID, experiment_data={})
+        exp_path = Path(exp.as_conf.basic_config.LOCAL_ROOT_DIR) / _EXPID
+    
+        job_list_persistence = exp.autosubmit._get_job_list_persistence(_EXPID, exp.as_conf)
+        job_list = JobList(_EXPID, exp.as_conf, YAMLParserFactory(), job_list_persistence)
+        date_list = exp.as_conf.get_date_list()
+        # TODO: we can probably simplify our code, so that ``date_format`` is calculated more easily...
+        date_format = ''
+        if exp.as_conf.get_chunk_size_unit() == 'hour':
+            date_format = 'H'
+        for date in date_list:
+            if date.hour > 1:
+                date_format = 'H'
+            if date.minute > 1:
+                date_format = 'M'
+        wrapper_jobs = {}
+        job_list.generate(
+            exp.as_conf,
+            date_list,
+            exp.as_conf.get_member_list(),
+            exp.as_conf.get_num_chunks(),
+            exp.as_conf.get_chunk_ini(),
+            exp.as_conf.load_parameters(),
+            date_format,
+            exp.as_conf.get_retrials(),
+            exp.as_conf.get_default_job_type(),
+            wrapper_jobs,
+            run_only_members=exp.as_conf.get_member_list(run_only=True),
+            force=True,
+            create=True)
+    
+        monitor = Monitor()
+        if error_raised:
+            with pytest.raises(error_raised):
+                monitor.generate_output(
+                    expid=_EXPID,
+                    joblist=job_list.get_job_list(),
+                    path=exp_path / f'tmp/LOG_{_EXPID}',
+                    output_format=output_format,
+                    show=show,
+                    groups=None,
+                    job_list_object=job_list
+                )
+        else:
+            mock_display_file = mocker.patch('autosubmit.monitor.monitor._display_file')
+            if display_error:
+                mock_display_file.side_effect = display_error
+    
+            monitor.generate_output(
+                expid=_EXPID,
+                joblist=job_list.get_job_list(),
+                path=exp_path / f'tmp/LOG_{_EXPID}',
+                output_format=output_format,
+                show=show,
+                groups=None,
+                job_list_object=job_list
+            )
+    
+>           assert mock_display_file.called == show
+E           AssertionError: assert False == True
+E            +  where False = <MagicMock name='_display_file' id='127391590073584'>.called
+
+test/unit/monitor/test_monitor.py:428: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Creating autosubmit database...
+[32mAutosubmit database created successfully[0m[39m
+Writing configuration file...
+[32mConfiguration file written successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0/.autosubmitrc[0m[39m
+[32mDirectories configured successfully: 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0/logs 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0/metadata/structures 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0/metadata/data 
+	/tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0/metadata/logs[0m[39m
+The new experiment "t000" has been registered.
+Generating folder structure...
+Experiment folder: /tmp/pytest-of-root/pytest-270/popen-gw2/test_generate_output_svg_True_0/t000
+Generating config files...
+[32mExperiment t000 created[0m[39m
+Autosubmit admin user: eadmin is not set
+Preparing .lock file to avoid multiple instances with same expid.
+
+Checking configuration files...
+[32mExpdef config file is correct[0m[39m
+[32mPlatforms sections: OK[0m[39m
+[32mJobs sections OK[0m[39m
+[32mAutosubmit general sections OK[0m[39m
+[32mPartial configuration validated correctly[0m[39m
+[32mConfiguration files OK
+[0m[39m
+Loading parameters...
+
+Creating the jobs list...
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+
+Saving the jobs list...
+[32m
+Job list created successfully[0m[39m
+Loading JobList
+[32mLoad finished[0m[39m
+Creating jobs...
+Adding dependencies to the graph..
+Adding dependencies to the job..
+Transitive reduction...
+Looking for edgeless jobs...
+----------------------------- Captured stderr call -----------------------------
+/bin/sh: 1: sqlite3: not found
+=============================== warnings summary ===============================
+test/unit/provenance/test_rocrate.py::test_rocrate
+test/unit/provenance/test_rocrate.py::test_rocrate_main
+test/unit/provenance/test_rocrate.py::test_no_duplicate_ids
+test/unit/provenance/test_rocrate.py::test_custom_config_loaded_file
+  /usr/lib/python3.10/zipfile.py:1528: UserWarning: Duplicate name: 'conf/metadata/experiment_data.yml'
+    return self._open_to_write(zinfo, force_zip64=force_zip64)
+
+test/unit/monitor/test_monitor.py: 35 warnings
+test/unit/test_basic_config.py: 1 warning
+test/unit/test_autosubmit_git.py: 20 warnings
+test/unit/test_commands.py: 6 warnings
+test/unit/test_checkpoints.py: 15 warnings
+  /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/.venv/lib/python3.10/site-packages/autosubmitconfigparser/config/basicconfig.py:116: DeprecationWarning: The SafeConfigParser class has been renamed to ConfigParser in Python 3.2. This alias will be removed in Python 3.12. Use ConfigParser directly instead.
+    parser = SafeConfigParser()
+
+test/unit/test_diagram.py::test_create_bar_diagram[all run]
+test/unit/test_diagram.py::test_create_bar_diagram[run with continue]
+  /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367/before/autosubmit/monitor/diagram.py:309: UserWarning: Attempting to set identical low and high ylims makes transformation singular; automatically expanding.
+    ax[plot - 1].set_ylim(0, float(1.10 * exp_stats.max_fail))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+10.09s call     test/unit/test_expid.py::test_expid[success]
+4.00s call     test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds]
+2.21s call     test/unit/test_job.py::TestJob::test_header_tailer
+1.90s call     test/unit/test_platform.py::TestJob::test_header_tailer
+1.36s call     test/unit/test_version.py::test_autosubmit_version
+1.34s call     test/unit/test_version.py::test_autosubmit_version_broken
+1.01s call     test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, no stats_file, failed to transfer]
+1.00s call     test/unit/test_platform.py::test_get_stat_file[False-0]
+1.00s call     test/unit/test_platform.py::test_get_stat_file[False-1]
+1.00s call     test/unit/test_platform.py::test_get_stat_file[False--1]
+0.68s setup    test/unit/test_checkpoints.py::test_check_special_status
+0.67s call     test/unit/monitor/test_monitor.py::test_generate_output[ps-True-display_error3-None]
+0.67s call     test/unit/monitor/test_monitor.py::test_generate_output[pdf-True-None-None]
+0.66s call     test/unit/monitor/test_monitor.py::test_generate_output[None-False-None-AutosubmitCritical]
+0.65s call     test/unit/monitor/test_monitor.py::test_generate_output[png-True-None-None]
+0.65s setup    test/unit/test_checkpoints.py::test_add_edge_info_joblist
+0.64s call     test/unit/monitor/test_monitor.py::test_generate_output[svg-True-None-None]
+0.63s call     test/unit/monitor/test_monitor.py::test_generate_output[ps-False-None-None]
+0.61s setup    test/unit/test_checkpoints.py::test_add_edge_job
+0.60s call     test/unit/monitor/test_monitor.py::test_generate_output[txt-False-None-None]
+0.59s call     test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-o001]
+0.58s call     test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-a001]
+0.55s call     test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-e001]
+0.54s call     test/unit/test_autosubmit_git.py::test_remote_repo_operational[git-t001]
+0.25s call     test/unit/test_job.py::TestJob::test_job_parameters
+0.21s call     test/unit/test_job_list.py::test_generate_job_list_from_monitor_run
+0.19s call     test/unit/monitor/test_monitor.py::test_generate_output_stats[jobs, but hiding, no report]
+0.19s call     test/unit/monitor/test_monitor.py::test_generate_output_stats[jobs, not hiding, output produced]
+0.19s call     test/unit/test_diagram.py::test_create_stats_report[create_jobs0]
+0.08s call     test/unit/test_job.py::TestJob::test_calendar
+0.08s call     test/unit/test_job.py::TestJob::test_job_script_checking_contains_the_right_variables
+0.08s call     test/unit/test_platform.py::TestJob::test_calendar
+0.08s setup    test/unit/test_wrappers.py::TestWrappers::test_check_jobs_to_run_first
+0.08s call     test/unit/test_overwallclock.py::test_platform_job_is_over_wallclock_force_failure[SlurmPlatform]
+0.08s call     test/unit/test_job.py::test_write_submit_time_ignore_exp_history[True]
+0.08s call     test/unit/test_job.py::test_write_submit_time_ignore_exp_history[False]
+0.08s call     test/unit/test_job_graph.py::test_synchronize_member
+0.07s call     test/unit/test_job_list.py::test_load
+0.07s setup    test/unit/test_job_graph.py::test_synchronize_date_group_member
+0.07s setup    test/unit/test_wrappers.py::TestWrappers::test_returned_packages_mixed_wrapper
+0.07s setup    test/unit/test_job_graph.py::test_synchronize_date
+0.07s setup    test/unit/test_job_graph.py::test_synchronize_member_group_member
+0.07s setup    test/unit/test_job_graph.py::test_synchronize_date_group_chunk
+0.07s setup    test/unit/test_job_graph.py::test_synchronize_date_group_date
+0.07s setup    test/unit/test_job_graph.py::test_wrapper_package
+0.07s call     test/unit/job/test_job_utils.py::test_cancel_jobs
+0.07s setup    test/unit/test_job_grouping.py::test_group_by_member_expand_running
+0.07s setup    test/unit/test_job_grouping.py::test_synchronize_date_group_member
+0.07s setup    test/unit/test_job_graph.py::test_synchronize_member_group_chunk
+0.07s setup    test/unit/test_job_grouping.py::test_automatic_grouping_all
+0.06s call     test/unit/job/test_job_utils.py::test_cancellation_with_invalid_active_states[active states is empty]
+0.06s setup    test/unit/test_job_grouping.py::test_automatic_grouping_different_status_member
+0.06s setup    test/unit/test_dependencies.py::test_check_splits
+0.06s setup    test/unit/test_job_grouping.py::test_automatic_grouping_not_ini
+0.06s call     test/unit/job/test_job_utils.py::test_cancellation_with_invalid_active_states[active states is None]
+0.06s setup    test/unit/test_dependencies.py::test_check_relationship
+0.06s setup    test/unit/test_job_grouping.py::test_synchronize_member_group_member
+0.06s setup    test/unit/test_job_grouping.py::test_group_by_split
+0.06s setup    test/unit/test_job_grouping.py::test_synchronize_date_group_date
+0.06s call     test/unit/job/test_job_utils.py::test_cancel_jobs_platform_error
+0.06s setup    test/unit/test_job_graph.py::test_normal_workflow
+0.06s setup    test/unit/test_dependencies.py::test_add_special_conditions_chunks_to_once
+0.06s setup    test/unit/test_job_grouping.py::test_automatic_grouping_splits
+0.06s setup    test/unit/test_job_graph.py::test_synchronize_member_group_date
+0.06s setup    test/unit/test_job_grouping.py::test_synchronize_date_group_chunk
+0.06s call     test/unit/job/test_job_utils.py::test_cancellation_without_target
+0.06s setup    test/unit/test_job_grouping.py::test_synchronize_member_group_chunk
+0.06s call     test/unit/test_detail_updater.py::test_details_repository
+0.06s setup    test/unit/test_job_graph.py::test_wrapper_and_groups
+0.06s setup    test/unit/test_job_grouping.py::test_automatic_grouping_different_status_chunk
+0.05s setup    test/unit/test_job_grouping.py::test_group_by_member
+0.05s setup    test/unit/test_job_graph.py::test_grouping_member
+0.05s setup    test/unit/test_dependencies.py::test_check_members
+0.05s setup    test/unit/test_job_grouping.py::test_group_by_chunk_expand
+0.05s setup    test/unit/test_job_grouping.py::test_group_by_member_expand
+0.05s setup    test/unit/test_job_graph.py::test_grouping_date
+0.05s setup    test/unit/test_job_grouping.py::test_group_by_member_expand_and_running
+0.05s setup    test/unit/test_dependencies.py::test_add_special_conditions
+0.05s setup    test/unit/test_job_grouping.py::test_synchronize_member_group_date
+0.05s call     test/unit/test_diagram.py::test_create_bar_diagram[run with continue]
+0.05s setup    test/unit/test_job_grouping.py::test_group_by_chunk_expand_failed_running
+0.05s setup    test/unit/test_dependencies.py::test_check_general
+0.05s setup    test/unit/test_dependencies.py::test_unify_to_filter
+0.05s setup    test/unit/test_dependencies.py::test_check_chunks
+0.05s call     test/unit/helpers/test_parameters.py::test_autosubmit_decorator_no_group
+0.05s setup    test/unit/test_job_grouping.py::test_group_by_date
+0.05s setup    test/unit/test_dependencies.py::test_check_dates
+0.05s setup    test/unit/test_dependencies.py::test_parse_filter_to_check
+0.05s call     test/unit/test_platform.py::TestJob::test_job_parameters
+0.05s setup    test/unit/test_job_graph.py::test_synchronize_member
+0.05s setup    test/unit/test_job_graph.py::test_grouping_chunk
+0.05s setup    test/unit/test_dependencies.py::test_job_dict_get_jobs_filtered
+0.04s setup    test/unit/test_dependencies.py::test_simple_dependency
+0.04s setup    test/unit/test_job_graph.py::test_grouping_automatic_hide
+0.04s setup    test/unit/test_dependencies.py::test_parse_filters_to_check
+0.04s setup    test/unit/test_job_grouping.py::test_group_by_chunk
+0.04s call     test/unit/test_user_metrics.py::test_store_metric
+0.03s call     test/unit/test_diagram.py::test_create_bar_diagram[all run]
+0.02s call     test/unit/test_platform.py::TestJob::test_hetjob
+0.02s setup    test/unit/test_mail.py::test_compress_file[One file. Attach a single file. No errors]
+0.02s setup    test/unit/test_mail.py::test_compress_file[Zip error]
+0.02s setup    test/unit/test_mail.py::test_compress_file[No files. No errors]
+0.02s setup    test/unit/test_mail.py::test_compress_file[Three files. Attach a single file. No errors]
+0.02s setup    test/unit/test_mail.py::test_notify_status_change[Log connection error (SMTP server error)]
+0.02s setup    test/unit/test_mail.py::test_compress_file[SMTP server error]
+0.02s setup    test/unit/test_mail.py::test_notify_status_change[Normal case: No errors]
+0.02s setup    test/unit/test_mail.py::test_compress_file[Attach error]
+0.02s call     test/unit/test_chunk_date_lib.py::test_subs_days
+0.01s call     test/unit/provenance/test_rocrate.py::test_rocrate_main
+0.01s call     test/unit/scripts/test_autosubmit.py::test_autosubmit_script_readme
+0.01s call     test/unit/provenance/test_rocrate.py::test_rocrate
+0.01s call     test/unit/test_wrappers.py::TestWrappers::test_returned_packages
+0.01s call     test/unit/provenance/test_rocrate.py::test_no_duplicate_ids
+0.01s call     test/unit/scripts/test_autosubmit.py::test_autosubmit_script_main
+0.01s call     test/unit/test_diagram.py::test_create_bar_diagram[fail job_dict]
+0.01s call     test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_jobs
+0.01s call     test/unit/test_diagram.py::test_build_legends
+0.01s call     test/unit/provenance/test_rocrate.py::test_custom_config_loaded_file
+0.01s call     test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wrapped_jobs
+0.01s call     test/unit/test_catlog.py::test_command_line_help
+0.01s call     test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_chunk_with_member_synchronize
+0.01s call     test/unit/test_job.py::TestJob::test_hetjob
+0.01s call     test/unit/test_commands.py::test_invalid_commands[Invalid args for create]
+0.01s call     test/unit/test_wrappers.py::TestWrappers::test_returned_packages_max_wallclock
+0.01s call     test/unit/provenance/test_rocrate.py::test_rocrate_invalid_project
+0.01s call     test/unit/test_commands.py::test_invalid_commands[No command provided]
+0.01s call     test/unit/test_wrappers.py::TestWrappers::test_returned_packages_section_not_self_dependent
+0.01s call     test/unit/test_commands.py::test_invalid_commands[Invalid subcommand]
+0.01s call     test/unit/platforms/test_locplatform.py::test_get_stat_file[use count, delete stats_file, remote file transferred]
+0.01s call     test/unit/test_job_graph.py::test_synchronize_date
+0.01s call     test/unit/test_platform.py::TestJob::test_job_script_checking_contains_the_right_variables
+0.01s setup    test/unit/test_dic_jobs.py::test_build_job_with_existent_job_list_status
+0.01s call     test/unit/test_job_graph.py::test_normal_workflow
+0.01s setup    test/unit/test_pjm.py::test_get_submitted_job_id
+0.01s call     test/unit/test_job_grouping.py::test_automatic_grouping_splits
+0.01s call     test/unit/provenance/test_rocrate.py::test_get_git_project_entity
+0.01s setup    test/unit/test_dic_jobs.py::test_dic_creates_right_jobs_by_startdate
+0.01s call     test/unit/monitor/test_monitor.py::test_generate_output_stats[no jobs, no report]
+0.01s call     test/unit/test_job_graph.py::test_wrapper_package
+0.01s call     test/unit/platforms/test_locplatform.py::test_get_stat_file[use fail_count, delete stats_file, remote file transferred]
+0.01s call     test/unit/test_job_graph.py::test_synchronize_date_group_chunk
+0.01s call     test/unit/test_job_graph.py::test_synchronize_member_group_chunk
+0.01s call     test/unit/test_job_package.py::test_job_package_submission
+0.01s setup    test/unit/test_pjm.py::test_parse_all_jobs_output
+0.01s call     test/unit/test_job_graph.py::test_grouping_chunk
+0.01s call     test/unit/test_job_grouping.py::test_automatic_grouping_not_ini
+0.01s call     test/unit/test_job_graph.py::test_wrapper_and_groups
+
+(1774 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED test/unit/monitor/test_monitor.py::test_generate_output[pdf-True-None-None]
+FAILED test/unit/monitor/test_monitor.py::test_generate_output[png-True-None-None]
+FAILED test/unit/monitor/test_monitor.py::test_generate_output[ps-True-display_error3-None]
+FAILED test/unit/monitor/test_monitor.py::test_generate_output[ps-False-None-None]
+FAILED test/unit/monitor/test_monitor.py::test_generate_output[svg-True-None-None]
+= 5 failed, 612 passed, 26 skipped, 2 xfailed, 4 xpassed, 83 warnings in 15.47s =
+Energy consumption in joules: 262.86566162109375 for 17.027431 sec of execution.
+
+
+========================================
+Completed before version at: wo 12 nov 2025 15:02:43 CET
+========================================
+
+========================================
+All tests completed at: wo 12 nov 2025 15:02:43 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/autosubmit_2367//test_results_test_suite.log
+========================================

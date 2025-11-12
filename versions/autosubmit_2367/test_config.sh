@@ -3,7 +3,7 @@
 # This file is sourced by run_tests_venv_generic.sh
 
 # Test command to run (without energibridge prefix)
-TEST_COMMAND="python -m pytest test/unit/test_expid.py --durations=0"
+TEST_COMMAND="python3 -m pytest test/unit/test_expid.py --durations=0"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
