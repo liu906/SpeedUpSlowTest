@@ -1,4 +1,4 @@
-PROJECT_PATH=autosubmit_2367
+PROJECT_PATH=pyjelly_235/
 
 # Prompt: Mock-Based Test Speedup
 
@@ -30,9 +30,7 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 Given a list of slowest tests from project `{PROJECT_PATH}/before`:
 
 ```
-10.09s call     test/unit/test_expid.py::test_expid[success]
-4.00s call     test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds]
-2.21s call     test/unit/test_job.py::TestJob::test_header_tailer
+133.43s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
 ```
 
 For each slow test:

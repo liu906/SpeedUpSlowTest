@@ -1,0 +1,23 @@
+========================================
+Starting test runs for project: ert_11206
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 40
+Test command: uv run pytest  tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result --durations=0 -vv
+Log file: /home/xutong/SpeedUpSlowTest/versions/ert_11206//test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+Reinitialized existing Git repository in /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.git/
+Resolved 272 packages in 1ms
+Audited 268 packages in 3ms
+
+=========================================
+Test run 1/40 for before
+Time: wo 12 nov 2025 22:28:11 CET
+=========================================

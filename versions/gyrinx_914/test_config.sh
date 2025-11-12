@@ -18,11 +18,11 @@ gyrinx/core/tests/test_models_core.py \
 VENV_PATH=".venv"
 
 
-# No setup needed - migrations are handled in Dockerfile
-SETUP_COMMAND=""
+# Start Docker containers
+SETUP_COMMAND="docker compose up -d && docker compose exec -T app sleep 2"
 
 # Wait time for containers to be ready
-WAIT_TIME=30
+WAIT_TIME=5
 
 # Project name
 PROJECT_NAME="gyrinx_914"

@@ -5,7 +5,7 @@
 # Test command to run (without energibridge prefix)
 # PR #235 testing: Run the integration test file that was modified
 # This test runs all example scripts in the examples/rdflib directory
-TEST_COMMAND="uv run pytest tests/ --ignore=tests/conformance_tests/test_rdf/test_parse.py --ignore=tests/conformance_tests/test_rdf/test_serialize.py --durations=0"
+TEST_COMMAND="uv run pytest tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] --durations=0 -v 2>&1 | tail -15"
 
 
 # Virtual environment path (relative to the version directory: before/ or after/)

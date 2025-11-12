@@ -1,4 +1,2 @@
 https://github.com/aeon-toolkit/aeon/pull/701
 https://github.com/bluesky/ophyd-async/pull/316
-https://github.com/BSC-ES/autosubmit/pull/2367
-https://github.com/equinor/ert/pull/11206
