@@ -1,0 +1,118 @@
+========================================
+Starting test runs for project: quant-mind_58
+Iterations: 1
+Test command: uv run pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/quant-mind_58//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+error: No virtual environment found; run `uv venv` to create an environment, or pass `--system` to install into a non-virtual environment
+
+=========================================
+Test run 1/1 for before
+Time: do 13 nov 2025  6:33:20 CET
+=========================================
+Using CPython 3.13.9
+Creating virtual environment at: .venv
+Installed 128 packages in 403ms
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before
+configfile: pyproject.toml
+plugins: anyio-4.9.0
+collected 227 items
+
+tests/config/test_embedding.py ................                          [  7%]
+tests/config/test_flow.py ...............                                [ 13%]
+tests/config/test_llm.py ..........                                      [ 18%]
+tests/config/test_settings.py ............                               [ 23%]
+tests/config/test_storage.py .............                               [ 29%]
+tests/flow/test_base_flow.py .........                                   [ 33%]
+tests/llm/test_embedding_block.py .........................              [ 44%]
+tests/llm/test_llm_block.py ......................                       [ 53%]
+tests/models/test_paper.py ..............                                [ 59%]
+tests/parsers/test_llama_parser.py ............................          [ 72%]
+tests/parsers/test_pdf_parser.py ........                                [ 75%]
+tests/sources/test_arxiv_source.py .............                         [ 81%]
+tests/sources/test_base_source.py .......                                [ 84%]
+tests/storage/test_local_storage.py .................                    [ 92%]
+tests/tagger/test_llm_tagger.py ..................                       [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+  /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.9/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312
+  /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:312: PydanticDeprecatedSince20: `json_encoders` is deprecated. See https://docs.pydantic.dev/2.9/concepts/serialization/#custom-serializers for alternatives. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.9/migration/
+    warnings.warn(
+
+<frozen importlib._bootstrap>:488
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+<frozen importlib._bootstrap>:488
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+
+.venv/lib/python3.13/site-packages/pydantic/v1/typing.py:68
+.venv/lib/python3.13/site-packages/pydantic/v1/typing.py:68
+.venv/lib/python3.13/site-packages/pydantic/v1/typing.py:68
+  /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/lib/python3.13/site-packages/pydantic/v1/typing.py:68: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing.ForwardRef._evaluate' is deprecated, as it leads to incorrect behaviour when calling typing.ForwardRef._evaluate on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+    return cast(Any, type_)._evaluate(globalns, localns, recursive_guard=set())
+
+.venv/lib/python3.13/site-packages/llama_cloud/types/metadata_filter.py:23
+  /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/lib/python3.13/site-packages/llama_cloud/types/metadata_filter.py:23: SyntaxWarning: invalid escape sequence '\*'
+    Value uses Strict\* types, as int, float and str are compatible types and were all
+
+tests/models/test_paper.py::TestPaper::test_dict_conversion
+  /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/lib/python3.13/site-packages/pydantic/main.py:1114: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.9/migration/
+    warnings.warn('The `dict` method is deprecated; use `model_dump` instead.', category=PydanticDeprecatedSince20)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+27.97s call     tests/config/test_settings.py::TestSetting::test_load_config_yaml_file
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure
+3.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure
+3.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure
+1.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success
+0.98s call     tests/storage/test_local_storage.py::TestEnhancedStorageWithIndexing::test_process_knowledge_paper_with_pdf_url
+0.75s call     tests/parsers/test_llama_parser.py::TestLlamaParser::test_parse_paper_parsing_error
+
+(670 durations < 0.005s hidden.  Use -vv to show these durations.)
+====================== 227 passed, 23 warnings in 57.60s =======================
+<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+Energy consumption in joules: 631.5755615234375 for 59.439163 sec of execution.
+
+
+========================================
+Completed before version at: do 13 nov 2025  6:34:19 CET
+========================================
+
+========================================
+All tests completed at: do 13 nov 2025  6:34:19 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/quant-mind_58//test_results_test_suite.log
+========================================

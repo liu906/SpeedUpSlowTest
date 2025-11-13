@@ -5,7 +5,8 @@
 # Test command to run (without energibridge prefix)
 # PR #58 testing: Run ALL test files that were modified in the performance optimization PR
 # These tests had timeout configurations reduced for faster execution
-TEST_COMMAND="uv run pytest --durations=0"
+TEST_COMMAND="uv run pytest tests/llm/test_embedding_block.py tests/llm/test_llm_block.py tests/config/test_settings.py --durations=0 -vv"
+
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"

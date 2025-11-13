@@ -13,7 +13,7 @@ VENV_PATH=".venv"
 SETUP_COMMAND=""
 
 # Wait time for containers to be ready
-WAIT_TIME=30
+WAIT_TIME=5
 
 # Project name
 PROJECT_NAME="gyrinx_914"

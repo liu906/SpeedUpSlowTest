@@ -1,0 +1,306 @@
+========================================
+Starting test runs for project: nipoppy_697
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: pytest tests/test_workflow_runner.py::test_run_multiple tests/test_cli.py::test_cli_pipeline_search 'tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]' --durations=0 -vv
+Log file: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697//test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected virtual environment-based project
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Processing /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: boutiques>=0.5.30 in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.5.31)
+Requirement already satisfied: click in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (8.3.0)
+Requirement already satisfied: httpx in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.28.1)
+Requirement already satisfied: jinja2 in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (3.1.6)
+Requirement already satisfied: pandas in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (2.3.3)
+Requirement already satisfied: pybids!=0.18.0 in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.21.0)
+Requirement already satisfied: pydantic in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (2.12.4)
+Requirement already satisfied: pydicom!=3.0.0 in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (3.0.1)
+Requirement already satisfied: pysqa>=0.2.4 in ./.venv/lib/python3.10/site-packages (from pysqa[sge]>=0.2.4->nipoppy==1.0.0.dev0) (0.3.3)
+Requirement already satisfied: requests in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (2.32.5)
+Requirement already satisfied: rich in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (14.2.0)
+Requirement already satisfied: rich-click in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (1.9.4)
+Requirement already satisfied: typing-extensions in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (4.15.0)
+Requirement already satisfied: fids>=0.1.0 in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.1.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (25.0)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (7.0.0)
+Requirement already satisfied: pytest-httpx in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.35.0)
+Requirement already satisfied: pytest-mock in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (3.15.1)
+Requirement already satisfied: pytest>=6.0.0 in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (8.4.2)
+Requirement already satisfied: trogon in ./.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.6.0)
+Requirement already satisfied: jsonschema in ./.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (4.25.1)
+Requirement already satisfied: simplejson in ./.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (3.20.2)
+Requirement already satisfied: tabulate in ./.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (0.9.0)
+Requirement already satisfied: termcolor in ./.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (3.2.0)
+Requirement already satisfied: nibabel in ./.venv/lib/python3.10/site-packages (from fids>=0.1.0->nipoppy==1.0.0.dev0) (5.3.2)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from fids>=0.1.0->nipoppy==1.0.0.dev0) (2.2.6)
+Requirement already satisfied: scipy>=1.10 in ./.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.15.3)
+Requirement already satisfied: formulaic>=0.3 in ./.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.2.1)
+Requirement already satisfied: sqlalchemy>=1.4.31 in ./.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.0.44)
+Requirement already satisfied: bids-validator>=1.14.7 in ./.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.14.7.post0)
+Requirement already satisfied: num2words>=0.5.10 in ./.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.5.14)
+Requirement already satisfied: universal_pathlib>=0.2.2 in ./.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.3.5)
+Requirement already satisfied: frozendict>=2.3 in ./.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.4.7)
+Requirement already satisfied: bidsschematools>=0.10 in ./.venv/lib/python3.10/site-packages (from bids-validator>=1.14.7->pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.1.2)
+Requirement already satisfied: acres in ./.venv/lib/python3.10/site-packages (from bidsschematools>=0.10->bids-validator>=1.14.7->pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.5.0)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (from bidsschematools>=0.10->bids-validator>=1.14.7->pybids!=0.18.0->nipoppy==1.0.0.dev0) (6.0.3)
+Requirement already satisfied: interface-meta>=1.2.0 in ./.venv/lib/python3.10/site-packages (from formulaic>=0.3->pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.3.0)
+Requirement already satisfied: narwhals>=1.17 in ./.venv/lib/python3.10/site-packages (from formulaic>=0.3->pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.11.0)
+Requirement already satisfied: wrapt>=1.0 in ./.venv/lib/python3.10/site-packages (from formulaic>=0.3->pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.0.1)
+Requirement already satisfied: importlib-resources>=5.12 in ./.venv/lib/python3.10/site-packages (from nibabel->fids>=0.1.0->nipoppy==1.0.0.dev0) (6.5.2)
+Requirement already satisfied: docopt>=0.6.2 in ./.venv/lib/python3.10/site-packages (from num2words>=0.5.10->pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.6.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas->nipoppy==1.0.0.dev0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas->nipoppy==1.0.0.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas->nipoppy==1.0.0.dev0) (2025.2)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.10/site-packages (from jinja2->nipoppy==1.0.0.dev0) (3.0.3)
+Requirement already satisfied: defusedxml<=0.7.1,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from pysqa[sge]>=0.2.4->nipoppy==1.0.0.dev0) (0.7.1)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (2.3.0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas->nipoppy==1.0.0.dev0) (1.17.0)
+Requirement already satisfied: greenlet>=1 in ./.venv/lib/python3.10/site-packages (from sqlalchemy>=1.4.31->pybids!=0.18.0->nipoppy==1.0.0.dev0) (3.2.4)
+Requirement already satisfied: fsspec>=2024.5.0 in ./.venv/lib/python3.10/site-packages (from universal_pathlib>=0.2.2->pybids!=0.18.0->nipoppy==1.0.0.dev0) (2025.10.0)
+Requirement already satisfied: pathlib-abc<0.6.0,>=0.5.1 in ./.venv/lib/python3.10/site-packages (from universal_pathlib>=0.2.2->pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.5.2)
+Requirement already satisfied: anyio in ./.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (4.11.0)
+Requirement already satisfied: certifi in ./.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (2025.11.12)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (1.0.9)
+Requirement already satisfied: idna in ./.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (3.11)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.10/site-packages (from httpcore==1.*->httpx->nipoppy==1.0.0.dev0) (0.16.0)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.10/site-packages (from anyio->httpx->nipoppy==1.0.0.dev0) (1.3.1)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (0.28.0)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.10/site-packages (from pydantic->nipoppy==1.0.0.dev0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in ./.venv/lib/python3.10/site-packages (from pydantic->nipoppy==1.0.0.dev0) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in ./.venv/lib/python3.10/site-packages (from pydantic->nipoppy==1.0.0.dev0) (0.4.2)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov->nipoppy==1.0.0.dev0) (7.11.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests->nipoppy==1.0.0.dev0) (3.4.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests->nipoppy==1.0.0.dev0) (2.5.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.10/site-packages (from rich->nipoppy==1.0.0.dev0) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->nipoppy==1.0.0.dev0) (0.1.2)
+Requirement already satisfied: textual>=0.61.0 in ./.venv/lib/python3.10/site-packages (from trogon->nipoppy==1.0.0.dev0) (6.6.0)
+Requirement already satisfied: mdit-py-plugins in ./.venv/lib/python3.10/site-packages (from textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (0.5.0)
+Requirement already satisfied: platformdirs<5,>=3.6.0 in ./.venv/lib/python3.10/site-packages (from textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (4.5.0)
+Requirement already satisfied: linkify-it-py<3,>=1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py[linkify]>=2.1.0->textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (2.0.3)
+Requirement already satisfied: uc-micro-py in ./.venv/lib/python3.10/site-packages (from linkify-it-py<3,>=1->markdown-it-py[linkify]>=2.1.0->textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (1.0.3)
+Building wheels for collected packages: nipoppy
+  Building wheel for nipoppy (pyproject.toml): started
+  Building wheel for nipoppy (pyproject.toml): finished with status 'done'
+  Created wheel for nipoppy: filename=nipoppy-1.0.0.dev0-py3-none-any.whl size=103425 sha256=eb2a3bf501fac019a12188a1657a37a6ad6d8d83f99a848233342e9e1e16e0d4
+  Stored in directory: /tmp/pip-ephem-wheel-cache-nqlm6i3z/wheels/3d/a8/0e/a0f42f5211964fb2f1684b64ff1fea9ae975098cd453b6f3c8
+Successfully built nipoppy
+Installing collected packages: nipoppy
+  Attempting uninstall: nipoppy
+    Found existing installation: nipoppy 1.0.0.dev0
+    Uninstalling nipoppy-1.0.0.dev0:
+      Successfully uninstalled nipoppy-1.0.0.dev0
+Successfully installed nipoppy-1.0.0.dev0
+
+=========================================
+Test run 1/1 for before
+Time: do 13 nov 2025  7:28:31 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.50s call     tests/test_workflow_runner.py::test_run_multiple
+4.49s call     tests/test_cli.py::test_cli_pipeline_search
+1.28s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.44s ========================
+Energy consumption in joules: 84.05088806152344 for 14.827197 sec of execution.
+
+
+========================================
+Completed before version at: do 13 nov 2025  7:28:46 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Detected virtual environment-based project
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (25.3)
+Processing /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: boutiques>=0.5.30 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.5.31)
+Requirement already satisfied: click in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (8.3.0)
+Requirement already satisfied: httpx in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.28.1)
+Requirement already satisfied: jinja2 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (3.1.6)
+Requirement already satisfied: pandas in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (2.3.3)
+Requirement already satisfied: pybids!=0.18.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.21.0)
+Requirement already satisfied: pydantic in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (2.12.4)
+Requirement already satisfied: pydicom!=3.0.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (3.0.1)
+Requirement already satisfied: pysqa>=0.2.4 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pysqa[sge]>=0.2.4->nipoppy==1.0.0.dev0) (0.3.3)
+Requirement already satisfied: requests in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (2.32.5)
+Requirement already satisfied: rich in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (14.2.0)
+Requirement already satisfied: rich-click in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (1.9.4)
+Requirement already satisfied: typing-extensions in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (4.15.0)
+Requirement already satisfied: fids>=0.1.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.1.0)
+Requirement already satisfied: packaging in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (25.0)
+Requirement already satisfied: pytest-cov in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (7.0.0)
+Requirement already satisfied: pytest-httpx in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.35.0)
+Requirement already satisfied: pytest-mock in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (3.15.1)
+Requirement already satisfied: pytest>=6.0.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (8.4.2)
+Requirement already satisfied: trogon in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nipoppy==1.0.0.dev0) (0.6.0)
+Requirement already satisfied: jsonschema in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (4.25.1)
+Requirement already satisfied: simplejson in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (3.20.2)
+Requirement already satisfied: tabulate in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (0.9.0)
+Requirement already satisfied: termcolor in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from boutiques>=0.5.30->nipoppy==1.0.0.dev0) (3.2.0)
+Requirement already satisfied: nibabel in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from fids>=0.1.0->nipoppy==1.0.0.dev0) (5.3.2)
+Requirement already satisfied: numpy in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from fids>=0.1.0->nipoppy==1.0.0.dev0) (2.2.6)
+Requirement already satisfied: scipy>=1.10 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.15.3)
+Requirement already satisfied: formulaic>=0.3 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.2.1)
+Requirement already satisfied: sqlalchemy>=1.4.31 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.0.44)
+Requirement already satisfied: bids-validator>=1.14.7 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.14.7.post0)
+Requirement already satisfied: num2words>=0.5.10 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.5.14)
+Requirement already satisfied: universal_pathlib>=0.2.2 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.3.5)
+Requirement already satisfied: frozendict>=2.3 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.4.7)
+Requirement already satisfied: bidsschematools>=0.10 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from bids-validator>=1.14.7->pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.1.2)
+Requirement already satisfied: acres in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from bidsschematools>=0.10->bids-validator>=1.14.7->pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.5.0)
+Requirement already satisfied: pyyaml in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from bidsschematools>=0.10->bids-validator>=1.14.7->pybids!=0.18.0->nipoppy==1.0.0.dev0) (6.0.3)
+Requirement already satisfied: interface-meta>=1.2.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from formulaic>=0.3->pybids!=0.18.0->nipoppy==1.0.0.dev0) (1.3.0)
+Requirement already satisfied: narwhals>=1.17 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from formulaic>=0.3->pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.11.0)
+Requirement already satisfied: wrapt>=1.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from formulaic>=0.3->pybids!=0.18.0->nipoppy==1.0.0.dev0) (2.0.1)
+Requirement already satisfied: importlib-resources>=5.12 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from nibabel->fids>=0.1.0->nipoppy==1.0.0.dev0) (6.5.2)
+Requirement already satisfied: docopt>=0.6.2 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from num2words>=0.5.10->pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.6.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pandas->nipoppy==1.0.0.dev0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pandas->nipoppy==1.0.0.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pandas->nipoppy==1.0.0.dev0) (2025.2)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from jinja2->nipoppy==1.0.0.dev0) (3.0.3)
+Requirement already satisfied: defusedxml<=0.7.1,>=0.7.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pysqa[sge]>=0.2.4->nipoppy==1.0.0.dev0) (0.7.1)
+Requirement already satisfied: exceptiongroup>=1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (2.19.2)
+Requirement already satisfied: tomli>=1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pytest>=6.0.0->nipoppy==1.0.0.dev0) (2.3.0)
+Requirement already satisfied: six>=1.5 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas->nipoppy==1.0.0.dev0) (1.17.0)
+Requirement already satisfied: greenlet>=1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from sqlalchemy>=1.4.31->pybids!=0.18.0->nipoppy==1.0.0.dev0) (3.2.4)
+Requirement already satisfied: fsspec>=2024.5.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from universal_pathlib>=0.2.2->pybids!=0.18.0->nipoppy==1.0.0.dev0) (2025.10.0)
+Requirement already satisfied: pathlib-abc<0.6.0,>=0.5.1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from universal_pathlib>=0.2.2->pybids!=0.18.0->nipoppy==1.0.0.dev0) (0.5.2)
+Requirement already satisfied: anyio in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (4.11.0)
+Requirement already satisfied: certifi in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (2025.11.12)
+Requirement already satisfied: httpcore==1.* in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (1.0.9)
+Requirement already satisfied: idna in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from httpx->nipoppy==1.0.0.dev0) (3.11)
+Requirement already satisfied: h11>=0.16 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from httpcore==1.*->httpx->nipoppy==1.0.0.dev0) (0.16.0)
+Requirement already satisfied: sniffio>=1.1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from anyio->httpx->nipoppy==1.0.0.dev0) (1.3.1)
+Requirement already satisfied: attrs>=22.2.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from jsonschema->boutiques>=0.5.30->nipoppy==1.0.0.dev0) (0.28.0)
+Requirement already satisfied: annotated-types>=0.6.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pydantic->nipoppy==1.0.0.dev0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pydantic->nipoppy==1.0.0.dev0) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from pydantic->nipoppy==1.0.0.dev0) (0.4.2)
+Requirement already satisfied: coverage>=7.10.6 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov->nipoppy==1.0.0.dev0) (7.11.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from requests->nipoppy==1.0.0.dev0) (3.4.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from requests->nipoppy==1.0.0.dev0) (2.5.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from rich->nipoppy==1.0.0.dev0) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->nipoppy==1.0.0.dev0) (0.1.2)
+Requirement already satisfied: textual>=0.61.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from trogon->nipoppy==1.0.0.dev0) (6.6.0)
+Requirement already satisfied: mdit-py-plugins in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (0.5.0)
+Requirement already satisfied: platformdirs<5,>=3.6.0 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (4.5.0)
+Requirement already satisfied: linkify-it-py<3,>=1 in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from markdown-it-py[linkify]>=2.1.0->textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (2.0.3)
+Requirement already satisfied: uc-micro-py in /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages (from linkify-it-py<3,>=1->markdown-it-py[linkify]>=2.1.0->textual>=0.61.0->trogon->nipoppy==1.0.0.dev0) (1.0.3)
+Building wheels for collected packages: nipoppy
+  Building wheel for nipoppy (pyproject.toml): started
+  Building wheel for nipoppy (pyproject.toml): finished with status 'done'
+  Created wheel for nipoppy: filename=nipoppy-1.0.0.dev0-py3-none-any.whl size=103425 sha256=eb2a3bf501fac019a12188a1657a37a6ad6d8d83f99a848233342e9e1e16e0d4
+  Stored in directory: /tmp/pip-ephem-wheel-cache-9nr9aguf/wheels/5e/c2/fc/3cf71c60d9291e98a655ee4ac3b24933c8a34d2ded85209ee8
+Successfully built nipoppy
+Installing collected packages: nipoppy
+  Attempting uninstall: nipoppy
+    Found existing installation: nipoppy 1.0.0.dev0
+    Uninstalling nipoppy-1.0.0.dev0:
+      Successfully uninstalled nipoppy-1.0.0.dev0
+Successfully installed nipoppy-1.0.0.dev0
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: do 13 nov 2025  7:28:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.30s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 7.55s =========================
+Energy consumption in joules: 68.12214660644531 for 9.015979 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: do 13 nov 2025  7:29:08 CET
+========================================
+
+========================================
+All tests completed at: do 13 nov 2025  7:29:08 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697//test_results_only_mock_part.log
+========================================

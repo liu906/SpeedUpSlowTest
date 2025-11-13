@@ -8,7 +8,7 @@
 # Run the core mock signal backend tests and related tests that use mocking
 # Note: Tests crash during cleanup due to EPICS CA event loop issues, but results are valid
 # Using || true to ignore the crash exit code since tests complete successfully before crash
-TEST_COMMAND="pytest --durations=0"
+TEST_COMMAND="pytest tests/epics/test_signals.py::test_error_raised_on_disconnected_PV -xvs --durations=0"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"

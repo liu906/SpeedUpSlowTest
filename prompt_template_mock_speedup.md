@@ -1,4 +1,4 @@
-PROJECT_PATH=pyjelly_235/
+PROJECT_PATH=pymodbus_1995/
 
 # Prompt: Mock-Based Test Speedup
 
@@ -30,7 +30,10 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 Given a list of slowest tests from project `{PROJECT_PATH}/before`:
 
 ```
-133.43s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_client_calls[serial-rtu-localhost]
+13.12s teardown test/sub_examples/test_client_server_sync.py::TestClientServerSyncExamples::test_combinations[serial-rtu-localhost]
+13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_client_calls[tcp-socket-localhost]
+13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_sync_simple_client[serial-rtu-localhost]
 ```
 
 For each slow test:
@@ -162,6 +165,14 @@ When you find a slow test with existing mocks:
 
 ### Step 3: Evaluate Mockability (for new mocks)
 
+**IMPORTANT: This task is ONLY about true mocking using `unittest.mock`, `pytest-mock`, `monkeypatch`, etc. Do NOT:**
+- ❌ Change timeout values (e.g., `timeout=3` → `timeout=0.1`)
+- ❌ Reduce iteration counts or parameters
+- ❌ Optimize fixture initialization times
+- ❌ Suggest any other speedup techniques
+
+**If a test is not mockable, mark it as "NOT MOCKABLE" and skip it. Do nothing else.**
+
 For each identified external dependency, answer:
 
 #### A. Is it truly external?
@@ -179,17 +190,37 @@ For each identified external dependency, answer:
 - [ ] How much verification logic is lost? (estimate %)
 - [ ] Is the tradeoff acceptable? (aim for <10% verification loss)
 
+#### D. Final Decision:
+- [ ] **MOCKABLE** - Proceed with implementing true mocks (using `@patch`, `mocker.patch`, `monkeypatch.setattr`, etc.)
+- [ ] **NOT MOCKABLE** - Skip this test, do not modify it in any way
+
 
 ### Step 4: Implementation Guidelines
 
+**CRITICAL: Only implement TRUE mocking - replacing external dependencies with mock objects.**
+
 When implementing mocks or fixing mock misuse:
 
-#### Use pytest-mock (pytest fixture `mocker`) or unittest
+#### Use pytest-mock (pytest fixture `mocker`) or unittest.mock
 ```python
 def test_example(mocker):
-    # Mock at the correct boundary
+    # TRUE MOCKING: Replace the external dependency with a mock object
     mock_requests = mocker.patch('module.requests.get')
     mock_requests.return_value.json.return_value = {'data': 'test'}
+
+    # This is TRUE mocking - no real HTTP request is made
+```
+
+**Examples of what is NOT mocking:**
+```python
+# ❌ NOT MOCKING - This is just parameter optimization
+await backend.put(put_value, timeout=0.1)  # Reduced from timeout=3
+
+# ❌ NOT MOCKING - This is just reducing iterations
+validate_result(result, iterations=1000)  # Reduced from 20000
+
+# ❌ NOT MOCKING - This is just optimizing delays
+time.sleep(0.1)  # Reduced from 2
 ```
 
 #### Mock at the correct layer:
@@ -471,22 +502,36 @@ def _verify_checksum(self, timeout=None):
 
 ## Final Reminder
 
+### CRITICAL: Only True Mocking Allowed
+
+**DO NOT suggest or implement:**
+- ❌ Timeout value changes
+- ❌ Parameter reductions
+- ❌ Fixture optimization
+- ❌ Any other speedup techniques
+
+**ONLY use true mocking: `@patch`, `mocker.patch`, `monkeypatch.setattr`, etc.**
+
 ### Three Possible Outcomes
 
 1. **Mock Misuse Found** (Best case!)
-   - Fix the broken mock
+   - Fix the broken mock by modifying source code
    - Potential for 10x-100x speedup
    - Report: "Mock was present but not working due to [reason]. Fixed [source code location]."
 
-2. **External Dependencies Found** (Good case)
-   - Add appropriate mocks
-   - Potential for 30-50% speedup
-   - Report: "Mocked [dependency] successfully."
+2. **External Dependencies Found and Mockable** (Good case)
+   - Add TRUE mocks using `@patch`, `mocker`, or `monkeypatch`
+   - Replace external calls with mock objects
+   - Potential for 30-90% speedup
+   - Report: "Mocked [dependency] using [mock framework] successfully."
 
-3. **No Mockable Dependencies** (Acceptable outcome)
-   - All slowness is inherent
-   - No mocking appropriate
-   - Report: "No external dependencies found suitable for mocking. Test speed is inherent to the verification logic being tested."
+3. **No Mockable Dependencies** (Common outcome - SKIP THE TEST)
+   - Test verifies core logic that cannot be mocked
+   - External dependencies are integral to what's being tested
+   - **DO NOT modify the test in any way**
+   - Report: "Test is NOT MOCKABLE. Core verification logic would be bypassed by mocking. Test skipped - no changes made."
 
-**Remember**: Fixing one broken mock is often more valuable than adding ten new ones!
+**Remember**:
+- Fixing one broken mock is often more valuable than adding ten new ones!
+- If a test cannot be safely mocked, **skip it** - do not try alternative optimizations
 

@@ -1,0 +1,500 @@
+========================================
+Starting test runs for project: ophyd-async_316
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: pytest tests/epics/test_signals.py::test_error_raised_on_disconnected_PV -xvs --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316//test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: networkx>=2.0 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.2.1)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.26.4)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (25.0)
+Requirement already satisfied: pint in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.24.4)
+Requirement already satisfied: bluesky>=1.13.0a3 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.14.4)
+Requirement already satisfied: event-model<1.21.0 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.20.0)
+Requirement already satisfied: p4p in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (4.2.1)
+Requirement already satisfied: pyyaml in /usr/lib/python3/dist-packages (from ophyd-async==0.6.0) (5.4.1)
+Requirement already satisfied: colorlog in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (6.10.1)
+Requirement already satisfied: black in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (25.11.0)
+Requirement already satisfied: flake8 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (7.3.0)
+Requirement already satisfied: flake8-isort in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: Flake8-pyproject in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.2.3)
+Requirement already satisfied: h5py in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.15.1)
+Requirement already satisfied: inflection in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.5.1)
+Requirement already satisfied: ipython in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (8.37.0)
+Requirement already satisfied: ipywidgets in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (8.1.8)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.9.4)
+Requirement already satisfied: myst-parser in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (4.0.1)
+Requirement already satisfied: numpydoc in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.9.0)
+Requirement already satisfied: ophyd in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.7.5)
+Requirement already satisfied: pipdeptree in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2.30.0)
+Requirement already satisfied: pre-commit in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (4.4.0)
+Requirement already satisfied: pydata-sphinx-theme>=0.12 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.16.1)
+Requirement already satisfied: pyepics>=3.4.2 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.5.8)
+Requirement already satisfied: pyside6==6.7.0 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (8.4.2)
+Requirement already satisfied: pytest-asyncio in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: pytest-cov in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: pytest-faulthandler in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2.0.1)
+Requirement already satisfied: pytest-rerunfailures in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (16.1)
+Requirement already satisfied: pytest-timeout in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2.4.0)
+Requirement already satisfied: ruff in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.14.4)
+Requirement already satisfied: sphinx-autobuild in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2024.10.3)
+Requirement already satisfied: sphinxcontrib-mermaid in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: sphinx-copybutton in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.5.2)
+Requirement already satisfied: sphinx-design in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.6.1)
+Requirement already satisfied: tox-direct in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: types-mock in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (5.2.0.20250924)
+Requirement already satisfied: types-pyyaml in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (6.0.12.20250915)
+Requirement already satisfied: shiboken6==6.7.0 in /usr/local/lib/python3.10/dist-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Essentials==6.7.0 in /usr/local/lib/python3.10/dist-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Addons==6.7.0 in /usr/local/lib/python3.10/dist-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: importlib-resources in /usr/local/lib/python3.10/dist-packages (from event-model<1.21.0->ophyd-async==0.6.0) (6.5.2)
+Requirement already satisfied: jsonschema>=3 in /usr/local/lib/python3.10/dist-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.25.1)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/dist-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.15.0)
+Requirement already satisfied: cycler in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: historydict in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.2.6)
+Requirement already satisfied: msgpack in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.2)
+Requirement already satisfied: msgpack-numpy in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.4.8)
+Requirement already satisfied: opentelemetry-api in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.38.0)
+Requirement already satisfied: toolz in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: tqdm>=4.44 in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (4.67.1)
+Requirement already satisfied: attrs>=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.28.0)
+Requirement already satisfied: sphinx>=6.1 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (8.1.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (4.14.2)
+Requirement already satisfied: docutils!=0.17.0 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.21.2)
+Requirement already satisfied: Babel in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.17.0)
+Requirement already satisfied: pygments>=2.7 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.19.2)
+Requirement already satisfied: accessible-pygments in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.0.5)
+Requirement already satisfied: pyparsing in /usr/local/lib/python3.10/dist-packages (from pyepics>=3.4.2->ophyd-async==0.6.0) (3.2.3)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.1.6)
+Requirement already satisfied: snowballstemmer>=2.2 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.1)
+Requirement already satisfied: alabaster>=0.7.14 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: requests>=2.30.0 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.32.3)
+Requirement already satisfied: tomli>=2 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/lib/python3/dist-packages (from Jinja2>=3.1->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.26.5)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2020.6.20)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.8)
+Requirement already satisfied: click>=8.0.0 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (8.3.0)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: pathspec>=0.9.0 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: platformdirs>=2 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (4.5.0)
+Requirement already satisfied: pytokens>=0.3.0 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (0.3.0)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in /usr/local/lib/python3.10/dist-packages (from flake8->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: pycodestyle<2.15.0,>=2.14.0 in /usr/local/lib/python3.10/dist-packages (from flake8->ophyd-async==0.6.0) (2.14.0)
+Requirement already satisfied: pyflakes<3.5.0,>=3.4.0 in /usr/local/lib/python3.10/dist-packages (from flake8->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: isort>=5.0.0 in /usr/local/lib/python3.10/dist-packages (from flake8-isort->ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (0.19.2)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (0.2.1)
+Requirement already satisfied: pexpect>4.3 in /usr/lib/python3/dist-packages (from ipython->ophyd-async==0.6.0) (4.8.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (3.0.52)
+Requirement already satisfied: stack_data in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (5.14.3)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython->ophyd-async==0.6.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in /usr/local/lib/python3.10/dist-packages (from jedi>=0.16->ipython->ophyd-async==0.6.0) (0.8.5)
+Requirement already satisfied: comm>=0.1.3 in /usr/local/lib/python3.10/dist-packages (from ipywidgets->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in /usr/local/lib/python3.10/dist-packages (from ipywidgets->ophyd-async==0.6.0) (4.0.15)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in /usr/local/lib/python3.10/dist-packages (from ipywidgets->ophyd-async==0.6.0) (3.0.16)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib->ophyd-async==0.6.0) (9.0.1)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.7->matplotlib->ophyd-async==0.6.0) (1.16.0)
+Requirement already satisfied: markdown-it-py~=3.0 in /usr/local/lib/python3.10/dist-packages (from myst-parser->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: mdit-py-plugins>=0.4.1,~=0.4 in /usr/local/lib/python3.10/dist-packages (from myst-parser->ophyd-async==0.6.0) (0.5.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py~=3.0->myst-parser->ophyd-async==0.6.0) (0.1.2)
+Requirement already satisfied: importlib-metadata<8.8.0,>=6.0 in /usr/local/lib/python3.10/dist-packages (from opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (8.7.0)
+Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.10/dist-packages (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (3.23.0)
+Requirement already satisfied: aioca>=1.6 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.8.1)
+Requirement already satisfied: epicscorelibs>=7.0.3.99.4.0 in /usr/local/lib/python3.10/dist-packages (from aioca>=1.6->ophyd-async==0.6.0) (7.0.7.99.1.2)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (80.9.0)
+Requirement already satisfied: setuptools-dso>=2.11a2 in /usr/local/lib/python3.10/dist-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (2.12.2)
+Requirement already satisfied: pvxslibs<1.5.0a1,>=1.4.0 in /usr/local/lib/python3.10/dist-packages (from p4p->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: nose2>=0.8.0 in /usr/local/lib/python3.10/dist-packages (from p4p->ophyd-async==0.6.0) (0.15.1)
+Requirement already satisfied: ply in /usr/local/lib/python3.10/dist-packages (from p4p->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: flexcache>=0.3 in /usr/local/lib/python3.10/dist-packages (from pint->ophyd-async==0.6.0) (0.3)
+Requirement already satisfied: flexparser>=0.4 in /usr/local/lib/python3.10/dist-packages (from pint->ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: pip>=25.2 in /usr/local/lib/python3.10/dist-packages (from pipdeptree->ophyd-async==0.6.0) (25.3)
+Requirement already satisfied: cfgv>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (2.6.15)
+Requirement already satisfied: nodeenv>=0.11.1 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (1.9.1)
+Requirement already satisfied: virtualenv>=20.10.0 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (20.35.4)
+Requirement already satisfied: distlib<1,>=0.3.7 in /usr/local/lib/python3.10/dist-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.12.2 in /usr/local/lib/python3.10/dist-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (3.20.0)
+Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest->ophyd-async==0.6.0) (1.6.0)
+Requirement already satisfied: backports-asyncio-runner<2,>=1.1 in /usr/local/lib/python3.10/dist-packages (from pytest-asyncio->ophyd-async==0.6.0) (1.2.0)
+Requirement already satisfied: coverage>=7.10.6 in /usr/local/lib/python3.10/dist-packages (from coverage[toml]>=7.10.6->pytest-cov->ophyd-async==0.6.0) (7.11.0)
+Requirement already satisfied: colorama>=0.4.6 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.4.6)
+Requirement already satisfied: starlette>=0.35 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.50.0)
+Requirement already satisfied: uvicorn>=0.25 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.38.0)
+Requirement already satisfied: watchfiles>=0.20 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (1.1.1)
+Requirement already satisfied: websockets>=11 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (15.0.1)
+Requirement already satisfied: anyio<5,>=3.6.2 in /usr/local/lib/python3.10/dist-packages (from starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (4.11.0)
+Requirement already satisfied: sniffio>=1.1 in /usr/local/lib/python3.10/dist-packages (from anyio<5,>=3.6.2->starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (1.3.1)
+Requirement already satisfied: h11>=0.8 in /usr/local/lib/python3.10/dist-packages (from uvicorn>=0.25->sphinx-autobuild->ophyd-async==0.6.0) (0.16.0)
+Requirement already satisfied: executing>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython->ophyd-async==0.6.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: pure-eval in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: tox<4,>=3.12 in /usr/local/lib/python3.10/dist-packages (from tox-direct->ophyd-async==0.6.0) (3.28.0)
+Requirement already satisfied: py in /usr/local/lib/python3.10/dist-packages (from tox-direct->ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pathlib2 in /usr/local/lib/python3.10/dist-packages (from tox-direct->ophyd-async==0.6.0) (2.3.7.post1)
+Building wheels for collected packages: ophyd-async
+  Building editable for ophyd-async (pyproject.toml): started
+  Building editable for ophyd-async (pyproject.toml): finished with status 'done'
+  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4829 sha256=9fb284ae253750fb1a14c65fd75dcdefacec6f55790645932603f5b039701e09
+  Stored in directory: /tmp/pip-ephem-wheel-cache-njrun1f2/wheels/46/75/ae/9356ab6bce539fd28c69f782f09715e3c0d25c8d877c21bedf
+Successfully built ophyd-async
+Installing collected packages: ophyd-async
+  Attempting uninstall: ophyd-async
+    Found existing installation: ophyd-async 0.6.0
+    Uninstalling ophyd-async-0.6.0:
+      Successfully uninstalled ophyd-async-0.6.0
+Successfully installed ophyd-async-0.6.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: super_state_machine in /usr/local/lib/python3.10/dist-packages (2.1.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: do 13 nov 2025  6:21:54 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=4179751872
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 2 items
+
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva] PASSED
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca] IOC Running
+Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> <built-in function exit>
+>>> 
+now exiting InteractiveConsole...
+############################################################################
+## EPICS 7.0.7.1-DEV
+## Rev. 7.0.7.99.1.2
+## Rev. Date 7.0.7.99.1.2
+############################################################################
+
+Warning: Duplicate EPICS CA Address list entry "127.0.0.1:5065" discarded
+PASSED############################################################################
+## EPICS 7.0.7.1-DEV
+## Rev. 7.0.7.99.1.2
+## Rev. Date 7.0.7.99.1.2
+############################################################################
+2025-11-13T06:21:59.649 Using dynamically assigned TCP port 54859.
+IOC Running
+Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> <built-in function exit>
+>>> 
+now exiting InteractiveConsole...
+
+
+
+============================== slowest durations ===============================
+3.19s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+3.02s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.73s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.70s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.04s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.00s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+============================== 2 passed in 7.78s ===============================
+Energy consumption in joules: 42.34600830078125 for 8.819077 sec of execution.
+
+
+========================================
+Completed before version at: do 13 nov 2025  6:22:03 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (25.3)
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/after_careful_mock
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: networkx>=2.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.4.2)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.2.6)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (25.0)
+Requirement already satisfied: pint in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.24.4)
+Requirement already satisfied: bluesky>=1.13.0a3 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.14.4)
+Requirement already satisfied: event-model<1.21.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.20.0)
+Requirement already satisfied: p4p in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.2.1)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.0.3)
+Requirement already satisfied: colorlog in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.10.1)
+Requirement already satisfied: black in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (25.11.0)
+Requirement already satisfied: flake8 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.3.0)
+Requirement already satisfied: flake8-isort in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: Flake8-pyproject in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.2.3)
+Requirement already satisfied: h5py in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.15.1)
+Requirement already satisfied: inflection in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.5.1)
+Requirement already satisfied: ipython in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.37.0)
+Requirement already satisfied: ipywidgets in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (8.1.8)
+Requirement already satisfied: matplotlib in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.10.7)
+Requirement already satisfied: myst-parser in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.0.1)
+Requirement already satisfied: numpydoc in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.9.0)
+Requirement already satisfied: ophyd in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pickleshare in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.7.5)
+Requirement already satisfied: pipdeptree in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.30.0)
+Requirement already satisfied: pre-commit in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (4.4.0)
+Requirement already satisfied: pydata-sphinx-theme>=0.12 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.16.1)
+Requirement already satisfied: pyepics>=3.4.2 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (3.5.8)
+Requirement already satisfied: pyside6==6.7.0 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (9.0.1)
+Requirement already satisfied: pytest-asyncio in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: pytest-faulthandler in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.0.1)
+Requirement already satisfied: pytest-rerunfailures in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (16.1)
+Requirement already satisfied: pytest-timeout in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2.4.0)
+Requirement already satisfied: ruff in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.14.4)
+Requirement already satisfied: sphinx-autobuild in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (2024.10.3)
+Requirement already satisfied: sphinxcontrib-mermaid in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: sphinx-copybutton in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.5.2)
+Requirement already satisfied: sphinx-design in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.6.1)
+Requirement already satisfied: tox-direct in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: types-mock in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (5.2.0.20250924)
+Requirement already satisfied: types-pyyaml in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (6.0.12.20250915)
+Requirement already satisfied: shiboken6==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Essentials==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Addons==6.7.0 in ./.venv/lib/python3.10/site-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: importlib-resources in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (6.5.2)
+Requirement already satisfied: jsonschema>=3 in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.25.1)
+Requirement already satisfied: typing-extensions in ./.venv/lib/python3.10/site-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.15.0)
+Requirement already satisfied: cycler in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: historydict in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.2.6)
+Requirement already satisfied: msgpack in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.2)
+Requirement already satisfied: msgpack-numpy in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.4.8)
+Requirement already satisfied: opentelemetry-api in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.38.0)
+Requirement already satisfied: toolz in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: tqdm>=4.44 in ./.venv/lib/python3.10/site-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (4.67.1)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.10/site-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.28.0)
+Requirement already satisfied: sphinx>=6.1 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (8.1.3)
+Requirement already satisfied: beautifulsoup4 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (4.14.2)
+Requirement already satisfied: docutils!=0.17.0 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.21.2)
+Requirement already satisfied: Babel in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.17.0)
+Requirement already satisfied: pygments>=2.7 in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.19.2)
+Requirement already satisfied: accessible-pygments in ./.venv/lib/python3.10/site-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.0.5)
+Requirement already satisfied: pyparsing in ./.venv/lib/python3.10/site-packages (from pyepics>=3.4.2->ophyd-async==0.6.0) (3.2.5)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.1.6)
+Requirement already satisfied: snowballstemmer>=2.2 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.1)
+Requirement already satisfied: alabaster>=0.7.14 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: requests>=2.30.0 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.32.5)
+Requirement already satisfied: tomli>=2 in ./.venv/lib/python3.10/site-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.10/site-packages (from Jinja2>=3.1->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2025.11.12)
+Requirement already satisfied: soupsieve>1.2 in ./.venv/lib/python3.10/site-packages (from beautifulsoup4->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.8)
+Requirement already satisfied: click>=8.0.0 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (8.3.0)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: platformdirs>=2 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (4.5.0)
+Requirement already satisfied: pytokens>=0.3.0 in ./.venv/lib/python3.10/site-packages (from black->ophyd-async==0.6.0) (0.3.0)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: pycodestyle<2.15.0,>=2.14.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (2.14.0)
+Requirement already satisfied: pyflakes<3.5.0,>=3.4.0 in ./.venv/lib/python3.10/site-packages (from flake8->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: isort>=5.0.0 in ./.venv/lib/python3.10/site-packages (from flake8-isort->ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: decorator in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.19.2)
+Requirement already satisfied: matplotlib-inline in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.2.1)
+Requirement already satisfied: pexpect>4.3 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (3.0.52)
+Requirement already satisfied: stack_data in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in ./.venv/lib/python3.10/site-packages (from ipython->ophyd-async==0.6.0) (5.14.3)
+Requirement already satisfied: wcwidth in ./.venv/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython->ophyd-async==0.6.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./.venv/lib/python3.10/site-packages (from jedi>=0.16->ipython->ophyd-async==0.6.0) (0.8.5)
+Requirement already satisfied: ptyprocess>=0.5 in ./.venv/lib/python3.10/site-packages (from pexpect>4.3->ipython->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: comm>=0.1.3 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (4.0.15)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in ./.venv/lib/python3.10/site-packages (from ipywidgets->ophyd-async==0.6.0) (3.0.16)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (12.0.0)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.10/site-packages (from matplotlib->ophyd-async==0.6.0) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->ophyd-async==0.6.0) (1.17.0)
+Requirement already satisfied: markdown-it-py~=3.0 in ./.venv/lib/python3.10/site-packages (from myst-parser->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: mdit-py-plugins>=0.4.1,~=0.4 in ./.venv/lib/python3.10/site-packages (from myst-parser->ophyd-async==0.6.0) (0.5.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py~=3.0->myst-parser->ophyd-async==0.6.0) (0.1.2)
+Requirement already satisfied: importlib-metadata<8.8.0,>=6.0 in ./.venv/lib/python3.10/site-packages (from opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (8.7.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (3.23.0)
+Requirement already satisfied: aioca>=1.6 in ./.venv/lib/python3.10/site-packages (from ophyd-async==0.6.0) (1.8.1)
+Requirement already satisfied: epicscorelibs>=7.0.3.99.4.0 in ./.venv/lib/python3.10/site-packages (from aioca>=1.6->ophyd-async==0.6.0) (7.0.7.99.1.2)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (80.9.0)
+Requirement already satisfied: setuptools-dso>=2.11a2 in ./.venv/lib/python3.10/site-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (2.12.2)
+Requirement already satisfied: pvxslibs<1.5.0a1,>=1.4.0 in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: nose2>=0.8.0 in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (0.15.1)
+Requirement already satisfied: ply in ./.venv/lib/python3.10/site-packages (from p4p->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: flexcache>=0.3 in ./.venv/lib/python3.10/site-packages (from pint->ophyd-async==0.6.0) (0.3)
+Requirement already satisfied: flexparser>=0.4 in ./.venv/lib/python3.10/site-packages (from pint->ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: pip>=25.2 in ./.venv/lib/python3.10/site-packages (from pipdeptree->ophyd-async==0.6.0) (25.3)
+Requirement already satisfied: cfgv>=2.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (2.6.15)
+Requirement already satisfied: nodeenv>=0.11.1 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (1.9.1)
+Requirement already satisfied: virtualenv>=20.10.0 in ./.venv/lib/python3.10/site-packages (from pre-commit->ophyd-async==0.6.0) (20.35.4)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.12.2 in ./.venv/lib/python3.10/site-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (3.20.0)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.10/site-packages (from pytest->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest->ophyd-async==0.6.0) (1.6.0)
+Requirement already satisfied: backports-asyncio-runner<2,>=1.1 in ./.venv/lib/python3.10/site-packages (from pytest-asyncio->ophyd-async==0.6.0) (1.2.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov->ophyd-async==0.6.0) (7.11.3)
+Requirement already satisfied: colorama>=0.4.6 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.4.6)
+Requirement already satisfied: starlette>=0.35 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.50.0)
+Requirement already satisfied: uvicorn>=0.25 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.38.0)
+Requirement already satisfied: watchfiles>=0.20 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (1.1.1)
+Requirement already satisfied: websockets>=11 in ./.venv/lib/python3.10/site-packages (from sphinx-autobuild->ophyd-async==0.6.0) (15.0.1)
+Requirement already satisfied: anyio<5,>=3.6.2 in ./.venv/lib/python3.10/site-packages (from starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (4.11.0)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.10/site-packages (from anyio<5,>=3.6.2->starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (1.3.1)
+Requirement already satisfied: h11>=0.8 in ./.venv/lib/python3.10/site-packages (from uvicorn>=0.25->sphinx-autobuild->ophyd-async==0.6.0) (0.16.0)
+Requirement already satisfied: executing>=1.2.0 in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: pure-eval in ./.venv/lib/python3.10/site-packages (from stack_data->ipython->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: tox<4,>=3.12 in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (3.28.0)
+Requirement already satisfied: py in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pathlib2 in ./.venv/lib/python3.10/site-packages (from tox-direct->ophyd-async==0.6.0) (2.3.7.post1)
+Building wheels for collected packages: ophyd-async
+  Building editable for ophyd-async (pyproject.toml): started
+  Building editable for ophyd-async (pyproject.toml): finished with status 'done'
+  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4834 sha256=ce7bc3c9757c11a2bad2159f72fd34daf528618890458dbd491d9d55d3a0b4f0
+  Stored in directory: /tmp/pip-ephem-wheel-cache-bk70qfat/wheels/0f/9a/3c/5203ace6695d2598f07bc6785afdb3c242069bf71c50eaadf3
+Successfully built ophyd-async
+Installing collected packages: ophyd-async
+  Attempting uninstall: ophyd-async
+    Found existing installation: ophyd-async 0.6.0
+    Uninstalling ophyd-async-0.6.0:
+      Successfully uninstalled ophyd-async-0.6.0
+Successfully installed ophyd-async-0.6.0
+Collecting super_state_machine
+  Using cached super_state_machine-2.1.0-py2.py3-none-any.whl.metadata (5.4 kB)
+Using cached super_state_machine-2.1.0-py2.py3-none-any.whl (8.1 kB)
+Installing collected packages: super_state_machine
+Successfully installed super_state_machine-2.1.0
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: do 13 nov 2025  6:22:16 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/after_careful_mock/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/after_careful_mock
+configfile: pyproject.toml
+plugins: timeout-2.4.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 2 items
+
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva] PASSED
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca] ############################################################################
+## EPICS 7.0.7.1-DEV
+## Rev. 7.0.7.99.1.2
+## Rev. Date 7.0.7.99.1.2
+############################################################################
+2025-11-13T06:22:18.284 Using dynamically assigned TCP port 44641.
+IOC Running
+Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> <built-in function exit>
+>>> 
+now exiting InteractiveConsole...
+
+Warning: Duplicate EPICS CA Address list entry "127.0.0.1:5065" discarded
+PASSED############################################################################
+## EPICS 7.0.7.1-DEV
+## Rev. 7.0.7.99.1.2
+## Rev. Date 7.0.7.99.1.2
+############################################################################
+2025-11-13T06:22:18.989 Using dynamically assigned TCP port 42941.
+IOC Running
+Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> <built-in function exit>
+>>> 
+now exiting InteractiveConsole...
+
+
+
+============================== slowest durations ===============================
+0.69s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.65s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.18s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.03s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.02s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.00s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+============================== 2 passed in 1.63s ===============================
+Energy consumption in joules: 18.4698486328125 for 2.206389 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: do 13 nov 2025  6:22:19 CET
+========================================
+
+========================================
+All tests completed at: do 13 nov 2025  6:22:19 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316//test_results_only_mock_part.log
+========================================

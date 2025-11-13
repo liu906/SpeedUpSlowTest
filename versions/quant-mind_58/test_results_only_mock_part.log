@@ -1,0 +1,46 @@
+========================================
+Starting test runs for project: quant-mind_58
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: uv run pytest tests/llm/test_embedding_block.py tests/llm/test_llm_block.py tests/config/test_settings.py --durations=0 -vv
+Log file: /home/xutong/SpeedUpSlowTest/versions/quant-mind_58//test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected virtual environment-based project
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+Resolved 128 packages in 38ms
+   Building quantmind @ file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before
+      Built quantmind @ file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before
+Prepared 1 package in 428ms
+Uninstalled 1 package in 0.78ms
+Installed 1 package in 0.82ms
+ ~ quantmind==0.2.0 (from file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before)
+
+=========================================
+Test run 1/1 for before
+Time: do 13 nov 2025  6:59:44 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.3.5, pluggy-1.5.0 -- /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before
+configfile: pyproject.toml
+plugins: anyio-4.9.0
+collecting ... collected 59 items
+
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [  1%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [  3%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [  5%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [  6%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [  8%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 10%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 11%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 13%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 15%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py 

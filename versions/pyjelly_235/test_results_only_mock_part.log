@@ -14,15 +14,279 @@ Detected virtual environment-based project
 Detected uv-based project, skipping traditional venv creation...
 uv will manage the virtual environment via SETUP_COMMAND
 Running setup command...
-Resolved 105 packages in 0.91ms
+Resolved 105 packages in 0.82ms
    Building pyjelly @ file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/before
       Built pyjelly @ file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/before
-Prepared 1 package in 218ms
-Uninstalled 1 package in 0.38ms
-Installed 1 package in 0.71ms
+Prepared 1 package in 212ms
+Uninstalled 1 package in 0.43ms
+Installed 1 package in 0.68ms
  ~ pyjelly==0.4.0 (from file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/before)
 
 =========================================
 Test run 1/40 for before
-Time: wo 12 nov 2025 22:28:04 CET
+Time: do 13 nov 2025  5:09:28 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+134.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 134.29s (0:02:14) =========================
+Energy consumption in joules: 315.56700134277344 for 134.71213 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for before
+Time: do 13 nov 2025  5:11:48 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.25s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.53s (0:02:13) =========================
+Energy consumption in joules: 310.03009033203125 for 133.90843 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for before
+Time: do 13 nov 2025  5:14:07 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.28s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.56s (0:02:13) =========================
+Energy consumption in joules: 306.24790954589844 for 133.90793 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for before
+Time: do 13 nov 2025  5:16:27 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.32s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.60s (0:02:13) =========================
+Energy consumption in joules: 306.0875549316406 for 133.92061 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for before
+Time: do 13 nov 2025  5:18:46 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.33s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.60s (0:02:13) =========================
+Energy consumption in joules: 310.4137725830078 for 133.91446 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for before
+Time: do 13 nov 2025  5:21:05 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.35s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.64s (0:02:13) =========================
+Energy consumption in joules: 327.1815490722656 for 134.108 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for before
+Time: do 13 nov 2025  5:23:24 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.12s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.44s (0:02:13) =========================
+Energy consumption in joules: 847.2295837402344 for 133.77588 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for before
+Time: do 13 nov 2025  5:25:44 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.30s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.59s (0:02:13) =========================
+Energy consumption in joules: 627.2056274414063 for 134.03262 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for before
+Time: do 13 nov 2025  5:28:03 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.19s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.49s (0:02:13) =========================
+Energy consumption in joules: 479.28515625 for 133.8518 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: do 13 nov 2025  5:30:22 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.29s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.57s (0:02:13) =========================
+Energy consumption in joules: 554.5873260498047 for 134.05602 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for before
+Time: do 13 nov 2025  5:32:42 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.16s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.45s (0:02:13) =========================
+Energy consumption in joules: 352.1951599121094 for 133.88089 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: do 13 nov 2025  5:35:01 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.21s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.50s (0:02:13) =========================
+Energy consumption in joules: 542.0804595947266 for 133.84705 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: do 13 nov 2025  5:37:20 CET
 =========================================

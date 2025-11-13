@@ -1,0 +1,2009 @@
+========================================
+Starting test runs for project: ophyd-async_316
+Iterations: 1
+Test command: pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: networkx>=2.0 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.2.1)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.26.4)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (25.0)
+Requirement already satisfied: pint in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.24.4)
+Requirement already satisfied: bluesky>=1.13.0a3 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.14.4)
+Requirement already satisfied: event-model<1.21.0 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.20.0)
+Requirement already satisfied: p4p in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (4.2.1)
+Requirement already satisfied: pyyaml in /usr/lib/python3/dist-packages (from ophyd-async==0.6.0) (5.4.1)
+Requirement already satisfied: colorlog in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (6.10.1)
+Requirement already satisfied: black in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (25.11.0)
+Requirement already satisfied: flake8 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (7.3.0)
+Requirement already satisfied: flake8-isort in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: Flake8-pyproject in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.2.3)
+Requirement already satisfied: h5py in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.15.1)
+Requirement already satisfied: inflection in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.5.1)
+Requirement already satisfied: ipython in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (8.37.0)
+Requirement already satisfied: ipywidgets in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (8.1.8)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.9.4)
+Requirement already satisfied: myst-parser in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (4.0.1)
+Requirement already satisfied: numpydoc in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.9.0)
+Requirement already satisfied: ophyd in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.7.5)
+Requirement already satisfied: pipdeptree in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2.30.0)
+Requirement already satisfied: pre-commit in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (4.4.0)
+Requirement already satisfied: pydata-sphinx-theme>=0.12 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.16.1)
+Requirement already satisfied: pyepics>=3.4.2 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (3.5.8)
+Requirement already satisfied: pyside6==6.7.0 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (8.4.2)
+Requirement already satisfied: pytest-asyncio in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: pytest-cov in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: pytest-faulthandler in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2.0.1)
+Requirement already satisfied: pytest-rerunfailures in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (16.1)
+Requirement already satisfied: pytest-timeout in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2.4.0)
+Requirement already satisfied: ruff in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.14.4)
+Requirement already satisfied: sphinx-autobuild in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (2024.10.3)
+Requirement already satisfied: sphinxcontrib-mermaid in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: sphinx-copybutton in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.5.2)
+Requirement already satisfied: sphinx-design in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.6.1)
+Requirement already satisfied: tox-direct in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: types-mock in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (5.2.0.20250924)
+Requirement already satisfied: types-pyyaml in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (6.0.12.20250915)
+Requirement already satisfied: shiboken6==6.7.0 in /usr/local/lib/python3.10/dist-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Essentials==6.7.0 in /usr/local/lib/python3.10/dist-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: PySide6-Addons==6.7.0 in /usr/local/lib/python3.10/dist-packages (from pyside6==6.7.0->ophyd-async==0.6.0) (6.7.0)
+Requirement already satisfied: importlib-resources in /usr/local/lib/python3.10/dist-packages (from event-model<1.21.0->ophyd-async==0.6.0) (6.5.2)
+Requirement already satisfied: jsonschema>=3 in /usr/local/lib/python3.10/dist-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.25.1)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/dist-packages (from event-model<1.21.0->ophyd-async==0.6.0) (4.15.0)
+Requirement already satisfied: cycler in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: historydict in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.2.6)
+Requirement already satisfied: msgpack in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.2)
+Requirement already satisfied: msgpack-numpy in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (0.4.8)
+Requirement already satisfied: opentelemetry-api in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.38.0)
+Requirement already satisfied: toolz in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: tqdm>=4.44 in /usr/local/lib/python3.10/dist-packages (from bluesky>=1.13.0a3->ophyd-async==0.6.0) (4.67.1)
+Requirement already satisfied: attrs>=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=3->event-model<1.21.0->ophyd-async==0.6.0) (0.28.0)
+Requirement already satisfied: sphinx>=6.1 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (8.1.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (4.14.2)
+Requirement already satisfied: docutils!=0.17.0 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.21.2)
+Requirement already satisfied: Babel in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.17.0)
+Requirement already satisfied: pygments>=2.7 in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.19.2)
+Requirement already satisfied: accessible-pygments in /usr/local/lib/python3.10/dist-packages (from pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (0.0.5)
+Requirement already satisfied: pyparsing in /usr/local/lib/python3.10/dist-packages (from pyepics>=3.4.2->ophyd-async==0.6.0) (3.2.3)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.1.6)
+Requirement already satisfied: snowballstemmer>=2.2 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.0.1)
+Requirement already satisfied: alabaster>=0.7.14 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: requests>=2.30.0 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.32.3)
+Requirement already satisfied: tomli>=2 in /usr/local/lib/python3.10/dist-packages (from sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/lib/python3/dist-packages (from Jinja2>=3.1->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.0.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (1.26.5)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.30.0->sphinx>=6.1->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2020.6.20)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4->pydata-sphinx-theme>=0.12->ophyd-async==0.6.0) (2.8)
+Requirement already satisfied: click>=8.0.0 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (8.3.0)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (1.1.0)
+Requirement already satisfied: pathspec>=0.9.0 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (0.12.1)
+Requirement already satisfied: platformdirs>=2 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (4.5.0)
+Requirement already satisfied: pytokens>=0.3.0 in /usr/local/lib/python3.10/dist-packages (from black->ophyd-async==0.6.0) (0.3.0)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in /usr/local/lib/python3.10/dist-packages (from flake8->ophyd-async==0.6.0) (0.7.0)
+Requirement already satisfied: pycodestyle<2.15.0,>=2.14.0 in /usr/local/lib/python3.10/dist-packages (from flake8->ophyd-async==0.6.0) (2.14.0)
+Requirement already satisfied: pyflakes<3.5.0,>=3.4.0 in /usr/local/lib/python3.10/dist-packages (from flake8->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: isort>=5.0.0 in /usr/local/lib/python3.10/dist-packages (from flake8-isort->ophyd-async==0.6.0) (7.0.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (0.19.2)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (0.2.1)
+Requirement already satisfied: pexpect>4.3 in /usr/lib/python3/dist-packages (from ipython->ophyd-async==0.6.0) (4.8.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (3.0.52)
+Requirement already satisfied: stack_data in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in /usr/local/lib/python3.10/dist-packages (from ipython->ophyd-async==0.6.0) (5.14.3)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython->ophyd-async==0.6.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in /usr/local/lib/python3.10/dist-packages (from jedi>=0.16->ipython->ophyd-async==0.6.0) (0.8.5)
+Requirement already satisfied: comm>=0.1.3 in /usr/local/lib/python3.10/dist-packages (from ipywidgets->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in /usr/local/lib/python3.10/dist-packages (from ipywidgets->ophyd-async==0.6.0) (4.0.15)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in /usr/local/lib/python3.10/dist-packages (from ipywidgets->ophyd-async==0.6.0) (3.0.16)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib->ophyd-async==0.6.0) (9.0.1)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib->ophyd-async==0.6.0) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.7->matplotlib->ophyd-async==0.6.0) (1.16.0)
+Requirement already satisfied: markdown-it-py~=3.0 in /usr/local/lib/python3.10/dist-packages (from myst-parser->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: mdit-py-plugins>=0.4.1,~=0.4 in /usr/local/lib/python3.10/dist-packages (from myst-parser->ophyd-async==0.6.0) (0.5.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py~=3.0->myst-parser->ophyd-async==0.6.0) (0.1.2)
+Requirement already satisfied: importlib-metadata<8.8.0,>=6.0 in /usr/local/lib/python3.10/dist-packages (from opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (8.7.0)
+Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.10/dist-packages (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api->bluesky>=1.13.0a3->ophyd-async==0.6.0) (3.23.0)
+Requirement already satisfied: aioca>=1.6 in /usr/local/lib/python3.10/dist-packages (from ophyd-async==0.6.0) (1.8.1)
+Requirement already satisfied: epicscorelibs>=7.0.3.99.4.0 in /usr/local/lib/python3.10/dist-packages (from aioca>=1.6->ophyd-async==0.6.0) (7.0.7.99.1.2)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (80.9.0)
+Requirement already satisfied: setuptools-dso>=2.11a2 in /usr/local/lib/python3.10/dist-packages (from epicscorelibs>=7.0.3.99.4.0->aioca>=1.6->ophyd-async==0.6.0) (2.12.2)
+Requirement already satisfied: pvxslibs<1.5.0a1,>=1.4.0 in /usr/local/lib/python3.10/dist-packages (from p4p->ophyd-async==0.6.0) (1.4.1)
+Requirement already satisfied: nose2>=0.8.0 in /usr/local/lib/python3.10/dist-packages (from p4p->ophyd-async==0.6.0) (0.15.1)
+Requirement already satisfied: ply in /usr/local/lib/python3.10/dist-packages (from p4p->ophyd-async==0.6.0) (3.11)
+Requirement already satisfied: flexcache>=0.3 in /usr/local/lib/python3.10/dist-packages (from pint->ophyd-async==0.6.0) (0.3)
+Requirement already satisfied: flexparser>=0.4 in /usr/local/lib/python3.10/dist-packages (from pint->ophyd-async==0.6.0) (0.4)
+Requirement already satisfied: pip>=25.2 in /usr/local/lib/python3.10/dist-packages (from pipdeptree->ophyd-async==0.6.0) (25.3)
+Requirement already satisfied: cfgv>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (2.6.15)
+Requirement already satisfied: nodeenv>=0.11.1 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (1.9.1)
+Requirement already satisfied: virtualenv>=20.10.0 in /usr/local/lib/python3.10/dist-packages (from pre-commit->ophyd-async==0.6.0) (20.35.4)
+Requirement already satisfied: distlib<1,>=0.3.7 in /usr/local/lib/python3.10/dist-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.12.2 in /usr/local/lib/python3.10/dist-packages (from virtualenv>=20.10.0->pre-commit->ophyd-async==0.6.0) (3.20.0)
+Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->ophyd-async==0.6.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest->ophyd-async==0.6.0) (1.6.0)
+Requirement already satisfied: backports-asyncio-runner<2,>=1.1 in /usr/local/lib/python3.10/dist-packages (from pytest-asyncio->ophyd-async==0.6.0) (1.2.0)
+Requirement already satisfied: coverage>=7.10.6 in /usr/local/lib/python3.10/dist-packages (from coverage[toml]>=7.10.6->pytest-cov->ophyd-async==0.6.0) (7.11.0)
+Requirement already satisfied: colorama>=0.4.6 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.4.6)
+Requirement already satisfied: starlette>=0.35 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.50.0)
+Requirement already satisfied: uvicorn>=0.25 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (0.38.0)
+Requirement already satisfied: watchfiles>=0.20 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (1.1.1)
+Requirement already satisfied: websockets>=11 in /usr/local/lib/python3.10/dist-packages (from sphinx-autobuild->ophyd-async==0.6.0) (15.0.1)
+Requirement already satisfied: anyio<5,>=3.6.2 in /usr/local/lib/python3.10/dist-packages (from starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (4.11.0)
+Requirement already satisfied: sniffio>=1.1 in /usr/local/lib/python3.10/dist-packages (from anyio<5,>=3.6.2->starlette>=0.35->sphinx-autobuild->ophyd-async==0.6.0) (1.3.1)
+Requirement already satisfied: h11>=0.8 in /usr/local/lib/python3.10/dist-packages (from uvicorn>=0.25->sphinx-autobuild->ophyd-async==0.6.0) (0.16.0)
+Requirement already satisfied: executing>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython->ophyd-async==0.6.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython->ophyd-async==0.6.0) (3.0.0)
+Requirement already satisfied: pure-eval in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython->ophyd-async==0.6.0) (0.2.3)
+Requirement already satisfied: tox<4,>=3.12 in /usr/local/lib/python3.10/dist-packages (from tox-direct->ophyd-async==0.6.0) (3.28.0)
+Requirement already satisfied: py in /usr/local/lib/python3.10/dist-packages (from tox-direct->ophyd-async==0.6.0) (1.11.0)
+Requirement already satisfied: pathlib2 in /usr/local/lib/python3.10/dist-packages (from tox-direct->ophyd-async==0.6.0) (2.3.7.post1)
+Building wheels for collected packages: ophyd-async
+  Building editable for ophyd-async (pyproject.toml): started
+  Building editable for ophyd-async (pyproject.toml): finished with status 'done'
+  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4829 sha256=3ae908bf38e8be0beb8ce3b6cde3154bdbb51b2488f86e640f5bf13eeacb1867
+  Stored in directory: /tmp/pip-ephem-wheel-cache-svrje_ta/wheels/46/75/ae/9356ab6bce539fd28c69f782f09715e3c0d25c8d877c21bedf
+Successfully built ophyd-async
+Installing collected packages: ophyd-async
+  Attempting uninstall: ophyd-async
+    Found existing installation: ophyd-async 0.6.0
+    Uninstalling ophyd-async-0.6.0:
+      Successfully uninstalled ophyd-async-0.6.0
+Successfully installed ophyd-async-0.6.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: super_state_machine in /usr/local/lib/python3.10/dist-packages (2.1.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: do 13 nov 2025  5:31:34 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=4169377197
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before
+configfile: pyproject.toml
+testpaths: docs, src, tests
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 329 items
+
+tests/test_flyer_with_panda.py::test_hardware_triggered_flyable_with_static_seq_table_logic PASSED [  0%]
+tests/core/test_flyer.py::test_read_configuration PASSED                 [  0%]
+tests/core/test_flyer.py::test_hardware_triggered_flyable PASSED         [  0%]
+tests/core/test_flyer.py::test_describe_configuration PASSED             [  1%]
+tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func PASSED [  1%]
+tests/core/test_async_status.py::test_async_status_has_no_exception_if_coroutine_successful PASSED [  1%]
+tests/core/test_async_status.py::test_async_status_exception_timeout PASSED [  2%]
+tests/core/test_async_status.py::test_async_status_wrap PASSED           [  2%]
+tests/core/test_async_status.py::test_async_status_str_for_normal_coroutine PASSED [  2%]
+tests/core/test_async_status.py::test_async_status_initialised_with_a_task PASSED [  3%]
+tests/core/test_async_status.py::test_status_propogates_traceback_under_RE PASSED [  3%]
+tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func_with_args_kwargs PASSED [  3%]
+tests/core/test_async_status.py::test_async_status_success PASSED        [  3%]
+tests/core/test_async_status.py::test_async_status_propagates_cancelled_error PASSED [  4%]
+tests/core/test_async_status.py::test_async_status_propagates_exception PASSED [  4%]
+tests/core/test_async_status.py::test_async_status_str_for_failing_coroutine PASSED [  4%]
+tests/core/test_async_status.py::test_async_status_success_if_cancelled PASSED [  5%]
+tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[1.0] PASSED [  5%]
+tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[10.0] PASSED [  5%]
+tests/epics/areadetector/test_aravis.py::test_trigger_source_set_to_gpio_line PASSED [  6%]
+tests/epics/areadetector/test_aravis.py::test_hints_from_hdf_writer PASSED [  6%]
+tests/epics/areadetector/test_aravis.py::test_can_decribe_collect PASSED [  6%]
+tests/epics/areadetector/test_aravis.py::test_decribe_describes_writer_dataset PASSED [  6%]
+tests/epics/areadetector/test_aravis.py::test_gpio_pin_limited PASSED    [  7%]
+tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.1] PASSED [  7%]
+tests/epics/areadetector/test_aravis.py::test_unsupported_trigger_excepts PASSED [  7%]
+tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.0] PASSED [  8%]
+tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[100.0] PASSED [  8%]
+tests/epics/areadetector/test_aravis.py::test_can_read PASSED            [  8%]
+tests/epics/areadetector/test_aravis.py::test_can_collect PASSED         [  9%]
+tests/core/test_utils.py::test_error_handling_value_errors PASSED        [  9%]
+tests/core/test_utils.py::test_combining_top_level_signal_and_child_device PASSED [  9%]
+tests/core/test_utils.py::test_not_connected_error_output PASSED         [ 10%]
+tests/core/test_utils.py::test_error_handling_device_collector PASSED    [ 10%]
+tests/core/test_utils.py::test_error_handling_connection_timeout PASSED  [ 10%]
+tests/core/test_utils.py::test_format_error_string_input PASSED          [ 10%]
+tests/core/test_signal.py::test_create_soft_signal[soft_signal_r_and_setter-SignalR] PASSED [ 11%]
+tests/core/test_signal.py::test_assert_value PASSED                      [ 11%]
+tests/core/test_signal.py::test_assert_reaading PASSED                   [ 11%]
+tests/core/test_signal.py::test_signal_get_and_set_logging PASSED        [ 12%]
+tests/core/test_signal.py::test_wait_for_value_with_funcion PASSED       [ 12%]
+tests/core/test_signal.py::test_assert_configuration PASSED              [ 12%]
+tests/core/test_signal.py::test_failed_assert_reaading PASSED            [ 13%]
+tests/core/test_signal.py::test_subscription_logs PASSED                 [ 13%]
+tests/core/test_signal.py::test_create_soft_signal[soft_signal_rw-SignalRW] PASSED [ 13%]
+tests/core/test_signal.py::test_soft_signal_numpy PASSED                 [ 13%]
+tests/core/test_signal.py::test_wait_for_value_with_value PASSED         [ 14%]
+tests/core/test_signal.py::test_set_and_wait_for_value PASSED            [ 14%]
+tests/core/test_signal.py::test_signal_connect_logs PASSED               [ 14%]
+tests/core/test_signal.py::test_signals_equality_raises PASSED           [ 15%]
+tests/epics/areadetector/test_utils.py::test_ndattribute_writing_xml PASSED [ 15%]
+tests/epics/areadetector/test_single_trigger_det.py::test_single_trigger_det PASSED [ 15%]
+tests/protocols/test_protocols.py::test_readable PASSED                  [ 16%]
+tests/epics/areadetector/test_writers.py::test_correct_descriptor_doc_after_open PASSED [ 16%]
+tests/epics/areadetector/test_writers.py::test_collect_stream_docs PASSED [ 16%]
+tests/core/test_device_save_loader.py::test_set_signal_values_skips_ignored_values PASSED [ 17%]
+tests/core/test_device_save_loader.py::test_load_from_yaml PASSED        [ 17%]
+tests/core/test_device_save_loader.py::test_all_at_once_sorter PASSED    [ 17%]
+tests/core/test_device_save_loader.py::test_set_signal_values_restores_value PASSED [ 17%]
+tests/core/test_device_save_loader.py::test_enum_yaml_formatting PASSED  [ 18%]
+tests/core/test_device_save_loader.py::test_load_device PASSED           [ 18%]
+tests/core/test_device_save_loader.py::test_yaml_formatting PASSED       [ 18%]
+tests/core/test_device_save_loader.py::test_save_device PASSED           [ 19%]
+tests/test_log.py::test_default_config_ophyd_async_logging PASSED        [ 19%]
+tests/test_log.py::test_logger_adapter_ophyd_async_device PASSED         [ 19%]
+tests/test_log.py::test_config_ophyd_async_logging_with_file_handler PASSED [ 20%]
+tests/test_log.py::test_config_ophyd_async_logging_removes_extra_handlers PASSED [ 20%]
+tests/test_log.py::test_validate_level PASSED                            [ 20%]
+tests/panda/test_hdf_panda.py::test_hdf_panda_hardware_triggered_flyable PASSED [ 20%]
+tests/panda/test_hdf_panda.py::test_hdf_panda_passes_blocks_to_controller PASSED [ 21%]
+tests/epics/test_pvi.py::test_device_create_children_from_annotations PASSED [ 21%]
+tests/epics/test_pvi.py::test_fill_pvi_entries_mock_mode PASSED          [ 21%]
+tests/epics/demo/test_demo.py::test_sensor_disconnected PASSED           [ 22%]
+tests/epics/demo/test_demo.py::test_sensor_in_plan PASSED                [ 22%]
+tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe PASSED [ 22%]
+tests/epics/demo/test_demo.py::test_read_mover PASSED                    [ 23%]
+tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected PASSED [ 23%]
+tests/epics/demo/test_demo.py::test_ioc_starts PASSED                    [ 23%]
+tests/epics/demo/test_demo.py::test_mover_moving_well PASSED             [ 24%]
+tests/epics/demo/test_demo.py::test_set_velocity PASSED                  [ 24%]
+tests/epics/demo/test_demo.py::test_read_sensor PASSED                   [ 24%]
+tests/epics/demo/test_demo.py::test_sensor_reading_shows_value PASSED    [ 24%]
+tests/epics/demo/test_demo.py::test_mover_stopped PASSED                 [ 25%]
+tests/epics/demo/test_demo.py::test_assembly_renaming PASSED             [ 25%]
+tests/epics/demo/test_demo.py::test_mover_disconncted PASSED             [ 25%]
+tests/epics/areadetector/test_controllers.py::test_ad_controller PASSED  [ 26%]
+tests/epics/areadetector/test_controllers.py::test_pilatus_controller PASSED [ 26%]
+tests/panda/test_trigger.py::test_trigger_logic_has_given_methods PASSED [ 26%]
+tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_stepscan PASSED [ 27%]
+tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_flyscan PASSED [ 27%]
+tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend PASSED [ 27%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False] PASSED [ 27%]
+tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout PASSED [ 28%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value PASSED [ 28%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes PASSED [ 28%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva] PASSED [ 29%]
+tests/core/test_mock_signal_backend.py::test_set_mock_value PASSED       [ 29%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca] PASSED [ 29%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails PASSED [ 30%]
+tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with PASSED [ 30%]
+tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True] PASSED [ 30%]
+tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx PASSED [ 31%]
+tests/core/test_mock_signal_backend.py::test_set_mock_values PASSED      [ 31%]
+tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls PASSED [ 31%]
+tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt PASSED [ 31%]
+tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout PASSED [ 32%]
+tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds PASSED [ 32%]
+tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock PASSED [ 32%]
+tests/core/test_mock_signal_backend.py::test_blocks_during_put PASSED    [ 33%]
+tests/core/test_device.py::test_wait_for_connection PASSED               [ 33%]
+tests/core/test_device.py::test_device_lazily_connects PASSED            [ 33%]
+tests/core/test_device.py::test_wait_for_connection_propagates_error PASSED [ 34%]
+tests/core/test_device.py::test_children_of_device_have_set_names_and_get_connected PASSED [ 34%]
+tests/core/test_device.py::test_device_vector_children PASSED            [ 34%]
+tests/core/test_device.py::test_device_log_has_correct_name PASSED       [ 34%]
+tests/core/test_device.py::test_device_children PASSED                   [ 35%]
+tests/core/test_device.py::test_device_with_children_lazily_connects PASSED [ 35%]
+tests/core/test_device.py::test_device_mock_and_back_again PASSED        [ 35%]
+tests/core/test_device.py::test_device_with_device_collector PASSED      [ 36%]
+tests/core/test_device.py::test_no_reconnect_signals_if_not_forced PASSED [ 36%]
+tests/core/test_device.py::test_device_with_device_collector_lazily_connects PASSED [ 36%]
+tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal0] PASSED [ 37%]
+tests/epics/areadetector/test_pilatus.py::test_unsupported_trigger_excepts PASSED [ 37%]
+tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal1] PASSED [ 37%]
+tests/epics/areadetector/test_pilatus.py::test_deadtime_invariant PASSED [ 37%]
+tests/epics/areadetector/test_pilatus.py::test_hints_from_hdf_writer PASSED [ 38%]
+tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal2] PASSED [ 38%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value4-put_value4-waveform_d] PASSED [ 38%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_with_numpy_typing PASSED [ 39%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value12-put_value12-waveform_d] PASSED [ 39%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value8-put_value8-waveform_d] PASSED [ 39%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[Sequence-initial_value14-put_value14-waveform_d] PASSED [ 40%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value13-put_value13-waveform_d] PASSED [ 40%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value5-put_value5-waveform_d] PASSED [ 40%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value9-put_value9-waveform_d] PASSED [ 41%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[int-0-43-integer_d] PASSED [ 41%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[float-0.0-43.5-number_d] PASSED [ 41%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value6-put_value6-waveform_d] PASSED [ 41%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value11-put_value11-waveform_d] PASSED [ 42%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value10-put_value10-waveform_d] PASSED [ 42%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_descriptor_fails_for_invalid_class PASSED [ 42%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[str--goodbye-string_d] PASSED [ 43%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[MyEnum-Aaa-Ccc-enum_d] PASSED [ 43%]
+tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value7-put_value7-waveform_d] PASSED [ 43%]
+tests/panda/test_panda_utils.py::test_save_panda PASSED                  [ 44%]
+tests/panda/test_panda_connect.py::test_panda_block_missing_signals[pva] PASSED [ 44%]
+tests/panda/test_panda_connect.py::test_panda_gets_types_from_common_class[pva] PASSED [ 44%]
+tests/panda/test_panda_connect.py::test_panda_with_missing_blocks[pva] PASSED [ 44%]
+tests/panda/test_panda_connect.py::test_panda_with_extra_blocks_and_signals[pva] PASSED [ 45%]
+tests/panda/test_panda_connect.py::test_panda_unable_to_connect_to_pvi PASSED [ 45%]
+tests/panda/test_panda_connect.py::test_panda_children_connected PASSED  [ 45%]
+tests/panda/test_panda_connect.py::test_panda_names_correct PASSED       [ 46%]
+tests/panda/test_panda_connect.py::test_panda_name_set PASSED            [ 46%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[SignalR-_readables] PASSED [ 46%]
+tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_device_vector PASSED [ 47%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[ConfigSignal-expected_attrs2] PASSED [ 47%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[HintedSignal-expected_attrs0] PASSED [ 47%]
+tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_filters_non_devices PASSED [ 48%]
+tests/core/test_standard_readable.py::test_standard_readable_add_children_context_manager PASSED [ 48%]
+tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_string_literal PASSED [ 48%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncReadable-_readables] PASSED [ 48%]
+tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals__raises_deprecated PASSED [ 49%]
+tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1.0] PASSED [ 49%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[HasHints-_has_hints] PASSED [ 49%]
+tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_sequence PASSED [ 50%]
+tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type2] PASSED [ 50%]
+tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type3] PASSED [ 50%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncStageable-_stageables] PASSED [ 51%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncConfigurable-_configurables] PASSED [ 51%]
+tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1] PASSED [ 51%]
+tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals PASSED [ 51%]
+tests/core/test_standard_readable.py::test_standard_readable_hints PASSED [ 52%]
+tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[uncached-expected_attrs1] PASSED [ 52%]
+tests/epics/_backend/test_common.py::test_given_pv_has_choices_not_in_supplied_enum_then_raises PASSED [ 52%]
+tests/epics/_backend/test_common.py::test_given_an_enum_but_not_str_passed_to_get_supported_enum_then_raises PASSED [ 53%]
+tests/epics/_backend/test_common.py::test_given_no_supplied_enum_then_returns_generated_choices_enum_with_pv_choices PASSED [ 53%]
+tests/epics/_backend/test_common.py::test_given_supplied_enum_has_choices_not_in_pv_then_raises PASSED [ 53%]
+tests/epics/_backend/test_common.py::test_given_a_non_enum_passed_to_get_supported_enum_then_raises PASSED [ 54%]
+tests/epics/_backend/test_common.py::test_given_a_supplied_enum_that_matches_the_pv_choices_then_enum_type_is_returned PASSED [ 54%]
+tests/core/test_device_collector.py::test_sync_device_connector_no_run_engine_raises_error PASSED [ 54%]
+tests/core/test_device_collector.py::test_async_device_connector_run_engine_same_event_loop PASSED [ 55%]
+tests/core/test_device_collector.py::test_device_collector_handles_top_level_errors PASSED [ 55%]
+tests/core/test_device_collector.py::test_async_device_connector_run_engine_different_event_loop SKIPPEDalue, unlike real signals.) [ 55%]
+tests/core/test_device_collector.py::test_sync_device_connector_run_engine_created_connects PASSED [ 55%]
+tests/epics/areadetector/test_kinetix.py::test_can_collect PASSED        [ 56%]
+tests/epics/areadetector/test_kinetix.py::test_can_decribe_collect PASSED [ 56%]
+tests/epics/areadetector/test_kinetix.py::test_hints_from_hdf_writer PASSED [ 56%]
+tests/epics/areadetector/test_kinetix.py::test_can_read PASSED           [ 57%]
+tests/epics/areadetector/test_kinetix.py::test_get_deadtime PASSED       [ 57%]
+tests/epics/areadetector/test_kinetix.py::test_trigger_modes PASSED      [ 57%]
+tests/epics/areadetector/test_kinetix.py::test_decribe_describes_writer_dataset PASSED [ 58%]
+tests/sim/test_sim_writer.py::test_collect_stream_docs PASSED            [ 58%]
+tests/sim/test_sim_writer.py::test_correct_descriptor_doc_after_open PASSED [ 58%]
+tests/epics/areadetector/test_vimba.py::test_can_decribe_collect PASSED  [ 58%]
+tests/epics/areadetector/test_vimba.py::test_can_read PASSED             [ 59%]
+tests/epics/areadetector/test_vimba.py::test_can_collect PASSED          [ 59%]
+tests/epics/areadetector/test_vimba.py::test_decribe_describes_writer_dataset PASSED [ 59%]
+tests/epics/areadetector/test_vimba.py::test_hints_from_hdf_writer PASSED [ 60%]
+tests/epics/areadetector/test_vimba.py::test_get_deadtime PASSED         [ 60%]
+tests/epics/areadetector/test_vimba.py::test_arming_trig_modes PASSED    [ 60%]
+tests/sim/test_sim_detector.py::test_writes_pattern_to_file PASSED       [ 61%]
+tests/sim/test_sim_detector.py::test_sim_pattern_detector_initialization PASSED [ 61%]
+tests/sim/test_sim_detector.py::test_initial_blob PASSED                 [ 61%]
+tests/sim/test_sim_detector.py::test_set_x_and_y PASSED                  [ 62%]
+tests/sim/test_sim_detector.py::test_detector_creates_controller_and_writer PASSED [ 62%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')] PASSED [ 62%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int8a-initial_value5-put_value5-waveform_d] PASSED [ 62%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-uint8a-has type [uint8] not int] PASSED [ 63%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-stra-has type [str] not str] PASSED [ 63%]
+tests/epics/test_signals.py::test_str_returns_enum[ca] PASSED            [ 63%]
+tests/epics/test_signals.py::test_pvi_structure[ca] PASSED               [ 64%]
+tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool] FAILED [ 64%]
+tests/epics/test_signals.py::test_pva_table[ca] PASSED                   [ 64%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-Sequence-stra-initial_value15-put_value15-waveform_d] PASSED [ 65%]
+tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[ca] PASSED [ 65%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-str-has type str not int] PASSED [ 65%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int64a-initial_value11-put_value11-waveform_d] PASSED [ 65%]
+tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool_unnamed] FAILED [ 66%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-ndarray-float64a-has type [float64] not [int32]] PASSED [ 66%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int16a-initial_value7-put_value7-waveform_d] PASSED [ 66%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-MyEnum-enum-Bbb-Ccc-enum_d] PASSED [ 67%]
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca] PASSED [ 67%]
+tests/epics/test_signals.py::test_pva_ntdarray[ca] PASSED                [ 67%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-float-enum-is type Enum but doesn't inherit from String] PASSED [ 68%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float32a-initial_value13-put_value13-waveform_d] PASSED [ 68%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-float-float-3.141-43.5-number_d] PASSED [ 68%]
+tests/epics/test_signals.py::test_backend_put_enum_string[ca] PASSED     [ 68%]
+tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[ca] PASSED [ 69%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-float-has type float not str] PASSED [ 69%]
+tests/epics/test_signals.py::test_str_enum_returns_enum[ca] PASSED       [ 69%]
+tests/epics/test_signals.py::test_non_existent_errors[ca] PASSED         [ 70%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int32a-initial_value9-put_value9-waveform_d] PASSED [ 70%]
+tests/epics/test_signals.py::test_backend_get_setpoint[ca] PASSED        [ 70%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-int-int-42-43-integer_d] PASSED [ 71%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-enum-Bbb-Ccc-enum_d] PASSED [ 71%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-str-hello-goodbye-string_d] PASSED [ 71%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float64a-initial_value14-put_value14-waveform_d] PASSED [ 72%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint8a-initial_value6-put_value6-waveform_d] PASSED [ 72%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint16a-initial_value8-put_value8-waveform_d] PASSED [ 72%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint32a-initial_value10-put_value10-waveform_d] PASSED [ 72%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint64a-initial_value12-put_value12-waveform_d] PASSED [ 73%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-MyEnum-enum-Bbb-Ccc-enum_d] PASSED [ 73%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float32a-initial_value13-put_value13-waveform_d] PASSED [ 73%]
+tests/epics/test_signals.py::test_pva_table[pva] FAILED                  [ 74%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int8a-initial_value5-put_value5-waveform_d] PASSED [ 74%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint16a-initial_value8-put_value8-waveform_d] PASSED [ 74%]
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva] PASSED [ 75%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-stra-has type [str] not str] PASSED [ 75%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float64a-initial_value14-put_value14-waveform_d] PASSED [ 75%]
+tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool_unnamed] FAILED [ 75%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint64a-initial_value12-put_value12-waveform_d] PASSED [ 76%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint32a-initial_value10-put_value10-waveform_d] PASSED [ 76%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-ndarray-float64a-has type [float64] not [int32]] PASSED [ 76%]
+tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool] FAILED [ 77%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-uint8a-has type [uint8] not int] PASSED [ 77%]
+tests/epics/test_signals.py::test_non_existent_errors[pva] PASSED        [ 77%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-str-has type str not int] PASSED [ 78%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int16a-initial_value7-put_value7-waveform_d] PASSED [ 78%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-float-has type float not str] PASSED [ 78%]
+tests/epics/test_signals.py::test_pvi_structure[pva] PASSED              [ 79%]
+tests/epics/test_signals.py::test_pva_ntdarray[pva] PASSED               [ 79%]
+tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[pva] PASSED [ 79%]
+tests/epics/test_signals.py::test_backend_get_setpoint[pva] PASSED       [ 79%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')] PASSED [ 80%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-float-float-3.141-43.5-number_d] PASSED [ 80%]
+tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[pva] PASSED [ 80%]
+tests/epics/test_signals.py::test_str_returns_enum[pva] PASSED           [ 81%]
+tests/epics/test_signals.py::test_backend_put_enum_string[pva] PASSED    [ 81%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint8a-initial_value6-put_value6-waveform_d] PASSED [ 81%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int32a-initial_value9-put_value9-waveform_d] PASSED [ 82%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-enum-Bbb-Ccc-enum_d] PASSED [ 82%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-int-int-42-43-integer_d] PASSED [ 82%]
+tests/epics/test_signals.py::test_str_enum_returns_enum[pva] PASSED      [ 82%]
+tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-float-enum-is type Enum but doesn't inherit from String] PASSED [ 83%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-str-hello-goodbye-string_d] PASSED [ 83%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int64a-initial_value11-put_value11-waveform_d] PASSED [ 83%]
+tests/epics/test_signals.py::test_backend_get_put_monitor[pva-Sequence-stra-initial_value15-put_value15-waveform_d] PASSED [ 84%]
+tests/epics/test_signals.py::test_signal_helpers PASSED                  [ 84%]
+tests/epics/test_signals.py::test_make_backend_fails_for_different_transports PASSED [ 84%]
+tests/epics/test_signals.py::test_enum_equality PASSED                   [ 85%]
+tests/panda/test_table.py::test_from_arrays_inconsistent_lengths PASSED  [ 85%]
+tests/panda/test_table.py::test_from_arrays_no_time PASSED               [ 85%]
+tests/panda/test_table.py::test_from_arrays_too_long PASSED              [ 86%]
+tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_with_unnamed_or_disconnected_config_sigs PASSED [ 86%]
+tests/epics/demo/test_demo_ad_sim_detector.py::test_read_and_describe_detector PASSED [ 86%]
+tests/epics/demo/test_demo_ad_sim_detector.py::test_trigger_logic PASSED [ 86%]
+tests/epics/demo/test_demo_ad_sim_detector.py::test_read_returns_nothing PASSED [ 87%]
+tests/epics/demo/test_demo_ad_sim_detector.py::test_two_detectors_step PASSED [ 87%]
+tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_writes_to_file PASSED [ 87%]
+tests/sim/test_pattern_generator.py::test_init PASSED                    [ 88%]
+tests/sim/test_pattern_generator.py::test_set_y PASSED                   [ 88%]
+tests/sim/test_pattern_generator.py::test_write_image_to_file PASSED     [ 88%]
+tests/sim/test_pattern_generator.py::test_set_x PASSED                   [ 89%]
+tests/sim/test_pattern_generator.py::test_set_exposure PASSED            [ 89%]
+tests/sim/test_pattern_generator.py::test_open_and_close_file PASSED     [ 89%]
+tests/sim/test_pattern_generator.py::test_initialization PASSED          [ 89%]
+tests/panda/test_panda_controller.py::test_panda_controller_arm_disarm PASSED [ 90%]
+tests/panda/test_panda_controller.py::test_panda_controller_not_filled_blocks PASSED [ 90%]
+tests/panda/test_panda_controller.py::test_panda_controller_wrong_trigger PASSED [ 90%]
+tests/sim/demo/test_sim_motor.py::test_move_sim_in_plan PASSED           [ 91%]
+tests/sim/demo/test_sim_motor.py::test_timeout PASSED                    [ 91%]
+tests/sim/demo/test_sim_motor.py::test_slow_move PASSED                  [ 91%]
+tests/sim/demo/test_sim_motor.py::test_stop PASSED                       [ 92%]
+tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_fails_after_some_time PASSED [ 92%]
+tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_flags_immediate_failure PASSED [ 92%]
+tests/sim/test_streaming_plan.py::test_plan PASSED                       [ 93%]
+tests/sim/test_streaming_plan.py::test_streaming_plan PASSED             [ 93%]
+tests/core/test_watchable_async_status.py::test_watchableasyncstatus_times_out PASSED [ 93%]
+tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_set_iterator_with_class_or_func_watcher PASSED [ 93%]
+tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_both_stage_and_set PASSED [ 94%]
+tests/core/test_watchable_async_status.py::test_watchableasyncstatus_wraps_failing_set_iterator PASSED [ 94%]
+tests/panda/test_writer.py::test_get_signals_marked_for_capture PASSED   [ 94%]
+tests/panda/test_writer.py::test_open_close_sets_capture PASSED          [ 95%]
+tests/panda/test_writer.py::test_numeric_blocks_correctly_formated PASSED [ 95%]
+tests/panda/test_writer.py::test_open_sets_file_path_and_name PASSED     [ 95%]
+tests/panda/test_writer.py::test_get_indices_written PASSED              [ 96%]
+tests/panda/test_writer.py::test_open_errors_when_multiplier_not_one PASSED [ 96%]
+tests/panda/test_writer.py::test_open_returns_correct_descriptors PASSED [ 96%]
+tests/panda/test_writer.py::test_collect_stream_docs PASSED              [ 96%]
+tests/panda/test_writer.py::test_wait_for_index PASSED                   [ 97%]
+tests/panda/test_writer.py::test_get_capture_signals_gets_all_signals PASSED [ 97%]
+tests/epics/motion/test_motor.py::test_motor_moving_well PASSED          [ 97%]
+tests/epics/motion/test_motor.py::test_motor_moving_well_2 PASSED        [ 98%]
+tests/epics/motion/test_motor.py::test_motor_moving_stopped PASSED       [ 98%]
+tests/epics/motion/test_motor.py::test_set_velocity PASSED               [ 98%]
+tests/epics/motion/test_motor.py::test_read_motor PASSED                 [ 99%]
+src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_dtype PASSED   [ 99%]
+src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_unique PASSED  [ 99%]
+tests/test_cli.py::test_cli_version PASSED                               [100%]
+
+=================================== FAILURES ===================================
+____________________ test_bool_conversion_of_enum[ca-bool] _____________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 344, in from_call
+    result: TResult | None = func()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 246, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    item.runtest()
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 469, in runtest
+    super().runtest()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 1671, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 716, in inner
+    runner.run(coro, context=context)
+  File "/usr/local/lib/python3.10/dist-packages/backports/asyncio/runner/runner.py", line 175, in run
+    return self._loop.run_until_complete(task)  # type: ignore[union-attr, no-any-return]
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 268, in test_bool_conversion_of_enum
+    await assert_monitor_then_put(
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 147, in assert_monitor_then_put
+    await q.assert_updates(pytest.approx(initial_value))
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 124, in assert_updates
+    assert value == expected_value == backend_value
+AssertionError: assert 1 == True
+  
+  comparison failed
+  Obtained: 1
+  Expected: True
+________________ test_bool_conversion_of_enum[ca-bool_unnamed] _________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 344, in from_call
+    result: TResult | None = func()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 246, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    item.runtest()
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 469, in runtest
+    super().runtest()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 1671, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 716, in inner
+    runner.run(coro, context=context)
+  File "/usr/local/lib/python3.10/dist-packages/backports/asyncio/runner/runner.py", line 175, in run
+    return self._loop.run_until_complete(task)  # type: ignore[union-attr, no-any-return]
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 268, in test_bool_conversion_of_enum
+    await assert_monitor_then_put(
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 147, in assert_monitor_then_put
+    await q.assert_updates(pytest.approx(initial_value))
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 124, in assert_updates
+    assert value == expected_value == backend_value
+AssertionError: assert 1 == True
+  
+  comparison failed
+  Obtained: 1
+  Expected: True
+_____________________________ test_pva_table[pva] ______________________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 344, in from_call
+    result: TResult | None = func()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 246, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    item.runtest()
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 469, in runtest
+    super().runtest()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 1671, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 716, in inner
+    runner.run(coro, context=context)
+  File "/usr/local/lib/python3.10/dist-packages/backports/asyncio/runner/runner.py", line 175, in run
+    return self._loop.run_until_complete(task)  # type: ignore[union-attr, no-any-return]
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 424, in test_pva_table
+    await q.assert_updates(approx_table(i))
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 124, in assert_updates
+    assert value == expected_value == backend_value
+AssertionError: assert {'bool': array([0, 0, 1, 1], dtype=uint8), 'int': array([ 1,  8, -9, 32], dtype=int32), 'float': array([ 1.8   ,  8.2   , -6.    , 32.9887]), 'str': ['Hello', 'World', 'Foo', 'Bar'], 'enum': ['Aaa', 'Bbb', 'Aaa', 'Ccc']} == {'bool': approx([False, False, True, True]), 'int': approx([1 ± 1.0e-06, 8 ± 8.0e-06, -9 ± 9.0e-06, 32 ± 3.2e-05]), 'float': approx([1.8 ± 1.8e-06, 8.2 ± 8.2e-06, -6.0 ± 6.0e-06, 32.9887 ± 3.3e-05]), 'str': approx([Hello, World, Foo, Bar]), 'enum': approx([MyEnum.a, MyEnum.b, MyEnum.a, MyEnum.c])}
+  
+  Common items:
+  {'enum': ['Aaa', 'Bbb', 'Aaa', 'Ccc'],
+   'float': array([ 1.8   ,  8.2   , -6.    , 32.9887]),
+   'int': array([ 1,  8, -9, 32], dtype=int32),
+   'str': ['Hello', 'World', 'Foo', 'Bar']}
+  Differing items:
+  {'bool': array([0, 0, 1, 1], dtype=uint8)} != {'bool': approx([False, False, True, True])}
+  
+  Full diff:
+    {
+  -     'bool': approx([False, False, True, True]),
+  -     'enum': approx([MyEnum.a, MyEnum.b, MyEnum.a, MyEnum.c]),
+  -     'float': approx([1.8 ± 1.8e-06, 8.2 ± 8.2e-06, -6.0 ± 6.0e-06, 32.9887 ± 3.3e-05]),
+  -     'int': approx([1 ± 1.0e-06, 8 ± 8.0e-06, -9 ± 9.0e-06, 32 ± 3.2e-05]),
+  -     'str': approx([Hello, World, Foo, Bar]),
+  +     'bool': array([0, 0, 1, 1], dtype=uint8),
+  +     'enum': [
+  +         'Aaa',
+  +         'Bbb',
+  +         'Aaa',
+  +         'Ccc',
+  +     ],
+  +     'float': array([ 1.8   ,  8.2   , -6.    , 32.9887]),
+  +     'int': array([ 1,  8, -9, 32], dtype=int32),
+  +     'str': [
+  +         'Hello',
+  +         'World',
+  +         'Foo',
+  +         'Bar',
+  +     ],
+    }
+________________ test_bool_conversion_of_enum[pva-bool_unnamed] ________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 344, in from_call
+    result: TResult | None = func()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 246, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    item.runtest()
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 469, in runtest
+    super().runtest()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 1671, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 716, in inner
+    runner.run(coro, context=context)
+  File "/usr/local/lib/python3.10/dist-packages/backports/asyncio/runner/runner.py", line 175, in run
+    return self._loop.run_until_complete(task)  # type: ignore[union-attr, no-any-return]
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 268, in test_bool_conversion_of_enum
+    await assert_monitor_then_put(
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 147, in assert_monitor_then_put
+    await q.assert_updates(pytest.approx(initial_value))
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 124, in assert_updates
+    assert value == expected_value == backend_value
+AssertionError: assert 1 == True
+  
+  comparison failed
+  Obtained: 1
+  Expected: True
+____________________ test_bool_conversion_of_enum[pva-bool] ____________________
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 344, in from_call
+    result: TResult | None = func()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 246, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    return (yield)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    item.runtest()
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 469, in runtest
+    super().runtest()
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 1671, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/usr/local/lib/python3.10/dist-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/usr/local/lib/python3.10/dist-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/usr/local/lib/python3.10/dist-packages/pytest_asyncio/plugin.py", line 716, in inner
+    runner.run(coro, context=context)
+  File "/usr/local/lib/python3.10/dist-packages/backports/asyncio/runner/runner.py", line 175, in run
+    return self._loop.run_until_complete(task)  # type: ignore[union-attr, no-any-return]
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 268, in test_bool_conversion_of_enum
+    await assert_monitor_then_put(
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 147, in assert_monitor_then_put
+    await q.assert_updates(pytest.approx(initial_value))
+  File "/home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before/tests/epics/test_signals.py", line 124, in assert_updates
+    assert value == expected_value == backend_value
+AssertionError: assert 0 == True
+  
+  comparison failed
+  Obtained: 0
+  Expected: True
+============================== slowest durations ===============================
+3.03s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+3.02s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+2.01s setup    tests/panda/test_panda_connect.py::test_panda_block_missing_signals[pva]
+1.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.72s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-MyEnum-enum-Bbb-Ccc-enum_d]
+0.68s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')]
+0.51s call     tests/sim/demo/test_sim_motor.py::test_slow_move
+0.35s setup    tests/test_flyer_with_panda.py::test_hardware_triggered_flyable_with_static_seq_table_logic
+0.31s call     tests/core/test_signal.py::test_wait_for_value_with_value
+0.30s call     tests/core/test_signal.py::test_wait_for_value_with_funcion
+0.23s call     tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.22s call     tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.20s call     tests/sim/demo/test_sim_motor.py::test_stop
+0.20s call     tests/sim/demo/test_sim_motor.py::test_timeout
+0.16s call     tests/core/test_utils.py::test_error_handling_value_errors
+0.14s call     tests/epics/motion/test_motor.py::test_motor_moving_well
+0.14s call     tests/sim/demo/test_sim_motor.py::test_move_sim_in_plan
+0.13s setup    tests/epics/demo/test_demo_ad_sim_detector.py::test_two_detectors_step
+0.12s setup    tests/epics/areadetector/test_vimba.py::test_arming_trig_modes
+0.11s call     tests/core/test_utils.py::test_combining_top_level_signal_and_child_device
+0.11s call     tests/core/test_signal.py::test_set_and_wait_for_value
+0.11s setup    tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal1]
+0.11s setup    tests/panda/test_writer.py::test_wait_for_index
+0.11s call     tests/core/test_device.py::test_device_with_children_lazily_connects
+0.11s setup    tests/epics/areadetector/test_vimba.py::test_can_read
+0.11s setup    tests/epics/areadetector/test_kinetix.py::test_decribe_describes_writer_dataset
+0.11s setup    tests/panda/test_trigger.py::test_trigger_logic_has_given_methods
+0.11s call     tests/epics/test_pvi.py::test_device_create_children_from_annotations
+0.11s setup    tests/epics/demo/test_demo_ad_sim_detector.py::test_read_and_describe_detector
+0.11s setup    tests/epics/areadetector/test_kinetix.py::test_can_read
+0.11s call     tests/epics/demo/test_demo.py::test_mover_moving_well
+0.10s call     tests/core/test_utils.py::test_error_handling_device_collector
+0.10s call     tests/panda/test_writer.py::test_wait_for_index
+0.10s call     tests/epics/areadetector/test_vimba.py::test_decribe_describes_writer_dataset
+0.10s setup    tests/panda/test_writer.py::test_get_indices_written
+0.10s setup    tests/panda/test_writer.py::test_open_close_sets_capture
+0.10s call     tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.10s setup    tests/epics/areadetector/test_kinetix.py::test_can_decribe_collect
+0.10s call     tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.10s call     tests/sim/test_pattern_generator.py::test_open_and_close_file
+0.10s call     tests/epics/demo/test_demo.py::test_mover_disconncted
+0.10s call     tests/epics/test_signals.py::test_non_existent_errors[pva]
+0.10s call     tests/epics/test_signals.py::test_non_existent_errors[ca]
+0.10s setup    tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal2]
+0.10s call     tests/core/test_async_status.py::test_async_status_success
+0.10s call     tests/panda/test_panda_connect.py::test_panda_gets_types_from_common_class[pva]
+0.10s setup    tests/epics/motion/test_motor.py::test_set_velocity
+0.10s setup    tests/panda/test_panda_connect.py::test_panda_children_connected
+0.10s setup    tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[100.0]
+0.09s setup    tests/epics/areadetector/test_aravis.py::test_decribe_describes_writer_dataset
+0.09s setup    tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.1]
+0.09s setup    tests/panda/test_hdf_panda.py::test_hdf_panda_hardware_triggered_flyable
+0.09s setup    tests/epics/areadetector/test_aravis.py::test_trigger_source_set_to_gpio_line
+0.09s setup    tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.08s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.08s setup    tests/epics/areadetector/test_writers.py::test_correct_descriptor_doc_after_open
+0.07s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')]
+0.07s call     tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_set_iterator_with_class_or_func_watcher
+0.06s setup    tests/core/test_flyer.py::test_hardware_triggered_flyable
+0.06s call     tests/epics/demo/test_demo_ad_sim_detector.py::test_two_detectors_step
+0.05s call     tests/panda/test_panda_connect.py::test_panda_block_missing_signals[pva]
+0.04s call     tests/core/test_watchable_async_status.py::test_watchableasyncstatus_wraps_failing_set_iterator
+0.04s teardown tests/panda/test_panda_connect.py::test_panda_name_set
+0.04s call     tests/panda/test_panda_connect.py::test_panda_with_missing_blocks[pva]
+0.04s call     tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_writes_to_file
+0.04s call     tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_both_stage_and_set
+0.04s call     tests/epics/test_pvi.py::test_fill_pvi_entries_mock_mode
+0.04s teardown tests/epics/test_signals.py::test_enum_equality
+0.03s call     tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_stepscan
+0.03s call     tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_flyscan
+0.03s call     tests/core/test_watchable_async_status.py::test_watchableasyncstatus_times_out
+0.03s call     tests/panda/test_hdf_panda.py::test_hdf_panda_hardware_triggered_flyable
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float32a-initial_value13-put_value13-waveform_d]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int64a-initial_value11-put_value11-waveform_d]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int16a-initial_value7-put_value7-waveform_d]
+0.03s call     tests/epics/test_signals.py::test_pva_ntdarray[pva]
+0.03s setup    tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_stepscan
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-int-int-42-43-integer_d]
+0.03s call     tests/test_flyer_with_panda.py::test_hardware_triggered_flyable_with_static_seq_table_logic
+0.03s call     tests/epics/test_signals.py::test_str_enum_returns_enum[ca]
+0.03s call     tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_with_unnamed_or_disconnected_config_sigs
+0.03s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-stra-has type [str] not str]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-str-hello-goodbye-string_d]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint64a-initial_value12-put_value12-waveform_d]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint16a-initial_value8-put_value8-waveform_d]
+0.03s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-float-has type float not str]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-Sequence-stra-initial_value15-put_value15-waveform_d]
+0.03s call     tests/epics/test_signals.py::test_str_returns_enum[ca]
+0.03s call     tests/sim/test_streaming_plan.py::test_plan
+0.03s setup    tests/epics/areadetector/test_vimba.py::test_can_collect
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-enum-Bbb-Ccc-enum_d]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float64a-initial_value14-put_value14-waveform_d]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-MyEnum-enum-Bbb-Ccc-enum_d]
+0.03s call     tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool]
+0.03s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint32a-initial_value10-put_value10-waveform_d]
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-float-float-3.141-43.5-number_d]
+0.02s call     tests/epics/test_signals.py::test_backend_get_setpoint[ca]
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint8a-initial_value6-put_value6-waveform_d]
+0.02s setup    tests/epics/areadetector/test_vimba.py::test_get_deadtime
+0.02s call     tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[ca]
+0.02s call     tests/test_cli.py::test_cli_version
+0.02s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-ndarray-float64a-has type [float64] not [int32]]
+0.02s setup    tests/epics/areadetector/test_vimba.py::test_hints_from_hdf_writer
+0.02s call     tests/epics/test_signals.py::test_backend_put_enum_string[ca]
+0.02s call     tests/sim/test_streaming_plan.py::test_streaming_plan
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[10.0]
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[1.0]
+0.02s call     tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool_unnamed]
+0.02s setup    tests/epics/areadetector/test_kinetix.py::test_trigger_modes
+0.02s setup    tests/epics/areadetector/test_vimba.py::test_can_decribe_collect
+0.02s setup    tests/epics/areadetector/test_kinetix.py::test_can_collect
+0.02s setup    tests/epics/areadetector/test_kinetix.py::test_get_deadtime
+0.02s setup    tests/epics/areadetector/test_vimba.py::test_decribe_describes_writer_dataset
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int8a-initial_value5-put_value5-waveform_d]
+0.02s setup    tests/epics/demo/test_demo_ad_sim_detector.py::test_read_returns_nothing
+0.02s setup    tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_flyscan
+0.02s setup    tests/epics/areadetector/test_kinetix.py::test_hints_from_hdf_writer
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-MyEnum-enum-Bbb-Ccc-enum_d]
+0.02s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-uint8a-has type [uint8] not int]
+0.02s setup    tests/epics/areadetector/test_pilatus.py::test_hints_from_hdf_writer
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_hints_from_hdf_writer
+0.02s setup    tests/epics/areadetector/test_pilatus.py::test_deadtime_invariant
+0.02s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-str-has type str not int]
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_gpio_pin_limited
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_can_decribe_collect
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.0]
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_can_read
+0.02s setup    tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_writes_to_file
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_can_collect
+0.02s setup    tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal0]
+0.02s setup    tests/epics/areadetector/test_aravis.py::test_unsupported_trigger_excepts
+0.02s call     tests/core/test_device.py::test_device_with_device_collector_lazily_connects
+0.02s setup    tests/epics/areadetector/test_pilatus.py::test_unsupported_trigger_excepts
+0.02s setup    tests/panda/test_writer.py::test_get_capture_signals_gets_all_signals
+0.02s call     tests/panda/test_panda_utils.py::test_save_panda
+0.02s call     tests/protocols/test_protocols.py::test_readable
+0.02s setup    tests/panda/test_writer.py::test_collect_stream_docs
+0.02s setup    tests/panda/test_writer.py::test_open_errors_when_multiplier_not_one
+0.02s setup    tests/panda/test_writer.py::test_get_signals_marked_for_capture
+0.02s setup    tests/panda/test_writer.py::test_open_returns_correct_descriptors
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float64a-initial_value14-put_value14-waveform_d]
+0.02s setup    tests/panda/test_writer.py::test_numeric_blocks_correctly_formated
+0.02s setup    tests/panda/test_writer.py::test_open_sets_file_path_and_name
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-int-int-42-43-integer_d]
+0.02s setup    tests/panda/test_hdf_panda.py::test_hdf_panda_passes_blocks_to_controller
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int32a-initial_value9-put_value9-waveform_d]
+0.02s call     tests/core/test_flyer.py::test_hardware_triggered_flyable
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int8a-initial_value5-put_value5-waveform_d]
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int16a-initial_value7-put_value7-waveform_d]
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint16a-initial_value8-put_value8-waveform_d]
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint64a-initial_value12-put_value12-waveform_d]
+0.02s setup    tests/panda/test_panda_utils.py::test_save_panda
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int64a-initial_value11-put_value11-waveform_d]
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint32a-initial_value10-put_value10-waveform_d]
+0.02s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float32a-initial_value13-put_value13-waveform_d]
+0.02s call     tests/epics/test_signals.py::test_pva_table[pva]
+0.02s call     tests/epics/areadetector/test_single_trigger_det.py::test_single_trigger_det
+0.02s setup    tests/panda/test_panda_connect.py::test_panda_names_correct
+0.01s setup    tests/panda/test_panda_controller.py::test_panda_controller_arm_disarm
+0.01s call     tests/core/test_device_collector.py::test_async_device_connector_run_engine_same_event_loop
+0.01s setup    tests/epics/areadetector/test_writers.py::test_collect_stream_docs
+0.01s call     tests/epics/test_signals.py::test_pvi_structure[pva]
+0.01s call     tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool_unnamed]
+0.01s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-stra-has type [str] not str]
+0.01s call     tests/core/test_utils.py::test_error_handling_connection_timeout
+0.01s setup    tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_fails_after_some_time
+0.01s setup    tests/epics/areadetector/test_single_trigger_det.py::test_single_trigger_det
+0.01s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-float-has type float not str]
+0.01s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-str-has type str not int]
+0.01s call     tests/core/test_async_status.py::test_async_status_propagates_cancelled_error
+0.01s call     tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[pva]
+0.01s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-uint8a-has type [uint8] not int]
+0.01s setup    tests/sim/test_sim_detector.py::test_writes_pattern_to_file
+0.01s call     tests/core/test_device_save_loader.py::test_set_signal_values_restores_value
+0.01s call     tests/core/test_async_status.py::test_async_status_initialised_with_a_task
+0.01s call     tests/core/test_async_status.py::test_async_status_has_no_exception_if_coroutine_successful
+0.01s call     tests/core/test_device.py::test_device_lazily_connects
+0.01s call     tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func_with_args_kwargs
+0.01s call     tests/core/test_device.py::test_wait_for_connection
+0.01s call     tests/core/test_async_status.py::test_async_status_wrap
+0.01s call     tests/core/test_async_status.py::test_async_status_propagates_exception
+0.01s call     tests/core/test_async_status.py::test_async_status_str_for_normal_coroutine
+0.01s call     tests/panda/test_panda_connect.py::test_panda_unable_to_connect_to_pvi
+0.01s call     tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func
+0.01s call     tests/core/test_device.py::test_wait_for_connection_propagates_error
+0.01s call     tests/core/test_async_status.py::test_async_status_str_for_failing_coroutine
+0.01s setup    tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_flags_immediate_failure
+0.01s call     tests/core/test_async_status.py::test_async_status_success_if_cancelled
+0.01s call     tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.01s setup    tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.01s setup    tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.01s setup    tests/epics/motion/test_motor.py::test_motor_moving_well
+0.01s call     tests/core/test_device_save_loader.py::test_save_device
+0.01s call     tests/core/test_device_save_loader.py::test_load_from_yaml
+0.01s call     tests/epics/demo/test_demo.py::test_assembly_renaming
+0.01s setup    tests/epics/areadetector/test_controllers.py::test_pilatus_controller
+0.01s call     tests/panda/test_panda_connect.py::test_panda_with_extra_blocks_and_signals[pva]
+0.01s setup    tests/epics/areadetector/test_controllers.py::test_ad_controller
+0.01s setup    tests/epics/motion/test_motor.py::test_read_motor
+0.01s call     tests/epics/areadetector/test_vimba.py::test_can_collect
+0.01s call     tests/epics/areadetector/test_kinetix.py::test_can_collect
+0.01s call     tests/epics/areadetector/test_vimba.py::test_arming_trig_modes
+0.01s call     tests/epics/areadetector/test_aravis.py::test_can_collect
+0.01s call     tests/epics/areadetector/test_vimba.py::test_can_decribe_collect
+0.01s call     tests/epics/areadetector/test_kinetix.py::test_decribe_describes_writer_dataset
+0.01s call     tests/epics/areadetector/test_kinetix.py::test_can_decribe_collect
+0.01s call     tests/epics/areadetector/test_aravis.py::test_can_decribe_collect
+0.01s call     tests/core/test_device_save_loader.py::test_yaml_formatting
+0.01s call     tests/epics/areadetector/test_aravis.py::test_decribe_describes_writer_dataset
+0.01s setup    tests/epics/demo/test_demo.py::test_set_velocity
+0.01s setup    tests/core/test_device_save_loader.py::test_load_from_yaml
+0.01s setup    tests/core/test_device_save_loader.py::test_set_signal_values_restores_value
+0.01s setup    tests/core/test_device_save_loader.py::test_yaml_formatting
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_moving_well
+0.00s call     tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int32a-initial_value9-put_value9-waveform_d]
+0.00s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-float-float-3.141-43.5-number_d]
+0.00s setup    tests/core/test_device_save_loader.py::test_save_device
+0.00s setup    tests/core/test_device_save_loader.py::test_set_signal_values_skips_ignored_values
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-Sequence-stra-initial_value15-put_value15-waveform_d]
+0.00s setup    tests/epics/demo/test_demo.py::test_read_mover
+0.00s call     tests/epics/areadetector/test_writers.py::test_correct_descriptor_doc_after_open
+0.00s call     tests/epics/areadetector/test_kinetix.py::test_trigger_modes
+0.00s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint8a-initial_value6-put_value6-waveform_d]
+0.00s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-str-hello-goodbye-string_d]
+0.00s setup    tests/core/test_device_save_loader.py::test_load_device
+0.00s call     tests/core/test_device_save_loader.py::test_set_signal_values_skips_ignored_values
+0.00s call     tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-enum-Bbb-Ccc-enum_d]
+0.00s call     tests/epics/areadetector/test_aravis.py::test_trigger_source_set_to_gpio_line
+0.00s call     tests/sim/test_pattern_generator.py::test_write_image_to_file
+0.00s call     tests/panda/test_writer.py::test_collect_stream_docs
+0.00s setup    tests/core/test_signal.py::test_assert_configuration
+0.00s call     tests/epics/areadetector/test_controllers.py::test_ad_controller
+0.00s call     tests/epics/areadetector/test_controllers.py::test_pilatus_controller
+0.00s setup    tests/sim/test_sim_writer.py::test_collect_stream_docs
+0.00s setup    tests/sim/test_streaming_plan.py::test_plan
+0.00s call     tests/panda/test_writer.py::test_get_indices_written
+0.00s teardown tests/test_cli.py::test_cli_version
+0.00s setup    tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s call     tests/panda/test_writer.py::test_open_close_sets_capture
+0.00s call     tests/panda/test_writer.py::test_open_sets_file_path_and_name
+0.00s call     tests/core/test_async_status.py::test_status_propogates_traceback_under_RE
+0.00s call     tests/panda/test_panda_connect.py::test_panda_children_connected
+0.00s call     tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-float-enum-is type Enum but doesn't inherit from String]
+0.00s setup    tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.00s call     tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal1]
+0.00s setup    tests/sim/test_sim_detector.py::test_sim_pattern_detector_initialization
+0.00s setup    tests/sim/test_sim_detector.py::test_detector_creates_controller_and_writer
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_hints
+0.00s call     tests/sim/test_sim_writer.py::test_correct_descriptor_doc_after_open
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s call     tests/core/test_device.py::test_device_mock_and_back_again
+0.00s setup    tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s setup    tests/sim/test_sim_writer.py::test_correct_descriptor_doc_after_open
+0.00s setup    tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s call     tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal2]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s call     tests/panda/test_writer.py::test_open_errors_when_multiplier_not_one
+0.00s setup    tests/sim/test_streaming_plan.py::test_streaming_plan
+0.00s setup    tests/sim/test_pattern_generator.py::test_write_image_to_file
+0.00s call     tests/panda/test_writer.py::test_open_returns_correct_descriptors
+0.00s setup    tests/sim/test_pattern_generator.py::test_initialization
+0.00s call     tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal0]
+0.00s setup    tests/sim/test_pattern_generator.py::test_open_and_close_file
+0.00s call     tests/core/test_device_save_loader.py::test_load_device
+0.00s call     tests/panda/test_writer.py::test_numeric_blocks_correctly_formated
+0.00s call     tests/sim/test_sim_writer.py::test_collect_stream_docs
+0.00s setup    tests/sim/test_pattern_generator.py::test_set_y
+0.00s setup    tests/sim/test_pattern_generator.py::test_set_x
+0.00s setup    tests/sim/test_pattern_generator.py::test_set_exposure
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_device_vector
+0.00s call     tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_flags_immediate_failure
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_children_context_manager
+0.00s setup    tests/sim/test_pattern_generator.py::test_init
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s call     tests/panda/test_panda_controller.py::test_panda_controller_arm_disarm
+0.00s call     tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s call     tests/epics/motion/test_motor.py::test_read_motor
+0.00s setup    tests/epics/demo/test_demo.py::test_read_sensor
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[SignalR-_readables]
+0.00s call     tests/epics/demo/test_demo.py::test_read_mover
+0.00s setup    tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s call     tests/panda/test_writer.py::test_get_capture_signals_gets_all_signals
+0.00s call     tests/core/test_signal.py::test_signal_get_and_set_logging
+0.00s setup    tests/sim/test_sim_detector.py::test_set_x_and_y
+0.00s call     tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_fails_after_some_time
+0.00s call     tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s call     tests/core/test_signal.py::test_signals_equality_raises
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int8a-initial_value5-put_value5-waveform_d]
+0.00s call     tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool]
+0.00s call     tests/epics/demo/test_demo.py::test_read_sensor
+0.00s setup    tests/sim/test_sim_detector.py::test_initial_blob
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s setup    tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_with_unnamed_or_disconnected_config_sigs
+0.00s call     tests/core/test_signal.py::test_signal_connect_logs
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_filters_non_devices
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals
+0.00s call     tests/test_log.py::test_config_ophyd_async_logging_with_file_handler
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[HasHints-_has_hints]
+0.00s call     tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')]
+0.00s teardown tests/core/test_watchable_async_status.py::test_watchableasyncstatus_wraps_failing_set_iterator
+0.00s call     tests/core/test_signal.py::test_subscription_logs
+0.00s call     tests/epics/motion/test_motor.py::test_set_velocity
+0.00s call     tests/sim/test_sim_detector.py::test_writes_pattern_to_file
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncReadable-_readables]
+0.00s call     tests/core/test_signal.py::test_assert_configuration
+0.00s call     tests/epics/test_signals.py::test_backend_get_setpoint[pva]
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s call     tests/epics/demo/test_demo.py::test_set_velocity
+0.00s setup    tests/core/test_watchable_async_status.py::test_watchableasyncstatus_wraps_failing_set_iterator
+0.00s setup    tests/core/test_signal.py::test_assert_value
+0.00s call     tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s call     tests/core/test_device_collector.py::test_sync_device_connector_run_engine_created_connects
+0.00s teardown tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_with_unnamed_or_disconnected_config_sigs
+0.00s call     tests/epics/test_signals.py::test_str_enum_returns_enum[pva]
+0.00s call     tests/core/test_device.py::test_no_reconnect_signals_if_not_forced
+0.00s call     tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s call     tests/epics/test_signals.py::test_str_returns_enum[pva]
+0.00s call     tests/epics/areadetector/test_pilatus.py::test_unsupported_trigger_excepts
+0.00s call     src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_dtype
+0.00s call     tests/epics/areadetector/test_aravis.py::test_unsupported_trigger_excepts
+0.00s setup    tests/core/test_device.py::test_device_lazily_connects
+0.00s call     tests/epics/areadetector/test_writers.py::test_collect_stream_docs
+0.00s teardown tests/core/test_flyer.py::test_hardware_triggered_flyable
+0.00s setup    tests/core/test_signal.py::test_failed_assert_reaading
+0.00s teardown tests/epics/areadetector/test_vimba.py::test_arming_trig_modes
+0.00s call     src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_unique
+0.00s setup    tests/core/test_signal.py::test_assert_reaading
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_moving_well
+0.00s setup    tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_both_stage_and_set
+0.00s setup    tests/panda/test_panda_connect.py::test_panda_with_missing_blocks[pva]
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s setup    tests/core/test_async_status.py::test_status_propogates_traceback_under_RE
+0.00s call     tests/epics/demo/test_demo_ad_sim_detector.py::test_read_and_describe_detector
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-int-int-42-43-integer_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int32a-initial_value9-put_value9-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int16a-initial_value7-put_value7-waveform_d]
+0.00s call     tests/epics/test_signals.py::test_backend_put_enum_string[pva]
+0.00s teardown tests/core/test_device.py::test_device_with_children_lazily_connects
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-enum-Bbb-Ccc-enum_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int16a-initial_value7-put_value7-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int64a-initial_value11-put_value11-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float64a-initial_value14-put_value14-waveform_d]
+0.00s teardown tests/sim/test_streaming_plan.py::test_plan
+0.00s teardown tests/panda/test_writer.py::test_wait_for_index
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint32a-initial_value10-put_value10-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-str-hello-goodbye-string_d]
+0.00s setup    tests/core/test_device.py::test_device_mock_and_back_again
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint64a-initial_value12-put_value12-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-float-float-3.141-43.5-number_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint16a-initial_value8-put_value8-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float64a-initial_value14-put_value14-waveform_d]
+0.00s setup    tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_set_iterator_with_class_or_func_watcher
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float32a-initial_value13-put_value13-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint8a-initial_value6-put_value6-waveform_d]
+0.00s teardown tests/epics/areadetector/test_kinetix.py::test_get_deadtime
+0.00s teardown tests/epics/demo/test_demo_ad_sim_detector.py::test_detector_writes_to_file
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-MyEnum-enum-Bbb-Ccc-enum_d]
+0.00s teardown tests/core/test_watchable_async_status.py::test_watchableasyncstatus_times_out
+0.00s setup    tests/core/test_watchable_async_status.py::test_watchableasyncstatus_times_out
+0.00s call     tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[100.0]
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_trigger_source_set_to_gpio_line
+0.00s teardown tests/core/test_async_status.py::test_async_status_success_if_cancelled
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[HintedSignal-expected_attrs0]
+0.00s call     tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_stopped
+0.00s teardown tests/epics/areadetector/test_pilatus.py::test_unsupported_trigger_excepts
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-Sequence-stra-initial_value15-put_value15-waveform_d]
+0.00s call     tests/core/test_signal.py::test_failed_assert_reaading
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-float-float-3.141-43.5-number_d]
+0.00s call     tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint16a-initial_value8-put_value8-waveform_d]
+0.00s teardown tests/epics/areadetector/test_vimba.py::test_decribe_describes_writer_dataset
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float32a-initial_value13-put_value13-waveform_d]
+0.00s teardown tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_set_iterator_with_class_or_func_watcher
+0.00s teardown tests/core/test_utils.py::test_error_handling_value_errors
+0.00s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-ndarray-float64a-has type [float64] not [int32]]
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_hints_from_hdf_writer
+0.00s teardown tests/panda/test_hdf_panda.py::test_hdf_panda_hardware_triggered_flyable
+0.00s call     tests/panda/test_writer.py::test_get_signals_marked_for_capture
+0.00s teardown tests/sim/demo/test_sim_motor.py::test_timeout
+0.00s teardown tests/epics/areadetector/test_vimba.py::test_can_read
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_in_plan
+0.00s call     tests/core/test_signal.py::test_assert_value
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-Sequence-stra-initial_value15-put_value15-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint64a-initial_value12-put_value12-waveform_d]
+0.00s setup    tests/panda/test_panda_connect.py::test_panda_with_extra_blocks_and_signals[pva]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int8a-initial_value5-put_value5-waveform_d]
+0.00s teardown tests/core/test_async_status.py::test_async_status_str_for_normal_coroutine
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-int-int-42-43-integer_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint32a-initial_value10-put_value10-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int32a-initial_value9-put_value9-waveform_d]
+0.00s teardown tests/core/test_device.py::test_device_lazily_connects
+0.00s teardown tests/epics/areadetector/test_kinetix.py::test_can_decribe_collect
+0.00s teardown tests/epics/areadetector/test_kinetix.py::test_decribe_describes_writer_dataset
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint8a-initial_value6-put_value6-waveform_d]
+0.00s teardown tests/epics/areadetector/test_vimba.py::test_can_collect
+0.00s teardown tests/sim/demo/test_sim_motor.py::test_stop
+0.00s teardown tests/test_flyer_with_panda.py::test_hardware_triggered_flyable_with_static_seq_table_logic
+0.00s call     tests/test_log.py::test_config_ophyd_async_logging_removes_extra_handlers
+0.00s setup    tests/core/test_device.py::test_device_with_children_lazily_connects
+0.00s teardown tests/core/test_device_save_loader.py::test_yaml_formatting
+0.00s call     tests/core/test_signal.py::test_assert_reaading
+0.00s teardown tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal1]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int64a-initial_value11-put_value11-waveform_d]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.00s teardown tests/epics/areadetector/test_kinetix.py::test_can_read
+0.00s teardown tests/panda/test_panda_connect.py::test_panda_gets_types_from_common_class[pva]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-enum-Bbb-Ccc-enum_d]
+0.00s teardown tests/core/test_async_status.py::test_status_propogates_traceback_under_RE
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[Sequence-initial_value14-put_value14-waveform_d]
+0.00s teardown tests/epics/demo/test_demo_ad_sim_detector.py::test_two_detectors_step
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.1]
+0.00s teardown tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal2]
+0.00s teardown tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_flyscan
+0.00s setup    tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-str-hello-goodbye-string_d]
+0.00s teardown tests/core/test_device_save_loader.py::test_set_signal_values_restores_value
+0.00s teardown tests/epics/areadetector/test_vimba.py::test_can_decribe_collect
+0.00s teardown tests/core/test_async_status.py::test_async_status_has_no_exception_if_coroutine_successful
+0.00s teardown tests/core/test_async_status.py::test_async_status_propagates_exception
+0.00s teardown tests/epics/demo/test_demo_ad_sim_detector.py::test_read_and_describe_detector
+0.00s teardown tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_flags_immediate_failure
+0.00s teardown tests/epics/areadetector/test_pilatus.py::test_trigger_mode_set[internal-Internal0]
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_gpio_pin_limited
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_decribe_describes_writer_dataset
+0.00s teardown tests/epics/areadetector/test_pilatus.py::test_hints_from_hdf_writer
+0.00s teardown tests/core/test_watchable_async_status.py::test_asyncstatus_wraps_both_stage_and_set
+0.00s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')]
+0.00s teardown tests/epics/areadetector/test_vimba.py::test_hints_from_hdf_writer
+0.00s teardown tests/core/test_utils.py::test_combining_top_level_signal_and_child_device
+0.00s teardown tests/panda/test_panda_utils.py::test_save_panda
+0.00s teardown tests/epics/areadetector/test_vimba.py::test_get_deadtime
+0.00s teardown tests/epics/areadetector/test_writers.py::test_correct_descriptor_doc_after_open
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[10.0]
+0.00s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.00s teardown tests/epics/areadetector/test_scans.py::test_hdf_writer_fails_on_timeout_with_stepscan
+0.00s teardown tests/epics/areadetector/test_kinetix.py::test_hints_from_hdf_writer
+0.00s teardown tests/core/test_signal.py::test_set_and_wait_for_value
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type3]
+0.00s teardown tests/epics/areadetector/test_writers.py::test_collect_stream_docs
+0.00s call     tests/panda/test_panda_controller.py::test_panda_controller_not_filled_blocks
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_can_decribe_collect
+0.00s teardown tests/core/test_async_status.py::test_async_status_initialised_with_a_task
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[1.0]
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-ndarray-float64a-has type [float64] not [int32]]
+0.00s teardown tests/epics/areadetector/test_kinetix.py::test_can_collect
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.0]
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_unsupported_trigger_excepts
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-stra-has type [str] not str]
+0.00s teardown tests/core/test_async_status.py::test_async_status_success
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[uncached-expected_attrs1]
+0.00s setup    tests/core/test_async_status.py::test_async_status_success
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1.0]
+0.00s setup    tests/core/test_signal.py::test_signal_connect_logs
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_can_collect
+0.00s teardown tests/epics/areadetector/test_pilatus.py::test_deadtime_invariant
+0.00s teardown tests/core/test_async_status.py::test_async_status_wrap
+0.00s setup    tests/core/test_async_status.py::test_async_status_has_no_exception_if_coroutine_successful
+0.00s teardown tests/epics/areadetector/test_controllers.py::test_pilatus_controller
+0.00s teardown tests/epics/demo/test_demo_ad_sim_detector.py::test_read_returns_nothing
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s call     tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[pva]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-str-has type str not int]
+0.00s teardown tests/epics/areadetector/test_kinetix.py::test_trigger_modes
+0.00s teardown tests/epics/areadetector/test_aravis.py::test_can_read
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.00s teardown tests/sim/demo/test_sim_motor.py::test_move_sim_in_plan
+0.00s call     tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-float-enum-is type Enum but doesn't inherit from String]
+0.00s call     tests/test_log.py::test_default_config_ophyd_async_logging
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncStageable-_stageables]
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_well_2
+0.00s teardown tests/epics/areadetector/test_controllers.py::test_ad_controller
+0.00s setup    tests/core/test_async_status.py::test_async_status_propagates_cancelled_error
+0.00s setup    tests/core/test_async_status.py::test_async_status_propagates_exception
+0.00s setup    tests/core/test_async_status.py::test_async_status_str_for_normal_coroutine
+0.00s setup    tests/panda/test_panda_connect.py::test_panda_gets_types_from_common_class[pva]
+0.00s setup    tests/sim/demo/test_sim_motor.py::test_slow_move
+0.00s teardown tests/core/test_async_status.py::test_async_status_propagates_cancelled_error
+0.00s teardown tests/panda/test_panda_connect.py::test_panda_children_connected
+0.00s teardown tests/epics/areadetector/test_single_trigger_det.py::test_single_trigger_det
+0.00s setup    tests/core/test_device_collector.py::test_sync_device_connector_run_engine_created_connects
+0.00s setup    tests/core/test_async_status.py::test_async_status_str_for_failing_coroutine
+0.00s teardown tests/epics/motion/test_motor.py::test_motor_moving_well
+0.00s teardown tests/panda/test_panda_connect.py::test_panda_unable_to_connect_to_pvi
+0.00s setup    tests/core/test_async_status.py::test_async_status_success_if_cancelled
+0.00s call     tests/core/test_device_save_loader.py::test_enum_yaml_formatting
+0.00s teardown tests/sim/test_streaming_plan.py::test_streaming_plan
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1]
+0.00s call     tests/core/test_device_collector.py::test_device_collector_handles_top_level_errors
+0.00s setup    tests/core/test_device_save_loader.py::test_enum_yaml_formatting
+0.00s setup    tests/core/test_async_status.py::test_async_status_initialised_with_a_task
+0.00s teardown tests/core/test_device_save_loader.py::test_save_device
+0.00s setup    tests/core/test_device.py::test_wait_for_connection_propagates_error
+0.00s teardown tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func
+0.00s teardown tests/core/test_device.py::test_device_mock_and_back_again
+0.00s teardown tests/epics/test_signals.py::test_non_existent_errors[pva]
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type2]
+0.00s call     tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s teardown tests/core/test_utils.py::test_error_handling_connection_timeout
+0.00s teardown tests/panda/test_writer.py::test_numeric_blocks_correctly_formated
+0.00s teardown tests/core/test_device_save_loader.py::test_load_from_yaml
+0.00s teardown tests/panda/test_panda_connect.py::test_panda_block_missing_signals[pva]
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncConfigurable-_configurables]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-stra-has type [str] not str]
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-uint8a-has type [uint8] not int]
+0.00s setup    tests/sim/demo/test_sim_motor.py::test_move_sim_in_plan
+0.00s setup    tests/core/test_utils.py::test_error_handling_device_collector
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-stra-has type [str] not str]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value4-put_value4-waveform_d]
+0.00s call     tests/core/test_utils.py::test_format_error_string_input
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-float-has type float not str]
+0.00s setup    tests/panda/test_panda_connect.py::test_panda_name_set
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value4-put_value4-waveform_d]
+0.00s setup    tests/core/test_utils.py::test_combining_top_level_signal_and_child_device
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-str-has type str not int]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-float-enum-is type Enum but doesn't inherit from String]
+0.00s teardown tests/sim/test_pattern_generator.py::test_open_and_close_file
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-uint8a-has type [uint8] not int]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-ndarray-float64a-has type [float64] not [int32]]
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-str-float-has type float not str]
+0.00s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-float-has type float not str]
+0.00s teardown tests/core/test_utils.py::test_error_handling_device_collector
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-MyEnum-enum-Bbb-Ccc-enum_d]
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[ConfigSignal-expected_attrs2]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float32a-initial_value13-put_value13-waveform_d]
+0.00s teardown tests/epics/areadetector/test_drivers.py::test_start_acquiring_driver_and_ensure_status_fails_after_some_time
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-stra-has type [str] not str]
+0.00s setup    tests/epics/test_pvi.py::test_fill_pvi_entries_mock_mode
+0.00s call     tests/panda/test_table.py::test_from_arrays_inconsistent_lengths
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-uint8a-has type [uint8] not int]
+0.00s teardown tests/panda/test_panda_connect.py::test_panda_names_correct
+0.00s teardown tests/epics/test_signals.py::test_non_existent_errors[ca]
+0.00s teardown tests/panda/test_writer.py::test_get_indices_written
+0.00s teardown tests/core/test_signal.py::test_wait_for_value_with_value
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-int-int-42-43-integer_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-float-float-3.141-43.5-number_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int64a-initial_value11-put_value11-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-str-has type str not int]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-Sequence-stra-initial_value15-put_value15-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-MyEnum-enum-Bbb-Ccc-enum_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int8a-initial_value5-put_value5-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint16a-initial_value8-put_value8-waveform_d]
+0.00s teardown tests/sim/demo/test_sim_motor.py::test_slow_move
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-float64a-initial_value14-put_value14-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint32a-initial_value10-put_value10-waveform_d]
+0.00s setup    tests/epics/demo/test_demo.py::test_sensor_disconnected
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-enum-Bbb-Ccc-enum_d]
+0.00s setup    src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_dtype
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-str-str-hello-goodbye-string_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint64a-initial_value12-put_value12-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-uint8a-initial_value6-put_value6-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_setpoint[ca]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int16a-initial_value7-put_value7-waveform_d]
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_disconncted
+0.00s teardown tests/epics/test_signals.py::test_str_returns_enum[ca]
+0.00s teardown tests/core/test_device.py::test_wait_for_connection
+0.00s setup    tests/panda/test_panda_connect.py::test_panda_unable_to_connect_to_pvi
+0.00s teardown tests/core/test_async_status.py::test_async_status_str_for_failing_coroutine
+0.00s setup    tests/core/test_utils.py::test_error_handling_connection_timeout
+0.00s teardown tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool_unnamed]
+0.00s teardown tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int16a-initial_value7-put_value7-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[ca]
+0.00s teardown tests/panda/test_writer.py::test_open_sets_file_path_and_name
+0.00s setup    tests/core/test_async_status.py::test_async_status_exception_timeout
+0.00s teardown tests/epics/test_signals.py::test_backend_put_enum_string[ca]
+0.00s teardown tests/panda/test_panda_connect.py::test_panda_with_missing_blocks[pva]
+0.00s teardown tests/core/test_signal.py::test_wait_for_value_with_funcion
+0.00s teardown tests/epics/test_pvi.py::test_fill_pvi_entries_mock_mode
+0.00s teardown tests/panda/test_writer.py::test_open_errors_when_multiplier_not_one
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value12-put_value12-waveform_d]
+0.00s setup    tests/core/test_signal.py::test_set_and_wait_for_value
+0.00s teardown tests/panda/test_writer.py::test_open_close_sets_capture
+0.00s teardown tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool]
+0.00s setup    tests/core/test_device_collector.py::test_device_collector_handles_top_level_errors
+0.00s teardown tests/panda/test_panda_controller.py::test_panda_controller_arm_disarm
+0.00s setup    tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool_unnamed]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value13-put_value13-waveform_d]
+0.00s teardown tests/epics/motion/test_motor.py::test_set_velocity
+0.00s teardown tests/panda/test_writer.py::test_collect_stream_docs
+0.00s setup    tests/sim/demo/test_sim_motor.py::test_stop
+0.00s teardown tests/epics/test_signals.py::test_pvi_structure[pva]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value8-put_value8-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_str_enum_returns_enum[ca]
+0.00s teardown tests/core/test_device.py::test_wait_for_connection_propagates_error
+0.00s setup    tests/core/test_utils.py::test_format_error_string_input
+0.00s teardown tests/epics/test_pvi.py::test_device_create_children_from_annotations
+0.00s setup    tests/epics/test_signals.py::test_str_returns_enum[ca]
+0.00s setup    tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[ca]
+0.00s call     tests/epics/areadetector/test_vimba.py::test_can_read
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-ndarray-float64a-has type [float64] not [int32]]
+0.00s setup    tests/epics/test_signals.py::test_pvi_structure[ca]
+0.00s setup    tests/epics/test_pvi.py::test_device_create_children_from_annotations
+0.00s setup    tests/epics/test_signals.py::test_pva_ntdarray[pva]
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_string_literal
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s call     tests/panda/test_panda_connect.py::test_panda_name_set
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[Sequence-initial_value14-put_value14-waveform_d]
+0.00s teardown tests/panda/test_writer.py::test_open_returns_correct_descriptors
+0.00s setup    tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s setup    tests/epics/test_signals.py::test_pva_table[ca]
+0.00s call     tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s teardown tests/panda/test_trigger.py::test_trigger_logic_has_given_methods
+0.00s setup    tests/epics/test_signals.py::test_non_existent_errors[ca]
+0.00s setup    tests/epics/test_signals.py::test_str_enum_returns_enum[ca]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[MyEnum-Aaa-Ccc-enum_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[ca]
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-int-uint8a-has type [uint8] not int]
+0.00s setup    tests/epics/test_signals.py::test_backend_put_enum_string[ca]
+0.00s call     tests/epics/areadetector/test_aravis.py::test_gpio_pin_limited
+0.00s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.00s setup    tests/epics/demo/test_demo_ad_sim_detector.py::test_trigger_logic
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s setup    tests/epics/test_signals.py::test_pva_ntdarray[ca]
+0.00s setup    tests/epics/test_signals.py::test_non_existent_errors[pva]
+0.00s teardown tests/sim/test_pattern_generator.py::test_write_image_to_file
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-float-enum-is type Enum but doesn't inherit from String]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-str-float-has type float not str]
+0.00s setup    tests/core/test_signal.py::test_create_soft_signal[soft_signal_r_and_setter-SignalR]
+0.00s call     tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value7-put_value7-waveform_d]
+0.00s setup    tests/sim/demo/test_sim_motor.py::test_timeout
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[int-0-43-integer_d]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[int-0-43-integer_d]
+0.00s call     tests/core/test_device.py::test_device_with_device_collector
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value5-put_value5-waveform_d]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value10-put_value10-waveform_d]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[str--goodbye-string_d]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value9-put_value9-waveform_d]
+0.00s call     tests/test_log.py::test_logger_adapter_ophyd_async_device
+0.00s setup    tests/core/test_utils.py::test_error_handling_value_errors
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[float-0.0-43.5-number_d]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value11-put_value11-waveform_d]
+0.00s setup    tests/core/test_flyer.py::test_read_configuration
+0.00s teardown tests/sim/test_sim_detector.py::test_writes_pattern_to_file
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[ca-int-str-has type str not int]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value6-put_value6-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[pva]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[MyEnum-Aaa-Ccc-enum_d]
+0.00s setup    tests/core/test_flyer.py::test_describe_configuration
+0.00s teardown tests/core/test_signal.py::test_assert_value
+0.00s setup    tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-float-enum-is type Enum but doesn't inherit from String]
+0.00s teardown tests/sim/test_sim_writer.py::test_correct_descriptor_doc_after_open
+0.00s call     tests/epics/areadetector/test_vimba.py::test_hints_from_hdf_writer
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_sequence
+0.00s setup    tests/core/test_device.py::test_children_of_device_have_set_names_and_get_connected
+0.00s call     tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[SignalR-_readables]
+0.00s setup    tests/core/test_signal.py::test_create_soft_signal[soft_signal_rw-SignalRW]
+0.00s teardown tests/epics/demo/test_demo.py::test_dynamic_sensor_group_read_and_describe
+0.00s setup    tests/panda/test_panda_controller.py::test_panda_controller_not_filled_blocks
+0.00s teardown tests/panda/test_writer.py::test_get_capture_signals_gets_all_signals
+0.00s teardown tests/panda/test_hdf_panda.py::test_hdf_panda_passes_blocks_to_controller
+0.00s call     tests/epics/areadetector/test_vimba.py::test_get_deadtime
+0.00s call     tests/panda/test_trigger.py::test_trigger_logic_has_given_methods
+0.00s setup    tests/epics/areadetector/test_utils.py::test_ndattribute_writing_xml
+0.00s teardown tests/panda/test_writer.py::test_get_signals_marked_for_capture
+0.00s teardown tests/core/test_signal.py::test_failed_assert_reaading
+0.00s call     tests/core/test_signal.py::test_soft_signal_numpy
+0.00s teardown tests/sim/test_pattern_generator.py::test_set_exposure
+0.00s setup    tests/core/test_signal.py::test_signal_get_and_set_logging
+0.00s setup    tests/epics/test_signals.py::test_backend_enum_which_doesnt_inherit_string[pva]
+0.00s teardown tests/sim/test_pattern_generator.py::test_init
+0.00s teardown tests/sim/test_pattern_generator.py::test_set_x
+0.00s call     tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.1]
+0.00s setup    tests/core/test_device.py::test_device_with_device_collector
+0.00s setup    tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool_unnamed]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s setup    tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s teardown tests/core/test_signal.py::test_assert_reaading
+0.00s call     tests/panda/test_table.py::test_from_arrays_no_time
+0.00s setup    tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool]
+0.00s setup    tests/core/test_signal.py::test_subscription_logs
+0.00s call     tests/epics/areadetector/test_pilatus.py::test_hints_from_hdf_writer
+0.00s teardown tests/sim/test_pattern_generator.py::test_initialization
+0.00s call     tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[100.0]
+0.00s teardown tests/sim/test_pattern_generator.py::test_set_y
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s teardown tests/epics/test_signals.py::test_pva_ntdarray[pva]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[pva]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint32a-initial_value10-put_value10-waveform_d]
+0.00s call     tests/core/test_flyer.py::test_read_configuration
+0.00s teardown tests/epics/motion/test_motor.py::test_read_motor
+0.00s call     tests/core/test_signal.py::test_create_soft_signal[soft_signal_r_and_setter-SignalR]
+0.00s call     tests/epics/areadetector/test_kinetix.py::test_can_read
+0.00s teardown tests/panda/test_panda_connect.py::test_panda_with_extra_blocks_and_signals[pva]
+0.00s teardown tests/core/test_signal.py::test_assert_configuration
+0.00s teardown tests/core/test_signal.py::test_signal_get_and_set_logging
+0.00s call     tests/epics/test_signals.py::test_enum_equality
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint16a-initial_value8-put_value8-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint8a-initial_value6-put_value6-waveform_d]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float64a-initial_value14-put_value14-waveform_d]
+0.00s teardown tests/protocols/test_protocols.py::test_readable
+0.00s setup    tests/protocols/test_protocols.py::test_readable
+0.00s call     tests/core/test_async_status.py::test_async_status_exception_timeout
+0.00s teardown tests/core/test_device_save_loader.py::test_set_signal_values_skips_ignored_values
+0.00s setup    tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s teardown tests/sim/test_sim_writer.py::test_collect_stream_docs
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[str--goodbye-string_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-float32a-initial_value13-put_value13-waveform_d]
+0.00s teardown tests/core/test_signal.py::test_signal_connect_logs
+0.00s setup    tests/epics/test_signals.py::test_pva_table[pva]
+0.00s setup    tests/core/test_device.py::test_no_reconnect_signals_if_not_forced
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-uint64a-initial_value12-put_value12-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int8a-initial_value5-put_value5-waveform_d]
+0.00s call     tests/epics/demo/test_demo_ad_sim_detector.py::test_read_returns_nothing
+0.00s teardown tests/core/test_device_collector.py::test_sync_device_connector_run_engine_created_connects
+0.00s setup    tests/epics/test_signals.py::test_pvi_structure[pva]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-Sequence-stra-initial_value15-put_value15-waveform_d]
+0.00s setup    tests/core/test_signal.py::test_signals_equality_raises
+0.00s teardown tests/core/test_device_collector.py::test_device_collector_handles_top_level_errors
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[ca-ndarray-int32a-initial_value9-put_value9-waveform_d]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value5-put_value5-waveform_d]
+0.00s teardown tests/core/test_device_save_loader.py::test_load_device
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-float-float-3.141-43.5-number_d]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value4-put_value4-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value7-put_value7-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int64a-initial_value11-put_value11-waveform_d]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value8-put_value8-waveform_d]
+0.00s call     tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[10.0]
+0.00s teardown tests/core/test_signal.py::test_create_soft_signal[soft_signal_r_and_setter-SignalR]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-ndarray-int32a-initial_value9-put_value9-waveform_d]
+0.00s teardown tests/core/test_signal.py::test_subscription_logs
+0.00s teardown tests/epics/demo/test_demo.py::test_set_velocity
+0.00s setup    tests/epics/test_signals.py::test_backend_get_setpoint[ca]
+0.00s setup    tests/panda/test_panda_controller.py::test_panda_controller_wrong_trigger
+0.00s teardown tests/core/test_async_status.py::test_async_status_exception_timeout
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-enum-Bbb-Ccc-enum_d]
+0.00s setup    tests/core/test_device.py::test_device_log_has_correct_name
+0.00s setup    tests/epics/demo/test_demo.py::test_dynamic_sensor_group_disconnected
+0.00s setup    tests/core/test_signal.py::test_soft_signal_numpy
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value13-put_value13-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_get_setpoint[pva]
+0.00s setup    tests/core/test_signal.py::test_wait_for_value_with_funcion
+0.00s setup    tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[pva]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-int-int-42-43-integer_d]
+0.00s setup    tests/core/test_device.py::test_wait_for_connection
+0.00s setup    tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+0.00s teardown tests/epics/test_signals.py::test_backend_get_put_monitor[pva-str-str-hello-goodbye-string_d]
+0.00s call     tests/sim/test_sim_detector.py::test_initial_blob
+0.00s teardown tests/core/test_flyer.py::test_read_configuration
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value12-put_value12-waveform_d]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value11-put_value11-waveform_d]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds
+0.00s call     tests/epics/areadetector/test_kinetix.py::test_get_deadtime
+0.00s call     tests/core/test_signal.py::test_create_soft_signal[soft_signal_rw-SignalRW]
+0.00s setup    tests/core/test_async_status.py::test_async_status_wrap
+0.00s call     tests/core/test_device.py::test_children_of_device_have_set_names_and_get_connected
+0.00s teardown tests/epics/demo/test_demo.py::test_ioc_starts
+0.00s call     tests/epics/areadetector/test_kinetix.py::test_hints_from_hdf_writer
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value8-put_value8-waveform_d]
+0.00s setup    tests/core/test_device.py::test_device_with_device_collector_lazily_connects
+0.00s setup    tests/epics/test_signals.py::test_str_enum_returns_enum[pva]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value9-put_value9-waveform_d]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_utils_throw_error_if_backend_isnt_mock_signal_backend
+0.00s setup    tests/epics/demo/test_demo.py::test_assembly_renaming
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_descriptor_fails_for_invalid_class
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-BadEnum-enum-has choices ('Aaa', 'Bbb', 'Ccc'), which do not match <enum 'BadEnum'>, which has ('Aaa', 'B', 'Ccc')]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_backend_with_numpy_typing
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend_source[ca]
+0.00s teardown tests/panda/test_panda_controller.py::test_panda_controller_not_filled_blocks
+0.00s teardown tests/core/test_flyer.py::test_describe_configuration
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value12-put_value12-waveform_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-ndarray-float64a-has type [float64] not [int32]]
+0.00s teardown tests/epics/demo/test_demo.py::test_sensor_reading_shows_value
+0.00s teardown tests/core/test_device.py::test_children_of_device_have_set_names_and_get_connected
+0.00s setup    tests/core/test_signal.py::test_wait_for_value_with_value
+0.00s setup    tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[MyEnum-Aaa-Ccc-enum_d]
+0.00s call     tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[0.0]
+0.00s teardown tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func_with_args_kwargs
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value10-put_value10-waveform_d]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value6-put_value6-waveform_d]
+0.00s call     tests/epics/areadetector/test_aravis.py::test_deadtime_invariant_with_exposure_time[1.0]
+0.00s teardown tests/epics/test_signals.py::test_pva_ntdarray[ca]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend[True]
+0.00s teardown tests/epics/demo/test_demo.py::test_read_mover
+0.00s teardown tests/epics/demo/test_demo.py::test_assembly_renaming
+0.00s teardown tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool_unnamed]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_writing_to_soft_signals_in_mock
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value13-put_value13-waveform_d]
+0.00s setup    tests/epics/test_signals.py::test_backend_put_enum_string[pva]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_backend[False]
+0.00s teardown tests/core/test_device.py::test_device_with_device_collector_lazily_connects
+0.00s teardown tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool]
+0.00s setup    tests/core/test_mock_signal_backend.py::test_set_mock_put_proceeds_timeout
+0.00s teardown tests/core/test_device_save_loader.py::test_enum_yaml_formatting
+0.00s setup    tests/epics/test_signals.py::test_str_returns_enum[pva]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_assert_mock_put_called_with
+0.00s teardown tests/core/test_device.py::test_device_with_device_collector
+0.00s teardown tests/epics/test_signals.py::test_pva_table[pva]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_passes
+0.00s teardown tests/core/test_signal.py::test_signals_equality_raises
+0.00s call     tests/epics/test_signals.py::test_pva_ntdarray[ca]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_value
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value7-put_value7-waveform_d]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_mock_signal_of_soft_signal_backend_receives_intial_value
+0.00s teardown tests/sim/test_sim_detector.py::test_set_x_and_y
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[Sequence-initial_value14-put_value14-waveform_d]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values
+0.00s teardown tests/epics/demo/test_demo.py::test_read_sensor
+0.00s teardown tests/core/test_signal.py::test_create_soft_signal[soft_signal_rw-SignalRW]
+0.00s teardown tests/core/test_mock_signal_backend.py::test_set_mock_values_exhausted_fails
+0.00s call     tests/epics/_backend/test_common.py::test_given_a_supplied_enum_that_matches_the_pv_choices_then_enum_type_is_returned
+0.00s call     tests/epics/areadetector/test_pilatus.py::test_deadtime_invariant
+0.00s teardown tests/sim/test_sim_detector.py::test_initial_blob
+0.00s call     tests/epics/test_signals.py::test_pvi_structure[ca]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[float-0.0-43.5-number_d]
+0.00s teardown tests/epics/test_signals.py::test_backend_wrong_type_errors[pva-float-enum-is type Enum but doesn't inherit from String]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value5-put_value5-waveform_d]
+0.00s teardown tests/core/test_device.py::test_no_reconnect_signals_if_not_forced
+0.00s teardown tests/core/test_mock_signal_backend.py::test_put_proceeds_timeout
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value11-put_value11-waveform_d]
+0.00s call     tests/epics/_backend/test_common.py::test_given_pv_has_choices_not_in_supplied_enum_then_raises
+0.00s teardown tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_no_ctx
+0.00s call     tests/epics/test_signals.py::test_pva_table[ca]
+0.00s setup    tests/core/test_soft_signal_backend.py::test_soft_signal_descriptor_fails_for_invalid_class
+0.00s teardown tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[pva]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[float-0.0-43.5-number_d]
+0.00s teardown tests/epics/demo/test_demo_ad_sim_detector.py::test_trigger_logic
+0.00s teardown tests/core/test_mock_signal_backend.py::test_callback_on_mock_put_ctxt
+0.00s call     tests/sim/test_pattern_generator.py::test_init
+0.00s setup    tests/epics/demo/test_demo.py::test_mover_disconncted
+0.00s teardown tests/core/test_mock_signal_backend.py::test_blocks_during_put
+0.00s teardown tests/epics/test_signals.py::test_pva_table[ca]
+0.00s call     tests/epics/areadetector/test_aravis.py::test_hints_from_hdf_writer
+0.00s teardown tests/core/test_mock_signal_backend.py::test_reset_mock_put_calls
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[str--goodbye-string_d]
+0.00s teardown tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[ca]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_with_numpy_typing
+0.00s call     tests/panda/test_hdf_panda.py::test_hdf_panda_passes_blocks_to_controller
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value6-put_value6-waveform_d]
+0.00s teardown tests/panda/test_panda_controller.py::test_panda_controller_wrong_trigger
+0.00s teardown tests/sim/test_sim_detector.py::test_sim_pattern_detector_initialization
+0.00s teardown tests/epics/demo/test_demo.py::test_mover_stopped
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value10-put_value10-waveform_d]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[ndarray-initial_value9-put_value9-waveform_d]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_backend_get_put_monitor[int-0-43-integer_d]
+0.00s teardown tests/core/test_signal.py::test_soft_signal_numpy
+0.00s teardown tests/core/test_utils.py::test_format_error_string_input
+0.00s teardown tests/core/test_device.py::test_device_log_has_correct_name
+0.00s teardown tests/epics/test_signals.py::test_pvi_structure[ca]
+0.00s call     tests/epics/areadetector/test_aravis.py::test_can_read
+0.00s call     tests/core/test_flyer.py::test_describe_configuration
+0.00s teardown tests/epics/test_signals.py::test_backend_put_enum_string[pva]
+0.00s teardown tests/epics/test_signals.py::test_backend_get_setpoint[pva]
+0.00s call     tests/epics/areadetector/test_utils.py::test_ndattribute_writing_xml
+0.00s teardown tests/sim/test_sim_detector.py::test_detector_creates_controller_and_writer
+0.00s teardown tests/epics/test_signals.py::test_str_returns_enum[pva]
+0.00s call     tests/core/test_soft_signal_backend.py::test_soft_signal_backend_with_numpy_typing
+0.00s call     tests/epics/test_signals.py::test_writing_to_ndarray_raises_typeerror[ca]
+0.00s call     tests/panda/test_panda_controller.py::test_panda_controller_wrong_trigger
+0.00s teardown tests/epics/test_signals.py::test_str_enum_returns_enum[pva]
+0.00s setup    tests/panda/test_table.py::test_from_arrays_inconsistent_lengths
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[ConfigSignal-expected_attrs2]
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[HasHints-_has_hints]
+0.00s teardown tests/core/test_soft_signal_backend.py::test_soft_signal_descriptor_fails_for_invalid_class
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[uncached-expected_attrs1]
+0.00s call     tests/core/test_device.py::test_device_log_has_correct_name
+0.00s setup    tests/core/test_device.py::test_device_children
+0.00s call     tests/epics/_backend/test_common.py::test_given_supplied_enum_has_choices_not_in_pv_then_raises
+0.00s call     tests/epics/demo/test_demo_ad_sim_detector.py::test_trigger_logic
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncReadable-_readables]
+0.00s call     tests/sim/test_sim_detector.py::test_sim_pattern_detector_initialization
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncStageable-_stageables]
+0.00s call     tests/sim/test_sim_detector.py::test_detector_creates_controller_and_writer
+0.00s call     tests/panda/test_panda_connect.py::test_panda_names_correct
+0.00s call     tests/epics/test_signals.py::test_signal_helpers
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[HintedSignal-expected_attrs0]
+0.00s call     tests/sim/test_sim_detector.py::test_set_x_and_y
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type3]
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncConfigurable-_configurables]
+0.00s call     tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals__raises_deprecated
+0.00s call     tests/panda/test_table.py::test_from_arrays_too_long
+0.00s call     tests/epics/_backend/test_common.py::test_given_an_enum_but_not_str_passed_to_get_supported_enum_then_raises
+0.00s setup    tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func_with_args_kwargs
+0.00s teardown tests/core/test_device_collector.py::test_async_device_connector_run_engine_different_event_loop
+0.00s setup    tests/core/test_async_status.py::test_asyncstatus_wraps_bare_func
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type2]
+0.00s call     tests/core/test_utils.py::test_not_connected_error_output
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1.0]
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_device_vector
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[SignalR-_readables]
+0.00s setup    tests/core/test_utils.py::test_not_connected_error_output
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1]
+0.00s call     tests/core/test_device_collector.py::test_sync_device_connector_no_run_engine_raises_error
+0.00s setup    tests/test_log.py::test_default_config_ophyd_async_logging
+0.00s call     tests/core/test_device.py::test_device_vector_children
+0.00s setup    tests/core/test_device_save_loader.py::test_all_at_once_sorter
+0.00s call     tests/test_log.py::test_validate_level
+0.00s call     tests/sim/test_pattern_generator.py::test_set_exposure
+0.00s setup    tests/test_cli.py::test_cli_version
+0.00s call     tests/core/test_device_save_loader.py::test_all_at_once_sorter
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncReadable-_readables]
+0.00s setup    tests/core/test_device.py::test_device_vector_children
+0.00s call     tests/epics/test_signals.py::test_make_backend_fails_for_different_transports
+0.00s call     tests/sim/test_pattern_generator.py::test_set_x
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[uncached-expected_attrs1]
+0.00s setup    tests/test_log.py::test_validate_level
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncStageable-_stageables]
+0.00s setup    tests/epics/_backend/test_common.py::test_given_supplied_enum_has_choices_not_in_pv_then_raises
+0.00s call     tests/sim/test_pattern_generator.py::test_initialization
+0.00s teardown tests/core/test_device.py::test_device_children
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[HasHints-_has_hints]
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_string_literal
+0.00s call     tests/epics/_backend/test_common.py::test_given_a_non_enum_passed_to_get_supported_enum_then_raises
+0.00s teardown src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_dtype
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1]
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[ConfigSignal-expected_attrs2]
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_filters_non_devices
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_wrapped_to_expected_attr[HintedSignal-expected_attrs0]
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_sequence
+0.00s teardown tests/panda/test_table.py::test_from_arrays_too_long
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_readables_adds_to_expected_attrs[AsyncConfigurable-_configurables]
+0.00s setup    tests/test_log.py::test_logger_adapter_ophyd_async_device
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_add_children_context_manager
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type3]
+0.00s setup    tests/test_log.py::test_config_ophyd_async_logging_with_file_handler
+0.00s setup    tests/epics/_backend/test_common.py::test_given_pv_has_choices_not_in_supplied_enum_then_raises
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_children_context_manager
+0.00s setup    tests/panda/test_table.py::test_from_arrays_no_time
+0.00s setup    src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_unique
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals__raises_deprecated
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_device_vector
+0.00s teardown tests/core/test_device_collector.py::test_async_device_connector_run_engine_same_event_loop
+0.00s call     tests/sim/test_pattern_generator.py::test_set_y
+0.00s setup    tests/core/test_standard_readable.py::test_standard_readable_hints
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[invalid_type2]
+0.00s teardown src/ophyd_async/core/utils.py::ophyd_async.core.utils.get_unique
+0.00s setup    tests/epics/test_signals.py::test_signal_helpers
+0.00s teardown tests/epics/areadetector/test_utils.py::test_ndattribute_writing_xml
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_hints_invalid_types[1.0]
+0.00s call     tests/core/test_device.py::test_device_children
+0.00s setup    tests/core/test_device_collector.py::test_sync_device_connector_no_run_engine_raises_error
+0.00s setup    tests/test_log.py::test_config_ophyd_async_logging_removes_extra_handlers
+0.00s teardown tests/test_log.py::test_default_config_ophyd_async_logging
+0.00s teardown tests/panda/test_table.py::test_from_arrays_inconsistent_lengths
+0.00s setup    tests/epics/test_signals.py::test_make_backend_fails_for_different_transports
+0.00s setup    tests/epics/_backend/test_common.py::test_given_an_enum_but_not_str_passed_to_get_supported_enum_then_raises
+0.00s setup    tests/core/test_device_collector.py::test_async_device_connector_run_engine_same_event_loop
+0.00s call     tests/epics/_backend/test_common.py::test_given_no_supplied_enum_then_returns_generated_choices_enum_with_pv_choices
+0.00s setup    tests/epics/_backend/test_common.py::test_given_a_non_enum_passed_to_get_supported_enum_then_raises
+0.00s setup    tests/epics/_backend/test_common.py::test_given_no_supplied_enum_then_returns_generated_choices_enum_with_pv_choices
+0.00s teardown tests/test_log.py::test_logger_adapter_ophyd_async_device
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals
+0.00s teardown tests/epics/_backend/test_common.py::test_given_a_supplied_enum_that_matches_the_pv_choices_then_enum_type_is_returned
+0.00s teardown tests/core/test_device_save_loader.py::test_all_at_once_sorter
+0.00s setup    tests/epics/test_signals.py::test_enum_equality
+0.00s setup    tests/epics/_backend/test_common.py::test_given_a_supplied_enum_that_matches_the_pv_choices_then_enum_type_is_returned
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_hints
+0.00s teardown tests/core/test_device.py::test_device_vector_children
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_add_children_cm_filters_non_devices
+0.00s setup    tests/panda/test_table.py::test_from_arrays_too_long
+0.00s teardown tests/epics/_backend/test_common.py::test_given_no_supplied_enum_then_returns_generated_choices_enum_with_pv_choices
+0.00s teardown tests/test_log.py::test_config_ophyd_async_logging_with_file_handler
+0.00s teardown tests/test_log.py::test_config_ophyd_async_logging_removes_extra_handlers
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_sequence
+0.00s teardown tests/epics/_backend/test_common.py::test_given_pv_has_choices_not_in_supplied_enum_then_raises
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_set_readable_signals__raises_deprecated
+0.00s teardown tests/core/test_standard_readable.py::test_standard_readable_hints_raises_when_overriding_string_literal
+0.00s teardown tests/test_log.py::test_validate_level
+0.00s teardown tests/epics/_backend/test_common.py::test_given_an_enum_but_not_str_passed_to_get_supported_enum_then_raises
+0.00s teardown tests/epics/_backend/test_common.py::test_given_a_non_enum_passed_to_get_supported_enum_then_raises
+0.00s teardown tests/core/test_utils.py::test_not_connected_error_output
+0.00s teardown tests/epics/_backend/test_common.py::test_given_supplied_enum_has_choices_not_in_pv_then_raises
+0.00s teardown tests/epics/test_signals.py::test_signal_helpers
+0.00s teardown tests/core/test_device_collector.py::test_sync_device_connector_no_run_engine_raises_error
+0.00s teardown tests/panda/test_table.py::test_from_arrays_no_time
+0.00s teardown tests/epics/test_signals.py::test_make_backend_fails_for_different_transports
+0.00s setup    tests/core/test_device_collector.py::test_async_device_connector_run_engine_different_event_loop
+=========================== short test summary info ============================
+FAILED tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool] - assert 1 == True
+  
+  comparison failed
+  Obtained: 1
+  Expected: True
+FAILED tests/epics/test_signals.py::test_bool_conversion_of_enum[ca-bool_unnamed] - assert 1 == True
+  
+  comparison failed
+  Obtained: 1
+  Expected: True
+FAILED tests/epics/test_signals.py::test_pva_table[pva] - AssertionError: assert {'bool': array([0, 0, 1, 1], dtype=uint8), 'int': array([ 1,  8, -9, 32], dtype=int32), 'float': array([ 1.8   ,  8.2   , -6.    , 32.9887]), 'str': ['Hello', 'World', 'Foo', 'Bar'], 'enum': ['Aaa', 'Bbb', 'Aaa', 'Ccc']} == {'bool': approx([False, False, True, True]), 'int': approx([1 ± 1.0e-06, 8 ± 8.0e-06, -9 ± 9.0e-06, 32 ± 3.2e-05]), 'float': approx([1.8 ± 1.8e-06, 8.2 ± 8.2e-06, -6.0 ± 6.0e-06, 32.9887 ± 3.3e-05]), 'str': approx([Hello, World, Foo, Bar]), 'enum': approx([MyEnum.a, MyEnum.b, MyEnum.a, MyEnum.c])}
+  
+  Common items:
+  {'enum': ['Aaa', 'Bbb', 'Aaa', 'Ccc'],
+   'float': array([ 1.8   ,  8.2   , -6.    , 32.9887]),
+   'int': array([ 1,  8, -9, 32], dtype=int32),
+   'str': ['Hello', 'World', 'Foo', 'Bar']}
+  Differing items:
+  {'bool': array([0, 0, 1, 1], dtype=uint8)} != {'bool': approx([False, False, True, True])}
+  
+  Full diff:
+    {
+  -     'bool': approx([False, False, True, True]),
+  -     'enum': approx([MyEnum.a, MyEnum.b, MyEnum.a, MyEnum.c]),
+  -     'float': approx([1.8 ± 1.8e-06, 8.2 ± 8.2e-06, -6.0 ± 6.0e-06, 32.9887 ± 3.3e-05]),
+  -     'int': approx([1 ± 1.0e-06, 8 ± 8.0e-06, -9 ± 9.0e-06, 32 ± 3.2e-05]),
+  -     'str': approx([Hello, World, Foo, Bar]),
+  +     'bool': array([0, 0, 1, 1], dtype=uint8),
+  +     'enum': [
+  +         'Aaa',
+  +         'Bbb',
+  +         'Aaa',
+  +         'Ccc',
+  +     ],
+  +     'float': array([ 1.8   ,  8.2   , -6.    , 32.9887]),
+  +     'int': array([ 1,  8, -9, 32], dtype=int32),
+  +     'str': [
+  +         'Hello',
+  +         'World',
+  +         'Foo',
+  +         'Bar',
+  +     ],
+    }
+FAILED tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool_unnamed] - assert 1 == True
+  
+  comparison failed
+  Obtained: 1
+  Expected: True
+FAILED tests/epics/test_signals.py::test_bool_conversion_of_enum[pva-bool] - assert 0 == True
+  
+  comparison failed
+  Obtained: 0
+  Expected: True
+================== 5 failed, 323 passed, 1 skipped in 21.42s ===================
+Energy consumption in joules: 152.13844299316406 for 23.44268 sec of execution.
+
+
+========================================
+Completed before version at: do 13 nov 2025  5:31:57 CET
+========================================
+
+========================================
+All tests completed at: do 13 nov 2025  5:31:57 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316//test_results_test_suite.log
+========================================
