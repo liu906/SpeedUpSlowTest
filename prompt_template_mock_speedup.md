@@ -30,10 +30,11 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 Given a list of slowest tests from project `{PROJECT_PATH}/before`:
 
 ```
+============================== slowest durations ===============================
 13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_client_calls[serial-rtu-localhost]
+13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_sync_simple_client[serial-rtu-localhost]
 13.12s teardown test/sub_examples/test_client_server_sync.py::TestClientServerSyncExamples::test_combinations[serial-rtu-localhost]
 13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_client_calls[tcp-socket-localhost]
-13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_sync_simple_client[serial-rtu-localhost]
 ```
 
 For each slow test:

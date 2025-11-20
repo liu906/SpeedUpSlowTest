@@ -366,7 +366,7 @@ def prepare_data_for_visualization(energy_data, duration_data, execution_time_da
     return energy_viz, duration_viz, execution_viz, version1, version2
 
 
-def create_violin_plots(energy_data, duration_data, execution_data, version1, version2, output_dir, project_name):
+def create_violin_plots(energy_data, duration_data, execution_data, version1, version2, output_dir, project_name, log_suffix):
     """Create violin plots for energy, duration, and execution time comparison."""
 
     # Set style
@@ -460,7 +460,11 @@ def create_violin_plots(energy_data, duration_data, execution_data, version1, ve
 
     # Adjust layout and save
     plt.tight_layout()
-    output_file = output_dir / f'comparison_violin_plots.png'
+    # Construct output filename using log_suffix
+    if log_suffix:
+        output_file = output_dir / f'comparison_violin_plots_{log_suffix}.png'
+    else:
+        output_file = output_dir / f'comparison_violin_plots.png'
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     print(f"\nViolin plots saved to: {output_file}")
     plt.close()
@@ -554,7 +558,7 @@ def main():
             energy_data, duration_data, execution_time_data
         )
         create_violin_plots(energy_viz, duration_viz, execution_viz, version1, version2,
-                          project_dir, project_path)
+                          project_dir, project_path, log_suffix)
         print("\nVisualization complete!")
     except Exception as e:
         print(f"\nWarning: Failed to generate plots: {e}")

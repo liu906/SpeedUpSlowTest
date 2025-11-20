@@ -4,7 +4,7 @@ Config file: test_config_only_mock_part.sh
 Comparing: before vs after_careful_mock
 Iterations: 1
 Test command: pytest tests/epics/test_signals.py::test_error_raised_on_disconnected_PV -xvs --durations=0
-Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316//test_results_only_mock_part.log
+Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/test_results_only_mock_part.log
 ========================================
 
 ========================================
@@ -176,8 +176,8 @@ Requirement already satisfied: pathlib2 in /usr/local/lib/python3.10/dist-packag
 Building wheels for collected packages: ophyd-async
   Building editable for ophyd-async (pyproject.toml): started
   Building editable for ophyd-async (pyproject.toml): finished with status 'done'
-  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4829 sha256=9fb284ae253750fb1a14c65fd75dcdefacec6f55790645932603f5b039701e09
-  Stored in directory: /tmp/pip-ephem-wheel-cache-njrun1f2/wheels/46/75/ae/9356ab6bce539fd28c69f782f09715e3c0d25c8d877c21bedf
+  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4829 sha256=26c2302968986e1ddf1f29261dce44d6ec1d0d5eb4a30acb0dae5b6471c2f362
+  Stored in directory: /tmp/pip-ephem-wheel-cache-k9k5l9iq/wheels/46/75/ae/9356ab6bce539fd28c69f782f09715e3c0d25c8d877c21bedf
 Successfully built ophyd-async
 Installing collected packages: ophyd-async
   Attempting uninstall: ophyd-async
@@ -191,20 +191,21 @@ WARNING: Running pip as the 'root' user can result in broken permissions and con
 
 =========================================
 Test run 1/1 for before
-Time: do 13 nov 2025  6:21:54 CET
+Time: do 20 nov 2025 12:21:06 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=4179751872
+Using --randomly-seed=1863790080
 rootdir: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, httpx-0.35.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
 asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
 collecting ... collected 2 items
 
-tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva] PASSED
-tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca] IOC Running
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca] Warning: Duplicate EPICS CA Address list entry "127.0.0.1:5065" discarded
+PASSED
+tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva] IOC Running
 Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 (InteractiveConsole)
@@ -217,36 +218,34 @@ now exiting InteractiveConsole...
 ## Rev. Date 7.0.7.99.1.2
 ############################################################################
 
-Warning: Duplicate EPICS CA Address list entry "127.0.0.1:5065" discarded
-PASSED############################################################################
-## EPICS 7.0.7.1-DEV
-## Rev. 7.0.7.99.1.2
-## Rev. Date 7.0.7.99.1.2
-############################################################################
-2025-11-13T06:21:59.649 Using dynamically assigned TCP port 54859.
-IOC Running
+PASSEDIOC Running
 Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 (InteractiveConsole)
 >>> <built-in function exit>
 >>> 
 now exiting InteractiveConsole...
+############################################################################
+## EPICS 7.0.7.1-DEV
+## Rev. 7.0.7.99.1.2
+## Rev. Date 7.0.7.99.1.2
+############################################################################
 
 
 
 ============================== slowest durations ===============================
 3.19s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
-3.02s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
-0.73s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
-0.70s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
-0.04s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
-0.00s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
-============================== 2 passed in 7.78s ===============================
-Energy consumption in joules: 42.34600830078125 for 8.819077 sec of execution.
+3.03s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.72s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.72s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.04s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.00s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+============================== 2 passed in 7.83s ===============================
+Energy consumption in joules: 44.14239501953125 for 9.020525 sec of execution.
 
 
 ========================================
-Completed before version at: do 13 nov 2025  6:22:03 CET
+Completed before version at: do 20 nov 2025 12:21:15 CET
 ========================================
 
 ========================================
@@ -418,8 +417,8 @@ Requirement already satisfied: pathlib2 in ./.venv/lib/python3.10/site-packages 
 Building wheels for collected packages: ophyd-async
   Building editable for ophyd-async (pyproject.toml): started
   Building editable for ophyd-async (pyproject.toml): finished with status 'done'
-  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4834 sha256=ce7bc3c9757c11a2bad2159f72fd34daf528618890458dbd491d9d55d3a0b4f0
-  Stored in directory: /tmp/pip-ephem-wheel-cache-bk70qfat/wheels/0f/9a/3c/5203ace6695d2598f07bc6785afdb3c242069bf71c50eaadf3
+  Created wheel for ophyd-async: filename=ophyd_async-0.6.0-0.editable-py3-none-any.whl size=4834 sha256=6438a15882f4f22c8a32701d8482ae67b7651dea0088ba01c82f19bb3848faaa
+  Stored in directory: /tmp/pip-ephem-wheel-cache-gfl3h_5o/wheels/0f/9a/3c/5203ace6695d2598f07bc6785afdb3c242069bf71c50eaadf3
 Successfully built ophyd-async
 Installing collected packages: ophyd-async
   Attempting uninstall: ophyd-async
@@ -427,15 +426,11 @@ Installing collected packages: ophyd-async
     Uninstalling ophyd-async-0.6.0:
       Successfully uninstalled ophyd-async-0.6.0
 Successfully installed ophyd-async-0.6.0
-Collecting super_state_machine
-  Using cached super_state_machine-2.1.0-py2.py3-none-any.whl.metadata (5.4 kB)
-Using cached super_state_machine-2.1.0-py2.py3-none-any.whl (8.1 kB)
-Installing collected packages: super_state_machine
-Successfully installed super_state_machine-2.1.0
+Requirement already satisfied: super_state_machine in ./.venv/lib/python3.10/site-packages (2.1.0)
 
 =========================================
 Test run 1/1 for after_careful_mock
-Time: do 13 nov 2025  6:22:16 CET
+Time: do 20 nov 2025 12:21:29 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/after_careful_mock/.venv/bin/python3.10
@@ -452,7 +447,7 @@ tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca] ##########
 ## Rev. 7.0.7.99.1.2
 ## Rev. Date 7.0.7.99.1.2
 ############################################################################
-2025-11-13T06:22:18.284 Using dynamically assigned TCP port 44641.
+2025-11-20T12:21:30.988 Using dynamically assigned TCP port 42435.
 IOC Running
 Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -467,7 +462,7 @@ PASSED##########################################################################
 ## Rev. 7.0.7.99.1.2
 ## Rev. Date 7.0.7.99.1.2
 ############################################################################
-2025-11-13T06:22:18.989 Using dynamically assigned TCP port 42941.
+2025-11-20T12:21:31.689 Using dynamically assigned TCP port 53197.
 IOC Running
 Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -479,22 +474,22 @@ now exiting InteractiveConsole...
 
 
 ============================== slowest durations ===============================
-0.69s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
-0.65s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
-0.18s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.68s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
+0.68s setup    tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
+0.19s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
 0.03s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[ca]
 0.02s call     tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
 0.00s teardown tests/epics/test_signals.py::test_error_raised_on_disconnected_PV[pva]
-============================== 2 passed in 1.63s ===============================
-Energy consumption in joules: 18.4698486328125 for 2.206389 sec of execution.
+============================== 2 passed in 1.68s ===============================
+Energy consumption in joules: 23.00408935546875 for 2.6066961 sec of execution.
 
 
 ========================================
-Completed after_careful_mock version at: do 13 nov 2025  6:22:19 CET
+Completed after_careful_mock version at: do 20 nov 2025 12:21:32 CET
 ========================================
 
 ========================================
-All tests completed at: do 13 nov 2025  6:22:19 CET
+All tests completed at: do 20 nov 2025 12:21:32 CET
 Compared: before vs after_careful_mock
-Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316//test_results_only_mock_part.log
+Log file: /home/xutong/SpeedUpSlowTest/versions/ophyd-async_316/test_results_only_mock_part.log
 ========================================

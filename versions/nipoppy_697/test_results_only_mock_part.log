@@ -103,7 +103,7 @@ Building wheels for collected packages: nipoppy
   Building wheel for nipoppy (pyproject.toml): started
   Building wheel for nipoppy (pyproject.toml): finished with status 'done'
   Created wheel for nipoppy: filename=nipoppy-1.0.0.dev0-py3-none-any.whl size=103425 sha256=eb2a3bf501fac019a12188a1657a37a6ad6d8d83f99a848233342e9e1e16e0d4
-  Stored in directory: /tmp/pip-ephem-wheel-cache-nqlm6i3z/wheels/3d/a8/0e/a0f42f5211964fb2f1684b64ff1fea9ae975098cd453b6f3c8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-wjyqhc01/wheels/3d/a8/0e/a0f42f5211964fb2f1684b64ff1fea9ae975098cd453b6f3c8
 Successfully built nipoppy
 Installing collected packages: nipoppy
   Attempting uninstall: nipoppy
@@ -114,7 +114,7 @@ Successfully installed nipoppy-1.0.0.dev0
 
 =========================================
 Test run 1/1 for before
-Time: do 13 nov 2025  7:28:31 CET
+Time: do 20 nov 2025 12:22:23 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
@@ -136,21 +136,21 @@ tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[T
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ============================== slowest durations ===============================
-7.50s call     tests/test_workflow_runner.py::test_run_multiple
-4.49s call     tests/test_cli.py::test_cli_pipeline_search
-1.28s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+7.98s call     tests/test_workflow_runner.py::test_run_multiple
+3.79s call     tests/test_cli.py::test_cli_pipeline_search
+1.88s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s setup    tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_cli.py::test_cli_pipeline_search
 0.00s teardown tests/test_cli.py::test_cli_pipeline_search
-======================== 3 passed, 2 warnings in 13.44s ========================
-Energy consumption in joules: 84.05088806152344 for 14.827197 sec of execution.
+======================== 3 passed, 2 warnings in 13.89s ========================
+Energy consumption in joules: 76.20416259765625 for 15.627762 sec of execution.
 
 
 ========================================
-Completed before version at: do 13 nov 2025  7:28:46 CET
+Completed before version at: do 20 nov 2025 12:22:39 CET
 ========================================
 
 ========================================
@@ -249,7 +249,7 @@ Building wheels for collected packages: nipoppy
   Building wheel for nipoppy (pyproject.toml): started
   Building wheel for nipoppy (pyproject.toml): finished with status 'done'
   Created wheel for nipoppy: filename=nipoppy-1.0.0.dev0-py3-none-any.whl size=103425 sha256=eb2a3bf501fac019a12188a1657a37a6ad6d8d83f99a848233342e9e1e16e0d4
-  Stored in directory: /tmp/pip-ephem-wheel-cache-9nr9aguf/wheels/5e/c2/fc/3cf71c60d9291e98a655ee4ac3b24933c8a34d2ded85209ee8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-dw9gbd_8/wheels/5e/c2/fc/3cf71c60d9291e98a655ee4ac3b24933c8a34d2ded85209ee8
 Successfully built nipoppy
 Installing collected packages: nipoppy
   Attempting uninstall: nipoppy
@@ -260,7 +260,7 @@ Successfully installed nipoppy-1.0.0.dev0
 
 =========================================
 Test run 1/1 for after_careful_mock
-Time: do 13 nov 2025  7:28:59 CET
+Time: do 20 nov 2025 12:22:52 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
@@ -282,25 +282,25 @@ tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[T
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ============================== slowest durations ===============================
-7.30s call     tests/test_workflow_runner.py::test_run_multiple
+7.88s call     tests/test_workflow_runner.py::test_run_multiple
 0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
-0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.02s call     tests/test_cli.py::test_cli_pipeline_search
 0.00s setup    tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_cli.py::test_cli_pipeline_search
 0.00s teardown tests/test_cli.py::test_cli_pipeline_search
-======================== 3 passed, 2 warnings in 7.55s =========================
-Energy consumption in joules: 68.12214660644531 for 9.015979 sec of execution.
+======================== 3 passed, 2 warnings in 8.15s =========================
+Energy consumption in joules: 55.03157043457031 for 9.418246 sec of execution.
 
 
 ========================================
-Completed after_careful_mock version at: do 13 nov 2025  7:29:08 CET
+Completed after_careful_mock version at: do 20 nov 2025 12:23:01 CET
 ========================================
 
 ========================================
-All tests completed at: do 13 nov 2025  7:29:08 CET
+All tests completed at: do 20 nov 2025 12:23:01 CET
 Compared: before vs after_careful_mock
 Log file: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697//test_results_only_mock_part.log
 ========================================

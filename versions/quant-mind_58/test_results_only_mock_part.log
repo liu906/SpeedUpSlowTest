@@ -14,17 +14,17 @@ Detected virtual environment-based project
 Detected uv-based project, skipping traditional venv creation...
 uv will manage the virtual environment via SETUP_COMMAND
 Running setup command...
-Resolved 128 packages in 38ms
+Resolved 128 packages in 6.96s
    Building quantmind @ file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before
       Built quantmind @ file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before
-Prepared 1 package in 428ms
-Uninstalled 1 package in 0.78ms
+Prepared 1 package in 1.62s
+Uninstalled 1 package in 0.66ms
 Installed 1 package in 0.82ms
  ~ quantmind==0.2.0 (from file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before)
 
 =========================================
 Test run 1/1 for before
-Time: do 13 nov 2025  6:59:44 CET
+Time: do 20 nov 2025 12:21:40 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.13.9, pytest-8.3.5, pluggy-1.5.0 -- /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/bin/python
@@ -43,4 +43,536 @@ tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_succ
 tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 11%]
 tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 13%]
 tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 15%]
-tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py 
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 16%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 18%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 20%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 22%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 23%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 25%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 27%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 28%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 30%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 32%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 33%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 35%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 37%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 38%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 40%]
+tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block <- ../../../../versions/quant-mind_58/before/tests/llm/test_embedding_block.py PASSED [ 42%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 44%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 45%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 47%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 49%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 50%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 52%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 54%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 55%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 57%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 59%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 61%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 62%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 64%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_get_info <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 66%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 67%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_init_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 69%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 71%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 72%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 74%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 76%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_update_config <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 77%]
+tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block <- ../../../../versions/quant-mind_58/before/tests/llm/test_llm_block.py PASSED [ 79%]
+tests/config/test_settings.py::TestSetting::test_create_default_config <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 81%]
+tests/config/test_settings.py::TestSetting::test_default_setting <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 83%]
+tests/config/test_settings.py::TestSetting::test_export_config <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 84%]
+tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 86%]
+tests/config/test_settings.py::TestSetting::test_load_config_yaml_file <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 88%]
+tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 89%]
+tests/config/test_settings.py::TestSetting::test_parse_config_with_components <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 91%]
+tests/config/test_settings.py::TestSetting::test_save_to_yaml <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 93%]
+tests/config/test_settings.py::TestSetting::test_setting_with_components <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 94%]
+tests/config/test_settings.py::TestSetting::test_substitute_env_vars <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 96%]
+tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [ 98%]
+tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested <- ../../../../versions/quant-mind_58/before/tests/config/test_settings.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+  /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/before/.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.9/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure
+3.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure
+3.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure
+3.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure
+1.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success
+0.08s call     tests/config/test_settings.py::TestSetting::test_load_config_yaml_file
+0.00s call     tests/config/test_settings.py::TestSetting::test_export_config
+0.00s call     tests/config/test_settings.py::TestSetting::test_save_to_yaml
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs
+0.00s call     tests/config/test_settings.py::TestSetting::test_parse_config_with_components
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_update_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure
+0.00s call     tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config
+0.00s call     tests/config/test_settings.py::TestSetting::test_create_default_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_get_info
+0.00s call     tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions
+0.00s call     tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_init_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success
+0.00s call     tests/config/test_settings.py::TestSetting::test_setting_with_components
+0.00s call     tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults
+0.00s setup    tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block
+0.00s call     tests/config/test_settings.py::TestSetting::test_default_setting
+0.00s setup    tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_create_default_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success
+0.00s call     tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_update_config
+0.00s call     tests/config/test_settings.py::TestSetting::test_substitute_env_vars
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_update_config
+0.00s setup    tests/config/test_settings.py::TestSetting::test_setting_with_components
+0.00s setup    tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types
+0.00s teardown tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block
+0.00s call     tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success
+0.00s teardown tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info
+0.00s setup    tests/config/test_settings.py::TestSetting::test_parse_config_with_components
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_get_info
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success
+0.00s teardown tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested
+0.00s setup    tests/config/test_settings.py::TestSetting::test_save_to_yaml
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_default_setting
+0.00s teardown tests/config/test_settings.py::TestSetting::test_create_default_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure
+0.00s setup    tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_export_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_substitute_env_vars
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_init_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested
+0.00s teardown tests/config/test_settings.py::TestSetting::test_load_config_yaml_file
+0.00s setup    tests/config/test_settings.py::TestSetting::test_load_config_yaml_file
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs
+0.00s teardown tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults
+0.00s setup    tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_get_info
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs
+0.00s teardown tests/config/test_settings.py::TestSetting::test_setting_with_components
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config
+0.00s teardown tests/config/test_settings.py::TestSetting::test_parse_config_with_components
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success
+0.00s teardown tests/config/test_settings.py::TestSetting::test_export_config
+0.00s teardown tests/config/test_settings.py::TestSetting::test_save_to_yaml
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_init_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure
+0.00s teardown tests/config/test_settings.py::TestSetting::test_default_setting
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable
+0.00s teardown tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file
+0.00s teardown tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types
+0.00s teardown tests/config/test_settings.py::TestSetting::test_substitute_env_vars
+======================= 59 passed, 4 warnings in 23.93s ========================
+Energy consumption in joules: 83.53462219238281 for 24.654972 sec of execution.
+
+
+========================================
+Completed before version at: do 20 nov 2025 12:22:05 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Detected virtual environment-based project
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+Resolved 128 packages in 77ms
+   Building quantmind @ file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/after_careful_mock
+      Built quantmind @ file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/after_careful_mock
+Prepared 1 package in 475ms
+Uninstalled 1 package in 0.86ms
+Installed 1 package in 1ms
+ ~ quantmind==0.2.0 (from file:///home/xutong/SpeedUpSlowTest/versions/quant-mind_58/after_careful_mock)
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: do 20 nov 2025 12:22:16 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.3.5, pluggy-1.5.0 -- /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/after_careful_mock/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/after_careful_mock
+configfile: pyproject.toml
+plugins: anyio-4.9.0
+collecting ... collected 59 items
+
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure PASSED [  1%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success PASSED [  3%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay PASSED [  5%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures PASSED [  6%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success PASSED [  8%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success PASSED [ 10%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure PASSED [ 11%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success PASSED [ 13%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs PASSED [ 15%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure PASSED [ 16%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success PASSED [ 18%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs PASSED [ 20%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure PASSED [ 22%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config PASSED [ 23%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding PASSED [ 25%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info PASSED [ 27%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable PASSED [ 28%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success PASSED [ 30%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure PASSED [ 32%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai PASSED [ 33%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config PASSED [ 35%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure PASSED [ 37%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success PASSED [ 38%]
+tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config PASSED [ 40%]
+tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block PASSED [ 42%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic PASSED [ 44%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions PASSED [ 45%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt PASSED [ 47%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures PASSED [ 49%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success PASSED [ 50%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success PASSED [ 52%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure PASSED [ 54%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success PASSED [ 55%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json PASSED [ 57%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success PASSED [ 59%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure PASSED [ 61%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success PASSED [ 62%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt PASSED [ 64%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_get_info PASSED          [ 66%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable PASSED [ 67%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_init_success PASSED      [ 69%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai PASSED [ 71%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config PASSED  [ 72%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure PASSED [ 74%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success PASSED [ 76%]
+tests/llm/test_llm_block.py::TestLLMBlock::test_update_config PASSED     [ 77%]
+tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block PASSED [ 79%]
+tests/config/test_settings.py::TestSetting::test_create_default_config PASSED [ 81%]
+tests/config/test_settings.py::TestSetting::test_default_setting PASSED  [ 83%]
+tests/config/test_settings.py::TestSetting::test_export_config PASSED    [ 84%]
+tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file PASSED [ 86%]
+tests/config/test_settings.py::TestSetting::test_load_config_yaml_file PASSED [ 88%]
+tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types PASSED [ 89%]
+tests/config/test_settings.py::TestSetting::test_parse_config_with_components PASSED [ 91%]
+tests/config/test_settings.py::TestSetting::test_save_to_yaml PASSED     [ 93%]
+tests/config/test_settings.py::TestSetting::test_setting_with_components PASSED [ 94%]
+tests/config/test_settings.py::TestSetting::test_substitute_env_vars PASSED [ 96%]
+tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults PASSED [ 98%]
+tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291
+  /home/xutong/SpeedUpSlowTest/versions/quant-mind_58/after_careful_mock/.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:291: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.9/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+1.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success
+0.01s call     tests/config/test_settings.py::TestSetting::test_load_config_yaml_file
+0.00s call     tests/config/test_settings.py::TestSetting::test_export_config
+0.00s call     tests/config/test_settings.py::TestSetting::test_save_to_yaml
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success
+0.00s call     tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json
+0.00s call     tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs
+0.00s call     tests/config/test_settings.py::TestSetting::test_parse_config_with_components
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_update_config
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_get_info
+0.00s call     tests/config/test_settings.py::TestSetting::test_create_default_config
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_init_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info
+0.00s teardown tests/config/test_settings.py::TestSetting::test_export_config
+0.00s call     tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults
+0.00s call     tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block
+0.00s call     tests/config/test_settings.py::TestSetting::test_setting_with_components
+0.00s call     tests/config/test_settings.py::TestSetting::test_default_setting
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay
+0.00s setup    tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block
+0.00s call     tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file
+0.00s call     tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable
+0.00s call     tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_success
+0.00s setup    tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block
+0.00s call     tests/config/test_settings.py::TestSetting::test_substitute_env_vars
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic
+0.00s setup    tests/config/test_settings.py::TestSetting::test_create_default_config
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_parse_config_with_components
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure
+0.00s teardown tests/config/test_settings.py::TestSetting::test_load_config_yaml_file
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success
+0.00s call     tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested
+0.00s setup    tests/config/test_settings.py::TestSetting::test_save_to_yaml
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_failure
+0.00s setup    tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_get_info
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_update_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_init_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_update_config
+0.00s setup    tests/config/test_settings.py::TestSetting::test_load_config_yaml_file
+0.00s teardown tests/llm/test_embedding_block.py::TestCreateEmbeddingBlock::test_create_embedding_block
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai
+0.00s setup    tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure
+0.00s setup    tests/config/test_settings.py::TestSetting::test_setting_with_components
+0.00s setup    tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults
+0.00s teardown tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_update_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs
+0.00s teardown tests/llm/test_llm_block.py::TestCreateLLMBlock::test_create_llm_block
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_basic
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt
+0.00s setup    tests/config/test_settings.py::TestSetting::test_default_setting
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_failure_then_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_substitute_env_vars
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures
+0.00s setup    tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_success
+0.00s setup    tests/config/test_settings.py::TestSetting::test_export_config
+0.00s teardown tests/config/test_settings.py::TestSetting::test_load_config_nonexistent_file
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config
+0.00s setup    tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_all_failures
+0.00s setup    tests/config/test_settings.py::TestSetting::test_substitute_env_vars_nested
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_with_kwargs
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_batch_embed_with_delay
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_all_failures
+0.00s teardown tests/config/test_settings.py::TestSetting::test_save_to_yaml
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_success
+0.00s teardown tests/config/test_settings.py::TestSetting::test_setting_with_components
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_success
+0.00s teardown tests/config/test_settings.py::TestSetting::test_parse_config_unknown_types
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_failure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_structured_output_invalid_json
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_with_system_prompt
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_failure
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embedding_failure
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_test_embedding
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_generate_text_failure
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_call_with_retry_success
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_generate_embeddings_with_kwargs
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_test_connection_failure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_get_info
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_failure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_failure_then_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_call_with_retry_success
+0.00s teardown tests/config/test_settings.py::TestSetting::test_parse_config_with_components
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_embedding_dimension_from_config
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_custom_instructions
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_build_messages_with_system_prompt
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_litellm_unavailable
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_extract_json_from_text_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_temporary_config
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_init_success
+0.00s teardown tests/config/test_settings.py::TestSetting::test_create_default_config
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_test_connection_failure
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_get_info
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_azure
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_setup_litellm_openai
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_temporary_config
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_init_success
+0.00s teardown tests/llm/test_llm_block.py::TestLLMBlock::test_init_litellm_unavailable
+0.00s teardown tests/llm/test_embedding_block.py::TestEmbeddingBlock::test_setup_litellm_openai
+0.00s teardown tests/config/test_settings.py::TestSetting::test_substitute_env_vars_defaults
+0.00s teardown tests/config/test_settings.py::TestSetting::test_default_setting
+0.00s teardown tests/config/test_settings.py::TestSetting::test_substitute_env_vars
+======================== 59 passed, 4 warnings in 2.82s ========================
+Energy consumption in joules: 35.35713195800781 for 3.6063123 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: do 20 nov 2025 12:22:20 CET
+========================================
+
+========================================
+All tests completed at: do 20 nov 2025 12:22:20 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/quant-mind_58//test_results_only_mock_part.log
+========================================

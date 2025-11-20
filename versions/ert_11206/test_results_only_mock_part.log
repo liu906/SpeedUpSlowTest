@@ -2,7 +2,7 @@
 Starting test runs for project: ert_11206
 Config file: test_config_only_mock_part.sh
 Comparing: before vs after_careful_mock
-Iterations: 40
+Iterations: 1
 Test command: uv run pytest  tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result --durations=0 -vv
 Log file: /home/xutong/SpeedUpSlowTest/versions/ert_11206//test_results_only_mock_part.log
 ========================================
@@ -15,9 +15,90 @@ uv will manage the virtual environment via SETUP_COMMAND
 Running setup command...
 Reinitialized existing Git repository in /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.git/
 Resolved 272 packages in 1ms
-Audited 268 packages in 3ms
+Audited 268 packages in 33ms
 
 =========================================
-Test run 1/40 for before
-Time: do 13 nov 2025  5:37:37 CET
+Test run 1/1 for before
+Time: do 20 nov 2025 12:16:29 CET
 =========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.10s (0:02:04) =========================
+Energy consumption in joules: 437.1697692871094 for 128.26282 sec of execution.
+
+
+========================================
+Completed before version at: do 20 nov 2025 12:18:37 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+Reinitialized existing Git repository in /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.git/
+Resolved 272 packages in 1ms
+Audited 269 packages in 40ms
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: do 20 nov 2025 12:18:48 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.98s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.24s ===============================
+Energy consumption in joules: 169.0858612060547 for 8.606799 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: do 20 nov 2025 12:18:56 CET
+========================================
+
+========================================
+All tests completed at: do 20 nov 2025 12:18:56 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/ert_11206//test_results_only_mock_part.log
+========================================

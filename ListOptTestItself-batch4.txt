@@ -1,2 +1,3 @@
 https://github.com/aeon-toolkit/aeon/pull/701
 https://github.com/bluesky/ophyd-async/pull/316
+https://github.com/rotki/rotki/pull/2007
