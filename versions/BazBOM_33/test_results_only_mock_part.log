@@ -1,0 +1,60 @@
+========================================
+Starting test runs for project: BazBOM_33
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: python3 -m pytest tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores --durations=0 -v
+Log file: /home/xutong/SpeedUpSlowTest/versions/BazBOM_33/test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 165, in exc_logging_wrapper
+    status = run_func(*args)
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 205, in wrapper
+    return func(self, options, args)
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pip/_internal/commands/install.py", line 294, in run
+    wheel_cache = WheelCache(options.cache_dir, options.format_control)
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pip/_internal/cache.py", line 219, in __init__
+    self._ephem_cache = EphemWheelCache(format_control)
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pip/_internal/cache.py", line 191, in __init__
+    self._temp_dir = TempDirectory(
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pip/_internal/utils/temp_dir.py", line 125, in __init__
+    path = self._create(kind)
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pip/_internal/utils/temp_dir.py", line 164, in _create
+    path = os.path.realpath(tempfile.mkdtemp(prefix=f"pip-{kind}-"))
+  File "/usr/lib/python3.10/tempfile.py", line 512, in mkdtemp
+    prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+  File "/usr/lib/python3.10/tempfile.py", line 265, in _sanitize_params
+    dir = gettempdir()
+  File "/usr/lib/python3.10/tempfile.py", line 454, in gettempdir
+    return _os.fsdecode(_gettempdir())
+  File "/usr/lib/python3.10/tempfile.py", line 447, in _gettempdir
+    tempdir = _get_default_tempdir()
+  File "/usr/lib/python3.10/tempfile.py", line 362, in _get_default_tempdir
+    raise FileNotFoundError(_errno.ENOENT,
+FileNotFoundError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before']
+
+=========================================
+Test run 1/1 for before
+Time: zo 23 nov 2025 12:00:04 CET
+=========================================
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/_pytest/config/__init__.py", line 221, in console_main
+    code = main()
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/_pytest/config/__init__.py", line 191, in main
+    config = _prepareconfig(new_args, plugins)
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/_pytest/config/__init__.py", line 358, in _prepareconfig
+    config: Config = pluginmanager.hook.pytest_cmdline_parse(
+  File "/home/xutong/SpeedUpSlowTest/versions/BazBOM_33/before/.venv/lib/python3.10/site-packages/pluggy/_hooks.py", l

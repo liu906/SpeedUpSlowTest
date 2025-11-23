@@ -2,7 +2,7 @@
 Starting test runs for project: pyjelly_235
 Config file: test_config_only_mock_part.sh
 Comparing: before vs after_careful_mock
-Iterations: 1
+Iterations: 40
 Test command: uv run pytest tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] --durations=0 -v 2>&1 | tail -15
 Log file: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235//test_results_only_mock_part.log
 ========================================
@@ -14,17 +14,17 @@ Detected virtual environment-based project
 Detected uv-based project, skipping traditional venv creation...
 uv will manage the virtual environment via SETUP_COMMAND
 Running setup command...
-Resolved 105 packages in 13ms
+Resolved 105 packages in 0.84ms
    Building pyjelly @ file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/before
       Built pyjelly @ file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/before
-Prepared 1 package in 327ms
-Uninstalled 1 package in 0.46ms
-Installed 1 package in 1ms
+Prepared 1 package in 211ms
+Uninstalled 1 package in 0.97ms
+Installed 1 package in 0.66ms
  ~ pyjelly==0.4.0 (from file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/before)
 
 =========================================
-Test run 1/1 for before
-Time: do 20 nov 2025 12:14:03 CET
+Test run 1/40 for before
+Time: do 20 nov 2025 14:58:16 CET
 =========================================
                 h.request(req.get_method(), req.selector, req.data, headers,
                           encode_chunked=req.has_header('Transfer-encoding'))
@@ -34,17 +34,875 @@ E               urllib.error.URLError: <urlopen error [Errno 110] Connection tim
 
 /home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
 ============================== slowest durations ===============================
-133.71s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+135.81s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
 
 (2 durations < 0.005s hidden.  Use -vv to show these durations.)
 =========================== short test summary info ============================
 FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
-======================== 1 failed in 134.02s (0:02:14) =========================
-Energy consumption in joules: 296.6748962402344 for 134.50458 sec of execution.
+======================== 1 failed in 136.10s (0:02:16) =========================
+Energy consumption in joules: 299.9596710205078 for 136.49734 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for before
+Time: do 20 nov 2025 15:00:38 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.26s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.53s (0:02:13) =========================
+Energy consumption in joules: 291.5000915527344 for 133.89854 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for before
+Time: do 20 nov 2025 15:02:57 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.29s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.56s (0:02:13) =========================
+Energy consumption in joules: 302.8550109863281 for 133.9113 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for before
+Time: do 20 nov 2025 15:05:16 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.33s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.61s (0:02:13) =========================
+Energy consumption in joules: 291.20867919921875 for 134.08939 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for before
+Time: do 20 nov 2025 15:07:35 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.19s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.47s (0:02:13) =========================
+Energy consumption in joules: 289.35626220703125 for 133.90845 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for before
+Time: do 20 nov 2025 15:09:55 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.22s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.50s (0:02:13) =========================
+Energy consumption in joules: 289.1925354003906 for 133.90877 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for before
+Time: do 20 nov 2025 15:12:14 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.27s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.54s (0:02:13) =========================
+Energy consumption in joules: 288.17340087890625 for 133.90437 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for before
+Time: do 20 nov 2025 15:14:33 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.32s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.59s (0:02:13) =========================
+Energy consumption in joules: 286.834716796875 for 133.89908 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for before
+Time: do 20 nov 2025 15:16:52 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.37s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.64s (0:02:13) =========================
+Energy consumption in joules: 289.59210205078125 for 134.1035 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: do 20 nov 2025 15:19:12 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.21s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.49s (0:02:13) =========================
+Energy consumption in joules: 289.06910705566406 for 133.91193 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for before
+Time: do 20 nov 2025 15:21:31 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.25s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.52s (0:02:13) =========================
+Energy consumption in joules: 288.1554718017578 for 133.91786 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: do 20 nov 2025 15:23:50 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.29s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.56s (0:02:13) =========================
+Energy consumption in joules: 287.1772918701172 for 133.91344 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: do 20 nov 2025 15:26:09 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.32s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.59s (0:02:13) =========================
+Energy consumption in joules: 286.6483612060547 for 133.90207 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for before
+Time: do 20 nov 2025 15:28:29 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.36s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.65s (0:02:13) =========================
+Energy consumption in joules: 291.23883056640625 for 134.10417 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for before
+Time: do 20 nov 2025 15:30:48 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.23s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.50s (0:02:13) =========================
+Energy consumption in joules: 289.1758117675781 for 133.88422 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for before
+Time: do 20 nov 2025 15:33:07 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.30s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.57s (0:02:13) =========================
+Energy consumption in joules: 286.7248229980469 for 133.8805 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for before
+Time: do 20 nov 2025 15:35:26 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.37s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.64s (0:02:13) =========================
+Energy consumption in joules: 289.39564514160156 for 134.11937 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for before
+Time: do 20 nov 2025 15:37:46 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.19s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.47s (0:02:13) =========================
+Energy consumption in joules: 288.389892578125 for 133.91087 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for before
+Time: do 20 nov 2025 15:40:05 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.22s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.50s (0:02:13) =========================
+Energy consumption in joules: 287.2836608886719 for 133.88318 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for before
+Time: do 20 nov 2025 15:42:24 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.30s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.57s (0:02:13) =========================
+Energy consumption in joules: 287.5332336425781 for 133.9096 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for before
+Time: do 20 nov 2025 15:44:44 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.34s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.61s (0:02:13) =========================
+Energy consumption in joules: 289.49757385253906 for 134.10661 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for before
+Time: do 20 nov 2025 15:47:03 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.18s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.46s (0:02:13) =========================
+Energy consumption in joules: 288.0857696533203 for 133.91429 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for before
+Time: do 20 nov 2025 15:49:22 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.22s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.49s (0:02:13) =========================
+Energy consumption in joules: 287.34547424316406 for 133.88412 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for before
+Time: do 20 nov 2025 15:51:41 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.29s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.56s (0:02:13) =========================
+Energy consumption in joules: 286.13768005371094 for 133.91197 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for before
+Time: do 20 nov 2025 15:54:01 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.33s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.60s (0:02:13) =========================
+Energy consumption in joules: 285.7864074707031 for 133.90489 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for before
+Time: do 20 nov 2025 15:56:20 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.38s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.65s (0:02:13) =========================
+Energy consumption in joules: 289.63671875 for 134.11615 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for before
+Time: do 20 nov 2025 15:58:39 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.22s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.49s (0:02:13) =========================
+Energy consumption in joules: 287.77699279785156 for 133.90881 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for before
+Time: do 20 nov 2025 16:00:58 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.26s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.53s (0:02:13) =========================
+Energy consumption in joules: 289.8619079589844 for 133.90468 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for before
+Time: do 20 nov 2025 16:03:18 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.29s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.56s (0:02:13) =========================
+Energy consumption in joules: 290.1965789794922 for 133.91847 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for before
+Time: do 20 nov 2025 16:05:37 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.33s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.60s (0:02:13) =========================
+Energy consumption in joules: 289.0789489746094 for 134.10353 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for before
+Time: do 20 nov 2025 16:07:56 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.18s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.46s (0:02:13) =========================
+Energy consumption in joules: 289.13482666015625 for 133.91867 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for before
+Time: do 20 nov 2025 16:10:16 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.23s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.51s (0:02:13) =========================
+Energy consumption in joules: 288.54820251464844 for 133.91057 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for before
+Time: do 20 nov 2025 16:12:35 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.26s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.53s (0:02:13) =========================
+Energy consumption in joules: 288.1459045410156 for 133.90533 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for before
+Time: do 20 nov 2025 16:14:54 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.31s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.58s (0:02:13) =========================
+Energy consumption in joules: 286.23439025878906 for 133.89867 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for before
+Time: do 20 nov 2025 16:17:13 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.36s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.63s (0:02:13) =========================
+Energy consumption in joules: 289.6518859863281 for 134.1145 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for before
+Time: do 20 nov 2025 16:19:33 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.20s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.48s (0:02:13) =========================
+Energy consumption in joules: 292.2699432373047 for 133.91339 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for before
+Time: do 20 nov 2025 16:21:52 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.24s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.51s (0:02:13) =========================
+Energy consumption in joules: 289.3439483642578 for 133.91008 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for before
+Time: do 20 nov 2025 16:24:11 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.27s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.55s (0:02:13) =========================
+Energy consumption in joules: 288.24098205566406 for 133.91971 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for before
+Time: do 20 nov 2025 16:26:30 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.30s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.57s (0:02:13) =========================
+Energy consumption in joules: 289.01548767089844 for 133.88286 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for before
+Time: do 20 nov 2025 16:28:50 CET
+=========================================
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+
+/home/xutong/.local/share/uv/python/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/urllib/request.py:1349: URLError
+============================== slowest durations ===============================
+133.38s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+======================== 1 failed in 133.65s (0:02:13) =========================
+Energy consumption in joules: 290.0577087402344 for 134.08218 sec of execution.
 
 
 ========================================
-Completed before version at: do 20 nov 2025 12:16:18 CET
+Completed before version at: do 20 nov 2025 16:31:04 CET
 ========================================
 
 ========================================
@@ -54,17 +912,567 @@ Detected virtual environment-based project
 Detected uv-based project, skipping traditional venv creation...
 uv will manage the virtual environment via SETUP_COMMAND
 Running setup command...
-Resolved 105 packages in 1ms
+Resolved 105 packages in 0.81ms
    Building pyjelly @ file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
       Built pyjelly @ file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
-Prepared 1 package in 176ms
+Prepared 1 package in 217ms
 Uninstalled 1 package in 1ms
 Installed 1 package in 1ms
  ~ pyjelly==0.4.0 (from file:///home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock)
 
 =========================================
-Test run 1/1 for after_careful_mock
-Time: do 20 nov 2025 12:16:28 CET
+Test run 1/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:14 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.09368896484375 for 0.40365562 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:20 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.12835693359375 for 0.40360677 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:26 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.0272369384765625 for 0.40315914 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:31 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.132080078125 for 0.40283725 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:37 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.0920867919921875 for 0.40295383 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:43 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.172088623046875 for 0.40262938 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:48 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.0877532958984375 for 0.4026543 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for after_careful_mock
+Time: do 20 nov 2025 16:31:54 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.083099365234375 for 0.40314466 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:00 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1664276123046875 for 0.40356174 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:06 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.0770111083984375 for 0.40197527 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:11 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.207763671875 for 0.4033502 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:17 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.21588134765625 for 0.40365854 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:23 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1110992431640625 for 0.40330318 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:29 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.088226318359375 for 0.402894 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:34 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.08123779296875 for 0.40293476 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:40 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1362457275390625 for 0.40288955 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:46 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.2359619140625 for 0.40372375 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:51 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.265045166015625 for 0.40261245 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for after_careful_mock
+Time: do 20 nov 2025 16:32:57 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1515655517578125 for 0.40292752 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:03 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.16143798828125 for 0.4032968 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:08 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1415252685546875 for 0.4025233 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:14 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1593780517578125 for 0.40290153 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:20 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.063262939453125 for 0.4029443 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:26 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1626739501953125 for 0.40287665 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:31 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1290740966796875 for 0.40276217 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:37 CET
 =========================================
 cachedir: .pytest_cache
 hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
@@ -80,15 +1488,323 @@ tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_se
 
 (2 durations < 0.005s hidden.  Use -vv to show these durations.)
 ============================== 1 passed in 0.09s ===============================
-Energy consumption in joules: 3.0489044189453125 for 0.40306777 sec of execution.
+Energy consumption in joules: 3.18035888671875 for 0.40318203 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:43 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.071380615234375 for 0.4027981 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:49 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.2239227294921875 for 0.40400404 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for after_careful_mock
+Time: do 20 nov 2025 16:33:54 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1399078369140625 for 0.4035448 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:00 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.151611328125 for 0.40272102 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:06 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.226165771484375 for 0.40269056 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:11 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1464080810546875 for 0.40307638 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:17 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.16943359375 for 0.4029331 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:23 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.2540435791015625 for 0.40282208 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:29 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1152801513671875 for 0.40277404 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:34 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.0345001220703125 for 0.40328673 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:40 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.1236114501953125 for 0.40300873 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:46 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.123687744140625 for 0.4029294 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:51 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.0965118408203125 for 0.403258 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for after_careful_mock
+Time: do 20 nov 2025 16:34:57 CET
+=========================================
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock/.hypothesis/examples'))
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235/after_careful_mock
+configfile: pyproject.toml
+plugins: inline-snapshot-0.23.0, cov-6.2.1, sugar-1.0.0, accept-0.1.12, mock-3.14.0, hypothesis-6.131.17, subtests-0.14.1
+collecting ... collected 1 item
+
+tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py] PASSED [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/integration_tests/test_rdflib/test_examples.py::test_rdflib_examples[01_serialize.py]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.08s ===============================
+Energy consumption in joules: 3.12091064453125 for 0.40357703 sec of execution.
 
 
 ========================================
-Completed after_careful_mock version at: do 20 nov 2025 12:16:29 CET
+Completed after_careful_mock version at: do 20 nov 2025 16:34:58 CET
 ========================================
 
 ========================================
-All tests completed at: do 20 nov 2025 12:16:29 CET
+All tests completed at: do 20 nov 2025 16:34:58 CET
 Compared: before vs after_careful_mock
 Log file: /home/xutong/SpeedUpSlowTest/versions/pyjelly_235//test_results_only_mock_part.log
 ========================================

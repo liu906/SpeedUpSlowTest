@@ -1,0 +1,1836 @@
+========================================
+Starting test runs for project: vulnerablecode_490
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 40
+Test command: pytest vulnerabilities/tests/test_upstream.py::test_updated_advisories --durations=0 -vv
+Log file: /home/xutong/SpeedUpSlowTest/versions/vulnerablecode_490/test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+
+=========================================
+Test run 1/40 for before
+Time: za 22 nov 2025 15:43:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.0, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/vulnerablecode_490/before/.venv/bin/python3
+cachedir: .pytest_cache
+django: version: 5.2.8, settings: vulnerablecode.settings (from ini)
+rootdir: /home/xutong/SpeedUpSlowTest/versions/vulnerablecode_490/before
+configfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml, setup.cfg!)
+plugins: mock-3.15.1, django-4.11.1
+collecting ... collected 25 items
+
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0] PASSED [  4%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1] PASSED [  8%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2] FAILED [ 12%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3] FAILED [ 16%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4] FAILED [ 20%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5] PASSED [ 24%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6] PASSED [ 28%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7] PASSED [ 32%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8] PASSED [ 36%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9] FAILED [ 40%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10] FAILED [ 44%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11] FAILED [ 48%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12] FAILED [ 52%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13] FAILED [ 56%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14] PASSED [ 60%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15] PASSED [ 64%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16] PASSED [ 68%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17] FAILED [ 72%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18] PASSED [ 76%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19] FAILED [ 80%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20] FAILED [ 84%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21] PASSED [ 88%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22] PASSED [ 92%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23] FAILED [ 96%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24] FAILED [100%]
+
+=================================== FAILURES ===================================
+_____________ test_updated_advisories[ArchlinuxDataSource-config2] _____________
+
+data_source = 'ArchlinuxDataSource'
+config = {'archlinux_tracker_url': 'https://security.archlinux.org/json'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+>           with data_src:
+
+vulnerabilities/tests/test_upstream.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/archlinux.py:52: in __enter__
+    self._api_response = self._fetch()
+vulnerabilities/importers/archlinux.py:63: in _fetch
+    with urlopen(self.config.archlinux_tracker_url) as response:
+/usr/lib/python3.10/urllib/request.py:216: in urlopen
+    return opener.open(url, data, timeout)
+/usr/lib/python3.10/urllib/request.py:525: in open
+    response = meth(req, response)
+/usr/lib/python3.10/urllib/request.py:634: in http_response
+    response = self.parent.error(
+/usr/lib/python3.10/urllib/request.py:563: in error
+    return self._call_chain(*args)
+/usr/lib/python3.10/urllib/request.py:496: in _call_chain
+    result = func(*args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x7d848caa3a30>
+req = <urllib.request.Request object at 0x7d848caa3ac0>
+fp = <http.client.HTTPResponse object at 0x7d848caa35b0>, code = 308
+msg = 'PERMANENT REDIRECT'
+hdrs = <http.client.HTTPMessage object at 0x7d848caa37f0>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 308: PERMANENT REDIRECT
+
+/usr/lib/python3.10/urllib/request.py:643: HTTPError
+______________ test_updated_advisories[DebianDataSource-config3] _______________
+
+data_source = 'DebianDataSource'
+config = {'debian_tracker_url': 'https://security-tracker.debian.org/tracker/data/json'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/debian.py:61: in updated_advisories
+    advisories.extend(self._parse(pkg_name, records))
+vulnerabilities/importers/debian.py:125: in _parse
+    affected_packages=nearest_patched_package(impacted_purls, resolved_purls),
+vulnerabilities/helpers.py:149: in nearest_patched_package
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:149: in <listcomp>
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:137: in __init__
+    self.version_object = version_class_by_package_type[package.type](package.version)
+.venv/lib/python3.10/site-packages/univers/versions.py:152: in __init__
+    object.__setattr__(self, "value", _DebianVersion.from_string(version_string))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'univers.debian.Version'>, version = '1:0.23.0+dfsg-'
+
+    @classmethod
+    def from_string(cls, version):
+        if not version and not isinstance(version, str):
+            raise ValueError('Invalid version string: "{}"'.format(version))
+        version = version.strip()
+        if not version:
+            raise ValueError('Invalid version string: "{}"'.format(version))
+        if not _is_valid_version(version):
+>           raise ValueError('Invalid version string: "{}"'.format(version))
+E           ValueError: Invalid version string: "1:0.23.0+dfsg-"
+
+.venv/lib/python3.10/site-packages/univers/debian.py:130: ValueError
+________________ test_updated_advisories[NpmDataSource-config4] ________________
+
+data_source = 'NpmDataSource'
+config = {'repository_url': 'https://github.com/nodejs/security-wg.git'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+>           with data_src:
+
+vulnerabilities/tests/test_upstream.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/npm.py:55: in __enter__
+    self.set_api(self.collect_packages())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <vulnerabilities.importers.npm.NpmDataSource object at 0x7d848be4ba00>
+
+    def collect_packages(self):
+        packages = set()
+        files = self._updated_files.union(self._added_files)
+        for f in files:
+            data = load_json(f)
+>           packages.add(data["module_name"].strip())
+E           KeyError: 'module_name'
+
+vulnerabilities/importers/npm.py:74: KeyError
+____________ test_updated_advisories[DebianOvalDataSource-config9] _____________
+
+data_source = 'DebianOvalDataSource'
+config = {'etags': {}, 'releases': ['wheezy', 'stretch', 'jessie', 'buster']}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/data_source.py:479: in updated_advisories
+    for metadata, oval_file in self._fetch():
+vulnerabilities/importers/debian_oval.py:63: in _fetch
+    ET.ElementTree(ET.fromstring(resp.decode("utf-8"))),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>403 Forbidden</title>\n</head><body>\n<h1>Fo...sion to access this resource.</p>\n<hr>\n<address>Apache Server at www.debian.org Port 443</address>\n</body></html>\n'
+parser = <xml.etree.ElementTree.XMLParser object at 0x7d848bfd3400>
+
+    def XML(text, parser=None):
+        """Parse XML document from string constant.
+    
+        This function can be used to embed "XML Literals" in Python code.
+    
+        *text* is a string containing XML data, *parser* is an
+        optional parser instance, defaulting to the standard XMLParser.
+    
+        Returns an Element instance.
+    
+        """
+        if not parser:
+            parser = XMLParser(target=TreeBuilder())
+>       parser.feed(text)
+E       xml.etree.ElementTree.ParseError: syntax error: line 1, column 49
+
+/usr/lib/python3.10/xml/etree/ElementTree.py:1342: ParseError
+______________ test_updated_advisories[RedhatDataSource-config10] ______________
+
+self = <Response [404]>, kwargs = {}
+
+    def json(self, **kwargs):
+        r"""Decodes the JSON response body (if any) as a Python object.
+    
+        This may return a dictionary, list, etc. depending on what is in the response.
+    
+        :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
+        :raises requests.exceptions.JSONDecodeError: If the response body does not
+            contain valid json.
+        """
+    
+        if not self.encoding and self.content and len(self.content) > 3:
+            # No encoding set. JSON RFC 4627 section 3 states we should expect
+            # UTF-8, -16 or -32. Detect which one to use; If the detection or
+            # decoding fails, fall back to `self.text` (using charset_normalizer to make
+            # a best guess).
+            encoding = guess_json_utf(self.content)
+            if encoding is not None:
+                try:
+                    return complexjson.loads(self.content.decode(encoding), **kwargs)
+                except UnicodeDecodeError:
+                    # Wrong UTF codec detected; usually because it's not UTF-8
+                    # but some other 8-bit codec.  This is an RFC violation,
+                    # and the server didn't bother to tell us what codec *was*
+                    # used.
+                    pass
+                except JSONDecodeError as e:
+                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+    
+        try:
+>           return complexjson.loads(self.text, **kwargs)
+
+.venv/lib/python3.10/site-packages/requests/models.py:976: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.10/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+/usr/lib/python3.10/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x7d8493701a80>
+s = '<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>\n<title>Error 404 Not Found<...</table>\n<hr/><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/usr/lib/python3.10/json/decoder.py:355: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+data_source = 'RedhatDataSource', config = {}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/redhat.py:44: in updated_advisories
+    processed_advisories = list(map(to_advisory, self.redhat_cves))
+vulnerabilities/importers/redhat.py:127: in to_advisory
+    ).json()  # nopep8
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>, kwargs = {}
+
+    def json(self, **kwargs):
+        r"""Decodes the JSON response body (if any) as a Python object.
+    
+        This may return a dictionary, list, etc. depending on what is in the response.
+    
+        :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
+        :raises requests.exceptions.JSONDecodeError: If the response body does not
+            contain valid json.
+        """
+    
+        if not self.encoding and self.content and len(self.content) > 3:
+            # No encoding set. JSON RFC 4627 section 3 states we should expect
+            # UTF-8, -16 or -32. Detect which one to use; If the detection or
+            # decoding fails, fall back to `self.text` (using charset_normalizer to make
+            # a best guess).
+            encoding = guess_json_utf(self.content)
+            if encoding is not None:
+                try:
+                    return complexjson.loads(self.content.decode(encoding), **kwargs)
+                except UnicodeDecodeError:
+                    # Wrong UTF codec detected; usually because it's not UTF-8
+                    # but some other 8-bit codec.  This is an RFC violation,
+                    # and the server didn't bother to tell us what codec *was*
+                    # used.
+                    pass
+                except JSONDecodeError as e:
+                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+    
+        try:
+            return complexjson.loads(self.text, **kwargs)
+        except JSONDecodeError as e:
+            # Catch JSON-related errors and raise as requests.JSONDecodeError
+            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError
+>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+E           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+.venv/lib/python3.10/site-packages/requests/models.py:980: JSONDecodeError
+----------------------------- Captured stdout call -----------------------------
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=1
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=2
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=3
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=4
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=5
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=6
+_______________ test_updated_advisories[NVDDataSource-config11] ________________
+
+data_source = 'NVDDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/nvd.py:62: in updated_advisories
+    data = self.fetch(download_url)
+vulnerabilities/importers/nvd.py:68: in fetch
+    data = gzip.decompress(gz_file.content)
+/usr/lib/python3.10/gzip.py:557: in decompress
+    return f.read()
+/usr/lib/python3.10/gzip.py:301: in read
+    return self._buffer.read(size)
+/usr/lib/python3.10/_compression.py:118: in readall
+    while data := self.read(sys.maxsize):
+/usr/lib/python3.10/gzip.py:488: in read
+    if not self._read_gzip_header():
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gzip._GzipReader object at 0x7d8439696200>
+
+    def _read_gzip_header(self):
+        magic = self._fp.read(2)
+        if magic == b'':
+            return False
+    
+        if magic != b'\037\213':
+>           raise BadGzipFile('Not a gzipped file (%r)' % magic)
+E           gzip.BadGzipFile: Not a gzipped file (b'<!')
+
+/usr/lib/python3.10/gzip.py:436: BadGzipFile
+______________ test_updated_advisories[GentooDataSource-config12] ______________
+
+data_source = 'GentooDataSource'
+config = {'repository_url': 'https://anongit.gentoo.org/git/data/glsa.git'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/gentoo.py:48: in updated_advisories
+    processed_data = self.process_file(f)
+vulnerabilities/importers/gentoo.py:85: in process_file
+    affected_packages=nearest_patched_package(
+vulnerabilities/helpers.py:149: in nearest_patched_package
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:149: in <listcomp>
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:137: in __init__
+    self.version_object = version_class_by_package_type[package.type](package.version)
+.venv/lib/python3.10/site-packages/univers/versions.py:228: in __init__
+    self.validate(version_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version_string = '3.24.48:3'
+
+    @staticmethod
+    def validate(version_string):
+        version, _ = parse_gentoo_version_and_revision(version_string)
+        if not GentooVersion.version_re.match(version):
+>           raise InvalidVersion(f"Invalid version: '{version_string}'")
+E           univers.versions.InvalidVersion: Invalid version: '3.24.48:3'
+
+.venv/lib/python3.10/site-packages/univers/versions.py:236: InvalidVersion
+_____________ test_updated_advisories[OpenSSLDataSource-config13] ______________
+
+data_source = 'OpenSSLDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/openssl.py:56: in updated_advisories
+    advisories = self.to_advisories(raw_data)
+vulnerabilities/importers/openssl.py:69: in to_advisories
+    root = ET.fromstring(xml_response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = b'<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <title>\n      \n        404 Page not found | OpenSSL Library\n    ... <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>\n\n\n\n  </body>\n</html>\n'
+parser = <xml.etree.ElementTree.XMLParser object at 0x7d848bd43eb0>
+
+    def XML(text, parser=None):
+        """Parse XML document from string constant.
+    
+        This function can be used to embed "XML Literals" in Python code.
+    
+        *text* is a string containing XML data, *parser* is an
+        optional parser instance, defaulting to the standard XMLParser.
+    
+        Returns an Element instance.
+    
+        """
+        if not parser:
+            parser = XMLParser(target=TreeBuilder())
+>       parser.feed(text)
+E       xml.etree.ElementTree.ParseError: mismatched tag: line 50, column 4
+
+/usr/lib/python3.10/xml/etree/ElementTree.py:1342: ParseError
+___________ test_updated_advisories[ApacheHTTPDDataSource-config17] ____________
+
+data_source = 'ApacheHTTPDDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/apache_httpd.py:59: in updated_advisories
+    self.set_api()
+vulnerabilities/importers/apache_httpd.py:55: in set_api
+    asyncio.run(self.version_api.load_api(["apache/httpd"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'apache/httpd'
+session = '/apache/httpd/tags?after=2.4.62'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+______________ test_updated_advisories[NginxDataSource-config19] _______________
+
+data_source = 'NginxDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/nginx.py:63: in updated_advisories
+    self.set_api()
+vulnerabilities/importers/nginx.py:52: in set_api
+    asyncio.run(self.version_api.load_api(["nginx/nginx"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'nginx/nginx'
+session = '/nginx/nginx/tags?after=release-1.27.2'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+____________ test_updated_advisories[PostgreSQLDataSource-config20] ____________
+
+data_source = 'PostgreSQLDataSource', config = {}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/postgresql.py:52: in updated_advisories
+    advisories.extend(to_advisories(data))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b'<!doctype html>\n<html lang="en">\n <head>\n  <title>PostgreSQL: Security Information</title>\n  <meta name="viewpor...Group</p>\n      </div>\n    </footer>\n    <script src="/media/js/main.js?063d4788"></script>\n\n  </body>\n</html>\n'
+
+    def to_advisories(data):
+        advisories = []
+        soup = BeautifulSoup(data, features="lxml")
+        table = soup.select("table")[0]
+        for row in table.select("tbody tr"):
+            ref_col, affected_col, fixed_col, severity_score_col, desc_col = row.select("td")
+            summary = desc_col.text
+            pkg_qualifiers = {}
+            if "windows" in summary.lower():
+                pkg_qualifiers = {"os": "windows"}
+    
+            affected_packages = [
+                PackageURL(
+                    type="generic",
+                    name="postgresql",
+                    version=version.strip(),
+                    qualifiers=pkg_qualifiers,
+                )
+                for version in affected_col.text.split(",")
+            ]
+    
+            fixed_packages = [
+                PackageURL(
+                    type="generic",
+                    name="postgresql",
+                    version=version.strip(),
+                    qualifiers=pkg_qualifiers,
+                )
+                for version in fixed_col.text.split(",")
+                if version
+            ]
+    
+            try:
+                cve_id = ref_col.select("nobr")[0].text
+                # This is for the anomaly in https://www.postgresql.org/support/security/8.1/ 's
+                # last entry
+            except IndexError:
+                pass
+    
+            references = []
+            vector_link_tag = severity_score_col.find("a")
+            for a_tag in ref_col.select("a"):
+                link = a_tag.attrs["href"]
+                if link.startswith("/"):
+                    # Convert relative urls to absolute url.
+                    # All links qualify this criteria, so this `if` statement is kind of a defensive mechanism
+                    link = urlparse.urljoin(BASE_URL, link)
+                    severities = []
+                    if "support/security/CVE" in link and vector_link_tag:
+                        parsed_link = urlparse.urlparse(vector_link_tag["href"])
+                        cvss3_vector = urlparse.parse_qs(parsed_link.query)["vector"]
+                        cvss3_base_score = vector_link_tag.text
+                        severities.extend(
+                            [
+                                VulnerabilitySeverity(
+                                    system=scoring_systems["cvssv3"], value=cvss3_base_score
+                                ),
+                                VulnerabilitySeverity(
+                                    system=scoring_systems["cvssv3_vector"], value=cvss3_vector
+                                ),
+                            ]
+                        )
+                references.append(Reference(url=link, severities=severities))
+    
+            advisories.append(
+                Advisory(
+>                   vulnerability_id=cve_id,
+                    summary=summary,
+                    references=references,
+                    affected_packages=nearest_patched_package(affected_packages, fixed_packages),
+                )
+            )
+E           UnboundLocalError: local variable 'cve_id' referenced before assignment
+
+vulnerabilities/importers/postgresql.py:128: UnboundLocalError
+___________ test_updated_advisories[ApacheKafkaDataSource-config23] ____________
+
+data_source = 'ApacheKafkaDataSource', config = {}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/apache_kafka.py:53: in updated_advisories
+    self.set_api()
+vulnerabilities/importers/apache_kafka.py:49: in set_api
+    asyncio.run(self.version_api.load_api(["apache/kafka"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'apache/kafka'
+session = '/apache/kafka/tags?after=4.1.0-rc2'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+______________ test_updated_advisories[IstioDataSource-config24] _______________
+
+data_source = 'IstioDataSource'
+config = {'repository_url': 'https://github.com/istio/istio.io'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+>           with data_src:
+
+vulnerabilities/tests/test_upstream.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/istio.py:52: in __enter__
+    self.set_api()
+vulnerabilities/importers/istio.py:55: in set_api
+    asyncio.run(self.version_api.load_api(["istio/istio"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'istio/istio'
+session = '/istio/istio/tags?after=1.26.5'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+============================== slowest durations ===============================
+291.42s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14]
+70.37s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24]
+29.44s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10]
+13.71s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1]
+4.82s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18]
+3.84s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8]
+3.47s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5]
+3.41s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3]
+2.23s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0]
+2.18s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22]
+1.76s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12]
+1.16s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17]
+0.83s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4]
+0.79s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11]
+0.77s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20]
+0.76s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21]
+0.68s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19]
+0.68s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13]
+0.63s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23]
+0.47s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7]
+0.41s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16]
+0.36s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6]
+0.14s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9]
+0.12s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15]
+0.00s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15]
+=========================== short test summary info ============================
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2] - urllib.error.HTTPError: HTTP Error 308: PERMANENT REDIRECT
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3] - ValueError: Invalid version string: "1:0.23.0+dfsg-"
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4] - KeyError: 'module_name'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9] - xml.etree.ElementTree.ParseError: syntax error: line 1, column 49
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10] - requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11] - gzip.BadGzipFile: Not a gzipped file (b'<!')
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12] - univers.versions.InvalidVersion: Invalid version: '3.24.48:3'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13] - xml.etree.ElementTree.ParseError: mismatched tag: line 50, column 4
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17] - AttributeError: 'str' object has no attribute 'get'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19] - AttributeError: 'str' object has no attribute 'get'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20] - UnboundLocalError: local variable 'cve_id' referenced before assignment
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23] - AttributeError: 'str' object has no attribute 'get'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24] - AttributeError: 'str' object has no attribute 'get'
+================== 13 failed, 12 passed in 435.14s (0:07:15) ===================
+Energy consumption in joules: 2180.6280364990234 for 435.80533 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for before
+Time: za 22 nov 2025 15:50:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.0, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/vulnerablecode_490/before/.venv/bin/python3
+cachedir: .pytest_cache
+django: version: 5.2.8, settings: vulnerablecode.settings (from ini)
+rootdir: /home/xutong/SpeedUpSlowTest/versions/vulnerablecode_490/before
+configfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml, setup.cfg!)
+plugins: mock-3.15.1, django-4.11.1
+collecting ... collected 25 items
+
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0] PASSED [  4%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1] PASSED [  8%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2] FAILED [ 12%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3] FAILED [ 16%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4] FAILED [ 20%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5] PASSED [ 24%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6] PASSED [ 28%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7] PASSED [ 32%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8] PASSED [ 36%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9] FAILED [ 40%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10] FAILED [ 44%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11] FAILED [ 48%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12] FAILED [ 52%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13] FAILED [ 56%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14] PASSED [ 60%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15] PASSED [ 64%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16] PASSED [ 68%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17] FAILED [ 72%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18] PASSED [ 76%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19] FAILED [ 80%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20] FAILED [ 84%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21] PASSED [ 88%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22] PASSED [ 92%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23] FAILED [ 96%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24] FAILED [100%]
+
+=================================== FAILURES ===================================
+_____________ test_updated_advisories[ArchlinuxDataSource-config2] _____________
+
+data_source = 'ArchlinuxDataSource'
+config = {'archlinux_tracker_url': 'https://security.archlinux.org/json'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+>           with data_src:
+
+vulnerabilities/tests/test_upstream.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/archlinux.py:52: in __enter__
+    self._api_response = self._fetch()
+vulnerabilities/importers/archlinux.py:63: in _fetch
+    with urlopen(self.config.archlinux_tracker_url) as response:
+/usr/lib/python3.10/urllib/request.py:216: in urlopen
+    return opener.open(url, data, timeout)
+/usr/lib/python3.10/urllib/request.py:525: in open
+    response = meth(req, response)
+/usr/lib/python3.10/urllib/request.py:634: in http_response
+    response = self.parent.error(
+/usr/lib/python3.10/urllib/request.py:563: in error
+    return self._call_chain(*args)
+/usr/lib/python3.10/urllib/request.py:496: in _call_chain
+    result = func(*args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x768a16ea39d0>
+req = <urllib.request.Request object at 0x768a16ea3a60>
+fp = <http.client.HTTPResponse object at 0x768a16ea3550>, code = 308
+msg = 'PERMANENT REDIRECT'
+hdrs = <http.client.HTTPMessage object at 0x768a16ea3790>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 308: PERMANENT REDIRECT
+
+/usr/lib/python3.10/urllib/request.py:643: HTTPError
+______________ test_updated_advisories[DebianDataSource-config3] _______________
+
+data_source = 'DebianDataSource'
+config = {'debian_tracker_url': 'https://security-tracker.debian.org/tracker/data/json'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/debian.py:61: in updated_advisories
+    advisories.extend(self._parse(pkg_name, records))
+vulnerabilities/importers/debian.py:125: in _parse
+    affected_packages=nearest_patched_package(impacted_purls, resolved_purls),
+vulnerabilities/helpers.py:149: in nearest_patched_package
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:149: in <listcomp>
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:137: in __init__
+    self.version_object = version_class_by_package_type[package.type](package.version)
+.venv/lib/python3.10/site-packages/univers/versions.py:152: in __init__
+    object.__setattr__(self, "value", _DebianVersion.from_string(version_string))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'univers.debian.Version'>, version = '1:0.23.0+dfsg-'
+
+    @classmethod
+    def from_string(cls, version):
+        if not version and not isinstance(version, str):
+            raise ValueError('Invalid version string: "{}"'.format(version))
+        version = version.strip()
+        if not version:
+            raise ValueError('Invalid version string: "{}"'.format(version))
+        if not _is_valid_version(version):
+>           raise ValueError('Invalid version string: "{}"'.format(version))
+E           ValueError: Invalid version string: "1:0.23.0+dfsg-"
+
+.venv/lib/python3.10/site-packages/univers/debian.py:130: ValueError
+________________ test_updated_advisories[NpmDataSource-config4] ________________
+
+data_source = 'NpmDataSource'
+config = {'repository_url': 'https://github.com/nodejs/security-wg.git'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+>           with data_src:
+
+vulnerabilities/tests/test_upstream.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/npm.py:55: in __enter__
+    self.set_api(self.collect_packages())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <vulnerabilities.importers.npm.NpmDataSource object at 0x768a1624b7f0>
+
+    def collect_packages(self):
+        packages = set()
+        files = self._updated_files.union(self._added_files)
+        for f in files:
+            data = load_json(f)
+>           packages.add(data["module_name"].strip())
+E           KeyError: 'module_name'
+
+vulnerabilities/importers/npm.py:74: KeyError
+____________ test_updated_advisories[DebianOvalDataSource-config9] _____________
+
+data_source = 'DebianOvalDataSource'
+config = {'etags': {}, 'releases': ['wheezy', 'stretch', 'jessie', 'buster']}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/data_source.py:479: in updated_advisories
+    for metadata, oval_file in self._fetch():
+vulnerabilities/importers/debian_oval.py:63: in _fetch
+    ET.ElementTree(ET.fromstring(resp.decode("utf-8"))),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>403 Forbidden</title>\n</head><body>\n<h1>Fo...sion to access this resource.</p>\n<hr>\n<address>Apache Server at www.debian.org Port 443</address>\n</body></html>\n'
+parser = <xml.etree.ElementTree.XMLParser object at 0x768a163d3400>
+
+    def XML(text, parser=None):
+        """Parse XML document from string constant.
+    
+        This function can be used to embed "XML Literals" in Python code.
+    
+        *text* is a string containing XML data, *parser* is an
+        optional parser instance, defaulting to the standard XMLParser.
+    
+        Returns an Element instance.
+    
+        """
+        if not parser:
+            parser = XMLParser(target=TreeBuilder())
+>       parser.feed(text)
+E       xml.etree.ElementTree.ParseError: syntax error: line 1, column 49
+
+/usr/lib/python3.10/xml/etree/ElementTree.py:1342: ParseError
+______________ test_updated_advisories[RedhatDataSource-config10] ______________
+
+self = <Response [404]>, kwargs = {}
+
+    def json(self, **kwargs):
+        r"""Decodes the JSON response body (if any) as a Python object.
+    
+        This may return a dictionary, list, etc. depending on what is in the response.
+    
+        :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
+        :raises requests.exceptions.JSONDecodeError: If the response body does not
+            contain valid json.
+        """
+    
+        if not self.encoding and self.content and len(self.content) > 3:
+            # No encoding set. JSON RFC 4627 section 3 states we should expect
+            # UTF-8, -16 or -32. Detect which one to use; If the detection or
+            # decoding fails, fall back to `self.text` (using charset_normalizer to make
+            # a best guess).
+            encoding = guess_json_utf(self.content)
+            if encoding is not None:
+                try:
+                    return complexjson.loads(self.content.decode(encoding), **kwargs)
+                except UnicodeDecodeError:
+                    # Wrong UTF codec detected; usually because it's not UTF-8
+                    # but some other 8-bit codec.  This is an RFC violation,
+                    # and the server didn't bother to tell us what codec *was*
+                    # used.
+                    pass
+                except JSONDecodeError as e:
+                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+    
+        try:
+>           return complexjson.loads(self.text, **kwargs)
+
+.venv/lib/python3.10/site-packages/requests/models.py:976: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.10/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+/usr/lib/python3.10/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x768a1dc69a80>
+s = '<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>\n<title>Error 404 Not Found<...</table>\n<hr/><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/usr/lib/python3.10/json/decoder.py:355: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+data_source = 'RedhatDataSource', config = {}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/redhat.py:44: in updated_advisories
+    processed_advisories = list(map(to_advisory, self.redhat_cves))
+vulnerabilities/importers/redhat.py:127: in to_advisory
+    ).json()  # nopep8
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>, kwargs = {}
+
+    def json(self, **kwargs):
+        r"""Decodes the JSON response body (if any) as a Python object.
+    
+        This may return a dictionary, list, etc. depending on what is in the response.
+    
+        :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
+        :raises requests.exceptions.JSONDecodeError: If the response body does not
+            contain valid json.
+        """
+    
+        if not self.encoding and self.content and len(self.content) > 3:
+            # No encoding set. JSON RFC 4627 section 3 states we should expect
+            # UTF-8, -16 or -32. Detect which one to use; If the detection or
+            # decoding fails, fall back to `self.text` (using charset_normalizer to make
+            # a best guess).
+            encoding = guess_json_utf(self.content)
+            if encoding is not None:
+                try:
+                    return complexjson.loads(self.content.decode(encoding), **kwargs)
+                except UnicodeDecodeError:
+                    # Wrong UTF codec detected; usually because it's not UTF-8
+                    # but some other 8-bit codec.  This is an RFC violation,
+                    # and the server didn't bother to tell us what codec *was*
+                    # used.
+                    pass
+                except JSONDecodeError as e:
+                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+    
+        try:
+            return complexjson.loads(self.text, **kwargs)
+        except JSONDecodeError as e:
+            # Catch JSON-related errors and raise as requests.JSONDecodeError
+            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError
+>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+E           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+.venv/lib/python3.10/site-packages/requests/models.py:980: JSONDecodeError
+----------------------------- Captured stdout call -----------------------------
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=1
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=2
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=3
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=4
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=5
+Fetching: https://access.redhat.com/hydra/rest/securitydata/cve.json?per_page=10000&page=6
+_______________ test_updated_advisories[NVDDataSource-config11] ________________
+
+data_source = 'NVDDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/nvd.py:62: in updated_advisories
+    data = self.fetch(download_url)
+vulnerabilities/importers/nvd.py:68: in fetch
+    data = gzip.decompress(gz_file.content)
+/usr/lib/python3.10/gzip.py:557: in decompress
+    return f.read()
+/usr/lib/python3.10/gzip.py:301: in read
+    return self._buffer.read(size)
+/usr/lib/python3.10/_compression.py:118: in readall
+    while data := self.read(sys.maxsize):
+/usr/lib/python3.10/gzip.py:488: in read
+    if not self._read_gzip_header():
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gzip._GzipReader object at 0x768a0034cd90>
+
+    def _read_gzip_header(self):
+        magic = self._fp.read(2)
+        if magic == b'':
+            return False
+    
+        if magic != b'\037\213':
+>           raise BadGzipFile('Not a gzipped file (%r)' % magic)
+E           gzip.BadGzipFile: Not a gzipped file (b'<!')
+
+/usr/lib/python3.10/gzip.py:436: BadGzipFile
+______________ test_updated_advisories[GentooDataSource-config12] ______________
+
+data_source = 'GentooDataSource'
+config = {'repository_url': 'https://anongit.gentoo.org/git/data/glsa.git'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/gentoo.py:48: in updated_advisories
+    processed_data = self.process_file(f)
+vulnerabilities/importers/gentoo.py:85: in process_file
+    affected_packages=nearest_patched_package(
+vulnerabilities/helpers.py:149: in nearest_patched_package
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:149: in <listcomp>
+    [PackageURLWithVersionComparator(package) for package in resolved_packages]
+vulnerabilities/helpers.py:137: in __init__
+    self.version_object = version_class_by_package_type[package.type](package.version)
+.venv/lib/python3.10/site-packages/univers/versions.py:228: in __init__
+    self.validate(version_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version_string = '3.24.48:3'
+
+    @staticmethod
+    def validate(version_string):
+        version, _ = parse_gentoo_version_and_revision(version_string)
+        if not GentooVersion.version_re.match(version):
+>           raise InvalidVersion(f"Invalid version: '{version_string}'")
+E           univers.versions.InvalidVersion: Invalid version: '3.24.48:3'
+
+.venv/lib/python3.10/site-packages/univers/versions.py:236: InvalidVersion
+_____________ test_updated_advisories[OpenSSLDataSource-config13] ______________
+
+data_source = 'OpenSSLDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/openssl.py:56: in updated_advisories
+    advisories = self.to_advisories(raw_data)
+vulnerabilities/importers/openssl.py:69: in to_advisories
+    root = ET.fromstring(xml_response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = b'<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <title>\n      \n        404 Page not found | OpenSSL Library\n    ... <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>\n\n\n\n  </body>\n</html>\n'
+parser = <xml.etree.ElementTree.XMLParser object at 0x768a16975cf0>
+
+    def XML(text, parser=None):
+        """Parse XML document from string constant.
+    
+        This function can be used to embed "XML Literals" in Python code.
+    
+        *text* is a string containing XML data, *parser* is an
+        optional parser instance, defaulting to the standard XMLParser.
+    
+        Returns an Element instance.
+    
+        """
+        if not parser:
+            parser = XMLParser(target=TreeBuilder())
+>       parser.feed(text)
+E       xml.etree.ElementTree.ParseError: mismatched tag: line 50, column 4
+
+/usr/lib/python3.10/xml/etree/ElementTree.py:1342: ParseError
+___________ test_updated_advisories[ApacheHTTPDDataSource-config17] ____________
+
+data_source = 'ApacheHTTPDDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/apache_httpd.py:59: in updated_advisories
+    self.set_api()
+vulnerabilities/importers/apache_httpd.py:55: in set_api
+    asyncio.run(self.version_api.load_api(["apache/httpd"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'apache/httpd'
+session = '/apache/httpd/tags?after=2.4.62'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+______________ test_updated_advisories[NginxDataSource-config19] _______________
+
+data_source = 'NginxDataSource', config = {'etags': {}}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/nginx.py:63: in updated_advisories
+    self.set_api()
+vulnerabilities/importers/nginx.py:52: in set_api
+    asyncio.run(self.version_api.load_api(["nginx/nginx"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'nginx/nginx'
+session = '/nginx/nginx/tags?after=release-1.27.2'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+____________ test_updated_advisories[PostgreSQLDataSource-config20] ____________
+
+data_source = 'PostgreSQLDataSource', config = {}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/postgresql.py:52: in updated_advisories
+    advisories.extend(to_advisories(data))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b'<!doctype html>\n<html lang="en">\n <head>\n  <title>PostgreSQL: Security Information</title>\n  <meta name="viewpor...Group</p>\n      </div>\n    </footer>\n    <script src="/media/js/main.js?063d4788"></script>\n\n  </body>\n</html>\n'
+
+    def to_advisories(data):
+        advisories = []
+        soup = BeautifulSoup(data, features="lxml")
+        table = soup.select("table")[0]
+        for row in table.select("tbody tr"):
+            ref_col, affected_col, fixed_col, severity_score_col, desc_col = row.select("td")
+            summary = desc_col.text
+            pkg_qualifiers = {}
+            if "windows" in summary.lower():
+                pkg_qualifiers = {"os": "windows"}
+    
+            affected_packages = [
+                PackageURL(
+                    type="generic",
+                    name="postgresql",
+                    version=version.strip(),
+                    qualifiers=pkg_qualifiers,
+                )
+                for version in affected_col.text.split(",")
+            ]
+    
+            fixed_packages = [
+                PackageURL(
+                    type="generic",
+                    name="postgresql",
+                    version=version.strip(),
+                    qualifiers=pkg_qualifiers,
+                )
+                for version in fixed_col.text.split(",")
+                if version
+            ]
+    
+            try:
+                cve_id = ref_col.select("nobr")[0].text
+                # This is for the anomaly in https://www.postgresql.org/support/security/8.1/ 's
+                # last entry
+            except IndexError:
+                pass
+    
+            references = []
+            vector_link_tag = severity_score_col.find("a")
+            for a_tag in ref_col.select("a"):
+                link = a_tag.attrs["href"]
+                if link.startswith("/"):
+                    # Convert relative urls to absolute url.
+                    # All links qualify this criteria, so this `if` statement is kind of a defensive mechanism
+                    link = urlparse.urljoin(BASE_URL, link)
+                    severities = []
+                    if "support/security/CVE" in link and vector_link_tag:
+                        parsed_link = urlparse.urlparse(vector_link_tag["href"])
+                        cvss3_vector = urlparse.parse_qs(parsed_link.query)["vector"]
+                        cvss3_base_score = vector_link_tag.text
+                        severities.extend(
+                            [
+                                VulnerabilitySeverity(
+                                    system=scoring_systems["cvssv3"], value=cvss3_base_score
+                                ),
+                                VulnerabilitySeverity(
+                                    system=scoring_systems["cvssv3_vector"], value=cvss3_vector
+                                ),
+                            ]
+                        )
+                references.append(Reference(url=link, severities=severities))
+    
+            advisories.append(
+                Advisory(
+>                   vulnerability_id=cve_id,
+                    summary=summary,
+                    references=references,
+                    affected_packages=nearest_patched_package(affected_packages, fixed_packages),
+                )
+            )
+E           UnboundLocalError: local variable 'cve_id' referenced before assignment
+
+vulnerabilities/importers/postgresql.py:128: UnboundLocalError
+___________ test_updated_advisories[ApacheKafkaDataSource-config23] ____________
+
+data_source = 'ApacheKafkaDataSource', config = {}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+            with data_src:
+>               for i in data_src.updated_advisories():
+
+vulnerabilities/tests/test_upstream.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/apache_kafka.py:53: in updated_advisories
+    self.set_api()
+vulnerabilities/importers/apache_kafka.py:49: in set_api
+    asyncio.run(self.version_api.load_api(["apache/kafka"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'apache/kafka'
+session = '/apache/kafka/tags?after=4.1.0-rc2'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+______________ test_updated_advisories[IstioDataSource-config24] _______________
+
+data_source = 'IstioDataSource'
+config = {'repository_url': 'https://github.com/istio/istio.io'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+>           with data_src:
+
+vulnerabilities/tests/test_upstream.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/istio.py:52: in __enter__
+    self.set_api()
+vulnerabilities/importers/istio.py:55: in set_api
+    asyncio.run(self.version_api.load_api(["istio/istio"]))
+/usr/lib/python3.10/asyncio/runners.py:44: in run
+    return loop.run_until_complete(main)
+/usr/lib/python3.10/asyncio/base_events.py:649: in run_until_complete
+    return future.result()
+vulnerabilities/package_managers.py:68: in load_api
+    await asyncio.gather(
+vulnerabilities/package_managers.py:410: in fetch
+    await self.fetch(owner_repo, url)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = GitHubTagsAPI(), owner_repo = 'istio/istio'
+session = '/istio/istio/tags?after=1.26.5'
+
+    async def fetch(self, owner_repo: str, session) -> None:
+        """
+        owner_repo is a string of format "{repo_owner}/{repo_name}"
+        Example value of owner_repo = "nexB/scancode-toolkit"
+        """
+        self.cache[owner_repo] = set()
+        endpoint = f"https://github.com/{owner_repo}/tags"
+    
+>       resp = await session.get(endpoint)
+E       AttributeError: 'str' object has no attribute 'get'
+
+vulnerabilities/package_managers.py:384: AttributeError
+============================== slowest durations ===============================
+155.62s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14]
+65.11s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24]
+27.46s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10]
+13.61s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1]
+5.21s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18]
+4.98s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5]
+3.42s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3]
+3.36s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8]
+2.24s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22]
+2.16s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0]
+1.28s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12]
+0.85s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4]
+0.82s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23]
+0.72s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21]
+0.69s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11]
+0.62s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17]
+0.54s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19]
+0.49s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7]
+0.43s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9]
+0.38s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6]
+0.36s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16]
+0.34s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13]
+0.24s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20]
+0.10s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17]
+0.00s setup    vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16]
+0.00s teardown vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15]
+0.00s call     vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15]
+=========================== short test summary info ============================
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2] - urllib.error.HTTPError: HTTP Error 308: PERMANENT REDIRECT
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3] - ValueError: Invalid version string: "1:0.23.0+dfsg-"
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4] - KeyError: 'module_name'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9] - xml.etree.ElementTree.ParseError: syntax error: line 1, column 49
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10] - requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11] - gzip.BadGzipFile: Not a gzipped file (b'<!')
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12] - univers.versions.InvalidVersion: Invalid version: '3.24.48:3'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13] - xml.etree.ElementTree.ParseError: mismatched tag: line 50, column 4
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17] - AttributeError: 'str' object has no attribute 'get'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19] - AttributeError: 'str' object has no attribute 'get'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20] - UnboundLocalError: local variable 'cve_id' referenced before assignment
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23] - AttributeError: 'str' object has no attribute 'get'
+FAILED vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24] - AttributeError: 'str' object has no attribute 'get'
+================== 13 failed, 12 passed in 291.94s (0:04:51) ===================
+Energy consumption in joules: 2041.4525604248047 for 294.63293 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for before
+Time: za 22 nov 2025 15:55:34 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.0, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/vulnerablecode_490/before/.venv/bin/python3
+cachedir: .pytest_cache
+django: version: 5.2.8, settings: vulnerablecode.settings (from ini)
+rootdir: /home/xutong/SpeedUpSlowTest/versions/vulnerablecode_490/before
+configfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml, setup.cfg!)
+plugins: mock-3.15.1, django-4.11.1
+collecting ... collected 25 items
+
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RustDataSource-config0] PASSED [  4%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[AlpineDataSource-config1] PASSED [  8%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ArchlinuxDataSource-config2] FAILED [ 12%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianDataSource-config3] FAILED [ 16%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NpmDataSource-config4] FAILED [ 20%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RubyDataSource-config5] PASSED [ 24%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuDataSource-config6] PASSED [ 28%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RetireDotnetDataSource-config7] PASSED [ 32%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[SUSESeverityScoreDataSource-config8] PASSED [ 36%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[DebianOvalDataSource-config9] FAILED [ 40%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[RedhatDataSource-config10] FAILED [ 44%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NVDDataSource-config11] FAILED [ 48%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[GentooDataSource-config12] FAILED [ 52%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[OpenSSLDataSource-config13] FAILED [ 56%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[UbuntuUSNDataSource-config14] PASSED [ 60%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[GitHubAPIDataSource-config15] PASSED [ 64%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ProjectKBMSRDataSource-config16] PASSED [ 68%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheHTTPDDataSource-config17] FAILED [ 72%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[KaybeeDataSource-config18] PASSED [ 76%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[NginxDataSource-config19] FAILED [ 80%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[PostgreSQLDataSource-config20] FAILED [ 84%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ElixirSecurityDataSource-config21] PASSED [ 88%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheTomcatDataSource-config22] PASSED [ 92%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[ApacheKafkaDataSource-config23] FAILED [ 96%]
+vulnerabilities/tests/test_upstream.py::test_updated_advisories[IstioDataSource-config24] FAILED [100%]
+
+=================================== FAILURES ===================================
+_____________ test_updated_advisories[ArchlinuxDataSource-config2] _____________
+
+data_source = 'ArchlinuxDataSource'
+config = {'archlinux_tracker_url': 'https://security.archlinux.org/json'}
+
+    @pytest.mark.webtest
+    @pytest.mark.parametrize(
+        ("data_source", "config"),
+        ((data["data_source"], data["data_source_cfg"]) for data in IMPORTER_REGISTRY),
+    )
+    def test_updated_advisories(data_source, config):
+    
+        if not data_source == "GitHubAPIDataSource":
+            data_src = getattr(importers, data_source)
+            data_src = data_src(batch_size=1, config=config)
+>           with data_src:
+
+vulnerabilities/tests/test_upstream.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+vulnerabilities/importers/archlinux.py:52: in __enter__
+    self._api_response = self._fetch()
+vulnerabilities/importers/archlinux.py:63: in _fetch
+    with urlopen(self.config.archlinux_tracker_url) as response:
+/usr/lib/python3.10/urllib/request.py:216: in urlopen
+    return opener.open(url, data, timeout)
+/usr/lib/python3.10/urllib/request.py:525: in open
+    response = meth(req, response)
+/usr/lib/python3.10/urllib/request.py:634: in http_response
+    response = self.parent.error(
+/usr/lib/python3.10/urllib/request.py:563: in error
+    return self._call_chain(*args)
+/usr/lib/python3.10/urllib/request.py:496: in _call_chain
+    result = func(*args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x708c47c9f700>
+req = <urllib.request.Request object at 0x708c47c9f790>
+fp = <http.client.HTTPResponse object at 0x708c47c9f280>, code = 308
+msg = 'PERMANENT REDIRECT'
+hdrs = <http.client.HTTPMessage object at 0x708c47c9f4c0>
+
+    def http_error_default(

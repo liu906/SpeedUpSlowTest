@@ -2,7 +2,7 @@
 Starting test runs for project: nipoppy_697
 Config file: test_config_only_mock_part.sh
 Comparing: before vs after_careful_mock
-Iterations: 1
+Iterations: 40
 Test command: pytest tests/test_workflow_runner.py::test_run_multiple tests/test_cli.py::test_cli_pipeline_search 'tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]' --durations=0 -vv
 Log file: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697//test_results_only_mock_part.log
 ========================================
@@ -103,7 +103,7 @@ Building wheels for collected packages: nipoppy
   Building wheel for nipoppy (pyproject.toml): started
   Building wheel for nipoppy (pyproject.toml): finished with status 'done'
   Created wheel for nipoppy: filename=nipoppy-1.0.0.dev0-py3-none-any.whl size=103425 sha256=eb2a3bf501fac019a12188a1657a37a6ad6d8d83f99a848233342e9e1e16e0d4
-  Stored in directory: /tmp/pip-ephem-wheel-cache-wjyqhc01/wheels/3d/a8/0e/a0f42f5211964fb2f1684b64ff1fea9ae975098cd453b6f3c8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-4s1aqyw0/wheels/3d/a8/0e/a0f42f5211964fb2f1684b64ff1fea9ae975098cd453b6f3c8
 Successfully built nipoppy
 Installing collected packages: nipoppy
   Attempting uninstall: nipoppy
@@ -113,8 +113,8 @@ Installing collected packages: nipoppy
 Successfully installed nipoppy-1.0.0.dev0
 
 =========================================
-Test run 1/1 for before
-Time: do 20 nov 2025 12:22:23 CET
+Test run 1/40 for before
+Time: do 20 nov 2025 20:05:50 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
@@ -136,21 +136,1503 @@ tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[T
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ============================== slowest durations ===============================
-7.98s call     tests/test_workflow_runner.py::test_run_multiple
-3.79s call     tests/test_cli.py::test_cli_pipeline_search
-1.88s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+9.88s call     tests/test_workflow_runner.py::test_run_multiple
+3.53s call     tests/test_cli.py::test_cli_pipeline_search
+1.55s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 15.12s ========================
+Energy consumption in joules: 74.44522094726563 for 16.434061 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for before
+Time: do 20 nov 2025 20:06:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.31s call     tests/test_workflow_runner.py::test_run_multiple
+3.57s call     tests/test_cli.py::test_cli_pipeline_search
+1.50s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s setup    tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_cli.py::test_cli_pipeline_search
 0.00s teardown tests/test_cli.py::test_cli_pipeline_search
-======================== 3 passed, 2 warnings in 13.89s ========================
-Energy consumption in joules: 76.20416259765625 for 15.627762 sec of execution.
+======================== 3 passed, 2 warnings in 13.55s ========================
+Energy consumption in joules: 67.63507080078125 for 14.831277 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for before
+Time: do 20 nov 2025 20:06:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.09s call     tests/test_workflow_runner.py::test_run_multiple
+3.85s call     tests/test_cli.py::test_cli_pipeline_search
+1.28s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.38s ========================
+Energy consumption in joules: 67.41419982910156 for 14.629069 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for before
+Time: do 20 nov 2025 20:06:52 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.01s call     tests/test_workflow_runner.py::test_run_multiple
+3.68s call     tests/test_cli.py::test_cli_pipeline_search
+1.34s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.20s ========================
+Energy consumption in joules: 66.99957275390625 for 14.425124 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for before
+Time: do 20 nov 2025 20:07:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.04s call     tests/test_workflow_runner.py::test_run_multiple
+3.99s call     tests/test_cli.py::test_cli_pipeline_search
+1.29s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.49s ========================
+Energy consumption in joules: 69.0360107421875 for 14.826732 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for before
+Time: do 20 nov 2025 20:07:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.97s call     tests/test_workflow_runner.py::test_run_multiple
+3.46s call     tests/test_cli.py::test_cli_pipeline_search
+1.38s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 12.97s ========================
+Energy consumption in joules: 66.97027587890625 for 14.225809 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for before
+Time: do 20 nov 2025 20:07:51 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.04s call     tests/test_workflow_runner.py::test_run_multiple
+3.42s call     tests/test_cli.py::test_cli_pipeline_search
+3.00s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 14.61s ========================
+Energy consumption in joules: 70.52363586425781 for 15.837127 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for before
+Time: do 20 nov 2025 20:08:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.28s call     tests/test_workflow_runner.py::test_run_multiple
+3.45s call     tests/test_cli.py::test_cli_pipeline_search
+1.22s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.12s ========================
+Energy consumption in joules: 67.20753479003906 for 14.428387 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for before
+Time: do 20 nov 2025 20:08:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.92s call     tests/test_workflow_runner.py::test_run_multiple
+3.47s call     tests/test_cli.py::test_cli_pipeline_search
+1.34s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 12.88s ========================
+Energy consumption in joules: 67.68145751953125 for 14.227001 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: do 20 nov 2025 20:08:52 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.05s call     tests/test_workflow_runner.py::test_run_multiple
+3.55s call     tests/test_cli.py::test_cli_pipeline_search
+1.51s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.27s ========================
+Energy consumption in joules: 69.28291320800781 for 14.626631 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for before
+Time: do 20 nov 2025 20:09:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.59s call     tests/test_workflow_runner.py::test_run_multiple
+3.60s call     tests/test_cli.py::test_cli_pipeline_search
+1.25s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.59s ========================
+Energy consumption in joules: 68.03945922851563 for 14.826125 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: do 20 nov 2025 20:09:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.15s call     tests/test_workflow_runner.py::test_run_multiple
+3.56s call     tests/test_cli.py::test_cli_pipeline_search
+1.22s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.10s ========================
+Energy consumption in joules: 67.90676879882813 for 14.429516 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: do 20 nov 2025 20:09:51 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.05s call     tests/test_workflow_runner.py::test_run_multiple
+3.46s call     tests/test_cli.py::test_cli_pipeline_search
+1.42s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.09s ========================
+Energy consumption in joules: 67.68719482421875 for 14.428518 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for before
+Time: do 20 nov 2025 20:10:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.91s call     tests/test_workflow_runner.py::test_run_multiple
+3.58s call     tests/test_cli.py::test_cli_pipeline_search
+1.29s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 12.95s ========================
+Energy consumption in joules: 66.64756774902344 for 14.230125 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for before
+Time: do 20 nov 2025 20:10:31 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.56s call     tests/test_workflow_runner.py::test_run_multiple
+4.69s call     tests/test_cli.py::test_cli_pipeline_search
+2.37s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 15.79s ========================
+Energy consumption in joules: 72.92558288574219 for 17.032898 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for before
+Time: do 20 nov 2025 20:10:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.13s call     tests/test_workflow_runner.py::test_run_multiple
+3.98s call     tests/test_cli.py::test_cli_pipeline_search
+1.43s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.70s ========================
+Energy consumption in joules: 69.48930358886719 for 15.030549 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for before
+Time: do 20 nov 2025 20:11:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.27s call     tests/test_workflow_runner.py::test_run_multiple
+3.51s call     tests/test_cli.py::test_cli_pipeline_search
+1.40s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.35s ========================
+Energy consumption in joules: 68.17750549316406 for 14.628291 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for before
+Time: do 20 nov 2025 20:11:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.34s call     tests/test_workflow_runner.py::test_run_multiple
+3.50s call     tests/test_cli.py::test_cli_pipeline_search
+1.27s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.28s ========================
+Energy consumption in joules: 68.42648315429688 for 14.628864 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for before
+Time: do 20 nov 2025 20:11:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.20s call     tests/test_workflow_runner.py::test_run_multiple
+3.54s call     tests/test_cli.py::test_cli_pipeline_search
+1.34s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.24s ========================
+Energy consumption in joules: 68.52133178710938 for 14.626947 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for before
+Time: do 20 nov 2025 20:12:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.92s call     tests/test_workflow_runner.py::test_run_multiple
+3.56s call     tests/test_cli.py::test_cli_pipeline_search
+1.33s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 12.97s ========================
+Energy consumption in joules: 66.41392517089844 for 14.229244 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for before
+Time: do 20 nov 2025 20:12:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.97s call     tests/test_workflow_runner.py::test_run_multiple
+3.69s call     tests/test_cli.py::test_cli_pipeline_search
+1.30s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.12s ========================
+Energy consumption in joules: 67.00006103515625 for 14.430042 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for before
+Time: do 20 nov 2025 20:12:52 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.86s call     tests/test_workflow_runner.py::test_run_multiple
+3.56s call     tests/test_cli.py::test_cli_pipeline_search
+1.24s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 12.82s ========================
+Energy consumption in joules: 65.95504760742188 for 14.027112 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for before
+Time: do 20 nov 2025 20:13:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.07s call     tests/test_workflow_runner.py::test_run_multiple
+3.52s call     tests/test_cli.py::test_cli_pipeline_search
+1.43s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.18s ========================
+Energy consumption in joules: 66.70840454101563 for 14.428658 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for before
+Time: do 20 nov 2025 20:13:31 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.26s call     tests/test_workflow_runner.py::test_run_multiple
+7.53s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+3.56s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 19.52s ========================
+Energy consumption in joules: 82.24215698242188 for 20.842783 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for before
+Time: do 20 nov 2025 20:13:57 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.31s call     tests/test_workflow_runner.py::test_run_multiple
+4.05s call     tests/test_cli.py::test_cli_pipeline_search
+1.29s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.82s ========================
+Energy consumption in joules: 68.52896118164063 for 15.028965 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for before
+Time: do 20 nov 2025 20:14:18 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.72s call     tests/test_workflow_runner.py::test_run_multiple
+3.68s call     tests/test_cli.py::test_cli_pipeline_search
+1.46s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 14.03s ========================
+Energy consumption in joules: 67.75198364257813 for 15.229163 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for before
+Time: do 20 nov 2025 20:14:38 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.36s call     tests/test_workflow_runner.py::test_run_multiple
+3.96s call     tests/test_cli.py::test_cli_pipeline_search
+1.21s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.70s ========================
+Energy consumption in joules: 69.61343383789063 for 15.030336 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for before
+Time: do 20 nov 2025 20:14:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.05s call     tests/test_workflow_runner.py::test_run_multiple
+3.65s call     tests/test_cli.py::test_cli_pipeline_search
+1.24s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.11s ========================
+Energy consumption in joules: 68.346923828125 for 14.429411 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for before
+Time: do 20 nov 2025 20:15:18 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.12s call     tests/test_workflow_runner.py::test_run_multiple
+3.66s call     tests/test_cli.py::test_cli_pipeline_search
+1.56s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.49s ========================
+Energy consumption in joules: 69.1419677734375 for 14.833419 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for before
+Time: do 20 nov 2025 20:15:38 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.93s call     tests/test_workflow_runner.py::test_run_multiple
+3.56s call     tests/test_cli.py::test_cli_pipeline_search
+2.50s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 14.16s ========================
+Energy consumption in joules: 69.25563049316406 for 15.431806 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for before
+Time: do 20 nov 2025 20:15:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.19s call     tests/test_workflow_runner.py::test_run_multiple
+3.97s call     tests/test_cli.py::test_cli_pipeline_search
+1.68s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 14.00s ========================
+Energy consumption in joules: 68.84552001953125 for 15.22727 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for before
+Time: do 20 nov 2025 20:16:20 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.09s call     tests/test_workflow_runner.py::test_run_multiple
+3.54s call     tests/test_cli.py::test_cli_pipeline_search
+2.63s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 14.42s ========================
+Energy consumption in joules: 69.36639404296875 for 15.629696 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for before
+Time: do 20 nov 2025 20:16:40 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.96s call     tests/test_workflow_runner.py::test_run_multiple
+4.12s call     tests/test_cli.py::test_cli_pipeline_search
+1.23s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.48s ========================
+Energy consumption in joules: 67.68092346191406 for 14.826547 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for before
+Time: do 20 nov 2025 20:17:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.25s call     tests/test_workflow_runner.py::test_run_multiple
+4.11s call     tests/test_cli.py::test_cli_pipeline_search
+1.41s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.94s ========================
+Energy consumption in joules: 68.47718811035156 for 15.227701 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for before
+Time: do 20 nov 2025 20:17:21 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.07s call     tests/test_workflow_runner.py::test_run_multiple
+3.54s call     tests/test_cli.py::test_cli_pipeline_search
+1.50s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.27s ========================
+Energy consumption in joules: 67.82148742675781 for 14.628758 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for before
+Time: do 20 nov 2025 20:17:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.28s call     tests/test_workflow_runner.py::test_run_multiple
+3.57s call     tests/test_cli.py::test_cli_pipeline_search
+1.25s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.27s ========================
+Energy consumption in joules: 68.43292236328125 for 14.626587 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for before
+Time: do 20 nov 2025 20:18:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.45s call     tests/test_workflow_runner.py::test_run_multiple
+3.65s call     tests/test_cli.py::test_cli_pipeline_search
+1.25s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.51s ========================
+Energy consumption in joules: 68.53025817871094 for 14.8243 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for before
+Time: do 20 nov 2025 20:18:21 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.06s call     tests/test_workflow_runner.py::test_run_multiple
+4.00s call     tests/test_cli.py::test_cli_pipeline_search
+1.36s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.57s ========================
+Energy consumption in joules: 68.56434631347656 for 14.83422 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for before
+Time: do 20 nov 2025 20:18:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.11s call     tests/test_workflow_runner.py::test_run_multiple
+3.68s call     tests/test_cli.py::test_cli_pipeline_search
+1.23s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.18s ========================
+Energy consumption in joules: 67.77113342285156 for 14.4287405 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for before
+Time: do 20 nov 2025 20:19:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search <- ../../../../versions/nipoppy_697/before/tests/test_cli.py PASSED [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] <- ../../../../versions/nipoppy_697/before/tests/test_workflow_pipeline_store_install.py PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.01s call     tests/test_workflow_runner.py::test_run_multiple
+3.90s call     tests/test_cli.py::test_cli_pipeline_search
+1.22s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 13.30s ========================
+Energy consumption in joules: 68.54302978515625 for 14.630047 sec of execution.
 
 
 ========================================
-Completed before version at: do 20 nov 2025 12:22:39 CET
+Completed before version at: do 20 nov 2025 20:19:16 CET
 ========================================
 
 ========================================
@@ -249,7 +1731,7 @@ Building wheels for collected packages: nipoppy
   Building wheel for nipoppy (pyproject.toml): started
   Building wheel for nipoppy (pyproject.toml): finished with status 'done'
   Created wheel for nipoppy: filename=nipoppy-1.0.0.dev0-py3-none-any.whl size=103425 sha256=eb2a3bf501fac019a12188a1657a37a6ad6d8d83f99a848233342e9e1e16e0d4
-  Stored in directory: /tmp/pip-ephem-wheel-cache-dw9gbd_8/wheels/5e/c2/fc/3cf71c60d9291e98a655ee4ac3b24933c8a34d2ded85209ee8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-9gnh11lg/wheels/5e/c2/fc/3cf71c60d9291e98a655ee4ac3b24933c8a34d2ded85209ee8
 Successfully built nipoppy
 Installing collected packages: nipoppy
   Attempting uninstall: nipoppy
@@ -259,8 +1741,8 @@ Installing collected packages: nipoppy
 Successfully installed nipoppy-1.0.0.dev0
 
 =========================================
-Test run 1/1 for after_careful_mock
-Time: do 20 nov 2025 12:22:52 CET
+Test run 1/40 for after_careful_mock
+Time: do 20 nov 2025 20:19:28 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
@@ -282,25 +1764,1507 @@ tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[T
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ============================== slowest durations ===============================
-7.88s call     tests/test_workflow_runner.py::test_run_multiple
+8.07s call     tests/test_workflow_runner.py::test_run_multiple
 0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
-0.02s call     tests/test_cli.py::test_cli_pipeline_search
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
 0.00s setup    tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
 0.00s teardown tests/test_workflow_runner.py::test_run_multiple
 0.00s setup    tests/test_cli.py::test_cli_pipeline_search
 0.00s teardown tests/test_cli.py::test_cli_pipeline_search
-======================== 3 passed, 2 warnings in 8.15s =========================
-Energy consumption in joules: 55.03157043457031 for 9.418246 sec of execution.
+======================== 3 passed, 2 warnings in 8.33s =========================
+Energy consumption in joules: 53.87055969238281 for 9.614419 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for after_careful_mock
+Time: do 20 nov 2025 20:19:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.03s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.28s =========================
+Energy consumption in joules: 54.30955505371094 for 9.616695 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for after_careful_mock
+Time: do 20 nov 2025 20:19:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.20s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.45s =========================
+Energy consumption in joules: 55.33915710449219 for 9.81642 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for after_careful_mock
+Time: do 20 nov 2025 20:20:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.32s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.57s =========================
+Energy consumption in joules: 54.12486267089844 for 9.820705 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for after_careful_mock
+Time: do 20 nov 2025 20:20:29 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.92s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.19s =========================
+Energy consumption in joules: 52.9510498046875 for 9.419523 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for after_careful_mock
+Time: do 20 nov 2025 20:20:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.07s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.32s =========================
+Energy consumption in joules: 55.12837219238281 for 9.617945 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for after_careful_mock
+Time: do 20 nov 2025 20:20:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.97s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.22s =========================
+Energy consumption in joules: 53.929412841796875 for 9.416256 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for after_careful_mock
+Time: do 20 nov 2025 20:21:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.84s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.09s =========================
+Energy consumption in joules: 54.16795349121094 for 9.417929 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for after_careful_mock
+Time: do 20 nov 2025 20:21:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.92s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.17s =========================
+Energy consumption in joules: 53.611175537109375 for 9.418391 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for after_careful_mock
+Time: do 20 nov 2025 20:21:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.34s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.60s =========================
+Energy consumption in joules: 54.81800842285156 for 9.815726 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for after_careful_mock
+Time: do 20 nov 2025 20:21:57 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.11s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.36s =========================
+Energy consumption in joules: 54.2529296875 for 9.619377 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for after_careful_mock
+Time: do 20 nov 2025 20:22:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.52s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.77s =========================
+Energy consumption in joules: 55.68914794921875 for 10.017275 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for after_careful_mock
+Time: do 20 nov 2025 20:22:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.24s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.50s =========================
+Energy consumption in joules: 55.03190612792969 for 9.815296 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for after_careful_mock
+Time: do 20 nov 2025 20:22:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.43s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.69s =========================
+Energy consumption in joules: 56.18330383300781 for 10.019161 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for after_careful_mock
+Time: do 20 nov 2025 20:22:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.15s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.41s =========================
+Energy consumption in joules: 54.2611083984375 for 9.616773 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for after_careful_mock
+Time: do 20 nov 2025 20:23:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.09s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.35s =========================
+Energy consumption in joules: 54.90476989746094 for 9.619415 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for after_careful_mock
+Time: do 20 nov 2025 20:23:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.81s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.07s =========================
+Energy consumption in joules: 54.23027038574219 for 9.417701 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for after_careful_mock
+Time: do 20 nov 2025 20:23:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.04s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.30s =========================
+Energy consumption in joules: 54.60072326660156 for 9.617404 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for after_careful_mock
+Time: do 20 nov 2025 20:23:57 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.92s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.17s =========================
+Energy consumption in joules: 53.63641357421875 for 9.416455 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for after_careful_mock
+Time: do 20 nov 2025 20:24:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.99s call     tests/test_workflow_runner.py::test_run_multiple
+0.07s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.24s =========================
+Energy consumption in joules: 54.38026428222656 for 9.618073 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for after_careful_mock
+Time: do 20 nov 2025 20:24:27 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.95s call     tests/test_workflow_runner.py::test_run_multiple
+0.07s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.20s =========================
+Energy consumption in joules: 53.62052917480469 for 9.417953 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for after_careful_mock
+Time: do 20 nov 2025 20:24:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.94s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.19s =========================
+Energy consumption in joules: 53.28666687011719 for 9.417449 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for after_careful_mock
+Time: do 20 nov 2025 20:24:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.17s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.42s =========================
+Energy consumption in joules: 54.12065124511719 for 9.617045 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for after_careful_mock
+Time: do 20 nov 2025 20:25:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.27s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.52s =========================
+Energy consumption in joules: 55.63081359863281 for 9.81298 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for after_careful_mock
+Time: do 20 nov 2025 20:25:26 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.23s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.48s =========================
+Energy consumption in joules: 56.063140869140625 for 9.817192 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for after_careful_mock
+Time: do 20 nov 2025 20:25:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.98s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.23s =========================
+Energy consumption in joules: 53.360015869140625 for 9.41788 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for after_careful_mock
+Time: do 20 nov 2025 20:25:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.09s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.34s =========================
+Energy consumption in joules: 54.638092041015625 for 9.617108 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for after_careful_mock
+Time: do 20 nov 2025 20:26:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.09s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.35s =========================
+Energy consumption in joules: 55.28251647949219 for 9.616436 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for after_careful_mock
+Time: do 20 nov 2025 20:26:26 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.16s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.41s =========================
+Energy consumption in joules: 54.18048095703125 for 9.616133 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for after_careful_mock
+Time: do 20 nov 2025 20:26:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.20s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.45s =========================
+Energy consumption in joules: 55.68766784667969 for 9.819988 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for after_careful_mock
+Time: do 20 nov 2025 20:26:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.02s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.27s =========================
+Energy consumption in joules: 55.439422607421875 for 9.614968 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for after_careful_mock
+Time: do 20 nov 2025 20:27:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.95s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.21s =========================
+Energy consumption in joules: 53.95439147949219 for 9.4184065 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for after_careful_mock
+Time: do 20 nov 2025 20:27:26 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.92s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.18s =========================
+Energy consumption in joules: 54.007110595703125 for 9.418018 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for after_careful_mock
+Time: do 20 nov 2025 20:27:40 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.17s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.42s =========================
+Energy consumption in joules: 53.197265625 for 9.614246 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for after_careful_mock
+Time: do 20 nov 2025 20:27:55 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.95s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.20s =========================
+Energy consumption in joules: 53.35557556152344 for 9.420313 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for after_careful_mock
+Time: do 20 nov 2025 20:28:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.36s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.61s =========================
+Energy consumption in joules: 54.18959045410156 for 9.815315 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for after_careful_mock
+Time: do 20 nov 2025 20:28:25 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+7.97s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.22s =========================
+Energy consumption in joules: 53.17271423339844 for 9.41825 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for after_careful_mock
+Time: do 20 nov 2025 20:28:40 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.38s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.64s =========================
+Energy consumption in joules: 53.775115966796875 for 9.819658 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for after_careful_mock
+Time: do 20 nov 2025 20:28:55 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.44s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.69s =========================
+Energy consumption in joules: 55.62821960449219 for 10.018103 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for after_careful_mock
+Time: do 20 nov 2025 20:29:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/after_careful_mock
+configfile: pyproject.toml
+plugins: mock-3.15.1, httpx-0.35.0, cov-7.0.0, anyio-4.11.0
+collecting ... collected 3 items
+
+tests/test_workflow_runner.py::test_run_multiple PASSED                  [ 33%]
+tests/test_cli.py::test_cli_pipeline_search PASSED                       [ 66%]
+tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False] PASSED [100%]
+
+=============================== warnings summary ===============================
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+../before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8
+  /home/xutong/SpeedUpSlowTest/versions/nipoppy_697/before/.venv/lib/python3.10/site-packages/trogon/introspect.py:8: DeprecationWarning: 'BaseCommand' is deprecated and will be removed in Click 9.0. Use 'Command' instead.
+    from click import BaseCommand, ParamType
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+8.01s call     tests/test_workflow_runner.py::test_run_multiple
+0.08s call     tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.01s call     tests/test_cli.py::test_cli_pipeline_search
+0.00s setup    tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_pipeline_store_install.py::test_download_install_dir_exist[True-False]
+0.00s teardown tests/test_workflow_runner.py::test_run_multiple
+0.00s setup    tests/test_cli.py::test_cli_pipeline_search
+0.00s teardown tests/test_cli.py::test_cli_pipeline_search
+======================== 3 passed, 2 warnings in 8.26s =========================
+Energy consumption in joules: 55.110809326171875 for 9.614986 sec of execution.
 
 
 ========================================
-Completed after_careful_mock version at: do 20 nov 2025 12:23:01 CET
+Completed after_careful_mock version at: do 20 nov 2025 20:29:20 CET
 ========================================
 
 ========================================
-All tests completed at: do 20 nov 2025 12:23:01 CET
+All tests completed at: do 20 nov 2025 20:29:20 CET
 Compared: before vs after_careful_mock
 Log file: /home/xutong/SpeedUpSlowTest/versions/nipoppy_697//test_results_only_mock_part.log
 ========================================

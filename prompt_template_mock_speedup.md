@@ -1,4 +1,4 @@
-PROJECT_PATH=pymodbus_1995/
+PROJECT_PATH=BazBom_33/
 
 # Prompt: Mock-Based Test Speedup
 
@@ -10,7 +10,7 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 ### ✅ DO Mock (External Dependencies Only):
 - **Network calls** (HTTP requests, API calls)
 - **Database access** (SQL queries, ORM operations)
-- **File I/O** (reading/writing large files, especially from disk/network)
+- **File I/O** (reading/writing large files or log files, especially from disk/network)
 - **External APIs** (third-party services, cloud services)
 - **Subprocess calls** (shell commands, external executables)
 - **Time-consuming I/O operations** (socket operations, message queues)
@@ -30,11 +30,12 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 Given a list of slowest tests from project `{PROJECT_PATH}/before`:
 
 ```
-============================== slowest durations ===============================
-13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_client_calls[serial-rtu-localhost]
-13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_sync_simple_client[serial-rtu-localhost]
-13.12s teardown test/sub_examples/test_client_server_sync.py::TestClientServerSyncExamples::test_combinations[serial-rtu-localhost]
-13.12s teardown test/sub_examples/test_examples.py::TestSyncExamples::test_client_calls[tcp-socket-localhost]
+0.31s call     tools/supplychain/tests/test_drift_detector.py::TestEdgeCases::test_large_number_of_violations
+0.16s call     tools/supplychain/tests/test_changelog_generator.py::TestEdgeCases::test_large_number_of_changes
+0.16s call     tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores
+0.04s call     tools/supplychain/tests/test_verify_sbom.py::TestCosignPathConfiguration::test_cosign_path_with_spaces
+0.03s call     tools/supplychain/tests/test_osv_contributor.py::TestGenerateOSVEntry::test_generate_osv_entry_minimal_required_fields
+
 ```
 
 For each slow test:

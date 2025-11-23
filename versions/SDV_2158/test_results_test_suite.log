@@ -1,0 +1,1554 @@
+========================================
+Starting test runs for project: SDV_2158
+Iterations: 1
+Test command: python -m pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/SDV_2158//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/SDV_2158/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: boto3<2.0.0,>=1.28 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (1.40.65)
+Requirement already satisfied: botocore<2.0.0,>=1.31 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (1.40.65)
+Requirement already satisfied: cloudpickle>=2.1.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (3.1.2)
+Requirement already satisfied: graphviz>=0.13.2 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (0.21)
+Requirement already satisfied: numpy<2.0.0,>=1.23.3 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (1.26.4)
+Requirement already satisfied: pandas>=1.4.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (2.3.3)
+Requirement already satisfied: tqdm>=4.29 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (4.67.1)
+Requirement already satisfied: copulas>=0.11.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (0.12.3)
+Requirement already satisfied: ctgan>=0.10.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (0.11.1)
+Requirement already satisfied: deepecho>=0.6.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (0.7.0)
+Requirement already satisfied: rdt>=1.12.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (1.18.2)
+Requirement already satisfied: sdmetrics>=0.14.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (0.24.0)
+Requirement already satisfied: platformdirs>=4.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (4.5.0)
+Requirement already satisfied: pyyaml>=6.0.1 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (6.0.3)
+Requirement already satisfied: pytest>=3.4.2 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (8.4.2)
+Requirement already satisfied: pytest-cov>=2.6.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (7.0.0)
+Requirement already satisfied: pytest-rerunfailures<15,>=10.3 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (14.0)
+Requirement already satisfied: jupyter<2,>=1.0.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (1.1.1)
+Requirement already satisfied: rundoc<0.5,>=0.4.3 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (0.4.5)
+Requirement already satisfied: pytest-runner>=2.11.1 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (6.0.1)
+Requirement already satisfied: tomli<3,>=2.0.0 in ./venv/lib/python3.10/site-packages (from sdv==1.15.1.dev0) (2.3.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./venv/lib/python3.10/site-packages (from boto3<2.0.0,>=1.28->sdv==1.15.1.dev0) (1.0.1)
+Requirement already satisfied: s3transfer<0.15.0,>=0.14.0 in ./venv/lib/python3.10/site-packages (from boto3<2.0.0,>=1.28->sdv==1.15.1.dev0) (0.14.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in ./venv/lib/python3.10/site-packages (from botocore<2.0.0,>=1.31->sdv==1.15.1.dev0) (2.9.0.post0)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in ./venv/lib/python3.10/site-packages (from botocore<2.0.0,>=1.31->sdv==1.15.1.dev0) (2.5.0)
+Requirement already satisfied: notebook in ./venv/lib/python3.10/site-packages (from jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (7.4.7)
+Requirement already satisfied: jupyter-console in ./venv/lib/python3.10/site-packages (from jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (6.6.3)
+Requirement already satisfied: nbconvert in ./venv/lib/python3.10/site-packages (from jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (6.5.4)
+Requirement already satisfied: ipykernel in ./venv/lib/python3.10/site-packages (from jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (7.1.0)
+Requirement already satisfied: ipywidgets in ./venv/lib/python3.10/site-packages (from jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (8.1.8)
+Requirement already satisfied: jupyterlab in ./venv/lib/python3.10/site-packages (from jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (4.4.10)
+Requirement already satisfied: packaging>=17.1 in ./venv/lib/python3.10/site-packages (from pytest-rerunfailures<15,>=10.3->sdv==1.15.1.dev0) (25.0)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.10/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<2.0.0,>=1.31->sdv==1.15.1.dev0) (1.17.0)
+Requirement already satisfied: beautifulsoup4<5.0,>=4.4.1 in ./venv/lib/python3.10/site-packages (from rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (4.14.2)
+Requirement already satisfied: click<8.0,>=6.7 in ./venv/lib/python3.10/site-packages (from rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (7.1.2)
+Requirement already satisfied: markdown<3.0,>=2.6.9 in ./venv/lib/python3.10/site-packages (from rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (2.6.11)
+Requirement already satisfied: markdown-rundoc<0.4.0,>=0.3.1 in ./venv/lib/python3.10/site-packages (from rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (0.3.1)
+Requirement already satisfied: prompt_toolkit<4.0,>=2.0 in ./venv/lib/python3.10/site-packages (from rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (3.0.52)
+Requirement already satisfied: pygments<3.0,>=2.2.0 in ./venv/lib/python3.10/site-packages (from rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (2.19.2)
+Requirement already satisfied: soupsieve>1.2 in ./venv/lib/python3.10/site-packages (from beautifulsoup4<5.0,>=4.4.1->rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (2.8)
+Requirement already satisfied: typing-extensions>=4.0.0 in ./venv/lib/python3.10/site-packages (from beautifulsoup4<5.0,>=4.4.1->rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (4.15.0)
+Requirement already satisfied: wcwidth in ./venv/lib/python3.10/site-packages (from prompt_toolkit<4.0,>=2.0->rundoc<0.5,>=0.4.3->sdv==1.15.1.dev0) (0.2.14)
+Requirement already satisfied: plotly>=5.10.0 in ./venv/lib/python3.10/site-packages (from copulas>=0.11.0->sdv==1.15.1.dev0) (6.3.1)
+Requirement already satisfied: scipy>=1.9.2 in ./venv/lib/python3.10/site-packages (from copulas>=0.11.0->sdv==1.15.1.dev0) (1.15.3)
+Requirement already satisfied: torch>=1.13.0 in ./venv/lib/python3.10/site-packages (from ctgan>=0.10.0->sdv==1.15.1.dev0) (2.9.0)
+Requirement already satisfied: pytz>=2020.1 in ./venv/lib/python3.10/site-packages (from pandas>=1.4.0->sdv==1.15.1.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./venv/lib/python3.10/site-packages (from pandas>=1.4.0->sdv==1.15.1.dev0) (2025.2)
+Requirement already satisfied: narwhals>=1.15.1 in ./venv/lib/python3.10/site-packages (from plotly>=5.10.0->copulas>=0.11.0->sdv==1.15.1.dev0) (2.10.1)
+Requirement already satisfied: exceptiongroup>=1 in ./venv/lib/python3.10/site-packages (from pytest>=3.4.2->sdv==1.15.1.dev0) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./venv/lib/python3.10/site-packages (from pytest>=3.4.2->sdv==1.15.1.dev0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./venv/lib/python3.10/site-packages (from pytest>=3.4.2->sdv==1.15.1.dev0) (1.6.0)
+Requirement already satisfied: coverage>=7.10.6 in ./venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov>=2.6.0->sdv==1.15.1.dev0) (7.11.0)
+Requirement already satisfied: scikit-learn>=1.1.0 in ./venv/lib/python3.10/site-packages (from rdt>=1.12.0->sdv==1.15.1.dev0) (1.7.2)
+Requirement already satisfied: Faker!=37.11.0,>=17 in ./venv/lib/python3.10/site-packages (from rdt>=1.12.0->sdv==1.15.1.dev0) (37.12.0)
+Requirement already satisfied: joblib>=1.2.0 in ./venv/lib/python3.10/site-packages (from scikit-learn>=1.1.0->rdt>=1.12.0->sdv==1.15.1.dev0) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./venv/lib/python3.10/site-packages (from scikit-learn>=1.1.0->rdt>=1.12.0->sdv==1.15.1.dev0) (3.6.0)
+Requirement already satisfied: filelock in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (3.20.0)
+Requirement already satisfied: sympy>=1.13.3 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (3.4.2)
+Requirement already satisfied: jinja2 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (2025.10.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (12.8.93)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (12.8.90)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (12.8.90)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (9.10.2.21)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (12.8.4.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (11.3.3.83)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (10.3.9.90)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (12.5.8.93)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.27.5 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (2.27.5)
+Requirement already satisfied: nvidia-nvshmem-cu12==3.3.20 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (3.3.20)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (12.8.90)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (12.8.93)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (1.13.1.3)
+Requirement already satisfied: triton==3.5.0 in ./venv/lib/python3.10/site-packages (from torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (3.5.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./venv/lib/python3.10/site-packages (from sympy>=1.13.3->torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (1.3.0)
+Requirement already satisfied: comm>=0.1.1 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.8.17)
+Requirement already satisfied: ipython>=7.23.1 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (8.37.0)
+Requirement already satisfied: jupyter-client>=8.0.0 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (8.6.3)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (5.9.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.2.1)
+Requirement already satisfied: nest-asyncio>=1.4 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.6.0)
+Requirement already satisfied: psutil>=5.7 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (7.1.3)
+Requirement already satisfied: pyzmq>=25 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (27.1.0)
+Requirement already satisfied: tornado>=6.2 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in ./venv/lib/python3.10/site-packages (from ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (5.14.3)
+Requirement already satisfied: decorator in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (5.2.1)
+Requirement already satisfied: jedi>=0.16 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.19.2)
+Requirement already satisfied: pexpect>4.3 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (4.9.0)
+Requirement already satisfied: stack_data in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.6.3)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./venv/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.8.5)
+Requirement already satisfied: ptyprocess>=0.5 in ./venv/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.7.0)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in ./venv/lib/python3.10/site-packages (from ipywidgets->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (4.0.15)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in ./venv/lib/python3.10/site-packages (from ipywidgets->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (3.0.16)
+Requirement already satisfied: MarkupSafe>=2.0 in ./venv/lib/python3.10/site-packages (from jinja2->torch>=1.13.0->ctgan>=0.10.0->sdv==1.15.1.dev0) (2.1.5)
+Requirement already satisfied: async-lru>=1.0.0 in ./venv/lib/python3.10/site-packages (from jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.0.5)
+Requirement already satisfied: httpx<1,>=0.25.0 in ./venv/lib/python3.10/site-packages (from jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.28.1)
+Requirement already satisfied: jupyter-lsp>=2.0.0 in ./venv/lib/python3.10/site-packages (from jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.3.0)
+Requirement already satisfied: jupyter-server<3,>=2.4.0 in ./venv/lib/python3.10/site-packages (from jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.17.0)
+Requirement already satisfied: jupyterlab-server<3,>=2.27.1 in ./venv/lib/python3.10/site-packages (from jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.28.0)
+Requirement already satisfied: notebook-shim>=0.2 in ./venv/lib/python3.10/site-packages (from jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.2.4)
+Requirement already satisfied: setuptools>=41.1.0 in ./venv/lib/python3.10/site-packages (from jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (59.6.0)
+Requirement already satisfied: anyio in ./venv/lib/python3.10/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (4.11.0)
+Requirement already satisfied: certifi in ./venv/lib/python3.10/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2025.10.5)
+Requirement already satisfied: httpcore==1.* in ./venv/lib/python3.10/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.0.9)
+Requirement already satisfied: idna in ./venv/lib/python3.10/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (3.11)
+Requirement already satisfied: h11>=0.16 in ./venv/lib/python3.10/site-packages (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.16.0)
+Requirement already satisfied: argon2-cffi>=21.1 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (25.1.0)
+Requirement already satisfied: jupyter-events>=0.11.0 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals>=0.4.4 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.5.3)
+Requirement already satisfied: nbformat>=5.3.0 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (5.10.4)
+Requirement already satisfied: overrides>=5.0 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (7.7.0)
+Requirement already satisfied: prometheus-client>=0.9 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.23.1)
+Requirement already satisfied: send2trash>=1.8.2 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.8.3)
+Requirement already satisfied: terminado>=0.8.3 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.18.1)
+Requirement already satisfied: websocket-client>=1.7 in ./venv/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.9.0)
+Requirement already satisfied: babel>=2.10 in ./venv/lib/python3.10/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.17.0)
+Requirement already satisfied: json5>=0.9.0 in ./venv/lib/python3.10/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.12.1)
+Requirement already satisfied: jsonschema>=4.18.0 in ./venv/lib/python3.10/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (4.25.1)
+Requirement already satisfied: requests>=2.31 in ./venv/lib/python3.10/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.32.5)
+Requirement already satisfied: sniffio>=1.1 in ./venv/lib/python3.10/site-packages (from anyio->httpx<1,>=0.25.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.3.1)
+Requirement already satisfied: argon2-cffi-bindings in ./venv/lib/python3.10/site-packages (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (25.1.0)
+Requirement already satisfied: attrs>=22.2.0 in ./venv/lib/python3.10/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./venv/lib/python3.10/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./venv/lib/python3.10/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./venv/lib/python3.10/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.28.0)
+Requirement already satisfied: python-json-logger>=2.0.4 in ./venv/lib/python3.10/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (4.0.0)
+Requirement already satisfied: rfc3339-validator in ./venv/lib/python3.10/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.1.4)
+Requirement already satisfied: rfc3986-validator>=0.1.1 in ./venv/lib/python3.10/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.1.1)
+Requirement already satisfied: fqdn in ./venv/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.5.1)
+Requirement already satisfied: isoduration in ./venv/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (20.11.0)
+Requirement already satisfied: jsonpointer>1.13 in ./venv/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (3.0.0)
+Requirement already satisfied: rfc3987-syntax>=1.1.0 in ./venv/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.1.0)
+Requirement already satisfied: uri-template in ./venv/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.3.0)
+Requirement already satisfied: webcolors>=24.6.0 in ./venv/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (25.10.0)
+Requirement already satisfied: lxml in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (6.0.2)
+Requirement already satisfied: bleach in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (6.3.0)
+Requirement already satisfied: defusedxml in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.7.1)
+Requirement already satisfied: entrypoints>=0.2.2 in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.4)
+Requirement already satisfied: jupyterlab-pygments in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.3.0)
+Requirement already satisfied: mistune<2,>=0.8.1 in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.8.4)
+Requirement already satisfied: nbclient>=0.5.0 in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.10.2)
+Requirement already satisfied: pandocfilters>=1.4.1 in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.5.1)
+Requirement already satisfied: tinycss2 in ./venv/lib/python3.10/site-packages (from nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in ./venv/lib/python3.10/site-packages (from nbformat>=5.3.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.21.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./venv/lib/python3.10/site-packages (from requests>=2.31->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (3.4.4)
+Requirement already satisfied: lark>=1.2.2 in ./venv/lib/python3.10/site-packages (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.3.1)
+Requirement already satisfied: cffi>=1.0.1 in ./venv/lib/python3.10/site-packages (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.0.0)
+Requirement already satisfied: pycparser in ./venv/lib/python3.10/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.23)
+Requirement already satisfied: webencodings in ./venv/lib/python3.10/site-packages (from bleach->nbconvert->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.5.1)
+Requirement already satisfied: arrow>=0.15.0 in ./venv/lib/python3.10/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (1.4.0)
+Requirement already satisfied: odfpy>=1.4.1 in ./venv/lib/python3.10/site-packages (from pandas[excel]; extra == "excel"->sdv==1.15.1.dev0) (1.4.1)
+Requirement already satisfied: openpyxl>=3.1.0 in ./venv/lib/python3.10/site-packages (from pandas[excel]; extra == "excel"->sdv==1.15.1.dev0) (3.1.5)
+Requirement already satisfied: python-calamine>=0.1.7 in ./venv/lib/python3.10/site-packages (from pandas[excel]; extra == "excel"->sdv==1.15.1.dev0) (0.5.4)
+Requirement already satisfied: pyxlsb>=1.0.10 in ./venv/lib/python3.10/site-packages (from pandas[excel]; extra == "excel"->sdv==1.15.1.dev0) (1.0.10)
+Requirement already satisfied: xlrd>=2.0.1 in ./venv/lib/python3.10/site-packages (from pandas[excel]; extra == "excel"->sdv==1.15.1.dev0) (2.0.2)
+Requirement already satisfied: xlsxwriter>=3.0.5 in ./venv/lib/python3.10/site-packages (from pandas[excel]; extra == "excel"->sdv==1.15.1.dev0) (3.2.9)
+Requirement already satisfied: et-xmlfile in ./venv/lib/python3.10/site-packages (from openpyxl>=3.1.0->pandas[excel]; extra == "excel"->sdv==1.15.1.dev0) (2.0.0)
+Requirement already satisfied: executing>=1.2.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (3.0.0)
+Requirement already satisfied: pure-eval in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel->jupyter<2,>=1.0.0->sdv==1.15.1.dev0) (0.2.3)
+Building wheels for collected packages: sdv
+  Building editable for sdv (pyproject.toml): started
+  Building editable for sdv (pyproject.toml): finished with status 'done'
+  Created wheel for sdv: filename=sdv-1.15.1.dev0-0.editable-py3-none-any.whl size=9878 sha256=76fc1e6259d931f9ff023af2f7bfc4d3317bd2e0c26696f01e84b3f04ef213b9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-m25_vlbm/wheels/84/35/b9/6b1660b360bf36460faa1589e3368ae93d35040df019627a69
+Successfully built sdv
+Installing collected packages: sdv
+  Attempting uninstall: sdv
+    Found existing installation: sdv 1.15.1.dev0
+    Uninstalling sdv-1.15.1.dev0:
+      Successfully uninstalled sdv-1.15.1.dev0
+Successfully installed sdv-1.15.1.dev0
+
+=========================================
+Test run 1/1 for before
+Time: vr 21 nov 2025 11:22:27 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before
+configfile: pyproject.toml
+plugins: Faker-37.12.0, cov-7.0.0, anyio-4.11.0, rerunfailures-14.0
+collected 1354 items
+
+tests/integration/data_processing/test_data_processor.py ..........      [  0%]
+tests/integration/datasets/test_demo.py ..                               [  0%]
+tests/integration/datasets/test_local.py .                               [  0%]
+tests/integration/evaluation/test_multi_table.py F                       [  1%]
+tests/integration/evaluation/test_single_table.py ..                     [  1%]
+tests/integration/io/local/test_local.py ...                             [  1%]
+tests/integration/lite/test_single_table.py ...                          [  1%]
+tests/integration/metadata/test_multi_table.py ..........                [  2%]
+tests/integration/metadata/test_single_table.py ..................       [  3%]
+tests/integration/metadata/test_visualization.py ..                      [  3%]
+tests/integration/multi_table/test_hma.py ........................FF.... [  6%]
+.......................                                                  [  7%]
+tests/integration/sequential/test_par.py ..............                  [  8%]
+tests/integration/single_table/test_base.py .............F..........F... [ 10%]
+.................................................                        [ 14%]
+tests/integration/single_table/test_constraints.py ........FFFF.......   [ 15%]
+tests/integration/single_table/test_copulas.py .........                 [ 16%]
+tests/integration/single_table/test_ctgan.py .......                     [ 17%]
+tests/integration/utils/test_poc.py ..........                           [ 17%]
+tests/integration/utils/test_utils.py ......                             [ 18%]
+tests/test_tasks.py .                                                    [ 18%]
+tests/unit/constraints/test_base.py ...................................  [ 20%]
+tests/unit/constraints/test_errors.py .                                  [ 20%]
+tests/unit/constraints/test_tabular.py ................................. [ 23%]
+........................................................................ [ 28%]
+........................................................................ [ 34%]
+.........                                                                [ 34%]
+tests/unit/constraints/test_utils.py .............                       [ 35%]
+tests/unit/data_processing/test_data_processor.py ...................... [ 37%]
+........................................................                 [ 41%]
+tests/unit/data_processing/test_datetime_formatter.py ......             [ 41%]
+tests/unit/data_processing/test_numerical_formatter.py ................. [ 43%]
+...                                                                      [ 43%]
+tests/unit/data_processing/test_utils.py .                               [ 43%]
+tests/unit/datasets/test_demo.py ............                            [ 44%]
+tests/unit/datasets/test_local.py .........                              [ 44%]
+tests/unit/evaluation/test_multi_table.py ........                       [ 45%]
+tests/unit/evaluation/test_single_table.py ................              [ 46%]
+tests/unit/io/local/test_local.py ....................                   [ 48%]
+tests/unit/lite/test_single_table.py .................                   [ 49%]
+tests/unit/logging/test_logger.py ....                                   [ 49%]
+tests/unit/logging/test_utils.py ...                                     [ 50%]
+tests/unit/metadata/test_metadata_upgrader.py ..........                 [ 50%]
+tests/unit/metadata/test_multi_table.py ................................ [ 53%]
+.........................................................                [ 57%]
+tests/unit/metadata/test_single_table.py ............................... [ 59%]
+........................................................................ [ 64%]
+..............................................                           [ 68%]
+tests/unit/multi_table/test_base.py .................................... [ 70%]
+...................................                                      [ 73%]
+tests/unit/multi_table/test_hma.py ..........................            [ 75%]
+tests/unit/multi_table/test_utils.py ................................... [ 78%]
+..............                                                           [ 79%]
+tests/unit/sampling/test_hierarchical_sampler.py ................        [ 80%]
+tests/unit/sampling/test_independent_sampler.py ........                 [ 80%]
+tests/unit/sampling/test_tabular.py ....                                 [ 81%]
+tests/unit/sequential/test_par.py .....................................  [ 83%]
+tests/unit/single_table/test_base.py ................................... [ 86%]
+.................................................                        [ 90%]
+tests/unit/single_table/test_copulagan.py ..........                     [ 90%]
+tests/unit/single_table/test_copulas.py ....................             [ 92%]
+tests/unit/single_table/test_ctgan.py .................                  [ 93%]
+tests/unit/single_table/test_utils.py ...................                [ 94%]
+tests/unit/test___init__.py .......                                      [ 95%]
+tests/unit/test__utils.py .....................................          [ 98%]
+tests/unit/test_errors.py .                                              [ 98%]
+tests/unit/utils/test_poc.py ..........                                  [ 99%]
+tests/unit/utils/test_utils.py ............                              [ 99%]
+tests/unit/version/test_version.py .                                     [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_evaluation ________________________________
+
+    def test_evaluation():
+        """Test ``evaluate_quality`` and ``run_diagnostic``."""
+        # Setup
+        table = pd.DataFrame({'id': [0, 1, 2, 3], 'col': [1, 2, 3, 4]})
+        slightly_different_table = pd.DataFrame({'id': [0, 1, 2, 3], 'col': [1, 2, 3, 3.5]})
+        data = {
+            'table1': table,
+            'table2': table,
+        }
+        samples = {
+            'table1': table,
+            'table2': slightly_different_table,
+        }
+        metadata = MultiTableMetadata().load_from_dict({
+            'tables': {
+                'table1': {
+                    'columns': {
+                        'id': {'sdtype': 'id'},
+                        'col': {'sdtype': 'numerical'},
+                    },
+                },
+                'table2': {
+                    'columns': {
+                        'id': {'sdtype': 'id'},
+                        'col': {'sdtype': 'numerical'},
+                    },
+                },
+            },
+            'relationships': [
+                {
+                    'parent_table_name': 'table1',
+                    'parent_primary_key': 'id',
+                    'child_table_name': 'table2',
+                    'child_foreign_key': 'id',
+                }
+            ],
+        })
+    
+        # Run and Assert
+        score = evaluate_quality(data, samples, metadata).get_score()
+        assert score == 0.9566297110928815
+    
+        report = run_diagnostic(data, samples, metadata)
+>       assert report.get_score() == 1
+E       assert 0.8888888888888888 == 1
+E        +  where 0.8888888888888888 = get_score()
+E        +    where get_score = <sdmetrics.reports.multi_table.diagnostic_report.DiagnosticReport object at 0x73f6205e71f0>.get_score
+
+tests/integration/evaluation/test_multi_table.py:50: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Generating report ...
+
+|          | 0/4 [00:00<?, ?it/s]|(1/4) Evaluating Column Shapes: |          | 0/4 [00:00<?, ?it/s]|(1/4) Evaluating Column Shapes: |██████████| 4/4 [00:00<00:00, 964.21it/s]|
+Column Shapes Score: 87.5%
+
+|          | 0/2 [00:00<?, ?it/s]|(2/4) Evaluating Column Pair Trends: |          | 0/2 [00:00<?, ?it/s]|(2/4) Evaluating Column Pair Trends: |██████████| 2/2 [00:00<00:00, 797.85it/s]|
+Column Pair Trends Score: nan%
+
+|          | 0/1 [00:00<?, ?it/s]|(3/4) Evaluating Cardinality: |          | 0/1 [00:00<?, ?it/s]|(3/4) Evaluating Cardinality: |██████████| 1/1 [00:00<00:00, 368.63it/s]|
+Cardinality Score: 100.0%
+
+|          | 0/4 [00:00<?, ?it/s]|(4/4) Evaluating Intertable Trends: |          | 0/4 [00:00<?, ?it/s]|(4/4) Evaluating Intertable Trends: |██████████| 4/4 [00:00<00:00, 655.46it/s]|
+Intertable Trends Score: 99.49%
+
+Overall Score (Average): 95.66%
+
+Generating report ...
+
+|          | 0/4 [00:00<?, ?it/s]|(1/3) Evaluating Data Validity: |          | 0/4 [00:00<?, ?it/s]|(1/3) Evaluating Data Validity: |██████████| 4/4 [00:00<00:00, 1697.58it/s]|
+Data Validity Score: 100.0%
+
+|          | 0/2 [00:00<?, ?it/s]|(2/3) Evaluating Data Structure: |          | 0/2 [00:00<?, ?it/s]|(2/3) Evaluating Data Structure: |██████████| 2/2 [00:00<00:00, 925.08it/s]|
+Data Structure Score: 66.67%
+
+|          | 0/1 [00:00<?, ?it/s]|(3/3) Evaluating Relationship Validity: |          | 0/1 [00:00<?, ?it/s]|(3/3) Evaluating Relationship Validity: |██████████| 1/1 [00:00<00:00, 608.40it/s]|
+Relationship Validity Score: 100.0%
+
+Overall Score (Average): 88.89%
+
+_____________ TestHMASynthesizer.test_metadata_updated_no_warning ______________
+
+self = <tests.integration.multi_table.test_hma.TestHMASynthesizer object at 0x73f622eab160>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-246/test_metadata_updated_no_warni0')
+
+    def test_metadata_updated_no_warning(self, tmp_path):
+        """Test scenario where no warning about metadata should be raised.
+    
+        Run 1 - The medata is load from our demo datasets.
+        Run 2 - The metadata uses ``detect_from_dataframes`` but is saved to a file
+                before defining the syntheiszer.
+        Run 3 - The metadata is updated with a new column after the synthesizer
+                initialization, but is saved to a file before fitting.
+        """
+        # Setup
+        data, metadata = download_demo('multi_table', 'got_families')
+    
+        # Run 1
+        with warnings.catch_warnings(record=True) as captured_warnings:
+            warnings.simplefilter('always')
+            instance = HMASynthesizer(metadata)
+            instance.fit(data)
+    
+        # Assert
+>       assert len(captured_warnings) == 0
+E       assert 4 == 0
+E        +  where 4 = len([<warnings.WarningMessage object at 0x73f6154c4bb0>, <warnings.WarningMessage object at 0x73f6154c4b50>, <warnings.WarningMessage object at 0x73f6154430a0>, <warnings.WarningMessage object at 0x73f615440ee0>])
+
+tests/integration/multi_table/test_hma.py:1253: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+Learning relationships:
+
+----------------------------- Captured stderr call -----------------------------
+Preprocess Tables:   0%|          | 0/3 [00:00<?, ?it/s]Preprocess Tables: 100%|██████████| 3/3 [00:00<00:00, 97.87it/s]
+(1/2) Tables 'characters' and 'character_families' ('character_id'):   0%|          | 0/7 [00:00<?, ?it/s](1/2) Tables 'characters' and 'character_families' ('character_id'):  14%|█▍        | 1/7 [00:00<00:02,  2.53it/s](1/2) Tables 'characters' and 'character_families' ('character_id'):  86%|████████▌ | 6/7 [00:00<00:00, 14.42it/s](1/2) Tables 'characters' and 'character_families' ('character_id'): 100%|██████████| 7/7 [00:00<00:00, 12.33it/s]
+(2/2) Tables 'families' and 'character_families' ('family_id'):   0%|          | 0/4 [00:00<?, ?it/s](2/2) Tables 'families' and 'character_families' ('family_id'):  50%|█████     | 2/4 [00:00<00:00, 16.01it/s](2/2) Tables 'families' and 'character_families' ('family_id'): 100%|██████████| 4/4 [00:00<00:00, 26.08it/s]
+Modeling Tables:   0%|          | 0/3 [00:00<?, ?it/s]Modeling Tables:  67%|██████▋   | 2/3 [00:00<00:00, 13.54it/s]Modeling Tables: 100%|██████████| 3/3 [00:00<00:00, 14.81it/s]
+___________ TestHMASynthesizer.test_metadata_updated_warning_detect ____________
+
+self = <tests.integration.multi_table.test_hma.TestHMASynthesizer object at 0x73f622eab310>
+
+    def test_metadata_updated_warning_detect(self):
+        """Test that using ``detect_from_dataframes`` without saving the metadata raise a warning.
+    
+        The warning is expected to be raised only once during synthesizer initialization. It should
+        not be raised again when calling ``fit``.
+        """
+        # Setup
+        data, metadata = download_demo('multi_table', 'got_families')
+        metadata_detect = MultiTableMetadata()
+        metadata_detect.detect_from_dataframes(data)
+    
+        metadata_detect.relationships = metadata.relationships
+        for table_name, table_metadata in metadata.tables.items():
+            metadata_detect.tables[table_name].columns = table_metadata.columns
+            metadata_detect.tables[table_name].primary_key = table_metadata.primary_key
+    
+        expected_message = re.escape(
+            "We strongly recommend saving the metadata using 'save_to_json' for replicability"
+            ' in future SDV versions.'
+        )
+    
+        # Run
+        with pytest.warns(UserWarning, match=expected_message) as record:
+            instance = HMASynthesizer(metadata_detect)
+            instance.fit(data)
+    
+        # Assert
+>       assert len(record) == 1
+E       assert 5 == 1
+E        +  where 5 = len(WarningsChecker(record=True))
+
+tests/integration/multi_table/test_hma.py:1315: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+Learning relationships:
+
+----------------------------- Captured stderr call -----------------------------
+Preprocess Tables:   0%|          | 0/3 [00:00<?, ?it/s]Preprocess Tables: 100%|██████████| 3/3 [00:00<00:00, 101.15it/s]
+(1/2) Tables 'characters' and 'character_families' ('character_id'):   0%|          | 0/7 [00:00<?, ?it/s](1/2) Tables 'characters' and 'character_families' ('character_id'):  71%|███████▏  | 5/7 [00:00<00:00, 42.31it/s](1/2) Tables 'characters' and 'character_families' ('character_id'): 100%|██████████| 7/7 [00:00<00:00, 31.58it/s]
+(2/2) Tables 'families' and 'character_families' ('family_id'):   0%|          | 0/4 [00:00<?, ?it/s](2/2) Tables 'families' and 'character_families' ('family_id'):  50%|█████     | 2/4 [00:00<00:00, 15.97it/s](2/2) Tables 'families' and 'character_families' ('family_id'): 100%|██████████| 4/4 [00:00<00:00, 26.26it/s]
+Modeling Tables:   0%|          | 0/3 [00:00<?, ?it/s]Modeling Tables:  67%|██████▋   | 2/3 [00:00<00:00, 13.63it/s]Modeling Tables: 100%|██████████| 3/3 [00:00<00:00, 14.93it/s]
+________________________ test_sample_keys_are_scrambled ________________________
+
+    def test_sample_keys_are_scrambled():
+        """Test that the keys are scrambled in the sampled data."""
+        # Setup
+        data, metadata = download_demo(modality='single_table', dataset_name='fake_hotel_guests')
+        metadata.update_column('guest_email', sdtype='id', regex_format='[A-Z]{3}')
+        synthesizer = GaussianCopulaSynthesizer(metadata)
+        synthesizer.fit(data)
+    
+        # Run
+        sampled = synthesizer.sample(1000)
+    
+        # Assert
+        ids = sampled['guest_email'].head()
+        expected_keys = pd.Series(['ARH', 'BBH', 'BAP', 'AIF', 'AQP'], name='guest_email')
+>       pd.testing.assert_series_equal(ids, expected_keys)
+
+tests/integration/single_table/test_base.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pandas/_libs/testing.pyx:55: in pandas._libs.testing.assert_almost_equal
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   AssertionError: Series are different
+E   
+E   Series values are different (100.0 %)
+E   [index]: [0, 1, 2, 3, 4]
+E   [left]:  [AQQ, BBI, AET, AZM, AHZ]
+E   [right]: [ARH, BBH, BAP, AIF, AQP]
+E   At positional index 0, first diff: AQQ != ARH
+
+pandas/_libs/testing.pyx:173: AssertionError
+__________________ test_transformers_correctly_auto_assigned ___________________
+
+    def test_transformers_correctly_auto_assigned():
+        """Ensure the correct transformers and parameters are auto assigned to the data."""
+        # Setup
+        data = pd.DataFrame({
+            'primary_key': ['user-000', 'user-001', 'user-002'],
+            'pii_col': ['223 Williams Rd', '75 Waltham St', '77 Mass Ave'],
+            'numerical_col': [1, 2, 3],
+            'categorical_col': ['a', 'b', 'a'],
+        })
+    
+        metadata = SingleTableMetadata()
+        metadata.detect_from_dataframe(data)
+        metadata.update_column(column_name='primary_key', sdtype='id', regex_format='user-[0-9]{3}')
+        metadata.set_primary_key('primary_key')
+        metadata.update_column(column_name='pii_col', sdtype='address', pii=True)
+        synthesizer = GaussianCopulaSynthesizer(
+            metadata, enforce_min_max_values=False, enforce_rounding=False
+        )
+    
+        # Run
+        synthesizer.auto_assign_transformers(data)
+        transformers = synthesizer.get_transformers()
+    
+        # Assert
+        assert isinstance(transformers['numerical_col'], FloatFormatter)
+        assert isinstance(transformers['pii_col'], AnonymizedFaker)
+        assert isinstance(transformers['primary_key'], RegexGenerator)
+        assert isinstance(transformers['categorical_col'], UniformEncoder)
+    
+        assert transformers['numerical_col'].missing_value_replacement == 'mean'
+        assert transformers['numerical_col'].missing_value_generation == 'random'
+        assert transformers['numerical_col'].learn_rounding_scheme is False
+        assert transformers['numerical_col'].enforce_min_max_values is False
+    
+        assert transformers['pii_col'].provider_name == 'address'
+        assert transformers['pii_col'].function_name == 'address'
+    
+        assert transformers['primary_key'].regex_format == 'user-[0-9]{3}'
+>       assert transformers['primary_key'].enforce_uniqueness is True
+E       AttributeError: 'RegexGenerator' object has no attribute 'enforce_uniqueness'
+
+tests/integration/single_table/test_base.py:360: AttributeError
+_____________ test_inequality_constraint_with_datetimes_and_nones ______________
+
+    def test_inequality_constraint_with_datetimes_and_nones():
+        """Test that the ``Inequality`` constraint works with ``None`` and ``datetime``."""
+        # Setup
+        data = pd.DataFrame(
+            data={
+                'A': [None, None, '2020-01-02', '2020-03-04'] * 2,
+                'B': [None, '2021-03-04', '2021-12-31', None] * 2,
+            }
+        )
+    
+        metadata = SingleTableMetadata.load_from_dict({
+            'columns': {
+                'A': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+                'B': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+            }
+        })
+    
+        metadata.validate()
+        synth = GaussianCopulaSynthesizer(metadata)
+        synth.add_constraints([
+            {
+                'constraint_class': 'Inequality',
+                'constraint_parameters': {'low_column_name': 'A', 'high_column_name': 'B'},
+            }
+        ])
+        synth.validate(data)
+    
+        # Run
+        synth.fit(data)
+        sampled = synth.sample(10)
+    
+        # Assert
+        expected_sampled = pd.DataFrame({
+            'A': [
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                np.nan,
+            ],
+            'B': [
+                np.nan,
+                '2021-12-30',
+                '2021-12-30',
+                '2021-12-30',
+                np.nan,
+                '2021-12-30',
+                np.nan,
+                '2021-12-30',
+                np.nan,
+                '2021-12-30',
+            ],
+        })
+>       pd.testing.assert_frame_equal(expected_sampled, sampled)
+
+tests/integration/single_table/test_constraints.py:495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pandas/_libs/testing.pyx:55: in pandas._libs.testing.assert_almost_equal
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   AssertionError: DataFrame.iloc[:, 0] (column name="A") are different
+E   
+E   DataFrame.iloc[:, 0] (column name="A") values are different (40.0 %)
+E   [index]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+E   [left]:  [2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, nan]
+E   [right]: [2020-01-02, 2020-01-02, nan, nan, 2020-01-02, nan, 2020-01-02, nan, 2020-01-02, nan]
+E   At positional index 2, first diff: 2020-01-02 != nan
+
+pandas/_libs/testing.pyx:173: AssertionError
+----------------------------- Captured stderr call -----------------------------
+  0%|          | 0/10 [00:00<?, ?it/s]Sampling rows:   0%|          | 0/10 [00:00<?, ?it/s]Sampling rows: 100%|██████████| 10/10 [00:00<00:00, 663.48it/s]
+__________ test_scalar_inequality_constraint_with_datetimes_and_nones __________
+
+    def test_scalar_inequality_constraint_with_datetimes_and_nones():
+        """Test that the ``ScalarInequality`` constraint works with ``None`` and ``datetime``."""
+        # Setup
+        data = pd.DataFrame(
+            data={
+                'A': [None, None, '2020-01-02', '2020-03-04'],
+                'B': [None, '2021-03-04', '2021-12-31', None],
+            }
+        )
+    
+        metadata = SingleTableMetadata.load_from_dict({
+            'columns': {
+                'A': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+                'B': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+            }
+        })
+    
+        metadata.validate()
+        synth = GaussianCopulaSynthesizer(metadata)
+        synth.add_constraints([
+            {
+                'constraint_class': 'ScalarInequality',
+                'constraint_parameters': {'column_name': 'A', 'relation': '>=', 'value': '2019-01-01'},
+            }
+        ])
+        synth.validate(data)
+    
+        # Run
+        synth.fit(data)
+        sampled = synth.sample(5)
+    
+        # Assert
+        expected_sampled = pd.DataFrame({
+            'A': {
+                0: np.nan,
+                1: '2020-01-19',
+                2: np.nan,
+                3: '2020-01-29',
+                4: '2020-01-31',
+            },
+            'B': {
+                0: '2021-07-28',
+                1: '2021-07-14',
+                2: '2021-07-26',
+                3: '2021-07-02',
+                4: '2021-06-06',
+            },
+        })
+>       pd.testing.assert_frame_equal(expected_sampled, sampled)
+
+tests/integration/single_table/test_constraints.py:546: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pandas/_libs/testing.pyx:55: in pandas._libs.testing.assert_almost_equal
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   AssertionError: DataFrame.iloc[:, 0] (column name="A") are different
+E   
+E   DataFrame.iloc[:, 0] (column name="A") values are different (20.0 %)
+E   [index]: [0, 1, 2, 3, 4]
+E   [left]:  [nan, 2020-01-19, nan, 2020-01-29, 2020-01-31]
+E   [right]: [nan, 2020-01-19, nan, nan, 2020-01-31]
+E   At positional index 3, first diff: 2020-01-29 != nan
+
+pandas/_libs/testing.pyx:173: AssertionError
+----------------------------- Captured stderr call -----------------------------
+  0%|          | 0/5 [00:00<?, ?it/s]Sampling rows:   0%|          | 0/5 [00:00<?, ?it/s]Sampling rows: 100%|██████████| 5/5 [00:00<00:00, 607.69it/s]
+____________ test_scalar_range_constraint_with_datetimes_and_nones _____________
+
+    def test_scalar_range_constraint_with_datetimes_and_nones():
+        """Test that the ``ScalarRange`` constraint works with ``None`` and ``datetime``."""
+        # Setup
+        data = pd.DataFrame(
+            data={
+                'A': [None, None, '2020-01-02', '2020-03-04'],
+                'B': [None, '2021-03-04', '2021-12-31', None],
+            }
+        )
+    
+        metadata = SingleTableMetadata.load_from_dict({
+            'columns': {
+                'A': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+                'B': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+            }
+        })
+    
+        metadata.validate()
+        synth = GaussianCopulaSynthesizer(metadata, default_distribution='truncnorm')
+        synth.add_constraints([
+            {
+                'constraint_class': 'ScalarRange',
+                'constraint_parameters': {
+                    'column_name': 'A',
+                    'low_value': '2019-10-30',
+                    'high_value': '2020-03-04',
+                    'strict_boundaries': False,
+                },
+            }
+        ])
+        synth.validate(data)
+    
+        # Run
+        synth.fit(data)
+        sampled = synth.sample(10)
+    
+        # Assert
+        expected_sampled = pd.DataFrame({
+            'A': {
+                0: '2020-02-04',
+                1: np.nan,
+                2: '2020-02-07',
+                3: np.nan,
+                4: np.nan,
+                5: '2020-02-29',
+                6: np.nan,
+                7: np.nan,
+                8: np.nan,
+                9: '2020-02-02',
+            },
+            'B': {
+                0: np.nan,
+                1: np.nan,
+                2: np.nan,
+                3: np.nan,
+                4: np.nan,
+                5: '2021-11-22',
+                6: np.nan,
+                7: '2021-06-19',
+                8: np.nan,
+                9: np.nan,
+            },
+        })
+>       pd.testing.assert_frame_equal(expected_sampled, sampled)
+
+tests/integration/single_table/test_constraints.py:612: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pandas/_libs/testing.pyx:55: in pandas._libs.testing.assert_almost_equal
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   AssertionError: DataFrame.iloc[:, 0] (column name="A") are different
+E   
+E   DataFrame.iloc[:, 0] (column name="A") values are different (30.0 %)
+E   [index]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+E   [left]:  [2020-02-04, nan, 2020-02-07, nan, nan, 2020-02-29, nan, nan, nan, 2020-02-02]
+E   [right]: [nan, nan, 2020-02-07, nan, 2020-02-29, 2020-02-29, nan, nan, 2020-01-26, 2020-02-02]
+E   At positional index 0, first diff: 2020-02-04 != nan
+
+pandas/_libs/testing.pyx:173: AssertionError
+----------------------------- Captured stderr call -----------------------------
+  0%|          | 0/10 [00:00<?, ?it/s]Sampling rows:   0%|          | 0/10 [00:00<?, ?it/s]Sampling rows: 100%|██████████| 10/10 [00:00<00:00, 1160.38it/s]
+________________ test_range_constraint_with_datetimes_and_nones ________________
+
+    def test_range_constraint_with_datetimes_and_nones():
+        """Test that the ``Range`` constraint works with ``None`` and ``datetime``."""
+        # Setup
+        data = pd.DataFrame(
+            data={
+                'A': [None, None, '2020-01-02', '2020-03-04'],
+                'B': [None, '2021-03-04', '2021-12-31', None],
+                'C': [None, '2022-03-04', '2022-12-31', None],
+            }
+        )
+    
+        metadata = SingleTableMetadata.load_from_dict({
+            'columns': {
+                'A': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+                'B': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+                'C': {'sdtype': 'datetime', 'datetime_format': '%Y-%m-%d'},
+            }
+        })
+    
+        metadata.validate()
+        synth = GaussianCopulaSynthesizer(metadata)
+        synth.add_constraints([
+            {
+                'constraint_class': 'Range',
+                'constraint_parameters': {
+                    'low_column_name': 'A',
+                    'middle_column_name': 'B',
+                    'high_column_name': 'C',
+                    'strict_boundaries': False,
+                },
+            }
+        ])
+        synth.validate(data)
+    
+        # Run
+        synth.fit(data)
+        sampled = synth.sample(10)
+    
+        # Assert
+        expected_sampled = pd.DataFrame({
+            'A': [
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+                '2020-01-02',
+            ],
+            'B': [
+                np.nan,
+                np.nan,
+                '2021-12-30',
+                np.nan,
+                np.nan,
+                '2021-12-30',
+                np.nan,
+                np.nan,
+                np.nan,
+                '2021-12-30',
+            ],
+            'C': [
+                np.nan,
+                np.nan,
+                '2022-12-30',
+                np.nan,
+                np.nan,
+                '2022-12-30',
+                np.nan,
+                np.nan,
+                np.nan,
+                '2022-12-30',
+            ],
+        })
+>       pd.testing.assert_frame_equal(expected_sampled, sampled)
+
+tests/integration/single_table/test_constraints.py:692: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pandas/_libs/testing.pyx:55: in pandas._libs.testing.assert_almost_equal
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   AssertionError: DataFrame.iloc[:, 0] (column name="A") are different
+E   
+E   DataFrame.iloc[:, 0] (column name="A") values are different (30.0 %)
+E   [index]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+E   [left]:  [2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02, 2020-01-02]
+E   [right]: [2020-01-02, 2020-01-02, nan, 2020-01-02, 2020-01-02, nan, 2020-01-02, 2020-01-02, 2020-01-02, nan]
+E   At positional index 2, first diff: 2020-01-02 != nan
+
+pandas/_libs/testing.pyx:173: AssertionError
+----------------------------- Captured stderr call -----------------------------
+  0%|          | 0/10 [00:00<?, ?it/s]Sampling rows:   0%|          | 0/10 [00:00<?, ?it/s]Sampling rows: 100%|██████████| 10/10 [00:00<00:00, 675.99it/s]
+=============================== warnings summary ===============================
+tests/integration/data_processing/test_data_processor.py: 2 warnings
+tests/integration/multi_table/test_hma.py: 54 warnings
+tests/integration/sequential/test_par.py: 12 warnings
+tests/integration/single_table/test_base.py: 2 warnings
+tests/integration/single_table/test_constraints.py: 1 warning
+tests/integration/single_table/test_copulas.py: 1 warning
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/rdt/transformers/utils.py:394: FutureWarning:
+  
+  The 'enforce_uniqueness' parameter is no longer supported. Please use the 'cardinality_rule' parameter instead.
+
+tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_localized_anonymized_columns
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/rdt/transformers/pii/anonymizer.py:109: UserWarning:
+  
+  Locales ['en_CA', 'fr_CA'] do not support provider 'job' and function 'job'.
+  In place of these locales, 'en_US' will be used instead. Please refer to the localized provider docs for more information: https://faker.readthedocs.io/en/master/locales.html
+
+tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_update_transformers_id_generator
+tests/integration/single_table/test_copulas.py::test_update_transformers_with_id_generator
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/rdt/transformers/id.py:88: FutureWarning:
+  
+  The 'IDGenerator' has been renamed to 'IndexGenerator'. Please update thename to ensure compatibility with future versions of RDT.
+
+tests/integration/evaluation/test_single_table.py: 1 warning
+tests/integration/lite/test_single_table.py: 3 warnings
+tests/integration/metadata/test_visualization.py: 1 warning
+tests/integration/sequential/test_par.py: 8 warnings
+tests/integration/single_table/test_base.py: 38 warnings
+tests/integration/single_table/test_constraints.py: 8 warnings
+tests/integration/single_table/test_copulas.py: 3 warnings
+tests/integration/single_table/test_ctgan.py: 1 warning
+tests/unit/data_processing/test_data_processor.py: 2 warnings
+tests/unit/lite/test_single_table.py: 2 warnings
+tests/unit/multi_table/test_hma.py: 1 warning
+tests/unit/sequential/test_par.py: 35 warnings
+tests/unit/single_table/test_base.py: 23 warnings
+tests/unit/single_table/test_copulagan.py: 4 warnings
+tests/unit/single_table/test_copulas.py: 5 warnings
+tests/unit/single_table/test_ctgan.py: 3 warnings
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/base.py:97: UserWarning:
+  
+  We strongly recommend saving the metadata using 'save_to_json' for replicability in future SDV versions.
+
+tests/integration/lite/test_single_table.py::test_sample
+tests/integration/lite/test_single_table.py::test_sample_with_constraints
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test___init__invalid_name
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test__init__speed_passes_correct_parameters
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test__init__passes_correct_locales
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_get_parameters
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_get_metadata
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test___repr__
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:46: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/integration/lite/test_single_table.py::test_sample
+tests/integration/lite/test_single_table.py::test_sample_with_constraints
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_fit
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_fit_null_column_true
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_fit_with_null_values
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:90: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/integration/lite/test_single_table.py::test_sample
+tests/integration/lite/test_single_table.py::test_sample_with_constraints
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_sample
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:111: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/integration/lite/test_single_table.py::test_sample_with_constraints
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:64: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/integration/metadata/test_multi_table.py::test_add_column_relationship
+tests/integration/metadata/test_single_table.py::test_add_column_relationship
+tests/integration/metadata/test_single_table.py::test_validate
+tests/integration/metadata/test_single_table.py::test_validate_errors
+tests/integration/multi_table/test_hma.py::test_metadata_updated_warning[add_column_relationship-kwargs2]
+tests/integration/single_table/test_base.py::test_metadata_updated_warning[add_column_relationship-kwargs2]
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:899: UserWarning:
+  
+  The metadata contains a column relationship of type 'address' which requires the address add-on. This relationship will be ignored. For higher quality data in this relationship, please inquire about the SDV Enterprise tier.
+
+tests/integration/metadata/test_visualization.py::test_visualize_graph_for_single_table
+tests/integration/metadata/test_visualization.py::test_visualize_graph_for_multi_table
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/visualization.py:118: RuntimeWarning:
+  
+  Graphviz does not seem to be installed on this system. For full metadata visualization capabilities, please make sure to have its binaries propertly installed: https://graphviz.gitlab.io/download/
+
+tests/integration/metadata/test_visualization.py: 1 warning
+tests/integration/multi_table/test_hma.py: 21 warnings
+tests/unit/multi_table/test_base.py: 4 warnings
+tests/unit/multi_table/test_hma.py: 1 warning
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/multi_table/base.py:94: UserWarning:
+  
+  We strongly recommend saving the metadata using 'save_to_json' for replicability in future SDV versions.
+
+tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_save_and_load
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/multi_table/base.py:680: UserWarning:
+  
+  You are saving a synthesizer that has not yet been fitted. You will not be able to sample synthetic data without fitting. We recommend fitting the synthesizer first and then saving.
+
+tests/integration/multi_table/test_hma.py: 16 warnings
+tests/unit/multi_table/test_hma.py: 1 warning
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/multi_table/hma.py:562: FutureWarning:
+  
+  Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+
+tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_use_own_data_using_hma
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/datasets/local.py:36: UserWarning:
+  
+  Ignoring incompatible files ['metadata.json', 'metadata_v2.json'] in folder '/tmp/pytest-of-root/pytest-246/test_use_own_data_using_hma0/datasets'.
+
+tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_use_own_data_using_hma
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:743: UserWarning:
+  
+  There is an existing primary key 'hotel_id'. This key will be removed.
+
+tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_use_own_data_using_hma
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:743: UserWarning:
+  
+  There is an existing primary key 'guest_email'. This key will be removed.
+
+tests/integration/multi_table/test_hma.py::test_metadata_updated_warning[set_sequence_key-kwargs4]
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/multi_table.py:622: UserWarning:
+  
+  Sequential modeling is not yet supported on SDV Multi Table models.
+
+tests/integration/multi_table/test_hma.py::test_hma_synthesizer_with_fixed_combinations
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:743: UserWarning:
+  
+  There is an existing primary key 'city'. This key will be removed.
+
+tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[[0-9]{3,4}]
+tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[0HQ-[a-z]]
+tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[0+]
+tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[\\d]
+tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[\\d{1,5}]
+tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[\\w]
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:743: UserWarning:
+  
+  There is an existing primary key 'parent_id'. This key will be removed.
+
+tests/integration/sequential/test_par.py: 11 warnings
+tests/unit/sequential/test_par.py: 2 warnings
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/sequential/par.py:242: FutureWarning:
+  
+  DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+
+tests/integration/sequential/test_par.py::test_save_and_load
+tests/integration/single_table/test_base.py::test_save_and_load
+tests/integration/single_table/test_base.py::test_save_and_load_no_id
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/base.py:494: UserWarning:
+  
+  You are saving a synthesizer that has not yet been fitted. You will not be able to sample synthetic data without fitting. We recommend fitting the synthesizer first and then saving.
+
+tests/integration/sequential/test_par.py::test_synthesize_sequences
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/sequential/par.py:471: FutureWarning:
+  
+  The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+
+tests/integration/sequential/test_par.py::test_par_subset_of_data_simplified
+tests/integration/sequential/test_par.py::test_par_subset_of_data_simplified
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:1216: UserWarning:
+  
+  No 'datetime_format' is present in the metadata for the following columns:
+  Column Name   sdtype datetime_format
+         date datetime            None
+  Without this specification, SDV may not be able to accurately parse the data. We recommend adding datetime formats using 'update_column'.
+
+tests/integration/single_table/test_base.py: 69 warnings
+tests/integration/single_table/test_ctgan.py: 45 warnings
+tests/unit/single_table/test_ctgan.py: 3 warnings
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/ctgan.py:25: DeprecationWarning:
+  
+  is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, pd.CategoricalDtype) instead
+
+tests/integration/single_table/test_base.py: 18 warnings
+tests/integration/single_table/test_ctgan.py: 5 warnings
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/ctgan/synthesizers/_utils.py:16: FutureWarning:
+  
+  `cuda` parameter is deprecated and will be removed in a future release. Please use `enable_gpu` instead.
+
+tests/integration/single_table/test_base.py::test_sample_remaining_columns_with_some_nans
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/utils.py:154: UserWarning:
+  
+  Only able to sample 1 rows for the given conditions. To sample more rows, try increasing `max_tries_per_batch` (currently: 100). Note that increasing this value will also increase the sampling time.
+
+tests/integration/single_table/test_constraints.py::test_scalar_inequality_constraint_with_datetimes_and_nones
+tests/integration/single_table/test_constraints.py::test_scalar_inequality_constraint_with_datetimes_and_nones
+tests/integration/single_table/test_constraints.py::test_scalar_inequality_constraint_with_datetimes_and_nones
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/constraints/tabular.py:720: RuntimeWarning:
+  
+  invalid value encountered in log
+
+tests/integration/single_table/test_constraints.py::test_range_constraint_with_datetimes_and_nones
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/constraints/tabular.py:1035: PerformanceWarning:
+  
+  Adding/subtracting object-dtype array to TimedeltaArray not vectorized.
+
+tests/integration/single_table/test_constraints.py::test_timezone_aware_constraints
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/constraints/tabular.py:553: PerformanceWarning:
+  
+  Adding/subtracting object-dtype array to TimedeltaArray not vectorized.
+
+tests/integration/single_table/test_copulas.py::test_adding_constraints
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/base.py:309: UserWarning:
+  
+  For these constraints to take effect, please refit the synthesizer using 'fit'.
+
+tests/integration/single_table/test_copulas.py::test_adding_constraints
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/base.py:417: UserWarning:
+  
+  This model has already been fitted. To use the new preprocessed data, please refit the model using 'fit' or 'fit_processed_data'.
+
+tests/integration/single_table/test_copulas.py::test_adding_constraints
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/base.py:259: UserWarning:
+  
+  For this change to take effect, please refit the synthesizer using `fit`.
+
+tests/integration/single_table/test_copulas.py::test_custom_processing_anonymization
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/rdt/transformers/categorical.py:926: FutureWarning:
+  
+  The 'CustomLabelEncoder' is renamed to 'OrderedLabelEncoder'. Please update thename to ensure compatibility with future versions of RDT.
+
+tests/integration/single_table/test_copulas.py::test_validate_with_failing_constraint
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/tests/integration/single_table/test_copulas.py:306: FutureWarning:
+  
+  ChainedAssignmentError: behaviour will change in pandas 3.0!
+  You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
+  A typical example is when you are setting values in a column of a DataFrame, like:
+  
+  df["col"][row_indexer] = value
+  
+  Use `df.loc[row_indexer, "col"] = values` instead, to perform the assignment in a single step and ensure this keeps updating the original `df`.
+  
+  See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+tests/integration/single_table/test_ctgan.py::test__estimate_num_columns
+tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_various_sdtypes
+tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_various_sdtypes
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:1216: UserWarning:
+  
+  No 'datetime_format' is present in the metadata for the following columns:
+  Column Name   sdtype datetime_format
+     datetime datetime            None
+  Without this specification, SDV may not be able to accurately parse the data. We recommend adding datetime formats using 'update_column'.
+
+tests/integration/single_table/test_ctgan.py::test__estimate_num_columns
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/single_table/base.py:242: UserWarning:
+  
+  Replacing the default transformer for column 'categorical2' might impact the quality of your synthetic data.
+
+tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test__fit_formatters
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/_utils.py:53: UserWarning:
+  
+  Parsing dates in %d-%m-%Y format when dayfirst=False (the default) was specified. Pass `dayfirst=True` or specify a format to silence this warning.
+
+tests/unit/datasets/test_local.py::test_load_csvs_no_csvs
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/datasets/local.py:36: UserWarning:
+  
+  Ignoring incompatible files ['fake.json'] in folder '/tmp/pytest-of-root/pytest-246/test_load_csvs_no_csvs0'.
+
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_get_parameters
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:74: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_get_metadata
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:69: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_sample_from_conditions
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_sample_from_conditions_with_max_tries
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:143: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_sample_remaining_columns
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_sample_remaining_columns_with_max_tries
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:172: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_list_available_presets
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:210: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_save
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:186: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/unit/lite/test_single_table.py::TestSingleTablePreset::test_load
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/lite/single_table.py:202: FutureWarning:
+  
+  The 'SingleTablePreset' is deprecated. For equivalent Fast ML functionality, please use the 'GaussianCopulaSynthesizer'.
+
+tests/unit/metadata/test_multi_table.py::TestMultiTableMetadata::test_visualize_show_table_details_only
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/multi_table.py:999: FutureWarning:
+  
+  Using True or False for show_table_details is deprecated. Use show_table_details='full' to show all table details.
+
+tests/unit/metadata/test_single_table.py::TestSingleTableMetadata::test_validate_data_sdtypes
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:1216: UserWarning:
+  
+  No 'datetime_format' is present in the metadata for the following columns:
+  Column Name   sdtype datetime_format
+        date1 datetime            None
+        date2 datetime            None
+  Without this specification, SDV may not be able to accurately parse the data. We recommend adding datetime formats using 'update_column'.
+
+tests/unit/metadata/test_single_table.py::TestSingleTableMetadata::test_validate_data
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:1216: UserWarning:
+  
+  No 'datetime_format' is present in the metadata for the following columns:
+  Column Name   sdtype datetime_format
+     date_col datetime            None
+  Without this specification, SDV may not be able to accurately parse the data. We recommend adding datetime formats using 'update_column'.
+
+tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test__model_tables
+tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test__sample
+tests/unit/sampling/test_hierarchical_sampler.py::TestBaseHierarchicalSampler::test__recreate_child_synthesizer
+tests/unit/sampling/test_hierarchical_sampler.py::TestBaseHierarchicalSampler::test__add_foreign_key_columns
+tests/unit/sampling/test_independent_sampler.py::TestBaseIndependentSampler::test__add_foreign_key_columns
+tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test__fit
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/_pytest/raises.py:624: PytestWarning:
+  
+  matching against an empty string will *always* pass. If you want to check for an empty message you need to pass '^$'. If you don't want to match you should pass `None` or leave out the parameter.
+
+tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_different_distributions
+tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_different_distributions
+tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_different_distributions
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/rdt/transformers/base.py:479: UserWarning:
+  
+  The 'missing_value_generation' parameter is set to 'random' but the data already contains missing values. Missing value generation will be skipped.
+
+tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_various_sdtypes
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/multi_table.py:798: UserWarning:
+  
+  No 'datetime_format' is present in the metadata for the following columns:
+   Table Name Column Name   sdtype datetime_format
+      parent    datetime datetime            None
+  Without this specification, SDV may not be able to accurately parse the data. We recommend adding datetime formats using 'update_column'.
+
+tests/unit/sequential/test_par.py::TestPARSynthesizer::test__transform_sequence_index_single_instances
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/sequential/par.py:242: FutureWarning:
+  
+  Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+
+tests/unit/sequential/test_par.py::TestPARSynthesizer::test__transform_sequence_index_non_unique_sequence_key
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/sequential/par.py:238: FutureWarning:
+  
+  Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+
+tests/unit/sequential/test_par.py::TestPARSynthesizer::test_update_transformers
+tests/unit/sequential/test_par.py::TestPARSynthesizer::test_update_transformers_context_column
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/metadata/single_table.py:1216: UserWarning:
+  
+  No 'datetime_format' is present in the metadata for the following columns:
+  Column Name   sdtype datetime_format
+         time datetime            None
+  Without this specification, SDV may not be able to accurately parse the data. We recommend adding datetime formats using 'update_column'.
+
+tests/unit/sequential/test_par.py::TestPARSynthesizer::test_load
+  /home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/sdv/_utils.py:287: SDV Version Warning:
+  
+  You are currently on SDV version 1.15.1.dev0 but this synthesizer was created on version None. The latest bug fixes and features may not be available for this synthesizer. To see these enhancements, create and train a new synthesizer on this version.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+73.49s call     tests/integration/sequential/test_par.py::test_par_categorical_column_represented_by_floats
+59.30s call     tests/integration/sequential/test_par.py::test_synthesize_sequences
+18.28s call     tests/integration/utils/test_poc.py::test_simplify_schema_big_demo_datasets
+15.15s call     tests/integration/multi_table/test_hma.py::test_hma_0_1_child[1000]
+14.30s call     tests/integration/single_table/test_ctgan.py::test_synthesize_table_ctgan
+12.52s call     tests/integration/multi_table/test_hma.py::test_disjointed_tables
+10.75s call     tests/integration/datasets/test_demo.py::test_get_available_demos_multi_table
+8.99s call     tests/integration/single_table/test_ctgan.py::test_ctgansynthesizer_with_constraints_generating_categorical_values
+7.43s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_synthesize_multiple_tables_using_hma
+6.26s call     tests/integration/utils/test_poc.py::test_get_random_subset[NCAA_v1-tourney_slots-tourney_compact_results-1000-1000]
+6.16s call     tests/integration/sequential/test_par.py::test_par_subset_of_data
+6.14s call     tests/integration/single_table/test_base.py::test_fit_and_sample_numerical_col_names[CopulaGANSynthesizer]
+5.71s call     tests/integration/single_table/test_base.py::test_fit_and_sample_numerical_col_names[CTGANSynthesizer]
+5.52s call     tests/integration/single_table/test_base.py::test_detect_from_dataframe_numerical_col[CopulaGANSynthesizer]
+5.51s call     tests/integration/sequential/test_par.py::test_constraints_on_par
+5.49s call     tests/integration/utils/test_poc.py::test_get_random_subset[AustralianFootball_v1-matches-players-1000-1000]
+5.48s call     tests/integration/single_table/test_base.py::test_detect_from_dataframe_numerical_col[CTGANSynthesizer]
+5.02s call     tests/integration/multi_table/test_hma.py::test_hma_relationship_validity
+4.58s call     tests/integration/datasets/test_demo.py::test_get_available_demos_single_table
+4.07s call     tests/integration/single_table/test_base.py::test_sampling_reset_sampling[CopulaGANSynthesizer]
+4.05s call     tests/integration/single_table/test_base.py::test_sampling_reset_sampling[CTGANSynthesizer]
+3.60s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_use_own_data_using_hma
+3.58s call     tests/integration/sequential/test_par.py::test_par_unique_sequence_index_with_enforce_min_max
+3.55s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_numerical_distributions
+3.49s call     tests/integration/sequential/test_par.py::test_par
+3.48s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_get_learned_distributions_error_msg
+3.45s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_with_anonymized_columns
+3.23s call     tests/integration/multi_table/test_hma.py::test_small_sample
+3.20s call     tests/integration/multi_table/test_hma.py::test_fit_and_sample_numerical_col_names
+2.97s call     tests/integration/utils/test_poc.py::test_simplify_schema
+2.74s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_with_alternate_keys
+2.61s call     tests/integration/single_table/test_copulas.py::test_adding_constraints
+2.34s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_various_sdtypes
+2.30s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_with_primary_key_numerical
+2.23s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_with_anonymized_columns_and_primary_key
+1.95s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dict[CopulaGANSynthesizer]
+1.95s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dataframe[CopulaGANSynthesizer]
+1.94s call     tests/integration/single_table/test_copulas.py::test_synthesize_table_gaussian_copula
+1.60s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma
+1.58s call     tests/integration/single_table/test_base.py::test_fit_and_sample_numerical_col_names[TVAESynthesizer]
+1.56s call     tests/integration/single_table/test_copulas.py::test_custom_processing_anonymization
+1.55s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dict[CTGANSynthesizer]
+1.52s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dataframe[CTGANSynthesizer]
+1.48s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_reset_sampling
+1.40s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_metadata_updated_no_warning
+1.39s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dict[TVAESynthesizer]
+1.39s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dataframe[TVAESynthesizer]
+1.31s call     tests/integration/single_table/test_copulas.py::test_datetime_values_inside_real_data_range
+1.29s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_localized_anonymized_columns
+1.28s call     tests/integration/utils/test_utils.py::test_get_random_sequence_subset
+1.25s call     tests/integration/single_table/test_base.py::test_sample_keys_are_scrambled
+1.21s call     tests/integration/utils/test_poc.py::test_simpliy_nothing_to_simplify
+1.15s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test__get_likelihoods
+1.14s call     tests/integration/single_table/test_base.py::test_sample_from_conditions_with_nans
+1.12s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_progress_bar_print
+1.05s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_metadata_updated_warning_detect
+1.02s call     tests/integration/evaluation/test_single_table.py::test_column_pair_plot_sample_size_parameter
+0.92s call     tests/integration/single_table/test_constraints.py::test_synthesizer_with_inequality_constraint
+0.89s call     tests/integration/utils/test_poc.py::test_get_random_subset[MuskSmall_v1-molecule-conformation-50-150]
+0.86s call     tests/integration/utils/test_utils.py::test_get_random_sequence_subset_random_clipping
+0.85s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_warning_message_too_many_cols
+0.84s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_refit_hypertransformer
+0.83s call     tests/integration/single_table/test_base.py::test_sampling_reset_sampling[TVAESynthesizer]
+0.82s call     tests/unit/datasets/test_demo.py::test_download_demo_single_table_no_output_folder
+0.79s call     tests/integration/single_table/test_base.py::test_sample_remaining_columns_with_some_nans
+0.76s call     tests/integration/single_table/test_base.py::test_sample_remaining_columns_with_all_nans
+0.75s call     tests/unit/datasets/test_demo.py::test_download_demo_timeseries
+0.72s call     tests/integration/utils/test_poc.py::test_simplify_no_grandchild
+0.71s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_two_lineages_one_grandchild
+0.68s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_with_inequality_constraint
+0.68s call     tests/integration/single_table/test_base.py::test_detect_from_dataframe_numerical_col[TVAESynthesizer]
+0.67s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_custom_constraint_2_tables
+0.65s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_custom_constraint
+0.64s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_custom_constraint_loaded_from_file
+0.62s call     tests/integration/multi_table/test_hma.py::test_hma_not_fit_raises_sampling_error
+0.62s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_one_parent_two_children
+0.62s call     tests/integration/single_table/test_constraints.py::test_custom_and_overlapping_constraint_errors
+0.62s call     tests/unit/datasets/test_demo.py::test_download_demo_dataset_doesnt_exist
+0.61s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_fit_processed_multiple_calls
+0.58s call     tests/integration/single_table/test_ctgan.py::test_category_dtype_errors
+0.55s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_three_linear_nodes
+0.55s call     tests/integration/single_table/test_copulas.py::test_validate_with_failing_constraint
+0.53s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_different_distributions
+0.51s call     tests/integration/metadata/test_multi_table.py::test_detect_from_dataframes
+0.51s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_reverse_transform_with_formatters
+0.50s call     tests/integration/metadata/test_multi_table.py::test_detect_from_csvs
+0.50s call     tests/integration/metadata/test_single_table.py::test_validate_unknown_sdtype
+0.50s call     tests/integration/metadata/test_multi_table.py::test_add_column_relationship
+0.50s call     tests/integration/metadata/test_multi_table.py::test_detect_table_from_csv
+0.49s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled
+0.47s call     tests/integration/utils/test_poc.py::test_get_random_subset[NBA_v1-Team-Actions-10-200]
+0.44s call     tests/integration/io/local/test_local.py::TestExcelHandler::test_integration_write_and_read
+0.43s call     tests/integration/multi_table/test_hma.py::test_hma_synthesizer_with_fixed_combinations
+0.42s call     tests/integration/utils/test_poc.py::test_get_random_subset_disconnected_schema
+0.42s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_set_table_parameters
+0.42s call     tests/unit/datasets/test_demo.py::test_download_demo_multi_table
+0.41s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_prepare_for_fitting
+0.40s call     tests/unit/datasets/test_demo.py::test_download_demo_single_table
+0.40s call     tests/integration/sequential/test_par.py::test_par_sequence_index_is_numerical
+0.40s call     tests/integration/single_table/test_base.py::test_fit_and_sample_numerical_col_names[GaussianCopulaSynthesizer]
+0.37s call     tests/integration/sequential/test_par.py::test_par_missing_sequence_index
+0.36s call     tests/integration/multi_table/test_hma.py::test_hma_0_1_child[10]
+0.35s call     tests/integration/single_table/test_ctgan.py::test_categorical_metadata_with_int_data
+0.31s call     tests/unit/single_table/test_ctgan.py::TestCTGANSynthesizer::test_preprocessing_many_categories
+0.30s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test_get_learned_distributions
+0.30s call     tests/integration/multi_table/test_hma.py::test_hma_0_1_grandparent
+0.28s call     tests/integration/single_table/test_base.py::test_sampling[CopulaGANSynthesizer]
+0.26s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_two_parents_one_child
+0.25s call     tests/integration/sequential/test_par.py::test_par_with_datetime_context
+0.21s call     tests/integration/sequential/test_par.py::test_par_subset_of_data_simplified
+0.19s call     tests/integration/multi_table/test_hma.py::test_detect_from_dataframe_numerical_col
+0.18s call     tests/integration/single_table/test_constraints.py::test_inequality_constraint_all_possible_nans_configurations
+0.18s call     tests/integration/single_table/test_base.py::test_multiple_fits
+0.17s call     tests/integration/single_table/test_constraints.py::test_range_constraint_all_possible_nans_configurations
+0.16s call     tests/integration/single_table/test_base.py::test_sampling[CTGANSynthesizer]
+0.15s call     tests/integration/single_table/test_base.py::test_sampling[TVAESynthesizer]
+0.14s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_hma_primary_key_and_foreign_key_only
+0.14s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_sampling_with_unknown_sdtype_numerical_column
+0.14s call     tests/integration/single_table/test_base.py::test_sample_from_conditions_with_batch_size
+0.13s call     tests/integration/single_table/test_constraints.py::test_custom_constraints_from_file
+0.13s call     tests/integration/single_table/test_constraints.py::test_custom_constraints_from_object
+0.13s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__estimate_num_columns_to_be_modeled_multiple_foreign_keys
+0.13s call     tests/integration/single_table/test_base.py::test_sample_from_conditions_negative_float
+0.12s call     tests/integration/single_table/test_constraints.py::test_scalar_inequality_constraint_with_datetimes_and_nones
+0.12s call     tests/integration/single_table/test_constraints.py::test_conditional_sampling_with_constraints
+0.12s call     tests/integration/single_table/test_base.py::test_sampling[GaussianCopulaSynthesizer]
+0.11s call     tests/integration/single_table/test_constraints.py::test_range_constraint_with_datetimes_and_nones
+0.11s call     tests/integration/metadata/test_visualization.py::test_visualize_graph_for_multi_table
+0.11s call     tests/integration/single_table/test_constraints.py::test_inequality_constraint_with_datetimes_and_nones
+0.11s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dataframe[GaussianCopulaSynthesizer]
+0.11s call     tests/integration/single_table/test_base.py::test_conditional_sampling_graceful_reject_sampling_true_dict[GaussianCopulaSynthesizer]
+0.11s call     tests/integration/sequential/test_par.py::test_column_after_date_complex
+0.10s call     tests/integration/single_table/test_base.py::test_refitting_a_model
+0.10s call     tests/integration/single_table/test_constraints.py::test_fit_with_unique_constraint_on_data_which_has_index_column
+0.10s call     tests/integration/single_table/test_base.py::test_modeling_with_complex_datetimes
+0.10s call     tests/integration/single_table/test_base.py::test_detect_from_dataframe_numerical_col[GaussianCopulaSynthesizer]
+0.09s call     tests/integration/single_table/test_constraints.py::test_constraint_datetime_check
+0.09s call     tests/integration/single_table/test_copulas.py::test_categorical_column_with_numbers
+0.08s call     tests/integration/single_table/test_base.py::test_config_creation_doesnt_raise_error
+0.07s call     tests/integration/single_table/test_base.py::test_sampling_reset_sampling[GaussianCopulaSynthesizer]
+0.07s call     tests/integration/single_table/test_constraints.py::test_custom_constraint_with_key
+0.06s call     tests/integration/sequential/test_par.py::test_column_after_date_simple
+0.06s call     tests/integration/single_table/test_copulas.py::test_unknown_sdtype
+0.05s call     tests/integration/single_table/test_constraints.py::test_fit_with_unique_constraint_on_data_with_only_index_column
+0.05s call     tests/integration/single_table/test_base.py::test_metadata_updated_no_warning
+0.05s call     tests/integration/single_table/test_ctgan.py::test_categoricals_are_not_preprocessed
+0.05s call     tests/integration/single_table/test_constraints.py::test_fit_with_unique_constraint_on_data_subset
+0.04s call     tests/integration/single_table/test_constraints.py::test_conditional_sampling_constraint_uses_reject_sampling
+0.04s call     tests/integration/metadata/test_visualization.py::test_visualize_graph_for_single_table
+0.04s call     tests/integration/single_table/test_copulas.py::test_update_transformers_with_id_generator
+0.04s call     tests/integration/io/local/test_local.py::TestExcelHandler::test_integration_write_and_read_append_mode
+0.04s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_info
+0.04s call     tests/integration/single_table/test_constraints.py::test_scalar_range_constraint_with_datetimes_and_nones
+0.04s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__augment_table
+0.04s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_info_with_enterprise
+0.04s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test_get_info_no_enterprise
+0.04s call     tests/integration/single_table/test_base.py::test_get_info
+0.03s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_get_info
+0.03s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test_get_info_with_enterprise
+0.03s call     tests/integration/multi_table/test_hma.py::test_table_name_logging
+0.03s call     tests/integration/single_table/test_constraints.py::test_timezone_aware_constraints
+0.03s call     tests/unit/single_table/test_copulas.py::TestGaussianCopulaSynthesizer::test__fit_logging
+0.03s call     tests/integration/single_table/test_copulas.py::test_numerical_columns_gets_pii
+0.03s call     tests/integration/lite/test_single_table.py::test_sample_with_constraints
+0.03s call     tests/integration/evaluation/test_multi_table.py::test_evaluation
+0.03s call     tests/integration/evaluation/test_single_table.py::test_evaluation
+0.03s call     tests/integration/lite/test_single_table.py::test_warnings_are_shown
+0.02s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__get_extension
+0.02s call     tests/integration/single_table/test_ctgan.py::test_ctgan_with_dropped_columns
+0.02s call     tests/integration/single_table/test_base.py::test_metadata_updated_warning_detect
+0.02s call     tests/unit/constraints/test_base.py::TestColumnsModel::test__reject_sampling_duplicates_valid_rows
+0.02s call     tests/integration/lite/test_single_table.py::test_sample
+0.02s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test_update_transformers_warns_models
+0.02s call     tests/unit/constraints/test_base.py::TestColumnsModel::test__reject_sampling_no_valid_rows
+0.01s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__print_estimate_warning
+0.01s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_save_and_load
+0.01s call     tests/integration/sequential/test_par.py::test_save_and_load
+0.01s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test__recreate_child_synthesizer_with_default_parameters
+0.01s call     tests/unit/single_table/test_copulas.py::TestGaussianCopulaSynthesizer::test_get_learned_distributions
+0.01s call     tests/unit/metadata/test_multi_table.py::TestMultiTableMetadata::test_validate_data_datetime_warning
+0.01s call     tests/integration/multi_table/test_hma.py::test_save_and_load_with_downgraded_version
+0.01s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_categorical_column_with_numbers
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__transform_sequence
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate_constraints_not_met
+0.01s call     tests/unit/metadata/test_single_table.py::TestSingleTableMetadata::test_detect_from_dataframe_numerical_columns
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__transform_sequence_index_single_instances
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_auto_assign_transformers_without_enforce_min_max
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_update_transformers_context_column
+0.01s call     tests/integration/data_processing/test_data_processor.py::TestDataProcessor::test_update_transformers_id_generator
+0.01s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test_update_transformers_warns_gaussian_copula
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_learned_distributions_raises_non_parametric_error
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_update_transformers
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate_table_synthesizers_errors
+0.01s call     tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_null_foreign_keys
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test___init__
+0.01s call     tests/unit/metadata/test_single_table.py::TestSingleTableMetadata::test_validate_data_datetime_warning
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_set_table_parameters
+0.01s call     tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[\\d]
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_preprocess_warning
+0.01s call     tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test_update_transformers_ignores_rdt_refit_warning
+0.01s call     tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[[0-9]{3,4}]
+0.01s call     tests/unit/metadata/test_single_table.py::TestSingleTableMetadata::test_validate_data_sdtypes
+0.01s call     tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[\\d{1,5}]
+0.01s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test_update_transformers_warns_fitted
+0.01s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test_update_transformers
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__transform_sequence_index_non_unique_sequence_key
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate_key_error
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_table_parameters_has_parameters
+0.01s call     tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[0+]
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate_data_is_not_dataframe
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_loss_values_unfitted_error
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate
+0.01s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__augment_tables
+0.01s call     tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[0HQ-[a-z]]
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_preprocess_single_table_preprocess_raises_error
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__sample_from_par_with_sequence_key
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate_data_does_not_match
+0.01s call     tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test__create_config
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_sample
+0.01s call     tests/integration/multi_table/test_hma.py::test_fit_int_primary_key_regex_includes_zero[\\w]
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_preprocess
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate_missing_foreign_keys
+0.01s call     tests/integration/single_table/test_base.py::test_transformers_correctly_auto_assigned
+0.01s call     tests/unit/single_table/test_ctgan.py::TestCTGANSynthesizer::test__estimate_num_columns
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_auto_assign_transformers_missing_column
+0.01s call     tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test_reverse_transform
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_validate_missing_table
+0.01s call     tests/integration/single_table/test_base.py::test_auto_assign_transformers_and_update_with_pii
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_preprocess_single_table_preprocess_raises_error_0_int_regex
+0.01s call     tests/integration/single_table/test_constraints.py::test_aggregate_constraint_errors
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__sample_from_par_with_sequence_index
+0.01s call     tests/unit/single_table/test_ctgan.py::TestCTGANSynthesizer::test_preprocessing_few_categories
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_constraints
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__sample_from_par
+0.01s call     tests/integration/single_table/test_base.py::test_save_and_load
+0.01s call     tests/integration/single_table/test_ctgan.py::test__estimate_num_columns
+0.01s call     tests/integration/utils/test_poc.py::test_get_random_subset_with_missing_values
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_sample_raises_sampling_error
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_update_transformers_missing_table
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_auto_assign_transformers_foreign_key_none
+0.01s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test_get_parameters
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_loss_values_unsupported_synthesizer_error
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__fit_sequence_columns_bad_dtype
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_metadata
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_table_parameters_empty
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_auto_assign_transformers
+0.01s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test_get_learned_distributions_raises_an_error
+0.01s call     tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test__create_config_with_different_pii_situations
+0.01s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test___init__
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test__init__column_relationship_warning
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_preprocess_int_columns
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test___init___synthesizer_kwargs_deprecated
+0.01s call     tests/unit/metadata/test_single_table.py::TestSingleTableMetadata::test__determine_sdtype_for_numbers
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_update_transformers
+0.01s call     tests/integration/single_table/test_base.py::test_save_and_load_no_id
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test__assign_table_transformers
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_sample_validate_input
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__fit_sequence_columns
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_transformers
+0.01s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test_set_table_parameters_errors_gaussian_kde
+0.01s call     tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__get_distributions
+0.01s call     tests/integration/single_table/test_base.py::test_save_and_load_with_downgraded_version
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_sample_sequential_columns
+0.01s call     tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test_fit_empty_data_constrained
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_add_constraints_unique
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test__model_tables
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_auto_assign_transformers_missing_table
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test__sample
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_set_table_parameters_invalid_enforce_rounding
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_transformers_missing_table
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_add_constraints
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_loss_values_bad_table_name
+0.01s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test__validate_conditions_nans
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_parameters
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_set_table_parameters_invalid_enforce_min_max_values
+0.01s call     tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test_to_json_from_json
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_get_learned_distributions_raises_an_unfitted_error
+0.01s call     tests/unit/multi_table/test_utils.py::test__subsample_ancestors
+0.01s call     tests/unit/multi_table/test_base.py::TestBaseMultiTableSynthesizer::test_add_constraint_warning
+0.01s call     tests/unit/data_processing/test_data_processor.py::TestDataProcessor::test_to_dict_from_dict
+0.01s call     tests/unit/sampling/test_independent_sampler.py::TestBaseIndependentSampler::test__finalize_id_being_string
+0.01s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test__validate_known_columns_a_few_nans
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_validate_context_columns_unique_per_sequence_key
+0.01s call     tests/unit/constraints/test_tabular.py::TestFixedCombinations::test_is_valid_non_string_false
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__fit_sequence_columns_with_sequence_index
+0.01s call     tests/unit/constraints/test_tabular.py::TestFixedCombinations::test_is_valid_non_string_true
+0.01s call     tests/integration/multi_table/test_hma.py::test_metadata_updated_warning[set_sequence_key-kwargs4]
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_sample_sequential_columns_no_context_columns
+0.01s call     tests/unit/constraints/test_tabular.py::TestFixedCombinations::test_is_valid_true
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__fit_context_model_with_datetime_context_column
+0.01s call     tests/unit/single_table/test_base.py::TestBaseSingleTableSynthesizer::test_save_warning
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_preprocess
+0.01s call     tests/unit/constraints/test_tabular.py::TestFixedCombinations::test_is_valid_false
+0.01s call     tests/unit/sampling/test_independent_sampler.py::TestBaseIndependentSampler::test__finalize
+0.01s call     tests/unit/constraints/test_tabular.py::TestFixedCombinations::test_reverse_transform_non_string
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test_sample_sequence_key_needs_to_be_filled_in
+0.01s call     tests/unit/sequential/test_par.py::TestPARSynthesizer::test__fit_sequence_columns_with_categorical_float
+0.01s call     tests/integration/multi_table/test_hma.py::test_metadata_updated_warning[update_column-kwargs0]
+
+(3764 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration/evaluation/test_multi_table.py::test_evaluation - as...
+FAILED tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_metadata_updated_no_warning
+FAILED tests/integration/multi_table/test_hma.py::TestHMASynthesizer::test_metadata_updated_warning_detect
+FAILED tests/integration/single_table/test_base.py::test_sample_keys_are_scrambled
+FAILED tests/integration/single_table/test_base.py::test_transformers_correctly_auto_assigned
+FAILED tests/integration/single_table/test_constraints.py::test_inequality_constraint_with_datetimes_and_nones
+FAILED tests/integration/single_table/test_constraints.py::test_scalar_inequality_constraint_with_datetimes_and_nones
+FAILED tests/integration/single_table/test_constraints.py::test_scalar_range_constraint_with_datetimes_and_nones
+FAILED tests/integration/single_table/test_constraints.py::test_range_constraint_with_datetimes_and_nones
+=========== 9 failed, 1345 passed, 497 warnings in 401.47s (0:06:41) ===========
+Energy consumption in joules: 7679.947174072266 for 406.27722 sec of execution.
+
+
+========================================
+Completed before version at: vr 21 nov 2025 11:29:14 CET
+========================================
+
+========================================
+All tests completed at: vr 21 nov 2025 11:29:14 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/SDV_2158//test_results_test_suite.log
+========================================

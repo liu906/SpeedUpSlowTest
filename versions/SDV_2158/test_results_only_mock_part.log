@@ -1,0 +1,63 @@
+========================================
+Starting test runs for project: SDV_2158
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 40
+Test command: python -m pytest tests/integration/datasets/test_demo.py --durations=0 -vv
+Log file: /home/xutong/SpeedUpSlowTest/versions/SDV_2158/test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 107, in _run_wrapper
+    status = _inner_run()
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 98, in _inner_run
+    return self.run(options, args)
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 85, in wrapper
+    return func(self, options, args)
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/commands/install.py", line 345, in run
+    build_tracker = self.enter_context(get_build_tracker())
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/cli/command_context.py", line 28, in enter_context
+    return self._main_context.enter_context(context_provider)
+  File "/usr/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/operations/build/build_tracker.py", line 47, in get_build_tracker
+    root = ctx.enter_context(TempDirectory(kind="build-tracker")).path
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/utils/temp_dir.py", line 135, in __init__
+    path = self._create(kind)
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pip/_internal/utils/temp_dir.py", line 175, in _create
+    path = os.path.realpath(tempfile.mkdtemp(prefix=f"pip-{kind}-"))
+  File "/usr/lib/python3.10/tempfile.py", line 512, in mkdtemp
+    prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+  File "/usr/lib/python3.10/tempfile.py", line 265, in _sanitize_params
+    dir = gettempdir()
+  File "/usr/lib/python3.10/tempfile.py", line 454, in gettempdir
+    return _os.fsdecode(_gettempdir())
+  File "/usr/lib/python3.10/tempfile.py", line 447, in _gettempdir
+    tempdir = _get_default_tempdir()
+  File "/usr/lib/python3.10/tempfile.py", line 362, in _get_default_tempdir
+    raise FileNotFoundError(_errno.ENOENT,
+FileNotFoundError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before']
+
+=========================================
+Test run 1/40 for before
+Time: za 22 nov 2025 15:59:56 CET
+=========================================
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/_pytest/config/__init__.py", line 201, in console_main
+    code = main()
+  File "/home/xutong/SpeedUpSlowTest/versions/SDV_2158/before/venv/lib/python3.10/site-packages/_pytest/config/__init__.py", line 156, in main
+    config = _preparecon

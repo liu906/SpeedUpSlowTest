@@ -2,7 +2,7 @@
 Starting test runs for project: ert_11206
 Config file: test_config_only_mock_part.sh
 Comparing: before vs after_careful_mock
-Iterations: 1
+Iterations: 40
 Test command: uv run pytest  tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result --durations=0 -vv
 Log file: /home/xutong/SpeedUpSlowTest/versions/ert_11206//test_results_only_mock_part.log
 ========================================
@@ -14,12 +14,1004 @@ Detected uv-based project, skipping traditional venv creation...
 uv will manage the virtual environment via SETUP_COMMAND
 Running setup command...
 Reinitialized existing Git repository in /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.git/
-Resolved 272 packages in 1ms
-Audited 268 packages in 33ms
+Resolved 272 packages in 0.92ms
+Audited 268 packages in 2ms
 
 =========================================
-Test run 1/1 for before
-Time: do 20 nov 2025 12:16:29 CET
+Test run 1/40 for before
+Time: do 20 nov 2025 16:34:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.98s (0:02:03) =========================
+Energy consumption in joules: 420.9202117919922 for 126.866516 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for before
+Time: do 20 nov 2025 16:37:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.75s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.96s (0:02:03) =========================
+Energy consumption in joules: 422.33924865722656 for 127.049736 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for before
+Time: do 20 nov 2025 16:39:22 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 421.30242919921875 for 127.074326 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for before
+Time: do 20 nov 2025 16:41:35 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.74s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.95s (0:02:03) =========================
+Energy consumption in joules: 425.5847473144531 for 127.07435 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for before
+Time: do 20 nov 2025 16:43:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.76s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.97s (0:02:03) =========================
+Energy consumption in joules: 424.39300537109375 for 127.077034 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for before
+Time: do 20 nov 2025 16:46:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.00s (0:02:03) =========================
+Energy consumption in joules: 425.2670440673828 for 127.06617 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for before
+Time: do 20 nov 2025 16:48:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.77s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.98s (0:02:03) =========================
+Energy consumption in joules: 423.5305938720703 for 127.0645 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for before
+Time: do 20 nov 2025 16:50:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.02s (0:02:04) =========================
+Energy consumption in joules: 423.26507568359375 for 127.061066 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for before
+Time: do 20 nov 2025 16:52:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.00s (0:02:03) =========================
+Energy consumption in joules: 422.2732391357422 for 127.05149 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: do 20 nov 2025 16:54:49 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.77s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.98s (0:02:03) =========================
+Energy consumption in joules: 423.345703125 for 127.06617 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for before
+Time: do 20 nov 2025 16:57:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 424.10418701171875 for 127.08231 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: do 20 nov 2025 16:59:14 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.02s (0:02:04) =========================
+Energy consumption in joules: 423.6278533935547 for 127.063866 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: do 20 nov 2025 17:01:26 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.99s (0:02:03) =========================
+Energy consumption in joules: 425.5744323730469 for 127.06276 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for before
+Time: do 20 nov 2025 17:03:39 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 424.5024871826172 for 127.082115 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for before
+Time: do 20 nov 2025 17:05:51 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.00s (0:02:03) =========================
+Energy consumption in joules: 423.0921173095703 for 127.067215 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for before
+Time: do 20 nov 2025 17:08:03 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.82s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.03s (0:02:04) =========================
+Energy consumption in joules: 423.92486572265625 for 127.077415 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for before
+Time: do 20 nov 2025 17:10:16 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.81s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.02s (0:02:04) =========================
+Energy consumption in joules: 423.0651397705078 for 127.07285 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for before
+Time: do 20 nov 2025 17:12:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.82s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.03s (0:02:04) =========================
+Energy consumption in joules: 424.0306091308594 for 127.0677 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for before
+Time: do 20 nov 2025 17:14:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.77s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.98s (0:02:03) =========================
+Energy consumption in joules: 422.7271423339844 for 127.06318 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for before
+Time: do 20 nov 2025 17:16:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.99s (0:02:03) =========================
+Energy consumption in joules: 423.5006866455078 for 127.07774 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for before
+Time: do 20 nov 2025 17:19:05 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.99s (0:02:03) =========================
+Energy consumption in joules: 424.00067138671875 for 127.06892 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for before
+Time: do 20 nov 2025 17:21:18 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.00s (0:02:03) =========================
+Energy consumption in joules: 424.65855407714844 for 127.07532 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for before
+Time: do 20 nov 2025 17:23:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 424.34104919433594 for 127.07281 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for before
+Time: do 20 nov 2025 17:25:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.81s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.02s (0:02:04) =========================
+Energy consumption in joules: 421.09521484375 for 127.07163 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for before
+Time: do 20 nov 2025 17:27:55 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.99s (0:02:03) =========================
+Energy consumption in joules: 423.3644561767578 for 127.07383 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for before
+Time: do 20 nov 2025 17:30:07 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.82s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.03s (0:02:04) =========================
+Energy consumption in joules: 421.9302978515625 for 127.071724 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for before
+Time: do 20 nov 2025 17:32:20 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.99s (0:02:03) =========================
+Energy consumption in joules: 423.79393005371094 for 127.06419 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for before
+Time: do 20 nov 2025 17:34:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 422.83367919921875 for 127.071045 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for before
+Time: do 20 nov 2025 17:36:44 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.99s (0:02:03) =========================
+Energy consumption in joules: 423.74395751953125 for 127.077866 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for before
+Time: do 20 nov 2025 17:38:57 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.00s (0:02:04) =========================
+Energy consumption in joules: 425.39036560058594 for 127.04962 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for before
+Time: do 20 nov 2025 17:41:09 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.00s (0:02:04) =========================
+Energy consumption in joules: 423.34864807128906 for 127.08194 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for before
+Time: do 20 nov 2025 17:43:22 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
@@ -44,12 +1036,268 @@ tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_fi
 123.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
 0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
 0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
-======================== 1 passed in 124.10s (0:02:04) =========================
-Energy consumption in joules: 437.1697692871094 for 128.26282 sec of execution.
+======================== 1 passed in 124.03s (0:02:04) =========================
+Energy consumption in joules: 423.17425537109375 for 127.071495 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for before
+Time: do 20 nov 2025 17:45:34 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.78s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.00s (0:02:03) =========================
+Energy consumption in joules: 420.8609313964844 for 127.06025 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for before
+Time: do 20 nov 2025 17:47:46 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 422.4462585449219 for 127.080444 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for before
+Time: do 20 nov 2025 17:49:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 420.62969970703125 for 127.0753 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for before
+Time: do 20 nov 2025 17:52:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.80s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.02s (0:02:04) =========================
+Energy consumption in joules: 421.53248596191406 for 127.09252 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for before
+Time: do 20 nov 2025 17:54:23 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.05s (0:02:04) =========================
+Energy consumption in joules: 428.1202087402344 for 127.07587 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for before
+Time: do 20 nov 2025 17:56:36 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.79s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 124.01s (0:02:04) =========================
+Energy consumption in joules: 421.4912109375 for 127.06529 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for before
+Time: do 20 nov 2025 17:58:48 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.76s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.97s (0:02:03) =========================
+Energy consumption in joules: 421.57872009277344 for 127.04115 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for before
+Time: do 20 nov 2025 18:01:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/before/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/before
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+123.77s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+======================== 1 passed in 123.98s (0:02:03) =========================
+Energy consumption in joules: 424.47117614746094 for 127.08149 sec of execution.
 
 
 ========================================
-Completed before version at: do 20 nov 2025 12:18:37 CET
+Completed before version at: do 20 nov 2025 18:03:08 CET
 ========================================
 
 ========================================
@@ -59,12 +1307,12 @@ Detected uv-based project, skipping traditional venv creation...
 uv will manage the virtual environment via SETUP_COMMAND
 Running setup command...
 Reinitialized existing Git repository in /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.git/
-Resolved 272 packages in 1ms
-Audited 269 packages in 40ms
+Resolved 272 packages in 0.96ms
+Audited 269 packages in 2ms
 
 =========================================
-Test run 1/1 for after_careful_mock
-Time: do 20 nov 2025 12:18:48 CET
+Test run 1/40 for after_careful_mock
+Time: do 20 nov 2025 18:03:18 CET
 =========================================
 ============================= test session starts ==============================
 platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
@@ -86,19 +1334,1267 @@ collecting ... collected 1 item
 tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
 
 ============================== slowest durations ===============================
-3.98s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
 0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
 0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
-============================== 1 passed in 4.24s ===============================
-Energy consumption in joules: 169.0858612060547 for 8.606799 sec of execution.
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 156.94444274902344 for 7.2070565 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for after_careful_mock
+Time: do 20 nov 2025 18:03:31 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 156.0863800048828 for 7.0081916 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for after_careful_mock
+Time: do 20 nov 2025 18:03:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 156.55279541015625 for 7.0096188 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for after_careful_mock
+Time: do 20 nov 2025 18:03:55 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 157.91241455078125 for 7.008197 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for after_careful_mock
+Time: do 20 nov 2025 18:04:08 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 160.40646362304688 for 7.209441 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for after_careful_mock
+Time: do 20 nov 2025 18:04:20 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.82s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 160.68798828125 for 7.2076087 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for after_careful_mock
+Time: do 20 nov 2025 18:04:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 157.94158935546875 for 7.0068607 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for after_careful_mock
+Time: do 20 nov 2025 18:04:45 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 157.74913024902344 for 7.0070276 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for after_careful_mock
+Time: do 20 nov 2025 18:04:57 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 158.3068084716797 for 7.0064383 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for after_careful_mock
+Time: do 20 nov 2025 18:05:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 158.92877197265625 for 7.0072346 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for after_careful_mock
+Time: do 20 nov 2025 18:05:22 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 159.7156982421875 for 7.009074 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for after_careful_mock
+Time: do 20 nov 2025 18:05:34 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 159.15011596679688 for 7.008274 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for after_careful_mock
+Time: do 20 nov 2025 18:05:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 161.2449493408203 for 7.2090464 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for after_careful_mock
+Time: do 20 nov 2025 18:05:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 160.58729553222656 for 7.2071943 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for after_careful_mock
+Time: do 20 nov 2025 18:06:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 161.43019104003906 for 7.2083187 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for after_careful_mock
+Time: do 20 nov 2025 18:06:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 160.84988403320313 for 7.2061667 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for after_careful_mock
+Time: do 20 nov 2025 18:06:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 160.78173828125 for 7.2065997 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for after_careful_mock
+Time: do 20 nov 2025 18:06:49 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 161.30177307128906 for 7.2081194 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for after_careful_mock
+Time: do 20 nov 2025 18:07:02 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 157.69805908203125 for 7.011276 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for after_careful_mock
+Time: do 20 nov 2025 18:07:14 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 160.8231658935547 for 7.2094154 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for after_careful_mock
+Time: do 20 nov 2025 18:07:26 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 158.58233642578125 for 7.0069003 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for after_careful_mock
+Time: do 20 nov 2025 18:07:39 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 162.13552856445313 for 7.206695 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for after_careful_mock
+Time: do 20 nov 2025 18:07:51 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 160.5498504638672 for 7.208256 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for after_careful_mock
+Time: do 20 nov 2025 18:08:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.85s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 160.63967895507813 for 7.210075 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for after_careful_mock
+Time: do 20 nov 2025 18:08:16 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 160.91122436523438 for 7.2098827 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for after_careful_mock
+Time: do 20 nov 2025 18:08:29 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 160.88711547851563 for 7.2063427 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for after_careful_mock
+Time: do 20 nov 2025 18:08:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 161.66122436523438 for 7.2072153 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for after_careful_mock
+Time: do 20 nov 2025 18:08:54 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 158.88043212890625 for 7.008881 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for after_careful_mock
+Time: do 20 nov 2025 18:09:06 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 158.55982971191406 for 7.006795 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for after_careful_mock
+Time: do 20 nov 2025 18:09:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 160.2579803466797 for 7.2075973 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for after_careful_mock
+Time: do 20 nov 2025 18:09:31 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 160.2879638671875 for 7.211694 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for after_careful_mock
+Time: do 20 nov 2025 18:09:44 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 160.78016662597656 for 7.2087297 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for after_careful_mock
+Time: do 20 nov 2025 18:09:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 160.81719970703125 for 7.2093143 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for after_careful_mock
+Time: do 20 nov 2025 18:10:09 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.02s ===============================
+Energy consumption in joules: 158.81065368652344 for 7.005643 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for after_careful_mock
+Time: do 20 nov 2025 18:10:21 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 160.4591064453125 for 7.2063227 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for after_careful_mock
+Time: do 20 nov 2025 18:10:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 159.5461883544922 for 7.0070753 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for after_careful_mock
+Time: do 20 nov 2025 18:10:46 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 160.5832977294922 for 7.2062807 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for after_careful_mock
+Time: do 20 nov 2025 18:10:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 159.0497589111328 for 7.008697 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for after_careful_mock
+Time: do 20 nov 2025 18:11:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.84s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.04s ===============================
+Energy consumption in joules: 160.5772247314453 for 7.207734 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for after_careful_mock
+Time: do 20 nov 2025 18:11:23 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.11.0rc1, pytest-8.4.1, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock/.venv/bin/python
+cachedir: .pytest_cache
+Matplotlib: 3.10.3
+Freetype: 2.6.1
+hypothesis profile 'no_timeouts' -> deadline=None, print_blob=True, suppress_health_check=(HealthCheck.too_slow,)
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+PyQt6 6.9.1 -- Qt runtime 6.9.1 -- Qt compiled 6.9.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/ert_11206/after_careful_mock
+configfile: pyproject.toml
+plugins: asyncio-1.0.0, anyio-4.9.0, cov-6.2.1, mpl-0.17.0, snapshot-0.9.0, timeout-2.4.0, memray-1.7.0, hypothesis-6.135.14, benchmark-5.1.0, raises-0.11, xdist-3.7.0, qt-4.4.0, rerunfailures-15.1, mock-3.14.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+timeout: 360.0s
+timeout method: signal
+timeout func_only: False
+collecting ... collected 1 item
+
+tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result PASSED [100%]
+
+============================== slowest durations ===============================
+3.83s call     tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s setup    tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+0.00s teardown tests/ert/ui_tests/cli/test_cli.py::test_that_connection_errors_do_not_effect_final_result
+============================== 1 passed in 4.03s ===============================
+Energy consumption in joules: 158.23257446289063 for 7.0064774 sec of execution.
 
 
 ========================================
-Completed after_careful_mock version at: do 20 nov 2025 12:18:56 CET
+Completed after_careful_mock version at: do 20 nov 2025 18:11:30 CET
 ========================================
 
 ========================================
-All tests completed at: do 20 nov 2025 12:18:56 CET
+All tests completed at: do 20 nov 2025 18:11:30 CET
 Compared: before vs after_careful_mock
 Log file: /home/xutong/SpeedUpSlowTest/versions/ert_11206//test_results_only_mock_part.log
 ========================================
