@@ -1,10 +1,79 @@
 ========================================
 Starting test runs for project: opensearch-build_595
-Config file: test_config.sh
-Comparing: after_careful_mock vs after
-Iterations: before
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
 Test command: bash -c 'cd bundle-workflow && PYTHONPATH=src pytest -v --durations=0 tests/test_integ_workflow/integ_test/test_local_test_cluster.py'
-Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/test_results.log
+Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: pyyaml>=6.0 in /usr/local/lib/python3.10/dist-packages (6.0.3)
+Requirement already satisfied: requests>=2.26 in /usr/local/lib/python3.10/dist-packages (2.32.3)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
+Requirement already satisfied: boto3>=1.18 in /usr/local/lib/python3.10/dist-packages (1.41.2)
+Requirement already satisfied: botocore>=1.21 in /usr/local/lib/python3.10/dist-packages (1.41.2)
+Requirement already satisfied: coverage>=4.5 in /usr/local/lib/python3.10/dist-packages (7.11.0)
+Requirement already satisfied: pytest-cov>=2.10 in /usr/local/lib/python3.10/dist-packages (7.0.0)
+Requirement already satisfied: jproperties>=2.1 in /usr/local/lib/python3.10/dist-packages (2.1.2)
+Requirement already satisfied: sortedcontainers in /usr/local/lib/python3.10/dist-packages (2.4.0)
+Requirement already satisfied: cerberus>=1.3 in /usr/local/lib/python3.10/dist-packages (1.3.8)
+Requirement already satisfied: psutil>=5.8 in /usr/local/lib/python3.10/dist-packages (7.0.0)
+Requirement already satisfied: semantic-version>=2.8 in /usr/local/lib/python3.10/dist-packages (2.10.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.26) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.26) (1.26.5)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.26) (2020.6.20)
+Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (1.0.1)
+Requirement already satisfied: s3transfer<0.16.0,>=0.15.0 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (0.15.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/local/lib/python3.10/dist-packages (from botocore>=1.21) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore>=1.21) (1.16.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: zo 23 nov 2025 16:25:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+Using --randomly-seed=2816242984
+rootdir: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, httpx-0.35.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
+asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.22s (0:01:40) =========================
+Energy consumption in joules: 235.98016357421875 for 100.81748 sec of execution.
+
+
+========================================
+Completed before version at: zo 23 nov 2025 16:26:53 CET
 ========================================
 
 ========================================
@@ -43,52 +112,41 @@ Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from 
 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
 
+=========================================
+Test run 1/1 for after_careful_mock
+Time: zo 23 nov 2025 16:27:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+Using --randomly-seed=1660335082
+rootdir: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, httpx-0.35.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
+asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.13s ===============================
+Energy consumption in joules: 11.224472045898438 for 0.8025559 sec of execution.
+
+
 ========================================
-Completed after_careful_mock version at: zo 23 nov 2025 16:24:08 CET
+Completed after_careful_mock version at: zo 23 nov 2025 16:27:06 CET
 ========================================
 
 ========================================
-Starting tests for after version
-========================================
-Activating virtual environment...
-Running setup command...
-Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
-WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-Requirement already satisfied: pyyaml>=6.0 in /usr/local/lib/python3.10/dist-packages (6.0.3)
-Requirement already satisfied: requests>=2.26 in /usr/local/lib/python3.10/dist-packages (2.32.3)
-Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
-Requirement already satisfied: boto3>=1.18 in /usr/local/lib/python3.10/dist-packages (1.41.2)
-Requirement already satisfied: botocore>=1.21 in /usr/local/lib/python3.10/dist-packages (1.41.2)
-Requirement already satisfied: coverage>=4.5 in /usr/local/lib/python3.10/dist-packages (7.11.0)
-Requirement already satisfied: pytest-cov>=2.10 in /usr/local/lib/python3.10/dist-packages (7.0.0)
-Requirement already satisfied: jproperties>=2.1 in /usr/local/lib/python3.10/dist-packages (2.1.2)
-Requirement already satisfied: sortedcontainers in /usr/local/lib/python3.10/dist-packages (2.4.0)
-Requirement already satisfied: cerberus>=1.3 in /usr/local/lib/python3.10/dist-packages (1.3.8)
-Requirement already satisfied: psutil>=5.8 in /usr/local/lib/python3.10/dist-packages (7.0.0)
-Requirement already satisfied: semantic-version>=2.8 in /usr/local/lib/python3.10/dist-packages (2.10.0)
-Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26) (3.4.4)
-Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.26) (3.3)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.26) (1.26.5)
-Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.26) (2020.6.20)
-Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
-Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
-Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
-Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
-Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
-Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (1.0.1)
-Requirement already satisfied: s3transfer<0.16.0,>=0.15.0 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (0.15.0)
-Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/local/lib/python3.10/dist-packages (from botocore>=1.21) (2.9.0.post0)
-Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore>=1.21) (1.16.0)
-Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
-WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-
-========================================
-Completed after version at: zo 23 nov 2025 16:24:20 CET
-========================================
-
-========================================
-All tests completed at: zo 23 nov 2025 16:24:20 CET
-Compared: after_careful_mock vs after
-Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/test_results.log
+All tests completed at: zo 23 nov 2025 16:27:06 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/test_results_only_mock_part.log
 ========================================

@@ -6,7 +6,7 @@
 # PR #38480 testing: Run ALBERT model tests that were optimized
 # This PR reduces the test model size to improve test execution speed
 # Target the specific test file that was modified
-TEST_COMMAND="python -m pytest --durations=0"
+TEST_COMMAND="python -m pytest tests/models/albert/test_modeling_albert.py -v --durations=0 -x"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"

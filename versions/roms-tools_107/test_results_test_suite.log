@@ -1,0 +1,293 @@
+========================================
+Starting test runs for project: roms-tools_107
+Iterations: 1
+Test command: python -m pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/roms-tools_107//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: xarray>=2022.6.0 in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (2025.6.1)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.26.4)
+Requirement already satisfied: netcdf4 in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.7.3)
+Requirement already satisfied: pooch in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.8.2)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (3.9.4)
+Requirement already satisfied: cartopy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.25.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (25.0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.15.3)
+Requirement already satisfied: gcm_filters in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.5.1)
+Requirement already satisfied: numba in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.62.1)
+Requirement already satisfied: pandas>=2.1 in /usr/local/lib/python3.10/dist-packages (from xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.3.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.2->pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (1.16.0)
+Requirement already satisfied: shapely>=2.0 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (2.1.2)
+Requirement already satisfied: pyshp>=2.3 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (3.0.2.post1)
+Requirement already satisfied: pyproj>=3.3.1 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (3.7.1)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (9.0.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (3.2.3)
+Requirement already satisfied: certifi in /usr/lib/python3/dist-packages (from pyproj>=3.3.1->cartopy->roms-tools==0.1.0.dev0) (2020.6.20)
+Requirement already satisfied: cftime in /usr/local/lib/python3.10/dist-packages (from netcdf4->roms-tools==0.1.0.dev0) (1.6.5)
+Collecting llvmlite<0.46,>=0.45.0dev0 (from numba->roms-tools==0.1.0.dev0)
+  Using cached llvmlite-0.45.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Requirement already satisfied: platformdirs>=2.5.0 in /usr/local/lib/python3.10/dist-packages (from pooch->roms-tools==0.1.0.dev0) (4.5.0)
+Requirement already satisfied: requests>=2.19.0 in /usr/local/lib/python3.10/dist-packages (from pooch->roms-tools==0.1.0.dev0) (2.32.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (1.26.5)
+Using cached llvmlite-0.45.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)
+Building wheels for collected packages: roms-tools
+  Building editable for roms-tools (pyproject.toml): started
+  Building editable for roms-tools (pyproject.toml): finished with status 'done'
+  Created wheel for roms-tools: filename=roms_tools-0.1.0.dev0-0.editable-py3-none-any.whl size=16288 sha256=5044eb26a4a85e80a31deecdd764bf4f8616cd1656abd852cac282788f779cd2
+  Stored in directory: /tmp/pip-ephem-wheel-cache-i796rh3a/wheels/6d/fb/ba/e1626fdb575e8e1f7f94030bbc7b53730ca3832b6473bbb70b
+Successfully built roms-tools
+Installing collected packages: llvmlite, roms-tools
+  Attempting uninstall: llvmlite
+    Found existing installation: llvmlite 0.44.0
+    Uninstalling llvmlite-0.44.0:
+      Successfully uninstalled llvmlite-0.44.0
+  Attempting uninstall: roms-tools
+    Found existing installation: roms-tools 0.1.0.dev0
+    Uninstalling roms-tools-0.1.0.dev0:
+      Successfully uninstalled roms-tools-0.1.0.dev0
+
+Successfully installed llvmlite-0.45.1 roms-tools-0.1.0.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (7.4.4)
+Requirement already satisfied: coverage in /usr/local/lib/python3.10/dist-packages (7.11.0)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.10/dist-packages (6.0.3)
+Requirement already satisfied: dask in /usr/local/lib/python3.10/dist-packages (2025.10.0)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: click>=8.1 in /usr/local/lib/python3.10/dist-packages (from dask) (8.2.1)
+Requirement already satisfied: cloudpickle>=3.0.0 in /usr/local/lib/python3.10/dist-packages (from dask) (3.1.2)
+Requirement already satisfied: fsspec>=2021.09.0 in /usr/local/lib/python3.10/dist-packages (from dask) (2025.10.0)
+Requirement already satisfied: partd>=1.4.0 in /usr/local/lib/python3.10/dist-packages (from dask) (1.4.2)
+Requirement already satisfied: toolz>=0.10.0 in /usr/local/lib/python3.10/dist-packages (from dask) (0.12.1)
+Requirement already satisfied: importlib_metadata>=4.13.0 in /usr/local/lib/python3.10/dist-packages (from dask) (8.7.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest) (4.15.0)
+Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.10/dist-packages (from importlib_metadata>=4.13.0->dask) (3.23.0)
+Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages (from partd>=1.4.0->dask) (1.0.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: zo 23 nov 2025 17:03:27 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before
+configfile: pyproject.toml
+collected 110 items
+
+roms_tools/tests/test_grid.py ............                               [ 10%]
+roms_tools/tests/test_setup/test_boundary_forcing.py .........           [ 19%]
+roms_tools/tests/test_setup/test_datasets.py ............                [ 30%]
+roms_tools/tests/test_setup/test_initial_conditions.py ..............    [ 42%]
+roms_tools/tests/test_setup/test_surface_forcing.py .................... [ 60%]
+..............                                                           [ 73%]
+roms_tools/tests/test_setup/test_tides.py ............                   [ 84%]
+roms_tools/tests/test_setup/test_topography.py ....                      [ 88%]
+roms_tools/tests/test_setup/test_utils.py .                              [ 89%]
+roms_tools/tests/test_setup/test_vertical_coordinate.py .....            [ 93%]
+roms_tools/tests/test_utils.py .......                                   [100%]
+
+=============================== warnings summary ===============================
+roms_tools/tests/test_grid.py::test_grid_creation
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+roms_tools/tests/test_setup/test_boundary_forcing.py: 5 warnings
+roms_tools/tests/test_setup/test_surface_forcing.py: 43 warnings
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/datasets.py:302: UserWarning: No records found at or after the end_time.
+    warnings.warn("No records found at or after the end_time.")
+
+roms_tools/tests/test_setup/test_datasets.py::test_era5_correction_choose_subdomain
+roms_tools/tests/test_setup/test_surface_forcing.py::test_coordinates_existence_and_values[corrected_surface_forcing-expected_coords0]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_data_consistency_plot_save[corrected_surface_forcing-expected_swrad1]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_roundtrip_yaml[corrected_surface_forcing]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_roundtrip_yaml[corrected_surface_forcing]
+roms_tools/tests/test_setup/test_utils.py::test_interpolate_from_climatology
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/datasets.py:142: FutureWarning: In a future version, xarray will not decode timedelta values based on the presence of a timedelta-like units attribute by default. Instead it will rely on the presence of a timedelta64 dtype attribute, which is now xarray's default way of encoding timedelta64 values. To continue decoding timedeltas based on the presence of a timedelta-like units attribute, users will need to explicitly opt-in by passing True or CFTimedeltaCoder(decode_via_units=True) to decode_timedelta. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+    ds = xr.open_mfdataset(
+
+roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_creation[initial_conditions_with_bgc]
+roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_default_bgc_climatology
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/datasets.py:330: UserWarning: Dataset does not contain any time information. Please check if the time dimension is correctly named or if the dataset includes time data.
+    warnings.warn(
+
+roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/plot.py:92: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+    fig, ax = plt.subplots(1, 1, figsize=(9, 5))
+
+roms_tools/tests/test_setup/test_surface_forcing.py: 43 warnings
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/datasets.py:292: UserWarning: No records found at or before the start_time.
+    warnings.warn("No records found at or before the start_time.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+151.85s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+83.40s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+80.34s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+6.30s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_nans_filled_in
+5.52s call     roms_tools/tests/test_setup/test_tides.py::test_successful_initialization_with_regional_data
+5.29s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+4.74s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[grid_that_straddles_dateline]
+3.36s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_lies_west_of_dateline_more_than_five_degrees_away]
+3.35s call     roms_tools/tests/test_setup/test_topography.py::test_hmin_criterion
+3.34s call     roms_tools/tests/test_setup/test_datasets.py::test_era5_correction_choose_subdomain
+3.08s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[bgc_boundary_forcing_from_climatology]
+3.00s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[grid_that_straddles_dateline_but_is_too_big_for_regional_test_data]
+2.72s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[another_grid_that_straddles_dateline_but_is_too_big_for_regional_test_data]
+2.67s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_creation[initial_conditions_with_bgc]
+2.58s call     roms_tools/tests/test_grid.py::test_from_yaml_version_mismatch
+2.49s call     roms_tools/tests/test_setup/test_tides.py::test_unsuccessful_initialization_with_regional_data_due_to_nans
+2.44s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_roundtrip_yaml[corrected_surface_forcing]
+2.35s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_roundtrip_yaml[surface_forcing]
+2.32s call     roms_tools/tests/test_setup/test_topography.py::test_rmax_criterion
+2.31s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_lies_east_of_dateline_less_than_five_degrees_away]
+2.29s call     roms_tools/tests/test_setup/test_topography.py::test_enclosed_regions
+2.24s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[grid_that_lies_west_of_dateline_more_than_five_degrees_away]
+2.19s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_roundtrip_yaml[coarse_surface_forcing]
+1.96s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[grid_that_straddles_180_degree_meridian]
+1.94s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_lies_east_of_dateline_more_than_five_degrees_away]
+1.91s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_lies_west_of_dateline_less_than_five_degrees_away]
+1.86s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_data_consistency_plot_save[corrected_surface_forcing-expected_swrad1]
+1.83s call     roms_tools/tests/test_setup/test_tides.py::test_successful_initialization_with_global_data[grid_that_lies_within_bounds_of_regional_tpxo_data]
+1.72s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_roundtrip_yaml[bgc_surface_forcing_from_climatology]
+1.67s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[grid_that_lies_east_of_dateline_less_than_five_degrees_away]
+1.62s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_creation[initial_conditions_with_bgc_from_climatology]
+1.61s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[boundary_forcing]
+1.54s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[grid_that_lies_west_of_dateline_less_than_five_degrees_away]
+1.54s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_global_data[grid_that_lies_east_of_dateline_more_than_five_degrees_away]
+1.53s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+1.51s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_data_consistency_plot_save[surface_forcing-expected_swrad0]
+1.51s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_interpolation_from_climatology
+1.47s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+1.46s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_coordinates_existence_and_values
+1.34s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_roundtrip_yaml[bgc_surface_forcing]
+1.29s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_coordinates_existence_and_values[corrected_surface_forcing-expected_coords0]
+1.21s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation_with_bgc
+1.20s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_nan_detection_initialization_with_regional_data[another_grid_that_straddles_dateline_but_is_too_big_for_regional_test_data]
+1.14s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_coordinates_existence_and_values[bgc_boundary_forcing_from_climatology-expected_coords1]
+1.06s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_nan_detection_initialization_with_regional_data[grid_that_straddles_dateline_but_is_too_big_for_regional_test_data]
+0.98s setup    roms_tools/tests/test_setup/test_surface_forcing.py::test_time_attr_climatology
+0.96s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_creation[bgc_surface_forcing_from_climatology-True-/root/.cache/roms-tools/CESM_surface_global_test_data_climatology.nc]
+0.91s setup    roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_bgc_data_from_clim_consistency_plot_save
+0.91s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_coordinates_existence_and_values[bgc_surface_forcing_from_climatology-expected_coords2]
+0.87s call     roms_tools/tests/test_setup/test_tides.py::test_successful_initialization_with_global_data[grid_that_straddles_dateline]
+0.86s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_interpolation_from_climatology
+0.81s call     roms_tools/tests/test_setup/test_tides.py::test_roundtrip_yaml
+0.81s setup    roms_tools/tests/test_setup/test_tides.py::test_roundtrip_yaml
+0.80s setup    roms_tools/tests/test_setup/test_tides.py::test_tidal_forcing_data_consistency_plot_save
+0.80s call     roms_tools/tests/test_grid.py::test_compatability_with_matlab_grid
+0.79s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_default_bgc_climatology
+0.79s setup    roms_tools/tests/test_setup/test_surface_forcing.py::test_time_attr
+0.77s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_creation[bgc_surface_forcing-False-/root/.cache/roms-tools/CESM_surface_global_test_data.nc]
+0.72s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_coordinates_existence_and_values[bgc_surface_forcing-expected_coords1]
+0.71s setup    roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_bgc_data_consistency_plot_save
+0.68s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_creation[initial_conditions]
+0.64s call     roms_tools/tests/test_setup/test_tides.py::test_tidal_forcing_data_consistency_plot_save
+0.63s setup    roms_tools/tests/test_grid.py::test_grid_creation
+0.58s call     roms_tools/tests/test_setup/test_vertical_coordinate.py::test_plot
+0.57s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_roundtrip_yaml
+0.55s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_roundtrip_yaml
+0.53s call     roms_tools/tests/test_setup/test_tides.py::test_successful_initialization_with_global_data[grid_that_is_out_of_bounds_of_regional_tpxo_data]
+0.52s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+0.51s setup    roms_tools/tests/test_setup/test_surface_forcing.py::test_no_longitude_intersection_initialization_with_regional_data
+0.48s call     roms_tools/tests/test_grid.py::test_grid_straddle_crosses_meridian
+0.46s call     roms_tools/tests/test_setup/test_tides.py::test_unsuccessful_initialization_with_regional_data_due_to_no_overlap[grid_that_straddles_dateline]
+0.43s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_coordinates_existence_and_values[boundary_forcing-expected_coords0]
+0.42s setup    roms_tools/tests/test_setup/test_tides.py::test_insufficient_number_of_consituents
+0.41s call     roms_tools/tests/test_setup/test_tides.py::test_successful_initialization_with_global_data[grid_that_straddles_180_degree_meridian]
+0.38s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+0.37s call     roms_tools/tests/test_grid.py::test_raise_if_domain_too_large
+0.37s call     roms_tools/tests/test_grid.py::test_roundtrip_yaml
+0.35s setup    roms_tools/tests/test_setup/test_surface_forcing.py::test_nans_filled_in
+0.35s setup    roms_tools/tests/test_grid.py::test_simple_regression
+0.34s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_bgc_data_from_clim_consistency_plot_save
+0.32s setup    roms_tools/tests/test_grid.py::test_plot_save_methods
+0.31s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_missing_bgc_name
+0.31s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_missing_bgc_path
+0.30s setup    roms_tools/tests/test_grid.py::test_simple_regression_dateline
+0.30s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_missing_physics_path
+0.29s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_missing_physics_name
+0.27s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_default_climatology
+0.24s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_default_climatology
+0.23s call     roms_tools/tests/test_grid.py::test_roundtrip_netcdf
+0.22s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_default_bgc_climatology
+0.18s setup    roms_tools/tests/test_setup/test_tides.py::test_unsuccessful_initialization_with_regional_data_due_to_nans
+0.18s call     roms_tools/tests/test_setup/test_tides.py::test_unsuccessful_initialization_with_regional_data_due_to_no_overlap[grid_that_straddles_180_degree_meridian]
+0.18s setup    roms_tools/tests/test_setup/test_tides.py::test_successful_initialization_with_regional_data
+0.17s call     roms_tools/tests/test_setup/test_vertical_coordinate.py::test_update_vertical_coordinate
+0.16s call     roms_tools/tests/test_setup/test_topography.py::test_data_consistency
+0.16s call     roms_tools/tests/test_setup/test_vertical_coordinate.py::test_vertical_coordinate_data_consistency
+0.15s call     roms_tools/tests/test_setup/test_vertical_coordinate.py::test_invalid_theta_b_value
+0.14s call     roms_tools/tests/test_setup/test_vertical_coordinate.py::test_invalid_theta_s_value
+0.14s setup    roms_tools/tests/test_utils.py::TestPartitionMissingDims::test_partition_missing_dims
+0.14s setup    roms_tools/tests/test_utils.py::TestPartitionGrid::test_partition_grid_along_x
+0.13s setup    roms_tools/tests/test_utils.py::TestPartitionGrid::test_invalid_partitioning
+0.13s setup    roms_tools/tests/test_utils.py::TestPartitionGrid::test_partition_grid_along_xy
+0.13s setup    roms_tools/tests/test_utils.py::TestPartitionMissingDims::test_partition_missing_all_dims
+0.13s setup    roms_tools/tests/test_utils.py::TestPartitionGrid::test_partition_grid_along_y
+0.13s setup    roms_tools/tests/test_utils.py::TestPartitionGrid::test_partition_grid_no_op
+0.12s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_no_longitude_intersection_initialization_with_regional_data
+0.11s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_surface_forcing_bgc_data_consistency_plot_save
+0.09s call     roms_tools/tests/test_setup/test_utils.py::test_interpolate_from_climatology
+0.07s call     roms_tools/tests/test_setup/test_datasets.py::test_warnings_times
+0.07s call     roms_tools/tests/test_setup/test_datasets.py::test_select_times_no_end_time[global_dataset-expected_time_values0]
+0.07s call     roms_tools/tests/test_setup/test_datasets.py::test_select_times[global_dataset-expected_time_values0]
+0.07s call     roms_tools/tests/test_setup/test_datasets.py::test_reverse_latitude_choose_subdomain_negative_depth
+0.07s call     roms_tools/tests/test_grid.py::test_plot_save_methods
+0.06s call     roms_tools/tests/test_setup/test_tides.py::test_insufficient_number_of_consituents
+0.04s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation
+0.04s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_missing_bgc_path
+0.04s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_missing_bgc_name
+0.04s call     roms_tools/tests/test_setup/test_datasets.py::test_check_if_global_with_global_dataset
+0.04s call     roms_tools/tests/test_setup/test_datasets.py::test_check_dataset
+0.03s call     roms_tools/tests/test_setup/test_datasets.py::test_select_times[global_dataset_with_multiple_times_per_day-expected_time_values2]
+0.03s call     roms_tools/tests/test_setup/test_datasets.py::test_select_times[global_dataset_with_noon_times-expected_time_values1]
+0.03s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_creation_with_bgc
+0.02s call     roms_tools/tests/test_setup/test_datasets.py::test_select_times_no_end_time[global_dataset_with_noon_times-expected_time_values1]
+0.02s call     roms_tools/tests/test_setup/test_datasets.py::test_multiple_matching_times
+0.01s setup    roms_tools/tests/test_setup/test_datasets.py::test_reverse_latitude_choose_subdomain_negative_depth
+0.01s setup    roms_tools/tests/test_setup/test_datasets.py::test_warnings_times
+0.01s setup    roms_tools/tests/test_setup/test_datasets.py::test_check_if_global_with_global_dataset
+0.01s setup    roms_tools/tests/test_setup/test_datasets.py::test_check_dataset
+0.01s call     roms_tools/tests/test_setup/test_datasets.py::test_check_if_global_with_non_global_dataset
+0.01s teardown roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_creation[initial_conditions_with_bgc_from_climatology]
+0.01s teardown roms_tools/tests/test_setup/test_boundary_forcing.py::test_roundtrip_yaml[bgc_boundary_forcing_from_climatology]
+0.01s teardown roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_creation[initial_conditions_with_bgc]
+
+(198 durations < 0.005s hidden.  Use -vv to show these durations.)
+================ 110 passed, 101 warnings in 447.19s (0:07:27) =================
+
+
+========================================
+Completed before version at: zo 23 nov 2025 17:10:57 CET
+========================================
+
+========================================
+All tests completed at: zo 23 nov 2025 17:10:57 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/roms-tools_107//test_results_test_suite.log
+========================================

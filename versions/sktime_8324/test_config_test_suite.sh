@@ -8,8 +8,8 @@
 # Using -k ShapeDTW to run only ShapeDTW-related tests from test_all_classifiers.py
 # IMPORTANT: Disable --matrixdesign and --only_changed_modules to avoid git errors
 # These flags require git remote/main branch which doesn't exist in isolated test dirs
-# Use -n 0 to disable parallel execution (clearer timing, avoids -n auto from setup.cfg)
-TEST_COMMAND="python -m pytest --durations=0"
+# Use -n 4 to limit parallel workers (prevents crashes, avoids -n auto from setup.cfg which uses 16)
+TEST_COMMAND="python -m pytest -k ShapeDTW -v -vv --durations=0 --matrixdesign=False --only_changed_modules=False -n 0"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
@@ -21,7 +21,7 @@ VENV_PATH=".venv"
 # Need to install: pytest, pytest-xdist (for parallel execution), pytest-timeout
 # Install with [all_extras_pandas2,dev] to match CI environment
 # Force reinstall scipy to fix import issues
-SETUP_COMMAND="python -m pip install --upgrade pip && python -m pip install scipy scikit-learn --force-reinstall --no-cache-dir && python -m pip install -e .[all_extras_pandas2,dev] --no-cache-dir"
+SETUP_COMMAND="python3 -m pip install --upgrade pip && python3 -m pip install scipy scikit-learn --force-reinstall --no-cache-dir && python3 -m pip install -e .[all_extras_pandas2,dev] --no-cache-dir"
 
 # Flag to indicate this is NOT a uv-based project
 USE_UV="false"

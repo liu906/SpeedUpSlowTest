@@ -1,4 +1,4 @@
-PROJECT_PATH=BazBom_33/
+PROJECT_PATH=dxtb_74/
 
 # Prompt: Mock-Based Test Speedup
 
@@ -30,11 +30,22 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 Given a list of slowest tests from project `{PROJECT_PATH}/before`:
 
 ```
-0.31s call     tools/supplychain/tests/test_drift_detector.py::TestEdgeCases::test_large_number_of_violations
-0.16s call     tools/supplychain/tests/test_changelog_generator.py::TestEdgeCases::test_large_number_of_changes
-0.16s call     tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores
-0.04s call     tools/supplychain/tests/test_verify_sbom.py::TestCosignPathConfiguration::test_cosign_path_with_spaces
-0.03s call     tools/supplychain/tests/test_osv_contributor.py::TestGenerateOSVEntry::test_generate_osv_entry_minimal_required_fields
+23.61s call     test/test_halogen/test_halogen.py::TestHalogen::test_grad_pos[tmpda]
+7.53s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large_batch[LYS_xao-LYS_xao-dtype1]
+7.43s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large_batch[PbH4-BiH3-LYS_xao-dtype1]
+7.43s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large_batch[LYS_xao-PbH4-BiH3-dtype1]
+6.62s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large_batch[LYS_xao-LYS_xao-dtype0]
+6.50s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large_batch[LYS_xao-PbH4-BiH3-dtype0]
+6.47s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large_batch[PbH4-BiH3-LYS_xao-dtype0]
+6.39s call     test/test_overlap/test_overlap_molecules.py::test_overlap_batch[LYS_xao-LYS_xao-dtype0]
+6.37s call     test/test_overlap/test_overlap_molecules.py::test_overlap_batch[SiH4-LYS_xao-dtype0]
+6.32s call     test/test_overlap/test_overlap_molecules.py::test_overlap_batch[LYS_xao-PbH4-BiH3-dtype0]
+6.28s call     test/test_overlap/test_overlap_molecules.py::test_overlap_batch[LYS_xao-SiH4-dtype0]
+6.28s call     test/test_overlap/test_overlap_molecules.py::test_overlap_batch[PbH4-BiH3-LYS_xao-dtype0]
+3.89s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large[LYS_xao-dtype1]
+3.80s call     test/test_overlap/test_overlap_molecules.py::test_overlap_single[LYS_xao-dtype1]
+3.28s call     test/test_hamiltonian/test_h0.py::TestHamiltonianGFN1::test_h0_large[LYS_xao-dtype0]
+3.14s call     test/test_overlap/test_overlap_molecules.py::test_overlap_single[LYS_xao-dtype0]
 
 ```
 

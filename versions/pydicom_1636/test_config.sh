@@ -14,7 +14,7 @@ VENV_PATH=".venv"
 # Setup command to install dependencies
 # The project uses setup.py and requires pytest for testing
 # Also install tqdm which is used for progress bars in downloads
-SETUP_COMMAND="pip install --upgrade pip && pip install -e . && pip install pytest pytest-timeout tqdm"
+SETUP_COMMAND="pip install --upgrade pip && pip install -e . && pip install 'pytest>=7.0,<8.0' pytest-timeout tqdm"
 
 # Flag to indicate this is NOT a uv-based project
 USE_UV="false"

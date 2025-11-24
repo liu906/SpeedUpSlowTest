@@ -14,8 +14,9 @@ VENV_PATH=".venv"
 PYTHON_VERSION="python3.10"
 
 # Optional: Setup command to run after activating venv
-# Install pytest first, then upgrade pip, filter out pip constraints, install test requirements, and install homeassistant without deps
-SETUP_COMMAND="pip install freezegun pytest aiohttp pytest_socket requests_mock voluptuous slugify  sqlalchemy pyfritzhome async_upnp_client && python3 -m pip install --upgrade pip && pip install -r requirements_all.txt && pip install -r requirements_test_all.txt && grep -v '^pip<' requirements_test_all.txt > /tmp/ha_requirements.txt && pip install -r /tmp/ha_requirements.txt && python setup.py develop --no-deps"
+# Install pytest first, install requirements with exact versions from requirements files
+# Do NOT manually install packages that conflict with Home Assistant's requirements
+SETUP_COMMAND="pip install --no-cache-dir freezegun pytest aiohttp pytest_socket requests_mock voluptuous python-slugify sqlalchemy pyfritzhome async_upnp_client && pip install --no-cache-dir -r requirements_test_all.txt 2>&1 | grep -v 'already satisfied' || true && python setup.py develop --no-deps 2>&1 | grep -v 'already satisfied' || true && pip install --no-cache-dir rxv aiomusiccast mutagen yeelight youless-api pyzerproc zigpy PyDispatcher zwave-js-server-python stdlib-list aiodiscover hass-nabucasa wolf-smartset holidays xbox-webapi construct python-miio yalesmartalarmclient zeroconf 2>&1 | grep -v 'already satisfied' || true"
 
 # Optional: Wait time in seconds before starting tests
 # WAIT_TIME=2

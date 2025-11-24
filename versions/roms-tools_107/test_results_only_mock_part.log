@@ -1,0 +1,280 @@
+========================================
+Starting test runs for project: roms-tools_107
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: pytest   roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save   roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save   roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save   roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]   --durations=0 -v
+Log file: /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: xarray>=2022.6.0 in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (2025.6.1)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.26.4)
+Requirement already satisfied: netcdf4 in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.7.3)
+Requirement already satisfied: pooch in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.8.2)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (3.9.4)
+Requirement already satisfied: cartopy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.25.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (25.0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.15.3)
+Requirement already satisfied: gcm_filters in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.5.1)
+Requirement already satisfied: numba in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.62.1)
+Requirement already satisfied: pandas>=2.1 in /usr/local/lib/python3.10/dist-packages (from xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.3.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.2->pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (1.16.0)
+Requirement already satisfied: shapely>=2.0 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (2.1.2)
+Requirement already satisfied: pyshp>=2.3 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (3.0.2.post1)
+Requirement already satisfied: pyproj>=3.3.1 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (3.7.1)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (9.0.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (3.2.3)
+Requirement already satisfied: certifi in /usr/lib/python3/dist-packages (from pyproj>=3.3.1->cartopy->roms-tools==0.1.0.dev0) (2020.6.20)
+Requirement already satisfied: cftime in /usr/local/lib/python3.10/dist-packages (from netcdf4->roms-tools==0.1.0.dev0) (1.6.5)
+Requirement already satisfied: llvmlite<0.46,>=0.45.0dev0 in /usr/local/lib/python3.10/dist-packages (from numba->roms-tools==0.1.0.dev0) (0.45.1)
+Requirement already satisfied: platformdirs>=2.5.0 in /usr/local/lib/python3.10/dist-packages (from pooch->roms-tools==0.1.0.dev0) (4.5.0)
+Requirement already satisfied: requests>=2.19.0 in /usr/local/lib/python3.10/dist-packages (from pooch->roms-tools==0.1.0.dev0) (2.32.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (1.26.5)
+Building wheels for collected packages: roms-tools
+  Building editable for roms-tools (pyproject.toml): started
+  Building editable for roms-tools (pyproject.toml): finished with status 'done'
+  Created wheel for roms-tools: filename=roms_tools-0.1.0.dev0-0.editable-py3-none-any.whl size=16288 sha256=bb79c8e2ef7d33fddb4873cbcfe6cee3d66e64cbfa3384cc20d191e53ecb3d7e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-7xhcnk5a/wheels/6d/fb/ba/e1626fdb575e8e1f7f94030bbc7b53730ca3832b6473bbb70b
+Successfully built roms-tools
+Installing collected packages: roms-tools
+  Attempting uninstall: roms-tools
+    Found existing installation: roms-tools 0.1.0.dev0
+    Uninstalling roms-tools-0.1.0.dev0:
+      Successfully uninstalled roms-tools-0.1.0.dev0
+Successfully installed roms-tools-0.1.0.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (7.4.4)
+Requirement already satisfied: coverage in /usr/local/lib/python3.10/dist-packages (7.11.0)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.10/dist-packages (6.0.3)
+Requirement already satisfied: dask in /usr/local/lib/python3.10/dist-packages (2025.10.0)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: click>=8.1 in /usr/local/lib/python3.10/dist-packages (from dask) (8.2.1)
+Requirement already satisfied: cloudpickle>=3.0.0 in /usr/local/lib/python3.10/dist-packages (from dask) (3.1.2)
+Requirement already satisfied: fsspec>=2021.09.0 in /usr/local/lib/python3.10/dist-packages (from dask) (2025.10.0)
+Requirement already satisfied: partd>=1.4.0 in /usr/local/lib/python3.10/dist-packages (from dask) (1.4.2)
+Requirement already satisfied: toolz>=0.10.0 in /usr/local/lib/python3.10/dist-packages (from dask) (0.12.1)
+Requirement already satisfied: importlib_metadata>=4.13.0 in /usr/local/lib/python3.10/dist-packages (from dask) (8.7.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest) (4.15.0)
+Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.10/dist-packages (from importlib_metadata>=4.13.0->dask) (3.23.0)
+Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages (from partd>=1.4.0->dask) (1.0.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: zo 23 nov 2025 17:31:39 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1315718251
+rootdir: /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0
+collecting ... collected 4 items
+
+roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save PASSED [ 25%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save PASSED [ 50%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save PASSED [ 75%]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline] PASSED [100%]
+
+=============================== warnings summary ===============================
+roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/plot.py:156: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+    fig, ax = plt.subplots(1, 1, figsize=(4, 7))
+
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/datasets.py:302: UserWarning: No records found at or after the end_time.
+    warnings.warn("No records found at or after the end_time.")
+
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+  /usr/local/lib/python3.10/dist-packages/xarray/coding/times.py:967: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+    encoded_nums = cftime.date2num(
+
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/before/roms_tools/setup/datasets.py:292: UserWarning: No records found at or before the start_time.
+    warnings.warn("No records found at or before the start_time.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+152.48s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+86.19s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+81.93s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+7.57s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+4.28s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+1.30s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+0.42s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+================== 4 passed, 7 warnings in 335.41s (0:05:35) ===================
+Energy consumption in joules: 9316.274719238281 for 336.71594 sec of execution.
+
+
+========================================
+Completed before version at: zo 23 nov 2025 17:37:16 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/roms-tools_107/after_careful_mock
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: xarray>=2022.6.0 in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (2025.6.1)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.26.4)
+Requirement already satisfied: netcdf4 in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.7.3)
+Requirement already satisfied: pooch in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.8.2)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (3.9.4)
+Requirement already satisfied: cartopy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.25.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (25.0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (1.15.3)
+Requirement already satisfied: gcm_filters in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.5.1)
+Requirement already satisfied: numba in /usr/local/lib/python3.10/dist-packages (from roms-tools==0.1.0.dev0) (0.62.1)
+Requirement already satisfied: pandas>=2.1 in /usr/local/lib/python3.10/dist-packages (from xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.3.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (2025.2)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.2->pandas>=2.1->xarray>=2022.6.0->roms-tools==0.1.0.dev0) (1.16.0)
+Requirement already satisfied: shapely>=2.0 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (2.1.2)
+Requirement already satisfied: pyshp>=2.3 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (3.0.2.post1)
+Requirement already satisfied: pyproj>=3.3.1 in /usr/local/lib/python3.10/dist-packages (from cartopy->roms-tools==0.1.0.dev0) (3.7.1)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (9.0.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->roms-tools==0.1.0.dev0) (3.2.3)
+Requirement already satisfied: certifi in /usr/lib/python3/dist-packages (from pyproj>=3.3.1->cartopy->roms-tools==0.1.0.dev0) (2020.6.20)
+Requirement already satisfied: cftime in /usr/local/lib/python3.10/dist-packages (from netcdf4->roms-tools==0.1.0.dev0) (1.6.5)
+Requirement already satisfied: llvmlite<0.46,>=0.45.0dev0 in /usr/local/lib/python3.10/dist-packages (from numba->roms-tools==0.1.0.dev0) (0.45.1)
+Requirement already satisfied: platformdirs>=2.5.0 in /usr/local/lib/python3.10/dist-packages (from pooch->roms-tools==0.1.0.dev0) (4.5.0)
+Requirement already satisfied: requests>=2.19.0 in /usr/local/lib/python3.10/dist-packages (from pooch->roms-tools==0.1.0.dev0) (2.32.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.19.0->pooch->roms-tools==0.1.0.dev0) (1.26.5)
+Building wheels for collected packages: roms-tools
+  Building editable for roms-tools (pyproject.toml): started
+  Building editable for roms-tools (pyproject.toml): finished with status 'done'
+  Created wheel for roms-tools: filename=roms_tools-0.1.0.dev0-0.editable-py3-none-any.whl size=16295 sha256=3420e8901ea181668b3266e30f1b3dfe8069399ceb6f9aa40f10001b296214df
+  Stored in directory: /tmp/pip-ephem-wheel-cache-6lc_5sre/wheels/fd/59/57/be36817ad2f5160f5874048c7c9d195fd6efe95620aee25e23
+Successfully built roms-tools
+Installing collected packages: roms-tools
+  Attempting uninstall: roms-tools
+    Found existing installation: roms-tools 0.1.0.dev0
+    Uninstalling roms-tools-0.1.0.dev0:
+      Successfully uninstalled roms-tools-0.1.0.dev0
+Successfully installed roms-tools-0.1.0.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (7.4.4)
+Requirement already satisfied: coverage in /usr/local/lib/python3.10/dist-packages (7.11.0)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.10/dist-packages (6.0.3)
+Requirement already satisfied: dask in /usr/local/lib/python3.10/dist-packages (2025.10.0)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: click>=8.1 in /usr/local/lib/python3.10/dist-packages (from dask) (8.2.1)
+Requirement already satisfied: cloudpickle>=3.0.0 in /usr/local/lib/python3.10/dist-packages (from dask) (3.1.2)
+Requirement already satisfied: fsspec>=2021.09.0 in /usr/local/lib/python3.10/dist-packages (from dask) (2025.10.0)
+Requirement already satisfied: partd>=1.4.0 in /usr/local/lib/python3.10/dist-packages (from dask) (1.4.2)
+Requirement already satisfied: toolz>=0.10.0 in /usr/local/lib/python3.10/dist-packages (from dask) (0.12.1)
+Requirement already satisfied: importlib_metadata>=4.13.0 in /usr/local/lib/python3.10/dist-packages (from dask) (8.7.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest) (4.15.0)
+Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.10/dist-packages (from importlib_metadata>=4.13.0->dask) (3.23.0)
+Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages (from partd>=1.4.0->dask) (1.0.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: zo 23 nov 2025 17:37:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=3219030801
+rootdir: /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/after_careful_mock
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0
+collecting ... collected 4 items
+
+roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save PASSED [ 25%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save PASSED [ 50%]
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save PASSED [ 75%]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline] PASSED [100%]
+
+=============================== warnings summary ===============================
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/after_careful_mock/roms_tools/setup/datasets.py:302: UserWarning: No records found at or after the end_time.
+    warnings.warn("No records found at or after the end_time.")
+
+roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+  /usr/local/lib/python3.10/dist-packages/xarray/coding/times.py:967: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+    encoded_nums = cftime.date2num(
+
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+  /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/after_careful_mock/roms_tools/setup/datasets.py:292: UserWarning: No records found at or before the start_time.
+    warnings.warn("No records found at or before the start_time.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+108.28s call     roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+78.87s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+75.70s call     roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+7.54s setup    roms_tools/tests/test_setup/test_initial_conditions.py::test_initial_conditions_data_consistency_plot_save
+2.79s call     roms_tools/tests/test_setup/test_surface_forcing.py::test_successful_initialization_with_regional_data[grid_that_straddles_dateline]
+1.36s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_bgc_boundary_forcing_data_consistency_plot_save
+0.42s setup    roms_tools/tests/test_setup/test_boundary_forcing.py::test_boundary_forcing_data_consistency_plot_save
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+================== 4 passed, 6 warnings in 275.95s (0:04:35) ===================
+Energy consumption in joules: 7772.178817749023 for 277.10284 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: zo 23 nov 2025 17:42:07 CET
+========================================
+
+========================================
+All tests completed at: zo 23 nov 2025 17:42:07 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/roms-tools_107/test_results_only_mock_part.log
+========================================

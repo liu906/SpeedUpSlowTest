@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-8.4.1, pluggy-1.6.0
+django: version: 5.2.5, settings: gyrinx.settings_dev (from env)
+rootdir: /app
+configfile: pyproject.toml
+plugins: xdist-3.8.0, django-4.11.1, anyio-4.11.0
+collected 850 items
+
+gyrinx/content/tests/test_admin_actions.py .............                 [  1%]
+gyrinx/content/tests/test_admin_clone_equipment.py .                     [  1%]
+gyrinx/content/tests/test_attributes.py .....                            [  2%]
+gyrinx/content/tests/test_content.py .........                           [  3%]
+gyrinx/content/tests/test_contenthouse_legacy.py ...                     [  3%]
+gyrinx/content/tests/test_contentpack.py .......                         [  4%]
+gyrinx/content/tests/test_cost_methods.py .............................  [  7%]
+gyrinx/content/tests/test_default_assignment.py ..                       [  8%]
+gyrinx/content/tests/test_equipment_list.py .....                        [  8%]
+gyrinx/content/tests/test_equipment_upgrade_overrides.py .........       [  9%]
+gyrinx/content/tests/test_expansion_weapon_profiles.py ........          [ 10%]
+gyrinx/content/tests/test_fighter_category_restrictions.py .....         [ 11%]
+gyrinx/content/tests/test_fighter_equipment_category_limit.py ....       [ 11%]
+gyrinx/content/tests/test_injuries.py ........                           [ 12%]
+gyrinx/content/tests/test_merge_armoured_undersuit_migration.py ....     [ 13%]
+gyrinx/content/tests/test_migrations.py ..                               [ 13%]
+gyrinx/content/tests/test_mods.py ..                                     [ 13%]
+gyrinx/content/tests/test_ordering.py .....                              [ 14%]
+gyrinx/content/tests/test_policy.py .                                    [ 14%]
+gyrinx/content/tests/test_psyker_discipline_modifiers.py ....            [ 14%]
+gyrinx/content/tests/test_skill_tree_modifiers.py .

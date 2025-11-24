@@ -1,0 +1,251 @@
+========================================
+Starting test runs for project: opensearch-build_595
+Iterations: 1
+Test command: bash -c 'cd bundle-workflow && PYTHONPATH=src pytest -v --durations=0'
+Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Collecting pyyaml>=6.0
+  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Requirement already satisfied: requests>=2.26 in /usr/local/lib/python3.10/dist-packages (2.32.3)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
+Collecting boto3>=1.18
+  Downloading boto3-1.41.2-py3-none-any.whl.metadata (6.8 kB)
+Collecting botocore>=1.21
+  Downloading botocore-1.41.2-py3-none-any.whl.metadata (5.9 kB)
+Requirement already satisfied: coverage>=4.5 in /usr/local/lib/python3.10/dist-packages (7.11.0)
+Requirement already satisfied: pytest-cov>=2.10 in /usr/local/lib/python3.10/dist-packages (7.0.0)
+Collecting jproperties>=2.1
+  Using cached jproperties-2.1.2-py2.py3-none-any.whl.metadata (8.7 kB)
+Collecting sortedcontainers
+  Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting cerberus>=1.3
+  Downloading cerberus-1.3.8-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: psutil>=5.8 in /usr/local/lib/python3.10/dist-packages (7.0.0)
+Collecting semantic-version>=2.8
+  Using cached semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.26) (3.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.26) (1.26.5)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.26) (2020.6.20)
+Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Collecting jmespath<2.0.0,>=0.7.1 (from boto3>=1.18)
+  Using cached jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting s3transfer<0.16.0,>=0.15.0 (from boto3>=1.18)
+  Downloading s3transfer-0.15.0-py3-none-any.whl.metadata (1.7 kB)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/local/lib/python3.10/dist-packages (from botocore>=1.21) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore>=1.21) (1.16.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+Downloading boto3-1.41.2-py3-none-any.whl (139 kB)
+Downloading botocore-1.41.2-py3-none-any.whl (14.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.3/14.3 MB 28.6 MB/s  0:00:00
+Using cached jmespath-1.0.1-py3-none-any.whl (20 kB)
+Downloading s3transfer-0.15.0-py3-none-any.whl (85 kB)
+Using cached jproperties-2.1.2-py2.py3-none-any.whl (17 kB)
+Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Downloading cerberus-1.3.8-py3-none-any.whl (30 kB)
+Using cached semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Installing collected packages: sortedcontainers, semantic-version, pyyaml, jproperties, jmespath, cerberus, botocore, s3transfer, boto3
+  Attempting uninstall: pyyaml
+    Found existing installation: PyYAML 5.4.1
+    Uninstalling PyYAML-5.4.1:
+      Successfully uninstalled PyYAML-5.4.1
+
+Successfully installed boto3-1.41.2 botocore-1.41.2 cerberus-1.3.8 jmespath-1.0.1 jproperties-2.1.2 pyyaml-6.0.3 s3transfer-0.15.0 semantic-version-2.10.0 sortedcontainers-2.4.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: zo 23 nov 2025 14:30:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+Using --randomly-seed=1797498591
+rootdir: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+testpaths: tests
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, httpx-0.35.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
+asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 230 items
+
+tests/test_run_checkout.py ..                                            [  0%]
+tests/tests_manifests_workflow/test_component_opensearch.py ....         [  2%]
+tests/tests_ci_workflow/test_ci_check_gradle_properties_version.py ..... [  4%]
+                                                                         [  4%]
+tests/tests_manifests/test_manifests.py .....                            [  6%]
+tests/tests_manifests/test_bundle_manifest.py .......                    [ 10%]
+tests/tests_ci_workflow/test_ci_check_gradle_publish_to_maven_local.py . [ 10%]
+.                                                                        [ 10%]
+tests/test_perf_workflow/perf_test/test_perf_test_cluster.py ....        [ 12%]
+tests/tests_test_workflow/test_dependency_installer.py ..                [ 13%]
+tests/tests_build_workflow/test_build_artifact_check_maven.py ....       [ 15%]
+tests/tests_ci_workflow/test_ci_target.py ....                           [ 16%]
+tests/tests_manifests/test_test_manifest.py ...                          [ 18%]
+tests/tests_ci_workflow/test_ci_check_gradle_properties.py ..            [ 19%]
+tests/tests_manifests/test_manifest.py ...F                              [ 20%]
+tests/tests_manifests/test_build_manifest.py ......                      [ 23%]
+tests/test_aws/test_s3_bucket.py ......                                  [ 26%]
+tests/tests_test_workflow/test_test_component.py .                       [ 26%]
+tests/test_run_manifests.py ...                                          [ 27%]
+tests/tests_manifests/test_input_manifest.py ....                        [ 29%]
+tests/tests_assemble_workflow/test_bundle.py ......                      [ 32%]
+tests/test_integ_workflow/integ_test/test_integ_test_suite.py .....      [ 34%]
+tests/tests_system/test_arch.py ......                                   [ 36%]
+tests/tests_ci_workflow/test_ci_args.py ..........                       [ 41%]
+tests/test_run_ci.py ..                                                  [ 42%]
+tests/tests_build_workflow/test_build_args.py ............               [ 47%]
+tests/tests_manifests_workflow/test_component.py ...                     [ 48%]
+tests/tests_system/test_temporary_directory.py ..                        [ 49%]
+tests/tests_build_workflow/test_build_recorder.py ........               [ 53%]
+tests/tests_system/test_properties_file.py ........                      [ 56%]
+tests/tests_checkout_workflow/test_checkout_args.py ..                   [ 57%]
+tests/tests_paths/test_tree_walker.py .                                  [ 57%]
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [ 60%]
+tests/tests_build_workflow/test_build_artifact_check_plugin.py .....     [ 63%]
+tests/test_run_sign.py .                                                 [ 63%]
+tests/test_run_assemble.py .                                             [ 63%]
+tests/tests_manifests_workflow/test_input_manifests.py ...               [ 65%]
+tests/tests_manifests/test_input_manifests.py ...                        [ 66%]
+tests/tests_paths/test_script_finder.py .............                    [ 72%]
+tests/tests_ci_workflow/test_ci_check_gradle_dependencies_opensearch.py . [ 72%]
+.....                                                                    [ 74%]
+tests/tests_build_workflow/test_build_target.py ..........               [ 79%]
+tests/tests_git/test_git_repository.py .......                           [ 82%]
+tests/tests_manifests_workflow/test_manifests_args.py .......            [ 85%]
+tests/tests_ci_workflow/test_ci_check_gradle_dependencies.py ....        [ 86%]
+tests/tests_assemble_workflow/test_bundle_recorder.py ...                [ 88%]
+tests/tests_test_workflow/test_test_args.py .......                      [ 91%]
+tests/tests_ci_workflow/test_ci.py ..                                    [ 92%]
+tests/test_perf_workflow/perf_test/test_perf_test_suite.py .             [ 92%]
+tests/tests_manifests_workflow/test_component_opensearch_min.py ......   [ 95%]
+tests/test_run_build.py ..                                               [ 96%]
+tests/tests_sign_workflow/test_signer.py ..                              [ 96%]
+tests/tests_build_workflow/test_builder.py ....                          [ 98%]
+tests/test_bwc_workflow/bwc_test/test_bwc_suite.py ...                   [100%]
+
+=================================== FAILURES ===================================
+____________________ TestManifest.test_manifest_is_abstract ____________________
+
+self = <tests.tests_manifests.test_manifest.TestManifest testMethod=test_manifest_is_abstract>
+
+    def test_manifest_is_abstract(self):
+        with self.assertRaises(TypeError) as context:
+            Manifest(None)
+>       self.assertEqual(
+            "Can't instantiate abstract class Manifest with abstract methods __init__",
+            context.exception.__str__(),
+        )
+E       AssertionError: "Can't instantiate abstract class Manifest with abstract methods __init__" != "Can't instantiate abstract class Manifest with abstract method __init__"
+E       - Can't instantiate abstract class Manifest with abstract methods __init__
+E       ?                                                               -
+E       + Can't instantiate abstract class Manifest with abstract method __init__
+
+/home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow/tests/tests_manifests/test_manifest.py:31: AssertionError
+=============================== warnings summary ===============================
+src/test_workflow/test_args.py:16
+  /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow/src/test_workflow/test_args.py:16: PytestCollectionWarning: cannot collect test class 'TestArgs' because it has a __init__ constructor (from: tests/tests_test_workflow/test_test_args.py)
+    class TestArgs:
+
+src/test_workflow/test_component.py:12
+  /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow/src/test_workflow/test_component.py:12: PytestCollectionWarning: cannot collect test class 'TestComponent' because it has a __init__ constructor (from: tests/tests_test_workflow/test_test_component.py)
+    class TestComponent:
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.72s call     tests/tests_test_workflow/test_test_component.py::TestTestComponent::test_checkout
+0.72s call     tests/tests_git/test_git_repository.py::TestGitRepository::test_execute_silent
+0.53s call     tests/tests_git/test_git_repository.py::TestGitRepository::test_output
+0.52s call     tests/tests_git/test_git_repository.py::TestGitRepositoryDir::test_checkout_into_dir
+0.49s call     tests/tests_sign_workflow/test_signer.py::TestSigner::test_signer_checks_out_tool
+0.44s call     tests/tests_git/test_git_repository.py::TestGitRepository::test_checkout
+0.44s call     tests/tests_git/test_git_repository.py::TestGitRepositoryWithWorkingDir::test_checkout_into_dir
+0.44s call     tests/tests_git/test_git_repository.py::TestGitRepository::test_execute
+0.44s call     tests/tests_git/test_git_repository.py::TestGitRepository::test_execute_in_dir
+0.28s call     tests/tests_manifests/test_manifests.py::TestManifests::test_latest
+0.27s call     tests/test_integ_workflow/integ_test/test_integ_test_suite.py::TestIntegSuite::test_execute_with_missing_job_scheduler
+0.26s call     tests/tests_manifests/test_manifests.py::TestManifests::test_versions
+0.25s call     tests/tests_manifests/test_manifests.py::TestManifests::test_build_manifests
+0.25s call     tests/tests_manifests/test_build_manifest.py::TestBuildManifest::test_to_dict
+0.18s call     tests/test_integ_workflow/integ_test/test_integ_test_suite.py::TestIntegSuite::test_execute_with_unsupported_build_dependencies
+0.18s call     tests/test_integ_workflow/integ_test/test_integ_test_suite.py::TestIntegSuite::test_execute_without_build_dependencies
+0.17s call     tests/tests_assemble_workflow/test_bundle_recorder.py::TestBundleRecorder::test_get_manifest
+0.16s call     tests/tests_assemble_workflow/test_bundle.py::TestBundle::test_bundle_build_tar
+0.15s call     tests/tests_manifests/test_build_manifest.py::TestBuildManifest::test_build
+0.15s call     tests/tests_manifests/test_build_manifest.py::TestBuildManifest::test_get_component
+0.14s call     tests/test_integ_workflow/integ_test/test_integ_test_suite.py::TestIntegSuite::test_execute_with_build_dependencies
+0.14s call     tests/test_integ_workflow/integ_test/test_integ_test_suite.py::TestIntegSuite::test_execute_with_multiple_test_configs
+0.13s call     tests/tests_assemble_workflow/test_bundle.py::TestBundle::test_bundle_install_plugins
+0.13s call     tests/tests_assemble_workflow/test_bundle.py::TestBundle::test_bundle_install_plugin
+0.13s call     tests/tests_manifests/test_build_manifest.py::TestBuildManifest::test_get_manifest_relative_location
+0.13s call     tests/tests_manifests/test_build_manifest.py::TestBuildManifest::test_from_s3
+0.13s call     tests/tests_test_workflow/test_dependency_installer.py::DependencyInstallerTests::test_install_all_maven_dependencies
+0.13s call     tests/tests_assemble_workflow/test_bundle_recorder.py::TestBundleRecorder::test_write_manifest
+0.13s call     tests/tests_test_workflow/test_dependency_installer.py::DependencyInstallerTests::test_install_build_dependencies
+0.13s call     tests/tests_assemble_workflow/test_bundle_recorder.py::TestBundleRecorder::test_record_component
+0.12s call     tests/tests_assemble_workflow/test_bundle.py::TestBundle::test_bundle_does_not_exist_raises_error
+0.12s call     tests/tests_assemble_workflow/test_bundle.py::TestBundle::test_bundle
+0.12s call     tests/tests_assemble_workflow/test_bundle.py::TestBundle::test_bundle_invalid_archive_raises_error
+0.12s call     tests/tests_manifests/test_build_manifest.py::TestBuildManifest::test_component
+0.08s call     tests/test_aws/test_s3_bucket.py::TestS3Bucket::test_upload_file
+0.02s call     tests/test_run_manifests.py::TestRunManifests::test_main_list
+0.02s call     tests/tests_manifests/test_input_manifests.py::TestInputManifests::test_manifests
+0.02s call     tests/tests_manifests/test_input_manifests.py::TestInputManifests::test_latest
+0.02s call     tests/tests_manifests/test_input_manifests.py::TestInputManifests::test_1_1_0
+0.02s call     tests/test_run_checkout.py::TestRunChecout::test_main
+0.01s call     tests/tests_manifests/test_input_manifest.py::TestInputManifest::test_to_dict
+0.01s call     tests/test_run_build.py::TestRunBuild::test_main
+0.01s call     tests/tests_manifests/test_bundle_manifest.py::TestBundleManifest::test_component
+0.01s call     tests/test_run_ci.py::TestRunCi::test_main
+0.01s call     tests/tests_manifests/test_bundle_manifest.py::TestBundleManifest::test_from_s3
+0.01s call     tests/test_bwc_workflow/bwc_test/test_bwc_suite.py::TestBwcSuite::test_run_bwctest
+0.01s call     tests/tests_manifests/test_bundle_manifest.py::TestBundleManifest::test_to_dict
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/tests_manifests/test_input_manifest.py::TestInputManifest::test_1_1
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/tests_manifests/test_test_manifest.py::TestTestManifest::test_component_with_working_directory
+0.01s call     tests/test_perf_workflow/perf_test/test_perf_test_cluster.py::TestPerfTestCluster::test_create
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_perf_workflow/perf_test/test_perf_test_suite.py::TestPerfTestSuite::test_execute
+0.01s call     tests/test_bwc_workflow/bwc_test/test_bwc_suite.py::TestBwcSuite::test_component_bwctest
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_perf_workflow/perf_test/test_perf_test_cluster.py::TestPerfTestCluster::test_destroy
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/tests_manifests/test_bundle_manifest.py::TestBundleManifest::test_build
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/tests_manifests/test_bundle_manifest.py::TestBundleManifest::test_get_manifest_relative_location
+0.01s call     tests/tests_manifests/test_bundle_manifest.py::TestBundleManifest::test_get_tarball_relative_location
+0.01s call     tests/tests_manifests/test_bundle_manifest.py::TestBundleManifest::test_get_tarball_name
+0.01s call     tests/test_bwc_workflow/bwc_test/test_bwc_suite.py::TestBwcSuite::test_execute
+0.01s call     tests/test_perf_workflow/perf_test/test_perf_test_cluster.py::TestPerfTestCluster::test_port
+0.01s call     tests/test_perf_workflow/perf_test/test_perf_test_cluster.py::TestPerfTestCluster::test_endpoint
+0.01s call     tests/tests_manifests_workflow/test_input_manifests.py::TestInputManifests::test_update
+
+(622 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/tests_manifests/test_manifest.py::TestManifest::test_manifest_is_abstract
+============ 1 failed, 229 passed, 2 warnings in 109.89s (0:01:49) =============
+Energy consumption in joules: 325.5535583496094 for 110.83806 sec of execution.
+
+
+========================================
+Completed before version at: zo 23 nov 2025 14:31:51 CET
+========================================
+
+========================================
+All tests completed at: zo 23 nov 2025 14:31:51 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595//test_results_test_suite.log
+========================================

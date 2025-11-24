@@ -3,7 +3,7 @@
 # This file is sourced by run_tests_venv_generic.sh
 
 # Test command to run
-TEST_COMMAND="python -m pytest --durations=0"
+TEST_COMMAND="python -m pytest --durations=0  --continue-on-collection-errors"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH="venv"

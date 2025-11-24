@@ -9,8 +9,8 @@ TEST_COMMAND="python -m pytest --durations=0"
 VENV_PATH=".venv"
 
 # Optional: Setup command to run after activating venv (e.g., install dependencies)
-SETUP_COMMAND="pip install -r requirements-testing.txt && pip install pyspark && pip install -e ."
-
+SETUP_COMMAND="pip install -r requirements-testing.txt && pip install twisted pyspark  anyio pytest-asyncio pytest-tornasync pytest-trio pytest-twisted && pip install -e ."
+  
 # Optional: Wait time in seconds before starting tests
 # WAIT_TIME=2
 

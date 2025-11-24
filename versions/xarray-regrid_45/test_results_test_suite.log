@@ -1,0 +1,178 @@
+========================================
+Starting test runs for project: xarray-regrid_45
+Iterations: 1
+Test command: python -m pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/xarray-regrid_45/test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (8.4.2)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (7.0.0)
+Requirement already satisfied: cftime in ./.venv/lib/python3.10/site-packages (1.6.5)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.11.0)
+Requirement already satisfied: numpy>=1.21.2 in ./.venv/lib/python3.10/site-packages (from cftime) (2.2.6)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/xarray-regrid_45/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: flox in ./.venv/lib/python3.10/site-packages (from xarray-regrid==0.3.0) (0.10.4)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from xarray-regrid==0.3.0) (2.2.6)
+Requirement already satisfied: scipy in ./.venv/lib/python3.10/site-packages (from xarray-regrid==0.3.0) (1.15.3)
+Requirement already satisfied: xarray in ./.venv/lib/python3.10/site-packages (from xarray-regrid==0.3.0) (2025.6.1)
+Requirement already satisfied: pandas>=1.5 in ./.venv/lib/python3.10/site-packages (from flox->xarray-regrid==0.3.0) (2.3.3)
+Requirement already satisfied: packaging>=21.3 in ./.venv/lib/python3.10/site-packages (from flox->xarray-regrid==0.3.0) (25.0)
+Requirement already satisfied: numpy_groupies>=0.9.19 in ./.venv/lib/python3.10/site-packages (from flox->xarray-regrid==0.3.0) (0.11.3)
+Requirement already satisfied: toolz in ./.venv/lib/python3.10/site-packages (from flox->xarray-regrid==0.3.0) (1.1.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas>=1.5->flox->xarray-regrid==0.3.0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas>=1.5->flox->xarray-regrid==0.3.0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas>=1.5->flox->xarray-regrid==0.3.0) (2025.2)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas>=1.5->flox->xarray-regrid==0.3.0) (1.17.0)
+Building wheels for collected packages: xarray-regrid
+  Building editable for xarray-regrid (pyproject.toml): started
+  Building editable for xarray-regrid (pyproject.toml): finished with status 'done'
+  Created wheel for xarray-regrid: filename=xarray_regrid-0.3.0-py3-none-any.whl size=6803 sha256=46602b3faa6643173b98c39c7df3a430af7d1d489f6358b9da7ef45462ed4379
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ji74fu9a/wheels/48/3c/41/f2bf941f4dc029007526d58543ca3df7ebc9dff1053e33a6b1
+Successfully built xarray-regrid
+Installing collected packages: xarray-regrid
+  Attempting uninstall: xarray-regrid
+    Found existing installation: xarray-regrid 0.3.0
+    Uninstalling xarray-regrid-0.3.0:
+      Successfully uninstalled xarray-regrid-0.3.0
+Successfully installed xarray-regrid-0.3.0
+
+=========================================
+Test run 1/1 for before
+Time: zo 23 nov 2025 17:46:14 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/xarray-regrid_45/before
+configfile: pyproject.toml
+plugins: cov-7.0.0
+collected 52 items
+
+tests/test_most_common.py ..........                                     [ 19%]
+tests/test_regrid.py .................s........................          [100%]
+
+============================== slowest durations ===============================
+19.58s call     tests/test_regrid.py::TestCoordOrder::test_conservative_original[True]
+19.47s call     tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[True-latitude]
+19.06s call     tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[False-latitude]
+19.06s call     tests/test_regrid.py::TestCoordOrder::test_conservative_original[False]
+18.49s call     tests/test_regrid.py::test_attrs_dataset_conservative
+18.17s call     tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[True-longitude]
+17.99s call     tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[False-longitude]
+17.84s call     tests/test_regrid.py::test_attrs_dataarray_conservative
+5.38s call     tests/test_regrid.py::TestCoordOrder::test_reversed[False-cubic-longitude]
+5.14s call     tests/test_regrid.py::TestCoordOrder::test_reversed[False-cubic-latitude]
+4.68s call     tests/test_regrid.py::test_attrs_dataset[cubic]
+4.52s call     tests/test_regrid.py::TestCoordOrder::test_original[False-cubic]
+4.13s call     tests/test_regrid.py::TestCoordOrder::test_reversed[True-cubic-longitude]
+4.11s call     tests/test_regrid.py::TestCoordOrder::test_original[True-cubic]
+4.06s call     tests/test_regrid.py::TestCoordOrder::test_reversed[True-cubic-latitude]
+4.04s call     tests/test_regrid.py::test_attrs_dataarray[cubic]
+1.16s call     tests/test_regrid.py::test_conservative_nans
+0.57s call     tests/test_regrid.py::test_conservative_regridder
+0.28s call     tests/test_regrid.py::test_basic_regridders_ds[linear-cdo_file0]
+0.18s call     tests/test_regrid.py::TestCoordOrder::test_reversed[True-linear-longitude]
+0.15s setup    tests/test_regrid.py::test_basic_regridders_ds[linear-cdo_file0]
+0.13s call     tests/test_regrid.py::TestCoordOrder::test_reversed[False-linear-longitude]
+0.13s setup    tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[True-longitude]
+0.12s setup    tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[True-latitude]
+0.12s call     tests/test_regrid.py::test_basic_regridders_ds[nearest-cdo_file1]
+0.12s setup    tests/test_regrid.py::test_conservative_regridder
+0.12s call     tests/test_regrid.py::test_basic_regridders_da[linear-cdo_file0]
+0.11s call     tests/test_regrid.py::TestCoordOrder::test_reversed[False-nearest-longitude]
+0.11s call     tests/test_regrid.py::TestCoordOrder::test_reversed[True-linear-latitude]
+0.11s call     tests/test_regrid.py::TestCoordOrder::test_reversed[True-nearest-longitude]
+0.11s call     tests/test_regrid.py::TestCoordOrder::test_reversed[False-linear-latitude]
+0.11s call     tests/test_regrid.py::test_attrs_dataarray[linear]
+0.10s call     tests/test_regrid.py::test_basic_regridders_da[nearest-cdo_file1]
+0.10s call     tests/test_regrid.py::TestCoordOrder::test_reversed[False-nearest-latitude]
+0.10s setup    tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[False-longitude]
+0.09s setup    tests/test_regrid.py::TestCoordOrder::test_conservative_original[False]
+0.09s call     tests/test_regrid.py::TestCoordOrder::test_reversed[True-nearest-latitude]
+0.09s call     tests/test_regrid.py::TestCoordOrder::test_original[False-linear]
+0.09s call     tests/test_regrid.py::TestCoordOrder::test_original[True-linear]
+0.09s call     tests/test_regrid.py::test_attrs_dataset[linear]
+0.08s call     tests/test_regrid.py::TestCoordOrder::test_original[True-nearest]
+0.07s call     tests/test_regrid.py::test_attrs_dataarray[nearest]
+0.07s call     tests/test_regrid.py::TestCoordOrder::test_original[False-nearest]
+0.07s call     tests/test_regrid.py::test_attrs_dataset[nearest]
+0.02s call     tests/test_most_common.py::test_most_common
+0.02s setup    tests/test_regrid.py::test_attrs_dataarray[linear]
+0.02s setup    tests/test_regrid.py::test_conservative_nans
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_conservative_reversed[False-latitude]
+0.02s call     tests/test_regrid.py::test_conservative_nan_thresholds_against_coarsen[0]
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_conservative_original[True]
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[False-linear-latitude]
+0.02s setup    tests/test_regrid.py::test_attrs_dataset[linear]
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[True-nearest-latitude]
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_original[True-linear]
+0.02s call     tests/test_regrid.py::test_conservative_nan_aggregation_over_dims
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_original[True-cubic]
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[True-cubic-latitude]
+0.02s setup    tests/test_regrid.py::test_basic_regridders_da[linear-cdo_file0]
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[False-cubic-latitude]
+0.02s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[True-linear-latitude]
+0.02s setup    tests/test_regrid.py::test_attrs_dataarray[nearest]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[True-cubic-longitude]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_original[False-linear]
+0.01s setup    tests/test_regrid.py::test_attrs_dataarray_conservative
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[False-cubic-longitude]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[False-nearest-longitude]
+0.01s setup    tests/test_regrid.py::test_attrs_dataarray[cubic]
+0.01s setup    tests/test_regrid.py::test_attrs_dataset_conservative
+0.01s setup    tests/test_regrid.py::test_attrs_dataset[cubic]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_original[False-cubic]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[True-nearest-longitude]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_original[True-nearest]
+0.01s setup    tests/test_regrid.py::test_attrs_dataset[nearest]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[False-linear-longitude]
+0.01s setup    tests/test_regrid.py::test_basic_regridders_da[nearest-cdo_file1]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[False-nearest-latitude]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_original[False-nearest]
+0.01s setup    tests/test_regrid.py::test_basic_regridders_ds[nearest-cdo_file1]
+0.01s setup    tests/test_regrid.py::TestCoordOrder::test_reversed[True-linear-longitude]
+0.01s call     tests/test_regrid.py::test_conservative_nan_thresholds_against_coarsen[1]
+0.01s call     tests/test_most_common.py::test_oversized_most_common
+0.01s call     tests/test_most_common.py::test_coord_order_reversed[True-latitude]
+0.01s call     tests/test_most_common.py::test_coord_order_reversed[False-latitude]
+0.01s call     tests/test_most_common.py::test_coord_order_reversed[False-longitude]
+0.01s call     tests/test_most_common.py::test_coord_order_original[True]
+0.01s call     tests/test_most_common.py::test_coord_order_reversed[True-longitude]
+0.01s call     tests/test_most_common.py::test_coord_order_original[False]
+0.01s call     tests/test_most_common.py::test_attrs_dataarray
+0.01s call     tests/test_most_common.py::test_attrs_dataset
+
+(66 durations < 0.005s hidden.  Use -vv to show these durations.)
+================== 51 passed, 1 skipped in 191.85s (0:03:11) ===================
+Energy consumption in joules: 3144.674530029297 for 192.32668 sec of execution.
+
+
+========================================
+Completed before version at: zo 23 nov 2025 17:49:27 CET
+========================================
+
+========================================
+All tests completed at: zo 23 nov 2025 17:49:27 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/xarray-regrid_45/test_results_test_suite.log
+========================================

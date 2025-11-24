@@ -1,0 +1,288 @@
+========================================
+Starting test runs for project: armi_1737
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: python -m pytest armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache --durations=0 -vv
+Log file: /home/xutong/SpeedUpSlowTest/versions/armi_1737/test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/armi_1737/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: coverage>=7.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.11.0)
+Requirement already satisfied: h5py<=3.9,>=3.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.9.0)
+Requirement already satisfied: htmltree>=0.7.6 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.6)
+Requirement already satisfied: matplotlib<3.8.0,>=3.5.3 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.7.5)
+Requirement already satisfied: numpy<=1.23.5,>=1.21 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.23.5)
+Requirement already satisfied: ordered-set>=3.1.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (4.1.0)
+Requirement already satisfied: pluggy>=1.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: pyDOE>=0.3.8 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.3.8)
+Requirement already satisfied: pyevtk>=1.2.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: ruamel.yaml.clib<=0.2.7 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.2.7)
+Requirement already satisfied: ruamel.yaml<=0.17.21 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.17.21)
+Requirement already satisfied: scipy>=1.7.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (1.15.3)
+Requirement already satisfied: tabulate>=0.8.9 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.9.0)
+Requirement already satisfied: toml>0.9.5 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.10.2)
+Requirement already satisfied: voluptuous>=0.12.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.15.2)
+Requirement already satisfied: yamlize==0.7.1 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.1)
+Requirement already satisfied: black==22.6.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (22.6.0)
+Requirement already satisfied: ipykernel>=6.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.1.0)
+Requirement already satisfied: jupyter_client>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (8.6.3)
+Requirement already satisfied: nbconvert>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.16.6)
+Requirement already satisfied: pytest>=7.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (8.4.2)
+Requirement already satisfied: pytest-cov>=4.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (7.0.0)
+Requirement already satisfied: pytest-xdist>=3.0.0 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (3.8.0)
+Requirement already satisfied: ruff==0.0.272 in ./venv/lib/python3.10/site-packages (from armi==0.3.0) (0.0.272)
+Requirement already satisfied: click>=8.0.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (8.3.0)
+Requirement already satisfied: platformdirs>=2 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (4.5.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (0.12.1)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (1.1.0)
+Requirement already satisfied: tomli>=1.1.0 in ./venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: contourpy>=1.0.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (25.0)
+Requirement already satisfied: pillow>=6.2.0 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (12.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in ./venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (2.9.0.post0)
+Requirement already satisfied: comm>=0.1.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.8.17)
+Requirement already satisfied: ipython>=7.23.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (8.37.0)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.9.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.1)
+Requirement already satisfied: nest-asyncio>=1.4 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.6.0)
+Requirement already satisfied: psutil>=5.7 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (7.1.3)
+Requirement already satisfied: pyzmq>=25 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (27.1.0)
+Requirement already satisfied: tornado>=6.2 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in ./venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.14.3)
+Requirement already satisfied: decorator in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.19.2)
+Requirement already satisfied: pexpect>4.3 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.52)
+Requirement already satisfied: pygments>=2.4.0 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.19.2)
+Requirement already satisfied: stack_data in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in ./venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.15.0)
+Requirement already satisfied: wcwidth in ./venv/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./venv/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.8.5)
+Requirement already satisfied: beautifulsoup4 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (4.14.2)
+Requirement already satisfied: bleach!=5.0.0 in ./venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (6.3.0)
+Requirement already satisfied: defusedxml in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.7.1)
+Requirement already satisfied: jinja2>=3.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.6)
+Requirement already satisfied: jupyterlab-pygments in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.3.0)
+Requirement already satisfied: markupsafe>=2.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.0.3)
+Requirement already satisfied: mistune<4,>=2.0.3 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.4)
+Requirement already satisfied: nbclient>=0.5.0 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.10.2)
+Requirement already satisfied: nbformat>=5.7 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (5.10.4)
+Requirement already satisfied: pandocfilters>=1.4.1 in ./venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (1.5.1)
+Requirement already satisfied: webencodings in ./venv/lib/python3.10/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in ./venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in ./venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2.21.2)
+Requirement already satisfied: jsonschema>=2.6 in ./venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (4.25.1)
+Requirement already satisfied: attrs>=22.2.0 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.28.0)
+Requirement already satisfied: ptyprocess>=0.5 in ./venv/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.7.0)
+Requirement already satisfied: iniconfig>=1 in ./venv/lib/python3.10/site-packages (from pytest>=7.0.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: execnet>=2.1 in ./venv/lib/python3.10/site-packages (from pytest-xdist>=3.0.0->armi==0.3.0) (2.1.1)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.17.0)
+Requirement already satisfied: soupsieve>1.2 in ./venv/lib/python3.10/site-packages (from beautifulsoup4->nbconvert>=7.0.0->armi==0.3.0) (2.8)
+Requirement already satisfied: executing>=1.2.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.0)
+Requirement already satisfied: pure-eval in ./venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Building wheels for collected packages: armi
+  Building editable for armi (pyproject.toml): started
+  Building editable for armi (pyproject.toml): finished with status 'done'
+  Created wheel for armi: filename=armi-0.3.0-0.editable-py3-none-any.whl size=21188 sha256=0c0dbed2aa3f5871bc58721501a62e51b8ae4ece2732c710eb7ea86aaa4653e9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-_qw2jctu/wheels/31/45/c5/174e31a7ebf50f9c2abe08df798978a1a4da2a8c6794a92f2f
+Successfully built armi
+Installing collected packages: armi
+  Attempting uninstall: armi
+    Found existing installation: armi 0.3.0
+    Uninstalling armi-0.3.0:
+      Successfully uninstalled armi-0.3.0
+Successfully installed armi-0.3.0
+
+=========================================
+Test run 1/1 for before
+Time: ma 24 nov 2025  9:40:45 CET
+=========================================
+Initializing generic ARMI Framework application
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/armi_1737/before
+configfile: pyproject.toml
+plugins: xdist-3.8.0, cov-7.0.0
+collecting ... collected 1 item
+
+armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache PASSED [100%]
+
+============================== slowest durations ===============================
+2.00s call     armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache
+0.00s setup    armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache
+0.00s teardown armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache
+============================== 1 passed in 2.02s ===============================
+Energy consumption in joules: 51.11134338378906 for 3.8042438 sec of execution.
+
+
+========================================
+Completed before version at: ma 24 nov 2025  9:40:49 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/armi_1737/after_careful_mock
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: coverage>=7.2.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (7.11.0)
+Requirement already satisfied: h5py<=3.9,>=3.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (3.9.0)
+Requirement already satisfied: htmltree>=0.7.6 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.6)
+Requirement already satisfied: matplotlib<3.8.0,>=3.5.3 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (3.7.5)
+Requirement already satisfied: numpy<=1.23.5,>=1.21 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (1.23.5)
+Requirement already satisfied: ordered-set>=3.1.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (4.1.0)
+Requirement already satisfied: pluggy>=1.2.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: pyDOE>=0.3.8 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.3.8)
+Requirement already satisfied: pyevtk>=1.2.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (1.6.0)
+Requirement already satisfied: ruamel.yaml.clib<=0.2.7 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.2.7)
+Requirement already satisfied: ruamel.yaml<=0.17.21 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.17.21)
+Requirement already satisfied: scipy>=1.7.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (1.15.3)
+Requirement already satisfied: tabulate>=0.8.9 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.9.0)
+Requirement already satisfied: toml>0.9.5 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.10.2)
+Requirement already satisfied: voluptuous>=0.12.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.15.2)
+Requirement already satisfied: yamlize==0.7.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.7.1)
+Requirement already satisfied: black==22.6.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (22.6.0)
+Requirement already satisfied: ipykernel>=6.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (7.1.0)
+Requirement already satisfied: jupyter_client>=7.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (8.6.3)
+Requirement already satisfied: nbconvert>=7.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (7.16.6)
+Requirement already satisfied: pytest>=7.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (8.4.2)
+Requirement already satisfied: pytest-cov>=4.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (7.0.0)
+Requirement already satisfied: pytest-xdist>=3.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (3.8.0)
+Requirement already satisfied: ruff==0.0.272 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from armi==0.3.0) (0.0.272)
+Requirement already satisfied: click>=8.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (8.3.0)
+Requirement already satisfied: platformdirs>=2 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (4.5.0)
+Requirement already satisfied: pathspec>=0.9.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (0.12.1)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (1.1.0)
+Requirement already satisfied: tomli>=1.1.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from black==22.6.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (25.0)
+Requirement already satisfied: pillow>=6.2.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (12.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (2.9.0.post0)
+Requirement already satisfied: comm>=0.1.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.8.17)
+Requirement already satisfied: ipython>=7.23.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (8.37.0)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.9.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (0.2.1)
+Requirement already satisfied: nest-asyncio>=1.4 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (1.6.0)
+Requirement already satisfied: psutil>=5.7 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (7.1.3)
+Requirement already satisfied: pyzmq>=25 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (27.1.0)
+Requirement already satisfied: tornado>=6.2 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipykernel>=6.0.0->armi==0.3.0) (5.14.3)
+Requirement already satisfied: decorator in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (5.2.1)
+Requirement already satisfied: exceptiongroup in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.19.2)
+Requirement already satisfied: pexpect>4.3 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.52)
+Requirement already satisfied: pygments>=2.4.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.19.2)
+Requirement already satisfied: stack_data in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (4.15.0)
+Requirement already satisfied: wcwidth in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.8.5)
+Requirement already satisfied: beautifulsoup4 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (4.14.2)
+Requirement already satisfied: bleach!=5.0.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (6.3.0)
+Requirement already satisfied: defusedxml in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.7.1)
+Requirement already satisfied: jinja2>=3.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.6)
+Requirement already satisfied: jupyterlab-pygments in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.3.0)
+Requirement already satisfied: markupsafe>=2.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.0.3)
+Requirement already satisfied: mistune<4,>=2.0.3 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (3.1.4)
+Requirement already satisfied: nbclient>=0.5.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (0.10.2)
+Requirement already satisfied: nbformat>=5.7 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (5.10.4)
+Requirement already satisfied: pandocfilters>=1.4.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbconvert>=7.0.0->armi==0.3.0) (1.5.1)
+Requirement already satisfied: webencodings in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert>=7.0.0->armi==0.3.0) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2.21.2)
+Requirement already satisfied: jsonschema>=2.6 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (4.25.1)
+Requirement already satisfied: attrs>=22.2.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert>=7.0.0->armi==0.3.0) (0.28.0)
+Requirement already satisfied: ptyprocess>=0.5 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.7.0)
+Requirement already satisfied: iniconfig>=1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from pytest>=7.0.0->armi==0.3.0) (2.3.0)
+Requirement already satisfied: execnet>=2.1 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from pytest-xdist>=3.0.0->armi==0.3.0) (2.1.1)
+Requirement already satisfied: six>=1.5 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib<3.8.0,>=3.5.3->armi==0.3.0) (1.17.0)
+Requirement already satisfied: soupsieve>1.2 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from beautifulsoup4->nbconvert>=7.0.0->armi==0.3.0) (2.8)
+Requirement already satisfied: executing>=1.2.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (3.0.0)
+Requirement already satisfied: pure-eval in /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel>=6.0.0->armi==0.3.0) (0.2.3)
+Building wheels for collected packages: armi
+  Building editable for armi (pyproject.toml): started
+  Building editable for armi (pyproject.toml): finished with status 'done'
+  Created wheel for armi: filename=armi-0.3.0-0.editable-py3-none-any.whl size=21202 sha256=f9739040830083fedd4f7ade6f024df9c10f12b688a308d7e19d3dae25cd7f57
+  Stored in directory: /tmp/pip-ephem-wheel-cache-42sgjhca/wheels/86/b9/22/47c1bcfc323f77222cdbc338e8c0a623c11c647c216c618b1f
+Successfully built armi
+Installing collected packages: armi
+  Attempting uninstall: armi
+    Found existing installation: armi 0.3.0
+    Uninstalling armi-0.3.0:
+      Successfully uninstalled armi-0.3.0
+Successfully installed armi-0.3.0
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: ma 24 nov 2025  9:41:01 CET
+=========================================
+Initializing generic ARMI Framework application
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/xutong/SpeedUpSlowTest/versions/armi_1737/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/xutong/SpeedUpSlowTest/versions/armi_1737/after_careful_mock
+configfile: pyproject.toml
+plugins: xdist-3.8.0, cov-7.0.0
+collecting ... collected 1 item
+
+armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache PASSED [100%]
+
+============================== slowest durations ===============================
+0.00s call     armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache
+0.00s setup    armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache
+0.00s teardown armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache
+============================== 1 passed in 0.02s ===============================
+Energy consumption in joules: 32.68766784667969 for 2.003011 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: ma 24 nov 2025  9:41:04 CET
+========================================
+
+========================================
+All tests completed at: ma 24 nov 2025  9:41:04 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/armi_1737/test_results_only_mock_part.log
+========================================

@@ -1,0 +1,181 @@
+========================================
+Starting test runs for project: pydicom_1636
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 1
+Test command: pytest pydicom/tests/test_data_manager.py::test_fetch_data_files --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/pydicom_1636/test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Skipping pytest-asyncio as it is not installed.
+WARNING: Skipping pytest-httpx as it is not installed.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/pydicom_1636/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pydicom
+  Building editable for pydicom (pyproject.toml): started
+  Building editable for pydicom (pyproject.toml): finished with status 'done'
+  Created wheel for pydicom: filename=pydicom-2.4.0.dev0-0.editable-py3-none-any.whl size=7323 sha256=c6a352a100efab04cddb7b42e191930d4d8ee17755117d7ef4698641cc6402c1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-u416d0q3/wheels/96/5a/35/92bece2bd9c1642b570f0b05b7e632969c5f9bcf10f8466137
+Successfully built pydicom
+Installing collected packages: pydicom
+  Attempting uninstall: pydicom
+    Found existing installation: pydicom 2.4.0.dev0
+    Uninstalling pydicom-2.4.0.dev0:
+      Successfully uninstalled pydicom-2.4.0.dev0
+Successfully installed pydicom-2.4.0.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: pytest<8.0,>=7.0 in /usr/local/lib/python3.10/dist-packages (7.4.4)
+Requirement already satisfied: pytest-timeout in /usr/local/lib/python3.10/dist-packages (2.4.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (4.67.1)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (2.3.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest<8.0,>=7.0) (4.15.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for before
+Time: zo 23 nov 2025 17:01:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1554808783
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pydicom_1636/before
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0
+collected 1 item
+
+pydicom/tests/test_data_manager.py .                                     [100%]
+
+=============================== warnings summary ===============================
+pydicom/data/data_manager.py:112
+  /home/xutong/SpeedUpSlowTest/versions/pydicom_1636/before/pydicom/data/data_manager.py:112: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import iter_entry_points
+
+../../../../../../usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146
+  /usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('bscearth')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+../../../../../../usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146
+  /usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+1.10s call     pydicom/tests/test_data_manager.py::test_fetch_data_files
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 1 passed, 3 warnings in 1.20s =========================
+Energy consumption in joules: 15.19354248046875 for 1.604722 sec of execution.
+
+
+========================================
+Completed before version at: zo 23 nov 2025 17:01:45 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Skipping pytest-asyncio as it is not installed.
+WARNING: Skipping pytest-httpx as it is not installed.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/pydicom_1636/after_careful_mock
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pydicom
+  Building editable for pydicom (pyproject.toml): started
+  Building editable for pydicom (pyproject.toml): finished with status 'done'
+  Created wheel for pydicom: filename=pydicom-2.4.0.dev0-0.editable-py3-none-any.whl size=7329 sha256=185c0b161531bf373ff08cdf1b0d0f697fdbb81157452f227c7b699af68ea099
+  Stored in directory: /tmp/pip-ephem-wheel-cache-xbjjulwk/wheels/71/7d/9f/ce6fe7af713205ca63827cc723b60e84adb3f37dba88569e00
+Successfully built pydicom
+Installing collected packages: pydicom
+  Attempting uninstall: pydicom
+    Found existing installation: pydicom 2.4.0.dev0
+    Uninstalling pydicom-2.4.0.dev0:
+      Successfully uninstalled pydicom-2.4.0.dev0
+Successfully installed pydicom-2.4.0.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: pytest<8.0,>=7.0 in /usr/local/lib/python3.10/dist-packages (7.4.4)
+Requirement already satisfied: pytest-timeout in /usr/local/lib/python3.10/dist-packages (2.4.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (4.67.1)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest<8.0,>=7.0) (2.3.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest<8.0,>=7.0) (4.15.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+=========================================
+Test run 1/1 for after_careful_mock
+Time: zo 23 nov 2025 17:01:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1854583393
+rootdir: /home/xutong/SpeedUpSlowTest/versions/pydicom_1636/after_careful_mock
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0
+collected 1 item
+
+pydicom/tests/test_data_manager.py .                                     [100%]
+
+=============================== warnings summary ===============================
+pydicom/data/data_manager.py:112
+  /home/xutong/SpeedUpSlowTest/versions/pydicom_1636/after_careful_mock/pydicom/data/data_manager.py:112: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import iter_entry_points
+
+../../../../../../usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146
+  /usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('bscearth')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+../../../../../../usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146
+  /usr/local/lib/python3.10/dist-packages/pkg_resources/__init__.py:3146: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+
+(3 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 1 passed, 3 warnings in 0.12s =========================
+Energy consumption in joules: 8.85443115234375 for 0.60225725 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: zo 23 nov 2025 17:02:00 CET
+========================================
+
+========================================
+All tests completed at: zo 23 nov 2025 17:02:00 CET
+Compared: before vs after_careful_mock
+Log file: /home/xutong/SpeedUpSlowTest/versions/pydicom_1636/test_results_only_mock_part.log
+========================================
