@@ -6,6 +6,9 @@ versions/**
 !versions/**/test_results.log
 !versions/**/test_config*.sh
 !versions/**/test_results*.log
+!versions/**/energy_data*.csv
+!versions/**/duration_data*.csv
+!versions/**/execution_time_data*.csv
 
 # This requires us to not ignore the directories themselves
 !versions/

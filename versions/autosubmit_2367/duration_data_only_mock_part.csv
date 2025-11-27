@@ -1,0 +1,1201 @@
+version,run_number,test_name,test_path,phase,duration_sec,total_test_time
+before,1,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.89
+before,1,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.89
+before,1,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.89
+before,1,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.89
+before,1,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.89
+before,1,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.89
+before,1,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.89
+before,1,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.89
+before,1,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.89
+before,1,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.89
+before,1,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.89
+before,1,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.89
+before,1,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.89
+before,1,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.89
+before,1,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.89
+before,2,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.9
+before,2,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.9
+before,2,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.9
+before,2,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.9
+before,2,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.9
+before,2,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.9
+before,2,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.9
+before,2,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.9
+before,2,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.9
+before,2,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.9
+before,2,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.9
+before,2,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.9
+before,2,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.9
+before,2,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.9
+before,2,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.9
+before,3,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,8.03
+before,3,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.03
+before,3,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.03
+before,3,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.03
+before,3,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.03
+before,3,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.03
+before,3,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.03
+before,3,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.03
+before,3,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.03
+before,3,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.03
+before,3,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.03
+before,3,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.03
+before,3,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.03
+before,3,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.03
+before,3,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.03
+before,4,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.89
+before,4,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.89
+before,4,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.89
+before,4,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.89
+before,4,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.89
+before,4,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.89
+before,4,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.89
+before,4,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.89
+before,4,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.89
+before,4,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.89
+before,4,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.89
+before,4,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.89
+before,4,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.89
+before,4,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.89
+before,4,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.89
+before,5,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.87
+before,5,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.87
+before,5,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.87
+before,5,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.87
+before,5,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.87
+before,5,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.87
+before,5,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.87
+before,5,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.87
+before,5,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.87
+before,5,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.87
+before,5,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.87
+before,5,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.87
+before,5,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.87
+before,5,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.87
+before,5,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.87
+before,6,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.85
+before,6,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.85
+before,6,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.85
+before,6,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.85
+before,6,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.85
+before,6,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.85
+before,6,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.85
+before,6,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.85
+before,6,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.85
+before,6,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.85
+before,6,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.85
+before,6,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.85
+before,6,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.85
+before,6,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.85
+before,6,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.85
+before,7,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.94
+before,7,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.94
+before,7,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.94
+before,7,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.94
+before,7,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.94
+before,7,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.94
+before,7,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.94
+before,7,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.94
+before,7,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.94
+before,7,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.94
+before,7,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.94
+before,7,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.94
+before,7,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.94
+before,7,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.94
+before,7,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.94
+before,8,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.9
+before,8,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.9
+before,8,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.9
+before,8,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.9
+before,8,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.9
+before,8,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.9
+before,8,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.9
+before,8,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.9
+before,8,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.9
+before,8,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.9
+before,8,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.9
+before,8,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.9
+before,8,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.9
+before,8,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.9
+before,8,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.9
+before,9,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.91
+before,9,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.91
+before,9,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.91
+before,9,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.91
+before,9,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.91
+before,9,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.91
+before,9,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.91
+before,9,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.91
+before,9,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.91
+before,9,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.91
+before,9,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.91
+before,9,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.91
+before,9,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.91
+before,9,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.91
+before,9,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.91
+before,10,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.84
+before,10,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.84
+before,10,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.84
+before,10,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.84
+before,10,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.84
+before,10,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.84
+before,10,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.84
+before,10,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.84
+before,10,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.84
+before,10,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.84
+before,10,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.84
+before,10,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.84
+before,10,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.84
+before,10,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.84
+before,10,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.84
+before,11,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.88
+before,11,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.88
+before,11,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.88
+before,11,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.88
+before,11,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.88
+before,11,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.88
+before,11,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.88
+before,11,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.88
+before,11,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.88
+before,11,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.88
+before,11,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.88
+before,11,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.88
+before,11,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.88
+before,11,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.88
+before,11,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.88
+before,12,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.82
+before,12,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.82
+before,12,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.82
+before,12,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.82
+before,12,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.82
+before,12,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.82
+before,12,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.82
+before,12,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.82
+before,12,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.82
+before,12,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.82
+before,12,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.82
+before,12,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.82
+before,12,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.82
+before,12,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.82
+before,12,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.82
+before,13,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.91
+before,13,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.91
+before,13,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.91
+before,13,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.91
+before,13,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.91
+before,13,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.91
+before,13,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.91
+before,13,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.91
+before,13,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.91
+before,13,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.91
+before,13,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.91
+before,13,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.91
+before,13,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.91
+before,13,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.91
+before,13,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.91
+before,14,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.88
+before,14,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.88
+before,14,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.88
+before,14,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.88
+before,14,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.88
+before,14,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.88
+before,14,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.88
+before,14,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.88
+before,14,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.88
+before,14,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.88
+before,14,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.88
+before,14,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.88
+before,14,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.88
+before,14,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.88
+before,14,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.88
+before,15,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.79
+before,15,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.79
+before,15,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.79
+before,15,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.79
+before,15,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.79
+before,15,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.79
+before,15,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.79
+before,15,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.79
+before,15,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.79
+before,15,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.79
+before,15,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.79
+before,15,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.79
+before,15,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.79
+before,15,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.79
+before,15,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.79
+before,16,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.85
+before,16,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.85
+before,16,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.85
+before,16,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.85
+before,16,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.85
+before,16,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.85
+before,16,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.85
+before,16,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.85
+before,16,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.85
+before,16,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.85
+before,16,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.85
+before,16,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.85
+before,16,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.85
+before,16,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.85
+before,16,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.85
+before,17,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.93
+before,17,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.93
+before,17,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.93
+before,17,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.93
+before,17,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.93
+before,17,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.93
+before,17,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.93
+before,17,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.93
+before,17,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.93
+before,17,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.93
+before,17,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.93
+before,17,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.93
+before,17,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.93
+before,17,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.93
+before,17,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.93
+before,18,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.89
+before,18,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.89
+before,18,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.89
+before,18,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.89
+before,18,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.89
+before,18,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.89
+before,18,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.89
+before,18,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.89
+before,18,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.89
+before,18,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.89
+before,18,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.89
+before,18,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.89
+before,18,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.89
+before,18,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.89
+before,18,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.89
+before,19,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.82
+before,19,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.82
+before,19,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.82
+before,19,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.82
+before,19,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.82
+before,19,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.82
+before,19,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.82
+before,19,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.82
+before,19,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.82
+before,19,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.82
+before,19,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.82
+before,19,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.82
+before,19,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.82
+before,19,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.82
+before,19,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.82
+before,20,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.94
+before,20,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.94
+before,20,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.94
+before,20,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.94
+before,20,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.94
+before,20,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.94
+before,20,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.94
+before,20,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.94
+before,20,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.94
+before,20,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.94
+before,20,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.94
+before,20,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.94
+before,20,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.94
+before,20,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.94
+before,20,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.94
+before,21,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.98
+before,21,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.98
+before,21,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.98
+before,21,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.98
+before,21,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.98
+before,21,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.98
+before,21,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.98
+before,21,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.98
+before,21,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.98
+before,21,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.98
+before,21,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.98
+before,21,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.98
+before,21,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.98
+before,21,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.98
+before,21,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.98
+before,22,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.85
+before,22,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.85
+before,22,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.85
+before,22,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.85
+before,22,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.85
+before,22,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.85
+before,22,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.85
+before,22,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.85
+before,22,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.85
+before,22,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.85
+before,22,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.85
+before,22,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.85
+before,22,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.85
+before,22,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.85
+before,22,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.85
+before,23,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.93
+before,23,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.93
+before,23,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.93
+before,23,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.93
+before,23,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.93
+before,23,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.93
+before,23,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.93
+before,23,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.93
+before,23,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.93
+before,23,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.93
+before,23,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.93
+before,23,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.93
+before,23,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.93
+before,23,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.93
+before,23,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.93
+before,24,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.94
+before,24,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.94
+before,24,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.94
+before,24,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.94
+before,24,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.94
+before,24,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.94
+before,24,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.94
+before,24,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.94
+before,24,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.94
+before,24,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.94
+before,24,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.94
+before,24,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.94
+before,24,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.94
+before,24,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.94
+before,24,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.94
+before,25,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.86
+before,25,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.86
+before,25,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.86
+before,25,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.86
+before,25,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.86
+before,25,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.86
+before,25,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.86
+before,25,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.86
+before,25,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.86
+before,25,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.86
+before,25,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.86
+before,25,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.86
+before,25,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.86
+before,25,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.86
+before,25,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.86
+before,26,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.84
+before,26,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.84
+before,26,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.84
+before,26,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.84
+before,26,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.84
+before,26,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.84
+before,26,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.84
+before,26,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.84
+before,26,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.84
+before,26,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.84
+before,26,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.84
+before,26,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.84
+before,26,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.84
+before,26,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.84
+before,26,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.84
+before,27,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.94
+before,27,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.94
+before,27,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.94
+before,27,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.94
+before,27,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.94
+before,27,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.94
+before,27,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.94
+before,27,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.94
+before,27,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.94
+before,27,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.94
+before,27,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.94
+before,27,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.94
+before,27,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.94
+before,27,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.94
+before,27,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.94
+before,28,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.87
+before,28,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.87
+before,28,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.87
+before,28,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.87
+before,28,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.87
+before,28,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.87
+before,28,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.87
+before,28,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.87
+before,28,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.87
+before,28,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.87
+before,28,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.87
+before,28,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.87
+before,28,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.87
+before,28,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.87
+before,28,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.87
+before,29,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.83
+before,29,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.83
+before,29,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.83
+before,29,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.83
+before,29,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.83
+before,29,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.83
+before,29,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.83
+before,29,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.83
+before,29,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.83
+before,29,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.83
+before,29,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.83
+before,29,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.83
+before,29,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.83
+before,29,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.83
+before,29,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.83
+before,30,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.86
+before,30,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.86
+before,30,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.86
+before,30,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.86
+before,30,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.86
+before,30,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.86
+before,30,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.86
+before,30,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.86
+before,30,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.86
+before,30,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.86
+before,30,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.86
+before,30,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.86
+before,30,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.86
+before,30,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.86
+before,30,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.86
+before,31,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.91
+before,31,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.91
+before,31,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.91
+before,31,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.91
+before,31,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.91
+before,31,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.91
+before,31,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.91
+before,31,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.91
+before,31,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.91
+before,31,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.91
+before,31,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.91
+before,31,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.91
+before,31,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.91
+before,31,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.91
+before,31,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.91
+before,32,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.82
+before,32,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.82
+before,32,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.82
+before,32,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.82
+before,32,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.82
+before,32,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.82
+before,32,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.82
+before,32,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.82
+before,32,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.82
+before,32,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.82
+before,32,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.82
+before,32,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.82
+before,32,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.82
+before,32,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.82
+before,32,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.82
+before,33,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.94
+before,33,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.94
+before,33,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.94
+before,33,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.94
+before,33,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.94
+before,33,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.94
+before,33,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.94
+before,33,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.94
+before,33,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.94
+before,33,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.94
+before,33,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.94
+before,33,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.94
+before,33,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.94
+before,33,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.94
+before,33,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.94
+before,34,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,9.0
+before,34,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,9.0
+before,34,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,9.0
+before,34,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,9.0
+before,34,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,9.0
+before,34,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,9.0
+before,34,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,9.0
+before,34,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,9.0
+before,34,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,9.0
+before,34,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,9.0
+before,34,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,9.0
+before,34,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,9.0
+before,34,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,9.0
+before,34,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,9.0
+before,34,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,9.0
+before,35,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.92
+before,35,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.92
+before,35,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.92
+before,35,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.92
+before,35,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.92
+before,35,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.92
+before,35,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.92
+before,35,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.92
+before,35,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.92
+before,35,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.92
+before,35,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.92
+before,35,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.92
+before,35,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.92
+before,35,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.92
+before,35,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.92
+before,36,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.88
+before,36,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.88
+before,36,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.88
+before,36,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.88
+before,36,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.88
+before,36,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.88
+before,36,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.88
+before,36,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.88
+before,36,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.88
+before,36,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.88
+before,36,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.88
+before,36,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.88
+before,36,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.88
+before,36,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.88
+before,36,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.88
+before,37,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.82
+before,37,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.82
+before,37,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.82
+before,37,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.82
+before,37,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.82
+before,37,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.82
+before,37,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.82
+before,37,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.82
+before,37,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.82
+before,37,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.82
+before,37,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.82
+before,37,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.82
+before,37,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.82
+before,37,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.82
+before,37,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.82
+before,38,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,8.77
+before,38,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,8.77
+before,38,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,8.77
+before,38,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,8.77
+before,38,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,8.77
+before,38,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,8.77
+before,38,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,8.77
+before,38,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,8.77
+before,38,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,8.77
+before,38,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,8.77
+before,38,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,8.77
+before,38,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,8.77
+before,38,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,8.77
+before,38,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,8.77
+before,38,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,8.77
+before,39,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,4.01,7.94
+before,39,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,7.94
+before,39,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,7.94
+before,39,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,7.94
+before,39,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,7.94
+before,39,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,7.94
+before,39,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,7.94
+before,39,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,7.94
+before,39,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,7.94
+before,39,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,7.94
+before,39,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,7.94
+before,39,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,7.94
+before,39,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,7.94
+before,39,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,7.94
+before,39,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,7.94
+before,40,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,5.01,9.03
+before,40,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,9.03
+before,40,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,9.03
+before,40,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,9.03
+before,40,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,9.03
+before,40,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,9.03
+before,40,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,9.03
+before,40,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,9.03
+before,40,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,9.03
+before,40,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,9.03
+before,40,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,9.03
+before,40,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,9.03
+before,40,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,9.03
+before,40,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,9.03
+before,40,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,9.03
+after_careful_mock,1,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.91
+after_careful_mock,1,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.91
+after_careful_mock,2,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.0
+after_careful_mock,2,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.0
+after_careful_mock,3,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.94
+after_careful_mock,3,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.94
+after_careful_mock,4,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.93
+after_careful_mock,4,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.93
+after_careful_mock,5,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.94
+after_careful_mock,5,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.94
+after_careful_mock,6,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.95
+after_careful_mock,6,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.95
+after_careful_mock,7,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.92
+after_careful_mock,7,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.92
+after_careful_mock,8,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.98
+after_careful_mock,8,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.98
+after_careful_mock,9,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.98
+after_careful_mock,10,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.02
+after_careful_mock,10,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.02
+after_careful_mock,11,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.89
+after_careful_mock,11,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.89
+after_careful_mock,12,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.03
+after_careful_mock,12,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.03
+after_careful_mock,13,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.03
+after_careful_mock,14,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.95
+after_careful_mock,14,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.95
+after_careful_mock,15,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.93
+after_careful_mock,15,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.93
+after_careful_mock,16,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.99
+after_careful_mock,16,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.99
+after_careful_mock,17,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.06
+after_careful_mock,17,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.06
+after_careful_mock,18,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.07
+after_careful_mock,18,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.07
+after_careful_mock,19,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.94
+after_careful_mock,19,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.94
+after_careful_mock,20,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.99
+after_careful_mock,20,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.99
+after_careful_mock,21,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.97
+after_careful_mock,21,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.97
+after_careful_mock,22,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.01
+after_careful_mock,22,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.01
+after_careful_mock,23,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.91
+after_careful_mock,23,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.91
+after_careful_mock,24,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.96
+after_careful_mock,24,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.96
+after_careful_mock,25,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.06
+after_careful_mock,25,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.06
+after_careful_mock,26,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.98
+after_careful_mock,26,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.98
+after_careful_mock,27,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.93
+after_careful_mock,27,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.93
+after_careful_mock,28,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.04
+after_careful_mock,28,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.04
+after_careful_mock,29,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.05
+after_careful_mock,29,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.05
+after_careful_mock,30,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.97
+after_careful_mock,30,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.97
+after_careful_mock,31,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.0
+after_careful_mock,31,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.0
+after_careful_mock,32,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.0
+after_careful_mock,33,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.07
+after_careful_mock,33,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.07
+after_careful_mock,34,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.98
+after_careful_mock,34,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.98
+after_careful_mock,35,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.01
+after_careful_mock,35,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.01
+after_careful_mock,36,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.98
+after_careful_mock,36,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.98
+after_careful_mock,37,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.02
+after_careful_mock,37,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.02
+after_careful_mock,38,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,4.01
+after_careful_mock,38,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,4.01
+after_careful_mock,39,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.92
+after_careful_mock,39,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.92
+after_careful_mock,40,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],call,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],call,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],call,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],call,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],call,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],setup,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],setup,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],setup,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],setup,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],setup,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[execute in 5 seconds],test/unit/test_autosubmit_helper.py::teste_handle_start_time[execute in 5 seconds],teardown,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[fulldate right format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate right format],teardown,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[right format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[right format hours],teardown,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[wrong format hours],test/unit/test_autosubmit_helper.py::teste_handle_start_time[wrong format hours],teardown,0.0,3.96
+after_careful_mock,40,teste_handle_start_time[fulldate wrong format],test/unit/test_autosubmit_helper.py::teste_handle_start_time[fulldate wrong format],teardown,0.0,3.96

@@ -1,0 +1,7 @@
+version,run_number,test_name,test_path,phase,duration_sec,total_test_time
+before,1,test_findings_with_invalid_cvss_scores,tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores,call,0.05,0.64
+before,1,test_findings_with_invalid_cvss_scores,tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores,setup,0.0,0.64
+before,1,test_findings_with_invalid_cvss_scores,tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores,teardown,0.0,0.64
+after_careful_mock,1,test_findings_with_invalid_cvss_scores,tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores,call,0.01,0.61
+after_careful_mock,1,test_findings_with_invalid_cvss_scores,tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores,setup,0.0,0.61
+after_careful_mock,1,test_findings_with_invalid_cvss_scores,tools/supplychain/tests/test_enrichment_integration.py::TestEnrichmentEdgeCases::test_findings_with_invalid_cvss_scores,teardown,0.0,0.61

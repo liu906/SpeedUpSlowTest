@@ -1,0 +1,3 @@
+version,run_number,energy_joules,execution_time_sec,average_power_watts
+before,1,235.98016357421875,100.81748,2.3406671499249807
+after_careful_mock,1,11.224472045898438,0.8025559,13.985906833279074

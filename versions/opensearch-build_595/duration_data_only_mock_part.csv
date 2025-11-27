@@ -1,0 +1,15 @@
+version,run_number,test_name,test_path,phase,duration_sec,total_test_time
+before,1,test_wait_for_service_cluster_unavailable,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable,call,100.1,100.22
+before,1,test_download,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download,call,0.01,100.22
+before,1,test_create_cluster,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster,call,0.01,100.22
+before,1,test_wait_for_service,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service,call,0.01,100.22
+before,1,test_url,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url,call,0.01,100.22
+before,1,test_port,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port,call,0.01,100.22
+before,1,test_endpoint,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint,call,0.01,100.22
+after_careful_mock,1,test_url,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url,call,0.01,0.13
+after_careful_mock,1,test_create_cluster,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster,call,0.01,0.13
+after_careful_mock,1,test_download,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download,call,0.01,0.13
+after_careful_mock,1,test_wait_for_service_cluster_unavailable,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable,call,0.01,0.13
+after_careful_mock,1,test_wait_for_service,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service,call,0.01,0.13
+after_careful_mock,1,test_port,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port,call,0.01,0.13
+after_careful_mock,1,test_endpoint,tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint,call,0.01,0.13

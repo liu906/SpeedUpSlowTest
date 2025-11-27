@@ -1,0 +1,10 @@
+version,run_number,energibridge_time_sec
+before,1,61.444424
+before,2,58.236904
+before,3,58.037422
+before,5,57.24398
+after_mock,1,29.219875
+after_mock,2,31.62082
+after_mock,3,31.824635
+after_mock,4,34.230076
+after_mock,5,29.222502
