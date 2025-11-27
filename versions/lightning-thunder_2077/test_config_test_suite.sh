@@ -7,7 +7,8 @@
 # The 6 optimized tests (test_reports_benchmark, test_report_thunderfx_pytest_benchmark_report,
 # test_fxreport_DynamoThunder_cuda_None, test_ThunderCompilerGraphBenchmarking_groupby,
 # test_reports_repro, test_thunder_specific_reports) were reduced from ~240 seconds total
-TEST_COMMAND="pytest --durations=0"
+TEST_COMMAND="pytest --ignore=examples --ignore=thunder/benchmarks --ignore=thunder/executors/nvfuserex_impl.py --ignore=thunder/executors/transformer_engine_v2ex_impl.py --ignore=thunder/numpy \
+--durations=0 -vv"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
@@ -15,7 +16,7 @@ VENV_PATH=".venv"
 # Optional: Setup command to run BEFORE venv creation
 # Install the package in editable mode with test dependencies
 # Includes pytest, pytest-benchmark, hypothesis, and other testing tools
-SETUP_COMMAND="pip install --upgrade pip && pip install -e . -r requirements/test.txt"
+SETUP_COMMAND="pip install --upgrade pip && pip install -e . -r requirements/test.txt && pip install psutil"
 
 # Flag to indicate this is NOT a uv-based project
 USE_UV="false"

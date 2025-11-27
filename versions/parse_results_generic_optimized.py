@@ -70,11 +70,15 @@ def parse_log_file(log_file_path, debug=False):
     # - "in 30.24s " (with space after s)
     # - "in 30.24s" (nothing after s, end of line or more =)
     total_time_pattern = re.compile(r'in\s+([\d.]+)s(?:\s|=|$)')
+    # Pattern to match ANSI escape codes
+    ansi_escape_pattern = re.compile(r'\x1b\[[0-9;]*m')
 
     # Process file line by line instead of loading entire file
     with open(log_file_path, 'r') as f:
         for line in f:
             line = line.rstrip('\n')
+            # Strip ANSI color codes to avoid interference with pattern matching
+            line = ansi_escape_pattern.sub('', line)
 
             # Check for version header
             version_match = version_pattern.search(line)

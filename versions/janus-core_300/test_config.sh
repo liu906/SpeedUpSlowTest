@@ -15,7 +15,7 @@ VENV_PATH=".venv"
 # Note: This project uses poetry for dependency management
 # We install without extras to test core functionality (MACE only, fastest setup)
 # For full MLIP testing, add: && poetry install --extras all
-SETUP_COMMAND="pip install --upgrade pip && pip install poetry && poetry install --with dev"
+SETUP_COMMAND="pip install --upgrade pip && pip install poetry && poetry install --with dev && pip install chgnet"
 
 # Flag to indicate this is NOT a uv-based project (uses poetry instead)
 USE_UV="false"

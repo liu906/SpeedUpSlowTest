@@ -1,23 +1,22 @@
 #!/bin/bash
-# Test configuration for scikit-learn_21984
+# Test configuration for kedro-mlflow_478
 # This file is sourced by run_tests_venv_generic.sh
 
 # Test command to run
-TEST_COMMAND="python -m pytest --durations=0"
+TEST_COMMAND="python -m pytest tests/io/models/test_mlflow_model_local_filesystem_dataset.py::test_save_unversioned_under_same_path --durations=0 --no-cov -v
+"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
-VENV_PATH=".venv"
+VENV_PATH="venv"
 
 # Optional: Python version to use (defaults to python3.10 in run_tests_venv_generic.sh)
 # PYTHON_VERSION="python3.9"
-
+ß
 # Optional: Setup command to run after venv is activated (e.g., install test dependencies)
-# Note: setuptools<60.0 is required per pyproject.toml (numpy.distutils compatibility)
-# Note: Build must succeed for tests to import sklearn properly
-SETUP_COMMAND="pip install --upgrade pip wheel && pip install 'setuptools<60.0' 'numpy<2.0' 'scipy<1.12' 'cython<3.0' joblib threadpoolctl && pip install pytest && python setup.py build_ext --inplace"
+SETUP_COMMAND="pip install -e .[test]"
 
 # Optional: Wait time in seconds before starting tests
 # WAIT_TIME=2
 
 # Optional: Additional project-specific variables
-PROJECT_NAME="scikit-learn_21984"
+PROJECT_NAME="kedro-mlflow_478"

@@ -1,0 +1,17 @@
+========================================
+Starting test runs for project: splink_2792
+Iterations: 1
+Test command: pytest --durations=0 -v
+Log file: /home/xutong/SpeedUpSlowTest/versions/splink_2792//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected uv-based project, skipping traditional venv creation...
+uv will manage the virtual environment via SETUP_COMMAND
+Running setup command...
+Using CPython 3.10.12 interpreter at: /usr/bin/python3.10
+Creating virtual environment at: .venv
+warning: A virtual environment already exists at `.venv`. In the future, uv will require `--clear` to replace it
+Activate with: source .venv/bin/activate

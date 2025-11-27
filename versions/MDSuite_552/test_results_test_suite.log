@@ -1,0 +1,2704 @@
+========================================
+Starting test runs for project: MDSuite_552
+Iterations: 1
+Test command: pytest --durations=0
+Log file: /home/xutong/SpeedUpSlowTest/versions/MDSuite_552//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Virtual environment not found at '.venv', creating...
+Using Python: python3.10
+Virtual environment created successfully
+Installing dependencies from requirements.txt...
+Requirement already satisfied: pip in ./.venv/lib/python3.10/site-packages (22.0.2)
+Collecting pip
+  Using cached pip-25.3-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.2
+    Uninstalling pip-22.0.2:
+      Successfully uninstalled pip-22.0.2
+Successfully installed pip-25.3
+Collecting tensorflow>=2.5 (from -r requirements.txt (line 1))
+  Using cached tensorflow-2.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.5 kB)
+Collecting h5py (from -r requirements.txt (line 2))
+  Using cached h5py-3.15.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting pysmiles (from -r requirements.txt (line 3))
+  Using cached pysmiles-2.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting matplotlib (from -r requirements.txt (line 4))
+  Using cached matplotlib-3.10.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting scipy (from -r requirements.txt (line 5))
+  Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting tqdm (from -r requirements.txt (line 6))
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting psutil>=5.6.6 (from -r requirements.txt (line 7))
+  Using cached psutil-7.1.3-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+Collecting numpy (from -r requirements.txt (line 8))
+  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting gputil (from -r requirements.txt (line 9))
+  Using cached gputil-1.4.0-py3-none-any.whl
+Collecting pubchempy (from -r requirements.txt (line 10))
+  Using cached pubchempy-1.0.5-py3-none-any.whl.metadata (4.3 kB)
+Collecting PyYAML>=5.4 (from -r requirements.txt (line 11))
+  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting scooby (from -r requirements.txt (line 12))
+  Downloading scooby-0.11.0-py3-none-any.whl.metadata (15 kB)
+Collecting sqlalchemy>=1.4 (from -r requirements.txt (line 13))
+  Using cached sqlalchemy-2.0.44-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+Collecting pandas>=1.0.0 (from -r requirements.txt (line 14))
+  Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+Collecting tensorflow_probability (from -r requirements.txt (line 15))
+  Using cached tensorflow_probability-0.25.0-py2.py3-none-any.whl.metadata (13 kB)
+Collecting colorutils (from -r requirements.txt (line 16))
+  Using cached colorutils-0.3.0-py3-none-any.whl.metadata (9.4 kB)
+Collecting bokeh (from -r requirements.txt (line 17))
+  Downloading bokeh-3.8.1-py3-none-any.whl.metadata (10 kB)
+Collecting chemfiles (from -r requirements.txt (line 18))
+  Using cached chemfiles-0.10.4-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.5 kB)
+Collecting dot4dict (from -r requirements.txt (line 19))
+  Using cached dot4dict-0.1.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting absl-py>=1.0.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting astunparse>=1.6.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting flatbuffers>=24.3.25 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached flatbuffers-25.9.23-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting google_pasta>=0.1.1 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting libclang>=13.0.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+Collecting opt_einsum>=2.3.2 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting packaging (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting protobuf>=5.28.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached protobuf-6.33.1-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Collecting requests<3,>=2.21.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->-r requirements.txt (line 1)) (59.6.0)
+Collecting six>=1.12.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting termcolor>=1.1.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached termcolor-3.2.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting typing_extensions>=3.6.6 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting wrapt>=1.11.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached wrapt-2.0.1-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (9.0 kB)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached grpcio-1.76.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+Collecting tensorboard~=2.20.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached tensorboard-2.20.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting keras>=3.10.0 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting ml_dtypes<1.0.0,>=0.5.1 (from tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached ml_dtypes-0.5.4-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3,>=2.21.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.21.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.21.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.21.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached certifi-2025.11.12-py3-none-any.whl.metadata (2.5 kB)
+Collecting markdown>=2.6.8 (from tensorboard~=2.20.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached markdown-3.10-py3-none-any.whl.metadata (5.1 kB)
+Collecting pillow (from tensorboard~=2.20.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached pillow-12.0.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard~=2.20.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard~=2.20.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting pbr (from pysmiles->-r requirements.txt (line 3))
+  Using cached pbr-7.0.3-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting networkx (from pysmiles->-r requirements.txt (line 3))
+  Using cached networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 4))
+  Using cached contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 4))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 4))
+  Using cached fonttools-4.60.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 4))
+  Using cached kiwisolver-1.4.9-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.3 kB)
+Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 4))
+  Using cached pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 4))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting greenlet>=1 (from sqlalchemy>=1.4->-r requirements.txt (line 13))
+  Using cached greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+Collecting pytz>=2020.1 (from pandas>=1.0.0->-r requirements.txt (line 14))
+  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas>=1.0.0->-r requirements.txt (line 14))
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting decorator (from tensorflow_probability->-r requirements.txt (line 15))
+  Using cached decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting cloudpickle>=1.3 (from tensorflow_probability->-r requirements.txt (line 15))
+  Using cached cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting dm-tree (from tensorflow_probability->-r requirements.txt (line 15))
+  Using cached dm_tree-0.1.9-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.2 kB)
+Collecting Jinja2>=2.9 (from bokeh->-r requirements.txt (line 17))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting narwhals>=1.13 (from bokeh->-r requirements.txt (line 17))
+  Using cached narwhals-2.12.0-py3-none-any.whl.metadata (11 kB)
+Collecting tornado>=6.2 (from bokeh->-r requirements.txt (line 17))
+  Using cached tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting xyzservices>=2021.09.1 (from bokeh->-r requirements.txt (line 17))
+  Downloading xyzservices-2025.11.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting MarkupSafe>=2.0 (from Jinja2>=2.9->bokeh->-r requirements.txt (line 17))
+  Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting rich (from keras>=3.10.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting namex (from keras>=3.10.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+Collecting optree (from keras>=3.10.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached optree-0.18.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (34 kB)
+Collecting attrs>=18.2.0 (from dm-tree->tensorflow_probability->-r requirements.txt (line 15))
+  Using cached attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.10.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->keras>=3.10.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.10.0->tensorflow>=2.5->-r requirements.txt (line 1))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Using cached tensorflow-2.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (620.4 MB)
+Using cached grpcio-1.76.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.6 MB)
+Using cached ml_dtypes-0.5.4-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (5.0 MB)
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Using cached tensorboard-2.20.0-py3-none-any.whl (5.5 MB)
+Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+Using cached h5py-3.15.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+Using cached pysmiles-2.0.0-py2.py3-none-any.whl (37 kB)
+Using cached matplotlib-3.10.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Using cached psutil-7.1.3-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (263 kB)
+Using cached pubchempy-1.0.5-py3-none-any.whl (21 kB)
+Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+Downloading scooby-0.11.0-py3-none-any.whl (19 kB)
+Using cached sqlalchemy-2.0.44-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+Using cached tensorflow_probability-0.25.0-py2.py3-none-any.whl (7.0 MB)
+Using cached colorutils-0.3.0-py3-none-any.whl (13 kB)
+Downloading bokeh-3.8.1-py3-none-any.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 738.1 kB/s  0:00:09
+Using cached chemfiles-0.10.4-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+Using cached dot4dict-0.1.1-py3-none-any.whl (7.2 kB)
+Using cached absl_py-2.3.1-py3-none-any.whl (135 kB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached wheel-0.45.1-py3-none-any.whl (72 kB)
+Using cached certifi-2025.11.12-py3-none-any.whl (159 kB)
+Using cached cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Using cached contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached flatbuffers-25.9.23-py2.py3-none-any.whl (30 kB)
+Using cached fonttools-4.60.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.8 MB)
+Using cached gast-0.6.0-py3-none-any.whl (21 kB)
+Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Using cached greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached keras-3.12.0-py3-none-any.whl (1.5 MB)
+Using cached kiwisolver-1.4.9-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+Using cached libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+Using cached markdown-3.10-py3-none-any.whl (107 kB)
+Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Using cached narwhals-2.12.0-py3-none-any.whl (425 kB)
+Using cached opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached pillow-12.0.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+Using cached protobuf-6.33.1-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+Using cached pyparsing-3.2.5-py3-none-any.whl (113 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Using cached termcolor-3.2.0-py3-none-any.whl (7.7 kB)
+Using cached tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Using cached werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Using cached wrapt-2.0.1-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (113 kB)
+Downloading xyzservices-2025.11.0-py3-none-any.whl (93 kB)
+Using cached decorator-5.2.1-py3-none-any.whl (9.2 kB)
+Using cached dm_tree-0.1.9-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (152 kB)
+Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+Using cached namex-0.1.0-py3-none-any.whl (5.9 kB)
+Using cached networkx-3.4.2-py3-none-any.whl (1.7 MB)
+Using cached optree-0.18.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (386 kB)
+Using cached pbr-7.0.3-py2.py3-none-any.whl (131 kB)
+Using cached rich-14.2.0-py3-none-any.whl (243 kB)
+Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Using cached markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pytz, namex, libclang, gputil, flatbuffers, colorutils, xyzservices, wrapt, wheel, urllib3, tzdata, typing_extensions, tqdm, tornado, termcolor, tensorboard-data-server, six, scooby, PyYAML, pyparsing, pygments, pubchempy, psutil, protobuf, pillow, pbr, packaging, opt_einsum, numpy, networkx, narwhals, mdurl, MarkupSafe, markdown, kiwisolver, idna, greenlet, gast, fonttools, dot4dict, decorator, cycler, cloudpickle, charset_normalizer, certifi, attrs, absl-py, werkzeug, sqlalchemy, scipy, requests, python-dateutil, pysmiles, optree, ml_dtypes, markdown-it-py, Jinja2, h5py, grpcio, google_pasta, dm-tree, contourpy, chemfiles, astunparse, tensorflow_probability, tensorboard, rich, pandas, matplotlib, keras, bokeh, tensorflow
+
+Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 PyYAML-6.0.3 absl-py-2.3.1 astunparse-1.6.3 attrs-25.4.0 bokeh-3.8.1 certifi-2025.11.12 charset_normalizer-3.4.4 chemfiles-0.10.4 cloudpickle-3.1.2 colorutils-0.3.0 contourpy-1.3.2 cycler-0.12.1 decorator-5.2.1 dm-tree-0.1.9 dot4dict-0.1.1 flatbuffers-25.9.23 fonttools-4.60.1 gast-0.6.0 google_pasta-0.2.0 gputil-1.4.0 greenlet-3.2.4 grpcio-1.76.0 h5py-3.15.1 idna-3.11 keras-3.12.0 kiwisolver-1.4.9 libclang-18.1.1 markdown-3.10 markdown-it-py-4.0.0 matplotlib-3.10.7 mdurl-0.1.2 ml_dtypes-0.5.4 namex-0.1.0 narwhals-2.12.0 networkx-3.4.2 numpy-2.2.6 opt_einsum-3.4.0 optree-0.18.0 packaging-25.0 pandas-2.3.3 pbr-7.0.3 pillow-12.0.0 protobuf-6.33.1 psutil-7.1.3 pubchempy-1.0.5 pygments-2.19.2 pyparsing-3.2.5 pysmiles-2.0.0 python-dateutil-2.9.0.post0 pytz-2025.2 requests-2.32.5 rich-14.2.0 scipy-1.15.3 scooby-0.11.0 six-1.17.0 sqlalchemy-2.0.44 tensorboard-2.20.0 tensorboard-data-server-0.7.2 tensorflow-2.20.0 tensorflow_probability-0.25.0 termcolor-3.2.0 tornado-6.5.2 tqdm-4.67.1 typing_extensions-4.15.0 tzdata-2025.2 urllib3-2.5.0 werkzeug-3.1.3 wheel-0.45.1 wrapt-2.0.1 xyzservices-2025.11.0
+Virtual environment setup complete
+Running setup command...
+Collecting git+https://github.com/zincware/ZincHub.git (from -r dev-requirements.txt (line 12))
+  Cloning https://github.com/zincware/ZincHub.git to /tmp/pip-req-build-bvsn7ngc
+  Running command git clone --filter=blob:none --quiet https://github.com/zincware/ZincHub.git /tmp/pip-req-build-bvsn7ngc
+  Resolved https://github.com/zincware/ZincHub.git to commit 6422556604212858a2aea91a7e794377f271f665
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting sphinxcontrib.bibtex (from -r dev-requirements.txt (line 1))
+  Using cached sphinxcontrib_bibtex-2.6.5-py3-none-any.whl.metadata (6.1 kB)
+Collecting pybtex (from -r dev-requirements.txt (line 2))
+  Using cached pybtex-0.25.1-py2.py3-none-any.whl.metadata (2.2 kB)
+Collecting pytest (from -r dev-requirements.txt (line 3))
+  Using cached pytest-9.0.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting nbsphinx (from -r dev-requirements.txt (line 4))
+  Using cached nbsphinx-0.9.7-py3-none-any.whl.metadata (2.3 kB)
+Collecting Sphinx==5.1.1 (from -r dev-requirements.txt (line 5))
+  Using cached Sphinx-5.1.1-py3-none-any.whl.metadata (6.4 kB)
+Collecting sphinx_rtd_theme (from -r dev-requirements.txt (line 6))
+  Using cached sphinx_rtd_theme-3.0.2-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting numpydoc (from -r dev-requirements.txt (line 7))
+  Using cached numpydoc-1.9.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting docutils==0.16.0 (from -r dev-requirements.txt (line 8))
+  Using cached docutils-0.16-py2.py3-none-any.whl.metadata (2.7 kB)
+Collecting sphinx-copybutton (from -r dev-requirements.txt (line 9))
+  Using cached sphinx_copybutton-0.5.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting IPython (from -r dev-requirements.txt (line 10))
+  Using cached ipython-8.37.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting nbsphinx-link (from -r dev-requirements.txt (line 11))
+  Using cached nbsphinx_link-1.3.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting isort (from -r dev-requirements.txt (line 13))
+  Using cached isort-7.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting coverage (from -r dev-requirements.txt (line 14))
+  Using cached coverage-7.12.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (9.1 kB)
+Collecting coveralls (from -r dev-requirements.txt (line 15))
+  Using cached coveralls-4.0.2-py3-none-any.whl.metadata (5.2 kB)
+Collecting mdanalysis (from -r dev-requirements.txt (line 16))
+  Using cached mdanalysis-2.9.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (108 kB)
+Collecting black (from -r dev-requirements.txt (line 17))
+  Using cached black-25.11.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (85 kB)
+Collecting znvis (from -r dev-requirements.txt (line 18))
+  Using cached ZnVis-0.1.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting ase (from -r dev-requirements.txt (line 19))
+  Using cached ase-3.26.0-py3-none-any.whl.metadata (4.1 kB)
+Requirement already satisfied: PyYAML in ./.venv/lib/python3.10/site-packages (from ZincHub==0.1.0->-r dev-requirements.txt (line 12)) (6.0.3)
+Collecting sphinxcontrib-applehelp (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached sphinxcontrib_applehelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-devhelp (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached sphinxcontrib_devhelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-jsmath (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting sphinxcontrib-htmlhelp>=2.0.0 (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-serializinghtml>=1.1.5 (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting sphinxcontrib-qthelp (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached sphinxcontrib_qthelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: Jinja2>=2.3 in ./.venv/lib/python3.10/site-packages (from Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (3.1.6)
+Requirement already satisfied: Pygments>=2.0 in ./.venv/lib/python3.10/site-packages (from Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (2.19.2)
+Collecting snowballstemmer>=1.1 (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached snowballstemmer-3.0.1-py3-none-any.whl.metadata (7.9 kB)
+Collecting babel>=1.3 (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached babel-2.17.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting alabaster<0.8,>=0.7 (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached alabaster-0.7.16-py3-none-any.whl.metadata (2.9 kB)
+Collecting imagesize (from Sphinx==5.1.1->-r dev-requirements.txt (line 5))
+  Using cached imagesize-1.4.1-py2.py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: requests>=2.5.0 in ./.venv/lib/python3.10/site-packages (from Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (2.32.5)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (25.0)
+Collecting pybtex-docutils>=1.0.0 (from sphinxcontrib.bibtex->-r dev-requirements.txt (line 1))
+  Using cached pybtex_docutils-1.0.3-py3-none-any.whl.metadata (4.3 kB)
+Collecting latexcodec>=1.0.4 (from pybtex->-r dev-requirements.txt (line 2))
+  Using cached latexcodec-3.0.1-py3-none-any.whl.metadata (5.2 kB)
+Collecting exceptiongroup>=1 (from pytest->-r dev-requirements.txt (line 3))
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting iniconfig>=1.0.1 (from pytest->-r dev-requirements.txt (line 3))
+  Using cached iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest->-r dev-requirements.txt (line 3))
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting tomli>=1 (from pytest->-r dev-requirements.txt (line 3))
+  Using cached tomli-2.3.0-py3-none-any.whl.metadata (10 kB)
+INFO: pip is looking at multiple versions of nbsphinx to determine which version is compatible with other requirements. This could take a while.
+Collecting nbsphinx (from -r dev-requirements.txt (line 4))
+  Using cached nbsphinx-0.9.6-py3-none-any.whl.metadata (2.1 kB)
+  Using cached nbsphinx-0.9.5-py3-none-any.whl.metadata (2.1 kB)
+  Using cached nbsphinx-0.9.4-py3-none-any.whl.metadata (2.1 kB)
+  Using cached nbsphinx-0.9.3-py3-none-any.whl.metadata (2.1 kB)
+Collecting nbconvert!=5.4 (from nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached nbconvert-7.16.6-py3-none-any.whl.metadata (8.5 kB)
+Collecting traitlets>=5 (from nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Collecting nbformat (from nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+INFO: pip is looking at multiple versions of sphinx-rtd-theme to determine which version is compatible with other requirements. This could take a while.
+Collecting sphinx_rtd_theme (from -r dev-requirements.txt (line 6))
+  Using cached sphinx_rtd_theme-3.0.1-py2.py3-none-any.whl.metadata (4.4 kB)
+  Using cached sphinx_rtd_theme-3.0.0-py2.py3-none-any.whl.metadata (4.4 kB)
+  Using cached sphinx_rtd_theme-2.0.0-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting sphinxcontrib-jquery<5,>=4 (from sphinx_rtd_theme->-r dev-requirements.txt (line 6))
+  Using cached sphinxcontrib_jquery-4.1-py2.py3-none-any.whl.metadata (2.6 kB)
+INFO: pip is looking at multiple versions of numpydoc to determine which version is compatible with other requirements. This could take a while.
+Collecting numpydoc (from -r dev-requirements.txt (line 7))
+  Using cached numpydoc-1.8.0-py3-none-any.whl.metadata (4.3 kB)
+  Using cached numpydoc-1.7.0-py3-none-any.whl.metadata (4.2 kB)
+  Using cached numpydoc-1.6.0-py3-none-any.whl.metadata (4.2 kB)
+Collecting tabulate>=0.8.10 (from numpydoc->-r dev-requirements.txt (line 7))
+  Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Requirement already satisfied: decorator in ./.venv/lib/python3.10/site-packages (from IPython->-r dev-requirements.txt (line 10)) (5.2.1)
+Collecting jedi>=0.16 (from IPython->-r dev-requirements.txt (line 10))
+  Using cached jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting matplotlib-inline (from IPython->-r dev-requirements.txt (line 10))
+  Using cached matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting pexpect>4.3 (from IPython->-r dev-requirements.txt (line 10))
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41 (from IPython->-r dev-requirements.txt (line 10))
+  Using cached prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting stack_data (from IPython->-r dev-requirements.txt (line 10))
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: typing_extensions>=4.6 in ./.venv/lib/python3.10/site-packages (from IPython->-r dev-requirements.txt (line 10)) (4.15.0)
+Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->IPython->-r dev-requirements.txt (line 10))
+  Using cached wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+Collecting docopt<0.7.0,>=0.6.1 (from coveralls->-r dev-requirements.txt (line 15))
+  Using cached docopt-0.6.2-py2.py3-none-any.whl
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.5.0->Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.5.0->Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests>=2.5.0->Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests>=2.5.0->Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (2025.11.12)
+Requirement already satisfied: numpy>=1.23.2 in ./.venv/lib/python3.10/site-packages (from mdanalysis->-r dev-requirements.txt (line 16)) (2.2.6)
+Collecting GridDataFormats>=0.4.0 (from mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached GridDataFormats-1.0.2-py3-none-any.whl.metadata (4.9 kB)
+Collecting mmtf-python>=1.0.0 (from mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached mmtf_python-1.1.3-py2.py3-none-any.whl.metadata (1.2 kB)
+Collecting joblib>=0.12 (from mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+Requirement already satisfied: scipy>=1.5.0 in ./.venv/lib/python3.10/site-packages (from mdanalysis->-r dev-requirements.txt (line 16)) (1.15.3)
+Requirement already satisfied: matplotlib>=1.5.1 in ./.venv/lib/python3.10/site-packages (from mdanalysis->-r dev-requirements.txt (line 16)) (3.10.7)
+Requirement already satisfied: tqdm>=4.43.0 in ./.venv/lib/python3.10/site-packages (from mdanalysis->-r dev-requirements.txt (line 16)) (4.67.1)
+Collecting threadpoolctl (from mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting filelock (from mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting mda-xdrlib (from mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached mda_xdrlib-0.2.0-py3-none-any.whl.metadata (19 kB)
+Collecting click>=8.0.0 (from black->-r dev-requirements.txt (line 17))
+  Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting mypy-extensions>=0.4.3 (from black->-r dev-requirements.txt (line 17))
+  Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting pathspec>=0.9.0 (from black->-r dev-requirements.txt (line 17))
+  Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting platformdirs>=2 (from black->-r dev-requirements.txt (line 17))
+  Using cached platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+Collecting pytokens>=0.3.0 (from black->-r dev-requirements.txt (line 17))
+  Using cached pytokens-0.3.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting open3d (from znvis->-r dev-requirements.txt (line 18))
+  Using cached open3d-0.19.0-cp310-cp310-manylinux_2_31_x86_64.whl.metadata (4.3 kB)
+Requirement already satisfied: rich in ./.venv/lib/python3.10/site-packages (from znvis->-r dev-requirements.txt (line 18)) (14.2.0)
+Collecting mrcfile (from GridDataFormats>=0.4.0->mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached mrcfile-1.5.4-py2.py3-none-any.whl.metadata (7.0 kB)
+Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->IPython->-r dev-requirements.txt (line 10))
+  Using cached parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.10/site-packages (from Jinja2>=2.3->Sphinx==5.1.1->-r dev-requirements.txt (line 5)) (3.0.3)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (1.4.9)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.10/site-packages (from matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (2.9.0.post0)
+Collecting msgpack>=1.0.0 (from mmtf-python>=1.0.0->mdanalysis->-r dev-requirements.txt (line 16))
+  Using cached msgpack-1.1.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting beautifulsoup4 (from nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+Collecting bleach!=5.0.0 (from bleach[css]!=5.0.0->nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached bleach-6.3.0-py3-none-any.whl.metadata (31 kB)
+Collecting defusedxml (from nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting jupyter-core>=4.7 (from nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached jupyter_core-5.9.1-py3-none-any.whl.metadata (1.5 kB)
+Collecting jupyterlab-pygments (from nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting mistune<4,>=2.0.3 (from nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached mistune-3.1.4-py3-none-any.whl.metadata (1.8 kB)
+Collecting nbclient>=0.5.0 (from nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached nbclient-0.10.2-py3-none-any.whl.metadata (8.3 kB)
+Collecting pandocfilters>=1.4.1 (from nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting webencodings (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting tinycss2<1.5,>=1.1.0 (from bleach[css]!=5.0.0->nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached tinycss2-1.4.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting jupyter-client>=6.1.12 (from nbclient>=0.5.0->nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached jupyter_client-8.6.3-py3-none-any.whl.metadata (8.3 kB)
+Collecting pyzmq>=23.0 (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached pyzmq-27.1.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+Requirement already satisfied: tornado>=6.2 in ./.venv/lib/python3.10/site-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4)) (6.5.2)
+Collecting fastjsonschema>=2.15 (from nbformat->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting jsonschema>=2.6 (from nbformat->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat->nbsphinx->-r dev-requirements.txt (line 4)) (25.4.0)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=2.6->nbformat->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=2.6->nbformat->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=2.6->nbformat->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached rpds_py-0.29.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->IPython->-r dev-requirements.txt (line 10))
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib>=1.5.1->mdanalysis->-r dev-requirements.txt (line 16)) (1.17.0)
+Collecting soupsieve>1.2 (from beautifulsoup4->nbconvert!=5.4->nbsphinx->-r dev-requirements.txt (line 4))
+  Using cached soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+Collecting dash>=2.6.0 (from open3d->znvis->-r dev-requirements.txt (line 18))
+  Downloading dash-3.3.0-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: werkzeug>=3.0.0 in ./.venv/lib/python3.10/site-packages (from open3d->znvis->-r dev-requirements.txt (line 18)) (3.1.3)
+Collecting flask>=3.0.0 (from open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting configargparse (from open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached configargparse-1.7.1-py3-none-any.whl.metadata (24 kB)
+Collecting ipywidgets>=8.0.4 (from open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached ipywidgets-8.1.8-py3-none-any.whl.metadata (2.4 kB)
+Collecting addict (from open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached addict-2.4.0-py3-none-any.whl.metadata (1.0 kB)
+Requirement already satisfied: pandas>=1.0 in ./.venv/lib/python3.10/site-packages (from open3d->znvis->-r dev-requirements.txt (line 18)) (2.3.3)
+Collecting scikit-learn>=0.21 (from open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting pyquaternion (from open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached pyquaternion-0.9.9-py3-none-any.whl.metadata (1.4 kB)
+Collecting plotly>=5.0.0 (from dash>=2.6.0->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached plotly-6.5.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting importlib-metadata (from dash>=2.6.0->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting retrying (from dash>=2.6.0->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached retrying-1.4.2-py3-none-any.whl.metadata (5.5 kB)
+Collecting nest-asyncio (from dash>=2.6.0->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from dash>=2.6.0->open3d->znvis->-r dev-requirements.txt (line 18)) (59.6.0)
+Collecting blinker>=1.9.0 (from flask>=3.0.0->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting itsdangerous>=2.2.0 (from flask>=3.0.0->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting comm>=0.1.3 (from ipywidgets>=8.0.4->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting widgetsnbextension~=4.0.14 (from ipywidgets>=8.0.4->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached widgetsnbextension-4.0.15-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyterlab_widgets~=3.0.15 (from ipywidgets>=8.0.4->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached jupyterlab_widgets-3.0.16-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas>=1.0->open3d->znvis->-r dev-requirements.txt (line 18)) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas>=1.0->open3d->znvis->-r dev-requirements.txt (line 18)) (2025.2)
+Requirement already satisfied: narwhals>=1.15.1 in ./.venv/lib/python3.10/site-packages (from plotly>=5.0.0->dash>=2.6.0->open3d->znvis->-r dev-requirements.txt (line 18)) (2.12.0)
+Collecting zipp>=3.20 (from importlib-metadata->dash>=2.6.0->open3d->znvis->-r dev-requirements.txt (line 18))
+  Using cached zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.10/site-packages (from rich->znvis->-r dev-requirements.txt (line 18)) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->znvis->-r dev-requirements.txt (line 18)) (0.1.2)
+Collecting executing>=1.2.0 (from stack_data->IPython->-r dev-requirements.txt (line 10))
+  Using cached executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting asttokens>=2.1.0 (from stack_data->IPython->-r dev-requirements.txt (line 10))
+  Downloading asttokens-3.0.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting pure-eval (from stack_data->IPython->-r dev-requirements.txt (line 10))
+  Using cached pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+Using cached Sphinx-5.1.1-py3-none-any.whl (3.2 MB)
+Using cached docutils-0.16-py2.py3-none-any.whl (548 kB)
+Using cached alabaster-0.7.16-py3-none-any.whl (13 kB)
+Using cached sphinxcontrib_bibtex-2.6.5-py3-none-any.whl (40 kB)
+Using cached pybtex-0.25.1-py2.py3-none-any.whl (127 kB)
+Using cached pytest-9.0.1-py3-none-any.whl (373 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached nbsphinx-0.9.3-py3-none-any.whl (31 kB)
+Using cached sphinx_rtd_theme-2.0.0-py2.py3-none-any.whl (2.8 MB)
+Using cached sphinxcontrib_jquery-4.1-py2.py3-none-any.whl (121 kB)
+Using cached numpydoc-1.6.0-py3-none-any.whl (61 kB)
+Using cached sphinx_copybutton-0.5.2-py3-none-any.whl (13 kB)
+Using cached ipython-8.37.0-py3-none-any.whl (831 kB)
+Using cached prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Using cached nbsphinx_link-1.3.1-py3-none-any.whl (5.2 kB)
+Using cached isort-7.0.0-py3-none-any.whl (94 kB)
+Using cached coverage-7.12.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (246 kB)
+Using cached coveralls-4.0.2-py3-none-any.whl (13 kB)
+Using cached mdanalysis-2.9.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.5 MB)
+Using cached black-25.11.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+Using cached ZnVis-0.1.0-py3-none-any.whl (20 kB)
+Using cached ase-3.26.0-py3-none-any.whl (2.9 MB)
+Using cached babel-2.17.0-py3-none-any.whl (10.2 MB)
+Using cached click-8.3.1-py3-none-any.whl (108 kB)
+Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Using cached GridDataFormats-1.0.2-py3-none-any.whl (2.1 MB)
+Using cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Using cached jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+Using cached parso-0.8.5-py2.py3-none-any.whl (106 kB)
+Using cached joblib-1.5.2-py3-none-any.whl (308 kB)
+Using cached latexcodec-3.0.1-py3-none-any.whl (18 kB)
+Using cached mmtf_python-1.1.3-py2.py3-none-any.whl (25 kB)
+Using cached msgpack-1.1.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (406 kB)
+Using cached mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Using cached nbconvert-7.16.6-py3-none-any.whl (258 kB)
+Using cached mistune-3.1.4-py3-none-any.whl (53 kB)
+Using cached bleach-6.3.0-py3-none-any.whl (164 kB)
+Using cached tinycss2-1.4.0-py3-none-any.whl (26 kB)
+Using cached jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+Using cached nbclient-0.10.2-py3-none-any.whl (25 kB)
+Using cached jupyter_client-8.6.3-py3-none-any.whl (106 kB)
+Using cached nbformat-5.10.4-py3-none-any.whl (78 kB)
+Using cached fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+Using cached jsonschema-4.25.1-py3-none-any.whl (90 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Using cached platformdirs-4.5.0-py3-none-any.whl (18 kB)
+Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Using cached pybtex_docutils-1.0.3-py3-none-any.whl (6.4 kB)
+Using cached pytokens-0.3.0-py3-none-any.whl (12 kB)
+Using cached pyzmq-27.1.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (854 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached rpds_py-0.29.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (392 kB)
+Using cached snowballstemmer-3.0.1-py3-none-any.whl (103 kB)
+Using cached sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl (98 kB)
+Using cached sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl (92 kB)
+Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Using cached tomli-2.3.0-py3-none-any.whl (14 kB)
+Using cached traitlets-5.14.3-py3-none-any.whl (85 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Using cached beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+Using cached soupsieve-2.8-py3-none-any.whl (36 kB)
+Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Using cached filelock-3.20.0-py3-none-any.whl (16 kB)
+Using cached imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Using cached matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+Using cached mda_xdrlib-0.2.0-py3-none-any.whl (14 kB)
+Using cached mrcfile-1.5.4-py2.py3-none-any.whl (45 kB)
+Using cached open3d-0.19.0-cp310-cp310-manylinux_2_31_x86_64.whl (447.7 MB)
+Downloading dash-3.3.0-py3-none-any.whl (7.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 725.6 kB/s  0:00:10
+Using cached flask-3.1.2-py3-none-any.whl (103 kB)
+Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Using cached ipywidgets-8.1.8-py3-none-any.whl (139 kB)
+Using cached jupyterlab_widgets-3.0.16-py3-none-any.whl (914 kB)
+Using cached widgetsnbextension-4.0.15-py3-none-any.whl (2.2 MB)
+Using cached comm-0.2.3-py3-none-any.whl (7.3 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached plotly-6.5.0-py3-none-any.whl (9.9 MB)
+Using cached scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Using cached addict-2.4.0-py3-none-any.whl (3.8 kB)
+Using cached configargparse-1.7.1-py3-none-any.whl (25 kB)
+Using cached importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+Using cached zipp-3.23.0-py3-none-any.whl (10 kB)
+Using cached nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Using cached pyquaternion-0.9.9-py3-none-any.whl (14 kB)
+Using cached retrying-1.4.2-py3-none-any.whl (10 kB)
+Using cached sphinxcontrib_applehelp-2.0.0-py3-none-any.whl (119 kB)
+Using cached sphinxcontrib_devhelp-2.0.0-py3-none-any.whl (82 kB)
+Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Using cached sphinxcontrib_qthelp-2.0.0-py3-none-any.whl (88 kB)
+Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Downloading asttokens-3.0.1-py3-none-any.whl (27 kB)
+Using cached executing-2.2.1-py2.py3-none-any.whl (28 kB)
+Using cached pure_eval-0.2.3-py3-none-any.whl (11 kB)
+Using cached wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+Building wheels for collected packages: ZincHub
+  Building wheel for ZincHub (pyproject.toml): started
+  Building wheel for ZincHub (pyproject.toml): finished with status 'done'
+  Created wheel for ZincHub: filename=zinchub-0.1.0-py3-none-any.whl size=9277 sha256=f20f1224e37229a847249ab984a4f4dc8f27d453556d47ac9da5624e867530c1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-dajm53p5/wheels/0b/7d/fe/fae51b75cfcf64bd2779a76fabed375c3f20f62838d266ec61
+Successfully built ZincHub
+Installing collected packages: webencodings, pure-eval, ptyprocess, fastjsonschema, docopt, addict, zipp, ZincHub, widgetsnbextension, wcwidth, traitlets, tomli, tinycss2, threadpoolctl, tabulate, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, soupsieve, snowballstemmer, rpds-py, retrying, pyzmq, pytokens, pyquaternion, pluggy, plotly, platformdirs, pexpect, pathspec, parso, pandocfilters, nest-asyncio, mypy-extensions, msgpack, mrcfile, mistune, mda-xdrlib, latexcodec, jupyterlab_widgets, jupyterlab-pygments, joblib, itsdangerous, isort, iniconfig, imagesize, filelock, executing, exceptiongroup, docutils, defusedxml, coverage, configargparse, comm, click, blinker, bleach, babel, asttokens, alabaster, stack_data, Sphinx, scikit-learn, referencing, pytest, pybtex, prompt_toolkit, mmtf-python, matplotlib-inline, jupyter-core, jedi, importlib-metadata, GridDataFormats, flask, black, beautifulsoup4, sphinxcontrib-jquery, sphinx-copybutton, pybtex-docutils, numpydoc, mdanalysis, jupyter-client, jsonschema-specifications, IPython, dash, coveralls, ase, sphinxcontrib.bibtex, sphinx_rtd_theme, jsonschema, ipywidgets, nbformat, open3d, nbclient, znvis, nbconvert, nbsphinx, nbsphinx-link
+
+Successfully installed GridDataFormats-1.0.2 IPython-8.37.0 Sphinx-5.1.1 ZincHub-0.1.0 addict-2.4.0 alabaster-0.7.16 ase-3.26.0 asttokens-3.0.1 babel-2.17.0 beautifulsoup4-4.14.2 black-25.11.0 bleach-6.3.0 blinker-1.9.0 click-8.3.1 comm-0.2.3 configargparse-1.7.1 coverage-7.12.0 coveralls-4.0.2 dash-3.3.0 defusedxml-0.7.1 docopt-0.6.2 docutils-0.16 exceptiongroup-1.3.1 executing-2.2.1 fastjsonschema-2.21.2 filelock-3.20.0 flask-3.1.2 imagesize-1.4.1 importlib-metadata-8.7.0 iniconfig-2.3.0 ipywidgets-8.1.8 isort-7.0.0 itsdangerous-2.2.0 jedi-0.19.2 joblib-1.5.2 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 jupyter-client-8.6.3 jupyter-core-5.9.1 jupyterlab-pygments-0.3.0 jupyterlab_widgets-3.0.16 latexcodec-3.0.1 matplotlib-inline-0.2.1 mda-xdrlib-0.2.0 mdanalysis-2.9.0 mistune-3.1.4 mmtf-python-1.1.3 mrcfile-1.5.4 msgpack-1.1.2 mypy-extensions-1.1.0 nbclient-0.10.2 nbconvert-7.16.6 nbformat-5.10.4 nbsphinx-0.9.3 nbsphinx-link-1.3.1 nest-asyncio-1.6.0 numpydoc-1.6.0 open3d-0.19.0 pandocfilters-1.5.1 parso-0.8.5 pathspec-0.12.1 pexpect-4.9.0 platformdirs-4.5.0 plotly-6.5.0 pluggy-1.6.0 prompt_toolkit-3.0.52 ptyprocess-0.7.0 pure-eval-0.2.3 pybtex-0.25.1 pybtex-docutils-1.0.3 pyquaternion-0.9.9 pytest-9.0.1 pytokens-0.3.0 pyzmq-27.1.0 referencing-0.37.0 retrying-1.4.2 rpds-py-0.29.0 scikit-learn-1.7.2 snowballstemmer-3.0.1 soupsieve-2.8 sphinx-copybutton-0.5.2 sphinx_rtd_theme-2.0.0 sphinxcontrib-applehelp-2.0.0 sphinxcontrib-devhelp-2.0.0 sphinxcontrib-htmlhelp-2.1.0 sphinxcontrib-jquery-4.1 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-2.0.0 sphinxcontrib-serializinghtml-2.0.0 sphinxcontrib.bibtex-2.6.5 stack_data-0.6.3 tabulate-0.9.0 threadpoolctl-3.6.0 tinycss2-1.4.0 tomli-2.3.0 traitlets-5.14.3 wcwidth-0.2.14 webencodings-0.5.1 widgetsnbextension-4.0.15 zipp-3.23.0 znvis-0.1.0
+Collecting scipy<1.14.0
+  Using cached scipy-1.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+Collecting tf-keras
+  Using cached tf_keras-2.20.1-py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: numpy<2.3,>=1.22.4 in ./.venv/lib/python3.10/site-packages (from scipy<1.14.0) (2.2.6)
+Requirement already satisfied: tensorflow<2.21,>=2.20 in ./.venv/lib/python3.10/site-packages (from tf-keras) (2.20.0)
+Requirement already satisfied: absl-py>=1.0.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (2.3.1)
+Requirement already satisfied: astunparse>=1.6.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (1.6.3)
+Requirement already satisfied: flatbuffers>=24.3.25 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (25.9.23)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (0.6.0)
+Requirement already satisfied: google_pasta>=0.1.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (18.1.1)
+Requirement already satisfied: opt_einsum>=2.3.2 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (3.4.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (25.0)
+Requirement already satisfied: protobuf>=5.28.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (6.33.1)
+Requirement already satisfied: requests<3,>=2.21.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (2.32.5)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (59.6.0)
+Requirement already satisfied: six>=1.12.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (1.17.0)
+Requirement already satisfied: termcolor>=1.1.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (3.2.0)
+Requirement already satisfied: typing_extensions>=3.6.6 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (4.15.0)
+Requirement already satisfied: wrapt>=1.11.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (2.0.1)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (1.76.0)
+Requirement already satisfied: tensorboard~=2.20.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (2.20.0)
+Requirement already satisfied: keras>=3.10.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (3.12.0)
+Requirement already satisfied: h5py>=3.11.0 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (3.15.1)
+Requirement already satisfied: ml_dtypes<1.0.0,>=0.5.1 in ./.venv/lib/python3.10/site-packages (from tensorflow<2.21,>=2.20->tf-keras) (0.5.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.21,>=2.20->tf-keras) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.21,>=2.20->tf-keras) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.21,>=2.20->tf-keras) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow<2.21,>=2.20->tf-keras) (2025.11.12)
+Requirement already satisfied: markdown>=2.6.8 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow<2.21,>=2.20->tf-keras) (3.10)
+Requirement already satisfied: pillow in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow<2.21,>=2.20->tf-keras) (12.0.0)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow<2.21,>=2.20->tf-keras) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow<2.21,>=2.20->tf-keras) (3.1.3)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in ./.venv/lib/python3.10/site-packages (from astunparse>=1.6.0->tensorflow<2.21,>=2.20->tf-keras) (0.45.1)
+Requirement already satisfied: rich in ./.venv/lib/python3.10/site-packages (from keras>=3.10.0->tensorflow<2.21,>=2.20->tf-keras) (14.2.0)
+Requirement already satisfied: namex in ./.venv/lib/python3.10/site-packages (from keras>=3.10.0->tensorflow<2.21,>=2.20->tf-keras) (0.1.0)
+Requirement already satisfied: optree in ./.venv/lib/python3.10/site-packages (from keras>=3.10.0->tensorflow<2.21,>=2.20->tf-keras) (0.18.0)
+Requirement already satisfied: MarkupSafe>=2.1.1 in ./.venv/lib/python3.10/site-packages (from werkzeug>=1.0.1->tensorboard~=2.20.0->tensorflow<2.21,>=2.20->tf-keras) (3.0.3)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.10/site-packages (from rich->keras>=3.10.0->tensorflow<2.21,>=2.20->tf-keras) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ./.venv/lib/python3.10/site-packages (from rich->keras>=3.10.0->tensorflow<2.21,>=2.20->tf-keras) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.10.0->tensorflow<2.21,>=2.20->tf-keras) (0.1.2)
+Using cached scipy-1.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.6 MB)
+Using cached tf_keras-2.20.1-py3-none-any.whl (1.7 MB)
+Installing collected packages: scipy, tf-keras
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.15.3
+    Uninstalling scipy-1.15.3:
+      Successfully uninstalled scipy-1.15.3
+
+Successfully installed scipy-1.13.1 tf-keras-2.20.1
+Obtaining file:///home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: tensorflow>=2.5 in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (2.20.0)
+Requirement already satisfied: h5py in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (3.15.1)
+Requirement already satisfied: pysmiles in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (2.0.0)
+Requirement already satisfied: matplotlib in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (3.10.7)
+Requirement already satisfied: scipy in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (1.13.1)
+Requirement already satisfied: tqdm in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (4.67.1)
+Requirement already satisfied: psutil>=5.6.6 in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (7.1.3)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (2.2.6)
+Requirement already satisfied: gputil in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (1.4.0)
+Requirement already satisfied: pubchempy in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (1.0.5)
+Requirement already satisfied: PyYAML>=5.4 in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (6.0.3)
+Requirement already satisfied: scooby in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (0.11.0)
+Requirement already satisfied: sqlalchemy>=1.4 in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (2.0.44)
+Requirement already satisfied: pandas>=1.0.0 in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (2.3.3)
+Requirement already satisfied: tensorflow_probability in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (0.25.0)
+Requirement already satisfied: colorutils in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (0.3.0)
+Requirement already satisfied: bokeh in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (3.8.1)
+Requirement already satisfied: chemfiles in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (0.10.4)
+Requirement already satisfied: dot4dict in ./.venv/lib/python3.10/site-packages (from MDSuite==0.1.0) (0.1.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas>=1.0.0->MDSuite==0.1.0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas>=1.0.0->MDSuite==0.1.0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas>=1.0.0->MDSuite==0.1.0) (2025.2)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas>=1.0.0->MDSuite==0.1.0) (1.17.0)
+Requirement already satisfied: greenlet>=1 in ./.venv/lib/python3.10/site-packages (from sqlalchemy>=1.4->MDSuite==0.1.0) (3.2.4)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from sqlalchemy>=1.4->MDSuite==0.1.0) (4.15.0)
+Requirement already satisfied: absl-py>=1.0.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (2.3.1)
+Requirement already satisfied: astunparse>=1.6.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (1.6.3)
+Requirement already satisfied: flatbuffers>=24.3.25 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (25.9.23)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (0.6.0)
+Requirement already satisfied: google_pasta>=0.1.1 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (18.1.1)
+Requirement already satisfied: opt_einsum>=2.3.2 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (3.4.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (25.0)
+Requirement already satisfied: protobuf>=5.28.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (6.33.1)
+Requirement already satisfied: requests<3,>=2.21.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (2.32.5)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (59.6.0)
+Requirement already satisfied: termcolor>=1.1.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (3.2.0)
+Requirement already satisfied: wrapt>=1.11.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (2.0.1)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (1.76.0)
+Requirement already satisfied: tensorboard~=2.20.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (2.20.0)
+Requirement already satisfied: keras>=3.10.0 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (3.12.0)
+Requirement already satisfied: ml_dtypes<1.0.0,>=0.5.1 in ./.venv/lib/python3.10/site-packages (from tensorflow>=2.5->MDSuite==0.1.0) (0.5.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow>=2.5->MDSuite==0.1.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow>=2.5->MDSuite==0.1.0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow>=2.5->MDSuite==0.1.0) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests<3,>=2.21.0->tensorflow>=2.5->MDSuite==0.1.0) (2025.11.12)
+Requirement already satisfied: markdown>=2.6.8 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow>=2.5->MDSuite==0.1.0) (3.10)
+Requirement already satisfied: pillow in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow>=2.5->MDSuite==0.1.0) (12.0.0)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow>=2.5->MDSuite==0.1.0) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in ./.venv/lib/python3.10/site-packages (from tensorboard~=2.20.0->tensorflow>=2.5->MDSuite==0.1.0) (3.1.3)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in ./.venv/lib/python3.10/site-packages (from astunparse>=1.6.0->tensorflow>=2.5->MDSuite==0.1.0) (0.45.1)
+Requirement already satisfied: rich in ./.venv/lib/python3.10/site-packages (from keras>=3.10.0->tensorflow>=2.5->MDSuite==0.1.0) (14.2.0)
+Requirement already satisfied: namex in ./.venv/lib/python3.10/site-packages (from keras>=3.10.0->tensorflow>=2.5->MDSuite==0.1.0) (0.1.0)
+Requirement already satisfied: optree in ./.venv/lib/python3.10/site-packages (from keras>=3.10.0->tensorflow>=2.5->MDSuite==0.1.0) (0.18.0)
+Requirement already satisfied: MarkupSafe>=2.1.1 in ./.venv/lib/python3.10/site-packages (from werkzeug>=1.0.1->tensorboard~=2.20.0->tensorflow>=2.5->MDSuite==0.1.0) (3.0.3)
+Requirement already satisfied: Jinja2>=2.9 in ./.venv/lib/python3.10/site-packages (from bokeh->MDSuite==0.1.0) (3.1.6)
+Requirement already satisfied: contourpy>=1.2 in ./.venv/lib/python3.10/site-packages (from bokeh->MDSuite==0.1.0) (1.3.2)
+Requirement already satisfied: narwhals>=1.13 in ./.venv/lib/python3.10/site-packages (from bokeh->MDSuite==0.1.0) (2.12.0)
+Requirement already satisfied: tornado>=6.2 in ./.venv/lib/python3.10/site-packages (from bokeh->MDSuite==0.1.0) (6.5.2)
+Requirement already satisfied: xyzservices>=2021.09.1 in ./.venv/lib/python3.10/site-packages (from bokeh->MDSuite==0.1.0) (2025.11.0)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib->MDSuite==0.1.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib->MDSuite==0.1.0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib->MDSuite==0.1.0) (1.4.9)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib->MDSuite==0.1.0) (3.2.5)
+Requirement already satisfied: pbr in ./.venv/lib/python3.10/site-packages (from pysmiles->MDSuite==0.1.0) (7.0.3)
+Requirement already satisfied: networkx in ./.venv/lib/python3.10/site-packages (from pysmiles->MDSuite==0.1.0) (3.4.2)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.10/site-packages (from rich->keras>=3.10.0->tensorflow>=2.5->MDSuite==0.1.0) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ./.venv/lib/python3.10/site-packages (from rich->keras>=3.10.0->tensorflow>=2.5->MDSuite==0.1.0) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.10.0->tensorflow>=2.5->MDSuite==0.1.0) (0.1.2)
+Requirement already satisfied: decorator in ./.venv/lib/python3.10/site-packages (from tensorflow_probability->MDSuite==0.1.0) (5.2.1)
+Requirement already satisfied: cloudpickle>=1.3 in ./.venv/lib/python3.10/site-packages (from tensorflow_probability->MDSuite==0.1.0) (3.1.2)
+Requirement already satisfied: dm-tree in ./.venv/lib/python3.10/site-packages (from tensorflow_probability->MDSuite==0.1.0) (0.1.9)
+Requirement already satisfied: attrs>=18.2.0 in ./.venv/lib/python3.10/site-packages (from dm-tree->tensorflow_probability->MDSuite==0.1.0) (25.4.0)
+Building wheels for collected packages: MDSuite
+  Building editable for MDSuite (pyproject.toml): started
+  Building editable for MDSuite (pyproject.toml): finished with status 'done'
+  Created wheel for MDSuite: filename=mdsuite-0.1.0-0.editable-py3-none-any.whl size=9411 sha256=1f23431bf71c69736fe112fe0291044fc8f07c7f6d2bb2eac6f4ebe36a9ed258
+  Stored in directory: /tmp/pip-ephem-wheel-cache-6kn1jw6p/wheels/7a/9e/6f/446cfdd80c181f086eaf04a2a282e83464e9b3c7e3d011fbd2
+Successfully built MDSuite
+Installing collected packages: MDSuite
+Successfully installed MDSuite-0.1.0
+
+=========================================
+Test run 1/1 for before
+Time: do 27 nov 2025 11:00:46 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0
+rootdir: /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before
+configfile: pyproject.toml
+plugins: dash-3.3.0
+collected 116 items
+
+CI/functional_tests/test_molten_salts.py F                               [  0%]
+CI/functional_tests/test_water_study.py F                                [  1%]
+CI/integration_tests/calculators/test_angular_distribution_function.py F [  2%]
+                                                                         [  2%]
+CI/integration_tests/calculators/test_coordination_numbers.py F          [  3%]
+CI/integration_tests/calculators/test_einstein_diffusion_coefficients.py . [  4%]
+                                                                         [  4%]
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py . [  5%]
+.                                                                        [  6%]
+CI/integration_tests/calculators/test_einstein_helfand_ionic_conductivity.py . [  6%]
+                                                                         [  6%]
+CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py . [  7%]
+.                                                                        [  8%]
+CI/integration_tests/calculators/test_green_kubo_ionic_conductivity.py . [  9%]
+                                                                         [  9%]
+CI/integration_tests/calculators/test_green_kubo_self_diffusion_coefficients.py . [ 10%]
+                                                                         [ 10%]
+CI/integration_tests/calculators/test_kirkwood_buff_integrals.py F       [ 11%]
+CI/integration_tests/calculators/test_potential_of_mean_force.py FF      [ 12%]
+CI/integration_tests/calculators/test_radial_distribution_function.py FF [ 14%]
+F                                                                        [ 15%]
+CI/integration_tests/project/test_run_load_multiple_experiments.py F     [ 16%]
+CI/integration_tests/transformations/test_molecular_mapping_results.py . [ 17%]
+..                                                                       [ 18%]
+CI/integration_tests/transformations/test_transformation_run_options.py . [ 19%]
+.....                                                                    [ 24%]
+CI/unit_tests/database/test_experiment_database.py ...........           [ 33%]
+CI/unit_tests/database/test_file_read.py ...                             [ 36%]
+CI/unit_tests/database/test_simulation_database.py .....                 [ 40%]
+CI/unit_tests/experiment/test_Experiment.py .                            [ 41%]
+CI/unit_tests/experiment/test_run_computation.py ..                      [ 43%]
+CI/unit_tests/graph_modules/test_molecular_graph.py .F                   [ 44%]
+CI/unit_tests/memory_manager/test_memory_manager.py ..........           [ 53%]
+CI/unit_tests/project/test_project_add_experiment.py .......F.           [ 61%]
+CI/unit_tests/project/test_project_database.py ..                        [ 62%]
+CI/unit_tests/project/test_project_instantiation.py ..                   [ 64%]
+CI/unit_tests/project/test_project_load_experiments.py .                 [ 65%]
+CI/unit_tests/transformations/test_transformations.py ...........        [ 75%]
+CI/unit_tests/transformations/test_transformator_parent.py ......        [ 80%]
+CI/unit_tests/utils/test_calculator_helper_methods.py .                  [ 81%]
+CI/unit_tests/utils/test_meta_functions.py .............                 [ 92%]
+CI/unit_tests/utils/test_molecule_class.py ..                            [ 93%]
+CI/unit_tests/utils/test_scaling_functions.py ....                       [ 97%]
+CI/unit_tests/utils/test_testing.py ...                                  [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_analysis _________________________________
+
+mdsuite_project = <mdsuite.project.project.Project object at 0x75c7c56124a0>
+
+    def test_analysis(mdsuite_project):
+        """
+        Perform analysis on these MD simulations and ensure the outcomes are as expected.
+    
+        Returns
+        -------
+        Test the following:
+    
+            * Two experiments added to a project successfully
+            * Correct coordination numbers computed
+            * Correct POMF values computed
+            * Dynamics run successfully.
+    
+        Notes
+        -----
+        See the link below for similar data for CNs for molten salts.
+        https://link.springer.com/article/10.1007/s10800-018-1197-z
+        """
+        NaCl_experiment = mdsuite_project.experiments.NaCl
+        KCl_experiment = mdsuite_project.experiments.KCl
+    
+>       RDF_Data = mdsuite_project.run.RadialDistributionFunction(
+            number_of_configurations=500, cutoff=15.0, plot=False
+        )
+
+CI/functional_tests/test_molten_salts.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+---------------------------- Captured stdout setup -----------------------------
+2025-11-27 11:01:09,244 - INFO: Creating new project MDSuite_Project
+/tmp/pytest-of-root/pytest-4/NaCl.lammpstraj
+2025-11-27 11:01:11,681 - INFO: Creating a new experiment (NaCl)!
+2025-11-27 11:01:22,447 - INFO: Creating a new experiment (KCl)!
+---------------------------- Captured stderr setup -----------------------------
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+------------------------------ Captured log setup ------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (KCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+------------------------------ Captured log call -------------------------------
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=15.0, start=0, stop=None, species=None, molecules=False)
+_____________________________ test_water_analysis ______________________________
+
+mdsuite_project = <mdsuite.project.project.Project object at 0x75c71b77ab60>
+
+    def test_water_analysis(mdsuite_project):
+        """
+        Run a functional test by performing a study on an MD simulation of water
+    
+        Notes
+        -----
+        The diffusion, angle, and eventually coordination data tested here are comparable
+        with values taken from experiment and published studies.
+        """
+    
+        water = mdsuite_project.experiments["water_sim"]
+    
+        water_molecule = mds.Molecule(
+            name="water", smiles="[H]O[H]", amount=14, cutoff=1.7, mol_pbc=True
+        )
+    
+        water.run.MolecularMap(molecules=[water_molecule])
+>       atomistic_adf = mdsuite_project.run.AngularDistributionFunction(plot=False)
+
+CI/functional_tests/test_water_study.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+mdsuite/calculators/angular_distribution_function.py:589: in run_calculator
+    self.sample_configurations, species_indices = self._prepare_data_structure()
+mdsuite/calculators/angular_distribution_function.py:285: in _prepare_data_structure
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+---------------------------- Captured stdout setup -----------------------------
+2025-11-27 11:01:33,633 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:01:36,478 - INFO: Creating a new experiment (water_sim)!
+---------------------------- Captured stderr setup -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:00<00:00,  2.24it/s]100%|███████████████████████████████████| 1/1 [00:00<00:00,  2.24it/s]
+Applying transformation 'Unwrapped_Positions' to 'O':   0%| | 0/1 [00:Applying transformation 'Unwrapped_Positions' to 'O': 100%|█| 1/1 [00:
+Applying transformation 'Unwrapped_Positions' to 'H':   0%| | 0/1 [00:Applying transformation 'Unwrapped_Positions' to 'H': 100%|█| 1/1 [00:
+------------------------------ Captured log setup ------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (water_sim)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.simulation_database:simulation_database.py:258 Expected str|Path but found <class 'bytes'>
+DEBUG    mdsuite.database.simulation_database:simulation_database.py:258 Expected str|Path but found <class 'bytes'>
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:01:38,445 - INFO: Building molecular graph from configuration for water
+2025-11-27 11:01:38,647 - INFO: Performing molecule number isomorphism test.
+2025-11-27 11:01:38,647 - INFO: Amount of molecules test passed.
+2025-11-27 11:01:38,647 - INFO: Performing group equality isomorphism test.
+2025-11-27 11:01:38,647 - INFO: Group equality isomorphism test passed.
+2025-11-27 11:01:38,665 - INFO: Mapping molecule graphs onto trajectory for water
+----------------------------- Captured stderr call -----------------------------
+  0%|                                          | 0/42 [00:00<?, ?it/s]100%|████████████████████████████████| 42/42 [00:00<00:00, 615.11it/s]
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:00<00:00,  6.56it/s]2it [00:00, 11.85it/s]                                                
+Applying transformation 'Unwrapped_Positions' to 'water':   0%| | 0/1 Applying transformation 'Unwrapped_Positions' to 'water': 100%|█| 1/1 
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.graph_modules.molecular_graph:molecular_graph.py:194 Building molecular graph from configuration for water
+INFO     mdsuite.graph_modules.molecular_graph:molecular_graph.py:253 Performing molecule number isomorphism test.
+INFO     mdsuite.graph_modules.molecular_graph:molecular_graph.py:265 Amount of molecules test passed.
+INFO     mdsuite.graph_modules.molecular_graph:molecular_graph.py:275 Performing group equality isomorphism test.
+INFO     mdsuite.graph_modules.molecular_graph:molecular_graph.py:285 Group equality isomorphism test passed.
+INFO     mdsuite.transformations.map_molecules:map_molecules.py:226 Mapping molecule graphs onto trajectory for water
+DEBUG    mdsuite.database.simulation_database:simulation_database.py:258 Expected str|Path but found <class 'bytes'>
+DEBUG    mdsuite.database.simulation_database:simulation_database.py:258 Expected str|Path but found <class 'bytes'>
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for water_sim with args Args(number_of_bins=500, number_of_configurations=5, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=6.0, start=1, norm_power=4, stop=None, species=None, molecules=False)
+_________________________________ test_project _________________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'Cl_Cl_Cl': {'adf': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...], 'angle': [0.0, 0.36168709000543686, 0.7233741800108737, 1.08...gle': [0.0, 0.36168709000543686, 0.7233741800108737, 1.0850612700163107, 1.4467483600217474, 1.8084354500271842, ...]}}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_project0')
+
+    def test_project(traj_file, true_values, tmp_path):
+        """Test the ADF called from the project class"""
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.run.AngularDistributionFunction(plot=False)
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_angular_distribution_function.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/angular_distribution_function.py:589: in run_calculator
+    self.sample_configurations, species_indices = self._prepare_data_structure()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/angular_distribution_function.py:285: in _prepare_data_structure
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:01:40,945 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:01:44,813 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.85s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.85s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=500, number_of_configurations=5, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=6.0, start=1, norm_power=4, stop=None, species=None, molecules=False)
+_________________________________ test_project _________________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'CN_1': 4.805180503392966, 'CN_1_error': 0.007011751106063158, 'cn': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...], 'r': [0.002...6, 0.0030027760641579263, 0.004003701418877235, 0.005004626773596544, 0.006005552128315853, 0.007006477483035161, ...]}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_project1')
+
+    def test_project(traj_file, true_values, tmp_path):
+        """Test the CN called from the project class"""
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.run.CoordinationNumbers(
+            savgol_order=3, savgol_window_length=111, plot=False
+        )
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_coordination_numbers.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:119: in inner
+    func(cls, *args, **kwargs)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/coordination_number_calculation.py:188: in __call__
+    self.rdf_data = self.experiment.run.RadialDistributionFunction(plot=False)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:01:54,152 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:01:57,140 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.86s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.86s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=None, start=0, stop=None, species=None, molecules=False)
+_________________________________ test_project _________________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'Cl_Cl': {'kb_integral': [-8.190837171673443e-08, -2.39424471171993e-07, -4.977508742786171e-07, -8.820901569494477e-..., 0.0030027760641579263, 0.004003701418877235, 0.005004626773596544, 0.006005552128315853, 0.007006477483035161, ...]}}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_project5')
+
+    def test_project(traj_file, true_values, tmp_path):
+        """Test the kbi called from the project class"""
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.run.KirkwoodBuffIntegral(
+            plot=False, savgol_window_length=111, savgol_order=3
+        )
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_kirkwood_buff_integrals.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:119: in inner
+    func(cls, *args, **kwargs)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/kirkwood_buff_integrals.py:145: in __call__
+    self.rdf_data = self.experiment.run.RadialDistributionFunction(plot=False)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:17:56,848 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:17:58,957 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.94s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.94s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=None, start=0, stop=None, species=None, molecules=False)
+_________________________________ test_project _________________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'Cl_Cl': {'POMF_1': -5.212452405034608e-12, 'POMF_1_error': 2.3657036919562104e-14, 'pomf': [inf, inf, inf, inf, inf,..., 0.0030027760641579263, 0.004003701418877235, 0.005004626773596544, 0.006005552128315853, 0.007006477483035161, ...]}}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_project6')
+
+    def test_project(traj_file, true_values, tmp_path):
+        """Test the pomf called from the project class"""
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.run.PotentialOfMeanForce(
+            plot=False, savgol_window_length=111, savgol_order=3
+        )
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_potential_of_mean_force.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:119: in inner
+    func(cls, *args, **kwargs)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/potential_of_mean_force.py:162: in __call__
+    self.rdf_data = self.experiment.run.RadialDistributionFunction(plot=False)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:18:03,775 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:18:05,799 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:03<00:00,  3.21s/it]100%|███████████████████████████████████| 1/1 [00:03<00:00,  3.21s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=None, start=0, stop=None, species=None, molecules=False)
+_______________________________ test_experiment ________________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'Cl_Cl': {'POMF_1': -5.212452405034608e-12, 'POMF_1_error': 2.3657036919562104e-14, 'pomf': [inf, inf, inf, inf, inf,..., 0.0030027760641579263, 0.004003701418877235, 0.005004626773596544, 0.006005552128315853, 0.007006477483035161, ...]}}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_experiment1')
+
+    def test_experiment(traj_file, true_values, tmp_path):
+        """Test the pomf called from the experiment class"""
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.experiments["NaCl"].run.PotentialOfMeanForce(
+            plot=False, savgol_window_length=111, savgol_order=3
+        )
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_potential_of_mean_force.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:119: in inner
+    func(cls, *args, **kwargs)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/potential_of_mean_force.py:162: in __call__
+    self.rdf_data = self.experiment.run.RadialDistributionFunction(plot=False)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:18:10,097 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:18:12,048 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:03<00:00,  3.04s/it]100%|███████████████████████████████████| 1/1 [00:03<00:00,  3.04s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=None, start=0, stop=None, species=None, molecules=False)
+_________________________________ test_project _________________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'Cl_Cl': {'x': [0.0, 0.0010009253547193088, 0.0020018507094386176, 0.0030027760641579263, 0.004003701418877235, 0.005...76, 0.0030027760641579263, 0.004003701418877235, 0.005004626773596544, ...], 'y': [nan, 0.0, 0.0, 0.0, 0.0, 0.0, ...]}}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_project7')
+
+    def test_project(traj_file, true_values, tmp_path):
+        """Test the rdf called from the project class"""
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.run.RadialDistributionFunction(plot=False)
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_radial_distribution_function.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:18:17,210 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:18:19,974 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.93s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.93s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=None, start=0, stop=None, species=None, molecules=False)
+_______________________________ test_experiment ________________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'Cl_Cl': {'x': [0.0, 0.0010009253547193088, 0.0020018507094386176, 0.0030027760641579263, 0.004003701418877235, 0.005...76, 0.0030027760641579263, 0.004003701418877235, 0.005004626773596544, ...], 'y': [nan, 0.0, 0.0, 0.0, 0.0, 0.0, ...]}}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_experiment2')
+
+    def test_experiment(traj_file, true_values, tmp_path):
+        """Test the rdf called from the experiment class"""
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.experiments.NaCl.run.RadialDistributionFunction(plot=False)
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_radial_distribution_function.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:18:24,007 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:18:26,317 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:05<00:00,  5.07s/it]100%|███████████████████████████████████| 1/1 [00:05<00:00,  5.07s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=None, start=0, stop=None, species=None, molecules=False)
+__________________________ test_computation_parameter __________________________
+
+traj_file = '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj'
+true_values = {'Cl_Cl': {'x': [0.0, 0.0010009253547193088, 0.0020018507094386176, 0.0030027760641579263, 0.004003701418877235, 0.005...76, 0.0030027760641579263, 0.004003701418877235, 0.005004626773596544, ...], 'y': [nan, 0.0, 0.0, 0.0, 0.0, 0.0, ...]}}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_computation_parameter0')
+
+    def test_computation_parameter(traj_file, true_values, tmp_path):
+        os.chdir(tmp_path)
+        project = mds.Project()
+        project.add_experiment(
+            "NaCl", simulation_data=traj_file, timestep=0.002, temperature=1400
+        )
+    
+>       computation = project.experiments.NaCl.run.RadialDistributionFunction(
+            plot=False,
+            number_of_bins=50,
+            cutoff=5,
+            number_of_configurations=150,
+            species=["Na"],
+        )
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/calculators/test_radial_distribution_function.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:18:35,642 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:18:37,781 - INFO: Creating a new experiment (NaCl)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.90s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.90s/it]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl with args Args(number_of_bins=50, number_of_configurations=150, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=5, start=0, stop=None, species=['Na'], molecules=False)
+____________________________ test_add_run_load_data ____________________________
+
+project = <mdsuite.project.project.Project object at 0x75c6e0406680>
+traj_files = ['/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj', '/tmp/pytest-of-root/pytest-4/NaCl_gk_ni_nq.lammpstraj', '/tmp/pytest-of-root/pytest-4/NaCl_i_q.lammpstraj', '/tmp/pytest-of-root/pytest-4/NaCl_ni_nq.lammpstraj']
+
+    def test_add_run_load_data(project, traj_files):
+        """Add data and run RDF on all of them
+    
+        Test the run_computation and load_data method on multiple experiments
+        """
+        project.add_experiment(
+            "NaCl0", simulation_data=traj_files[0], timestep=0.002, temperature=1400
+        )
+        project.add_experiment(
+            "NaCl1", simulation_data=traj_files[1], timestep=0.002, temperature=1400
+        )
+        project.add_experiment(
+            "NaCl2", simulation_data=traj_files[2], timestep=0.002, temperature=1400
+        )
+        project.add_experiment(
+            "NaCl3", simulation_data=traj_files[3], timestep=0.002, temperature=1400
+        )
+    
+        # Check that 4 experiments have been created
+        assert len(project.experiments) == 4
+    
+>       loaded_data = project.run.RadialDistributionFunction(plot=False)
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/integration_tests/project/test_run_load_multiple_experiments.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:125: in inner
+    cls.run_analysis()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/calculator.py:319: in run_analysis
+    self.run_calculator()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:847: in run_calculator
+    self.check_input()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:254: in check_input
+    self._initialize_rdf_parameters()
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/radial_distribution_function.py:273: in _initialize_rdf_parameters
+    dtype=np.int,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    def __getattr__(attr):
+        # Warn for expired attributes
+        import warnings
+    
+        if attr == "linalg":
+            import numpy.linalg as linalg
+            return linalg
+        elif attr == "fft":
+            import numpy.fft as fft
+            return fft
+        elif attr == "dtypes":
+            import numpy.dtypes as dtypes
+            return dtypes
+        elif attr == "random":
+            import numpy.random as random
+            return random
+        elif attr == "polynomial":
+            import numpy.polynomial as polynomial
+            return polynomial
+        elif attr == "ma":
+            import numpy.ma as ma
+            return ma
+        elif attr == "ctypeslib":
+            import numpy.ctypeslib as ctypeslib
+            return ctypeslib
+        elif attr == "exceptions":
+            import numpy.exceptions as exceptions
+            return exceptions
+        elif attr == "testing":
+            import numpy.testing as testing
+            return testing
+        elif attr == "matlib":
+            import numpy.matlib as matlib
+            return matlib
+        elif attr == "f2py":
+            import numpy.f2py as f2py
+            return f2py
+        elif attr == "typing":
+            import numpy.typing as typing
+            return typing
+        elif attr == "rec":
+            import numpy.rec as rec
+            return rec
+        elif attr == "char":
+            import numpy.char as char
+            return char
+        elif attr == "array_api":
+            raise AttributeError("`numpy.array_api` is not available from "
+                                 "numpy 2.0 onwards", name=None)
+        elif attr == "core":
+            import numpy.core as core
+            return core
+        elif attr == "strings":
+            import numpy.strings as strings
+            return strings
+        elif attr == "distutils":
+            if 'distutils' in __numpy_submodules__:
+                import numpy.distutils as distutils
+                return distutils
+            else:
+                raise AttributeError("`numpy.distutils` is not available from "
+                                     "Python 3.12 onwards", name=None)
+    
+        if attr in __future_scalars__:
+            # And future warnings for those that will change, but also give
+            # the AttributeError
+            warnings.warn(
+                f"In the future `np.{attr}` will be defined as the "
+                "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
+    
+        if attr in __former_attrs__:
+>           raise AttributeError(__former_attrs__[attr], name=None)
+E           AttributeError: module 'numpy' has no attribute 'int'.
+E           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+E           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+E               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/numpy/__init__.py:397: AttributeError
+---------------------------- Captured stdout setup -----------------------------
+2025-11-27 11:18:41,722 - INFO: Creating new project MDSuite_Project
+------------------------------ Captured log setup ------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:18:49,485 - INFO: Creating a new experiment (NaCl0)!
+2025-11-27 11:18:54,409 - INFO: Creating a new experiment (NaCl1)!
+2025-11-27 11:18:58,270 - INFO: Creating a new experiment (NaCl2)!
+2025-11-27 11:19:02,704 - INFO: Creating a new experiment (NaCl3)!
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:03<00:00,  3.19s/it]100%|███████████████████████████████████| 1/1 [00:03<00:00,  3.19s/it]
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.39s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.39s/it]
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.95s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.95s/it]
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.33s/it]100%|███████████████████████████████████| 1/1 [00:02<00:00,  2.33s/it]
+------------------------------ Captured log call -------------------------------
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl0)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl1)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl2)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl3)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+DEBUG    mdsuite.database.calculator_database:calculator_database.py:114 Getting data for NaCl0 with args Args(number_of_bins=None, number_of_configurations=500, correlation_time=1, atom_selection=slice(None, None, None), data_range=1, cutoff=None, start=0, stop=None, species=None, molecules=False)
+__________________ TestMolecularGraph.test_build_smiles_graph __________________
+
+self = <test_molecular_graph.TestMolecularGraph object at 0x75c71c30f190>
+
+    def test_build_smiles_graph(self):
+        """
+        Test the build_smiles_graph method.
+    
+        Returns
+        -------
+        This test checks that the SMILES graphs built by the module return the correct
+        molecule information for several scenarios.
+        """
+        emim = SmilesTestData(
+            name="emim",
+            smiles_string="CCN1C=C[N+](+C1)C",
+            nodes=20,
+            species={"C": 6, "N": 2, "H": 12},
+        )
+        bmim = SmilesTestData(
+            name="bmim",
+            smiles_string="CCCCN1C=C[N+](+C1)C",
+            nodes=26,
+            species={"C": 8, "N": 2, "H": 16},
+        )
+        pf = SmilesTestData(
+            name="pf6",
+            smiles_string="F[P-](F)(F)(F)(F)F",
+            nodes=7,
+            species={"P": 1, "F": 6},
+        )
+        h2o = SmilesTestData(
+            name="h2o", smiles_string="[H]O[H]", nodes=3, species={"H": 2, "O": 1}
+        )
+        bergenin = SmilesTestData(
+            name="bergenin",
+            smiles_string=(
+                "OC[C@@H](O1)[C@@H](O)[C@H](O)[C@@H]2[C@@H]1c3c(O)c(OC)c(O)cc3C(=O)O2"
+            ),
+            nodes=39,
+            species={"C": 14, "H": 16, "O": 9},
+        )
+        nacl = SmilesTestData(
+            name="nacl", smiles_string="[Na+].[Cl-]", nodes=2, species={"Na": 1, "Cl": 1}
+        )
+    
+        data = [emim, bmim, pf, h2o, bergenin, nacl]
+    
+        for item in data:
+>           graph_obj, species = build_smiles_graph(item.smiles_string)
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/unit_tests/graph_modules/test_molecular_graph.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/graph_modules/molecular_graph.py:360: in build_smiles_graph
+    mol = read_smiles(smiles_string, explicit_hydrogen=True)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+smiles = 'CCN1C=C[N+](+C1)C', explicit_hydrogen = True, zero_order_bonds = True
+reinterpret_aromatic = True, strict = True
+
+    def read_smiles(smiles, explicit_hydrogen=False, zero_order_bonds=True,
+                    reinterpret_aromatic=True, strict=True):
+        """
+        Parses a SMILES string.
+    
+        Parameters
+        ----------
+        smiles : iterable
+            The SMILES string to parse. Should conform to the OpenSMILES
+            specification.
+        explicit_hydrogen : bool
+            Whether hydrogens should be explicit nodes in the output graph, or be
+            implicit in 'hcount' attributes.
+        zero_order_bonds : bool
+            Whether zero-order bonds (".") should be added as edges with an order of
+            0.
+        reinterpret_aromatic : bool
+            Whether aromaticity should be determined from the created molecule,
+            instead of taken from the SMILES string.
+        strict : bool
+            Whether to be more strict in accepting what is a valid SMILES string and
+            what is not.
+    
+        Returns
+        -------
+        nx.Graph
+            A graph describing a molecule. Nodes will have an 'element', 'aromatic'
+            and a 'charge', and if `explicit_hydrogen` is False a 'hcount'.
+            Depending on the input, they will also have 'isotope' and 'class'
+            information.
+            Edges will have an 'order'.
+        """
+        bond_to_order = {'-': 1, '=': 2, '#': 3, '$': 4, ':': 1.5, '.': 0}
+        default_bond = 1
+        default_aromatic_bond = 1.5
+        mol, ez_isomer_atoms, ring_bonds = base_smiles_parser(smiles, strict=strict,
+                                                              node_attr='_atom_str', edge_attr='_bond_str')
+        for node in mol:
+            mol.nodes[node].update(parse_atom(mol.nodes[node]['_atom_str']))
+        for idx, jdx, attrs in ring_bonds:
+            if mol.nodes[idx].get('rs_isomer'):
+                mol.nodes[idx]['rs_isomer'][1].append(jdx)
+            if mol.nodes[jdx].get('rs_isomer'):
+                mol.nodes[jdx]['rs_isomer'][1].append(idx)
+        for edge in mol.edges:
+            if mol.edges[edge]['_bond_str']:
+                order = bond_to_order[mol.edges[edge]['_bond_str']]
+                if not order and not zero_order_bonds:
+                    mol.remove_edge(*edge)
+                    continue
+                mol.edges[edge]['order'] = order
+            elif mol.nodes[edge[0]].get('aromatic') and mol.nodes[edge[1]].get('aromatic'):
+                mol.edges[edge]['order'] = default_aromatic_bond
+            else:
+                mol.edges[edge]['order'] = default_bond
+    
+        if reinterpret_aromatic:
+            correct_aromatic_rings(mol, strict=strict)
+    
+        # This is a bit of an overreach, we should only add implicit hydrogens to
+        # atoms in the organic subset. However, all non-organic atoms already have
+        # a hcount, so all is well.
+        fill_valence(mol)
+    
+        for node in mol:
+            element = mol.nodes[node].get('element', '*')
+            if element != '*' and element not in PTE:
+                msg = f'Unknown element {element}'
+                if strict:
+                    raise KeyError(msg)
+                else:
+                    LOGGER.warning(msg)
+            elif element != '*' and bonds_missing(mol, node):
+                attrs = mol.nodes[node]
+                # Grab some of the smiles string for debugging purposes
+                surrounding_characters = 5
+                node_position = (attrs['_pos'] - surrounding_characters,
+                                 attrs['_pos'] + len(attrs['_atom_str']) + surrounding_characters)
+                if node_position[0] < 0:
+                    left_idx = 0
+                    prefix = ''
+                else:
+                    left_idx = node_position[0]
+                    prefix = '...'
+                if node_position[1] >= len(smiles):
+                    right_idx = len(smiles) - 1
+                    suffix = ''
+                else:
+                    right_idx = node_position[1]
+                    suffix = '...'
+                debug_smiles = prefix + smiles[left_idx:right_idx] + suffix
+                msg = (f'Node {node} ({format_atom(mol, node)}) has non-standard'
+                       f' valence: {debug_smiles}')
+                if strict:
+>                   raise KeyError(msg)
+E                   KeyError: 'Node 5 ([N+]) has non-standard valence: ...N1C=C[N+](+C1)...'
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/pysmiles/read_smiles.py:309: KeyError
+_____________________________ test_lammpsflux_read _____________________________
+
+traj_files = {'GromacsTest.gro': ['/tmp/pytest-of-root/pytest-4/top.gro', '/tmp/pytest-of-root/pytest-4/traj.xtc'], 'NaClLog.log': ...t/pytest-4/NaCl_64_Atoms.extxyz', 'NaCl_gk_i_q.lammpstraj': '/tmp/pytest-of-root/pytest-4/NaCl_gk_i_q.lammpstraj', ...}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-4/test_lammpsflux_read0')
+
+    def test_lammpsflux_read(traj_files, tmp_path):
+        os.chdir(tmp_path)
+        project = mds.Project()
+        custom_headers = {
+            "Time": ["Time"],
+            "Temperature": ["Temp"],
+            "Density": ["Density"],
+            "Pressure": ["Press"],
+        }
+        file_reader = mds.file_io.lammps_flux_files.LAMMPSFluxFile(
+            file_path=traj_files["NaClLog.log"],
+            sample_rate=1000,
+            box_l=3 * [42.17],
+            n_header_lines=29,
+            custom_data_map=custom_headers,
+        )
+        project.add_experiment(
+            "NaCl_flux", simulation_data=file_reader, timestep=0.1, temperature=1600
+        )
+>       pressures = project.experiments["NaCl_flux"].load_matrix(
+            species=["Observables"], property_name="Pressure"
+        )
+
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/CI/unit_tests/project/test_project_add_experiment.py:262: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/experiment/experiment.py:606: in load_matrix
+    return database.load_data(path_list=path_list, select_slice=select_slice)
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/database/simulation_database.py:618: in load_data
+    tf.convert_to_tensor(database[item][my_slice], dtype=tf.float64)
+h5py/_objects.pyx:54: in h5py._objects.with_phil.wrapper
+    ???
+h5py/_objects.pyx:55: in h5py._objects.with_phil.wrapper
+    ???
+/home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/h5py/_hl/dataset.py:840: in __getitem__
+    return self._fast_reader.read(args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   OSError: Can't synchronously read data (filter returned failure during read)
+
+h5py/_selector.pyx:375: OSError
+----------------------------- Captured stdout call -----------------------------
+2025-11-27 11:22:41,581 - INFO: Creating new project MDSuite_Project
+2025-11-27 11:22:43,567 - INFO: Creating a new experiment (NaCl_flux)!
+2025-11-27 11:22:44,444 - WARNING: WARNING element Observables has been assigned mass=0.0
+----------------------------- Captured stderr call -----------------------------
+  0%|                                           | 0/1 [00:00<?, ?it/s]100%|███████████████████████████████████| 1/1 [00:00<00:00,  8.60it/s]100%|███████████████████████████████████| 1/1 [00:00<00:00,  8.57it/s]
+------------------------------ Captured log call -------------------------------
+INFO     mdsuite.project.project:project.py:122 Creating new project MDSuite_Project
+DEBUG    mdsuite.database.database_base:database_base.py:105 Creating the database if it does not exist.
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for number_of_configurations
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for units
+INFO     mdsuite.experiment.experiment:experiment.py:338 Creating a new experiment (NaCl_flux)!
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+WARNING  mdsuite.experiment.experiment:experiment.py:693 WARNING element Observables has been assigned mass=0.0
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for version
+DEBUG    mdsuite.database.experiment_database:experiment_database.py:167 Got no database entries for read_files
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/GPUtil/GPUtil.py:34
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/.venv/lib/python3.10/site-packages/GPUtil/GPUtil.py:34: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+    from distutils import spawn
+
+CI/functional_tests/test_molten_salts.py::test_analysis
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/project/project.py:212: SAWarning: relationship 'Experiment.project' will copy column projects.id to column experiments.project_id, which conflicts with relationship(s): 'Project.experiments' (copies projects.id to experiments.project_id). If this is not the intention, consider if these relationships should be linked with back_populates, or if viewonly=True should be applied to one or more if they are read-only. For the less common case that foreign key constraints are partially overlapping, the orm.foreign() annotation can be used to isolate the columns that should be written towards.   To silence this warning, add the parameter 'overlaps="experiments"' to the 'Experiment.project' relationship. (Background on this warning at: https://sqlalche.me/e/20/qzyx) (This warning originated from the `configure_mappers()` process, which was invoked automatically in response to a user-initiated operation.)
+    ses.query(db.Experiment).filter(db.Experiment.name == name).all()
+
+CI/functional_tests/test_molten_salts.py::test_analysis
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/project/project.py:212: SAWarning: relationship 'Computation.experiment' will copy column experiments.id to column computations.experiment_id, which conflicts with relationship(s): 'Experiment.computations' (copies experiments.id to computations.experiment_id). If this is not the intention, consider if these relationships should be linked with back_populates, or if viewonly=True should be applied to one or more if they are read-only. For the less common case that foreign key constraints are partially overlapping, the orm.foreign() annotation can be used to isolate the columns that should be written towards.   To silence this warning, add the parameter 'overlaps="computations"' to the 'Computation.experiment' relationship. (Background on this warning at: https://sqlalche.me/e/20/qzyx) (This warning originated from the `configure_mappers()` process, which was invoked automatically in response to a user-initiated operation.)
+    ses.query(db.Experiment).filter(db.Experiment.name == name).all()
+
+CI/functional_tests/test_molten_salts.py: 1 warning
+CI/functional_tests/test_water_study.py: 1 warning
+CI/integration_tests/calculators/test_angular_distribution_function.py: 1 warning
+CI/integration_tests/calculators/test_coordination_numbers.py: 1 warning
+CI/integration_tests/calculators/test_einstein_diffusion_coefficients.py: 2 warnings
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py: 4 warnings
+CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py: 4 warnings
+CI/integration_tests/calculators/test_green_kubo_ionic_conductivity.py: 2 warnings
+CI/integration_tests/calculators/test_green_kubo_self_diffusion_coefficients.py: 2 warnings
+CI/integration_tests/calculators/test_kirkwood_buff_integrals.py: 1 warning
+CI/integration_tests/calculators/test_potential_of_mean_force.py: 2 warnings
+CI/integration_tests/calculators/test_radial_distribution_function.py: 3 warnings
+CI/integration_tests/project/test_run_load_multiple_experiments.py: 1 warning
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/database/calculator_database.py:153: SAWarning: TypeDecorator JSONEncodedDict() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this warning at: https://sqlalche.me/e/20/cprf)
+    computations = computations.all()
+
+CI/integration_tests/calculators/test_einstein_diffusion_coefficients.py::test_calculator
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_project
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_project
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_project
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_experiment
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_experiment
+CI/unit_tests/utils/test_calculator_helper_methods.py::TestCalculatorHelperMethods::test_fit_einstein_curve
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/utils/calculator_helper_methods.py:95: OptimizeWarning: Covariance of the parameters could not be estimated
+    popt_temp, pcov_temp = curve_fit(
+
+CI/integration_tests/calculators/test_einstein_diffusion_coefficients.py::test_calculator
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_project
+CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_experiment
+CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py::test_project
+CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py::test_experiment
+CI/integration_tests/calculators/test_green_kubo_ionic_conductivity.py::test_project
+CI/integration_tests/calculators/test_green_kubo_self_diffusion_coefficients.py::test_calculator
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/database/calculator_database.py:221: SAWarning: Object of type <ComputationResult> not in session, add operation along 'Computation.computation_results' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+    .first()
+
+CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py: 12 warnings
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/green_kubo_distinct_diffusion_coefficients.py:209: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+    self.sigma.append(np.trapz(vacf[int(self.args.data_range - 1) :], x=self.time))
+
+CI/integration_tests/calculators/test_green_kubo_ionic_conductivity.py::test_project
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/green_kubo_ionic_conductivity.py:217: DeprecationWarning: 'scipy.integrate.cumtrapz' is deprecated in favour of 'scipy.integrate.cumulative_trapezoid' and will be removed in SciPy 1.14.0
+    self.sigmas.append(cumtrapz(jacf, x=self.time))
+
+CI/integration_tests/calculators/test_green_kubo_self_diffusion_coefficients.py: 2460 warnings
+  /home/xutong/SpeedUpSlowTest/versions/MDSuite_552/before/mdsuite/calculators/green_kubo_self_diffusion_coefficients.py:202: DeprecationWarning: 'scipy.integrate.cumtrapz' is deprecated in favour of 'scipy.integrate.cumulative_trapezoid' and will be removed in SciPy 1.14.0
+    self.sigmas.append(cumtrapz(vacf, x=self.time))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+327.05s call     CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py::test_project
+323.23s call     CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py::test_experiment
+247.10s call     CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_project
+50.35s call     CI/integration_tests/transformations/test_molecular_mapping_results.py::TestMoleculeMapping::test_ionic_liquid
+38.92s setup    CI/functional_tests/test_molten_salts.py::test_analysis
+24.27s call     CI/integration_tests/calculators/test_green_kubo_self_diffusion_coefficients.py::test_calculator
+16.93s call     CI/integration_tests/project/test_run_load_multiple_experiments.py::test_add_run_load_data
+15.91s setup    CI/integration_tests/transformations/test_molecular_mapping_results.py::TestMoleculeMapping::test_water_molecule_smiles
+14.24s call     CI/unit_tests/project/test_project_add_experiment.py::test_add_file_from_list
+13.41s call     CI/unit_tests/project/test_project_add_experiment.py::test_gromacs_read
+12.59s setup    CI/integration_tests/transformations/test_molecular_mapping_results.py::TestMoleculeMapping::test_water_molecule_reference_dict
+12.21s setup    CI/integration_tests/transformations/test_molecular_mapping_results.py::TestMoleculeMapping::test_ionic_liquid
+11.62s call     CI/integration_tests/calculators/test_radial_distribution_function.py::test_experiment
+11.40s setup    CI/integration_tests/transformations/test_transformation_run_options.py::test_from_experiment
+11.32s call     CI/integration_tests/calculators/test_angular_distribution_function.py::test_project
+9.16s call     CI/integration_tests/calculators/test_einstein_diffusion_coefficients.py::test_calculator
+8.03s setup    CI/unit_tests/project/test_project_add_experiment.py::test_add_file_from_list
+7.32s setup    CI/integration_tests/project/test_run_load_multiple_experiments.py::test_add_run_load_data
+6.92s call     CI/integration_tests/calculators/test_coordination_numbers.py::test_project
+6.82s setup    CI/integration_tests/transformations/test_transformation_run_options.py::test_from_project
+6.78s call     CI/integration_tests/calculators/test_radial_distribution_function.py::test_project
+6.76s call     CI/unit_tests/database/test_experiment_database.py::test_read_files
+6.73s call     CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_experiment
+6.49s call     CI/unit_tests/project/test_project_add_experiment.py::test_lammps_read
+6.30s call     CI/integration_tests/calculators/test_potential_of_mean_force.py::test_project
+6.23s call     CI/integration_tests/calculators/test_green_kubo_ionic_conductivity.py::test_project
+6.21s setup    CI/integration_tests/transformations/test_transformation_run_options.py::test_pass_instance_to_exp
+6.19s setup    CI/integration_tests/transformations/test_transformation_run_options.py::test_call_with_instance
+6.09s call     CI/integration_tests/calculators/test_potential_of_mean_force.py::test_experiment
+6.06s call     CI/integration_tests/calculators/test_radial_distribution_function.py::test_computation_parameter
+6.06s call     CI/unit_tests/project/test_project_add_experiment.py::test_add_file_from_str
+5.96s call     CI/integration_tests/calculators/test_einstein_helfand_ionic_conductivity.py::test_project
+5.91s setup    CI/integration_tests/transformations/test_transformation_run_options.py::test_from_experiment_twice
+5.90s call     CI/integration_tests/calculators/test_kirkwood_buff_integrals.py::test_project
+5.62s setup    CI/integration_tests/transformations/test_transformation_run_options.py::test_from_project_twice
+5.44s setup    CI/functional_tests/test_water_study.py::test_water_analysis
+5.20s call     CI/unit_tests/transformations/test_transformator_parent.py::test_transformation_on_new_data_
+5.03s call     CI/unit_tests/utils/test_testing.py::TestProcess::test_exception
+5.03s call     CI/unit_tests/utils/test_testing.py::TestProcess::test_no_exception
+3.89s call     CI/unit_tests/transformations/test_transformator_parent.py::test_data_from_species_and_experiment
+3.84s call     CI/unit_tests/transformations/test_transformator_parent.py::test_automatic_coordinate_unwrapping
+3.73s call     CI/unit_tests/transformations/test_transformator_parent.py::test_save_to_correct_name
+3.62s call     CI/unit_tests/project/test_project_add_experiment.py::test_lammpsflux_read
+3.42s call     CI/unit_tests/transformations/test_transformator_parent.py::test_full_transformation_with_values
+3.39s call     CI/unit_tests/transformations/test_transformator_parent.py::test_not_found_errors
+3.35s call     CI/unit_tests/database/test_file_read.py::test_read_script_input
+3.25s call     CI/unit_tests/project/test_project_add_experiment.py::test_add_file_from_str_extxyz
+3.24s call     CI/unit_tests/project/test_project_add_experiment.py::test_extxyz_read
+2.56s call     CI/unit_tests/project/test_project_add_experiment.py::test_multiple_experiments
+2.52s call     CI/unit_tests/database/test_experiment_database.py::test_experiment_units
+2.50s call     CI/unit_tests/database/test_experiment_database.py::test_molecules
+2.48s call     CI/unit_tests/database/test_experiment_database.py::test_project_box_array
+2.30s call     CI/unit_tests/database/test_experiment_database.py::test_experiment_simulation_data_nested
+2.27s call     CI/unit_tests/database/test_experiment_database.py::test_project_time_step
+2.21s call     CI/unit_tests/database/test_experiment_database.py::test_project_number_of_atoms
+2.20s call     CI/unit_tests/project/test_project_load_experiments.py::test_project_load_experiments
+2.20s call     CI/unit_tests/project/test_project_database.py::test_project_description
+2.18s call     CI/unit_tests/database/test_experiment_database.py::test_experiment_simulation_data
+2.18s call     CI/unit_tests/database/test_experiment_database.py::test_project_temperature
+2.14s call     CI/unit_tests/database/test_experiment_database.py::test_project_number_of_configurations
+2.11s call     CI/unit_tests/database/test_experiment_database.py::test_species
+2.00s setup    CI/integration_tests/calculators/test_angular_distribution_function.py::test_project
+1.97s call     CI/unit_tests/project/test_project_add_experiment.py::test_experiment_return
+1.90s call     CI/unit_tests/project/test_project_database.py::test_project_description_from_file
+1.88s call     CI/unit_tests/project/test_project_instantiation.py::test_storage_path_as_pathlib
+1.88s setup    CI/integration_tests/calculators/test_coordination_numbers.py::test_project
+1.72s setup    CI/integration_tests/calculators/test_kirkwood_buff_integrals.py::test_project
+1.61s call     CI/unit_tests/project/test_project_instantiation.py::test_storage_path_as_string
+1.38s setup    CI/integration_tests/calculators/test_green_kubo_ionic_conductivity.py::test_project
+1.12s setup    CI/integration_tests/calculators/test_einstein_distinct_diffusion_coefficients.py::test_eddc_project
+1.05s setup    CI/unit_tests/database/test_experiment_database.py::test_read_files
+1.00s setup    CI/integration_tests/calculators/test_potential_of_mean_force.py::test_project
+1.00s setup    CI/integration_tests/calculators/test_radial_distribution_function.py::test_project
+0.94s setup    CI/integration_tests/calculators/test_einstein_helfand_ionic_conductivity.py::test_project
+0.83s setup    CI/integration_tests/calculators/test_green_kubo_distinct_diffusion_coefficients.py::test_project
+0.49s call     CI/functional_tests/test_water_study.py::test_water_analysis
+0.47s call     CI/integration_tests/transformations/test_molecular_mapping_results.py::TestMoleculeMapping::test_water_molecule_reference_dict
+0.46s call     CI/integration_tests/transformations/test_molecular_mapping_results.py::TestMoleculeMapping::test_water_molecule_smiles
+0.25s call     CI/unit_tests/utils/test_calculator_helper_methods.py::TestCalculatorHelperMethods::test_fit_einstein_curve
+0.22s call     CI/integration_tests/transformations/test_transformation_run_options.py::test_from_experiment_twice
+0.22s call     CI/integration_tests/transformations/test_transformation_run_options.py::test_from_project_twice
+0.21s call     CI/integration_tests/transformations/test_transformation_run_options.py::test_pass_instance_to_exp
+0.21s call     CI/integration_tests/transformations/test_transformation_run_options.py::test_from_experiment
+0.21s call     CI/integration_tests/transformations/test_transformation_run_options.py::test_from_project
+0.21s call     CI/integration_tests/transformations/test_transformation_run_options.py::test_call_with_instance
+0.20s setup    CI/unit_tests/project/test_project_add_experiment.py::test_add_file_from_str_extxyz
+0.01s call     CI/functional_tests/test_molten_salts.py::test_analysis
+
+(261 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED CI/functional_tests/test_molten_salts.py::test_analysis - AttributeErr...
+FAILED CI/functional_tests/test_water_study.py::test_water_analysis - Attribu...
+FAILED CI/integration_tests/calculators/test_angular_distribution_function.py::test_project
+FAILED CI/integration_tests/calculators/test_coordination_numbers.py::test_project
+FAILED CI/integration_tests/calculators/test_kirkwood_buff_integrals.py::test_project
+FAILED CI/integration_tests/calculators/test_potential_of_mean_force.py::test_project
+FAILED CI/integration_tests/calculators/test_potential_of_mean_force.py::test_experiment
+FAILED CI/integration_tests/calculators/test_radial_distribution_function.py::test_project
+FAILED CI/integration_tests/calculators/test_radial_distribution_function.py::test_experiment
+FAILED CI/integration_tests/calculators/test_radial_distribution_function.py::test_computation_parameter
+FAILED CI/integration_tests/project/test_run_load_multiple_experiments.py::test_add_run_load_data
+FAILED CI/unit_tests/graph_modules/test_molecular_graph.py::TestMolecularGraph::test_build_smiles_graph
+FAILED CI/unit_tests/project/test_project_add_experiment.py::test_lammpsflux_read
+========== 13 failed, 103 passed, 2515 warnings in 1374.30s (0:22:54) ==========
+Energy consumption in joules: 19817.55258178711 for 1377.8998 sec of execution.
+
+
+========================================
+Completed before version at: do 27 nov 2025 11:23:45 CET
+========================================
+
+========================================
+All tests completed at: do 27 nov 2025 11:23:45 CET
+Log file: /home/xutong/SpeedUpSlowTest/versions/MDSuite_552//test_results_test_suite.log
+========================================

@@ -6,7 +6,7 @@
 # PR #552 testing: Run ALL test files that were modified in the PR
 # Includes: helper methods (JAX functions), transformations, and GK distinct diffusion
 # Note: Integration tests may fail due to SSL cert issues when downloading test data
-TEST_COMMAND="pytest --durations=0"
+TEST_COMMAND="pytest --durations=0 -vv"
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
 

@@ -14,8 +14,7 @@ VENV_PATH=".venv"
 # This includes pytest, pytest-cov, pytest-random-order, pytest-asyncio, etc.
 # Note: This project requires old setuptools and pip<21.3 to support legacy editable installs
 # Also requires specific nexgen and deprecated packages for compatibility
-SETUP_COMMAND="pip install --upgrade 'pip<21.3' && pip install 'setuptools<57' 'wheel==0.33.1' && pip install -e .[dev] && pip uninstall -y nexgen && pip install 'nexgen==0.8.4' && pip install deprecated"
-
+SETUP_COMMAND=""
 # Flag to indicate this is NOT a uv-based project
 USE_UV="false"
 

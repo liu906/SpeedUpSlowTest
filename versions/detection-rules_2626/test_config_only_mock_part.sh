@@ -3,7 +3,11 @@
 # This file is sourced by run_tests_venv_generic.sh
 
 # Test command to run (without energibridge prefix)
-TEST_COMMAND="pytest --durations=0"
+TEST_COMMAND="pytest tests/test_all_rules.py::TestValidRules::test_all_rule_queries_optimized \
+       tests/test_all_rules.py::TestValidRules::test_production_rules_have_rta \
+       tests/test_packages.py::TestPackages::test_package_summary \
+       tests/test_packages.py::TestPackages::test_rule_versioning \
+       --durations=10 -v -vv"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
