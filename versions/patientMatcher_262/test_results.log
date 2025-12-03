@@ -1,0 +1,122 @@
+========================================
+Starting test runs for project: patientMatcher_262
+Config file: test_config.sh
+Comparing: before vs after
+Iterations: 1
+Test command: docker compose run --rm --entrypoint pytest cli tests/ --durations=0
+Log file: /data/SpeedUpSlowTest/versions/patientMatcher_262//test_results.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected Docker-based project
+Starting Docker containers...
+time="2025-12-01T16:58:46+01:00" level=warning msg="/data/SpeedUpSlowTest/versions/patientMatcher_262/before/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network before_pmatcher-net  Creating
+ Network before_pmatcher-net  Created
+time="2025-12-01T16:58:46+01:00" level=warning msg="Found orphan containers ([before-backend-1 before-adminer-1 before-db-1 before-proxy-1 before-prestart-1 before-mailcatcher-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container mongodb  Creating
+ Container mongodb  Created
+ Container cli-app  Creating
+ Container web-app  Creating
+ Container cli-app  Created
+ Container web-app  Created
+ Container mongodb  Starting
+ Container mongodb  Started
+ Container cli-app  Starting
+ Container web-app  Starting
+ Container cli-app  Started
+ Container web-app  Started
+Waiting 10s for containers to be ready...
+
+=========================================
+Test run 1/1 for before
+Time: ma  1 dec 2025 16:58:57 CET
+=========================================
+time="2025-12-01T16:58:57+01:00" level=warning msg="/data/SpeedUpSlowTest/versions/patientMatcher_262/before/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2025-12-01T16:58:57+01:00" level=warning msg="Found orphan containers ([before-backend-1 before-adminer-1 before-db-1 before-proxy-1 before-prestart-1 before-mailcatcher-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container mongodb  Running
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "pytest": executable file not found in $PATH: unknown
+Energy consumption in joules: 1.814605712890625 for 0.40524036 sec of execution.
+
+
+Stopping Docker containers for before...
+time="2025-12-01T16:58:57+01:00" level=warning msg="/data/SpeedUpSlowTest/versions/patientMatcher_262/before/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container web-app  Stopping
+ Container cli-app  Stopping
+ Container cli-app  Stopped
+ Container cli-app  Removing
+ Container cli-app  Removed
+ Container web-app  Stopped
+ Container web-app  Removing
+ Container web-app  Removed
+ Container mongodb  Stopping
+ Container mongodb  Stopped
+ Container mongodb  Removing
+ Container mongodb  Removed
+ Network before_pmatcher-net  Removing
+ Network before_pmatcher-net  Removed
+
+========================================
+Completed before version at: ma  1 dec 2025 16:59:08 CET
+========================================
+
+========================================
+Starting tests for after version
+========================================
+Detected Docker-based project
+Starting Docker containers...
+time="2025-12-01T16:59:19+01:00" level=warning msg="/data/SpeedUpSlowTest/versions/patientMatcher_262/after/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network after_pmatcher-net  Creating
+ Network after_pmatcher-net  Created
+ Container mongodb  Creating
+ Container mongodb  Created
+ Container web-app  Creating
+ Container cli-app  Creating
+ Container web-app  Created
+ Container cli-app  Created
+ Container mongodb  Starting
+ Container mongodb  Started
+ Container web-app  Starting
+ Container cli-app  Starting
+ Container cli-app  Started
+ Container web-app  Started
+Waiting 10s for containers to be ready...
+
+=========================================
+Test run 1/1 for after
+Time: ma  1 dec 2025 16:59:29 CET
+=========================================
+time="2025-12-01T16:59:30+01:00" level=warning msg="/data/SpeedUpSlowTest/versions/patientMatcher_262/after/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container mongodb  Running
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "pytest": executable file not found in $PATH: unknown
+Energy consumption in joules: 2.0207672119140625 for 0.4036015 sec of execution.
+
+
+Stopping Docker containers for after...
+time="2025-12-01T16:59:30+01:00" level=warning msg="/data/SpeedUpSlowTest/versions/patientMatcher_262/after/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container cli-app  Stopping
+ Container web-app  Stopping
+ Container cli-app  Stopped
+ Container cli-app  Removing
+ Container cli-app  Removed
+ Container web-app  Stopped
+ Container web-app  Removing
+ Container web-app  Removed
+ Container mongodb  Stopping
+ Container mongodb  Stopped
+ Container mongodb  Removing
+ Container mongodb  Removed
+ Network after_pmatcher-net  Removing
+ Network after_pmatcher-net  Removed
+
+========================================
+Completed after version at: ma  1 dec 2025 16:59:41 CET
+========================================
+
+========================================
+All tests completed at: ma  1 dec 2025 16:59:41 CET
+Compared: before vs after
+Log file: /data/SpeedUpSlowTest/versions/patientMatcher_262//test_results.log
+========================================

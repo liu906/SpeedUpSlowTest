@@ -1,4 +1,5 @@
-PROJECT_PATH=rotki_2007
+PROJECT_PATH=patientMatcher_262
+
 here is my sudo pwd in case you need: 19970321
 # Prompt: Mock-Based Test Speedup
 
@@ -30,56 +31,11 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 Given a list of slowest tests from project `{PROJECT_PATH}/before` with "venv/" :
 
 ```
-============================ slowest test durations ============================
-404.38s call     rotkehlchen/tests/integration/test_price_history.py::test_inconsistent_prices_double_checking[False]
-218.27s call     rotkehlchen/tests/integration/test_price_history.py::test_price_queries[False]
-140.19s call     rotkehlchen/tests/integration/test_price_history.py::test_cryptocompare_bchsv_query[False]
-125.03s call     rotkehlchen/tests/integration/test_price_history.py::test_cryptocompare_iota_query[False]
-124.92s call     rotkehlchen/tests/integration/test_end_to_end_tax_report.py::test_cryptocompare_asset_and_price_not_found_in_history_processing[False-True]
-88.27s call     rotkehlchen/tests/external_apis/test_cryptocompare.py::test_cryptocompare_dao_query
-55.95s call     rotkehlchen/tests/exchanges/test_gemini.py::test_gemini_query_all_trades_pagination
-53.52s call     rotkehlchen/tests/exchanges/test_gemini.py::test_gemini_query_trades
-27.47s call     rotkehlchen/tests/db/test_db.py::test_export_import_db
-24.27s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_new_account_pull_old_data[True]
-22.85s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_old_account_can_pull_data[True]
-22.70s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_old_account_can_pull_old_data[True]
-22.24s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_new_account_can_pull_data[True]
-21.49s call     rotkehlchen/tests/integration/test_blockchain.py::test_multiple_concurrent_ethereum_blockchain_queries[0]
-16.16s call     rotkehlchen/tests/api/test_uniswap.py::test_get_balances[False-https://mainnet.infura.io/v3/66302b8fb9874614905a3cbe903a0dbb-ethereum_manager_connect_at_start0-ethereum_modules0-ethereum_accounts0]
-15.14s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_old_account_older_remote_ts_smaller_remote_size[True]
-15.06s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_old_account_doesnt_pull_data_with_no_premium_sync[True]
-14.62s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_old_account_older_remote_ts_bigger_remote_size[True]
-14.54s call     rotkehlchen/tests/integration/test_premium.py::test_upload_data_to_server_same_hash[True]
-14.54s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_old_account_newer_remote_ts_smaller_remote_size[True]
-14.50s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_old_account_same_hash[True]
-14.21s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_first_time_no_previous_db[True]
-14.01s call     rotkehlchen/tests/integration/test_premium.py::test_upload_data_to_server[True]
-13.97s call     rotkehlchen/tests/integration/test_premium.py::test_upload_data_to_server_smaller_db[True]
-13.80s call     rotkehlchen/tests/integration/test_premium.py::test_try_premium_at_start_new_account_different_password_than_remote_db[different_password_than_remote_db_was_encoded_with-True]
-12.89s setup    rotkehlchen/tests/unit/test_ethereum_manager.py::test_use_open_nodes[-ethereum_manager_connect_at_start0-call_order0]
-12.04s setup    rotkehlchen/tests/api/test_uniswap.py::test_get_balances[False--ethereum_manager_connect_at_start1-ethereum_modules0-ethereum_accounts0]
-11.75s setup    rotkehlchen/tests/api/test_uniswap.py::test_get_balances[False-https://mainnet.infura.io/v3/66302b8fb9874614905a3cbe903a0dbb-ethereum_manager_connect_at_start0-ethereum_modules0-ethereum_accounts0]
-10.00s call     rotkehlchen/tests/unit/test_ethereum_manager.py::test_use_open_nodes[-ethereum_manager_connect_at_start0-call_order0]
-9.31s call     rotkehlchen/tests/api/test_history.py::test_history_export_csv_errors[mocked_price_queries0-ethereum_accounts0-added_exchanges0]
-8.54s setup    rotkehlchen/tests/exchanges/test_binance.py::test_api_query_dict_calls_with_time_delta
-8.39s call     rotkehlchen/tests/api/test_history.py::test_query_history_timerange[mocked_price_queries0-ethereum_accounts0-added_exchanges0]
-8.21s call     rotkehlchen/tests/api/test_users.py::test_user_creation_with_premium_credentials[False]
-8.15s call     rotkehlchen/tests/api/test_history.py::test_history_export_csv[mocked_price_queries0-ethereum_accounts0-added_exchanges0]
-8.10s call     rotkehlchen/tests/api/test_history.py::test_query_history[mocked_price_queries0-ethereum_accounts0-added_exchanges0]
-7.66s call     rotkehlchen/tests/api/test_uniswap.py::test_get_events_history_filtering_by_timestamp_case2[True-ethereum_modules0-ethereum_accounts0]
-7.23s call     rotkehlchen/tests/api/test_uniswap.py::test_get_uniswap_exotic_history[True-ethereum_modules0-ethereum_accounts0]
-7.23s call     rotkehlchen/tests/api/test_uniswap.py::test_events_pnl[True-ethereum_modules0-ethereum_accounts0]
-7.15s call     rotkehlchen/tests/api/test_adex.py::test_get_balances_premium[True-ethereum_modules0-ethereum_accounts0]
-7.03s call     rotkehlchen/tests/api/test_uniswap.py::test_get_balances[True--ethereum_manager_connect_at_start2-ethereum_modules0-ethereum_accounts0]
-6.65s call     rotkehlchen/tests/api/test_uniswap.py::test_get_events_history_filtering_by_timestamp_case1[True-ethereum_modules0-ethereum_accounts0]
-6.55s call     rotkehlchen/tests/api/test_uniswap.py::test_get_events_history_get_all_events_empty[True-ethereum_modules0-ethereum_accounts0]
-6.52s call     rotkehlchen/tests/api/test_uniswap.py::test_get_uniswap_trades_history[True-ethereum_modules0-ethereum_accounts0]
-6.01s call     rotkehlchen/tests/exchanges/test_binance.py::test_api_query_retry_on_status_code_429
-5.35s call     rotkehlchen/tests/api/test_data_purging.py::test_purge_all_exchange_data[added_exchanges0]
-4.96s call     rotkehlchen/tests/api/test_blockchain.py::test_no_etherscan_is_detected[0-False]
-4.53s call     rotkehlchen/tests/exchanges/test_binance.py::test_binance_assets_are_known
-4.38s call     rotkehlchen/tests/db/test_db.py::test_writing_fetching_data
-4.07s setup    rotkehlchen/tests/api/test_uniswap.py::test_get_balances[True--ethereum_manager_connect_at_start2-ethereum_modules0-ethereum_accounts0]
+11.70s call     tests/cli/test_add.py::test_cli_add_demo_data
+3.01s call     tests/match/test_GT_matching.py::test_genotype_matching
+2.34s call     tests/match/test_matching_handler.py::test_internal_matching
+1.63s call     tests/server/test_server_responses.py::test_match_ensembl_patient
+1.63s call     tests/server/test_server_responses.py::test_match_hgnc_symbol_patient
 
 ```
 

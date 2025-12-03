@@ -10,10 +10,13 @@ TEST_COMMAND="pytest tests/test_all_rules.py::TestValidRules::test_all_rule_quer
        --durations=10 -v -vv"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
-VENV_PATH=".venv"
+VENV_PATH="venv"
 
 # Optional: Setup command to run after activating venv (e.g., install dependencies)
-SETUP_COMMAND="pip install setuptools wheel setuptools_scm pytest && pip install -e ."
+# Note: typeguard must be <3.0 to work with marshmallow-dataclass 8.5.x
+# typeguard 3.x changed the check_type() API, removing the 'argname' parameter
+# IMPORTANT: Install typeguard constraint first to prevent incompatible versions
+SETUP_COMMAND="pip install setuptools wheel setuptools_scm pytest 'typeguard>=2.0,<3.0' && pip install -e ."
 
 # Optional: Wait time in seconds before starting tests
 # WAIT_TIME=2

@@ -2,9 +2,9 @@
 Starting test runs for project: BuffaLogs_399
 Config file: test_config_only_mock_part.sh
 Comparing: before vs after_careful_mock
-Iterations: 1
+Iterations: 40
 Test command: docker compose exec buffalogs pytest   impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure   impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure   impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert   impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure   impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure   impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure   impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure   impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure   impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure   --durations=0 -vv
-Log file: /home/xutong/SpeedUpSlowTest/versions/BuffaLogs_399//test_results_only_mock_part.log
+Log file: /data/SpeedUpSlowTest/versions/BuffaLogs_399//test_results_only_mock_part.log
 ========================================
 
 ========================================
@@ -12,198 +12,431 @@ Starting tests for before version
 ========================================
 Detected Docker-based project
 Starting Docker containers...
-time="2025-11-24T11:38:53+01:00" level=warning msg="Found orphan containers ([before-backend-1 before-adminer-1 before-db-1 before-proxy-1 before-prestart-1 before-mailcatcher-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
- Container buffalogs_rabbitmq  Running
- Container buffalogs_postgres  Running
- Container buffalogs_frontend  Running
- Container buffalogs  Running
- Container buffalogs_nginx  Running
- Container buffalogs_celery  Starting
- Container buffalogs_celery_beat  Starting
- Container buffalogs_celery_beat  Started
- Container buffalogs_celery  Started
+ Network before_default  Creating
+ Network before_default  Created
+ Volume before_buffalogs_nginx_logs  Creating
+ Volume before_buffalogs_nginx_logs  Created
+ Volume before_buffalogs_rabbitmq_data  Creating
+ Volume before_buffalogs_rabbitmq_data  Created
+ Volume before_buffalogs_postgres_data  Creating
+ Volume before_buffalogs_postgres_data  Created
+ Volume before_buffalogs_django_static  Creating
+ Volume before_buffalogs_django_static  Created
+ Volume before_buffalogs_nginx_sockets  Creating
+ Volume before_buffalogs_nginx_sockets  Created
+time="2025-12-02T18:47:58+01:00" level=warning msg="Found orphan containers ([before-backend-1 before-adminer-1 before-db-1 before-proxy-1 before-prestart-1 before-mailcatcher-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container buffalogs_postgres  Creating
+ Container buffalogs_frontend  Creating
+ Container buffalogs_rabbitmq  Creating
+ Container buffalogs_rabbitmq  Created
+ Container buffalogs_postgres  Created
+ Container buffalogs_celery  Creating
+ Container buffalogs_celery_beat  Creating
+ Container buffalogs  Creating
+ Container buffalogs_celery  Created
+ Container buffalogs_celery_beat  Created
+ Container buffalogs  Created
+ Container buffalogs_nginx  Creating
+ Container buffalogs_nginx  Created
+ Container buffalogs_frontend  Created
+ Container buffalogs_postgres  Starting
+ Container buffalogs_frontend  Starting
+ Container buffalogs_rabbitmq  Starting
+ Container buffalogs_frontend  Started
+ Container buffalogs_rabbitmq  Started
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint buffalogs_postgres (5f74428ab7c53fd3a9aee80ed4d0e986075579f0e1bd1649fc5fd21566decda7): Bind for 0.0.0.0:5432 failed: port is already allocated
 Waiting 10s for containers to be ready...
 Running setup command...
-Requirement already satisfied: pytest in /usr/local/lib/python3.12/site-packages (9.0.1)
-Requirement already satisfied: pytest-django in /usr/local/lib/python3.12/site-packages (4.11.1)
-Requirement already satisfied: opensearch-py in /usr/local/lib/python3.12/site-packages (3.1.0)
-Requirement already satisfied: splunk-sdk in /usr/local/lib/python3.12/site-packages (2.1.1)
-Requirement already satisfied: iniconfig>=1.0.1 in /usr/local/lib/python3.12/site-packages (from pytest) (2.3.0)
-Requirement already satisfied: packaging>=22 in /usr/local/lib/python3.12/site-packages (from pytest) (25.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.12/site-packages (from pytest) (1.6.0)
-Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.12/site-packages (from pytest) (2.19.2)
-Requirement already satisfied: urllib3!=2.2.0,!=2.2.1,<3,>=1.26.19 in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2.5.0)
-Requirement already satisfied: requests<3.0.0,>=2.32.0 in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2.32.5)
-Requirement already satisfied: python-dateutil in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2.9.0.post0)
-Requirement already satisfied: certifi>=2024.07.04 in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2025.10.5)
-Requirement already satisfied: Events in /usr/local/lib/python3.12/site-packages (from opensearch-py) (0.5)
-Requirement already satisfied: opensearch-protobufs==0.19.0 in /usr/local/lib/python3.12/site-packages (from opensearch-py) (0.19.0)
-Requirement already satisfied: protobuf>=3.20.3 in /usr/local/lib/python3.12/site-packages (from opensearch-protobufs==0.19.0->opensearch-py) (6.33.1)
-Requirement already satisfied: grpcio>=1.68.1 in /usr/local/lib/python3.12/site-packages (from opensearch-protobufs==0.19.0->opensearch-py) (1.76.0)
-Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/site-packages (from requests<3.0.0,>=2.32.0->opensearch-py) (3.4.4)
-Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/site-packages (from requests<3.0.0,>=2.32.0->opensearch-py) (3.11)
-Requirement already satisfied: deprecation in /usr/local/lib/python3.12/site-packages (from splunk-sdk) (2.1.0)
-Requirement already satisfied: typing-extensions~=4.12 in /usr/local/lib/python3.12/site-packages (from grpcio>=1.68.1->opensearch-protobufs==0.19.0->opensearch-py) (4.15.0)
-Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/site-packages (from python-dateutil->opensearch-py) (1.17.0)
-WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+service "buffalogs" is not running
 
 =========================================
-Test run 1/1 for before
-Time: ma 24 nov 2025 11:39:04 CET
+Test run 1/40 for before
+Time: di  2 dec 2025 18:48:16 CET
 =========================================
-============================= test session starts ==============================
-platform linux -- Python 3.12.12, pytest-9.0.1, pluggy-1.6.0 -- /usr/local/bin/python3.12
-cachedir: .pytest_cache
-django: version: 5.2.7, settings: buffalogs.settings.settings (from ini)
-rootdir: /opt/certego/buffalogs
-configfile: pytest.ini
-plugins: django-4.11.1
-collecting ... collected 9 items
+service "buffalogs" is not running
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure PASSED [ 11%]
-impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure PASSED [ 22%]
-impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert PASSED [ 33%]
-impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure PASSED [ 44%]
-impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure PASSED [ 55%]
-impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure PASSED [ 66%]
-impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure PASSED [ 77%]
-impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure PASSED [ 88%]
-impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure PASSED [100%]
+Sleeping 5 seconds...
 
-=============================== warnings summary ===============================
-impossible_travel/models.py:29
-  /opt/certego/buffalogs/impossible_travel/models.py:29: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+=========================================
+Test run 2/40 for before
+Time: di  2 dec 2025 18:48:22 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0234375 for 0.20299685 sec of execution.
 
-impossible_travel/models.py:152
-  /opt/certego/buffalogs/impossible_travel/models.py:152: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/models.py:157
-  /opt/certego/buffalogs/impossible_travel/models.py:157: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+=========================================
+Test run 3/40 for before
+Time: di  2 dec 2025 18:48:27 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0183258056640625 for 0.20287451 sec of execution.
 
-impossible_travel/models.py:339
-  /opt/certego/buffalogs/impossible_travel/models.py:339: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/models.py:344
-  /opt/certego/buffalogs/impossible_travel/models.py:344: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+=========================================
+Test run 4/40 for before
+Time: di  2 dec 2025 18:48:33 CET
+=========================================
+service "buffalogs" is not running
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0012_remove_alert_valid_alert_filter_type_choices_and_more.py:65: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0012_remove_alert_valid_alert_filter_type_choices_and_more.py:88: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 5/40 for before
+Time: di  2 dec 2025 18:48:38 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0349884033203125 for 0.20239021 sec of execution.
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0013_remove_alert_valid_alert_name_choice_and_more.py:202: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0013_remove_alert_valid_alert_name_choice_and_more.py:221: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 6/40 for before
+Time: di  2 dec 2025 18:48:44 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.01910400390625 for 0.20268336 sec of execution.
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:259: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:278: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 7/40 for before
+Time: di  2 dec 2025 18:48:49 CET
+=========================================
+service "buffalogs" is not running
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:323: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:335: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 8/40 for before
+Time: di  2 dec 2025 18:48:55 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0159454345703125 for 0.2017415 sec of execution.
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:380: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-============================== slowest durations ===============================
-19.19s call     impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert
-11.79s call     impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure
-10.86s call     impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure
-10.59s call     impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure
-10.59s call     impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-10.34s call     impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure
-9.56s call     impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure
-7.18s call     impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure
-4.62s call     impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure
-1.29s setup    impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-0.13s teardown impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure
-0.02s setup    impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert
-0.01s setup    impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert
-0.00s teardown impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure
-================== 9 passed, 14 warnings in 96.33s (0:01:36) ===================
-Energy consumption in joules: 607.9503479003906 for 97.16266 sec of execution.
+=========================================
+Test run 9/40 for before
+Time: di  2 dec 2025 18:49:00 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: di  2 dec 2025 18:49:06 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0139923095703125 for 0.20342596 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for before
+Time: di  2 dec 2025 18:49:11 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: di  2 dec 2025 18:49:17 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: di  2 dec 2025 18:49:22 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for before
+Time: di  2 dec 2025 18:49:28 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for before
+Time: di  2 dec 2025 18:49:34 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for before
+Time: di  2 dec 2025 18:49:39 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for before
+Time: di  2 dec 2025 18:49:45 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.020965576171875 for 0.20349362 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for before
+Time: di  2 dec 2025 18:49:50 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0145263671875 for 0.20170179 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for before
+Time: di  2 dec 2025 18:49:56 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0111083984375 for 0.20277402 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for before
+Time: di  2 dec 2025 18:50:01 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.015777587890625 for 0.20215884 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for before
+Time: di  2 dec 2025 18:50:07 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.016815185546875 for 0.20266421 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for before
+Time: di  2 dec 2025 18:50:12 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.01361083984375 for 0.20333868 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for before
+Time: di  2 dec 2025 18:50:18 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0161895751953125 for 0.20284438 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for before
+Time: di  2 dec 2025 18:50:23 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.018585205078125 for 0.20288263 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for before
+Time: di  2 dec 2025 18:50:29 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.014556884765625 for 0.20314534 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for before
+Time: di  2 dec 2025 18:50:34 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0147247314453125 for 0.20269476 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for before
+Time: di  2 dec 2025 18:50:40 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0126495361328125 for 0.20222159 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for before
+Time: di  2 dec 2025 18:50:45 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.00982666015625 for 0.2019572 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for before
+Time: di  2 dec 2025 18:50:51 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0171051025390625 for 0.2016575 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for before
+Time: di  2 dec 2025 18:50:57 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for before
+Time: di  2 dec 2025 18:51:02 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for before
+Time: di  2 dec 2025 18:51:08 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0202789306640625 for 0.20329738 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for before
+Time: di  2 dec 2025 18:51:13 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.01141357421875 for 0.20268685 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for before
+Time: di  2 dec 2025 18:51:19 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.01531982421875 for 0.20280291 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for before
+Time: di  2 dec 2025 18:51:24 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for before
+Time: di  2 dec 2025 18:51:30 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for before
+Time: di  2 dec 2025 18:51:35 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.011871337890625 for 0.20239286 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for before
+Time: di  2 dec 2025 18:51:41 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for before
+Time: di  2 dec 2025 18:51:46 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0127716064453125 for 0.20270409 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for before
+Time: di  2 dec 2025 18:51:52 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0103302001953125 for 0.20359148 sec of execution.
 
 
 Stopping Docker containers for before...
  Container buffalogs_nginx  Stopping
+ Container buffalogs_celery_beat  Stopping
  Container buffalogs_celery  Stopping
  Container buffalogs_frontend  Stopping
- Container buffalogs_celery_beat  Stopping
  Container buffalogs_celery  Stopped
  Container buffalogs_celery  Removing
- Container buffalogs_celery_beat  Stopped
- Container buffalogs_celery_beat  Removing
- Container buffalogs_celery  Removed
- Container buffalogs_celery_beat  Removed
- Container buffalogs_frontend  Stopped
- Container buffalogs_frontend  Removing
  Container buffalogs_nginx  Stopped
  Container buffalogs_nginx  Removing
+ Container buffalogs_celery_beat  Stopped
+ Container buffalogs_celery_beat  Removing
+ Container buffalogs_celery_beat  Removed
  Container buffalogs_nginx  Removed
  Container buffalogs  Stopping
- Container buffalogs_frontend  Removed
  Container buffalogs  Stopped
  Container buffalogs  Removing
+ Container buffalogs_celery  Removed
  Container buffalogs  Removed
  Container buffalogs_rabbitmq  Stopping
  Container buffalogs_postgres  Stopping
  Container buffalogs_postgres  Stopped
  Container buffalogs_postgres  Removing
  Container buffalogs_postgres  Removed
+ Container buffalogs_frontend  Stopped
+ Container buffalogs_frontend  Removing
+ Container buffalogs_frontend  Removed
  Container buffalogs_rabbitmq  Stopped
  Container buffalogs_rabbitmq  Removing
  Container buffalogs_rabbitmq  Removed
- Volume before_buffalogs_postgres_data  Removing
- Volume before_buffalogs_rabbitmq_data  Removing
- Volume before_buffalogs_django_static  Removing
  Volume before_buffalogs_nginx_logs  Removing
+ Volume before_buffalogs_postgres_data  Removing
+ Volume before_buffalogs_django_static  Removing
  Volume before_buffalogs_nginx_sockets  Removing
+ Volume before_buffalogs_rabbitmq_data  Removing
  Network before_default  Removing
- Volume before_buffalogs_postgres_data  Removed
- Volume before_buffalogs_django_static  Removed
- Volume before_buffalogs_rabbitmq_data  Removed
- Volume before_buffalogs_nginx_sockets  Removed
  Volume before_buffalogs_nginx_logs  Removed
+ Volume before_buffalogs_postgres_data  Removed
+ Volume before_buffalogs_nginx_sockets  Removed
+ Volume before_buffalogs_rabbitmq_data  Removed
+ Volume before_buffalogs_django_static  Removed
  Network before_default  Removed
 
 ========================================
-Completed before version at: ma 24 nov 2025 11:40:59 CET
+Completed before version at: di  2 dec 2025 18:51:54 CET
 ========================================
 
 ========================================
@@ -211,57 +444,8 @@ Starting tests for after_careful_mock version
 ========================================
 Detected Docker-based project
 Starting Docker containers...
-#1 [internal] load local bake definitions
-#1 reading from stdin 2.26kB done
-#1 DONE 0.0s
-
-#2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 367B done
-#2 DONE 0.0s
-
-#3 [internal] load metadata for docker.io/library/node:18-alpine
-#3 DONE 0.8s
-
-#4 [internal] load .dockerignore
-#4 transferring context: 71B done
-#4 DONE 0.0s
-
-#5 [1/6] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
-#5 DONE 0.0s
-
-#6 [internal] load build context
-#6 transferring context: 118.99MB 0.3s done
-#6 DONE 0.3s
-
-#7 [3/6] COPY package*.json ./
-#7 CACHED
-
-#8 [4/6] RUN npm install
-#8 CACHED
-
-#9 [2/6] WORKDIR /app
-#9 CACHED
-
-#10 [5/6] RUN apk --no-cache add curl
-#10 CACHED
-
-#11 [6/6] COPY . .
-#11 DONE 0.3s
-
-#12 exporting to image
-#12 exporting layers
-#12 exporting layers 0.2s done
-#12 writing image sha256:bb65849e6a1aee440f09014403754917f963e6af09702645c80d96e1cf192ffd done
-#12 naming to docker.io/library/after_careful_mock-buffalogs_frontend 0.0s done
-#12 DONE 0.3s
-
-#13 resolving provenance for metadata file
-#13 DONE 0.0s
- after_careful_mock-buffalogs_frontend  Built
  Network after_careful_mock_default  Creating
  Network after_careful_mock_default  Created
- Volume after_careful_mock_buffalogs_django_static  Creating
- Volume after_careful_mock_buffalogs_django_static  Created
  Volume after_careful_mock_buffalogs_nginx_sockets  Creating
  Volume after_careful_mock_buffalogs_nginx_sockets  Created
  Volume after_careful_mock_buffalogs_nginx_logs  Creating
@@ -270,232 +454,384 @@ Starting Docker containers...
  Volume after_careful_mock_buffalogs_rabbitmq_data  Created
  Volume after_careful_mock_buffalogs_postgres_data  Creating
  Volume after_careful_mock_buffalogs_postgres_data  Created
- Container buffalogs_postgres  Creating
- Container buffalogs_frontend  Creating
+ Volume after_careful_mock_buffalogs_django_static  Creating
+ Volume after_careful_mock_buffalogs_django_static  Created
  Container buffalogs_rabbitmq  Creating
- Container buffalogs_postgres  Created
+ Container buffalogs_frontend  Creating
+ Container buffalogs_postgres  Creating
  Container buffalogs_rabbitmq  Created
+ Container buffalogs_postgres  Created
  Container buffalogs  Creating
  Container buffalogs_celery  Creating
  Container buffalogs_celery_beat  Creating
- Container buffalogs_celery  Created
- Container buffalogs_celery_beat  Created
  Container buffalogs  Created
  Container buffalogs_nginx  Creating
+ Container buffalogs_celery  Created
+ Container buffalogs_celery_beat  Created
  Container buffalogs_nginx  Created
  Container buffalogs_frontend  Created
- Container buffalogs_rabbitmq  Starting
  Container buffalogs_postgres  Starting
+ Container buffalogs_rabbitmq  Starting
  Container buffalogs_frontend  Starting
  Container buffalogs_rabbitmq  Started
  Container buffalogs_frontend  Started
- Container buffalogs_postgres  Started
- Container buffalogs  Starting
- Container buffalogs_celery  Starting
- Container buffalogs_celery_beat  Starting
- Container buffalogs_celery_beat  Started
- Container buffalogs_celery  Started
- Container buffalogs  Started
- Container buffalogs_nginx  Starting
- Container buffalogs_nginx  Started
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint buffalogs_postgres (f8760be3f202a2fd216ef50c196b96448405075d19c06c75eae19ee5a90afde5): Bind for 0.0.0.0:5432 failed: port is already allocated
 Waiting 10s for containers to be ready...
 Running setup command...
-Collecting pytest
-  Downloading pytest-9.0.1-py3-none-any.whl.metadata (7.6 kB)
-Collecting pytest-django
-  Downloading pytest_django-4.11.1-py3-none-any.whl.metadata (8.3 kB)
-Collecting opensearch-py
-  Downloading opensearch_py-3.1.0-py3-none-any.whl.metadata (7.2 kB)
-Collecting splunk-sdk
-  Downloading splunk-sdk-2.1.1.tar.gz (109 kB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status 'done'
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status 'done'
-Collecting iniconfig>=1.0.1 (from pytest)
-  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
-Requirement already satisfied: packaging>=22 in /usr/local/lib/python3.12/site-packages (from pytest) (25.0)
-Collecting pluggy<2,>=1.5 (from pytest)
-  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
-Collecting pygments>=2.7.2 (from pytest)
-  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
-Requirement already satisfied: urllib3!=2.2.0,!=2.2.1,<3,>=1.26.19 in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2.5.0)
-Requirement already satisfied: requests<3.0.0,>=2.32.0 in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2.32.5)
-Requirement already satisfied: python-dateutil in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2.9.0.post0)
-Requirement already satisfied: certifi>=2024.07.04 in /usr/local/lib/python3.12/site-packages (from opensearch-py) (2025.10.5)
-Collecting Events (from opensearch-py)
-  Downloading Events-0.5-py3-none-any.whl.metadata (3.9 kB)
-Collecting opensearch-protobufs==0.19.0 (from opensearch-py)
-  Downloading opensearch_protobufs-0.19.0-py3-none-any.whl.metadata (678 bytes)
-Collecting protobuf>=3.20.3 (from opensearch-protobufs==0.19.0->opensearch-py)
-  Downloading protobuf-6.33.1-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
-Collecting grpcio>=1.68.1 (from opensearch-protobufs==0.19.0->opensearch-py)
-  Downloading grpcio-1.76.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
-Collecting deprecation (from splunk-sdk)
-  Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
-Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/site-packages (from requests<3.0.0,>=2.32.0->opensearch-py) (3.4.4)
-Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/site-packages (from requests<3.0.0,>=2.32.0->opensearch-py) (3.11)
-Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/site-packages (from python-dateutil->opensearch-py) (1.17.0)
-Requirement already satisfied: typing-extensions~=4.12 in /usr/local/lib/python3.12/site-packages (from grpcio>=1.68.1->opensearch-protobufs==0.19.0->opensearch-py) (4.15.0)
-Downloading pytest-9.0.1-py3-none-any.whl (373 kB)
-Downloading pytest_django-4.11.1-py3-none-any.whl (25 kB)
-Downloading opensearch_py-3.1.0-py3-none-any.whl (385 kB)
-Downloading opensearch_protobufs-0.19.0-py3-none-any.whl (39 kB)
-Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
-Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
-Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 21.0 MB/s eta 0:00:00
-Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
-Downloading Events-0.5-py3-none-any.whl (6.8 kB)
-Downloading grpcio-1.76.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.6 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 30.3 MB/s eta 0:00:00
-Downloading protobuf-6.33.1-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
-Building wheels for collected packages: splunk-sdk
-  Building wheel for splunk-sdk (pyproject.toml): started
-  Building wheel for splunk-sdk (pyproject.toml): finished with status 'done'
-  Created wheel for splunk-sdk: filename=splunk_sdk-2.1.1-py3-none-any.whl size=125895 sha256=40c22ca4e3e4bef61f5ad76583c17b54e8620404a5c66f7ad8640fb7fadef53c
-  Stored in directory: /root/.cache/pip/wheels/03/4c/9b/b766a39da99db682a378fdd526d598d975020b2a0e0d9a2421
-Successfully built splunk-sdk
-Installing collected packages: Events, pygments, protobuf, pluggy, iniconfig, grpcio, deprecation, splunk-sdk, pytest, opensearch-protobufs, pytest-django, opensearch-py
-Successfully installed Events-0.5 deprecation-2.1.0 grpcio-1.76.0 iniconfig-2.3.0 opensearch-protobufs-0.19.0 opensearch-py-3.1.0 pluggy-1.6.0 protobuf-6.33.1 pygments-2.19.2 pytest-9.0.1 pytest-django-4.11.1 splunk-sdk-2.1.1
-WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-
-[notice] A new release of pip is available: 25.0.1 -> 25.3
-[notice] To update, run: pip install --upgrade pip
+service "buffalogs" is not running
 
 =========================================
-Test run 1/1 for after_careful_mock
-Time: ma 24 nov 2025 11:41:31 CET
+Test run 1/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:18 CET
 =========================================
-============================= test session starts ==============================
-platform linux -- Python 3.12.12, pytest-9.0.1, pluggy-1.6.0 -- /usr/local/bin/python3.12
-cachedir: .pytest_cache
-django: version: 5.2.7, settings: buffalogs.settings.settings (from ini)
-rootdir: /opt/certego/buffalogs
-configfile: pytest.ini
-plugins: django-4.11.1
-collecting ... collected 9 items
+service "buffalogs" is not running
+Energy consumption in joules: 0.0152740478515625 for 0.20257108 sec of execution.
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure PASSED [ 11%]
-impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure PASSED [ 22%]
-impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert PASSED [ 33%]
-impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure PASSED [ 44%]
-impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure PASSED [ 55%]
-impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure PASSED [ 66%]
-impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure PASSED [ 77%]
-impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure PASSED [ 88%]
-impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure PASSED [100%]
+Sleeping 5 seconds...
 
-=============================== warnings summary ===============================
-impossible_travel/models.py:29
-  /opt/certego/buffalogs/impossible_travel/models.py:29: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+=========================================
+Test run 2/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:23 CET
+=========================================
+service "buffalogs" is not running
 
-impossible_travel/models.py:152
-  /opt/certego/buffalogs/impossible_travel/models.py:152: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/models.py:157
-  /opt/certego/buffalogs/impossible_travel/models.py:157: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+=========================================
+Test run 3/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:29 CET
+=========================================
+service "buffalogs" is not running
 
-impossible_travel/models.py:339
-  /opt/certego/buffalogs/impossible_travel/models.py:339: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/models.py:344
-  /opt/certego/buffalogs/impossible_travel/models.py:344: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    models.CheckConstraint(
+=========================================
+Test run 4/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:34 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0131988525390625 for 0.20181563 sec of execution.
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0012_remove_alert_valid_alert_filter_type_choices_and_more.py:65: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0012_remove_alert_valid_alert_filter_type_choices_and_more.py:88: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 5/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:40 CET
+=========================================
+service "buffalogs" is not running
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0013_remove_alert_valid_alert_name_choice_and_more.py:202: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0013_remove_alert_valid_alert_name_choice_and_more.py:221: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 6/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:45 CET
+=========================================
+service "buffalogs" is not running
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:259: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:278: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 7/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:51 CET
+=========================================
+service "buffalogs" is not running
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:323: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:335: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+=========================================
+Test run 8/40 for after_careful_mock
+Time: di  2 dec 2025 18:52:56 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.012481689453125 for 0.20352402 sec of execution.
 
-impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-  /opt/certego/buffalogs/impossible_travel/migrations/0011_alert_filter_type_alert_is_filtered_and_more.py:380: RemovedInDjango60Warning: CheckConstraint.check is deprecated in favor of `.condition`.
-    constraint=models.CheckConstraint(
+Sleeping 5 seconds...
 
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-============================== slowest durations ===============================
-10.84s call     impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure
-9.49s call     impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure
-9.30s call     impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure
-8.87s call     impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure
-8.05s call     impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure
-5.30s call     impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure
-4.70s call     impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-4.26s call     impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure
-1.26s setup    impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-0.15s teardown impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure
-0.02s setup    impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure
-0.01s setup    impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert
-0.01s setup    impossible_travel/tests/alerters/test_alert_mattermost.py::TestMattermostAlerting::test_alert_network_failure
-0.01s call     impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert
-0.00s teardown impossible_travel/tests/alerters/test_alert_microsoft_teams.py::TestMicrosoftTeamsAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_googlechat.py::TestGoogleChatAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_telegram.py::TestTelegramAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_rocketchat.py::TestRocketChatAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_slack.py::TestSlackAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_discord.py::TestDiscordAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_pushover.py::TestPushoverAlerting::test_alert_network_failure
-0.00s teardown impossible_travel/tests/alerters/test_alert_factory.py::TestAlertFactory::test_send_actual_alert
-================== 9 passed, 14 warnings in 62.46s (0:01:02) ===================
-Energy consumption in joules: 250.2499542236328 for 63.528107 sec of execution.
+=========================================
+Test run 9/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:02 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0162353515625 for 0.20320971 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:07 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.012786865234375 for 0.20194897 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:13 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.020538330078125 for 0.20281297 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:18 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:24 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:30 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0112152099609375 for 0.20242149 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:35 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:41 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:46 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:52 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for after_careful_mock
+Time: di  2 dec 2025 18:53:57 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.01190185546875 for 0.20245671 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:03 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:08 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:14 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0160675048828125 for 0.20285746 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:19 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0172882080078125 for 0.2032123 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:25 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.016693115234375 for 0.20205332 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:30 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:36 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:42 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.015899658203125 for 0.20269413 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:47 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:53 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.01397705078125 for 0.2035999 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for after_careful_mock
+Time: di  2 dec 2025 18:54:58 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0123138427734375 for 0.2036203 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:04 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0135040283203125 for 0.20271246 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:09 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:15 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.0146636962890625 for 0.20272337 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:20 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:26 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.01495361328125 for 0.20198214 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:31 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:37 CET
+=========================================
+service "buffalogs" is not running
+Energy consumption in joules: 0.021484375 for 0.2026269 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:42 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:48 CET
+=========================================
+service "buffalogs" is not running
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for after_careful_mock
+Time: di  2 dec 2025 18:55:53 CET
+=========================================
+service "buffalogs" is not running
 
 
 Stopping Docker containers for after_careful_mock...
- Container buffalogs_celery_beat  Stopping
  Container buffalogs_celery  Stopping
- Container buffalogs_nginx  Stopping
+ Container buffalogs_celery_beat  Stopping
  Container buffalogs_frontend  Stopping
- Container buffalogs_celery  Stopped
- Container buffalogs_celery  Removing
+ Container buffalogs_nginx  Stopping
  Container buffalogs_celery_beat  Stopped
  Container buffalogs_celery_beat  Removing
- Container buffalogs_celery  Removed
- Container buffalogs_celery_beat  Removed
+ Container buffalogs_celery  Stopped
+ Container buffalogs_celery  Removing
  Container buffalogs_nginx  Stopped
  Container buffalogs_nginx  Removing
+ Container buffalogs_celery_beat  Removed
+ Container buffalogs_celery  Removed
  Container buffalogs_nginx  Removed
  Container buffalogs  Stopping
- Container buffalogs_frontend  Stopped
- Container buffalogs_frontend  Removing
- Container buffalogs_frontend  Removed
  Container buffalogs  Stopped
  Container buffalogs  Removing
  Container buffalogs  Removed
@@ -504,28 +840,31 @@ Stopping Docker containers for after_careful_mock...
  Container buffalogs_postgres  Stopped
  Container buffalogs_postgres  Removing
  Container buffalogs_postgres  Removed
+ Container buffalogs_frontend  Stopped
+ Container buffalogs_frontend  Removing
+ Container buffalogs_frontend  Removed
  Container buffalogs_rabbitmq  Stopped
  Container buffalogs_rabbitmq  Removing
  Container buffalogs_rabbitmq  Removed
  Volume after_careful_mock_buffalogs_nginx_sockets  Removing
- Volume after_careful_mock_buffalogs_rabbitmq_data  Removing
  Volume after_careful_mock_buffalogs_django_static  Removing
  Volume after_careful_mock_buffalogs_nginx_logs  Removing
  Volume after_careful_mock_buffalogs_postgres_data  Removing
+ Volume after_careful_mock_buffalogs_rabbitmq_data  Removing
  Network after_careful_mock_default  Removing
  Volume after_careful_mock_buffalogs_nginx_sockets  Removed
- Volume after_careful_mock_buffalogs_rabbitmq_data  Removed
  Volume after_careful_mock_buffalogs_django_static  Removed
  Volume after_careful_mock_buffalogs_postgres_data  Removed
  Volume after_careful_mock_buffalogs_nginx_logs  Removed
+ Volume after_careful_mock_buffalogs_rabbitmq_data  Removed
  Network after_careful_mock_default  Removed
 
 ========================================
-Completed after_careful_mock version at: ma 24 nov 2025 11:42:47 CET
+Completed after_careful_mock version at: di  2 dec 2025 18:55:56 CET
 ========================================
 
 ========================================
-All tests completed at: ma 24 nov 2025 11:42:47 CET
+All tests completed at: di  2 dec 2025 18:55:56 CET
 Compared: before vs after_careful_mock
-Log file: /home/xutong/SpeedUpSlowTest/versions/BuffaLogs_399//test_results_only_mock_part.log
+Log file: /data/SpeedUpSlowTest/versions/BuffaLogs_399//test_results_only_mock_part.log
 ========================================

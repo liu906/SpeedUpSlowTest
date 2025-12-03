@@ -2,9 +2,9 @@
 Starting test runs for project: opensearch-build_595
 Config file: test_config_only_mock_part.sh
 Comparing: before vs after_careful_mock
-Iterations: 1
+Iterations: 40
 Test command: bash -c 'cd bundle-workflow && PYTHONPATH=src pytest -v --durations=0 tests/test_integ_workflow/integ_test/test_local_test_cluster.py'
-Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/test_results_only_mock_part.log
+Log file: /data/SpeedUpSlowTest/versions/opensearch-build_595/test_results_only_mock_part.log
 ========================================
 
 ========================================
@@ -14,9 +14,10 @@ Activating virtual environment...
 Running setup command...
 Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (25.3)
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-Requirement already satisfied: pyyaml>=6.0 in /usr/local/lib/python3.10/dist-packages (6.0.3)
+Collecting pyyaml>=6.0
+  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
 Requirement already satisfied: requests>=2.26 in /usr/local/lib/python3.10/dist-packages (2.32.3)
-Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (7.4.4)
 Requirement already satisfied: boto3>=1.18 in /usr/local/lib/python3.10/dist-packages (1.41.2)
 Requirement already satisfied: botocore>=1.21 in /usr/local/lib/python3.10/dist-packages (1.41.2)
 Requirement already satisfied: coverage>=4.5 in /usr/local/lib/python3.10/dist-packages (7.11.0)
@@ -30,30 +31,96 @@ Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python
 Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.26) (3.3)
 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.26) (1.26.5)
 Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.26) (2020.6.20)
-Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
-Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
-Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
-Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
-Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
 Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (1.0.1)
 Requirement already satisfied: s3transfer<0.16.0,>=0.15.0 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (0.15.0)
 Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/local/lib/python3.10/dist-packages (from botocore>=1.21) (2.9.0.post0)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore>=1.21) (1.16.0)
-Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest) (4.15.0)
+Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+Installing collected packages: pyyaml
+  Attempting uninstall: pyyaml
+    Found existing installation: PyYAML 5.3.1
+    Uninstalling PyYAML-5.3.1:
+      Successfully uninstalled PyYAML-5.3.1
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+detection-rules 0.1.0 requires PyYAML==5.3.1, but you have pyyaml 6.0.3 which is incompatible.
+mutmut 3.3.1 requires toml>=0.10.2; python_version < "3.11", but you have toml 0.10.0 which is incompatible.
+Successfully installed pyyaml-6.0.3
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
 
 =========================================
-Test run 1/1 for before
-Time: zo 23 nov 2025 16:25:12 CET
+Test run 1/40 for before
+Time: di  2 dec 2025 12:59:15 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
-Using --randomly-seed=2816242984
-rootdir: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2468324025
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
 configfile: pytest.ini
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, httpx-0.35.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
-asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.33s (0:01:40) =========================
+Energy consumption in joules: 283.81275939941406 for 100.98222 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for before
+Time: di  2 dec 2025 13:01:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1971003721
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.23s (0:01:40) =========================
+Energy consumption in joules: 242.14501953125 for 100.820175 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for before
+Time: di  2 dec 2025 13:02:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=4149570469
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collected 7 items
 
 tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
@@ -62,18 +129,1091 @@ tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
 100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 239.46788024902344 for 100.82421 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for before
+Time: di  2 dec 2025 13:04:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2677551430
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 239.28927612304688 for 100.804184 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for before
+Time: di  2 dec 2025 13:06:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3284842321
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 241.4884033203125 for 100.817894 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for before
+Time: di  2 dec 2025 13:08:06 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=22363943
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 243.35491943359375 for 100.82217 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for before
+Time: di  2 dec 2025 13:09:52 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=606403606
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 239.6858673095703 for 100.82214 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for before
+Time: di  2 dec 2025 13:11:38 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1527006856
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 240.02674865722656 for 100.82207 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for before
+Time: di  2 dec 2025 13:13:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1488564550
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 238.79466247558594 for 100.820496 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: di  2 dec 2025 13:15:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2266222192
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.23s (0:01:40) =========================
+Energy consumption in joules: 238.32736206054688 for 100.82808 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for before
+Time: di  2 dec 2025 13:16:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3299369578
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 239.48216247558594 for 100.82234 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: di  2 dec 2025 13:18:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3771572817
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 455.1257629394531 for 100.78033 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: di  2 dec 2025 13:20:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2416417960
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 425.5786437988281 for 100.7999 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for before
+Time: di  2 dec 2025 13:22:15 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2118154594
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 243.3886260986328 for 100.80103 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for before
+Time: di  2 dec 2025 13:24:01 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1149910474
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
 
 (14 durations < 0.005s hidden.  Use -vv to show these durations.)
-======================== 7 passed in 100.22s (0:01:40) =========================
-Energy consumption in joules: 235.98016357421875 for 100.81748 sec of execution.
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 253.47120666503906 for 100.83672 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for before
+Time: di  2 dec 2025 13:25:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=422016901
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 238.30267333984375 for 100.81717 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for before
+Time: di  2 dec 2025 13:27:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3308540941
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 236.7635040283203 for 100.812325 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for before
+Time: di  2 dec 2025 13:29:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=543552761
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 240.84115600585938 for 100.82349 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for before
+Time: di  2 dec 2025 13:31:05 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2794968493
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.08s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.23s (0:01:40) =========================
+Energy consumption in joules: 239.7605438232422 for 100.79873 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for before
+Time: di  2 dec 2025 13:32:51 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1025855109
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 240.41200256347656 for 100.821434 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for before
+Time: di  2 dec 2025 13:34:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2818165286
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 239.75631713867188 for 100.80227 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for before
+Time: di  2 dec 2025 13:36:23 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3333507811
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.23s (0:01:40) =========================
+Energy consumption in joules: 240.6900177001953 for 100.82804 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for before
+Time: di  2 dec 2025 13:38:10 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=4131222556
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 237.93360900878906 for 100.807 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for before
+Time: di  2 dec 2025 13:39:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=444124393
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 239.3841552734375 for 100.80958 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for before
+Time: di  2 dec 2025 13:41:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=4094108359
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 240.05934143066406 for 100.81145 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for before
+Time: di  2 dec 2025 13:43:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2456170620
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 240.35215759277344 for 100.83083 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for before
+Time: di  2 dec 2025 13:45:14 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2284466539
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 240.17433166503906 for 100.82493 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for before
+Time: di  2 dec 2025 13:47:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3471183447
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.23s (0:01:40) =========================
+Energy consumption in joules: 241.09425354003906 for 100.81551 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for before
+Time: di  2 dec 2025 13:48:46 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=4281734964
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.08s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.23s (0:01:40) =========================
+Energy consumption in joules: 240.3997802734375 for 100.82576 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for before
+Time: di  2 dec 2025 13:50:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=4047790926
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 239.8600311279297 for 100.82096 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for before
+Time: di  2 dec 2025 13:52:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=924786459
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 239.9938201904297 for 100.82348 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for before
+Time: di  2 dec 2025 13:54:05 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1027510404
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 239.86451721191406 for 100.82441 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for before
+Time: di  2 dec 2025 13:55:51 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=961551089
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 239.94467163085938 for 100.83126 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for before
+Time: di  2 dec 2025 13:57:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1094572149
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 239.24046325683594 for 100.82036 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for before
+Time: di  2 dec 2025 13:59:23 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=850241709
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.26s (0:01:40) =========================
+Energy consumption in joules: 240.0284881591797 for 100.7987 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for before
+Time: di  2 dec 2025 14:01:09 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3517598563
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 239.39199829101563 for 100.80422 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for before
+Time: di  2 dec 2025 14:02:55 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2893445668
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 240.52845764160156 for 100.82752 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for before
+Time: di  2 dec 2025 14:04:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1695789945
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.11s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.25s (0:01:40) =========================
+Energy consumption in joules: 238.3025360107422 for 100.81749 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for before
+Time: di  2 dec 2025 14:06:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3910072492
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.09s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.23s (0:01:40) =========================
+Energy consumption in joules: 239.65634155273438 for 100.82499 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for before
+Time: di  2 dec 2025 14:08:14 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3924036114
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/before/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+100.10s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+======================== 7 passed in 100.24s (0:01:40) =========================
+Energy consumption in joules: 239.87940979003906 for 100.82558 sec of execution.
 
 
 ========================================
-Completed before version at: zo 23 nov 2025 16:26:53 CET
+Completed before version at: di  2 dec 2025 14:09:55 CET
 ========================================
 
 ========================================
@@ -85,7 +1225,7 @@ Requirement already satisfied: pip in /usr/local/lib/python3.10/dist-packages (2
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
 Requirement already satisfied: pyyaml>=6.0 in /usr/local/lib/python3.10/dist-packages (6.0.3)
 Requirement already satisfied: requests>=2.26 in /usr/local/lib/python3.10/dist-packages (2.32.3)
-Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (7.4.4)
 Requirement already satisfied: boto3>=1.18 in /usr/local/lib/python3.10/dist-packages (1.41.2)
 Requirement already satisfied: botocore>=1.21 in /usr/local/lib/python3.10/dist-packages (1.41.2)
 Requirement already satisfied: coverage>=4.5 in /usr/local/lib/python3.10/dist-packages (7.11.0)
@@ -99,30 +1239,115 @@ Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python
 Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.26) (3.3)
 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.26) (1.26.5)
 Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.26) (2020.6.20)
-Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
-Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
-Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
-Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
-Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
 Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (1.0.1)
 Requirement already satisfied: s3transfer<0.16.0,>=0.15.0 in /usr/local/lib/python3.10/dist-packages (from boto3>=1.18) (0.15.0)
 Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/local/lib/python3.10/dist-packages (from botocore>=1.21) (2.9.0.post0)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore>=1.21) (1.16.0)
-Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest) (4.15.0)
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
 
 =========================================
-Test run 1/1 for after_careful_mock
-Time: zo 23 nov 2025 16:27:04 CET
+Test run 1/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:07 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
-Using --randomly-seed=1660335082
-rootdir: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=30640534
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
 configfile: pytest.ini
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, httpx-0.35.0, rerunfailures-16.1, asyncio-1.3.0, cov-7.0.0, anyio-4.11.0
-asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 11.277877807617188 for 0.80719656 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:13 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=819913397
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.58489990234375 for 0.6058486 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=227745040
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.65203857421875 for 0.6030378 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:25 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=102270348
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collected 7 items
 
 tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
@@ -137,16 +1362,1060 @@ tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
 0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
 
 (14 durations < 0.005s hidden.  Use -vv to show these durations.)
-============================== 7 passed in 0.13s ===============================
-Energy consumption in joules: 11.224472045898438 for 0.8025559 sec of execution.
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.738525390625 for 0.6030907 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 5/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:31 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2639642502
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.579193115234375 for 0.60244125 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 6/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2119740066
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.436813354492188 for 0.6031051 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 7/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2200917694
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 11.44110107421875 for 0.8030899 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:49 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2549439193
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.516921997070313 for 0.6031158 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for after_careful_mock
+Time: di  2 dec 2025 14:10:54 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=653807487
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.563705444335938 for 0.6025537 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=800700574
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.492584228515625 for 0.60325694 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 11/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:06 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2104686162
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.584259033203125 for 0.60480154 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3501047462
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 11.279769897460938 for 0.80395716 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:18 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3636316642
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.61431884765625 for 0.6066282 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3701075072
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.591217041015625 for 0.60494506 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2411254458
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.335281372070313 for 0.6025036 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:36 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2545932242
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 11.480072021484375 for 0.8031468 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:42 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=957689964
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.514801025390625 for 0.6028826 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:48 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1203319710
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.645248413085938 for 0.60609275 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for after_careful_mock
+Time: di  2 dec 2025 14:11:54 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2704984801
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.562118530273438 for 0.6032461 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=860145402
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.431594848632813 for 0.60254663 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:06 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1318065031
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.644439697265625 for 0.6027965 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:12 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=956266193
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 11.527114868164063 for 0.80280083 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:18 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=879256517
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.652297973632813 for 0.60413325 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2221143230
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.459457397460938 for 0.6026126 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:30 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3506417567
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.623703002929688 for 0.60265875 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:36 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=481390340
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.537185668945313 for 0.60565025 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=268852931
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.561080932617188 for 0.6029528 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=691511057
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.438369750976563 for 0.60302144 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3864546279
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.613006591796875 for 0.60324514 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for after_careful_mock
+Time: di  2 dec 2025 14:12:59 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1331803115
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.548110961914063 for 0.6052433 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:05 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=3876908101
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.836669921875 for 0.60313106 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2905808693
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.459732055664063 for 0.60258865 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:17 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=98514704
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.549774169921875 for 0.60301816 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:23 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1291047902
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.522415161132813 for 0.6027648 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:29 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=4278767429
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 11.479965209960938 for 0.8031184 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:35 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1353554047
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.606842041015625 for 0.60546404 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=2355783566
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.469284057617188 for 0.60247844 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:47 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=4206815445
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.02s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.574844360351563 for 0.60274154 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=818060960
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.15s ===============================
+Energy consumption in joules: 8.679336547851563 for 0.60302675 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for after_careful_mock
+Time: di  2 dec 2025 14:13:58 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0
+Using --randomly-seed=1141397075
+rootdir: /data/SpeedUpSlowTest/versions/opensearch-build_595/after_careful_mock/bundle-workflow
+configfile: pytest.ini
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collected 7 items
+
+tests/test_integ_workflow/integ_test/test_local_test_cluster.py .......  [100%]
+
+============================== slowest durations ===============================
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service_cluster_unavailable
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_create_cluster
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_endpoint
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_port
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_download
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_wait_for_service
+0.01s call     tests/test_integ_workflow/integ_test/test_local_test_cluster.py::LocalTestClusterTests::test_url
+
+(14 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 7 passed in 0.16s ===============================
+Energy consumption in joules: 12.526214599609375 for 0.8030318 sec of execution.
 
 
 ========================================
-Completed after_careful_mock version at: zo 23 nov 2025 16:27:06 CET
+Completed after_careful_mock version at: di  2 dec 2025 14:14:00 CET
 ========================================
 
 ========================================
-All tests completed at: zo 23 nov 2025 16:27:06 CET
+All tests completed at: di  2 dec 2025 14:14:00 CET
 Compared: before vs after_careful_mock
-Log file: /home/xutong/SpeedUpSlowTest/versions/opensearch-build_595/test_results_only_mock_part.log
+Log file: /data/SpeedUpSlowTest/versions/opensearch-build_595/test_results_only_mock_part.log
 ========================================

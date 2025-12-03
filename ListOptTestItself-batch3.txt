@@ -5,3 +5,4 @@ https://github.com/scikit-learn/scikit-learn/pull/21984
 https://github.com/python-trio/trio/pull/2664
 https://github.com/python-zeroconf/python-zeroconf/pull/853
 https://github.com/mantidproject/mantidimaging/pull/1439
+https://github.com/Clinical-Genomics/patientMatcher/pull/262

@@ -6,7 +6,7 @@
 # PR #2792 testing: Run the test suite to measure overall improvement
 # Splink uses pytest with markers to select test subsets
 # The default marker runs the standard test suite
-TEST_COMMAND="pytest --durations=0 -v"
+TEST_COMMAND=".venv/bin/pytest --durations=0 -v"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
@@ -14,7 +14,7 @@ VENV_PATH=".venv"
 # Optional: Setup command to run AFTER venv creation
 # Splink is a uv-based project - dependencies are managed by uv
 # First create the uv virtual environment, then install the package in editable mode with testing dependencies
-SETUP_COMMAND="uv venv .venv --python python3.10 && uv pip install -e . --group testing && uv pip install pytest sqlglot"
+SETUP_COMMAND="uv venv .venv --python python3.10 && uv pip install -e . --group dev --group testing"
 
 # Flag to indicate this IS a uv-based project
 USE_UV="true"

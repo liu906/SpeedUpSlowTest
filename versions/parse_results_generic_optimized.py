@@ -63,7 +63,8 @@ def parse_log_file(log_file_path, debug=False):
     version_pattern = re.compile(r'Starting tests for ([\w_]+) version')
     test_run_pattern = re.compile(r'Test run (\d+)/\d+ for ([\w_]+)')
     energy_pattern = re.compile(r'Energy consumption in joules: ([\d.]+) for ([\d.]+) sec of execution\.')
-    slowest_start_pattern = re.compile(r'={20,}\s+slowest durations\s+={20,}')
+    # Updated to match "slowest N durations" (e.g., "slowest 5 durations", "slowest 10 durations")
+    slowest_start_pattern = re.compile(r'={20,}\s+slowest\s+(?:\d+\s+)?durations\s+={20,}')
     test_duration_pattern = re.compile(r'([\d.]+)s\s+(\w+)\s+(.+?)$')
     # Improved pattern to match various pytest output formats:
     # - "in 30.24s =" (with = after s)
@@ -212,8 +213,26 @@ def print_summary(energy_data, duration_data, execution_time_data):
         version_names.sort()
 
     # Try to identify first and second versions
-    version1 = version_names[0] if len(version_names) > 0 else 'before'
-    version2 = version_names[1] if len(version_names) > 1 else 'after'
+    # Handle cases with 0, 1, or 2+ versions
+    if len(version_names) == 0:
+        version1 = 'before'
+        version2 = 'after'
+    elif len(version_names) == 1:
+        # Only one version exists - determine a reasonable name for the missing version
+        version1 = version_names[0]
+        # If the only version is "before", assume "after" is missing
+        # If the only version contains "after" or "mock", assume "before" is missing
+        if 'before' in version1:
+            version2 = 'after'
+        elif 'after' in version1 or 'mock' in version1:
+            version2 = 'before'
+        else:
+            # For other single versions, just show it has no comparison data
+            version2 = 'unknown'
+    else:
+        # Two or more versions exist
+        version1 = version_names[0]
+        version2 = version_names[1]
 
     # Energy summary
     energy_before = [d for d in energy_data if d['version'] == version1]
@@ -256,14 +275,9 @@ def print_summary(energy_data, duration_data, execution_time_data):
         avg_duration_after = sum(d['duration_sec'] for d in duration_after) / len(duration_after)
         print(f"  Average test duration ({version2}): {avg_duration_after:.3f}s")
 
-    if duration_before and duration_after:
-        time_reduction_pct = ((avg_duration_before - avg_duration_after) / avg_duration_before) * 100
-        if avg_duration_after > 0:
-            time_speedup = avg_duration_before / avg_duration_after
-            print(f"  Speed ratio: {time_speedup:.2f}x faster in '{version2}'")
-        else:
-            print(f"  Speed ratio: Unable to calculate (after duration is 0.00s - tests too fast to measure)")
-        print(f"  Time reduction: {time_reduction_pct:.2f}%")
+    # Note: Individual test duration comparison is not as meaningful as total test time
+    # because different tests may be included in the slowest N list for each run.
+    # We'll show the total test time speedup later, which is the accurate metric.
 
     # Calculate total test time (average across runs)
     if duration_before:
@@ -340,8 +354,26 @@ def prepare_data_for_visualization(energy_data, duration_data, execution_time_da
     else:
         version_names.sort()
 
-    version1 = version_names[0] if len(version_names) > 0 else 'before'
-    version2 = version_names[1] if len(version_names) > 1 else 'after'
+    # Handle cases with 0, 1, or 2+ versions (same logic as print_summary)
+    if len(version_names) == 0:
+        version1 = 'before'
+        version2 = 'after'
+    elif len(version_names) == 1:
+        # Only one version exists - determine a reasonable name for the missing version
+        version1 = version_names[0]
+        # If the only version is "before", assume "after" is missing
+        # If the only version contains "after" or "mock", assume "before" is missing
+        if 'before' in version1:
+            version2 = 'after'
+        elif 'after' in version1 or 'mock' in version1:
+            version2 = 'before'
+        else:
+            # For other single versions, just show it has no comparison data
+            version2 = 'unknown'
+    else:
+        # Two or more versions exist
+        version1 = version_names[0]
+        version2 = version_names[1]
 
     # Prepare energy data
     energy_viz = {

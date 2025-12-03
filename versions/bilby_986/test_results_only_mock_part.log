@@ -1,10 +1,10 @@
 ========================================
 Starting test runs for project: bilby_986
 Config file: test_config_only_mock_part.sh
-Comparing: before vs after_mock
-Iterations: 5
+Comparing: before vs after_careful_mock
+Iterations: 40
 Test command: pytest test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency -v --durations=0 -vv
-Log file: /home/xutong/SpeedUpSlowTest/versions/bilby_986/test_results_only_mock_part.log
+Log file: /data/SpeedUpSlowTest/versions/bilby_986/test_results_only_mock_part.log
 ========================================
 
 ========================================
@@ -12,54 +12,46 @@ Starting tests for before version
 ========================================
 Activating virtual environment...
 Running setup command...
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.26.4)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.23.5)
 Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (1.15.3)
-Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (7.4.4)
 Requirement already satisfied: parameterized in /usr/local/lib/python3.10/dist-packages (0.9.0)
 Requirement already satisfied: pytest-cov in /usr/local/lib/python3.10/dist-packages (7.0.0)
-Collecting mutmut
-  Downloading mutmut-3.3.1-py3-none-any.whl.metadata (7.4 kB)
-Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
-Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
-Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
-Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
-Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: mutmut in /usr/local/lib/python3.10/dist-packages (3.3.1)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
 Requirement already satisfied: coverage>=7.10.6 in /usr/local/lib/python3.10/dist-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.11.0)
-Collecting libcst~=1.7.0 (from mutmut)
-  Downloading libcst-1.7.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (17 kB)
-Requirement already satisfied: click in /usr/local/lib/python3.10/dist-packages (from mutmut) (8.3.0)
+Requirement already satisfied: libcst~=1.7.0 in /usr/local/lib/python3.10/dist-packages (from mutmut) (1.7.0)
+Requirement already satisfied: click in /usr/local/lib/python3.10/dist-packages (from mutmut) (8.1.8)
 Requirement already satisfied: setproctitle in /usr/local/lib/python3.10/dist-packages (from mutmut) (1.3.7)
-Collecting textual (from mutmut)
-  Downloading textual-6.5.0-py3-none-any.whl.metadata (9.1 kB)
+Requirement already satisfied: textual in /usr/local/lib/python3.10/dist-packages (from mutmut) (6.5.0)
 Collecting toml>=0.10.2 (from mutmut)
   Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
-Requirement already satisfied: pyyaml>=5.2 in /usr/lib/python3/dist-packages (from libcst~=1.7.0->mutmut) (5.4.1)
-Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
-Requirement already satisfied: markdown-it-py>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py[linkify]>=2.1.0->textual->mutmut) (4.0.0)
-Collecting mdit-py-plugins (from textual->mutmut)
-  Using cached mdit_py_plugins-0.5.0-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: pyyaml>=5.2 in /usr/local/lib/python3.10/dist-packages (from libcst~=1.7.0->mutmut) (6.0.3)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest) (4.15.0)
+Requirement already satisfied: markdown-it-py>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py[linkify]>=2.1.0->textual->mutmut) (3.0.0)
+Requirement already satisfied: mdit-py-plugins in /usr/local/lib/python3.10/dist-packages (from textual->mutmut) (0.5.0)
 Requirement already satisfied: platformdirs<5,>=3.6.0 in /usr/local/lib/python3.10/dist-packages (from textual->mutmut) (4.5.0)
+Requirement already satisfied: pygments<3.0.0,>=2.19.2 in /usr/local/lib/python3.10/dist-packages (from textual->mutmut) (2.19.2)
 Requirement already satisfied: rich>=14.2.0 in /usr/local/lib/python3.10/dist-packages (from textual->mutmut) (14.2.0)
 Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py>=2.1.0->markdown-it-py[linkify]>=2.1.0->textual->mutmut) (0.1.2)
-Collecting linkify-it-py<3,>=1 (from markdown-it-py[linkify]>=2.1.0->textual->mutmut)
-  Using cached linkify_it_py-2.0.3-py3-none-any.whl.metadata (8.5 kB)
-Collecting uc-micro-py (from linkify-it-py<3,>=1->markdown-it-py[linkify]>=2.1.0->textual->mutmut)
-  Using cached uc_micro_py-1.0.3-py3-none-any.whl.metadata (2.0 kB)
-Downloading mutmut-3.3.1-py3-none-any.whl (35 kB)
-Downloading libcst-1.7.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 17.9 MB/s  0:00:00
+Requirement already satisfied: linkify-it-py<3,>=1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py[linkify]>=2.1.0->textual->mutmut) (2.0.3)
+Requirement already satisfied: uc-micro-py in /usr/local/lib/python3.10/dist-packages (from linkify-it-py<3,>=1->markdown-it-py[linkify]>=2.1.0->textual->mutmut) (1.0.3)
 Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
-Downloading textual-6.5.0-py3-none-any.whl (711 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 711.8/711.8 kB 13.9 MB/s  0:00:00
-Using cached linkify_it_py-2.0.3-py3-none-any.whl (19 kB)
-Using cached mdit_py_plugins-0.5.0-py3-none-any.whl (57 kB)
-Using cached uc_micro_py-1.0.3-py3-none-any.whl (6.2 kB)
-Installing collected packages: uc-micro-py, toml, libcst, mdit-py-plugins, linkify-it-py, textual, mutmut
-
-Successfully installed libcst-1.7.0 linkify-it-py-2.0.3 mdit-py-plugins-0.5.0 mutmut-3.3.1 textual-6.5.0 toml-0.10.2 uc-micro-py-1.0.3
+Installing collected packages: toml
+  Attempting uninstall: toml
+    Found existing installation: toml 0.10.0
+    Uninstalling toml-0.10.0:
+      Successfully uninstalled toml-0.10.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+detection-rules 0.1.0 requires PyYAML==5.3.1, but you have pyyaml 6.0.3 which is incompatible.
+detection-rules 0.1.0 requires toml==0.10.0, but you have toml 0.10.2 which is incompatible.
+Successfully installed toml-0.10.2
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-Obtaining file:///home/xutong/SpeedUpSlowTest/versions/bilby_986/before
+Obtaining file:///data/SpeedUpSlowTest/versions/bilby_986/before
   Installing build dependencies: started
   Installing build dependencies: finished with status 'done'
   Checking if build backend supports build_editable: started
@@ -72,13 +64,13 @@ Requirement already satisfied: bilby.cython>=0.3.0 in /usr/local/lib/python3.10/
 Requirement already satisfied: dynesty<2.2,>=2.0.1 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (2.1.5)
 Requirement already satisfied: emcee in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (3.1.6)
 Requirement already satisfied: corner in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (2.2.3)
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (1.26.4)
-Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (3.9.4)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (1.23.5)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (3.7.5)
 Requirement already satisfied: scipy>=1.5 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (1.15.3)
 Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (2.3.3)
 Requirement already satisfied: dill in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (0.4.0)
 Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (4.67.1)
-Requirement already satisfied: h5py in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (3.15.1)
+Requirement already satisfied: h5py in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (3.9.0)
 Requirement already satisfied: attrs in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (25.4.0)
 Requirement already satisfied: astropy>=5 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (6.1.7)
 Requirement already satisfied: lalsuite in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (7.26.1)
@@ -105,20 +97,22 @@ Requirement already satisfied: pytest-requires in /usr/local/lib/python3.10/dist
 Requirement already satisfied: pytest-rerunfailures in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.0) (16.1)
 Requirement already satisfied: pyerfa>=2.0.1.1 in /usr/local/lib/python3.10/dist-packages (from astropy>=5->bilby==0.0.0) (2.0.1.5)
 Requirement already satisfied: astropy-iers-data>=0.2024.10.28.0.34.7 in /usr/local/lib/python3.10/dist-packages (from astropy>=5->bilby==0.0.0) (0.2025.11.3.0.38.37)
-Requirement already satisfied: PyYAML>=3.13 in /usr/lib/python3/dist-packages (from astropy>=5->bilby==0.0.0) (5.4.1)
+Requirement already satisfied: PyYAML>=3.13 in /usr/local/lib/python3.10/dist-packages (from astropy>=5->bilby==0.0.0) (6.0.3)
 Requirement already satisfied: packaging>=19.0 in /usr/local/lib/python3.10/dist-packages (from astropy>=5->bilby==0.0.0) (25.0)
 Requirement already satisfied: seaborn in /usr/local/lib/python3.10/dist-packages (from nessai>=0.7.0->bilby==0.0.0) (0.13.2)
 Requirement already satisfied: torch>=1.11.0 in /usr/local/lib/python3.10/dist-packages (from nessai>=0.7.0->bilby==0.0.0) (2.9.0)
 Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.0) (1.3.2)
 Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.0) (0.12.1)
 Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.0) (4.60.1)
-Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.0) (1.4.9)
-Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib->bilby==0.0.0) (9.0.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.0) (1.4.9)
+Requirement already satisfied: pillow>=6.2.0 in /usr/lib/python3/dist-packages (from matplotlib->bilby==0.0.0) (9.0.1)
 Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.0) (3.2.3)
 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.0) (2.9.0.post0)
 Requirement already satisfied: arviz>=0.13.0 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.0) (0.22.0)
 Requirement already satisfied: cachetools>=4.2.1 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.0) (6.2.1)
 Requirement already satisfied: cloudpickle in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.0) (3.1.2)
+Collecting numpy (from bilby==0.0.0)
+  Using cached numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
 Requirement already satisfied: pytensor<2.32,>=2.31.7 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.0) (2.31.7)
 Requirement already satisfied: rich>=13.7.1 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.0) (14.2.0)
 Requirement already satisfied: threadpoolctl<4.0.0,>=3.1.0 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.0) (3.6.0)
@@ -129,13 +123,17 @@ Requirement already satisfied: etuples in /usr/local/lib/python3.10/dist-package
 Requirement already satisfied: logical-unification in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.0) (0.4.7)
 Requirement already satisfied: miniKanren in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.0) (1.0.5)
 Requirement already satisfied: cons in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.0) (0.4.7)
+Collecting matplotlib (from bilby==0.0.0)
+  Using cached matplotlib-3.10.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
 Requirement already satisfied: xarray>=2023.7.0 in /usr/local/lib/python3.10/dist-packages (from arviz>=0.13.0->pymc>=4.0.0->bilby==0.0.0) (2025.6.1)
 Requirement already satisfied: h5netcdf>=1.0.2 in /usr/local/lib/python3.10/dist-packages (from arviz>=0.13.0->pymc>=4.0.0->bilby==0.0.0) (1.7.3)
 Requirement already satisfied: xarray-einstats>=0.3 in /usr/local/lib/python3.10/dist-packages (from arviz>=0.13.0->pymc>=4.0.0->bilby==0.0.0) (0.8.0)
+Collecting numpy (from bilby==0.0.0)
+  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
 Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas->bilby==0.0.0) (2025.2)
 Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas->bilby==0.0.0) (2025.2)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.7->matplotlib->bilby==0.0.0) (1.16.0)
-Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.10/dist-packages (from rich>=13.7.1->pymc>=4.0.0->bilby==0.0.0) (4.0.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.10/dist-packages (from rich>=13.7.1->pymc>=4.0.0->bilby==0.0.0) (3.0.0)
 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.10/dist-packages (from rich>=13.7.1->pymc>=4.0.0->bilby==0.0.0) (2.19.2)
 Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py>=2.2.0->rich>=13.7.1->pymc>=4.0.0->bilby==0.0.0) (0.1.2)
 Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.0) (1.14.0)
@@ -160,8 +158,8 @@ Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /usr/local/lib/py
 Requirement already satisfied: triton==3.5.0 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.0) (3.5.0)
 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy>=1.13.3->torch>=1.11.0->nessai>=0.7.0->bilby==0.0.0) (1.3.0)
 Requirement already satisfied: cython in /usr/local/lib/python3.10/dist-packages (from ultranest>=3.0.0->bilby==0.0.0) (3.2.0)
-Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (from zeus-mcmc>=2.3.0->bilby==0.0.0) (8.4.2)
-Requirement already satisfied: toolz in /usr/local/lib/python3.10/dist-packages (from logical-unification->pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.0) (1.1.0)
+Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (from zeus-mcmc>=2.3.0->bilby==0.0.0) (7.4.4)
+Requirement already satisfied: toolz in /usr/local/lib/python3.10/dist-packages (from logical-unification->pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.0) (0.12.1)
 Requirement already satisfied: multipledispatch in /usr/local/lib/python3.10/dist-packages (from logical-unification->pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.0) (1.0.0)
 Requirement already satisfied: dateparser>=1.1.4 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.0) (1.2.2)
 Requirement already satisfied: dqsegdb2 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.0) (1.3.0)
@@ -169,7 +167,7 @@ Requirement already satisfied: gwdatafind>=1.1.0 in /usr/local/lib/python3.10/di
 Requirement already satisfied: gwosc>=0.5.3 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.0) (0.8.1)
 Requirement already satisfied: igwn-segments>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.0) (2.1.0)
 Requirement already satisfied: ligotimegps>=1.2.1 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.0) (2.0.1)
-Requirement already satisfied: requests>=2.20.0 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.0) (2.32.5)
+Requirement already satisfied: requests>=2.20.0 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.0) (2.32.3)
 Requirement already satisfied: regex>=2024.9.11 in /usr/local/lib/python3.10/dist-packages (from dateparser>=1.1.4->gwpy->bilby==0.0.0) (2025.11.3)
 Requirement already satisfied: tzlocal>=0.2 in /usr/local/lib/python3.10/dist-packages (from dateparser>=1.1.4->gwpy->bilby==0.0.0) (5.3.1)
 Requirement already satisfied: igwn-auth-utils>=0.3.1 in /usr/local/lib/python3.10/dist-packages (from gwdatafind>=1.1.0->gwpy->bilby==0.0.0) (1.4.0)
@@ -178,20 +176,20 @@ Requirement already satisfied: safe-netrc>=1.0 in /usr/local/lib/python3.10/dist
 Requirement already satisfied: scitokens>=1.8 in /usr/local/lib/python3.10/dist-packages (from igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.0) (1.8.1)
 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from cryptography>=44.0.1->igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.0) (2.0.0)
 Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi>=2.0.0->cryptography>=44.0.1->igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.0) (2.23)
-Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.0) (3.4.4)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.0) (3.4.4)
 Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.0) (3.3)
 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.0) (1.26.5)
 Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.0) (2020.6.20)
 Requirement already satisfied: PyJWT>=1.6.1 in /usr/lib/python3/dist-packages (from scitokens>=1.8->igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.0) (2.3.0)
-Requirement already satisfied: click>=6.7 in /usr/local/lib/python3.10/dist-packages (from dqsegdb2->gwpy->bilby==0.0.0) (8.3.0)
-Requirement already satisfied: MarkupSafe>=2.0 in /usr/lib/python3/dist-packages (from jinja2->torch>=1.11.0->nessai>=0.7.0->bilby==0.0.0) (2.0.1)
+Requirement already satisfied: click>=6.7 in /usr/local/lib/python3.10/dist-packages (from dqsegdb2->gwpy->bilby==0.0.0) (8.1.8)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->torch>=1.11.0->nessai>=0.7.0->bilby==0.0.0) (3.0.3)
 Requirement already satisfied: igwn-ligolw in /usr/local/lib/python3.10/dist-packages (from lalsuite->bilby==0.0.0) (2.1.0)
 Requirement already satisfied: lscsoft-glue in /usr/local/lib/python3.10/dist-packages (from lalsuite->bilby==0.0.0) (4.1.1)
 Requirement already satisfied: narwhals>=1.15.1 in /usr/local/lib/python3.10/dist-packages (from plotly->bilby==0.0.0) (2.10.2)
-Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (1.3.0)
-Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (2.3.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (1.6.0)
-Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (2.3.0)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (2.3.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (1.6.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (1.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.0) (2.3.0)
 Requirement already satisfied: multiprocess in /usr/local/lib/python3.10/dist-packages (from schwimmbad->bilby==0.0.0) (0.70.18)
 Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn->bilby==0.0.0) (1.5.2)
 Requirement already satisfied: numexpr>=2.6.2 in /usr/local/lib/python3.10/dist-packages (from tables->bilby==0.0.0) (2.14.1)
@@ -200,501 +198,245 @@ Requirement already satisfied: blosc2>=2.3.0 in /usr/local/lib/python3.10/dist-p
 Requirement already satisfied: ndindex in /usr/local/lib/python3.10/dist-packages (from blosc2>=2.3.0->tables->bilby==0.0.0) (1.10.0)
 Requirement already satisfied: msgpack in /usr/local/lib/python3.10/dist-packages (from blosc2>=2.3.0->tables->bilby==0.0.0) (1.1.2)
 Requirement already satisfied: platformdirs in /usr/local/lib/python3.10/dist-packages (from blosc2>=2.3.0->tables->bilby==0.0.0) (4.5.0)
+Using cached numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+Using cached matplotlib-3.10.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
 Building wheels for collected packages: bilby
   Building editable for bilby (pyproject.toml): started
   Building editable for bilby (pyproject.toml): finished with status 'done'
-  Created wheel for bilby: filename=bilby-0.0.0-0.editable-py3-none-any.whl size=7657 sha256=aba6ce9e4e25450325607f9310362a6ecf3b4cba19f0753ae0ccd809b8102ee8
-  Stored in directory: /tmp/pip-ephem-wheel-cache-tp56rcnb/wheels/76/95/73/68660b807fb4a8d89f6a7519b12bd53fe7c457a67a4d60263f
+  Created wheel for bilby: filename=bilby-0.0.0-0.editable-py3-none-any.whl size=7653 sha256=ec38969c8faacc68ab2996179533778732d534153f572b7adea348cbd3289c9f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-6xayquri/wheels/9b/81/25/2660548292e7ebc1641bf75b2f2e2f9d41d8b36d394fc9ca87
 Successfully built bilby
-Installing collected packages: bilby
+Installing collected packages: numpy, matplotlib, bilby
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.23.5
+    Uninstalling numpy-1.23.5:
+      Successfully uninstalled numpy-1.23.5
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.7.5
+    Uninstalling matplotlib-3.7.5:
+      Successfully uninstalled matplotlib-3.7.5
   Attempting uninstall: bilby
-    Found existing installation: bilby 0.0.1.dev0+gf58ac0d22.d20251109
-    Uninstalling bilby-0.0.1.dev0+gf58ac0d22.d20251109:
-      Successfully uninstalled bilby-0.0.1.dev0+gf58ac0d22.d20251109
-Successfully installed bilby-0.0.0
+    Found existing installation: bilby 0.0.1.dev0+gf58ac0d22.d20251110
+    Uninstalling bilby-0.0.1.dev0+gf58ac0d22.d20251110:
+      Successfully uninstalled bilby-0.0.1.dev0+gf58ac0d22.d20251110
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+armi 0.3.0 requires matplotlib<3.8.0,>=3.5.3, but you have matplotlib 3.10.7 which is incompatible.
+armi 0.3.0 requires numpy<=1.23.5,>=1.21, but you have numpy 1.26.4 which is incompatible.
+autosubmit 4.1.14 requires matplotlib<=3.9.4, but you have matplotlib 3.10.7 which is incompatible.
+Successfully installed bilby-0.0.0 matplotlib-3.10.7 numpy-1.26.4
 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
 
 =========================================
-Test run 1/5 for before
-Time: ma 10 nov 2025 11:22:20 CET
+Test run 1/40 for before
+Time: di  2 dec 2025 18:04:35 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=3418621249
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/before
+Using --randomly-seed=2896524618
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collecting ... collected 5 items
 
 test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
-test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
-
-============================== slowest durations ===============================
-18.27s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-12.61s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-11.56s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-7.58s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-7.46s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-============================== 5 passed in 59.59s ==============================
-Energy consumption in joules: 1250.340835571289 for 61.444424 sec of execution.
-
-Sleeping 5 seconds...
-
-=========================================
-Test run 2/5 for before
-Time: ma 10 nov 2025 11:23:27 CET
-=========================================
-============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
-cachedir: .pytest_cache
-Using --randomly-seed=1669251731
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/before
-configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
-collecting ... collected 5 items
-
-test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
-test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
-
-============================== slowest durations ===============================
-18.43s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-12.41s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-11.55s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-7.55s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-4.22s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-============================== 5 passed in 56.28s ==============================
-Energy consumption in joules: 1156.9595947265625 for 58.236904 sec of execution.
-
-Sleeping 5 seconds...
-
-=========================================
-Test run 3/5 for before
-Time: ma 10 nov 2025 11:24:30 CET
-=========================================
-============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
-cachedir: .pytest_cache
-Using --randomly-seed=2772305303
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/before
-configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
-collecting ... collected 5 items
-
-test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 20%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
 test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
-test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 80%]
-test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [100%]
 
 ============================== slowest durations ===============================
-18.94s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-12.53s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-11.21s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-7.73s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-3.62s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+19.20s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.88s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+11.22s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.42s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.10s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-============================== 5 passed in 56.14s ==============================
-Energy consumption in joules: 1159.9873352050781 for 58.037422 sec of execution.
+============================== 5 passed in 58.09s ==============================
+Energy consumption in joules: 1180.991195678711 for 60.038086 sec of execution.
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 4/5 for before
-Time: ma 10 nov 2025 11:25:34 CET
+Test run 2/40 for before
+Time: di  2 dec 2025 18:05:40 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=1390285619
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/before
+Using --randomly-seed=3197168957
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collecting ... collected 5 items
 
 test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 40%]
 test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
 test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
-test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [100%]
 
 ============================== slowest durations ===============================
-19.88s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-12.34s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-11.14s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-7.63s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-3.51s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+18.48s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.65s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.52s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.47s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.72s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
 0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-============================== 5 passed in 56.61s ==============================
+============================== 5 passed in 56.19s ==============================
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 5/5 for before
-Time: ma 10 nov 2025 11:26:38 CET
+Test run 3/40 for before
+Time: di  2 dec 2025 18:06:43 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=1356806874
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/before
+Using --randomly-seed=1714958404
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [100%]
+
+============================== slowest durations ===============================
+18.87s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.55s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.23s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.41s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.53s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 56.30s ==============================
+Energy consumption in joules: 1169.708251953125 for 57.837204 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 4/40 for before
+Time: di  2 dec 2025 18:07:46 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1074375772
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collecting ... collected 5 items
 
 test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 40%]
 test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
-test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [100%]
 
 ============================== slowest durations ===============================
-18.83s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-12.53s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-11.34s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-6.67s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-3.77s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+19.82s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.55s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.23s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.44s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.78s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-============================== 5 passed in 55.28s ==============================
-Energy consumption in joules: 1123.4750518798828 for 57.24398 sec of execution.
-
-
-========================================
-Completed before version at: ma 10 nov 2025 11:27:35 CET
-========================================
-
-========================================
-Starting tests for after_mock version
-========================================
-Activating virtual environment...
-Running setup command...
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.26.4)
-Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (1.15.3)
-Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (8.4.2)
-Requirement already satisfied: parameterized in /usr/local/lib/python3.10/dist-packages (0.9.0)
-Requirement already satisfied: pytest-cov in /usr/local/lib/python3.10/dist-packages (7.0.0)
-Requirement already satisfied: mutmut in /usr/local/lib/python3.10/dist-packages (3.3.1)
-Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.3.0)
-Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
-Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.10/dist-packages (from pytest) (25.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest) (1.6.0)
-Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.19.2)
-Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest) (2.3.0)
-Requirement already satisfied: coverage>=7.10.6 in /usr/local/lib/python3.10/dist-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.11.0)
-Requirement already satisfied: libcst~=1.7.0 in /usr/local/lib/python3.10/dist-packages (from mutmut) (1.7.0)
-Requirement already satisfied: click in /usr/local/lib/python3.10/dist-packages (from mutmut) (8.3.0)
-Requirement already satisfied: setproctitle in /usr/local/lib/python3.10/dist-packages (from mutmut) (1.3.7)
-Requirement already satisfied: textual in /usr/local/lib/python3.10/dist-packages (from mutmut) (6.5.0)
-Requirement already satisfied: toml>=0.10.2 in /usr/local/lib/python3.10/dist-packages (from mutmut) (0.10.2)
-Requirement already satisfied: pyyaml>=5.2 in /usr/lib/python3/dist-packages (from libcst~=1.7.0->mutmut) (5.4.1)
-Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1->pytest) (4.15.0)
-Requirement already satisfied: markdown-it-py>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py[linkify]>=2.1.0->textual->mutmut) (4.0.0)
-Requirement already satisfied: mdit-py-plugins in /usr/local/lib/python3.10/dist-packages (from textual->mutmut) (0.5.0)
-Requirement already satisfied: platformdirs<5,>=3.6.0 in /usr/local/lib/python3.10/dist-packages (from textual->mutmut) (4.5.0)
-Requirement already satisfied: rich>=14.2.0 in /usr/local/lib/python3.10/dist-packages (from textual->mutmut) (14.2.0)
-Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py>=2.1.0->markdown-it-py[linkify]>=2.1.0->textual->mutmut) (0.1.2)
-Requirement already satisfied: linkify-it-py<3,>=1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py[linkify]>=2.1.0->textual->mutmut) (2.0.3)
-Requirement already satisfied: uc-micro-py in /usr/local/lib/python3.10/dist-packages (from linkify-it-py<3,>=1->markdown-it-py[linkify]>=2.1.0->textual->mutmut) (1.0.3)
-WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-Obtaining file:///home/xutong/SpeedUpSlowTest/versions/bilby_986/after_mock
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Checking if build backend supports build_editable: started
-  Checking if build backend supports build_editable: finished with status 'done'
-  Getting requirements to build editable: started
-  Getting requirements to build editable: finished with status 'done'
-  Preparing editable metadata (pyproject.toml): started
-  Preparing editable metadata (pyproject.toml): finished with status 'done'
-Requirement already satisfied: bilby.cython>=0.3.0 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.5.3)
-Requirement already satisfied: dynesty<2.2,>=2.0.1 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.1.5)
-Requirement already satisfied: emcee in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.1.6)
-Requirement already satisfied: corner in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.2.3)
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.26.4)
-Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.9.4)
-Requirement already satisfied: scipy>=1.5 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.15.3)
-Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.3.3)
-Requirement already satisfied: dill in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.4.0)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (4.67.1)
-Requirement already satisfied: h5py in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.15.1)
-Requirement already satisfied: attrs in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (25.4.0)
-Requirement already satisfied: astropy>=5 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (6.1.7)
-Requirement already satisfied: lalsuite in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (7.26.1)
-Requirement already satisfied: gwpy in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.0.13)
-Requirement already satisfied: tables in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.10.1)
-Requirement already satisfied: pyfftw in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.15.0)
-Requirement already satisfied: scikit-learn in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.7.2)
-Requirement already satisfied: glasflow in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.4.1)
-Requirement already satisfied: cpnest>=0.9.4 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.12.0)
-Requirement already satisfied: nestle in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.2.1)
-Requirement already satisfied: ptmcmcsampler!=0.0.0,!=2.1.0 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.1.4)
-Requirement already satisfied: ptemcee in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.0.0)
-Requirement already satisfied: pymc>=4.0.0 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (5.25.1)
-Requirement already satisfied: pymultinest in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.12)
-Requirement already satisfied: kombine in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.8.4)
-Requirement already satisfied: ultranest>=3.0.0 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (4.4.0)
-Requirement already satisfied: nessai>=0.7.0 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.15.0)
-Requirement already satisfied: schwimmbad in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.4.2)
-Requirement already satisfied: zeus-mcmc>=2.3.0 in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.5.4)
-Requirement already satisfied: celerite in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.4.3)
-Requirement already satisfied: george in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.4.4)
-Requirement already satisfied: plotly in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (6.4.0)
-Requirement already satisfied: pytest-requires in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.1.0)
-Requirement already satisfied: pytest-rerunfailures in /usr/local/lib/python3.10/dist-packages (from bilby==0.0.1.dev0+gf58ac0d22.d20251110) (16.1)
-Requirement already satisfied: pyerfa>=2.0.1.1 in /usr/local/lib/python3.10/dist-packages (from astropy>=5->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.0.1.5)
-Requirement already satisfied: astropy-iers-data>=0.2024.10.28.0.34.7 in /usr/local/lib/python3.10/dist-packages (from astropy>=5->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.2025.11.3.0.38.37)
-Requirement already satisfied: PyYAML>=3.13 in /usr/lib/python3/dist-packages (from astropy>=5->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (5.4.1)
-Requirement already satisfied: packaging>=19.0 in /usr/local/lib/python3.10/dist-packages (from astropy>=5->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (25.0)
-Requirement already satisfied: seaborn in /usr/local/lib/python3.10/dist-packages (from nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.13.2)
-Requirement already satisfied: torch>=1.11.0 in /usr/local/lib/python3.10/dist-packages (from nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.9.0)
-Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.3.2)
-Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.12.1)
-Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (4.60.1)
-Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.4.9)
-Requirement already satisfied: pillow>=8 in /usr/lib/python3/dist-packages (from matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (9.0.1)
-Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.2.3)
-Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.9.0.post0)
-Requirement already satisfied: arviz>=0.13.0 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.22.0)
-Requirement already satisfied: cachetools>=4.2.1 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (6.2.1)
-Requirement already satisfied: cloudpickle in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.1.2)
-Requirement already satisfied: pytensor<2.32,>=2.31.7 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.31.7)
-Requirement already satisfied: rich>=13.7.1 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (14.2.0)
-Requirement already satisfied: threadpoolctl<4.0.0,>=3.1.0 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.6.0)
-Requirement already satisfied: typing-extensions>=3.7.4 in /usr/local/lib/python3.10/dist-packages (from pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (4.15.0)
-Requirement already satisfied: setuptools>=59.0.0 in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (80.9.0)
-Requirement already satisfied: filelock>=3.15 in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.20.0)
-Requirement already satisfied: etuples in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.3.10)
-Requirement already satisfied: logical-unification in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.4.7)
-Requirement already satisfied: miniKanren in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.0.5)
-Requirement already satisfied: cons in /usr/local/lib/python3.10/dist-packages (from pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.4.7)
-Requirement already satisfied: xarray>=2023.7.0 in /usr/local/lib/python3.10/dist-packages (from arviz>=0.13.0->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2025.6.1)
-Requirement already satisfied: h5netcdf>=1.0.2 in /usr/local/lib/python3.10/dist-packages (from arviz>=0.13.0->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.7.3)
-Requirement already satisfied: xarray-einstats>=0.3 in /usr/local/lib/python3.10/dist-packages (from arviz>=0.13.0->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.8.0)
-Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2025.2)
-Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2025.2)
-Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.7->matplotlib->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.16.0)
-Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.10/dist-packages (from rich>=13.7.1->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (4.0.0)
-Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.10/dist-packages (from rich>=13.7.1->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.19.2)
-Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py>=2.2.0->rich>=13.7.1->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.1.2)
-Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.14.0)
-Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.2.1)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.1.6)
-Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2025.10.0)
-Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (12.8.93)
-Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (12.8.90)
-Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (12.8.90)
-Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (9.10.2.21)
-Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (12.8.4.1)
-Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (11.3.3.83)
-Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (10.3.9.90)
-Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (11.7.3.90)
-Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (12.5.8.93)
-Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.7.1)
-Requirement already satisfied: nvidia-nccl-cu12==2.27.5 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.27.5)
-Requirement already satisfied: nvidia-nvshmem-cu12==3.3.20 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.3.20)
-Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (12.8.90)
-Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (12.8.93)
-Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.13.1.3)
-Requirement already satisfied: triton==3.5.0 in /usr/local/lib/python3.10/dist-packages (from torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.5.0)
-Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy>=1.13.3->torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.3.0)
-Requirement already satisfied: cython in /usr/local/lib/python3.10/dist-packages (from ultranest>=3.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.2.0)
-Requirement already satisfied: pytest in /usr/local/lib/python3.10/dist-packages (from zeus-mcmc>=2.3.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (8.4.2)
-Requirement already satisfied: toolz in /usr/local/lib/python3.10/dist-packages (from logical-unification->pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.1.0)
-Requirement already satisfied: multipledispatch in /usr/local/lib/python3.10/dist-packages (from logical-unification->pytensor<2.32,>=2.31.7->pymc>=4.0.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.0.0)
-Requirement already satisfied: dateparser>=1.1.4 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.2.2)
-Requirement already satisfied: dqsegdb2 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.3.0)
-Requirement already satisfied: gwdatafind>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.1.1)
-Requirement already satisfied: gwosc>=0.5.3 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.8.1)
-Requirement already satisfied: igwn-segments>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.1.0)
-Requirement already satisfied: ligotimegps>=1.2.1 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.0.1)
-Requirement already satisfied: requests>=2.20.0 in /usr/local/lib/python3.10/dist-packages (from gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.32.5)
-Requirement already satisfied: regex>=2024.9.11 in /usr/local/lib/python3.10/dist-packages (from dateparser>=1.1.4->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2025.11.3)
-Requirement already satisfied: tzlocal>=0.2 in /usr/local/lib/python3.10/dist-packages (from dateparser>=1.1.4->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (5.3.1)
-Requirement already satisfied: igwn-auth-utils>=0.3.1 in /usr/local/lib/python3.10/dist-packages (from gwdatafind>=1.1.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.4.0)
-Requirement already satisfied: cryptography>=44.0.1 in /usr/local/lib/python3.10/dist-packages (from igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (46.0.3)
-Requirement already satisfied: safe-netrc>=1.0 in /usr/local/lib/python3.10/dist-packages (from igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.0.1)
-Requirement already satisfied: scitokens>=1.8 in /usr/local/lib/python3.10/dist-packages (from igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.8.1)
-Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from cryptography>=44.0.1->igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.0.0)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi>=2.0.0->cryptography>=44.0.1->igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.23)
-Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.4.4)
-Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.3)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.26.5)
-Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.20.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2020.6.20)
-Requirement already satisfied: PyJWT>=1.6.1 in /usr/lib/python3/dist-packages (from scitokens>=1.8->igwn-auth-utils>=0.3.1->gwdatafind>=1.1.0->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.3.0)
-Requirement already satisfied: click>=6.7 in /usr/local/lib/python3.10/dist-packages (from dqsegdb2->gwpy->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (8.3.0)
-Requirement already satisfied: MarkupSafe>=2.0 in /usr/lib/python3/dist-packages (from jinja2->torch>=1.11.0->nessai>=0.7.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.0.1)
-Requirement already satisfied: igwn-ligolw in /usr/local/lib/python3.10/dist-packages (from lalsuite->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.1.0)
-Requirement already satisfied: lscsoft-glue in /usr/local/lib/python3.10/dist-packages (from lalsuite->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (4.1.1)
-Requirement already satisfied: narwhals>=1.15.1 in /usr/local/lib/python3.10/dist-packages (from plotly->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.10.2)
-Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.3.0)
-Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.3.0)
-Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.6.0)
-Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->zeus-mcmc>=2.3.0->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.3.0)
-Requirement already satisfied: multiprocess in /usr/local/lib/python3.10/dist-packages (from schwimmbad->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (0.70.18)
-Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.5.2)
-Requirement already satisfied: numexpr>=2.6.2 in /usr/local/lib/python3.10/dist-packages (from tables->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (2.14.1)
-Requirement already satisfied: py-cpuinfo in /usr/local/lib/python3.10/dist-packages (from tables->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (9.0.0)
-Requirement already satisfied: blosc2>=2.3.0 in /usr/local/lib/python3.10/dist-packages (from tables->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (3.11.0)
-Requirement already satisfied: ndindex in /usr/local/lib/python3.10/dist-packages (from blosc2>=2.3.0->tables->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.10.0)
-Requirement already satisfied: msgpack in /usr/local/lib/python3.10/dist-packages (from blosc2>=2.3.0->tables->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (1.1.2)
-Requirement already satisfied: platformdirs in /usr/local/lib/python3.10/dist-packages (from blosc2>=2.3.0->tables->bilby==0.0.1.dev0+gf58ac0d22.d20251110) (4.5.0)
-Building wheels for collected packages: bilby
-  Building editable for bilby (pyproject.toml): started
-  Building editable for bilby (pyproject.toml): finished with status 'done'
-  Created wheel for bilby: filename=bilby-0.0.1.dev0+gf58ac0d22.d20251110-0.editable-py3-none-any.whl size=8242 sha256=ea54d85d12e6bdc17eea6cfcd384929da4e403ad27a53e3ba7a20bb0c0320173
-  Stored in directory: /tmp/pip-ephem-wheel-cache-ikxpnw5p/wheels/38/cc/27/5c5ca6f37ab6875496f9897e0fec209b31575d3797cd20d567
-Successfully built bilby
-Installing collected packages: bilby
-  Attempting uninstall: bilby
-    Found existing installation: bilby 0.0.0
-    Uninstalling bilby-0.0.0:
-      Successfully uninstalled bilby-0.0.0
-Successfully installed bilby-0.0.1.dev0+gf58ac0d22.d20251110
-WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-
-=========================================
-Test run 1/5 for after_mock
-Time: ma 10 nov 2025 11:27:50 CET
-=========================================
-============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
-cachedir: .pytest_cache
-Using --randomly-seed=3065720205
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/after_mock
-configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
-collecting ... collected 5 items
-
-test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
-test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
-
-============================== slowest durations ===============================
-12.41s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-7.56s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-4.27s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.69s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.32s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-============================== 5 passed in 27.36s ==============================
-Energy consumption in joules: 540.7091217041016 for 29.219875 sec of execution.
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 56.20s ==============================
+Energy consumption in joules: 1156.851318359375 for 57.629272 sec of execution.
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 2/5 for after_mock
-Time: ma 10 nov 2025 11:28:25 CET
+Test run 5/40 for before
+Time: di  2 dec 2025 18:08:49 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=2845750650
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/after_mock
+Using --randomly-seed=471076710
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collecting ... collected 5 items
 
-test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 20%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
-test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
-test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
-test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [100%]
 
 ============================== slowest durations ===============================
-12.51s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-7.53s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-6.44s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.68s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.31s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+18.98s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.77s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.32s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+4.29s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.68s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-============================== 5 passed in 29.60s ==============================
-Energy consumption in joules: 614.5517883300781 for 31.62082 sec of execution.
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 52.40s ==============================
+Energy consumption in joules: 1043.7781677246094 for 53.833927 sec of execution.
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 3/5 for after_mock
-Time: ma 10 nov 2025 11:29:01 CET
+Test run 6/40 for before
+Time: di  2 dec 2025 18:09:48 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=679183802
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/after_mock
+Using --randomly-seed=717385559
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collecting ... collected 5 items
 
 test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 20%]
@@ -704,37 +446,157 @@ test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test
 test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
 
 ============================== slowest durations ===============================
-12.55s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-7.61s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-6.76s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.63s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.30s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+20.48s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.96s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+11.58s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+10.27s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.69s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
 0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-============================== 5 passed in 29.96s ==============================
-Energy consumption in joules: 622.3921966552734 for 31.824635 sec of execution.
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+========================= 5 passed in 65.38s (0:01:05) =========================
+Energy consumption in joules: 1426.9029083251953 for 66.838905 sec of execution.
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 4/5 for after_mock
-Time: ma 10 nov 2025 11:29:39 CET
+Test run 7/40 for before
+Time: di  2 dec 2025 18:11:00 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=1791667806
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/after_mock
+Using --randomly-seed=1741561257
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+18.45s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.80s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.30s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.35s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.80s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 56.08s ==============================
+Energy consumption in joules: 1150.7855377197266 for 57.435234 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 8/40 for before
+Time: di  2 dec 2025 18:12:03 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1738731223
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [100%]
+
+============================== slowest durations ===============================
+18.43s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.60s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.22s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+6.37s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+4.15s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 54.16s ==============================
+Energy consumption in joules: 1104.5235900878906 for 55.63306 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 9/40 for before
+Time: di  2 dec 2025 18:13:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=3445217158
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+18.76s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.86s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.24s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.50s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.65s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 55.37s ==============================
+Energy consumption in joules: 1144.2423706054688 for 56.825184 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 10/40 for before
+Time: di  2 dec 2025 18:14:06 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1711098634
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collecting ... collected 5 items
 
 test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
@@ -744,71 +606,1232 @@ test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%
 test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [100%]
 
 ============================== slowest durations ===============================
-12.21s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-9.54s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-7.64s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.50s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.31s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+19.17s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.60s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.32s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.63s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.50s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-============================== 5 passed in 32.32s ==============================
-Energy consumption in joules: 710.7112731933594 for 34.230076 sec of execution.
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 55.57s ==============================
+Energy consumption in joules: 1148.860107421875 for 57.036278 sec of execution.
 
 Sleeping 5 seconds...
 
 =========================================
-Test run 5/5 for after_mock
-Time: ma 10 nov 2025 11:30:18 CET
+Test run 11/40 for before
+Time: di  2 dec 2025 18:15:09 CET
 =========================================
 ============================= test session starts ==============================
-platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
 cachedir: .pytest_cache
-Using --randomly-seed=2395324967
-rootdir: /home/xutong/SpeedUpSlowTest/versions/bilby_986/after_mock
+Using --randomly-seed=2980061237
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
 configfile: pyproject.toml
-plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, randomly-4.0.1, xdist-3.8.0, rerunfailures-16.1, cov-7.0.0
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.23s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.75s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.30s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.33s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+2.69s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+============================== 5 passed in 55.67s ==============================
+Energy consumption in joules: 1130.49560546875 for 57.02882 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 12/40 for before
+Time: di  2 dec 2025 18:16:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=872031287
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.15s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+17.88s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+12.94s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.30s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.36s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+========================= 5 passed in 69.99s (0:01:09) =========================
+Energy consumption in joules: 1586.0701904296875 for 71.45617 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 13/40 for before
+Time: di  2 dec 2025 18:17:28 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=4146479759
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+19.76s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.80s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.23s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.71s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.76s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 57.63s ==============================
+Energy consumption in joules: 1203.0405731201172 for 59.03869 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 14/40 for before
+Time: di  2 dec 2025 18:18:32 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=917238805
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+18.87s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.88s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.32s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.38s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.59s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 57.43s ==============================
+Energy consumption in joules: 1194.8580474853516 for 58.830273 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 15/40 for before
+Time: di  2 dec 2025 18:19:36 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=114602646
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+18.44s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.70s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.35s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.30s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+6.16s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+============================== 5 passed in 58.31s ==============================
+Energy consumption in joules: 1240.2065124511719 for 59.840714 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 16/40 for before
+Time: di  2 dec 2025 18:20:41 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=3827251817
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.10s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+13.04s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.23s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.65s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.90s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 58.30s ==============================
+Energy consumption in joules: 1199.8521728515625 for 59.63579 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 17/40 for before
+Time: di  2 dec 2025 18:21:46 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=3225372425
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+18.95s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.83s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.21s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.46s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.26s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 57.08s ==============================
+Energy consumption in joules: 1181.7431640625 for 58.433094 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 18/40 for before
+Time: di  2 dec 2025 18:22:50 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=2537458125
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
 collecting ... collected 5 items
 
 test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
 test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [100%]
+
+============================== slowest durations ===============================
+19.38s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.48s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.17s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+4.21s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.83s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 52.46s ==============================
+Energy consumption in joules: 1039.6847686767578 for 53.830048 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 19/40 for before
+Time: di  2 dec 2025 18:23:49 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1787323714
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+18.93s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+13.55s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.32s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.25s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.72s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 57.16s ==============================
+Energy consumption in joules: 1165.3495635986328 for 58.629528 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 20/40 for before
+Time: di  2 dec 2025 18:24:53 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1209536218
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.09s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.79s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.32s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.55s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.84s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+============================== 5 passed in 55.99s ==============================
+Energy consumption in joules: 1153.0093841552734 for 57.439655 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 21/40 for before
+Time: di  2 dec 2025 18:25:56 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1963684553
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.09s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.80s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.14s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.45s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.30s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 57.15s ==============================
+Energy consumption in joules: 1169.7288360595703 for 58.63008 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 22/40 for before
+Time: di  2 dec 2025 18:27:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1554132487
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.50s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.76s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.20s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.45s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.93s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 58.21s ==============================
+Energy consumption in joules: 1196.8665008544922 for 59.63449 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 23/40 for before
+Time: di  2 dec 2025 18:28:05 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=509962215
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [100%]
+
+============================== slowest durations ===============================
+18.76s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.81s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.21s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.57s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.43s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+============================== 5 passed in 55.17s ==============================
+Energy consumption in joules: 1141.1277923583984 for 56.63141 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 24/40 for before
+Time: di  2 dec 2025 18:29:07 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=845220862
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+18.58s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+14.07s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+12.69s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.27s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.53s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+========================= 5 passed in 66.53s (0:01:06) =========================
+Energy consumption in joules: 1471.740219116211 for 67.84711 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 25/40 for before
+Time: di  2 dec 2025 18:30:20 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=347620106
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [100%]
+
+============================== slowest durations ===============================
+18.39s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+18.18s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+12.92s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.34s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.26s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+========================= 5 passed in 70.47s (0:01:10) =========================
+Energy consumption in joules: 1580.6841125488281 for 71.85581 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 26/40 for before
+Time: di  2 dec 2025 18:31:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=3661913115
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.04s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+13.17s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.30s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.52s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+5.39s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 58.81s ==============================
+Energy consumption in joules: 1199.0936584472656 for 60.237976 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 27/40 for before
+Time: di  2 dec 2025 18:32:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1432810177
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+20.13s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+13.01s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.19s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.46s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+7.33s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+========================= 5 passed in 60.51s (0:01:00) =========================
+Energy consumption in joules: 1285.504638671875 for 61.838425 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 28/40 for before
+Time: di  2 dec 2025 18:33:50 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=526624958
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+19.62s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+18.05s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+12.80s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.26s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+4.20s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+========================= 5 passed in 67.33s (0:01:07) =========================
+Energy consumption in joules: 1454.603286743164 for 68.65222 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 29/40 for before
+Time: di  2 dec 2025 18:35:04 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1153188345
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+19.00s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+13.12s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.25s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.29s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+7.65s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+========================= 5 passed in 60.68s (0:01:00) =========================
+Energy consumption in joules: 1260.2804412841797 for 62.043755 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 30/40 for before
+Time: di  2 dec 2025 18:36:11 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=318477677
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+18.68s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.89s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+11.00s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+10.14s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+3.72s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 58.80s ==============================
+Energy consumption in joules: 1235.1580200195313 for 60.2324 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 31/40 for before
+Time: di  2 dec 2025 18:37:17 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1470405848
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+18.60s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.78s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.22s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.23s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.71s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+============================== 5 passed in 55.91s ==============================
+Energy consumption in joules: 1150.3685150146484 for 57.232517 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 32/40 for before
+Time: di  2 dec 2025 18:38:19 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=199284609
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [100%]
+
+============================== slowest durations ===============================
+19.33s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.72s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.31s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.72s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.77s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 58.24s ==============================
+Energy consumption in joules: 1210.7818908691406 for 59.63395 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 33/40 for before
+Time: di  2 dec 2025 18:39:24 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=3140270119
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.13s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+13.12s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.25s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+9.20s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+8.38s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+========================= 5 passed in 62.46s (0:01:02) =========================
+Energy consumption in joules: 1325.028060913086 for 63.84462 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 34/40 for before
+Time: di  2 dec 2025 18:40:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1107123384
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
 test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
 test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
 test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [100%]
 
 ============================== slowest durations ===============================
-12.37s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
-7.67s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-4.28s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.52s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
-0.31s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+19.33s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.58s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.20s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.53s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.38s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
 0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
-0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
-0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
 0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+============================== 5 passed in 57.41s ==============================
+Energy consumption in joules: 1204.2797088623047 for 58.843456 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 35/40 for before
+Time: di  2 dec 2025 18:41:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=232561956
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 20%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [100%]
+
+============================== slowest durations ===============================
+18.76s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.69s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.26s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+4.97s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.30s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 49.37s ==============================
+Energy consumption in joules: 934.2350463867188 for 50.834454 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 36/40 for before
+Time: di  2 dec 2025 18:42:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=3218715849
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [100%]
+
+============================== slowest durations ===============================
+19.24s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.72s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.35s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.69s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.91s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 57.29s ==============================
+Energy consumption in joules: 1179.8410034179688 for 58.634445 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 37/40 for before
+Time: di  2 dec 2025 18:43:37 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=1612751627
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 80%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [100%]
+
+============================== slowest durations ===============================
+18.96s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.72s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.31s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+5.90s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+4.35s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 54.58s ==============================
+Energy consumption in joules: 1109.3776092529297 for 56.033546 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 38/40 for before
+Time: di  2 dec 2025 18:44:39 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=836635375
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.35s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.95s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.28s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+8.41s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+4.20s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
 0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
-============================== 5 passed in 27.27s ==============================
-Energy consumption in joules: 538.9919738769531 for 29.222502 sec of execution.
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+============================== 5 passed in 57.54s ==============================
+Energy consumption in joules: 1194.5198059082031 for 59.03187 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 39/40 for before
+Time: di  2 dec 2025 18:45:43 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=440023148
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+18.71s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+13.00s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.21s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.82s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+3.78s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 55.89s ==============================
+Energy consumption in joules: 1153.5892333984375 for 57.230167 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 40/40 for before
+Time: di  2 dec 2025 18:46:46 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+Using --randomly-seed=4172615248
+rootdir: /data/SpeedUpSlowTest/versions/bilby_986/before
+configfile: pyproject.toml
+plugins: requests-mock-1.12.1, socket-0.7.0, mock-3.15.1, requires-0.1.0, timeout-2.4.0, randomly-4.0.1, xdist-3.8.0, typeguard-3.0.2, rerunfailures-16.1, cov-7.0.0, anyio-4.11.0, trio-0.8.0
+collecting ... collected 5 items
+
+test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal PASSED [ 20%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D PASSED [ 40%]
+test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal PASSED [ 60%]
+test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency PASSED [ 80%]
+test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics PASSED [100%]
+
+============================== slowest durations ===============================
+19.22s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+12.79s call     test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+10.17s call     test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+7.57s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+6.38s call     test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s setup    test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+0.00s setup    test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_KDE_proposal
+0.00s teardown test/gw/likelihood/relative_binning_test.py::TestRelativeBinningLikelihood::test_likelihood_when_waveform_extends_beyond_maximum_frequency
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s setup    test/bilby_mcmc/test_proposals.py::TestProposals::test_GMM_proposal
+0.00s teardown test/bilby_mcmc/test_proposals.py::TestProposals::test_NF_proposal_15D
+0.00s teardown test/gw/prior_test.py::TestAlignedSpin::test_non_analytic_form_has_correct_statistics
+============================== 5 passed in 58.53s ==============================
+Energy consumption in joules: 1236.9248809814453 for 59.842197 sec of execution.
 
 
 ========================================
-Completed after_mock version at: ma 10 nov 2025 11:30:48 CET
+Completed before version at: di  2 dec 2025 18:47:46 CET
 ========================================
+Warning: Version directory '/data/SpeedUpSlowTest/versions/bilby_986/after_careful_mock' not found, skipping...
 
 ========================================
-All tests completed at: ma 10 nov 2025 11:30:48 CET
-Compared: before vs after_mock
-Log file: /home/xutong/SpeedUpSlowTest/versions/bilby_986/test_results_only_mock_part.log
+All tests completed at: di  2 dec 2025 18:47:56 CET
+Compared: before vs after_careful_mock
+Log file: /data/SpeedUpSlowTest/versions/bilby_986/test_results_only_mock_part.log
 ========================================

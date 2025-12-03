@@ -41,8 +41,9 @@ python3 parse_results_generic_optimized.py roms-tools_107 only_mock_part
 bash run_tests_venv_generic.sh armi_1737 $REPEAT before after_careful_mock only_mock_part
 python3 parse_results_generic_optimized.py armi_1737 only_mock_part
 
-bash run_tests_venv_generic.sh bilby_986 $REPEAT before after_careful_mock only_mock_part
-python3 parse_results_generic_optimized.py bilby_986 only_mock_part
+# not mockable on external dependencies
+# bash run_tests_venv_generic.sh bilby_986 $REPEAT before after_careful_mock only_mock_part
+# python3 parse_results_generic_optimized.py bilby_986 only_mock_part
 
 bash ./run_tests_generic.sh BuffaLogs_399/ $REPEAT before after_careful_mock only_mock_part
 python3 parse_results_generic_optimized.py BuffaLogs_399 only_mock_part
@@ -52,6 +53,12 @@ python3 parse_results_generic_optimized.py detection-rules_2626 only_mock_part
 
 bash run_tests_venv_generic.sh lightning-thunder_2077 $REPEAT before after_careful_mock only_mock_part
 python3 parse_results_generic_optimized.py lightning-thunder_2077 only_mock_part
+
+bash ./run_tests_generic.sh patientMatcher_262/ $REPEAT before after_careful_mock only_mock_part
+python3 parse_results_generic_optimized.py patientMatcher_262 only_mock_part
+
+bash run_tests_venv_generic.sh dfm_tools_976 $REPEAT before after_careful_mock only_mock_part
+python3 parse_results_generic_optimized.py dfm_tools_976 only_mock_part
 
 
 

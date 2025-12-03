@@ -1,0 +1,7 @@
+version,run_number,test_name,test_path,phase,duration_sec,total_test_time
+before,1,test_deleteCache,armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache,call,2.0,2.02
+before,1,test_deleteCache,armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache,setup,0.0,2.02
+before,1,test_deleteCache,armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache,teardown,0.0,2.02
+after_careful_mock,1,test_deleteCache,armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache,call,0.0,0.02
+after_careful_mock,1,test_deleteCache,armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache,setup,0.0,0.02
+after_careful_mock,1,test_deleteCache,armi/utils/tests/test_outputCache.py::TestOutputCache::test_deleteCache,teardown,0.0,0.02
