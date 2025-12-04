@@ -60,6 +60,12 @@ python3 parse_results_generic_optimized.py patientMatcher_262 only_mock_part
 bash run_tests_venv_generic.sh dfm_tools_976 $REPEAT before after_careful_mock only_mock_part
 python3 parse_results_generic_optimized.py dfm_tools_976 only_mock_part
 
+bash ./run_tests_generic.sh python-dts-calibration_197/ $REPEAT before after_careful_mock only_mock_part
+python3 parse_results_generic_optimized.py python-dts-calibration_197 only_mock_part    
+
+bash run_tests_venv_generic.sh evalml_2446 $REPEAT before after_careful_mock only_mock_part
+python3 parse_results_generic_optimized.py evalml_2446 only_mock_part
+
 python3 summarize_projects.py opensearch-build_595 pydicom_1636 roms-tools_107 armi_1737 bilby_986 BuffaLogs_399 detection-rules_2626 lightning-thunder_2077 patientMatcher_262 dfm_tools_976 --suffix only_mock_part
 
 # https://github.com/scikit-learn/scikit-learn/pull/21984

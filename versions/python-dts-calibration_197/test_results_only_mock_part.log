@@ -1,0 +1,893 @@
+========================================
+Starting test runs for project: python-dts-calibration_197
+Config file: test_config_only_mock_part.sh
+Comparing: before vs after_careful_mock
+Iterations: 3
+Test command: python -m pytest tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore tests/test_dtscalibration.py::test_exponential_variance_of_stokes --durations=0 -v
+Log file: /data/SpeedUpSlowTest/versions/python-dts-calibration_197//test_results_only_mock_part.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Detected virtual environment-based project
+Activating virtual environment...
+
+=========================================
+Test run 1/3 for before
+Time: vr  5 dec 2025  0:53:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before
+configfile: pyproject.toml
+plugins: cov-7.0.0, anyio-4.12.0, timeout-2.4.0
+collecting ... collected 2 items
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore FAILED      [ 50%]
+tests/test_dtscalibration.py::test_exponential_variance_of_stokes PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_to_mf_netcdf_open_mf_datastore ______________________
+
+    def test_to_mf_netcdf_open_mf_datastore():
+        filepath = data_dir_single_ended
+        ds = read_silixa_files(directory=filepath, file_ext="*.xml")
+    
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            print("created temporary directory", tmpdirname)
+    
+            # work around the effects of deafault encoding.
+            path = os.path.join(tmpdirname, "ds_merged.nc")
+    
+            with read_silixa_files(directory=filepath, file_ext="*.xml") as ds:
+                ds.to_netcdf(path)
+    
+            time.sleep(5)  # to ensure all is written on Windows and file released
+    
+            with open_datastore(path, load_in_memory=True) as ds1:
+                # Test saving
+                ds1 = ds1.chunk({"time": 1})
+>               ds1.to_mf_netcdf(
+                    folder_path=tmpdirname,
+                    filename_preamble="file_",
+                    filename_extension=".nc",
+                )
+
+tests/test_datastore.py:513: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/dtscalibration/datastore.py:631: in to_mf_netcdf
+    *[
+src/dtscalibration/datastore.py:632: in <listcomp>
+    xr.backends.api.to_netcdf(
+venv/lib/python3.10/site-packages/xarray/backends/api.py:1928: in to_netcdf
+    dump_to_store(
+venv/lib/python3.10/site-packages/xarray/backends/api.py:1975: in dump_to_store
+    store.store(variables, attrs, check_encoding, writer, unlimited_dims=unlimited_dims)
+venv/lib/python3.10/site-packages/xarray/backends/common.py:456: in store
+    variables, attributes = self.encode(variables, attributes)
+venv/lib/python3.10/site-packages/xarray/backends/common.py:640: in encode
+    variables, attributes = cf_encoder(variables, attributes)
+venv/lib/python3.10/site-packages/xarray/conventions.py:787: in cf_encoder
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+venv/lib/python3.10/site-packages/xarray/conventions.py:787: in <dictcomp>
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+venv/lib/python3.10/site-packages/xarray/conventions.py:102: in encode_cf_variable
+    var = coder.encode(var, name=name)
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1375: in encode
+    (data, units, calendar) = encode_cf_datetime(data, units, calendar, dtype)
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1018: in encode_cf_datetime
+    return _lazily_encode_cf_datetime(dates, units, calendar, dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dates = dask.array<getitem, shape=(1,), dtype=datetime64[ns], chunksize=(1,), chunktype=numpy.ndarray>
+units = None, calendar = 'proleptic_gregorian', dtype = 'float32'
+
+    def _lazily_encode_cf_datetime(
+        dates: T_ChunkedArray,
+        units: str | None = None,
+        calendar: str | None = None,
+        dtype: np.dtype | None = None,
+    ) -> tuple[T_ChunkedArray, str, str]:
+        if calendar is None:
+            # This will only trigger minor compute if dates is an object dtype array.
+            calendar = infer_calendar_name(dates)
+    
+        if units is None and dtype is None:
+            if dates.dtype == "O":
+                units = "microseconds since 1970-01-01"
+                dtype = np.dtype("int64")
+            else:
+                netcdf_unit = _numpy_dtype_to_netcdf_timeunit(dates.dtype)
+                units = f"{netcdf_unit} since 1970-01-01"
+                dtype = np.dtype("int64")
+    
+        if units is None or dtype is None:
+>           raise ValueError(
+                f"When encoding chunked arrays of datetime values, both the units "
+                f"and dtype must be prescribed or both must be unprescribed. "
+                f"Prescribing only one or the other is not currently supported. "
+                f"Got a units encoding of {units} and a dtype encoding of {dtype}."
+            )
+E           ValueError: When encoding chunked arrays of datetime values, both the units and dtype must be prescribed or both must be unprescribed. Prescribing only one or the other is not currently supported. Got a units encoding of None and a dtype encoding of float32.
+
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1201: ValueError
+----------------------------- Captured stdout call -----------------------------
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+created temporary directory /tmp/tmp_iqjab7u
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+=============================== warnings summary ===============================
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/datastore.py:488: SerializationWarning: saving variable userAcquisitionTimeFW with floating point data as an integer dtype without any _FillValue to use for NaNs
+    return super(DataStore, self).to_netcdf(
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/io.py:126: FutureWarning: In a future version, xarray will not decode timedelta values based on the presence of a timedelta-like units attribute by default. Instead it will rely on the presence of a timedelta64 dtype attribute, which is now xarray's default way of encoding timedelta64 values. To continue decoding timedeltas based on the presence of a timedelta-like units attribute, users will need to explicitly opt-in by passing True or CFTimedeltaCoder(decode_via_units=True) to decode_timedelta. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+    with xr.open_dataset(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+15.54s call     tests/test_dtscalibration.py::test_exponential_variance_of_stokes
+5.39s call     tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore - ValueEr...
+=================== 1 failed, 1 passed, 4 warnings in 22.47s ===================
+Energy consumption in joules: 264.20494079589844 for 23.614777 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/3 for before
+Time: vr  5 dec 2025  0:53:29 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before
+configfile: pyproject.toml
+plugins: cov-7.0.0, anyio-4.12.0, timeout-2.4.0
+collecting ... collected 2 items
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore FAILED      [ 50%]
+tests/test_dtscalibration.py::test_exponential_variance_of_stokes PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_to_mf_netcdf_open_mf_datastore ______________________
+
+    def test_to_mf_netcdf_open_mf_datastore():
+        filepath = data_dir_single_ended
+        ds = read_silixa_files(directory=filepath, file_ext="*.xml")
+    
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            print("created temporary directory", tmpdirname)
+    
+            # work around the effects of deafault encoding.
+            path = os.path.join(tmpdirname, "ds_merged.nc")
+    
+            with read_silixa_files(directory=filepath, file_ext="*.xml") as ds:
+                ds.to_netcdf(path)
+    
+            time.sleep(5)  # to ensure all is written on Windows and file released
+    
+            with open_datastore(path, load_in_memory=True) as ds1:
+                # Test saving
+                ds1 = ds1.chunk({"time": 1})
+>               ds1.to_mf_netcdf(
+                    folder_path=tmpdirname,
+                    filename_preamble="file_",
+                    filename_extension=".nc",
+                )
+
+tests/test_datastore.py:513: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/dtscalibration/datastore.py:631: in to_mf_netcdf
+    *[
+src/dtscalibration/datastore.py:632: in <listcomp>
+    xr.backends.api.to_netcdf(
+venv/lib/python3.10/site-packages/xarray/backends/api.py:1928: in to_netcdf
+    dump_to_store(
+venv/lib/python3.10/site-packages/xarray/backends/api.py:1975: in dump_to_store
+    store.store(variables, attrs, check_encoding, writer, unlimited_dims=unlimited_dims)
+venv/lib/python3.10/site-packages/xarray/backends/common.py:456: in store
+    variables, attributes = self.encode(variables, attributes)
+venv/lib/python3.10/site-packages/xarray/backends/common.py:640: in encode
+    variables, attributes = cf_encoder(variables, attributes)
+venv/lib/python3.10/site-packages/xarray/conventions.py:787: in cf_encoder
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+venv/lib/python3.10/site-packages/xarray/conventions.py:787: in <dictcomp>
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+venv/lib/python3.10/site-packages/xarray/conventions.py:102: in encode_cf_variable
+    var = coder.encode(var, name=name)
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1375: in encode
+    (data, units, calendar) = encode_cf_datetime(data, units, calendar, dtype)
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1018: in encode_cf_datetime
+    return _lazily_encode_cf_datetime(dates, units, calendar, dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dates = dask.array<getitem, shape=(1,), dtype=datetime64[ns], chunksize=(1,), chunktype=numpy.ndarray>
+units = None, calendar = 'proleptic_gregorian', dtype = 'float32'
+
+    def _lazily_encode_cf_datetime(
+        dates: T_ChunkedArray,
+        units: str | None = None,
+        calendar: str | None = None,
+        dtype: np.dtype | None = None,
+    ) -> tuple[T_ChunkedArray, str, str]:
+        if calendar is None:
+            # This will only trigger minor compute if dates is an object dtype array.
+            calendar = infer_calendar_name(dates)
+    
+        if units is None and dtype is None:
+            if dates.dtype == "O":
+                units = "microseconds since 1970-01-01"
+                dtype = np.dtype("int64")
+            else:
+                netcdf_unit = _numpy_dtype_to_netcdf_timeunit(dates.dtype)
+                units = f"{netcdf_unit} since 1970-01-01"
+                dtype = np.dtype("int64")
+    
+        if units is None or dtype is None:
+>           raise ValueError(
+                f"When encoding chunked arrays of datetime values, both the units "
+                f"and dtype must be prescribed or both must be unprescribed. "
+                f"Prescribing only one or the other is not currently supported. "
+                f"Got a units encoding of {units} and a dtype encoding of {dtype}."
+            )
+E           ValueError: When encoding chunked arrays of datetime values, both the units and dtype must be prescribed or both must be unprescribed. Prescribing only one or the other is not currently supported. Got a units encoding of None and a dtype encoding of float32.
+
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1201: ValueError
+----------------------------- Captured stdout call -----------------------------
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+created temporary directory /tmp/tmp27nd5_8p
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+=============================== warnings summary ===============================
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/datastore.py:488: SerializationWarning: saving variable userAcquisitionTimeFW with floating point data as an integer dtype without any _FillValue to use for NaNs
+    return super(DataStore, self).to_netcdf(
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/io.py:126: FutureWarning: In a future version, xarray will not decode timedelta values based on the presence of a timedelta-like units attribute by default. Instead it will rely on the presence of a timedelta64 dtype attribute, which is now xarray's default way of encoding timedelta64 values. To continue decoding timedeltas based on the presence of a timedelta-like units attribute, users will need to explicitly opt-in by passing True or CFTimedeltaCoder(decode_via_units=True) to decode_timedelta. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+    with xr.open_dataset(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+17.17s call     tests/test_dtscalibration.py::test_exponential_variance_of_stokes
+5.54s call     tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore - ValueEr...
+=================== 1 failed, 1 passed, 4 warnings in 24.42s ===================
+Energy consumption in joules: 284.7201690673828 for 25.619246 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/3 for before
+Time: vr  5 dec 2025  0:54:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before
+configfile: pyproject.toml
+plugins: cov-7.0.0, anyio-4.12.0, timeout-2.4.0
+collecting ... collected 2 items
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore FAILED      [ 50%]
+tests/test_dtscalibration.py::test_exponential_variance_of_stokes PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_to_mf_netcdf_open_mf_datastore ______________________
+
+    def test_to_mf_netcdf_open_mf_datastore():
+        filepath = data_dir_single_ended
+        ds = read_silixa_files(directory=filepath, file_ext="*.xml")
+    
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            print("created temporary directory", tmpdirname)
+    
+            # work around the effects of deafault encoding.
+            path = os.path.join(tmpdirname, "ds_merged.nc")
+    
+            with read_silixa_files(directory=filepath, file_ext="*.xml") as ds:
+                ds.to_netcdf(path)
+    
+            time.sleep(5)  # to ensure all is written on Windows and file released
+    
+            with open_datastore(path, load_in_memory=True) as ds1:
+                # Test saving
+                ds1 = ds1.chunk({"time": 1})
+>               ds1.to_mf_netcdf(
+                    folder_path=tmpdirname,
+                    filename_preamble="file_",
+                    filename_extension=".nc",
+                )
+
+tests/test_datastore.py:513: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/dtscalibration/datastore.py:631: in to_mf_netcdf
+    *[
+src/dtscalibration/datastore.py:632: in <listcomp>
+    xr.backends.api.to_netcdf(
+venv/lib/python3.10/site-packages/xarray/backends/api.py:1928: in to_netcdf
+    dump_to_store(
+venv/lib/python3.10/site-packages/xarray/backends/api.py:1975: in dump_to_store
+    store.store(variables, attrs, check_encoding, writer, unlimited_dims=unlimited_dims)
+venv/lib/python3.10/site-packages/xarray/backends/common.py:456: in store
+    variables, attributes = self.encode(variables, attributes)
+venv/lib/python3.10/site-packages/xarray/backends/common.py:640: in encode
+    variables, attributes = cf_encoder(variables, attributes)
+venv/lib/python3.10/site-packages/xarray/conventions.py:787: in cf_encoder
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+venv/lib/python3.10/site-packages/xarray/conventions.py:787: in <dictcomp>
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+venv/lib/python3.10/site-packages/xarray/conventions.py:102: in encode_cf_variable
+    var = coder.encode(var, name=name)
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1375: in encode
+    (data, units, calendar) = encode_cf_datetime(data, units, calendar, dtype)
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1018: in encode_cf_datetime
+    return _lazily_encode_cf_datetime(dates, units, calendar, dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dates = dask.array<getitem, shape=(1,), dtype=datetime64[ns], chunksize=(1,), chunktype=numpy.ndarray>
+units = None, calendar = 'proleptic_gregorian', dtype = 'float32'
+
+    def _lazily_encode_cf_datetime(
+        dates: T_ChunkedArray,
+        units: str | None = None,
+        calendar: str | None = None,
+        dtype: np.dtype | None = None,
+    ) -> tuple[T_ChunkedArray, str, str]:
+        if calendar is None:
+            # This will only trigger minor compute if dates is an object dtype array.
+            calendar = infer_calendar_name(dates)
+    
+        if units is None and dtype is None:
+            if dates.dtype == "O":
+                units = "microseconds since 1970-01-01"
+                dtype = np.dtype("int64")
+            else:
+                netcdf_unit = _numpy_dtype_to_netcdf_timeunit(dates.dtype)
+                units = f"{netcdf_unit} since 1970-01-01"
+                dtype = np.dtype("int64")
+    
+        if units is None or dtype is None:
+>           raise ValueError(
+                f"When encoding chunked arrays of datetime values, both the units "
+                f"and dtype must be prescribed or both must be unprescribed. "
+                f"Prescribing only one or the other is not currently supported. "
+                f"Got a units encoding of {units} and a dtype encoding of {dtype}."
+            )
+E           ValueError: When encoding chunked arrays of datetime values, both the units and dtype must be prescribed or both must be unprescribed. Prescribing only one or the other is not currently supported. Got a units encoding of None and a dtype encoding of float32.
+
+venv/lib/python3.10/site-packages/xarray/coding/times.py:1201: ValueError
+----------------------------- Captured stdout call -----------------------------
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+created temporary directory /tmp/tmpeyvd25u1
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+=============================== warnings summary ===============================
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/datastore.py:488: SerializationWarning: saving variable userAcquisitionTimeFW with floating point data as an integer dtype without any _FillValue to use for NaNs
+    return super(DataStore, self).to_netcdf(
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/io.py:126: FutureWarning: In a future version, xarray will not decode timedelta values based on the presence of a timedelta-like units attribute by default. Instead it will rely on the presence of a timedelta64 dtype attribute, which is now xarray's default way of encoding timedelta64 values. To continue decoding timedeltas based on the presence of a timedelta-like units attribute, users will need to explicitly opt-in by passing True or CFTimedeltaCoder(decode_via_units=True) to decode_timedelta. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+    with xr.open_dataset(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+16.85s call     tests/test_dtscalibration.py::test_exponential_variance_of_stokes
+5.39s call     tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore - ValueEr...
+=================== 1 failed, 1 passed, 4 warnings in 23.81s ===================
+Energy consumption in joules: 276.5630187988281 for 24.816895 sec of execution.
+
+
+========================================
+Completed before version at: vr  5 dec 2025  0:54:25 CET
+========================================
+
+========================================
+Starting tests for after_careful_mock version
+========================================
+Detected virtual environment-based project
+Activating virtual environment...
+
+=========================================
+Test run 1/3 for after_careful_mock
+Time: vr  5 dec 2025  0:54:35 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /data/SpeedUpSlowTest/versions/python-dts-calibration_197/after_careful_mock
+configfile: pyproject.toml
+plugins: cov-7.0.0, anyio-4.12.0, timeout-2.4.0
+collecting ... collected 2 items
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore FAILED      [ 50%]
+tests/test_dtscalibration.py::test_exponential_variance_of_stokes PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_to_mf_netcdf_open_mf_datastore ______________________
+
+mock_sleep = <MagicMock name='sleep' id='132150003009040'>
+
+    @patch('time.sleep')  # Mock time.sleep to eliminate 7 seconds of delays (5s + 2s)
+    def test_to_mf_netcdf_open_mf_datastore(mock_sleep):
+        """
+        Test saving DataStore to multiple NetCDF files and reopening them.
+    
+        MOCKING APPLIED:
+        - time.sleep() is mocked to eliminate 7 seconds of delays
+        - The sleep calls were only for Windows file system synchronization
+        - Mocking doesn't affect test effectiveness as we verify data integrity
+        """
+        filepath = data_dir_single_ended
+        ds = read_silixa_files(directory=filepath, file_ext="*.xml")
+    
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            print("created temporary directory", tmpdirname)
+    
+            # work around the effects of deafault encoding.
+            path = os.path.join(tmpdirname, "ds_merged.nc")
+    
+            with read_silixa_files(directory=filepath, file_ext="*.xml") as ds:
+                ds.to_netcdf(path)
+    
+            time.sleep(5)  # to ensure all is written on Windows and file released (MOCKED)
+    
+            with open_datastore(path, load_in_memory=True) as ds1:
+                # Test saving
+                ds1 = ds1.chunk({"time": 1})
+>               ds1.to_mf_netcdf(
+                    folder_path=tmpdirname,
+                    filename_preamble="file_",
+                    filename_extension=".nc",
+                )
+
+tests/test_datastore.py:523: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../before/src/dtscalibration/datastore.py:631: in to_mf_netcdf
+    *[
+../before/src/dtscalibration/datastore.py:632: in <listcomp>
+    xr.backends.api.to_netcdf(
+../before/venv/lib/python3.10/site-packages/xarray/backends/api.py:1928: in to_netcdf
+    dump_to_store(
+../before/venv/lib/python3.10/site-packages/xarray/backends/api.py:1975: in dump_to_store
+    store.store(variables, attrs, check_encoding, writer, unlimited_dims=unlimited_dims)
+../before/venv/lib/python3.10/site-packages/xarray/backends/common.py:456: in store
+    variables, attributes = self.encode(variables, attributes)
+../before/venv/lib/python3.10/site-packages/xarray/backends/common.py:640: in encode
+    variables, attributes = cf_encoder(variables, attributes)
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:787: in cf_encoder
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:787: in <dictcomp>
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:102: in encode_cf_variable
+    var = coder.encode(var, name=name)
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1375: in encode
+    (data, units, calendar) = encode_cf_datetime(data, units, calendar, dtype)
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1018: in encode_cf_datetime
+    return _lazily_encode_cf_datetime(dates, units, calendar, dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dates = dask.array<getitem, shape=(1,), dtype=datetime64[ns], chunksize=(1,), chunktype=numpy.ndarray>
+units = None, calendar = 'proleptic_gregorian', dtype = 'float32'
+
+    def _lazily_encode_cf_datetime(
+        dates: T_ChunkedArray,
+        units: str | None = None,
+        calendar: str | None = None,
+        dtype: np.dtype | None = None,
+    ) -> tuple[T_ChunkedArray, str, str]:
+        if calendar is None:
+            # This will only trigger minor compute if dates is an object dtype array.
+            calendar = infer_calendar_name(dates)
+    
+        if units is None and dtype is None:
+            if dates.dtype == "O":
+                units = "microseconds since 1970-01-01"
+                dtype = np.dtype("int64")
+            else:
+                netcdf_unit = _numpy_dtype_to_netcdf_timeunit(dates.dtype)
+                units = f"{netcdf_unit} since 1970-01-01"
+                dtype = np.dtype("int64")
+    
+        if units is None or dtype is None:
+>           raise ValueError(
+                f"When encoding chunked arrays of datetime values, both the units "
+                f"and dtype must be prescribed or both must be unprescribed. "
+                f"Prescribing only one or the other is not currently supported. "
+                f"Got a units encoding of {units} and a dtype encoding of {dtype}."
+            )
+E           ValueError: When encoding chunked arrays of datetime values, both the units and dtype must be prescribed or both must be unprescribed. Prescribing only one or the other is not currently supported. Got a units encoding of None and a dtype encoding of float32.
+
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1201: ValueError
+----------------------------- Captured stdout call -----------------------------
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+created temporary directory /tmp/tmpc4zid5bk
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+=============================== warnings summary ===============================
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/datastore.py:488: SerializationWarning: saving variable userAcquisitionTimeFW with floating point data as an integer dtype without any _FillValue to use for NaNs
+    return super(DataStore, self).to_netcdf(
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/io.py:126: FutureWarning: In a future version, xarray will not decode timedelta values based on the presence of a timedelta-like units attribute by default. Instead it will rely on the presence of a timedelta64 dtype attribute, which is now xarray's default way of encoding timedelta64 values. To continue decoding timedeltas based on the presence of a timedelta-like units attribute, users will need to explicitly opt-in by passing True or CFTimedeltaCoder(decode_via_units=True) to decode_timedelta. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+    with xr.open_dataset(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+17.90s call     tests/test_dtscalibration.py::test_exponential_variance_of_stokes
+0.34s call     tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore - ValueEr...
+=================== 1 failed, 1 passed, 4 warnings in 20.37s ===================
+Energy consumption in joules: 259.6579132080078 for 21.818102 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 2/3 for after_careful_mock
+Time: vr  5 dec 2025  0:55:02 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /data/SpeedUpSlowTest/versions/python-dts-calibration_197/after_careful_mock
+configfile: pyproject.toml
+plugins: cov-7.0.0, anyio-4.12.0, timeout-2.4.0
+collecting ... collected 2 items
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore FAILED      [ 50%]
+tests/test_dtscalibration.py::test_exponential_variance_of_stokes PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_to_mf_netcdf_open_mf_datastore ______________________
+
+mock_sleep = <MagicMock name='sleep' id='136932767745456'>
+
+    @patch('time.sleep')  # Mock time.sleep to eliminate 7 seconds of delays (5s + 2s)
+    def test_to_mf_netcdf_open_mf_datastore(mock_sleep):
+        """
+        Test saving DataStore to multiple NetCDF files and reopening them.
+    
+        MOCKING APPLIED:
+        - time.sleep() is mocked to eliminate 7 seconds of delays
+        - The sleep calls were only for Windows file system synchronization
+        - Mocking doesn't affect test effectiveness as we verify data integrity
+        """
+        filepath = data_dir_single_ended
+        ds = read_silixa_files(directory=filepath, file_ext="*.xml")
+    
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            print("created temporary directory", tmpdirname)
+    
+            # work around the effects of deafault encoding.
+            path = os.path.join(tmpdirname, "ds_merged.nc")
+    
+            with read_silixa_files(directory=filepath, file_ext="*.xml") as ds:
+                ds.to_netcdf(path)
+    
+            time.sleep(5)  # to ensure all is written on Windows and file released (MOCKED)
+    
+            with open_datastore(path, load_in_memory=True) as ds1:
+                # Test saving
+                ds1 = ds1.chunk({"time": 1})
+>               ds1.to_mf_netcdf(
+                    folder_path=tmpdirname,
+                    filename_preamble="file_",
+                    filename_extension=".nc",
+                )
+
+tests/test_datastore.py:523: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../before/src/dtscalibration/datastore.py:631: in to_mf_netcdf
+    *[
+../before/src/dtscalibration/datastore.py:632: in <listcomp>
+    xr.backends.api.to_netcdf(
+../before/venv/lib/python3.10/site-packages/xarray/backends/api.py:1928: in to_netcdf
+    dump_to_store(
+../before/venv/lib/python3.10/site-packages/xarray/backends/api.py:1975: in dump_to_store
+    store.store(variables, attrs, check_encoding, writer, unlimited_dims=unlimited_dims)
+../before/venv/lib/python3.10/site-packages/xarray/backends/common.py:456: in store
+    variables, attributes = self.encode(variables, attributes)
+../before/venv/lib/python3.10/site-packages/xarray/backends/common.py:640: in encode
+    variables, attributes = cf_encoder(variables, attributes)
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:787: in cf_encoder
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:787: in <dictcomp>
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:102: in encode_cf_variable
+    var = coder.encode(var, name=name)
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1375: in encode
+    (data, units, calendar) = encode_cf_datetime(data, units, calendar, dtype)
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1018: in encode_cf_datetime
+    return _lazily_encode_cf_datetime(dates, units, calendar, dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dates = dask.array<getitem, shape=(1,), dtype=datetime64[ns], chunksize=(1,), chunktype=numpy.ndarray>
+units = None, calendar = 'proleptic_gregorian', dtype = 'float32'
+
+    def _lazily_encode_cf_datetime(
+        dates: T_ChunkedArray,
+        units: str | None = None,
+        calendar: str | None = None,
+        dtype: np.dtype | None = None,
+    ) -> tuple[T_ChunkedArray, str, str]:
+        if calendar is None:
+            # This will only trigger minor compute if dates is an object dtype array.
+            calendar = infer_calendar_name(dates)
+    
+        if units is None and dtype is None:
+            if dates.dtype == "O":
+                units = "microseconds since 1970-01-01"
+                dtype = np.dtype("int64")
+            else:
+                netcdf_unit = _numpy_dtype_to_netcdf_timeunit(dates.dtype)
+                units = f"{netcdf_unit} since 1970-01-01"
+                dtype = np.dtype("int64")
+    
+        if units is None or dtype is None:
+>           raise ValueError(
+                f"When encoding chunked arrays of datetime values, both the units "
+                f"and dtype must be prescribed or both must be unprescribed. "
+                f"Prescribing only one or the other is not currently supported. "
+                f"Got a units encoding of {units} and a dtype encoding of {dtype}."
+            )
+E           ValueError: When encoding chunked arrays of datetime values, both the units and dtype must be prescribed or both must be unprescribed. Prescribing only one or the other is not currently supported. Got a units encoding of None and a dtype encoding of float32.
+
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1201: ValueError
+----------------------------- Captured stdout call -----------------------------
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+created temporary directory /tmp/tmp49dnqmt6
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+=============================== warnings summary ===============================
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/datastore.py:488: SerializationWarning: saving variable userAcquisitionTimeFW with floating point data as an integer dtype without any _FillValue to use for NaNs
+    return super(DataStore, self).to_netcdf(
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/io.py:126: FutureWarning: In a future version, xarray will not decode timedelta values based on the presence of a timedelta-like units attribute by default. Instead it will rely on the presence of a timedelta64 dtype attribute, which is now xarray's default way of encoding timedelta64 values. To continue decoding timedeltas based on the presence of a timedelta-like units attribute, users will need to explicitly opt-in by passing True or CFTimedeltaCoder(decode_via_units=True) to decode_timedelta. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+    with xr.open_dataset(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+22.09s call     tests/test_dtscalibration.py::test_exponential_variance_of_stokes
+0.42s call     tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore - ValueEr...
+=================== 1 failed, 1 passed, 4 warnings in 24.26s ===================
+Energy consumption in joules: 266.4762420654297 for 25.41466 sec of execution.
+
+Sleeping 5 seconds...
+
+=========================================
+Test run 3/3 for after_careful_mock
+Time: vr  5 dec 2025  0:55:33 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /data/SpeedUpSlowTest/versions/python-dts-calibration_197/after_careful_mock
+configfile: pyproject.toml
+plugins: cov-7.0.0, anyio-4.12.0, timeout-2.4.0
+collecting ... collected 2 items
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore FAILED      [ 50%]
+tests/test_dtscalibration.py::test_exponential_variance_of_stokes PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_to_mf_netcdf_open_mf_datastore ______________________
+
+mock_sleep = <MagicMock name='sleep' id='138253650658832'>
+
+    @patch('time.sleep')  # Mock time.sleep to eliminate 7 seconds of delays (5s + 2s)
+    def test_to_mf_netcdf_open_mf_datastore(mock_sleep):
+        """
+        Test saving DataStore to multiple NetCDF files and reopening them.
+    
+        MOCKING APPLIED:
+        - time.sleep() is mocked to eliminate 7 seconds of delays
+        - The sleep calls were only for Windows file system synchronization
+        - Mocking doesn't affect test effectiveness as we verify data integrity
+        """
+        filepath = data_dir_single_ended
+        ds = read_silixa_files(directory=filepath, file_ext="*.xml")
+    
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            print("created temporary directory", tmpdirname)
+    
+            # work around the effects of deafault encoding.
+            path = os.path.join(tmpdirname, "ds_merged.nc")
+    
+            with read_silixa_files(directory=filepath, file_ext="*.xml") as ds:
+                ds.to_netcdf(path)
+    
+            time.sleep(5)  # to ensure all is written on Windows and file released (MOCKED)
+    
+            with open_datastore(path, load_in_memory=True) as ds1:
+                # Test saving
+                ds1 = ds1.chunk({"time": 1})
+>               ds1.to_mf_netcdf(
+                    folder_path=tmpdirname,
+                    filename_preamble="file_",
+                    filename_extension=".nc",
+                )
+
+tests/test_datastore.py:523: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../before/src/dtscalibration/datastore.py:631: in to_mf_netcdf
+    *[
+../before/src/dtscalibration/datastore.py:632: in <listcomp>
+    xr.backends.api.to_netcdf(
+../before/venv/lib/python3.10/site-packages/xarray/backends/api.py:1928: in to_netcdf
+    dump_to_store(
+../before/venv/lib/python3.10/site-packages/xarray/backends/api.py:1975: in dump_to_store
+    store.store(variables, attrs, check_encoding, writer, unlimited_dims=unlimited_dims)
+../before/venv/lib/python3.10/site-packages/xarray/backends/common.py:456: in store
+    variables, attributes = self.encode(variables, attributes)
+../before/venv/lib/python3.10/site-packages/xarray/backends/common.py:640: in encode
+    variables, attributes = cf_encoder(variables, attributes)
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:787: in cf_encoder
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:787: in <dictcomp>
+    new_vars = {k: encode_cf_variable(v, name=k) for k, v in variables.items()}
+../before/venv/lib/python3.10/site-packages/xarray/conventions.py:102: in encode_cf_variable
+    var = coder.encode(var, name=name)
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1375: in encode
+    (data, units, calendar) = encode_cf_datetime(data, units, calendar, dtype)
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1018: in encode_cf_datetime
+    return _lazily_encode_cf_datetime(dates, units, calendar, dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dates = dask.array<getitem, shape=(1,), dtype=datetime64[ns], chunksize=(1,), chunktype=numpy.ndarray>
+units = None, calendar = 'proleptic_gregorian', dtype = 'float32'
+
+    def _lazily_encode_cf_datetime(
+        dates: T_ChunkedArray,
+        units: str | None = None,
+        calendar: str | None = None,
+        dtype: np.dtype | None = None,
+    ) -> tuple[T_ChunkedArray, str, str]:
+        if calendar is None:
+            # This will only trigger minor compute if dates is an object dtype array.
+            calendar = infer_calendar_name(dates)
+    
+        if units is None and dtype is None:
+            if dates.dtype == "O":
+                units = "microseconds since 1970-01-01"
+                dtype = np.dtype("int64")
+            else:
+                netcdf_unit = _numpy_dtype_to_netcdf_timeunit(dates.dtype)
+                units = f"{netcdf_unit} since 1970-01-01"
+                dtype = np.dtype("int64")
+    
+        if units is None or dtype is None:
+>           raise ValueError(
+                f"When encoding chunked arrays of datetime values, both the units "
+                f"and dtype must be prescribed or both must be unprescribed. "
+                f"Prescribing only one or the other is not currently supported. "
+                f"Got a units encoding of {units} and a dtype encoding of {dtype}."
+            )
+E           ValueError: When encoding chunked arrays of datetime values, both the units and dtype must be prescribed or both must be unprescribed. Prescribing only one or the other is not currently supported. Got a units encoding of None and a dtype encoding of float32.
+
+../before/venv/lib/python3.10/site-packages/xarray/coding/times.py:1201: ValueError
+----------------------------- Captured stdout call -----------------------------
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+created temporary directory /tmp/tmp43y83n8p
+3 files were found, each representing a single timestep
+4 recorded vars were found: LAF, ST, AST, TMP
+Recorded at 1461 points along the cable
+The measurement is single ended
+Reading the data from disk
+=============================== warnings summary ===============================
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  <frozen importlib._bootstrap>:241: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 16 from C header, got 96 from PyObject
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/datastore.py:488: SerializationWarning: saving variable userAcquisitionTimeFW with floating point data as an integer dtype without any _FillValue to use for NaNs
+    return super(DataStore, self).to_netcdf(
+
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+  /data/SpeedUpSlowTest/versions/python-dts-calibration_197/before/src/dtscalibration/io.py:126: FutureWarning: In a future version, xarray will not decode timedelta values based on the presence of a timedelta-like units attribute by default. Instead it will rely on the presence of a timedelta64 dtype attribute, which is now xarray's default way of encoding timedelta64 values. To continue decoding timedeltas based on the presence of a timedelta-like units attribute, users will need to explicitly opt-in by passing True or CFTimedeltaCoder(decode_via_units=True) to decode_timedelta. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+    with xr.open_dataset(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+17.96s call     tests/test_dtscalibration.py::test_exponential_variance_of_stokes
+0.49s call     tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
+
+(4 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore - ValueEr...
+=================== 1 failed, 1 passed, 4 warnings in 20.12s ===================
+Energy consumption in joules: 261.1020202636719 for 21.212889 sec of execution.
+
+
+========================================
+Completed after_careful_mock version at: vr  5 dec 2025  0:55:55 CET
+========================================
+
+========================================
+All tests completed at: vr  5 dec 2025  0:55:55 CET
+Compared: before vs after_careful_mock
+Log file: /data/SpeedUpSlowTest/versions/python-dts-calibration_197//test_results_only_mock_part.log
+========================================

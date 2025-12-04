@@ -11,3 +11,6 @@ https://github.com/gyrinx-app/gyrinx/pull/390
 https://github.com/MESMER-group/mesmer/pull/311
 https://github.com/oceanprotocol/ocean.py/pull/1140
 https://github.com/asapdiscovery/asapdiscovery/pull/798
+https://github.com/alteryx/evalml/pull/2644
+https://github.com/asapdiscovery/asapdiscovery/pull/798
+https://github.com/dtscalibration/python-dts-calibration/pull/197

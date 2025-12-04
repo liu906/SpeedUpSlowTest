@@ -1,4 +1,4 @@
-PROJECT_PATH=dfm_tools_976
+PROJECT_PATH=python-dts-calibration_197
 
 here is my sudo pwd in case you need: 19970321
 # Prompt: Mock-Based Test Speedup
@@ -31,26 +31,13 @@ Analyze slow tests and apply mocking **only to external dependencies** to speed 
 Given a list of slowest tests from project `{PROJECT_PATH}/before` with "venv/" :
 
 ```
-331.62s call     tests/test_download.py::test_cds_credentials
-127.41s call     tests/test_coastlines.py::test_get_coastlines_gdb_global
-38.31s call     tests/test_download.py::test_download_hycom
-34.56s call     tests/test_examples.py::test_run_examples[postprocess_mapnc_ugrid]
-21.80s call     tests/test_dfm_tools.py::test_intersect_edges
-20.69s call     tests/test_interpolate_grid2bnd.py::test_interpolate_tide_to_forcingmodel
-11.93s call     tests/test_observations.py::test_ssh_catalog_subset[rwsddl]
-11.64s call     tests/test_examples.py::test_run_examples[postprocess_exporttoshapefile]
-9.46s call     tests/test_data.py::test_data_map
-7.12s call     tests/test_observations.py::test_ssh_retrieve_data[rwsddl]
-6.79s call     tests/test_examples.py::test_run_examples[postprocess_map_monthlymean]
-6.16s call     tests/test_observations.py::test_rwsddl_ssh_get_time_max
-5.87s call     tests/test_observations.py::test_ssh_netcdf_overview
-5.69s call     tests/test_observations.py::test_ssh_catalog_subset_expected_fields[rwsddl]
-5.14s call     tests/test_hydrolib_helpers.py::test_geodataframe_with_Polygon_to_PolyFile
-4.51s call     tests/test_observations.py::test_ssh_catalog_subset_expected_fields[ioc]
-4.27s call     tests/test_external_packages.py::test_ctx_add_basemap
-4.18s call     tests/test_examples.py::test_run_examples[postprocess_hisnc]
-4.08s call     tests/test_examples.py::test_run_examples[postprocess_interpolate_edgevar_tofaces]
-
+66.36s call     tests/test_dtscalibration.py::test_estimate_variance_of_temperature_estimate
+18.53s call     tests/test_dtscalibration.py::test_exponential_variance_of_stokes
+13.72s call     tests/test_dtscalibration.py::test_variance_input_types_double
+13.24s call     tests/test_dtscalibration.py::test_variance_input_types_single
+12.23s call     tests/test_dtscalibration.py::test_double_ended_variance_estimate_synthetic
+8.23s call     tests/test_dtscalibration.py::test_variance_of_stokes_linear_synthetic
+5.16s call     tests/test_datastore.py::test_to_mf_netcdf_open_mf_datastore
 ```
 
 For each slow test:
