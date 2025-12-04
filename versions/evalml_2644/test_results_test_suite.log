@@ -1,0 +1,349 @@
+========================================
+Starting test runs for project: evalml_2644
+Iterations: 1
+Test command: pytest evalml/ --durations=0 --timeout=300
+Log file: /data/SpeedUpSlowTest/versions/evalml_2644//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: numpy<1.24,>=1.20.0 in ./.venv/lib/python3.9/site-packages (1.23.5)
+Requirement already satisfied: numpy>=1.20.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 1)) (1.23.5)
+Requirement already satisfied: numba==0.53 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 2)) (0.53.0)
+Requirement already satisfied: pandas>=1.2.5 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 3)) (1.5.3)
+Requirement already satisfied: scipy>=1.5.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: scikit-learn>=0.24.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 5)) (1.6.1)
+Requirement already satisfied: scikit-optimize>=0.8.1 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 6)) (0.10.2)
+Requirement already satisfied: pyzmq>=20.0.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 7)) (27.1.0)
+Requirement already satisfied: colorama>=0.4.4 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 8)) (0.4.6)
+Requirement already satisfied: cloudpickle>=1.5.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 9)) (3.1.2)
+Requirement already satisfied: click>=7.1.2 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 10)) (8.1.8)
+Requirement already satisfied: psutil>=5.6.6 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 11)) (7.1.3)
+Requirement already satisfied: requirements-parser>=0.2.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 12)) (0.13.0)
+Requirement already satisfied: shap>=0.36.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 13)) (0.46.0)
+Requirement already satisfied: texttable>=1.6.2 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 14)) (1.7.0)
+Requirement already satisfied: woodwork==0.5.1 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 15)) (0.5.1)
+Requirement already satisfied: dask>=2.12.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 16)) (2024.2.1)
+Requirement already satisfied: featuretools>=0.26.1 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 17)) (0.27.1)
+Requirement already satisfied: nlp-primitives>=1.1.0 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 18)) (1.2.0)
+Requirement already satisfied: networkx<2.6,>=2.5 in ./.venv/lib/python3.9/site-packages (from -r core-requirements.txt (line 19)) (2.5.1)
+Requirement already satisfied: llvmlite<0.37,>=0.36.0rc1 in ./.venv/lib/python3.9/site-packages (from numba==0.53->-r core-requirements.txt (line 2)) (0.36.0)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.9/site-packages (from numba==0.53->-r core-requirements.txt (line 2)) (79.0.1)
+Requirement already satisfied: decorator<5,>=4.3 in ./.venv/lib/python3.9/site-packages (from networkx<2.6,>=2.5->-r core-requirements.txt (line 19)) (4.4.2)
+Requirement already satisfied: python-dateutil>=2.8.1 in ./.venv/lib/python3.9/site-packages (from pandas>=1.2.5->-r core-requirements.txt (line 3)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.9/site-packages (from pandas>=1.2.5->-r core-requirements.txt (line 3)) (2025.2)
+Requirement already satisfied: joblib>=1.2.0 in ./.venv/lib/python3.9/site-packages (from scikit-learn>=0.24.0->-r core-requirements.txt (line 5)) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./.venv/lib/python3.9/site-packages (from scikit-learn>=0.24.0->-r core-requirements.txt (line 5)) (3.6.0)
+Requirement already satisfied: pyaml>=16.9 in ./.venv/lib/python3.9/site-packages (from scikit-optimize>=0.8.1->-r core-requirements.txt (line 6)) (25.7.0)
+Requirement already satisfied: packaging>=21.3 in ./.venv/lib/python3.9/site-packages (from scikit-optimize>=0.8.1->-r core-requirements.txt (line 6)) (25.0)
+Requirement already satisfied: tqdm>=4.27.0 in ./.venv/lib/python3.9/site-packages (from shap>=0.36.0->-r core-requirements.txt (line 13)) (4.67.1)
+Requirement already satisfied: slicer==0.0.8 in ./.venv/lib/python3.9/site-packages (from shap>=0.36.0->-r core-requirements.txt (line 13)) (0.0.8)
+Requirement already satisfied: fsspec>=2021.09.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r core-requirements.txt (line 16)) (2025.10.0)
+Requirement already satisfied: partd>=1.2.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r core-requirements.txt (line 16)) (1.4.2)
+Requirement already satisfied: pyyaml>=5.3.1 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r core-requirements.txt (line 16)) (6.0.3)
+Requirement already satisfied: toolz>=0.10.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r core-requirements.txt (line 16)) (1.1.0)
+Requirement already satisfied: importlib-metadata>=4.13.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r core-requirements.txt (line 16)) (8.7.0)
+Requirement already satisfied: distributed>=2.12.0 in ./.venv/lib/python3.9/site-packages (from featuretools>=0.26.1->-r core-requirements.txt (line 17)) (2024.2.1)
+Requirement already satisfied: nltk>=3.4.5 in ./.venv/lib/python3.9/site-packages (from nlp-primitives>=1.1.0->-r core-requirements.txt (line 18)) (3.9.2)
+Requirement already satisfied: jinja2>=2.10.3 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (3.1.6)
+Requirement already satisfied: locket>=1.0.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (1.0.0)
+Requirement already satisfied: msgpack>=1.0.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (1.1.2)
+Requirement already satisfied: sortedcontainers>=2.0.5 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (2.4.0)
+Requirement already satisfied: tblib>=1.6.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (3.2.2)
+Requirement already satisfied: tornado>=6.0.4 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (6.5.2)
+Requirement already satisfied: urllib3>=1.24.3 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (2.5.0)
+Requirement already satisfied: zict>=3.0.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (3.0.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.9/site-packages (from importlib-metadata>=4.13.0->dask>=2.12.0->-r core-requirements.txt (line 16)) (3.23.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.9/site-packages (from jinja2>=2.10.3->distributed>=2.12.0->featuretools>=0.26.1->-r core-requirements.txt (line 17)) (3.0.3)
+Requirement already satisfied: regex>=2021.8.3 in ./.venv/lib/python3.9/site-packages (from nltk>=3.4.5->nlp-primitives>=1.1.0->-r core-requirements.txt (line 18)) (2025.11.3)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.9/site-packages (from python-dateutil>=2.8.1->pandas>=1.2.5->-r core-requirements.txt (line 3)) (1.17.0)
+Ignoring sktime: markers 'python_version < "3.9"' don't match your environment
+Requirement already satisfied: numpy>=1.20.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 1)) (1.23.5)
+Requirement already satisfied: numba==0.53 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 2)) (0.53.0)
+Requirement already satisfied: pandas>=1.2.5 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 3)) (1.5.3)
+Requirement already satisfied: scipy>=1.5.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: scikit-learn>=0.24.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 5)) (1.6.1)
+Requirement already satisfied: scikit-optimize>=0.8.1 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 6)) (0.10.2)
+Requirement already satisfied: pyzmq>=20.0.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 7)) (27.1.0)
+Requirement already satisfied: colorama>=0.4.4 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 8)) (0.4.6)
+Requirement already satisfied: cloudpickle>=1.5.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 9)) (3.1.2)
+Requirement already satisfied: click>=7.1.2 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 10)) (8.1.8)
+Requirement already satisfied: psutil>=5.6.6 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 11)) (7.1.3)
+Requirement already satisfied: requirements-parser>=0.2.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 12)) (0.13.0)
+Requirement already satisfied: shap>=0.36.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 13)) (0.46.0)
+Requirement already satisfied: texttable>=1.6.2 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 14)) (1.7.0)
+Requirement already satisfied: woodwork==0.5.1 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 15)) (0.5.1)
+Requirement already satisfied: dask>=2.12.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 16)) (2024.2.1)
+Requirement already satisfied: featuretools>=0.26.1 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (0.27.1)
+Requirement already satisfied: nlp-primitives>=1.1.0 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 18)) (1.2.0)
+Requirement already satisfied: networkx<2.6,>=2.5 in ./.venv/lib/python3.9/site-packages (from -r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 19)) (2.5.1)
+Collecting plotly>=5.0.0 (from -r requirements.txt (line 2))
+  Using cached plotly-6.5.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting kaleido>=0.1.0 (from -r requirements.txt (line 3))
+  Using cached kaleido-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting ipywidgets>=7.5 (from -r requirements.txt (line 4))
+  Using cached ipywidgets-8.1.8-py3-none-any.whl.metadata (2.4 kB)
+Collecting xgboost>=1.4.2 (from -r requirements.txt (line 5))
+  Using cached xgboost-2.1.4-py3-none-manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+Collecting catboost>=0.20 (from -r requirements.txt (line 6))
+  Using cached catboost-1.2.8-cp39-cp39-manylinux2014_x86_64.whl.metadata (1.2 kB)
+Collecting lightgbm>=2.3.1 (from -r requirements.txt (line 7))
+  Using cached lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl.metadata (17 kB)
+Collecting matplotlib>=3.3.3 (from -r requirements.txt (line 8))
+  Using cached matplotlib-3.9.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting graphviz>=0.13 (from -r requirements.txt (line 9))
+  Using cached graphviz-0.21-py3-none-any.whl.metadata (12 kB)
+Collecting seaborn>=0.11.1 (from -r requirements.txt (line 10))
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting category_encoders>=2.2.2 (from -r requirements.txt (line 11))
+  Using cached category_encoders-2.6.4-py2.py3-none-any.whl.metadata (8.0 kB)
+Collecting statsmodels>=0.12.2 (from -r requirements.txt (line 12))
+  Using cached statsmodels-0.14.5-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Collecting imbalanced-learn>=0.8.0 (from -r requirements.txt (line 13))
+  Using cached imbalanced_learn-0.12.4-py3-none-any.whl.metadata (8.3 kB)
+Collecting pmdarima==1.8.0 (from -r requirements.txt (line 14))
+  Using cached pmdarima-1.8.0.tar.gz (1.0 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: llvmlite<0.37,>=0.36.0rc1 in ./.venv/lib/python3.9/site-packages (from numba==0.53->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 2)) (0.36.0)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.9/site-packages (from numba==0.53->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 2)) (79.0.1)
+Requirement already satisfied: joblib>=0.11 in ./.venv/lib/python3.9/site-packages (from pmdarima==1.8.0->-r requirements.txt (line 14)) (1.5.2)
+Collecting Cython<0.29.18,>=0.29 (from pmdarima==1.8.0->-r requirements.txt (line 14))
+  Using cached Cython-0.29.17-py2.py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: urllib3 in ./.venv/lib/python3.9/site-packages (from pmdarima==1.8.0->-r requirements.txt (line 14)) (2.5.0)
+Requirement already satisfied: decorator<5,>=4.3 in ./.venv/lib/python3.9/site-packages (from networkx<2.6,>=2.5->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 19)) (4.4.2)
+Requirement already satisfied: python-dateutil>=2.8.1 in ./.venv/lib/python3.9/site-packages (from pandas>=1.2.5->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 3)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.9/site-packages (from pandas>=1.2.5->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 3)) (2025.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./.venv/lib/python3.9/site-packages (from scikit-learn>=0.24.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 5)) (3.6.0)
+Requirement already satisfied: pyaml>=16.9 in ./.venv/lib/python3.9/site-packages (from scikit-optimize>=0.8.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 6)) (25.7.0)
+Requirement already satisfied: packaging>=21.3 in ./.venv/lib/python3.9/site-packages (from scikit-optimize>=0.8.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 6)) (25.0)
+Requirement already satisfied: tqdm>=4.27.0 in ./.venv/lib/python3.9/site-packages (from shap>=0.36.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 13)) (4.67.1)
+Requirement already satisfied: slicer==0.0.8 in ./.venv/lib/python3.9/site-packages (from shap>=0.36.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 13)) (0.0.8)
+Requirement already satisfied: fsspec>=2021.09.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 16)) (2025.10.0)
+Requirement already satisfied: partd>=1.2.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 16)) (1.4.2)
+Requirement already satisfied: pyyaml>=5.3.1 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 16)) (6.0.3)
+Requirement already satisfied: toolz>=0.10.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 16)) (1.1.0)
+Requirement already satisfied: importlib-metadata>=4.13.0 in ./.venv/lib/python3.9/site-packages (from dask>=2.12.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 16)) (8.7.0)
+Requirement already satisfied: distributed>=2.12.0 in ./.venv/lib/python3.9/site-packages (from featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (2024.2.1)
+Requirement already satisfied: nltk>=3.4.5 in ./.venv/lib/python3.9/site-packages (from nlp-primitives>=1.1.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 18)) (3.9.2)
+Collecting narwhals>=1.15.1 (from plotly>=5.0.0->-r requirements.txt (line 2))
+  Using cached narwhals-2.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting choreographer>=1.1.1 (from kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached choreographer-1.2.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting logistro>=1.0.8 (from kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached logistro-2.0.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting orjson>=3.10.15 (from kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached orjson-3.11.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+Collecting pytest-timeout>=2.4.0 (from kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached pytest_timeout-2.4.0-py3-none-any.whl.metadata (20 kB)
+Collecting comm>=0.1.3 (from ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting ipython>=6.1.0 (from ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached ipython-8.18.1-py3-none-any.whl.metadata (6.0 kB)
+Collecting traitlets>=4.3.1 (from ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Collecting widgetsnbextension~=4.0.14 (from ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached widgetsnbextension-4.0.15-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyterlab_widgets~=3.0.15 (from ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached jupyterlab_widgets-3.0.16-py3-none-any.whl.metadata (20 kB)
+Collecting nvidia-nccl-cu12 (from xgboost>=1.4.2->-r requirements.txt (line 5))
+  Using cached nvidia_nccl_cu12-2.28.9-py3-none-manylinux_2_18_x86_64.whl.metadata (2.0 kB)
+Requirement already satisfied: six in ./.venv/lib/python3.9/site-packages (from catboost>=0.20->-r requirements.txt (line 6)) (1.17.0)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.3.3->-r requirements.txt (line 8))
+  Using cached contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.4 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.3.3->-r requirements.txt (line 8))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.3.3->-r requirements.txt (line 8))
+  Using cached fonttools-4.60.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.3.3->-r requirements.txt (line 8))
+  Using cached kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.3 kB)
+Collecting pillow>=8 (from matplotlib>=3.3.3->-r requirements.txt (line 8))
+  Using cached pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=3.3.3->-r requirements.txt (line 8))
+  Using cached pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Collecting importlib-resources>=3.2.0 (from matplotlib>=3.3.3->-r requirements.txt (line 8))
+  Using cached importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting patsy>=0.5.1 (from category_encoders>=2.2.2->-r requirements.txt (line 11))
+  Using cached patsy-1.0.2-py2.py3-none-any.whl.metadata (3.6 kB)
+Collecting simplejson>=3.19.3 (from choreographer>=1.1.1->kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached simplejson-3.20.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Requirement already satisfied: jinja2>=2.10.3 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (3.1.6)
+Requirement already satisfied: locket>=1.0.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (1.0.0)
+Requirement already satisfied: msgpack>=1.0.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (1.1.2)
+Requirement already satisfied: sortedcontainers>=2.0.5 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (2.4.0)
+Requirement already satisfied: tblib>=1.6.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (3.2.2)
+Requirement already satisfied: tornado>=6.0.4 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (6.5.2)
+Requirement already satisfied: zict>=3.0.0 in ./.venv/lib/python3.9/site-packages (from distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (3.0.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.9/site-packages (from importlib-metadata>=4.13.0->dask>=2.12.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 16)) (3.23.0)
+Collecting jedi>=0.16 (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting matplotlib-inline (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting prompt-toolkit<3.1.0,>=3.0.41 (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting pygments>=2.4.0 (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting stack-data (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting typing-extensions (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting exceptiongroup (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting pexpect>4.3 (from ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting wcwidth (from prompt-toolkit<3.1.0,>=3.0.41->ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.9/site-packages (from jinja2>=2.10.3->distributed>=2.12.0->featuretools>=0.26.1->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 17)) (3.0.3)
+Requirement already satisfied: regex>=2021.8.3 in ./.venv/lib/python3.9/site-packages (from nltk>=3.4.5->nlp-primitives>=1.1.0->-r /data/SpeedUpSlowTest/versions/evalml_2644/before/core-requirements.txt (line 18)) (2025.11.3)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting pytest>=7.0.0 (from pytest-timeout>=2.4.0->kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+Collecting iniconfig>=1 (from pytest>=7.0.0->pytest-timeout>=2.4.0->kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->pytest-timeout>=2.4.0->kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting tomli>=1 (from pytest>=7.0.0->pytest-timeout>=2.4.0->kaleido>=0.1.0->-r requirements.txt (line 3))
+  Using cached tomli-2.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting executing>=1.2.0 (from stack-data->ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting asttokens>=2.1.0 (from stack-data->ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached asttokens-3.0.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting pure-eval (from stack-data->ipython>=6.1.0->ipywidgets>=7.5->-r requirements.txt (line 4))
+  Using cached pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+Using cached Cython-0.29.17-py2.py3-none-any.whl (971 kB)
+Using cached plotly-6.5.0-py3-none-any.whl (9.9 MB)
+Using cached kaleido-1.2.0-py3-none-any.whl (68 kB)
+Using cached ipywidgets-8.1.8-py3-none-any.whl (139 kB)
+Using cached jupyterlab_widgets-3.0.16-py3-none-any.whl (914 kB)
+Using cached widgetsnbextension-4.0.15-py3-none-any.whl (2.2 MB)
+Using cached xgboost-2.1.4-py3-none-manylinux_2_28_x86_64.whl (223.6 MB)
+Using cached catboost-1.2.8-cp39-cp39-manylinux2014_x86_64.whl (99.2 MB)
+Using cached lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl (3.6 MB)
+Using cached matplotlib-3.9.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+Using cached graphviz-0.21-py3-none-any.whl (47 kB)
+Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+Using cached category_encoders-2.6.4-py2.py3-none-any.whl (82 kB)
+Using cached statsmodels-0.14.5-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.7 MB)
+Using cached imbalanced_learn-0.12.4-py3-none-any.whl (258 kB)
+Using cached choreographer-1.2.1-py3-none-any.whl (49 kB)
+Using cached comm-0.2.3-py3-none-any.whl (7.3 kB)
+Using cached contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (321 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached fonttools-4.60.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.8 MB)
+Using cached importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+Using cached ipython-8.18.1-py3-none-any.whl (808 kB)
+Using cached prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Using cached jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+Using cached parso-0.8.5-py2.py3-none-any.whl (106 kB)
+Using cached kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+Using cached logistro-2.0.1-py3-none-any.whl (8.6 kB)
+Using cached narwhals-2.13.0-py3-none-any.whl (426 kB)
+Using cached orjson-3.11.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (136 kB)
+Using cached patsy-1.0.2-py2.py3-none-any.whl (233 kB)
+Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Using cached pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Using cached pyparsing-3.2.5-py3-none-any.whl (113 kB)
+Using cached pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+Using cached pytest-8.4.2-py3-none-any.whl (365 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Using cached iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Using cached simplejson-3.20.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (137 kB)
+Using cached tomli-2.3.0-py3-none-any.whl (14 kB)
+Using cached traitlets-5.14.3-py3-none-any.whl (85 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+Using cached nvidia_nccl_cu12-2.28.9-py3-none-manylinux_2_18_x86_64.whl (296.8 MB)
+Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Using cached asttokens-3.0.1-py3-none-any.whl (27 kB)
+Using cached executing-2.2.1-py2.py3-none-any.whl (28 kB)
+Using cached pure_eval-0.2.3-py3-none-any.whl (11 kB)
+Using cached wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+Building wheels for collected packages: pmdarima
+  Building wheel for pmdarima (pyproject.toml): started
+  Building wheel for pmdarima (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for pmdarima (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [35 lines of output]
+      <string>:15: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+      Partial import of pmdarima during the build process.
+      Traceback (most recent call last):
+        File "<string>", line 182, in check_package_status
+        File "/usr/lib/python3.9/importlib/__init__.py", line 127, in import_module
+          return _bootstrap._gcd_import(name[level:], package, level)
+        File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+      ModuleNotFoundError: No module named 'numpy'
+      Requirements: ['joblib>=0.11', 'Cython>=0.29,<0.29.18', 'numpy>=1.17.3', 'pandas>=0.19', 'scikit-learn>=0.22', 'scipy>=1.3.2', 'statsmodels>=0.11,!=0.12.0', 'urllib3', 'setuptools>=38.6.0,!=50.0.0']
+      Adding extra setuptools args
+      Traceback (most recent call last):
+        File "/data/SpeedUpSlowTest/versions/evalml_2644/before/.venv/lib/python3.9/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+        File "/data/SpeedUpSlowTest/versions/evalml_2644/before/.venv/lib/python3.9/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+        File "/data/SpeedUpSlowTest/versions/evalml_2644/before/.venv/lib/python3.9/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 280, in build_wheel
+          return _build_backend().build_wheel(
+        File "/tmp/pip-build-env-2zahkiyv/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 435, in build_wheel
+          return _build(['bdist_wheel', '--dist-info-dir', str(metadata_directory)])
+        File "/tmp/pip-build-env-2zahkiyv/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 423, in _build
+          return self._build_with_temp_dir(
+        File "/tmp/pip-build-env-2zahkiyv/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 404, in _build_with_temp_dir
+          self.run_setup()
+        File "/tmp/pip-build-env-2zahkiyv/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 512, in run_setup
+          super().run_setup(setup_script=setup_script)
+        File "/tmp/pip-build-env-2zahkiyv/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+        File "<string>", line 327, in <module>
+        File "<string>", line 314, in do_setup
+        File "<string>", line 202, in check_package_status
+      ImportError: numpy is not installed.
+      pmdarima requires numpy >= 1.16.
+      
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pmdarima
+Failed to build pmdarima
+error: failed-wheel-build-for-install
+
+× Failed to build installable wheels for some pyproject.toml based projects
+╰─> pmdarima
+
+=========================================
+Test run 1/1 for before
+Time: do  4 dec 2025 21:58:06 CET
+=========================================
+ImportError while loading conftest '/data/SpeedUpSlowTest/versions/evalml_2644/before/evalml/tests/conftest.py'.
+evalml/__init__.py:6: in <module>
+    import evalml.demos
+evalml/demos/__init__.py:1: in <module>
+    from .breast_cancer import load_breast_cancer
+evalml/demos/breast_cancer.py:1: in <module>
+    import woodwork as ww
+E   ModuleNotFoundError: No module named 'woodwork'
+Energy consumption in joules: 33.77490234375 for 2.2072275 sec of execution.
+
+
+========================================
+Completed before version at: do  4 dec 2025 21:58:09 CET
+========================================
+
+========================================
+All tests completed at: do  4 dec 2025 21:58:09 CET
+Log file: /data/SpeedUpSlowTest/versions/evalml_2644//test_results_test_suite.log
+========================================

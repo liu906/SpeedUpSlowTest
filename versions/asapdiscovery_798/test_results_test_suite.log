@@ -1,0 +1,163 @@
+========================================
+Starting test runs for project: asapdiscovery_798
+Iterations: 1
+Test command: python -m pytest --durations=0 -v --tb=no -p no:warnings --continue-on-collection-errors || true
+Log file: /data/SpeedUpSlowTest/versions/asapdiscovery_798//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Reinitialized existing Git repository in /data/SpeedUpSlowTest/versions/asapdiscovery_798/before/.git/
+On branch master
+nothing to commit, working tree clean
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (9.0.1)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (7.0.0)
+Requirement already satisfied: pytest-xdist in ./.venv/lib/python3.10/site-packages (3.8.0)
+Requirement already satisfied: pytest-timeout in ./.venv/lib/python3.10/site-packages (2.4.0)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.1)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.12.0)
+Requirement already satisfied: execnet>=2.1 in ./.venv/lib/python3.10/site-packages (from pytest-xdist) (2.1.2)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Requirement already satisfied: click in ./.venv/lib/python3.10/site-packages (8.3.1)
+Requirement already satisfied: appdirs in ./.venv/lib/python3.10/site-packages (1.4.4)
+Requirement already satisfied: pandas in ./.venv/lib/python3.10/site-packages (2.3.3)
+Requirement already satisfied: pydantic<2.0.0a0,>=1.10.8 in ./.venv/lib/python3.10/site-packages (1.10.24)
+Requirement already satisfied: seaborn in ./.venv/lib/python3.10/site-packages (0.13.2)
+Requirement already satisfied: requests in ./.venv/lib/python3.10/site-packages (2.32.5)
+Requirement already satisfied: boto3 in ./.venv/lib/python3.10/site-packages (1.42.3)
+Requirement already satisfied: moto in ./.venv/lib/python3.10/site-packages (5.1.18)
+Requirement already satisfied: flask in ./.venv/lib/python3.10/site-packages (3.1.2)
+Requirement already satisfied: flask-cors in ./.venv/lib/python3.10/site-packages (6.0.1)
+Requirement already satisfied: typing-extensions in ./.venv/lib/python3.10/site-packages (4.15.0)
+Requirement already satisfied: biopython in ./.venv/lib/python3.10/site-packages (1.86)
+Requirement already satisfied: pyyaml in ./.venv/lib/python3.10/site-packages (6.0.3)
+Requirement already satisfied: sigfig in ./.venv/lib/python3.10/site-packages (1.3.19)
+Requirement already satisfied: validators in ./.venv/lib/python3.10/site-packages (0.35.0)
+Requirement already satisfied: ase in ./.venv/lib/python3.10/site-packages (3.26.0)
+Requirement already satisfied: numpy>=1.22.4 in ./.venv/lib/python3.10/site-packages (from pandas) (2.2.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.10/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.10/site-packages (from pandas) (2025.2)
+Requirement already satisfied: matplotlib!=3.6.1,>=3.4 in ./.venv/lib/python3.10/site-packages (from seaborn) (3.10.7)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.10/site-packages (from requests) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests) (2025.11.12)
+Requirement already satisfied: botocore<1.43.0,>=1.42.3 in ./.venv/lib/python3.10/site-packages (from boto3) (1.42.3)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./.venv/lib/python3.10/site-packages (from boto3) (1.0.1)
+Requirement already satisfied: s3transfer<0.17.0,>=0.16.0 in ./.venv/lib/python3.10/site-packages (from boto3) (0.16.0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: cryptography>=35.0.0 in ./.venv/lib/python3.10/site-packages (from moto) (46.0.3)
+Requirement already satisfied: xmltodict in ./.venv/lib/python3.10/site-packages (from moto) (1.0.2)
+Requirement already satisfied: werkzeug!=2.2.0,!=2.2.1,>=0.5 in ./.venv/lib/python3.10/site-packages (from moto) (3.1.4)
+Requirement already satisfied: responses!=0.25.5,>=0.15.0 in ./.venv/lib/python3.10/site-packages (from moto) (0.25.8)
+Requirement already satisfied: Jinja2>=2.10.1 in ./.venv/lib/python3.10/site-packages (from moto) (3.1.6)
+Requirement already satisfied: blinker>=1.9.0 in ./.venv/lib/python3.10/site-packages (from flask) (1.9.0)
+Requirement already satisfied: itsdangerous>=2.2.0 in ./.venv/lib/python3.10/site-packages (from flask) (2.2.0)
+Requirement already satisfied: markupsafe>=2.1.1 in ./.venv/lib/python3.10/site-packages (from flask) (3.0.3)
+Requirement already satisfied: sortedcontainers<3.0.0,>=2.4.0 in ./.venv/lib/python3.10/site-packages (from sigfig) (2.4.0)
+Requirement already satisfied: scipy>=1.6.0 in ./.venv/lib/python3.10/site-packages (from ase) (1.15.3)
+Requirement already satisfied: cffi>=2.0.0 in ./.venv/lib/python3.10/site-packages (from cryptography>=35.0.0->moto) (2.0.0)
+Requirement already satisfied: pycparser in ./.venv/lib/python3.10/site-packages (from cffi>=2.0.0->cryptography>=35.0.0->moto) (2.23)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (4.61.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (25.0)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (12.0.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv/lib/python3.10/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (3.2.5)
+Looking in indexes: https://download.pytorch.org/whl/cpu
+Requirement already satisfied: pooch in ./.venv/lib/python3.10/site-packages (1.8.2)
+Requirement already satisfied: mdanalysis in ./.venv/lib/python3.10/site-packages (2.9.0)
+Requirement already satisfied: rdkit-pypi in ./.venv/lib/python3.10/site-packages (2022.9.5)
+ERROR: Could not find a version that satisfies the requirement logomaker (from versions: none)
+ERROR: No matching distribution found for logomaker
+
+=========================================
+Test run 1/1 for before
+Time: do  4 dec 2025 21:33:00 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0 -- /data/SpeedUpSlowTest/versions/asapdiscovery_798/before/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /data/SpeedUpSlowTest/versions/asapdiscovery_798/before
+configfile: pyproject.toml
+plugins: cov-7.0.0, timeout-2.4.0, xdist-3.8.0
+collecting ... collected 21 items / 7 errors
+
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_gif_viz.py::test_gif_viz ERROR [  4%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_traj_to_viz ERROR [  9%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[DENV-NS2B-NS3pro] ERROR [ 14%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-A71-3Cpro] ERROR [ 19%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-A71-Capsid] ERROR [ 23%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-D68-3Cpro] ERROR [ 28%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-D68-Capsid] ERROR [ 33%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[MERS-CoV-Mpro] ERROR [ 38%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[SARS-CoV-2-Mac1] ERROR [ 42%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[SARS-CoV-2-Mpro] ERROR [ 47%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[ZIKV-NS2B-NS3pro] ERROR [ 52%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[DENV-NS2B-NS3pro] ERROR [ 57%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-A71-3Cpro] ERROR [ 61%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-A71-Capsid] ERROR [ 66%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-D68-3Cpro] ERROR [ 71%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-D68-Capsid] ERROR [ 76%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[MERS-CoV-Mpro] ERROR [ 80%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[SARS-CoV-2-Mac1] ERROR [ 85%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[SARS-CoV-2-Mpro] ERROR [ 90%]
+asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[ZIKV-NS2B-NS3pro] ERROR [ 95%]
+asapdiscovery-simulation/asapdiscovery/simulation/tests/test_simulate.py::test_placeholder PASSED [100%]
+
+============================== slowest durations ===============================
+0.53s setup    asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_gif_viz.py::test_gif_viz
+0.40s setup    asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[DENV-NS2B-NS3pro]
+0.38s setup    asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[DENV-NS2B-NS3pro]
+
+(40 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+ERROR asapdiscovery-alchemy/asapdiscovery/alchemy/tests - ModuleNotFoundError...
+ERROR asapdiscovery-data/asapdiscovery/data/scripts/epik_regression_test.py
+ERROR asapdiscovery-data/asapdiscovery/data/tests - ImportError: cannot impor...
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_html_viz.py
+ERROR asapdiscovery-docking/asapdiscovery/docking/tests - ImportError: cannot...
+ERROR asapdiscovery-ml/asapdiscovery/ml/tests - ModuleNotFoundError: No modul...
+ERROR asapdiscovery-modeling/asapdiscovery/modeling/tests - ImportError: cann...
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_gif_viz.py::test_gif_viz
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_traj_to_viz
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[DENV-NS2B-NS3pro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-A71-3Cpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-A71-Capsid]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-D68-3Cpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[EV-D68-Capsid]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[MERS-CoV-Mpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[SARS-CoV-2-Mac1]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[SARS-CoV-2-Mpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz[ZIKV-NS2B-NS3pro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[DENV-NS2B-NS3pro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-A71-3Cpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-A71-Capsid]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-D68-3Cpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[EV-D68-Capsid]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[MERS-CoV-Mpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[SARS-CoV-2-Mac1]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[SARS-CoV-2-Mpro]
+ERROR asapdiscovery-dataviz/asapdiscovery/dataviz/tests/test_viz_scripts.py::test_pose_to_viz_pymol[ZIKV-NS2B-NS3pro]
+========================= 1 passed, 27 errors in 2.08s =========================
+Energy consumption in joules: 42.76957702636719 for 2.604895 sec of execution.
+
+
+========================================
+Completed before version at: do  4 dec 2025 21:33:03 CET
+========================================
+
+========================================
+All tests completed at: do  4 dec 2025 21:33:03 CET
+Log file: /data/SpeedUpSlowTest/versions/asapdiscovery_798//test_results_test_suite.log
+========================================

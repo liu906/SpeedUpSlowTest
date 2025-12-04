@@ -1,0 +1,1913 @@
+========================================
+Starting test runs for project: mesmer_311
+Iterations: 1
+Test command: python -m pytest tests/ --durations=0
+Log file: /data/SpeedUpSlowTest/versions/mesmer_311//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: numpy<2.0 in ./.venv/lib/python3.10/site-packages (1.26.4)
+Collecting netcdf4
+  Using cached netcdf4-1.7.3-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.9 kB)
+Collecting cftime
+  Using cached cftime-1.6.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (8.7 kB)
+Requirement already satisfied: certifi in ./.venv/lib/python3.10/site-packages (from netcdf4) (2025.11.12)
+Using cached netcdf4-1.7.3-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.5 MB)
+Using cached cftime-1.6.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.6 MB)
+Installing collected packages: cftime, netcdf4
+
+Successfully installed cftime-1.6.5 netcdf4-1.7.3
+Requirement already satisfied: pytest in ./.venv/lib/python3.10/site-packages (9.0.1)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.10/site-packages (7.0.0)
+Requirement already satisfied: pytest-xdist in ./.venv/lib/python3.10/site-packages (3.8.0)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (1.3.1)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.10/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.10/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.10/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.10/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.10/site-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.12.0)
+Requirement already satisfied: execnet>=2.1 in ./.venv/lib/python3.10/site-packages (from pytest-xdist) (2.1.2)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.10/site-packages (from exceptiongroup>=1->pytest) (4.15.0)
+Obtaining file:///data/SpeedUpSlowTest/versions/mesmer_311/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: dask[complete] in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (2024.2.1)
+Requirement already satisfied: numpy in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (1.26.4)
+Requirement already satisfied: packaging in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (25.0)
+Requirement already satisfied: pandas<2.0 in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (1.5.3)
+Requirement already satisfied: pooch in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (1.8.2)
+Requirement already satisfied: regionmask in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (0.13.0)
+Requirement already satisfied: scikit-learn in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (1.7.2)
+Requirement already satisfied: statsmodels in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (0.14.5)
+Requirement already satisfied: xarray in ./.venv/lib/python3.10/site-packages (from mesmer-emulator==999) (2024.3.0)
+Requirement already satisfied: python-dateutil>=2.8.1 in ./.venv/lib/python3.10/site-packages (from pandas<2.0->mesmer-emulator==999) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.10/site-packages (from pandas<2.0->mesmer-emulator==999) (2025.2)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.10/site-packages (from python-dateutil>=2.8.1->pandas<2.0->mesmer-emulator==999) (1.17.0)
+Requirement already satisfied: click>=8.1 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (8.3.1)
+Requirement already satisfied: cloudpickle>=1.5.0 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (3.1.2)
+Requirement already satisfied: fsspec>=2021.09.0 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (2025.12.0)
+Requirement already satisfied: partd>=1.2.0 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (1.4.2)
+Requirement already satisfied: pyyaml>=5.3.1 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (6.0.3)
+Requirement already satisfied: toolz>=0.10.0 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (1.1.0)
+Requirement already satisfied: importlib-metadata>=4.13.0 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (8.7.0)
+Requirement already satisfied: pyarrow>=7.0 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (22.0.0)
+Requirement already satisfied: pyarrow-hotfix in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (0.7)
+Requirement already satisfied: lz4>=4.3.2 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (4.4.5)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.10/site-packages (from importlib-metadata>=4.13.0->dask[complete]->mesmer-emulator==999) (3.23.0)
+Requirement already satisfied: locket in ./.venv/lib/python3.10/site-packages (from partd>=1.2.0->dask[complete]->mesmer-emulator==999) (1.0.0)
+Requirement already satisfied: bokeh>=2.4.2 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (3.8.1)
+Requirement already satisfied: jinja2>=2.10.3 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (3.1.6)
+Requirement already satisfied: distributed==2024.2.1 in ./.venv/lib/python3.10/site-packages (from dask[complete]->mesmer-emulator==999) (2024.2.1)
+Requirement already satisfied: msgpack>=1.0.0 in ./.venv/lib/python3.10/site-packages (from distributed==2024.2.1->dask[complete]->mesmer-emulator==999) (1.1.2)
+Requirement already satisfied: psutil>=5.7.2 in ./.venv/lib/python3.10/site-packages (from distributed==2024.2.1->dask[complete]->mesmer-emulator==999) (7.1.3)
+Requirement already satisfied: sortedcontainers>=2.0.5 in ./.venv/lib/python3.10/site-packages (from distributed==2024.2.1->dask[complete]->mesmer-emulator==999) (2.4.0)
+Requirement already satisfied: tblib>=1.6.0 in ./.venv/lib/python3.10/site-packages (from distributed==2024.2.1->dask[complete]->mesmer-emulator==999) (3.2.2)
+Requirement already satisfied: tornado>=6.0.4 in ./.venv/lib/python3.10/site-packages (from distributed==2024.2.1->dask[complete]->mesmer-emulator==999) (6.5.2)
+Requirement already satisfied: urllib3>=1.24.3 in ./.venv/lib/python3.10/site-packages (from distributed==2024.2.1->dask[complete]->mesmer-emulator==999) (2.5.0)
+Requirement already satisfied: zict>=3.0.0 in ./.venv/lib/python3.10/site-packages (from distributed==2024.2.1->dask[complete]->mesmer-emulator==999) (3.0.0)
+Requirement already satisfied: contourpy>=1.2 in ./.venv/lib/python3.10/site-packages (from bokeh>=2.4.2->dask[complete]->mesmer-emulator==999) (1.3.2)
+Requirement already satisfied: narwhals>=1.13 in ./.venv/lib/python3.10/site-packages (from bokeh>=2.4.2->dask[complete]->mesmer-emulator==999) (2.13.0)
+Requirement already satisfied: pillow>=7.1.0 in ./.venv/lib/python3.10/site-packages (from bokeh>=2.4.2->dask[complete]->mesmer-emulator==999) (12.0.0)
+Requirement already satisfied: xyzservices>=2021.09.1 in ./.venv/lib/python3.10/site-packages (from bokeh>=2.4.2->dask[complete]->mesmer-emulator==999) (2025.11.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.10/site-packages (from jinja2>=2.10.3->dask[complete]->mesmer-emulator==999) (3.0.3)
+Requirement already satisfied: platformdirs>=2.5.0 in ./.venv/lib/python3.10/site-packages (from pooch->mesmer-emulator==999) (4.5.0)
+Requirement already satisfied: requests>=2.19.0 in ./.venv/lib/python3.10/site-packages (from pooch->mesmer-emulator==999) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->mesmer-emulator==999) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->mesmer-emulator==999) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.10/site-packages (from requests>=2.19.0->pooch->mesmer-emulator==999) (2025.11.12)
+Requirement already satisfied: geopandas>=0.13 in ./.venv/lib/python3.10/site-packages (from regionmask->mesmer-emulator==999) (1.0.1)
+Requirement already satisfied: rasterio>=1.3 in ./.venv/lib/python3.10/site-packages (from regionmask->mesmer-emulator==999) (1.4.3)
+Requirement already satisfied: shapely>=2.0 in ./.venv/lib/python3.10/site-packages (from regionmask->mesmer-emulator==999) (2.1.2)
+Requirement already satisfied: pyogrio>=0.7.2 in ./.venv/lib/python3.10/site-packages (from geopandas>=0.13->regionmask->mesmer-emulator==999) (0.12.1)
+Requirement already satisfied: pyproj>=3.3.0 in ./.venv/lib/python3.10/site-packages (from geopandas>=0.13->regionmask->mesmer-emulator==999) (3.7.1)
+Requirement already satisfied: affine in ./.venv/lib/python3.10/site-packages (from rasterio>=1.3->regionmask->mesmer-emulator==999) (2.4.0)
+Requirement already satisfied: attrs in ./.venv/lib/python3.10/site-packages (from rasterio>=1.3->regionmask->mesmer-emulator==999) (25.4.0)
+Requirement already satisfied: cligj>=0.5 in ./.venv/lib/python3.10/site-packages (from rasterio>=1.3->regionmask->mesmer-emulator==999) (0.7.2)
+Requirement already satisfied: click-plugins in ./.venv/lib/python3.10/site-packages (from rasterio>=1.3->regionmask->mesmer-emulator==999) (1.1.1.2)
+Requirement already satisfied: pyparsing in ./.venv/lib/python3.10/site-packages (from rasterio>=1.3->regionmask->mesmer-emulator==999) (3.2.5)
+Requirement already satisfied: scipy>=1.8.0 in ./.venv/lib/python3.10/site-packages (from scikit-learn->mesmer-emulator==999) (1.15.3)
+Requirement already satisfied: joblib>=1.2.0 in ./.venv/lib/python3.10/site-packages (from scikit-learn->mesmer-emulator==999) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./.venv/lib/python3.10/site-packages (from scikit-learn->mesmer-emulator==999) (3.6.0)
+Requirement already satisfied: patsy>=0.5.6 in ./.venv/lib/python3.10/site-packages (from statsmodels->mesmer-emulator==999) (1.0.2)
+Building wheels for collected packages: mesmer-emulator
+  Building editable for mesmer-emulator (pyproject.toml): started
+  Building editable for mesmer-emulator (pyproject.toml): finished with status 'done'
+  Created wheel for mesmer-emulator: filename=mesmer_emulator-999-0.editable-py3-none-any.whl size=17482 sha256=0ddf6bc1140bb5e294c3130406b9a4a8d71f1bd62d14061306a3c37a9bc6efd7
+  Stored in directory: /tmp/pip-ephem-wheel-cache-0fj83a42/wheels/b0/06/e4/10454f8f2f7ebfee2ba6da176ef49fba78e0febde33bb43290
+Successfully built mesmer-emulator
+Installing collected packages: mesmer-emulator
+  Attempting uninstall: mesmer-emulator
+    Found existing installation: mesmer-emulator 999
+    Uninstalling mesmer-emulator-999:
+      Successfully uninstalled mesmer-emulator-999
+Successfully installed mesmer-emulator-999
+
+=========================================
+Test run 1/1 for before
+Time: do  4 dec 2025 19:55:44 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.1, pluggy-1.6.0
+rootdir: /data/SpeedUpSlowTest/versions/mesmer_311/before
+configfile: setup.cfg
+plugins: cov-7.0.0, xdist-3.8.0
+collected 439 items
+
+tests/integration/test_calibrate_mesmer.py FFFFFFF                       [  1%]
+tests/integration/test_draw_realisations_from_bundle.py .                [  1%]
+tests/integration/test_load_cmipng.py ..................                 [  5%]
+tests/unit/test_auto_regression.py ..................................... [ 14%]
+...                                                                      [ 15%]
+tests/unit/test_computation.py .......................                   [ 20%]
+tests/unit/test_data.py FF                                               [ 20%]
+tests/unit/test_extract_time_period.py ....                              [ 21%]
+tests/unit/test_grid.py ................................................ [ 32%]
+......                                                                   [ 33%]
+tests/unit/test_grid_wrap.py ..........                                  [ 36%]
+tests/unit/test_linear_regression.py ................................... [ 44%]
+.........................................                                [ 53%]
+tests/unit/test_localized_covariance.py ...............                  [ 56%]
+tests/unit/test_mask.py ...............................                  [ 64%]
+tests/unit/test_phi_gc.py .                                              [ 64%]
+tests/unit/test_regionmaskcompat.py .................                    [ 68%]
+tests/unit/test_seed_dict.py ..                                          [ 68%]
+tests/unit/test_smoothing.py .............                               [ 71%]
+tests/unit/test_testing.py ............................................. [ 81%]
+.....................                                                    [ 86%]
+tests/unit/test_utils.py ..................FFFFF.......                  [ 93%]
+tests/unit/test_weighted.py .....F.F.F.F.F.F.............                [100%]
+
+=================================== FAILURES ===================================
+______ test_calibrate_mesmer[scenarios0-False-False-tas/one_scen_one_ens] ______
+
+scenarios = ['h-ssp126'], use_tas2 = False, use_hfds = False
+outname = 'tas/one_scen_one_ens'
+test_data_root_dir = '/data/SpeedUpSlowTest/versions/mesmer_311/before/tests/test-data'
+tmpdir = local('/tmp/pytest-of-root/pytest-328/test_calibrate_mesmer_scenario0')
+update_expected_files = False
+
+    @pytest.mark.filterwarnings("ignore:No local minimum found")
+    @pytest.mark.parametrize(
+        "scenarios, use_tas2, use_hfds, outname",
+        (
+            # tas
+            [["h-ssp126"], False, False, "tas/one_scen_one_ens"],
+            [["h-ssp126", "h-ssp585"], False, False, "tas/multi_scen_multi_ens"],
+            # tas and tas**2
+            [["h-ssp126"], True, False, "tas_tas2/one_scen_one_ens"],
+            # tas and hfds
+            [["h-ssp126"], False, True, "tas_hfds/one_scen_one_ens"],
+            # tas, tas**2, and hfds
+            [["h-ssp126"], True, True, "tas_tas2_hfds/one_scen_one_ens"],
+            [["h-ssp585"], True, True, "tas_tas2_hfds/one_scen_multi_ens"],
+            [["h-ssp126", "h-ssp585"], True, True, "tas_tas2_hfds/multi_scen_multi_ens"],
+        ),
+    )
+    def test_calibrate_mesmer(
+        scenarios,
+        use_tas2,
+        use_hfds,
+        outname,
+        test_data_root_dir,
+        tmpdir,
+        update_expected_files,
+    ):
+    
+        ouput_dir = os.path.join(test_data_root_dir, "output", outname)
+    
+        expected_output_file = os.path.join(ouput_dir, "test-mesmer-bundle.pkl")
+        params_output_dir = os.path.join(ouput_dir, "params")
+    
+        test_esms = ["IPSL-CM6A-LR"]
+        test_scenarios_to_train = scenarios
+        test_threshold_land = 1 / 3
+        test_output_file = os.path.join(tmpdir, "test_calibrate_mesmer_output.pkl")
+        test_cmip_generation = 6
+        test_cmip_data_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            f"cmip{test_cmip_generation}-ng",
+        )
+        test_observations_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "observations",
+        )
+        test_auxiliary_data_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "auxiliary",
+        )
+    
+>       _calibrate_tas(
+            esms=test_esms,
+            scenarios_to_train=test_scenarios_to_train,
+            threshold_land=test_threshold_land,
+            output_file=test_output_file,
+            cmip_data_root_dir=test_cmip_data_root_dir,
+            cmip_generation=test_cmip_generation,
+            observations_root_dir=test_observations_root_dir,
+            auxiliary_data_dir=test_auxiliary_data_dir,
+            use_tas2=use_tas2,
+            use_hfds=use_hfds,
+            # save params as well - they are .gitignored
+            save_params=update_expected_files,
+            params_output_dir=params_output_dir,
+        )
+
+tests/integration/test_calibrate_mesmer.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/calibrate_mesmer/calibrate_mesmer.py:223: in _calibrate_tas
+    params_gt_tas = train_gt(
+mesmer/calibrate_mesmer/train_gt.py:112: in train_gt
+    coef_saod, gt_hist_olsvolc = train_gt_ic_OLSVOLC(
+mesmer/calibrate_mesmer/train_gt.py:229: in train_gt_ic_OLSVOLC
+    aod_obs = load_strat_aod(time)
+mesmer/io/load_obs.py:196: in load_strat_aod
+    aod_obs = load_stratospheric_aerosol_optical_depth_obs(
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+____ test_calibrate_mesmer[scenarios1-False-False-tas/multi_scen_multi_ens] ____
+
+scenarios = ['h-ssp126', 'h-ssp585'], use_tas2 = False, use_hfds = False
+outname = 'tas/multi_scen_multi_ens'
+test_data_root_dir = '/data/SpeedUpSlowTest/versions/mesmer_311/before/tests/test-data'
+tmpdir = local('/tmp/pytest-of-root/pytest-328/test_calibrate_mesmer_scenario1')
+update_expected_files = False
+
+    @pytest.mark.filterwarnings("ignore:No local minimum found")
+    @pytest.mark.parametrize(
+        "scenarios, use_tas2, use_hfds, outname",
+        (
+            # tas
+            [["h-ssp126"], False, False, "tas/one_scen_one_ens"],
+            [["h-ssp126", "h-ssp585"], False, False, "tas/multi_scen_multi_ens"],
+            # tas and tas**2
+            [["h-ssp126"], True, False, "tas_tas2/one_scen_one_ens"],
+            # tas and hfds
+            [["h-ssp126"], False, True, "tas_hfds/one_scen_one_ens"],
+            # tas, tas**2, and hfds
+            [["h-ssp126"], True, True, "tas_tas2_hfds/one_scen_one_ens"],
+            [["h-ssp585"], True, True, "tas_tas2_hfds/one_scen_multi_ens"],
+            [["h-ssp126", "h-ssp585"], True, True, "tas_tas2_hfds/multi_scen_multi_ens"],
+        ),
+    )
+    def test_calibrate_mesmer(
+        scenarios,
+        use_tas2,
+        use_hfds,
+        outname,
+        test_data_root_dir,
+        tmpdir,
+        update_expected_files,
+    ):
+    
+        ouput_dir = os.path.join(test_data_root_dir, "output", outname)
+    
+        expected_output_file = os.path.join(ouput_dir, "test-mesmer-bundle.pkl")
+        params_output_dir = os.path.join(ouput_dir, "params")
+    
+        test_esms = ["IPSL-CM6A-LR"]
+        test_scenarios_to_train = scenarios
+        test_threshold_land = 1 / 3
+        test_output_file = os.path.join(tmpdir, "test_calibrate_mesmer_output.pkl")
+        test_cmip_generation = 6
+        test_cmip_data_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            f"cmip{test_cmip_generation}-ng",
+        )
+        test_observations_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "observations",
+        )
+        test_auxiliary_data_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "auxiliary",
+        )
+    
+>       _calibrate_tas(
+            esms=test_esms,
+            scenarios_to_train=test_scenarios_to_train,
+            threshold_land=test_threshold_land,
+            output_file=test_output_file,
+            cmip_data_root_dir=test_cmip_data_root_dir,
+            cmip_generation=test_cmip_generation,
+            observations_root_dir=test_observations_root_dir,
+            auxiliary_data_dir=test_auxiliary_data_dir,
+            use_tas2=use_tas2,
+            use_hfds=use_hfds,
+            # save params as well - they are .gitignored
+            save_params=update_expected_files,
+            params_output_dir=params_output_dir,
+        )
+
+tests/integration/test_calibrate_mesmer.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/calibrate_mesmer/calibrate_mesmer.py:223: in _calibrate_tas
+    params_gt_tas = train_gt(
+mesmer/calibrate_mesmer/train_gt.py:112: in train_gt
+    coef_saod, gt_hist_olsvolc = train_gt_ic_OLSVOLC(
+mesmer/calibrate_mesmer/train_gt.py:229: in train_gt_ic_OLSVOLC
+    aod_obs = load_strat_aod(time)
+mesmer/io/load_obs.py:196: in load_strat_aod
+    aod_obs = load_stratospheric_aerosol_optical_depth_obs(
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+____ test_calibrate_mesmer[scenarios2-True-False-tas_tas2/one_scen_one_ens] ____
+
+scenarios = ['h-ssp126'], use_tas2 = True, use_hfds = False
+outname = 'tas_tas2/one_scen_one_ens'
+test_data_root_dir = '/data/SpeedUpSlowTest/versions/mesmer_311/before/tests/test-data'
+tmpdir = local('/tmp/pytest-of-root/pytest-328/test_calibrate_mesmer_scenario2')
+update_expected_files = False
+
+    @pytest.mark.filterwarnings("ignore:No local minimum found")
+    @pytest.mark.parametrize(
+        "scenarios, use_tas2, use_hfds, outname",
+        (
+            # tas
+            [["h-ssp126"], False, False, "tas/one_scen_one_ens"],
+            [["h-ssp126", "h-ssp585"], False, False, "tas/multi_scen_multi_ens"],
+            # tas and tas**2
+            [["h-ssp126"], True, False, "tas_tas2/one_scen_one_ens"],
+            # tas and hfds
+            [["h-ssp126"], False, True, "tas_hfds/one_scen_one_ens"],
+            # tas, tas**2, and hfds
+            [["h-ssp126"], True, True, "tas_tas2_hfds/one_scen_one_ens"],
+            [["h-ssp585"], True, True, "tas_tas2_hfds/one_scen_multi_ens"],
+            [["h-ssp126", "h-ssp585"], True, True, "tas_tas2_hfds/multi_scen_multi_ens"],
+        ),
+    )
+    def test_calibrate_mesmer(
+        scenarios,
+        use_tas2,
+        use_hfds,
+        outname,
+        test_data_root_dir,
+        tmpdir,
+        update_expected_files,
+    ):
+    
+        ouput_dir = os.path.join(test_data_root_dir, "output", outname)
+    
+        expected_output_file = os.path.join(ouput_dir, "test-mesmer-bundle.pkl")
+        params_output_dir = os.path.join(ouput_dir, "params")
+    
+        test_esms = ["IPSL-CM6A-LR"]
+        test_scenarios_to_train = scenarios
+        test_threshold_land = 1 / 3
+        test_output_file = os.path.join(tmpdir, "test_calibrate_mesmer_output.pkl")
+        test_cmip_generation = 6
+        test_cmip_data_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            f"cmip{test_cmip_generation}-ng",
+        )
+        test_observations_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "observations",
+        )
+        test_auxiliary_data_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "auxiliary",
+        )
+    
+>       _calibrate_tas(
+            esms=test_esms,
+            scenarios_to_train=test_scenarios_to_train,
+            threshold_land=test_threshold_land,
+            output_file=test_output_file,
+            cmip_data_root_dir=test_cmip_data_root_dir,
+            cmip_generation=test_cmip_generation,
+            observations_root_dir=test_observations_root_dir,
+            auxiliary_data_dir=test_auxiliary_data_dir,
+            use_tas2=use_tas2,
+            use_hfds=use_hfds,
+            # save params as well - they are .gitignored
+            save_params=update_expected_files,
+            params_output_dir=params_output_dir,
+        )
+
+tests/integration/test_calibrate_mesmer.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/calibrate_mesmer/calibrate_mesmer.py:223: in _calibrate_tas
+    params_gt_tas = train_gt(
+mesmer/calibrate_mesmer/train_gt.py:112: in train_gt
+    coef_saod, gt_hist_olsvolc = train_gt_ic_OLSVOLC(
+mesmer/calibrate_mesmer/train_gt.py:229: in train_gt_ic_OLSVOLC
+    aod_obs = load_strat_aod(time)
+mesmer/io/load_obs.py:196: in load_strat_aod
+    aod_obs = load_stratospheric_aerosol_optical_depth_obs(
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+____ test_calibrate_mesmer[scenarios3-False-True-tas_hfds/one_scen_one_ens] ____
+
+scenarios = ['h-ssp126'], use_tas2 = False, use_hfds = True
+outname = 'tas_hfds/one_scen_one_ens'
+test_data_root_dir = '/data/SpeedUpSlowTest/versions/mesmer_311/before/tests/test-data'
+tmpdir = local('/tmp/pytest-of-root/pytest-328/test_calibrate_mesmer_scenario3')
+update_expected_files = False
+
+    @pytest.mark.filterwarnings("ignore:No local minimum found")
+    @pytest.mark.parametrize(
+        "scenarios, use_tas2, use_hfds, outname",
+        (
+            # tas
+            [["h-ssp126"], False, False, "tas/one_scen_one_ens"],
+            [["h-ssp126", "h-ssp585"], False, False, "tas/multi_scen_multi_ens"],
+            # tas and tas**2
+            [["h-ssp126"], True, False, "tas_tas2/one_scen_one_ens"],
+            # tas and hfds
+            [["h-ssp126"], False, True, "tas_hfds/one_scen_one_ens"],
+            # tas, tas**2, and hfds
+            [["h-ssp126"], True, True, "tas_tas2_hfds/one_scen_one_ens"],
+            [["h-ssp585"], True, True, "tas_tas2_hfds/one_scen_multi_ens"],
+            [["h-ssp126", "h-ssp585"], True, True, "tas_tas2_hfds/multi_scen_multi_ens"],
+        ),
+    )
+    def test_calibrate_mesmer(
+        scenarios,
+        use_tas2,
+        use_hfds,
+        outname,
+        test_data_root_dir,
+        tmpdir,
+        update_expected_files,
+    ):
+    
+        ouput_dir = os.path.join(test_data_root_dir, "output", outname)
+    
+        expected_output_file = os.path.join(ouput_dir, "test-mesmer-bundle.pkl")
+        params_output_dir = os.path.join(ouput_dir, "params")
+    
+        test_esms = ["IPSL-CM6A-LR"]
+        test_scenarios_to_train = scenarios
+        test_threshold_land = 1 / 3
+        test_output_file = os.path.join(tmpdir, "test_calibrate_mesmer_output.pkl")
+        test_cmip_generation = 6
+        test_cmip_data_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            f"cmip{test_cmip_generation}-ng",
+        )
+        test_observations_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "observations",
+        )
+        test_auxiliary_data_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "auxiliary",
+        )
+    
+>       _calibrate_tas(
+            esms=test_esms,
+            scenarios_to_train=test_scenarios_to_train,
+            threshold_land=test_threshold_land,
+            output_file=test_output_file,
+            cmip_data_root_dir=test_cmip_data_root_dir,
+            cmip_generation=test_cmip_generation,
+            observations_root_dir=test_observations_root_dir,
+            auxiliary_data_dir=test_auxiliary_data_dir,
+            use_tas2=use_tas2,
+            use_hfds=use_hfds,
+            # save params as well - they are .gitignored
+            save_params=update_expected_files,
+            params_output_dir=params_output_dir,
+        )
+
+tests/integration/test_calibrate_mesmer.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/calibrate_mesmer/calibrate_mesmer.py:223: in _calibrate_tas
+    params_gt_tas = train_gt(
+mesmer/calibrate_mesmer/train_gt.py:112: in train_gt
+    coef_saod, gt_hist_olsvolc = train_gt_ic_OLSVOLC(
+mesmer/calibrate_mesmer/train_gt.py:229: in train_gt_ic_OLSVOLC
+    aod_obs = load_strat_aod(time)
+mesmer/io/load_obs.py:196: in load_strat_aod
+    aod_obs = load_stratospheric_aerosol_optical_depth_obs(
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+__ test_calibrate_mesmer[scenarios4-True-True-tas_tas2_hfds/one_scen_one_ens] __
+
+scenarios = ['h-ssp126'], use_tas2 = True, use_hfds = True
+outname = 'tas_tas2_hfds/one_scen_one_ens'
+test_data_root_dir = '/data/SpeedUpSlowTest/versions/mesmer_311/before/tests/test-data'
+tmpdir = local('/tmp/pytest-of-root/pytest-328/test_calibrate_mesmer_scenario4')
+update_expected_files = False
+
+    @pytest.mark.filterwarnings("ignore:No local minimum found")
+    @pytest.mark.parametrize(
+        "scenarios, use_tas2, use_hfds, outname",
+        (
+            # tas
+            [["h-ssp126"], False, False, "tas/one_scen_one_ens"],
+            [["h-ssp126", "h-ssp585"], False, False, "tas/multi_scen_multi_ens"],
+            # tas and tas**2
+            [["h-ssp126"], True, False, "tas_tas2/one_scen_one_ens"],
+            # tas and hfds
+            [["h-ssp126"], False, True, "tas_hfds/one_scen_one_ens"],
+            # tas, tas**2, and hfds
+            [["h-ssp126"], True, True, "tas_tas2_hfds/one_scen_one_ens"],
+            [["h-ssp585"], True, True, "tas_tas2_hfds/one_scen_multi_ens"],
+            [["h-ssp126", "h-ssp585"], True, True, "tas_tas2_hfds/multi_scen_multi_ens"],
+        ),
+    )
+    def test_calibrate_mesmer(
+        scenarios,
+        use_tas2,
+        use_hfds,
+        outname,
+        test_data_root_dir,
+        tmpdir,
+        update_expected_files,
+    ):
+    
+        ouput_dir = os.path.join(test_data_root_dir, "output", outname)
+    
+        expected_output_file = os.path.join(ouput_dir, "test-mesmer-bundle.pkl")
+        params_output_dir = os.path.join(ouput_dir, "params")
+    
+        test_esms = ["IPSL-CM6A-LR"]
+        test_scenarios_to_train = scenarios
+        test_threshold_land = 1 / 3
+        test_output_file = os.path.join(tmpdir, "test_calibrate_mesmer_output.pkl")
+        test_cmip_generation = 6
+        test_cmip_data_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            f"cmip{test_cmip_generation}-ng",
+        )
+        test_observations_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "observations",
+        )
+        test_auxiliary_data_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "auxiliary",
+        )
+    
+>       _calibrate_tas(
+            esms=test_esms,
+            scenarios_to_train=test_scenarios_to_train,
+            threshold_land=test_threshold_land,
+            output_file=test_output_file,
+            cmip_data_root_dir=test_cmip_data_root_dir,
+            cmip_generation=test_cmip_generation,
+            observations_root_dir=test_observations_root_dir,
+            auxiliary_data_dir=test_auxiliary_data_dir,
+            use_tas2=use_tas2,
+            use_hfds=use_hfds,
+            # save params as well - they are .gitignored
+            save_params=update_expected_files,
+            params_output_dir=params_output_dir,
+        )
+
+tests/integration/test_calibrate_mesmer.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/calibrate_mesmer/calibrate_mesmer.py:223: in _calibrate_tas
+    params_gt_tas = train_gt(
+mesmer/calibrate_mesmer/train_gt.py:112: in train_gt
+    coef_saod, gt_hist_olsvolc = train_gt_ic_OLSVOLC(
+mesmer/calibrate_mesmer/train_gt.py:229: in train_gt_ic_OLSVOLC
+    aod_obs = load_strat_aod(time)
+mesmer/io/load_obs.py:196: in load_strat_aod
+    aod_obs = load_stratospheric_aerosol_optical_depth_obs(
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+_ test_calibrate_mesmer[scenarios5-True-True-tas_tas2_hfds/one_scen_multi_ens] _
+
+scenarios = ['h-ssp585'], use_tas2 = True, use_hfds = True
+outname = 'tas_tas2_hfds/one_scen_multi_ens'
+test_data_root_dir = '/data/SpeedUpSlowTest/versions/mesmer_311/before/tests/test-data'
+tmpdir = local('/tmp/pytest-of-root/pytest-328/test_calibrate_mesmer_scenario5')
+update_expected_files = False
+
+    @pytest.mark.filterwarnings("ignore:No local minimum found")
+    @pytest.mark.parametrize(
+        "scenarios, use_tas2, use_hfds, outname",
+        (
+            # tas
+            [["h-ssp126"], False, False, "tas/one_scen_one_ens"],
+            [["h-ssp126", "h-ssp585"], False, False, "tas/multi_scen_multi_ens"],
+            # tas and tas**2
+            [["h-ssp126"], True, False, "tas_tas2/one_scen_one_ens"],
+            # tas and hfds
+            [["h-ssp126"], False, True, "tas_hfds/one_scen_one_ens"],
+            # tas, tas**2, and hfds
+            [["h-ssp126"], True, True, "tas_tas2_hfds/one_scen_one_ens"],
+            [["h-ssp585"], True, True, "tas_tas2_hfds/one_scen_multi_ens"],
+            [["h-ssp126", "h-ssp585"], True, True, "tas_tas2_hfds/multi_scen_multi_ens"],
+        ),
+    )
+    def test_calibrate_mesmer(
+        scenarios,
+        use_tas2,
+        use_hfds,
+        outname,
+        test_data_root_dir,
+        tmpdir,
+        update_expected_files,
+    ):
+    
+        ouput_dir = os.path.join(test_data_root_dir, "output", outname)
+    
+        expected_output_file = os.path.join(ouput_dir, "test-mesmer-bundle.pkl")
+        params_output_dir = os.path.join(ouput_dir, "params")
+    
+        test_esms = ["IPSL-CM6A-LR"]
+        test_scenarios_to_train = scenarios
+        test_threshold_land = 1 / 3
+        test_output_file = os.path.join(tmpdir, "test_calibrate_mesmer_output.pkl")
+        test_cmip_generation = 6
+        test_cmip_data_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            f"cmip{test_cmip_generation}-ng",
+        )
+        test_observations_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "observations",
+        )
+        test_auxiliary_data_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "auxiliary",
+        )
+    
+>       _calibrate_tas(
+            esms=test_esms,
+            scenarios_to_train=test_scenarios_to_train,
+            threshold_land=test_threshold_land,
+            output_file=test_output_file,
+            cmip_data_root_dir=test_cmip_data_root_dir,
+            cmip_generation=test_cmip_generation,
+            observations_root_dir=test_observations_root_dir,
+            auxiliary_data_dir=test_auxiliary_data_dir,
+            use_tas2=use_tas2,
+            use_hfds=use_hfds,
+            # save params as well - they are .gitignored
+            save_params=update_expected_files,
+            params_output_dir=params_output_dir,
+        )
+
+tests/integration/test_calibrate_mesmer.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/calibrate_mesmer/calibrate_mesmer.py:223: in _calibrate_tas
+    params_gt_tas = train_gt(
+mesmer/calibrate_mesmer/train_gt.py:112: in train_gt
+    coef_saod, gt_hist_olsvolc = train_gt_ic_OLSVOLC(
+mesmer/calibrate_mesmer/train_gt.py:229: in train_gt_ic_OLSVOLC
+    aod_obs = load_strat_aod(time)
+mesmer/io/load_obs.py:196: in load_strat_aod
+    aod_obs = load_stratospheric_aerosol_optical_depth_obs(
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+_ test_calibrate_mesmer[scenarios6-True-True-tas_tas2_hfds/multi_scen_multi_ens] _
+
+scenarios = ['h-ssp126', 'h-ssp585'], use_tas2 = True, use_hfds = True
+outname = 'tas_tas2_hfds/multi_scen_multi_ens'
+test_data_root_dir = '/data/SpeedUpSlowTest/versions/mesmer_311/before/tests/test-data'
+tmpdir = local('/tmp/pytest-of-root/pytest-328/test_calibrate_mesmer_scenario6')
+update_expected_files = False
+
+    @pytest.mark.filterwarnings("ignore:No local minimum found")
+    @pytest.mark.parametrize(
+        "scenarios, use_tas2, use_hfds, outname",
+        (
+            # tas
+            [["h-ssp126"], False, False, "tas/one_scen_one_ens"],
+            [["h-ssp126", "h-ssp585"], False, False, "tas/multi_scen_multi_ens"],
+            # tas and tas**2
+            [["h-ssp126"], True, False, "tas_tas2/one_scen_one_ens"],
+            # tas and hfds
+            [["h-ssp126"], False, True, "tas_hfds/one_scen_one_ens"],
+            # tas, tas**2, and hfds
+            [["h-ssp126"], True, True, "tas_tas2_hfds/one_scen_one_ens"],
+            [["h-ssp585"], True, True, "tas_tas2_hfds/one_scen_multi_ens"],
+            [["h-ssp126", "h-ssp585"], True, True, "tas_tas2_hfds/multi_scen_multi_ens"],
+        ),
+    )
+    def test_calibrate_mesmer(
+        scenarios,
+        use_tas2,
+        use_hfds,
+        outname,
+        test_data_root_dir,
+        tmpdir,
+        update_expected_files,
+    ):
+    
+        ouput_dir = os.path.join(test_data_root_dir, "output", outname)
+    
+        expected_output_file = os.path.join(ouput_dir, "test-mesmer-bundle.pkl")
+        params_output_dir = os.path.join(ouput_dir, "params")
+    
+        test_esms = ["IPSL-CM6A-LR"]
+        test_scenarios_to_train = scenarios
+        test_threshold_land = 1 / 3
+        test_output_file = os.path.join(tmpdir, "test_calibrate_mesmer_output.pkl")
+        test_cmip_generation = 6
+        test_cmip_data_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            f"cmip{test_cmip_generation}-ng",
+        )
+        test_observations_root_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "observations",
+        )
+        test_auxiliary_data_dir = os.path.join(
+            test_data_root_dir,
+            "calibrate-coarse-grid",
+            "auxiliary",
+        )
+    
+>       _calibrate_tas(
+            esms=test_esms,
+            scenarios_to_train=test_scenarios_to_train,
+            threshold_land=test_threshold_land,
+            output_file=test_output_file,
+            cmip_data_root_dir=test_cmip_data_root_dir,
+            cmip_generation=test_cmip_generation,
+            observations_root_dir=test_observations_root_dir,
+            auxiliary_data_dir=test_auxiliary_data_dir,
+            use_tas2=use_tas2,
+            use_hfds=use_hfds,
+            # save params as well - they are .gitignored
+            save_params=update_expected_files,
+            params_output_dir=params_output_dir,
+        )
+
+tests/integration/test_calibrate_mesmer.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/calibrate_mesmer/calibrate_mesmer.py:223: in _calibrate_tas
+    params_gt_tas = train_gt(
+mesmer/calibrate_mesmer/train_gt.py:112: in train_gt
+    coef_saod, gt_hist_olsvolc = train_gt_ic_OLSVOLC(
+mesmer/calibrate_mesmer/train_gt.py:229: in train_gt_ic_OLSVOLC
+    aod_obs = load_strat_aod(time)
+mesmer/io/load_obs.py:196: in load_strat_aod
+    aod_obs = load_stratospheric_aerosol_optical_depth_obs(
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+______________ test_load_stratospheric_aerosol_optical_depth_data ______________
+
+    def test_load_stratospheric_aerosol_optical_depth_data():
+    
+>       aod = load_stratospheric_aerosol_optical_depth_obs(version="2022", resample=True)
+
+tests/unit/test_data.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+________ test_load_stratospheric_aerosol_optical_depth_data_no_resample ________
+
+    def test_load_stratospheric_aerosol_optical_depth_data_no_resample():
+    
+>       aod = load_stratospheric_aerosol_optical_depth_obs(version="2022", resample=False)
+
+tests/unit/test_data.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mesmer/core/_data.py:26: in load_stratospheric_aerosol_optical_depth_obs
+    aod = _load_aod_obs(version=version, resample=resample)
+mesmer/core/_data.py:35: in _load_aod_obs
+    filename = _fetch_remote_data(f"isaod_gl_{version}.dat")
+mesmer/core/_data.py:73: in _fetch_remote_data
+    return REMOTE_RESSOURCE.fetch(name)
+.venv/lib/python3.10/site-packages/pooch/core.py:589: in fetch
+    stream_download(
+.venv/lib/python3.10/site-packages/pooch/core.py:807: in stream_download
+    downloader(url, tmp, pooch)
+.venv/lib/python3.10/site-packages/pooch/downloaders.py:221: in __call__
+    response.raise_for_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Response [404]>
+
+    def raise_for_status(self):
+        """Raises :class:`HTTPError`, if one occurred."""
+    
+        http_error_msg = ""
+        if isinstance(self.reason, bytes):
+            # We attempt to decode utf-8 first because some servers
+            # choose to localize their reason strings. If the string
+            # isn't utf-8, we fall back to iso-8859-1 for all other
+            # encodings. (See PR #3538)
+            try:
+                reason = self.reason.decode("utf-8")
+            except UnicodeDecodeError:
+                reason = self.reason.decode("iso-8859-1")
+        else:
+            reason = self.reason
+    
+        if 400 <= self.status_code < 500:
+            http_error_msg = (
+                f"{self.status_code} Client Error: {reason} for url: {self.url}"
+            )
+    
+        elif 500 <= self.status_code < 600:
+            http_error_msg = (
+                f"{self.status_code} Server Error: {reason} for url: {self.url}"
+            )
+    
+        if http_error_msg:
+>           raise HTTPError(http_error_msg, response=self)
+E           requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat
+
+.venv/lib/python3.10/site-packages/requests/models.py:1026: HTTPError
+----------------------------- Captured stderr call -----------------------------
+Downloading file 'isaod_gl_2022.dat' from 'https://github.com/MESMER-group/mesmer/raw/v999/data/isaod_gl_2022.dat' to '/root/.cache/mesmer/v999'.
+______________________ test_assert_annual_data[standard] _______________________
+
+calendar = 'standard'
+
+    @pytest.mark.parametrize(
+        "calendar", ["standard", "gregorian", "proleptic_gregorian", "365_day", "julian"]
+    )
+    def test_assert_annual_data(calendar):
+    
+        time = _get_time("2000", "2005", freq="A", calendar=calendar)
+    
+        # no error
+>       mesmer.core.utils._assert_annual_data(time)
+
+tests/unit/test_utils.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+time = <xarray.DataArray (time: 5)> Size: 40B
+array(['2000-12-31T00:00:00.000000000', '2001-12-31T00:00:00.000000000',
+      ...000'], dtype='datetime64[ns]')
+Coordinates:
+  * time     (time) datetime64[ns] 40B 2000-12-31 2001-12-31 ... 2004-12-31
+
+    def _assert_annual_data(time):
+        """assert time coords has annual frequency"""
+    
+        freq = xr.infer_freq(time)
+    
+        if freq is None:
+            raise ValueError(
+                "Annual data is required but data of unknown frequency was passed"
+            )
+    
+        if not freq.startswith("A"):
+>           raise ValueError(
+                f"Annual data is required but data with frequency {freq} was passed"
+            )
+E           ValueError: Annual data is required but data with frequency YE-DEC was passed
+
+mesmer/core/utils.py:100: ValueError
+______________________ test_assert_annual_data[gregorian] ______________________
+
+calendar = 'gregorian'
+
+    @pytest.mark.parametrize(
+        "calendar", ["standard", "gregorian", "proleptic_gregorian", "365_day", "julian"]
+    )
+    def test_assert_annual_data(calendar):
+    
+        time = _get_time("2000", "2005", freq="A", calendar=calendar)
+    
+        # no error
+>       mesmer.core.utils._assert_annual_data(time)
+
+tests/unit/test_utils.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+time = <xarray.DataArray (time: 5)> Size: 40B
+array(['2000-12-31T00:00:00.000000000', '2001-12-31T00:00:00.000000000',
+      ...000'], dtype='datetime64[ns]')
+Coordinates:
+  * time     (time) datetime64[ns] 40B 2000-12-31 2001-12-31 ... 2004-12-31
+
+    def _assert_annual_data(time):
+        """assert time coords has annual frequency"""
+    
+        freq = xr.infer_freq(time)
+    
+        if freq is None:
+            raise ValueError(
+                "Annual data is required but data of unknown frequency was passed"
+            )
+    
+        if not freq.startswith("A"):
+>           raise ValueError(
+                f"Annual data is required but data with frequency {freq} was passed"
+            )
+E           ValueError: Annual data is required but data with frequency YE-DEC was passed
+
+mesmer/core/utils.py:100: ValueError
+_________________ test_assert_annual_data[proleptic_gregorian] _________________
+
+calendar = 'proleptic_gregorian'
+
+    @pytest.mark.parametrize(
+        "calendar", ["standard", "gregorian", "proleptic_gregorian", "365_day", "julian"]
+    )
+    def test_assert_annual_data(calendar):
+    
+        time = _get_time("2000", "2005", freq="A", calendar=calendar)
+    
+        # no error
+>       mesmer.core.utils._assert_annual_data(time)
+
+tests/unit/test_utils.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+time = <xarray.DataArray (time: 5)> Size: 40B
+array(['2000-12-31T00:00:00.000000000', '2001-12-31T00:00:00.000000000',
+      ...000'], dtype='datetime64[ns]')
+Coordinates:
+  * time     (time) datetime64[ns] 40B 2000-12-31 2001-12-31 ... 2004-12-31
+
+    def _assert_annual_data(time):
+        """assert time coords has annual frequency"""
+    
+        freq = xr.infer_freq(time)
+    
+        if freq is None:
+            raise ValueError(
+                "Annual data is required but data of unknown frequency was passed"
+            )
+    
+        if not freq.startswith("A"):
+>           raise ValueError(
+                f"Annual data is required but data with frequency {freq} was passed"
+            )
+E           ValueError: Annual data is required but data with frequency YE-DEC was passed
+
+mesmer/core/utils.py:100: ValueError
+_______________________ test_assert_annual_data[365_day] _______________________
+
+calendar = '365_day'
+
+    @pytest.mark.parametrize(
+        "calendar", ["standard", "gregorian", "proleptic_gregorian", "365_day", "julian"]
+    )
+    def test_assert_annual_data(calendar):
+    
+        time = _get_time("2000", "2005", freq="A", calendar=calendar)
+    
+        # no error
+>       mesmer.core.utils._assert_annual_data(time)
+
+tests/unit/test_utils.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+time = <xarray.DataArray (time: 5)> Size: 40B
+array([cftime.DatetimeNoLeap(2000, 12, 31, 0, 0, 0, 0, has_year_zero=True),
+   ...ero=True)],
+      dtype=object)
+Coordinates:
+  * time     (time) object 40B 2000-12-31 00:00:00 ... 2004-12-31 00:00:00
+
+    def _assert_annual_data(time):
+        """assert time coords has annual frequency"""
+    
+        freq = xr.infer_freq(time)
+    
+        if freq is None:
+            raise ValueError(
+                "Annual data is required but data of unknown frequency was passed"
+            )
+    
+        if not freq.startswith("A"):
+>           raise ValueError(
+                f"Annual data is required but data with frequency {freq} was passed"
+            )
+E           ValueError: Annual data is required but data with frequency YE-DEC was passed
+
+mesmer/core/utils.py:100: ValueError
+_______________________ test_assert_annual_data[julian] ________________________
+
+calendar = 'julian'
+
+    @pytest.mark.parametrize(
+        "calendar", ["standard", "gregorian", "proleptic_gregorian", "365_day", "julian"]
+    )
+    def test_assert_annual_data(calendar):
+    
+        time = _get_time("2000", "2005", freq="A", calendar=calendar)
+    
+        # no error
+>       mesmer.core.utils._assert_annual_data(time)
+
+tests/unit/test_utils.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+time = <xarray.DataArray (time: 5)> Size: 40B
+array([cftime.DatetimeJulian(2000, 12, 31, 0, 0, 0, 0, has_year_zero=False),
+  ...ro=False)],
+      dtype=object)
+Coordinates:
+  * time     (time) object 40B 2000-12-31 00:00:00 ... 2004-12-31 00:00:00
+
+    def _assert_annual_data(time):
+        """assert time coords has annual frequency"""
+    
+        freq = xr.infer_freq(time)
+    
+        if freq is None:
+            raise ValueError(
+                "Annual data is required but data of unknown frequency was passed"
+            )
+    
+        if not freq.startswith("A"):
+>           raise ValueError(
+                f"Annual data is required but data with frequency {freq} was passed"
+            )
+E           ValueError: Annual data is required but data with frequency YE-DEC was passed
+
+mesmer/core/utils.py:100: ValueError
+________________ test_weighted_mean_errors_wrong_weights[True] _________________
+
+as_dataset = True
+
+    @pytest.mark.parametrize("as_dataset", [True, False])
+    def test_weighted_mean_errors_wrong_weights(as_dataset):
+    
+        data = data_lon_lat(as_dataset)
+        weights = mesmer.weighted.lat_weights(data["lat"])
+        weights = weights.isel(lat=slice(None, weights.size - 3))
+    
+        with pytest.raises(ValueError, match="`data` and `weights` don't exactly align."):
+            mesmer.weighted.weighted_mean(data, weights=weights, dims=("lat", "lon"))
+    
+        with pytest.raises(ValueError, match="`data` and `weights` don't exactly align."):
+            mesmer.weighted.weighted_mean(data, weights=weights, dims=("lat", "lon"))
+    
+>       data.weighted(weights).mean(("lat", "lon"))
+
+tests/unit/test_weighted.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:115: in inner
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:497: in mean
+    return self._implementation(
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:558: in _implementation
+    return self.obj.map(func, dim=dim, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6923: in map
+    variables = {
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6924: in <dictcomp>
+    k: maybe_wrap_array(v, func(v, *args, **kwargs))
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:286: in _weighted_mean
+    weighted_sum = self._weighted_sum(da, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:276: in _weighted_sum
+    return self._reduce(da, self.weights, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:231: in _reduce
+    return dot(da, weights, dim=dim)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:140: in wrapper
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/computation.py:1888: in dot
+    dim = parse_dims(dim, all_dims=tuple(all_dims))
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:910: in parse_dims
+    _check_dims(set(dim), set(all_dims))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dim = {'lat', 'lon'}, all_dims = {'lat'}
+
+    def _check_dims(dim: set[Hashable], all_dims: set[Hashable]) -> None:
+        wrong_dims = (dim - all_dims) - {...}
+        if wrong_dims:
+            wrong_dims_str = ", ".join(f"'{d!s}'" for d in wrong_dims)
+>           raise ValueError(
+                f"Dimension(s) {wrong_dims_str} do not exist. Expected one or more of {all_dims}"
+            )
+E           ValueError: Dimension(s) 'lon' do not exist. Expected one or more of {'lat'}
+
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:993: ValueError
+____________________ test_calc_weighted_mean_default[True] _____________________
+
+as_dataset = True
+
+    @pytest.mark.parametrize("as_dataset", [True, False])
+    def test_calc_weighted_mean_default(as_dataset):
+    
+>       _test_weighted_mean(as_dataset)
+
+tests/unit/test_weighted.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_weighted.py:101: in _test_weighted_mean
+    result = data.weighted(weights).mean(dims, keep_attrs=True)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:115: in inner
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:497: in mean
+    return self._implementation(
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:558: in _implementation
+    return self.obj.map(func, dim=dim, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6923: in map
+    variables = {
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6924: in <dictcomp>
+    k: maybe_wrap_array(v, func(v, *args, **kwargs))
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:286: in _weighted_mean
+    weighted_sum = self._weighted_sum(da, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:276: in _weighted_sum
+    return self._reduce(da, self.weights, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:231: in _reduce
+    return dot(da, weights, dim=dim)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:140: in wrapper
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/computation.py:1888: in dot
+    dim = parse_dims(dim, all_dims=tuple(all_dims))
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:910: in parse_dims
+    _check_dims(set(dim), set(all_dims))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dim = {'lat', 'lon'}, all_dims = {'lat'}
+
+    def _check_dims(dim: set[Hashable], all_dims: set[Hashable]) -> None:
+        wrong_dims = (dim - all_dims) - {...}
+        if wrong_dims:
+            wrong_dims_str = ", ".join(f"'{d!s}'" for d in wrong_dims)
+>           raise ValueError(
+                f"Dimension(s) {wrong_dims_str} do not exist. Expected one or more of {all_dims}"
+            )
+E           ValueError: Dimension(s) 'lon' do not exist. Expected one or more of {'lat'}
+
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:993: ValueError
+______________________ test_calc_weighted_mean[y-x-True] _______________________
+
+as_dataset = True, x_dim = 'x', y_dim = 'y'
+
+    @pytest.mark.parametrize("as_dataset", (True, False))
+    @pytest.mark.parametrize("x_dim", ("x", "lon"))
+    @pytest.mark.parametrize("y_dim", ("y", "lat"))
+    def test_calc_weighted_mean(as_dataset, x_dim, y_dim):
+    
+>       _test_weighted_mean(
+            as_dataset,
+            x_dim=x_dim,
+            y_dim=y_dim,
+        )
+
+tests/unit/test_weighted.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_weighted.py:101: in _test_weighted_mean
+    result = data.weighted(weights).mean(dims, keep_attrs=True)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:115: in inner
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:497: in mean
+    return self._implementation(
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:558: in _implementation
+    return self.obj.map(func, dim=dim, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6923: in map
+    variables = {
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6924: in <dictcomp>
+    k: maybe_wrap_array(v, func(v, *args, **kwargs))
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:286: in _weighted_mean
+    weighted_sum = self._weighted_sum(da, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:276: in _weighted_sum
+    return self._reduce(da, self.weights, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:231: in _reduce
+    return dot(da, weights, dim=dim)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:140: in wrapper
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/computation.py:1888: in dot
+    dim = parse_dims(dim, all_dims=tuple(all_dims))
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:910: in parse_dims
+    _check_dims(set(dim), set(all_dims))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dim = {'x', 'y'}, all_dims = {'y'}
+
+    def _check_dims(dim: set[Hashable], all_dims: set[Hashable]) -> None:
+        wrong_dims = (dim - all_dims) - {...}
+        if wrong_dims:
+            wrong_dims_str = ", ".join(f"'{d!s}'" for d in wrong_dims)
+>           raise ValueError(
+                f"Dimension(s) {wrong_dims_str} do not exist. Expected one or more of {all_dims}"
+            )
+E           ValueError: Dimension(s) 'x' do not exist. Expected one or more of {'y'}
+
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:993: ValueError
+_____________________ test_calc_weighted_mean[y-lon-True] ______________________
+
+as_dataset = True, x_dim = 'lon', y_dim = 'y'
+
+    @pytest.mark.parametrize("as_dataset", (True, False))
+    @pytest.mark.parametrize("x_dim", ("x", "lon"))
+    @pytest.mark.parametrize("y_dim", ("y", "lat"))
+    def test_calc_weighted_mean(as_dataset, x_dim, y_dim):
+    
+>       _test_weighted_mean(
+            as_dataset,
+            x_dim=x_dim,
+            y_dim=y_dim,
+        )
+
+tests/unit/test_weighted.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_weighted.py:101: in _test_weighted_mean
+    result = data.weighted(weights).mean(dims, keep_attrs=True)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:115: in inner
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:497: in mean
+    return self._implementation(
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:558: in _implementation
+    return self.obj.map(func, dim=dim, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6923: in map
+    variables = {
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6924: in <dictcomp>
+    k: maybe_wrap_array(v, func(v, *args, **kwargs))
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:286: in _weighted_mean
+    weighted_sum = self._weighted_sum(da, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:276: in _weighted_sum
+    return self._reduce(da, self.weights, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:231: in _reduce
+    return dot(da, weights, dim=dim)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:140: in wrapper
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/computation.py:1888: in dot
+    dim = parse_dims(dim, all_dims=tuple(all_dims))
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:910: in parse_dims
+    _check_dims(set(dim), set(all_dims))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dim = {'lon', 'y'}, all_dims = {'y'}
+
+    def _check_dims(dim: set[Hashable], all_dims: set[Hashable]) -> None:
+        wrong_dims = (dim - all_dims) - {...}
+        if wrong_dims:
+            wrong_dims_str = ", ".join(f"'{d!s}'" for d in wrong_dims)
+>           raise ValueError(
+                f"Dimension(s) {wrong_dims_str} do not exist. Expected one or more of {all_dims}"
+            )
+E           ValueError: Dimension(s) 'lon' do not exist. Expected one or more of {'y'}
+
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:993: ValueError
+_____________________ test_calc_weighted_mean[lat-x-True] ______________________
+
+as_dataset = True, x_dim = 'x', y_dim = 'lat'
+
+    @pytest.mark.parametrize("as_dataset", (True, False))
+    @pytest.mark.parametrize("x_dim", ("x", "lon"))
+    @pytest.mark.parametrize("y_dim", ("y", "lat"))
+    def test_calc_weighted_mean(as_dataset, x_dim, y_dim):
+    
+>       _test_weighted_mean(
+            as_dataset,
+            x_dim=x_dim,
+            y_dim=y_dim,
+        )
+
+tests/unit/test_weighted.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_weighted.py:101: in _test_weighted_mean
+    result = data.weighted(weights).mean(dims, keep_attrs=True)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:115: in inner
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:497: in mean
+    return self._implementation(
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:558: in _implementation
+    return self.obj.map(func, dim=dim, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6923: in map
+    variables = {
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6924: in <dictcomp>
+    k: maybe_wrap_array(v, func(v, *args, **kwargs))
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:286: in _weighted_mean
+    weighted_sum = self._weighted_sum(da, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:276: in _weighted_sum
+    return self._reduce(da, self.weights, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:231: in _reduce
+    return dot(da, weights, dim=dim)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:140: in wrapper
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/computation.py:1888: in dot
+    dim = parse_dims(dim, all_dims=tuple(all_dims))
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:910: in parse_dims
+    _check_dims(set(dim), set(all_dims))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dim = {'lat', 'x'}, all_dims = {'lat'}
+
+    def _check_dims(dim: set[Hashable], all_dims: set[Hashable]) -> None:
+        wrong_dims = (dim - all_dims) - {...}
+        if wrong_dims:
+            wrong_dims_str = ", ".join(f"'{d!s}'" for d in wrong_dims)
+>           raise ValueError(
+                f"Dimension(s) {wrong_dims_str} do not exist. Expected one or more of {all_dims}"
+            )
+E           ValueError: Dimension(s) 'x' do not exist. Expected one or more of {'lat'}
+
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:993: ValueError
+____________________ test_calc_weighted_mean[lat-lon-True] _____________________
+
+as_dataset = True, x_dim = 'lon', y_dim = 'lat'
+
+    @pytest.mark.parametrize("as_dataset", (True, False))
+    @pytest.mark.parametrize("x_dim", ("x", "lon"))
+    @pytest.mark.parametrize("y_dim", ("y", "lat"))
+    def test_calc_weighted_mean(as_dataset, x_dim, y_dim):
+    
+>       _test_weighted_mean(
+            as_dataset,
+            x_dim=x_dim,
+            y_dim=y_dim,
+        )
+
+tests/unit/test_weighted.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_weighted.py:101: in _test_weighted_mean
+    result = data.weighted(weights).mean(dims, keep_attrs=True)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:115: in inner
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:497: in mean
+    return self._implementation(
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:558: in _implementation
+    return self.obj.map(func, dim=dim, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6923: in map
+    variables = {
+.venv/lib/python3.10/site-packages/xarray/core/dataset.py:6924: in <dictcomp>
+    k: maybe_wrap_array(v, func(v, *args, **kwargs))
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:286: in _weighted_mean
+    weighted_sum = self._weighted_sum(da, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:276: in _weighted_sum
+    return self._reduce(da, self.weights, dim=dim, skipna=skipna)
+.venv/lib/python3.10/site-packages/xarray/core/weighted.py:231: in _reduce
+    return dot(da, weights, dim=dim)
+.venv/lib/python3.10/site-packages/xarray/util/deprecation_helpers.py:140: in wrapper
+    return func(*args, **kwargs)
+.venv/lib/python3.10/site-packages/xarray/core/computation.py:1888: in dot
+    dim = parse_dims(dim, all_dims=tuple(all_dims))
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:910: in parse_dims
+    _check_dims(set(dim), set(all_dims))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+dim = {'lat', 'lon'}, all_dims = {'lat'}
+
+    def _check_dims(dim: set[Hashable], all_dims: set[Hashable]) -> None:
+        wrong_dims = (dim - all_dims) - {...}
+        if wrong_dims:
+            wrong_dims_str = ", ".join(f"'{d!s}'" for d in wrong_dims)
+>           raise ValueError(
+                f"Dimension(s) {wrong_dims_str} do not exist. Expected one or more of {all_dims}"
+            )
+E           ValueError: Dimension(s) 'lon' do not exist. Expected one or more of {'lat'}
+
+.venv/lib/python3.10/site-packages/xarray/core/utils.py:993: ValueError
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/geopandas/_compat.py:7
+  /data/SpeedUpSlowTest/versions/mesmer_311/before/.venv/lib/python3.10/site-packages/geopandas/_compat.py:7: DeprecationWarning: The 'shapely.geos' module is deprecated, and will be removed in a future version. All attributes of 'shapely.geos' are available directly from the top-level 'shapely' namespace (since shapely 2.0.0).
+    import shapely.geos
+
+tests/unit/test_computation.py: 56 warnings
+tests/unit/test_phi_gc.py: 8 warnings
+  /data/SpeedUpSlowTest/versions/mesmer_311/before/.venv/lib/python3.10/site-packages/pyproj/geod.py:398: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+    return self._inv_point(
+
+tests/unit/test_utils.py::test_assert_annual_data[standard]
+tests/unit/test_utils.py::test_assert_annual_data[gregorian]
+tests/unit/test_utils.py::test_assert_annual_data[proleptic_gregorian]
+tests/unit/test_utils.py::test_assert_annual_data[365_day]
+tests/unit/test_utils.py::test_assert_annual_data[julian]
+tests/unit/test_utils.py::test_assert_annual_data_wrong_freq[2A-standard]
+tests/unit/test_utils.py::test_assert_annual_data_wrong_freq[2A-gregorian]
+tests/unit/test_utils.py::test_assert_annual_data_wrong_freq[2A-365_day]
+tests/unit/test_utils.py::test_assert_annual_data_unkown_freq
+  /data/SpeedUpSlowTest/versions/mesmer_311/before/tests/unit/test_utils.py:191: FutureWarning: 'A' is deprecated and will be removed in a future version. Please use 'YE' instead of 'A'.
+    time = xr.date_range(*args, **kwargs)
+
+tests/unit/test_utils.py::test_assert_annual_data_wrong_freq[M-standard]
+tests/unit/test_utils.py::test_assert_annual_data_wrong_freq[M-gregorian]
+tests/unit/test_utils.py::test_assert_annual_data_wrong_freq[M-365_day]
+tests/unit/test_utils.py::test_assert_annual_data_unkown_freq
+  /data/SpeedUpSlowTest/versions/mesmer_311/before/tests/unit/test_utils.py:191: FutureWarning: 'M' is deprecated and will be removed in a future version. Please use 'ME' instead of 'M'.
+    time = xr.date_range(*args, **kwargs)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ===============================
+1.39s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_coords
+1.32s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_poles
+1.19s call     tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios6-True-True-tas_tas2_hfds/multi_scen_multi_ens]
+1.11s call     tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios0-False-False-tas/one_scen_one_ens]
+0.87s call     tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios5-True-True-tas_tas2_hfds/one_scen_multi_ens]
+0.71s call     tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios1-False-False-tas/multi_scen_multi_ens]
+0.63s call     tests/integration/test_load_cmipng.py::test_load_cmimpng_vs_load_var[hfds]
+0.63s call     tests/integration/test_load_cmipng.py::test_load_cmimpng_vs_load_var[tas]
+0.55s call     tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios4-True-True-tas_tas2_hfds/one_scen_one_ens]
+0.45s call     tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios3-False-True-tas_hfds/one_scen_one_ens]
+0.39s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_southpole
+0.38s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_all[1850-1860-hfds]
+0.38s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_indiv[1850-1900-hfds]
+0.37s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_all[1850-1900-hfds]
+0.37s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_indiv[1850-1900-tas]
+0.37s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_all[1850-1900-tas]
+0.32s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_all[1850-1860-tas]
+0.32s call     tests/integration/test_load_cmipng.py::test_load_cmipng[tas]
+0.32s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_indiv[1850-1860-hfds]
+0.31s call     tests/integration/test_load_cmipng.py::test_load_cmipng[hfds]
+0.31s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref_two_ens_indiv[1850-1860-tas]
+0.29s call     tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios2-True-False-tas_tas2/one_scen_one_ens]
+0.26s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref[1850-1860-tas]
+0.23s call     tests/unit/test_mask.py::test_ocean_land_fraction_threshold
+0.21s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref[1850-1900-hfds]
+0.21s call     tests/integration/test_draw_realisations_from_bundle.py::test_make_realisations
+0.19s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref[1850-1900-tas]
+0.17s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_northpole
+0.17s call     tests/integration/test_load_cmipng.py::test_load_cmipng_ref[1850-1860-hfds]
+0.09s call     tests/unit/test_data.py::test_load_stratospheric_aerosol_optical_depth_data_no_resample
+0.09s call     tests/unit/test_mask.py::test_ocean_land_fraction[y-x-False]
+0.09s call     tests/unit/test_mask.py::test_ocean_land_fraction[y-lon-True]
+0.09s call     tests/unit/test_linear_regression.py::test_linear_regression_one_predictor[True-0-0-_fit_linear_regression_xr]
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction[y-x-True]
+0.08s call     tests/unit/test_data.py::test_load_stratospheric_aerosol_optical_depth_data
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction[y-lon-False]
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction_default[True]
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction[lat-lon-False]
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction_default[False]
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction[lat-x-False]
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction[lat-lon-True]
+0.08s call     tests/unit/test_mask.py::test_ocean_land_fraction[lat-x-True]
+0.03s call     tests/unit/test_auto_regression.py::test_select_ar_order_xr_dim
+0.02s call     tests/unit/test_auto_regression.py::test_select_ar_order_xr_3d[4-2]
+0.02s call     tests/unit/test_auto_regression.py::test_select_ar_order_xr
+0.02s call     tests/unit/test_auto_regression.py::test_select_ar_order_xr_3d[3-2]
+0.01s call     tests/unit/test_mask.py::test_ocean_land_default[True]
+0.01s call     tests/unit/test_mask.py::test_mask_land[y-lon-True]
+0.01s call     tests/unit/test_phi_gc.py::test_phi_gc_end_to_end
+0.01s call     tests/unit/test_mask.py::test_mask_land[lat-x-True]
+0.01s call     tests/unit/test_mask.py::test_mask_land[y-lon-False]
+0.01s call     tests/unit/test_localized_covariance.py::test_find_localized_empirical_covariance_np
+0.01s call     tests/unit/test_mask.py::test_mask_land[y-x-False]
+0.01s call     tests/unit/test_mask.py::test_ocean_land_default[False]
+0.01s call     tests/unit/test_mask.py::test_mask_land[y-x-True]
+0.01s call     tests/unit/test_mask.py::test_mask_land[lat-lon-True]
+0.01s call     tests/unit/test_mask.py::test_mask_land[lat-x-False]
+0.01s call     tests/unit/test_mask.py::test_mask_land[lat-lon-False]
+0.01s call     tests/unit/test_auto_regression.py::test_select_ar_order_xr_3d[4-1]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_errors[_fit_linear_regression_xr]
+0.01s call     tests/unit/test_auto_regression.py::test_select_ar_order_xr_3d[3-1]
+0.01s call     tests/unit/test_auto_regression.py::test_fit_auto_regression_xr_2D[1]
+0.01s call     tests/unit/test_auto_regression.py::test_fit_auto_regression_xr_2D[2]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_errors[LinearRegression_fit_wrapper]
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[lat-lon-False]
+0.01s call     tests/unit/test_localized_covariance.py::test_find_localized_empirical_covariance
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[lat-x-True]
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[y-x-True]
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[lat-lon-True]
+0.01s call     tests/unit/test_weighted.py::test_weighted_mean_errors_wrong_weights[False]
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[y-lon-True]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[y-x-False]
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[y-x-False]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[y-lon-False]
+0.01s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_coord_names[lon-y]
+0.01s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_coord_names[lon-lat]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[lat-x-False]
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[lat-x-False]
+0.01s call     tests/unit/test_weighted.py::test_global_mean_no_weights_passed[y-lon-False]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[lat-lon-False]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean_default[False]
+0.01s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_coord_names[x-lat]
+0.01s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage_coord_names[x-y]
+0.01s call     tests/unit/test_grid.py::test_unstructured_roundtrip_1D_coords[False]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[lat-x-True]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[y-lon-True]
+0.01s call     tests/unit/test_grid.py::test_unstructured_roundtrip_1D_coords[True]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_two_predictors[False-3.14-0-_fit_linear_regression_xr]
+0.01s call     tests/unit/test_auto_regression.py::test_select_ar_order_np
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[y-x-True]
+0.01s call     tests/unit/test_regionmaskcompat.py::test_mask_percentage
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean_default[True]
+0.01s call     tests/unit/test_weighted.py::test_calc_weighted_mean[lat-lon-True]
+0.01s call     tests/unit/test_weighted.py::test_weighted_mean_errors_wrong_weights[True]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_two_predictors[False-0-3.14-LinearRegression_fit_wrapper]
+0.01s call     tests/unit/test_utils.py::test_assert_annual_data[365_day]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_two_predictors[True-0-0-_fit_linear_regression_xr]
+0.01s call     tests/unit/test_weighted.py::test_weighted_no_scalar_expand[True]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_two_predictors[True-3.14-3.14-LinearRegression_fit_wrapper]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_fit_intercept[True-LinearRegression_fit_wrapper]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_two_predictors[True-3.14-3.14-_fit_linear_regression_xr]
+0.01s call     tests/unit/test_linear_regression.py::test_linear_regression_two_predictors[True-0-3.14-_fit_linear_regression_xr]
+
+(1215 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ============================
+FAILED tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios0-False-False-tas/one_scen_one_ens]
+FAILED tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios1-False-False-tas/multi_scen_multi_ens]
+FAILED tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios2-True-False-tas_tas2/one_scen_one_ens]
+FAILED tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios3-False-True-tas_hfds/one_scen_one_ens]
+FAILED tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios4-True-True-tas_tas2_hfds/one_scen_one_ens]
+FAILED tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios5-True-True-tas_tas2_hfds/one_scen_multi_ens]
+FAILED tests/integration/test_calibrate_mesmer.py::test_calibrate_mesmer[scenarios6-True-True-tas_tas2_hfds/multi_scen_multi_ens]
+FAILED tests/unit/test_data.py::test_load_stratospheric_aerosol_optical_depth_data
+FAILED tests/unit/test_data.py::test_load_stratospheric_aerosol_optical_depth_data_no_resample
+FAILED tests/unit/test_utils.py::test_assert_annual_data[standard] - ValueErr...
+FAILED tests/unit/test_utils.py::test_assert_annual_data[gregorian] - ValueEr...
+FAILED tests/unit/test_utils.py::test_assert_annual_data[proleptic_gregorian]
+FAILED tests/unit/test_utils.py::test_assert_annual_data[365_day] - ValueErro...
+FAILED tests/unit/test_utils.py::test_assert_annual_data[julian] - ValueError...
+FAILED tests/unit/test_weighted.py::test_weighted_mean_errors_wrong_weights[True]
+FAILED tests/unit/test_weighted.py::test_calc_weighted_mean_default[True] - V...
+FAILED tests/unit/test_weighted.py::test_calc_weighted_mean[y-x-True] - Value...
+FAILED tests/unit/test_weighted.py::test_calc_weighted_mean[y-lon-True] - Val...
+FAILED tests/unit/test_weighted.py::test_calc_weighted_mean[lat-x-True] - Val...
+FAILED tests/unit/test_weighted.py::test_calc_weighted_mean[lat-lon-True] - V...
+================= 20 failed, 419 passed, 78 warnings in 22.83s =================
+Energy consumption in joules: 374.8990173339844 for 24.015015 sec of execution.
+
+
+========================================
+Completed before version at: do  4 dec 2025 19:56:08 CET
+========================================
+
+========================================
+All tests completed at: do  4 dec 2025 19:56:08 CET
+Log file: /data/SpeedUpSlowTest/versions/mesmer_311//test_results_test_suite.log
+========================================

@@ -1,0 +1,272 @@
+========================================
+Starting test runs for project: ocean.py_1140
+Iterations: 1
+Test command: python -m pytest --durations=0
+Log file: /data/SpeedUpSlowTest/versions/ocean.py_1140//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Requirement already satisfied: PyYAML>=6.0 in ./.venv/lib/python3.10/site-packages (6.0.3)
+Obtaining file:///data/SpeedUpSlowTest/versions/ocean.py_1140/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting ocean-contracts==1.1.7 (from ocean-lib==2.0.0a3)
+  Using cached ocean_contracts-1.1.7-py3-none-any.whl.metadata (5.6 kB)
+Collecting coloredlogs (from ocean-lib==2.0.0a3)
+  Using cached coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting pyopenssl (from ocean-lib==2.0.0a3)
+  Using cached pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+Collecting PyJWT (from ocean-lib==2.0.0a3)
+  Using cached PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: PyYAML>=5.4.1 in ./.venv/lib/python3.10/site-packages (from ocean-lib==2.0.0a3) (6.0.3)
+Collecting requests>=2.21.0 (from ocean-lib==2.0.0a3)
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting deprecated (from ocean-lib==2.0.0a3)
+  Using cached deprecated-1.3.1-py2.py3-none-any.whl.metadata (5.9 kB)
+Collecting pycryptodomex (from ocean-lib==2.0.0a3)
+  Using cached pycryptodomex-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
+Collecting tqdm (from ocean-lib==2.0.0a3)
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting pytz (from ocean-lib==2.0.0a3)
+  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting cryptography (from ocean-lib==2.0.0a3)
+  Using cached cryptography-46.0.3-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting scipy (from ocean-lib==2.0.0a3)
+  Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting enforce-typing==1.0.0.post1 (from ocean-lib==2.0.0a3)
+  Using cached enforce_typing-1.0.0.post1-py2.py3-none-any.whl.metadata (3.1 kB)
+Collecting json-sempai==0.4.0 (from ocean-lib==2.0.0a3)
+  Using cached json_sempai-0.4.0-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting eciespy (from ocean-lib==2.0.0a3)
+  Using cached eciespy-0.4.6-py3-none-any.whl.metadata (8.9 kB)
+Collecting eth-brownie==1.19.1 (from ocean-lib==2.0.0a3)
+  Using cached eth_brownie-1.19.1-py3-none-any.whl.metadata (10 kB)
+Collecting bumpversion (from ocean-lib==2.0.0a3)
+  Using cached bumpversion-0.6.0-py2.py3-none-any.whl.metadata (19 kB)
+Collecting pkginfo (from ocean-lib==2.0.0a3)
+  Using cached pkginfo-1.12.1.2-py3-none-any.whl.metadata (13 kB)
+Collecting twine (from ocean-lib==2.0.0a3)
+  Using cached twine-6.2.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting watchdog (from ocean-lib==2.0.0a3)
+  Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+Collecting flake8==5.0.4 (from ocean-lib==2.0.0a3)
+  Using cached flake8-5.0.4-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting isort==5.10.1 (from ocean-lib==2.0.0a3)
+  Using cached isort-5.10.1-py3-none-any.whl.metadata (12 kB)
+Collecting black==22.6.0 (from ocean-lib==2.0.0a3)
+  Using cached black-22.6.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (46 kB)
+Collecting pre-commit (from ocean-lib==2.0.0a3)
+  Using cached pre_commit-4.5.0-py2.py3-none-any.whl.metadata (1.2 kB)
+Collecting pytest (from ocean-lib==2.0.0a3)
+  Using cached pytest-9.0.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting licenseheaders==0.8.8 (from ocean-lib==2.0.0a3)
+  Using cached licenseheaders-0.8.8-py3-none-any.whl.metadata (7.8 kB)
+Collecting pytest-env (from ocean-lib==2.0.0a3)
+  Using cached pytest_env-1.2.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting codacy-coverage (from ocean-lib==2.0.0a3)
+  Using cached codacy_coverage-1.3.11-py2.py3-none-any.whl.metadata (3.1 kB)
+Collecting coverage (from ocean-lib==2.0.0a3)
+  Using cached coverage-7.12.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (9.1 kB)
+Collecting docker (from ocean-lib==2.0.0a3)
+  Using cached docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting mccabe (from ocean-lib==2.0.0a3)
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pylint (from ocean-lib==2.0.0a3)
+  Using cached pylint-4.0.4-py3-none-any.whl.metadata (12 kB)
+Collecting pytest-watch (from ocean-lib==2.0.0a3)
+  Using cached pytest_watch-4.2.0-py3-none-any.whl
+Collecting Pillow (from ocean-lib==2.0.0a3)
+  Using cached pillow-12.0.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting matplotlib (from ocean-lib==2.0.0a3)
+  Using cached matplotlib-3.10.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting mkcodes==0.1.1 (from ocean-lib==2.0.0a3)
+  Using cached mkcodes-0.1.1-py3-none-any.whl.metadata (1.8 kB)
+Collecting click>=8.0.0 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting platformdirs>=2 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+Collecting pathspec>=0.9.0 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting mypy-extensions>=0.4.3 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting tomli>=1.1.0 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached tomli-2.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting aiohttp==3.8.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached aiohttp-3.8.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (7.3 kB)
+Collecting aiosignal==1.2.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached aiosignal-1.2.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting asttokens==2.0.5 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached asttokens-2.0.5-py2.py3-none-any.whl.metadata (4.6 kB)
+Collecting async-timeout==4.0.2 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached async_timeout-4.0.2-py3-none-any.whl.metadata (4.2 kB)
+Collecting attrs==22.1.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached attrs-22.1.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting base58==2.1.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached base58-2.1.1-py3-none-any.whl.metadata (3.1 kB)
+Collecting bitarray==2.6.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached bitarray-2.6.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (30 kB)
+Collecting certifi==2022.6.15 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached certifi-2022.6.15-py3-none-any.whl.metadata (2.8 kB)
+Collecting charset-normalizer==2.1.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached charset_normalizer-2.1.0-py3-none-any.whl.metadata (11 kB)
+Collecting click>=8.0.0 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached click-8.1.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting cytoolz==0.12.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached cytoolz-0.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.5 kB)
+Collecting dataclassy==0.11.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached dataclassy-0.11.1-py3-none-any.whl.metadata (22 kB)
+Collecting eip712==0.1.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eip712-0.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting eth-abi==2.2.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_abi-2.2.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting eth-account==0.5.9 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_account-0.5.9-py3-none-any.whl.metadata (6.1 kB)
+Collecting eth-event==1.2.3 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_event-1.2.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting eth-hash==0.3.3 (from eth-hash[pycryptodome]==0.3.3->eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_hash-0.3.3-py3-none-any.whl.metadata (6.3 kB)
+Collecting eth-keyfile==0.5.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_keyfile-0.5.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting eth-keys==0.3.4 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_keys-0.3.4-py3-none-any.whl.metadata (12 kB)
+Collecting eth-rlp==0.2.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_rlp-0.2.1-py3-none-any.whl.metadata (5.3 kB)
+Collecting eth-typing==2.3.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_typing-2.3.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting eth-utils==1.10.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached eth_utils-1.10.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting execnet==1.9.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached execnet-1.9.0-py2.py3-none-any.whl.metadata (3.1 kB)
+Collecting frozenlist==1.3.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached frozenlist-1.3.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.7 kB)
+Collecting hexbytes==0.2.2 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached hexbytes-0.2.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting hypothesis==6.27.3 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached hypothesis-6.27.3-py3-none-any.whl.metadata (6.3 kB)
+Collecting idna==3.3 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached idna-3.3-py3-none-any.whl.metadata (9.8 kB)
+Collecting inflection==0.5.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached inflection-0.5.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting iniconfig==1.1.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached iniconfig-1.1.1-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting ipfshttpclient==0.8.0a2 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached ipfshttpclient-0.8.0a2-py3-none-any.whl.metadata (11 kB)
+Collecting jsonschema==3.2.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached jsonschema-3.2.0-py2.py3-none-any.whl.metadata (7.8 kB)
+Collecting lazy-object-proxy==1.7.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached lazy_object_proxy-1.7.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting lru-dict==1.1.8 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached lru_dict-1.1.8-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.6 kB)
+Collecting multiaddr==0.0.9 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached multiaddr-0.0.9-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting multidict==6.0.2 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached multidict-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting mypy-extensions>=0.4.3 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached mypy_extensions-0.4.3-py2.py3-none-any.whl.metadata (1.2 kB)
+Collecting mythx-models==1.9.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached mythx_models-1.9.1-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting netaddr==0.8.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached netaddr-0.8.0-py2.py3-none-any.whl.metadata (4.9 kB)
+Collecting packaging==21.3 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached packaging-21.3-py3-none-any.whl.metadata (15 kB)
+Collecting parsimonious==0.8.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached parsimonious-0.8.1.tar.gz (45 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pathspec>=0.9.0 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached pathspec-0.9.0-py2.py3-none-any.whl.metadata (12 kB)
+Collecting platformdirs>=2 (from black==22.6.0->ocean-lib==2.0.0a3)
+  Using cached platformdirs-2.5.2-py3-none-any.whl.metadata (9.4 kB)
+Collecting pluggy==1.0.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pluggy-1.0.0-py2.py3-none-any.whl.metadata (4.3 kB)
+Collecting prompt-toolkit==3.0.30 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached prompt_toolkit-3.0.30-py3-none-any.whl.metadata (7.1 kB)
+Collecting protobuf==3.20.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached protobuf-3.20.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (698 bytes)
+Collecting psutil==5.9.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached psutil-5.9.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting py==1.11.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting py-solc-ast==1.2.9 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached py_solc_ast-1.2.9-py3-none-any.whl.metadata (7.2 kB)
+Collecting py-solc-x==1.1.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached py_solc_x-1.1.1-py3-none-any.whl.metadata (3.1 kB)
+Collecting pycryptodome==3.15.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pycryptodome-3.15.0-cp35-abi3-manylinux2010_x86_64.whl.metadata (3.2 kB)
+Collecting pygments==2.12.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached Pygments-2.12.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting pygments-lexer-solidity==0.7.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pygments-lexer-solidity-0.7.0.tar.gz (7.3 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting PyJWT (from ocean-lib==2.0.0a3)
+  Using cached PyJWT-1.7.1-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting pyparsing==3.0.9 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pyparsing-3.0.9-py3-none-any.whl.metadata (4.2 kB)
+Collecting pyrsistent==0.18.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pyrsistent-0.18.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (26 kB)
+Collecting pytest (from ocean-lib==2.0.0a3)
+  Using cached pytest-6.2.5-py3-none-any.whl.metadata (7.5 kB)
+Collecting pytest-forked==1.4.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pytest_forked-1.4.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting pytest-xdist==1.34.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pytest_xdist-1.34.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting python-dateutil==2.8.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached python_dateutil-2.8.1-py2.py3-none-any.whl.metadata (8.0 kB)
+Collecting python-dotenv==0.16.0 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached python_dotenv-0.16.0-py2.py3-none-any.whl.metadata (16 kB)
+Collecting pythx==1.6.1 (from eth-brownie==1.19.1->ocean-lib==2.0.0a3)
+  Using cached pythx-1.6.1-py2.py3-none-any.whl.metadata (6.3 kB)
+INFO: pip is looking at multiple versions of eth-brownie to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install None, ocean-lib and ocean-lib[dev]==2.0.0a3 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    ocean-lib 2.0.0a3 depends on PyYAML>=5.4.1
+    ocean-lib[dev] 2.0.0a3 depends on PyYAML>=5.4.1
+    eth-brownie 1.19.1 depends on pyyaml==5.4.1
+
+Additionally, some packages in these conflicts have no matching distributions available for your environment:
+    pyyaml
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+=========================================
+Test run 1/1 for before
+Time: do  4 dec 2025 21:13:51 CET
+=========================================
+/data/SpeedUpSlowTest/versions/ocean.py_1140/before/.venv/bin/python: No module named pytest
+Energy consumption in joules: 0.0170745849609375 for 0.2017453 sec of execution.
+
+
+========================================
+Completed before version at: do  4 dec 2025 21:13:51 CET
+========================================
+
+========================================
+All tests completed at: do  4 dec 2025 21:13:51 CET
+Log file: /data/SpeedUpSlowTest/versions/ocean.py_1140//test_results_test_suite.log
+========================================

@@ -6,3 +6,8 @@ https://github.com/python-trio/trio/pull/2664
 https://github.com/python-zeroconf/python-zeroconf/pull/853
 https://github.com/mantidproject/mantidimaging/pull/1439
 https://github.com/Clinical-Genomics/patientMatcher/pull/262
+https://github.com/Deltares/dfm_tools/pull/976
+https://github.com/gyrinx-app/gyrinx/pull/390
+https://github.com/MESMER-group/mesmer/pull/311
+https://github.com/oceanprotocol/ocean.py/pull/1140
+https://github.com/asapdiscovery/asapdiscovery/pull/798

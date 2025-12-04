@@ -5,7 +5,7 @@
 # Test command to run (without energibridge prefix)
 # PR #697 testing: Run ALL test files that are affected by the Zenodo API refactoring
 # Includes: Zenodo API tests, workflow tests, and CLI tests that use ZenodoAPI
-TEST_COMMAND="pytest \
+TEST_COMMAND=".venv/bin/python -m pytest \
 vulnerabilities/tests/test_upstream.py::test_updated_advisories \
 --durations=0 -vv"
 
@@ -16,7 +16,7 @@ VENV_PATH=".venv"
 # Install the package with test and gui dependencies (matching CI workflow)
 # Note: 'tests' is an alias for 'test' in case of typo (both work)
 # Set SETUPTOOLS_SCM_PRETEND_VERSION to bypass git version detection (hatch-vcs requirement)
-SETUP_COMMAND=""
+SETUP_COMMAND="pip install -e . && pip install saneyaml psycopg2"
 
 # Flag to indicate this is NOT a uv-based project
 USE_UV="false"

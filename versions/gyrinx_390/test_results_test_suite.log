@@ -1,0 +1,832 @@
+========================================
+Starting test runs for project: gyrinx_390
+Iterations: 1
+Test command: pytest --durations=0
+Log file: /data/SpeedUpSlowTest/versions/gyrinx_390//test_results_test_suite.log
+========================================
+
+========================================
+Starting tests for before version
+========================================
+Activating virtual environment...
+Running setup command...
+Obtaining file:///data/SpeedUpSlowTest/versions/gyrinx_390/before
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: asgiref==3.8.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (3.8.1)
+Requirement already satisfied: bandit==1.8.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (1.8.0)
+Requirement already satisfied: beautifulsoup4==4.13.4 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.13.4)
+Requirement already satisfied: click==8.2.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (8.2.1)
+Requirement already satisfied: daphne==4.2.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.2.0)
+Requirement already satisfied: Django==5.2.3 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (5.2.3)
+Requirement already satisfied: django-allauth==65.9.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (65.9.0)
+Requirement already satisfied: django-csp==4.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.0)
+Requirement already satisfied: django-debug-toolbar==5.2.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (5.2.0)
+Requirement already satisfied: django-extensions==4.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.1)
+Requirement already satisfied: django-polymorphic==4.1.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.1.0)
+Requirement already satisfied: django-recaptcha==4.1.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.1.0)
+Requirement already satisfied: django-simple-history==3.10.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (3.10.1)
+Requirement already satisfied: django-storages==1.14.6 in ./.venv/lib/python3.13/site-packages (from django-storages[google]==1.14.6->content==0.0.0) (1.14.6)
+Requirement already satisfied: django-tinymce==4.1.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.1.0)
+Requirement already satisfied: djlint==1.36.4 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (1.36.4)
+Requirement already satisfied: docutils==0.21.2 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (0.21.2)
+Requirement already satisfied: fido2==2.0.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (2.0.0)
+Requirement already satisfied: google-cloud-logging==3.12.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (3.12.1)
+Requirement already satisfied: jsonschema==4.24.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.24.0)
+Requirement already satisfied: jupyter==1.1.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (1.1.1)
+Requirement already satisfied: nbstripout==0.8.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (0.8.1)
+Requirement already satisfied: nodeenv==1.9.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (1.9.1)
+Requirement already satisfied: playwright==1.52.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (1.52.0)
+Requirement already satisfied: pre-commit==4.2.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.2.0)
+Requirement already satisfied: psycopg2-binary==2.9.10 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (2.9.10)
+Requirement already satisfied: pydantic==2.11.7 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (2.11.7)
+Requirement already satisfied: pydot==4.0.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.0.1)
+Requirement already satisfied: pyparsing==3.2.3 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (3.2.3)
+Requirement already satisfied: pytest==8.4.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (8.4.1)
+Requirement already satisfied: pytest-django==4.11.1 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (4.11.1)
+Requirement already satisfied: pytest-watcher==0.4.3 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (0.4.3)
+Requirement already satisfied: python-dotenv==1.1.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (1.1.0)
+Requirement already satisfied: qrcode==8.2 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (8.2)
+Requirement already satisfied: referencing==0.36.2 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (0.36.2)
+Requirement already satisfied: ruff==0.12.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (0.12.0)
+Requirement already satisfied: setuptools==80.9.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (80.9.0)
+Requirement already satisfied: sqlparse==0.5.3 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (0.5.3)
+Requirement already satisfied: whitenoise==6.9.0 in ./.venv/lib/python3.13/site-packages (from content==0.0.0) (6.9.0)
+Requirement already satisfied: PyYAML>=5.3.1 in ./.venv/lib/python3.13/site-packages (from bandit==1.8.0->content==0.0.0) (6.0.3)
+Requirement already satisfied: stevedore>=1.20.0 in ./.venv/lib/python3.13/site-packages (from bandit==1.8.0->content==0.0.0) (5.6.0)
+Requirement already satisfied: rich in ./.venv/lib/python3.13/site-packages (from bandit==1.8.0->content==0.0.0) (14.2.0)
+Requirement already satisfied: soupsieve>1.2 in ./.venv/lib/python3.13/site-packages (from beautifulsoup4==4.13.4->content==0.0.0) (2.8)
+Requirement already satisfied: typing-extensions>=4.0.0 in ./.venv/lib/python3.13/site-packages (from beautifulsoup4==4.13.4->content==0.0.0) (4.15.0)
+Requirement already satisfied: autobahn>=22.4.2 in ./.venv/lib/python3.13/site-packages (from daphne==4.2.0->content==0.0.0) (25.11.1)
+Requirement already satisfied: twisted>=22.4 in ./.venv/lib/python3.13/site-packages (from twisted[tls]>=22.4->daphne==4.2.0->content==0.0.0) (25.5.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.13/site-packages (from django-csp==4.0->content==0.0.0) (25.0)
+Requirement already satisfied: google-cloud-storage>=1.36.1 in ./.venv/lib/python3.13/site-packages (from django-storages[google]==1.14.6->content==0.0.0) (3.6.0)
+Requirement already satisfied: colorama>=0.4.4 in ./.venv/lib/python3.13/site-packages (from djlint==1.36.4->content==0.0.0) (0.4.6)
+Requirement already satisfied: cssbeautifier>=1.14.4 in ./.venv/lib/python3.13/site-packages (from djlint==1.36.4->content==0.0.0) (1.15.4)
+Requirement already satisfied: jsbeautifier>=1.14.4 in ./.venv/lib/python3.13/site-packages (from djlint==1.36.4->content==0.0.0) (1.15.4)
+Requirement already satisfied: json5>=0.9.11 in ./.venv/lib/python3.13/site-packages (from djlint==1.36.4->content==0.0.0) (0.12.1)
+Requirement already satisfied: pathspec>=0.12 in ./.venv/lib/python3.13/site-packages (from djlint==1.36.4->content==0.0.0) (0.12.1)
+Requirement already satisfied: regex>=2023 in ./.venv/lib/python3.13/site-packages (from djlint==1.36.4->content==0.0.0) (2025.11.3)
+Requirement already satisfied: tqdm>=4.62.2 in ./.venv/lib/python3.13/site-packages (from djlint==1.36.4->content==0.0.0) (4.67.1)
+Requirement already satisfied: cryptography!=35,<48,>=2.6 in ./.venv/lib/python3.13/site-packages (from fido2==2.0.0->content==0.0.0) (46.0.3)
+Requirement already satisfied: google-api-core!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1 in ./.venv/lib/python3.13/site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (2.28.1)
+Requirement already satisfied: google-auth!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (2.43.0)
+Requirement already satisfied: google-cloud-appengine-logging<2.0.0,>=0.1.3 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (1.7.0)
+Requirement already satisfied: google-cloud-audit-log<1.0.0,>=0.3.1 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (0.4.0)
+Requirement already satisfied: google-cloud-core<3.0.0,>=2.0.0 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (2.5.0)
+Requirement already satisfied: grpc-google-iam-v1<1.0.0,>=0.12.4 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (0.14.3)
+Requirement already satisfied: opentelemetry-api>=1.9.0 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (1.39.0)
+Requirement already satisfied: proto-plus<2.0.0,>=1.22.0 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (1.26.1)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2 in ./.venv/lib/python3.13/site-packages (from google-cloud-logging==3.12.1->content==0.0.0) (6.33.1)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv/lib/python3.13/site-packages (from jsonschema==4.24.0->content==0.0.0) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib/python3.13/site-packages (from jsonschema==4.24.0->content==0.0.0) (2025.9.1)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.venv/lib/python3.13/site-packages (from jsonschema==4.24.0->content==0.0.0) (0.30.0)
+Requirement already satisfied: notebook in ./.venv/lib/python3.13/site-packages (from jupyter==1.1.1->content==0.0.0) (7.5.0)
+Requirement already satisfied: jupyter-console in ./.venv/lib/python3.13/site-packages (from jupyter==1.1.1->content==0.0.0) (6.6.3)
+Requirement already satisfied: nbconvert in ./.venv/lib/python3.13/site-packages (from jupyter==1.1.1->content==0.0.0) (7.16.6)
+Requirement already satisfied: ipykernel in ./.venv/lib/python3.13/site-packages (from jupyter==1.1.1->content==0.0.0) (7.1.0)
+Requirement already satisfied: ipywidgets in ./.venv/lib/python3.13/site-packages (from jupyter==1.1.1->content==0.0.0) (8.1.8)
+Requirement already satisfied: jupyterlab in ./.venv/lib/python3.13/site-packages (from jupyter==1.1.1->content==0.0.0) (4.5.0)
+Requirement already satisfied: nbformat in ./.venv/lib/python3.13/site-packages (from nbstripout==0.8.1->content==0.0.0) (5.10.4)
+Requirement already satisfied: pyee<14,>=13 in ./.venv/lib/python3.13/site-packages (from playwright==1.52.0->content==0.0.0) (13.0.0)
+Requirement already satisfied: greenlet<4.0.0,>=3.1.1 in ./.venv/lib/python3.13/site-packages (from playwright==1.52.0->content==0.0.0) (3.3.0)
+Requirement already satisfied: cfgv>=2.0.0 in ./.venv/lib/python3.13/site-packages (from pre-commit==4.2.0->content==0.0.0) (3.5.0)
+Requirement already satisfied: identify>=1.0.0 in ./.venv/lib/python3.13/site-packages (from pre-commit==4.2.0->content==0.0.0) (2.6.15)
+Requirement already satisfied: virtualenv>=20.10.0 in ./.venv/lib/python3.13/site-packages (from pre-commit==4.2.0->content==0.0.0) (20.35.4)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.13/site-packages (from pydantic==2.11.7->content==0.0.0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.2 in ./.venv/lib/python3.13/site-packages (from pydantic==2.11.7->content==0.0.0) (2.33.2)
+Requirement already satisfied: typing-inspection>=0.4.0 in ./.venv/lib/python3.13/site-packages (from pydantic==2.11.7->content==0.0.0) (0.4.2)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.13/site-packages (from pytest==8.4.1->content==0.0.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.13/site-packages (from pytest==8.4.1->content==0.0.0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.13/site-packages (from pytest==8.4.1->content==0.0.0) (2.19.2)
+Requirement already satisfied: watchdog>=2.0.0 in ./.venv/lib/python3.13/site-packages (from pytest-watcher==0.4.3->content==0.0.0) (6.0.0)
+Requirement already satisfied: cffi>=2.0.0 in ./.venv/lib/python3.13/site-packages (from cryptography!=35,<48,>=2.6->fido2==2.0.0->content==0.0.0) (2.0.0)
+Requirement already satisfied: googleapis-common-protos<2.0.0,>=1.56.2 in ./.venv/lib/python3.13/site-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (1.72.0)
+Requirement already satisfied: requests<3.0.0,>=2.18.0 in ./.venv/lib/python3.13/site-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (2.32.5)
+Requirement already satisfied: grpcio<2.0.0,>=1.33.2 in ./.venv/lib/python3.13/site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (1.76.0)
+Requirement already satisfied: grpcio-status<2.0.0,>=1.33.2 in ./.venv/lib/python3.13/site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (1.76.0)
+Requirement already satisfied: cachetools<7.0,>=2.0.0 in ./.venv/lib/python3.13/site-packages (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1->google-cloud-logging==3.12.1->content==0.0.0) (6.2.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in ./.venv/lib/python3.13/site-packages (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1->google-cloud-logging==3.12.1->content==0.0.0) (0.4.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in ./.venv/lib/python3.13/site-packages (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1->google-cloud-logging==3.12.1->content==0.0.0) (4.9.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.13/site-packages (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.13/site-packages (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.13/site-packages (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.13/site-packages (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1->google-cloud-logging==3.12.1->content==0.0.0) (2025.11.12)
+Requirement already satisfied: pyasn1>=0.1.3 in ./.venv/lib/python3.13/site-packages (from rsa<5,>=3.1.4->google-auth!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1->google-cloud-logging==3.12.1->content==0.0.0) (0.6.1)
+Requirement already satisfied: txaio>=25.9.2 in ./.venv/lib/python3.13/site-packages (from autobahn>=22.4.2->daphne==4.2.0->content==0.0.0) (25.12.1)
+Requirement already satisfied: hyperlink>=21.0.0 in ./.venv/lib/python3.13/site-packages (from autobahn>=22.4.2->daphne==4.2.0->content==0.0.0) (21.0.0)
+Requirement already satisfied: msgpack>=1.0.2 in ./.venv/lib/python3.13/site-packages (from autobahn>=22.4.2->daphne==4.2.0->content==0.0.0) (1.1.2)
+Requirement already satisfied: ujson>=4.0.2 in ./.venv/lib/python3.13/site-packages (from autobahn>=22.4.2->daphne==4.2.0->content==0.0.0) (5.11.0)
+Requirement already satisfied: cbor2>=5.2.0 in ./.venv/lib/python3.13/site-packages (from autobahn>=22.4.2->daphne==4.2.0->content==0.0.0) (5.7.1)
+Requirement already satisfied: py-ubjson>=0.16.1 in ./.venv/lib/python3.13/site-packages (from autobahn>=22.4.2->daphne==4.2.0->content==0.0.0) (0.16.1)
+Requirement already satisfied: pycparser in ./.venv/lib/python3.13/site-packages (from cffi>=2.0.0->cryptography!=35,<48,>=2.6->fido2==2.0.0->content==0.0.0) (2.23)
+Requirement already satisfied: six>=1.13.0 in ./.venv/lib/python3.13/site-packages (from cssbeautifier>=1.14.4->djlint==1.36.4->content==0.0.0) (1.17.0)
+Requirement already satisfied: editorconfig>=0.12.2 in ./.venv/lib/python3.13/site-packages (from cssbeautifier>=1.14.4->djlint==1.36.4->content==0.0.0) (0.17.1)
+Requirement already satisfied: google-resumable-media<3.0.0,>=2.7.2 in ./.venv/lib/python3.13/site-packages (from google-cloud-storage>=1.36.1->django-storages[google]==1.14.6->content==0.0.0) (2.8.0)
+Requirement already satisfied: google-crc32c<2.0.0,>=1.1.3 in ./.venv/lib/python3.13/site-packages (from google-cloud-storage>=1.36.1->django-storages[google]==1.14.6->content==0.0.0) (1.7.1)
+Requirement already satisfied: importlib-metadata<8.8.0,>=6.0 in ./.venv/lib/python3.13/site-packages (from opentelemetry-api>=1.9.0->google-cloud-logging==3.12.1->content==0.0.0) (8.7.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.13/site-packages (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api>=1.9.0->google-cloud-logging==3.12.1->content==0.0.0) (3.23.0)
+Requirement already satisfied: automat>=24.8.0 in ./.venv/lib/python3.13/site-packages (from twisted>=22.4->twisted[tls]>=22.4->daphne==4.2.0->content==0.0.0) (25.4.16)
+Requirement already satisfied: constantly>=15.1 in ./.venv/lib/python3.13/site-packages (from twisted>=22.4->twisted[tls]>=22.4->daphne==4.2.0->content==0.0.0) (23.10.4)
+Requirement already satisfied: incremental>=24.7.0 in ./.venv/lib/python3.13/site-packages (from twisted>=22.4->twisted[tls]>=22.4->daphne==4.2.0->content==0.0.0) (24.11.0)
+Requirement already satisfied: zope-interface>=5 in ./.venv/lib/python3.13/site-packages (from twisted>=22.4->twisted[tls]>=22.4->daphne==4.2.0->content==0.0.0) (8.1.1)
+Requirement already satisfied: pyopenssl>=21.0.0 in ./.venv/lib/python3.13/site-packages (from twisted[tls]>=22.4->daphne==4.2.0->content==0.0.0) (25.3.0)
+Requirement already satisfied: service-identity>=18.1.0 in ./.venv/lib/python3.13/site-packages (from twisted[tls]>=22.4->daphne==4.2.0->content==0.0.0) (24.2.0)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./.venv/lib/python3.13/site-packages (from virtualenv>=20.10.0->pre-commit==4.2.0->content==0.0.0) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.12.2 in ./.venv/lib/python3.13/site-packages (from virtualenv>=20.10.0->pre-commit==4.2.0->content==0.0.0) (3.20.0)
+Requirement already satisfied: platformdirs<5,>=3.9.1 in ./.venv/lib/python3.13/site-packages (from virtualenv>=20.10.0->pre-commit==4.2.0->content==0.0.0) (4.5.0)
+Requirement already satisfied: comm>=0.1.1 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (1.8.17)
+Requirement already satisfied: ipython>=7.23.1 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (9.8.0)
+Requirement already satisfied: jupyter-client>=8.0.0 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (8.6.3)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (5.9.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (0.2.1)
+Requirement already satisfied: nest-asyncio>=1.4 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (1.6.0)
+Requirement already satisfied: psutil>=5.7 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (7.1.3)
+Requirement already satisfied: pyzmq>=25 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (27.1.0)
+Requirement already satisfied: tornado>=6.2 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in ./.venv/lib/python3.13/site-packages (from ipykernel->jupyter==1.1.1->content==0.0.0) (5.14.3)
+Requirement already satisfied: decorator>=4.3.2 in ./.venv/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers>=1.0.0 in ./.venv/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (1.1.1)
+Requirement already satisfied: jedi>=0.18.1 in ./.venv/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (0.19.2)
+Requirement already satisfied: pexpect>4.3 in ./.venv/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./.venv/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (3.0.52)
+Requirement already satisfied: stack_data>=0.6.0 in ./.venv/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (0.6.3)
+Requirement already satisfied: wcwidth in ./.venv/lib/python3.13/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./.venv/lib/python3.13/site-packages (from jedi>=0.18.1->ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (0.8.5)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.13/site-packages (from jupyter-client>=8.0.0->ipykernel->jupyter==1.1.1->content==0.0.0) (2.9.0.post0)
+Requirement already satisfied: ptyprocess>=0.5 in ./.venv/lib/python3.13/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (0.7.0)
+Requirement already satisfied: executing>=1.2.0 in ./.venv/lib/python3.13/site-packages (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./.venv/lib/python3.13/site-packages (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (3.0.1)
+Requirement already satisfied: pure-eval in ./.venv/lib/python3.13/site-packages (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel->jupyter==1.1.1->content==0.0.0) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in ./.venv/lib/python3.13/site-packages (from ipywidgets->jupyter==1.1.1->content==0.0.0) (4.0.15)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in ./.venv/lib/python3.13/site-packages (from ipywidgets->jupyter==1.1.1->content==0.0.0) (3.0.16)
+Requirement already satisfied: async-lru>=1.0.0 in ./.venv/lib/python3.13/site-packages (from jupyterlab->jupyter==1.1.1->content==0.0.0) (2.0.5)
+Requirement already satisfied: httpx<1,>=0.25.0 in ./.venv/lib/python3.13/site-packages (from jupyterlab->jupyter==1.1.1->content==0.0.0) (0.28.1)
+Requirement already satisfied: jinja2>=3.0.3 in ./.venv/lib/python3.13/site-packages (from jupyterlab->jupyter==1.1.1->content==0.0.0) (3.1.6)
+Requirement already satisfied: jupyter-lsp>=2.0.0 in ./.venv/lib/python3.13/site-packages (from jupyterlab->jupyter==1.1.1->content==0.0.0) (2.3.0)
+Requirement already satisfied: jupyter-server<3,>=2.4.0 in ./.venv/lib/python3.13/site-packages (from jupyterlab->jupyter==1.1.1->content==0.0.0) (2.17.0)
+Requirement already satisfied: jupyterlab-server<3,>=2.28.0 in ./.venv/lib/python3.13/site-packages (from jupyterlab->jupyter==1.1.1->content==0.0.0) (2.28.0)
+Requirement already satisfied: notebook-shim>=0.2 in ./.venv/lib/python3.13/site-packages (from jupyterlab->jupyter==1.1.1->content==0.0.0) (0.2.4)
+Requirement already satisfied: anyio in ./.venv/lib/python3.13/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (4.12.0)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.13/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.13/site-packages (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (0.16.0)
+Requirement already satisfied: argon2-cffi>=21.1 in ./.venv/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (25.1.0)
+Requirement already satisfied: jupyter-events>=0.11.0 in ./.venv/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals>=0.4.4 in ./.venv/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (0.5.3)
+Requirement already satisfied: prometheus-client>=0.9 in ./.venv/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (0.23.1)
+Requirement already satisfied: send2trash>=1.8.2 in ./.venv/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (1.8.3)
+Requirement already satisfied: terminado>=0.8.3 in ./.venv/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (0.18.1)
+Requirement already satisfied: websocket-client>=1.7 in ./.venv/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (1.9.0)
+Requirement already satisfied: babel>=2.10 in ./.venv/lib/python3.13/site-packages (from jupyterlab-server<3,>=2.28.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (2.17.0)
+Requirement already satisfied: argon2-cffi-bindings in ./.venv/lib/python3.13/site-packages (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (25.1.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.13/site-packages (from jinja2>=3.0.3->jupyterlab->jupyter==1.1.1->content==0.0.0) (3.0.3)
+Requirement already satisfied: python-json-logger>=2.0.4 in ./.venv/lib/python3.13/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (4.0.0)
+Requirement already satisfied: rfc3339-validator in ./.venv/lib/python3.13/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (0.1.4)
+Requirement already satisfied: rfc3986-validator>=0.1.1 in ./.venv/lib/python3.13/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (0.1.1)
+Requirement already satisfied: fqdn in ./.venv/lib/python3.13/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (1.5.1)
+Requirement already satisfied: isoduration in ./.venv/lib/python3.13/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (20.11.0)
+Requirement already satisfied: jsonpointer>1.13 in ./.venv/lib/python3.13/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (3.0.0)
+Requirement already satisfied: uri-template in ./.venv/lib/python3.13/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (1.3.0)
+Requirement already satisfied: webcolors>=24.6.0 in ./.venv/lib/python3.13/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (25.10.0)
+Requirement already satisfied: bleach!=5.0.0 in ./.venv/lib/python3.13/site-packages (from bleach[css]!=5.0.0->nbconvert->jupyter==1.1.1->content==0.0.0) (6.3.0)
+Requirement already satisfied: defusedxml in ./.venv/lib/python3.13/site-packages (from nbconvert->jupyter==1.1.1->content==0.0.0) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in ./.venv/lib/python3.13/site-packages (from nbconvert->jupyter==1.1.1->content==0.0.0) (0.3.0)
+Requirement already satisfied: mistune<4,>=2.0.3 in ./.venv/lib/python3.13/site-packages (from nbconvert->jupyter==1.1.1->content==0.0.0) (3.1.4)
+Requirement already satisfied: nbclient>=0.5.0 in ./.venv/lib/python3.13/site-packages (from nbconvert->jupyter==1.1.1->content==0.0.0) (0.10.2)
+Requirement already satisfied: pandocfilters>=1.4.1 in ./.venv/lib/python3.13/site-packages (from nbconvert->jupyter==1.1.1->content==0.0.0) (1.5.1)
+Requirement already satisfied: webencodings in ./.venv/lib/python3.13/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert->jupyter==1.1.1->content==0.0.0) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in ./.venv/lib/python3.13/site-packages (from bleach[css]!=5.0.0->nbconvert->jupyter==1.1.1->content==0.0.0) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in ./.venv/lib/python3.13/site-packages (from nbformat->nbstripout==0.8.1->content==0.0.0) (2.21.2)
+Requirement already satisfied: arrow>=0.15.0 in ./.venv/lib/python3.13/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (1.4.0)
+Requirement already satisfied: tzdata in ./.venv/lib/python3.13/site-packages (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter==1.1.1->content==0.0.0) (2025.2)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.13/site-packages (from rich->bandit==1.8.0->content==0.0.0) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.13/site-packages (from markdown-it-py>=2.2.0->rich->bandit==1.8.0->content==0.0.0) (0.1.2)
+Building wheels for collected packages: content
+  Building editable for content (pyproject.toml): started
+  Building editable for content (pyproject.toml): finished with status 'done'
+  Created wheel for content: filename=content-0.0.0-0.editable-py3-none-any.whl size=8420 sha256=17184f5d49d2c160b0f6ccc2cb94456853dd54efc99c296d32334f333746d167
+  Stored in directory: /tmp/pip-ephem-wheel-cache-tztn_u7s/wheels/48/fa/42/e86102cd7ca04b96ac20313e08da69f9b37573e55ee40b6bbc
+Successfully built content
+Installing collected packages: content
+  Attempting uninstall: content
+    Found existing installation: content 0.0.0
+    Uninstalling content-0.0.0:
+      Successfully uninstalled content-0.0.0
+Successfully installed content-0.0.0
+
+=========================================
+Test run 1/1 for before
+Time: do  4 dec 2025 19:31:36 CET
+=========================================
+============================= test session starts ==============================
+platform linux -- Python 3.13.8, pytest-8.4.1, pluggy-1.6.0
+django: version: 5.2.3, settings: gyrinx.settings_dev (from ini)
+rootdir: /data/SpeedUpSlowTest/versions/gyrinx_390/before
+configfile: pyproject.toml
+plugins: django-4.11.1, anyio-4.12.0
+collected 464 items
+
+gyrinx/content/tests/test_attributes.py .....                            [  1%]
+gyrinx/content/tests/test_content.py .........                           [  3%]
+gyrinx/content/tests/test_contentpack.py .......                         [  4%]
+gyrinx/content/tests/test_cost_methods.py .............................  [ 10%]
+gyrinx/content/tests/test_default_assignment.py ..                       [ 11%]
+gyrinx/content/tests/test_equipment_list.py .....                        [ 12%]
+gyrinx/content/tests/test_equipment_upgrade_overrides.py .........       [ 14%]
+gyrinx/content/tests/test_house_skills.py .                              [ 14%]
+gyrinx/content/tests/test_injuries.py ........                           [ 16%]
+gyrinx/content/tests/test_migrations.py ..                               [ 16%]
+gyrinx/content/tests/test_mods.py ..                                     [ 17%]
+gyrinx/content/tests/test_ordering.py .....                              [ 18%]
+gyrinx/content/tests/test_policy.py .                                    [ 18%]
+gyrinx/content/tests/test_weapons.py .......                             [ 19%]
+gyrinx/core/tests/test_advancements.py .......                           [ 21%]
+gyrinx/core/tests/test_assignments.py .............                      [ 24%]
+gyrinx/core/tests/test_campaign.py ...........                           [ 26%]
+gyrinx/core/tests/test_campaign_assets.py .........                      [ 28%]
+gyrinx/core/tests/test_campaign_lists.py ...............                 [ 31%]
+gyrinx/core/tests/test_campaign_resources.py ..........                  [ 33%]
+gyrinx/core/tests/test_campaign_status.py ..........                     [ 35%]
+gyrinx/core/tests/test_captured_fighters.py ..........                   [ 38%]
+gyrinx/core/tests/test_captured_linked_fighters.py ...                   [ 38%]
+gyrinx/core/tests/test_clone.py ....                                     [ 39%]
+gyrinx/core/tests/test_clone_linked_equipment.py ..                      [ 40%]
+gyrinx/core/tests/test_clone_psyker_and_additional.py ....               [ 40%]
+gyrinx/core/tests/test_cost_display.py ...                               [ 41%]
+gyrinx/core/tests/test_csp.py sssss                                      [ 42%]
+gyrinx/core/tests/test_csp_tinymce.py ss                                 [ 43%]
+gyrinx/core/tests/test_csrf.py ....                                      [ 43%]
+gyrinx/core/tests/test_equipment_link.py .........                       [ 45%]
+gyrinx/core/tests/test_equipment_list_profile_filtering.py .             [ 46%]
+gyrinx/core/tests/test_equipment_sell.py ........                        [ 47%]
+gyrinx/core/tests/test_fighter_injuries.py ..........                    [ 50%]
+gyrinx/core/tests/test_fighter_state_edit.py ....                        [ 50%]
+gyrinx/core/tests/test_group_tags.py ..........                          [ 53%]
+gyrinx/core/tests/test_history_aware_manager.py ......                   [ 54%]
+gyrinx/core/tests/test_history_tracking.py .......                       [ 55%]
+gyrinx/core/tests/test_homepage_campaigns.py ...                         [ 56%]
+gyrinx/core/tests/test_house_additional.py .                             [ 56%]
+gyrinx/core/tests/test_injury_campaign_actions.py ........               [ 58%]
+gyrinx/core/tests/test_injury_forms.py ...........                       [ 60%]
+gyrinx/core/tests/test_injury_modifications.py .........                 [ 62%]
+gyrinx/core/tests/test_injury_modifiers.py ...                           [ 63%]
+gyrinx/core/tests/test_injury_views.py ..........                        [ 65%]
+gyrinx/core/tests/test_integration_core_functionality.py ..........      [ 67%]
+gyrinx/core/tests/test_kill_fighter.py .......                           [ 69%]
+gyrinx/core/tests/test_list_archive.py ............                      [ 71%]
+gyrinx/core/tests/test_list_attributes.py ......                         [ 73%]
+gyrinx/core/tests/test_list_campaign_actions.py ...                      [ 73%]
+gyrinx/core/tests/test_list_credit_tracking.py ......                    [ 75%]
+gyrinx/core/tests/test_list_resources_assets.py ...                      [ 75%]
+gyrinx/core/tests/test_list_status.py ..........                         [ 77%]
+gyrinx/core/tests/test_models_core.py .................................. [ 85%]
+....                                                                     [ 85%]
+gyrinx/core/tests/test_psyker.py ..                                      [ 86%]
+gyrinx/core/tests/test_stash_fighter.py ......                           [ 87%]
+gyrinx/core/tests/test_upload.py ...............                         [ 90%]
+gyrinx/core/tests/test_weapon_availability_filtering.py .....            [ 92%]
+gyrinx/core/tests/test_xp_tracking.py ..................                 [ 95%]
+gyrinx/pages/tests.py .....                                              [ 96%]
+gyrinx/core/tests/test_color_tags.py ....                                [ 97%]
+gyrinx/core/tests/test_cost_display.py .......                           [ 99%]
+gyrinx/core/tests/test_csrf.py .                                         [ 99%]
+gyrinx/core/tests/test_tags.py .                                         [ 99%]
+gyrinx/pages/tests.py .                                                  [100%]
+
+============================== slowest durations ===============================
+30.24s setup    gyrinx/content/tests/test_attributes.py::test_content_attribute_creation
+2.64s teardown gyrinx/pages/tests.py::test_pages_path_segment
+1.32s call     gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_file_too_large
+1.27s call     gyrinx/core/tests/test_campaign_resources.py::test_resource_modify_view_permissions
+1.04s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_status_permissions
+0.98s call     gyrinx/core/tests/test_campaign.py::test_campaign_action_list_filtering
+0.96s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_reopen_permissions
+0.83s call     gyrinx/core/tests/test_list_status.py::test_can_add_lists_to_in_progress_campaign
+0.82s call     gyrinx/core/tests/test_campaign.py::test_campaign_action_list_timeframe_filtering
+0.80s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_campaign_action_user_tracking
+0.79s call     gyrinx/core/tests/test_homepage_campaigns.py::test_homepage_campaign_modules
+0.77s call     gyrinx/core/tests/test_list_campaign_actions.py::test_list_campaign_actions_filter_by_gang
+0.77s setup    gyrinx/core/tests/test_weapon_availability_filtering.py::test_rare_profiles_visible_without_filter
+0.73s call     gyrinx/core/tests/test_captured_linked_fighters.py::test_linked_fighter_can_be_captured
+0.69s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_add_lists_view_requires_ownership
+0.68s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_status_transitions
+0.67s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_add_lists_view_shows_available_lists
+0.66s call     gyrinx/core/tests/test_equipment_link.py::test_fighter_link_default_assignment_duplicated
+0.66s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_add_list_owner_filter
+0.65s call     gyrinx/core/tests/test_list_status.py::test_prevent_duplicate_list_in_campaign
+0.64s call     gyrinx/core/tests/test_injury_views.py::test_add_injury_wrong_user
+0.64s call     gyrinx/core/tests/test_injury_views.py::test_remove_injury_wrong_user
+0.57s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_multiple_injuries_multiple_actions
+0.57s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_injury_removal_campaign_action
+0.57s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_post_campaign_restrictions
+0.56s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_no_campaign_action_without_campaign
+0.56s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_state_change_actions
+0.55s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_reopen_functionality
+0.55s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_injury_campaign_action_without_notes
+0.55s call     gyrinx/core/tests/test_equipment_list_profile_filtering.py::test_weapon_profiles_filtered_with_equipment_list
+0.54s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_injury_and_removal_campaign_actions
+0.54s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_injury_campaign_action_creation
+0.53s call     gyrinx/core/tests/test_campaign_lists.py::test_confirm_add_list_to_in_progress_campaign
+0.53s call     gyrinx/core/tests/test_history_tracking.py::test_history_tracking_via_view
+0.52s call     gyrinx/core/tests/test_list_status.py::test_list_campaign_clones_view
+0.52s call     gyrinx/core/tests/test_xp_tracking.py::test_fighter_card_hides_xp_in_basic_mode
+0.52s call     gyrinx/core/tests/test_campaign_resources.py::test_resource_type_creation_in_progress_campaign
+0.52s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_detail_shows_add_lists_for_in_progress
+0.52s call     gyrinx/core/tests/test_campaign_assets.py::test_campaign_assets_view
+0.51s setup    gyrinx/core/tests/test_xp_tracking.py::test_fighter_card_shows_xp_in_campaign_mode
+0.51s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_without_description
+0.50s call     gyrinx/core/tests/test_list_campaign_actions.py::test_list_view_shows_only_gang_actions
+0.50s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_spend_validation
+0.50s call     gyrinx/core/tests/test_history_aware_manager.py::test_update_with_user
+0.49s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_status_display
+0.49s call     gyrinx/core/tests/test_campaign_lists.py::test_add_list_to_pre_campaign_no_cloning
+0.49s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_reduce_validation
+0.49s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_reduce_operation
+0.49s call     gyrinx/core/tests/test_captured_linked_fighters.py::test_captured_linked_fighter_shows_correct_status
+0.49s call     gyrinx/core/tests/test_campaign_lists.py::test_add_list_to_in_progress_campaign_shows_confirmation
+0.49s setup    gyrinx/core/tests/test_xp_tracking.py::test_archived_fighter_cannot_edit_xp
+0.49s call     gyrinx/core/tests/test_injury_campaign_actions.py::test_campaign_action_with_injury_description
+0.48s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_view_get
+0.48s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_reopen_button_display
+0.48s call     gyrinx/core/tests/test_homepage_campaigns.py::test_homepage_no_campaigns
+0.48s call     gyrinx/core/tests/test_injury_views.py::test_add_injury_view_defaults_to_fighter_state
+0.48s call     gyrinx/core/tests/test_list_status.py::test_active_campaign_clones_display
+0.47s call     gyrinx/core/tests/test_campaign_lists.py::test_cannot_add_list_to_post_campaign
+0.47s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_view_requires_ownership
+0.47s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_add_list_search
+0.47s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_view_requires_ownership
+0.47s call     gyrinx/core/tests/test_list_campaign_actions.py::test_gang_with_no_actions_shows_no_actions
+0.47s call     gyrinx/core/tests/test_injury_views.py::test_remove_injury_view_post
+0.47s call     gyrinx/core/tests/test_injury_views.py::test_add_injury_with_dead_state_redirects_to_kill
+0.46s call     gyrinx/core/tests/test_injury_views.py::test_add_injury_view_post_without_notes
+0.46s call     gyrinx/core/tests/test_injury_views.py::test_add_injury_view_post_success
+0.46s call     gyrinx/core/tests/test_injury_views.py::test_remove_injury_view_get
+0.46s setup    gyrinx/core/tests/test_xp_tracking.py::test_multiple_xp_operations_sequence
+0.46s call     gyrinx/core/tests/test_campaign_assets.py::test_create_asset_with_add_another
+0.46s call     gyrinx/core/tests/test_group_tags.py::test_campaigns_link_visible_for_group_members
+0.46s call     gyrinx/core/tests/test_injury_views.py::test_add_injury_non_campaign_mode
+0.45s call     gyrinx/core/tests/test_list_status.py::test_list_visibility_in_views
+0.45s call     gyrinx/core/tests/test_injury_views.py::test_add_injury_view_get
+0.45s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_status_invalid_transitions
+0.45s call     gyrinx/core/tests/test_list_status.py::test_campaign_add_lists_filtering
+0.45s call     gyrinx/core/tests/test_list_resources_assets.py::test_list_view_displays_campaign_resources_and_assets
+0.44s call     gyrinx/core/tests/test_clone.py::test_fighter_clone_with_mods
+0.44s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_view_requires_campaign_mode
+0.44s call     gyrinx/core/tests/test_list_resources_assets.py::test_list_view_no_resources_or_assets_shows_message
+0.43s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_add_operation
+0.43s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_view_requires_auth
+0.43s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_add_lists_excludes_already_added
+0.43s call     gyrinx/core/tests/test_fighter_injuries.py::test_injury_with_user_tracking
+0.43s call     gyrinx/core/tests/test_list_resources_assets.py::test_list_building_mode_does_not_show_resources_assets
+0.43s call     gyrinx/core/tests/test_campaign_resources.py::test_campaign_resources_view
+0.43s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_requires_post
+0.43s setup    gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_spend_operation
+0.43s call     gyrinx/core/tests/test_campaign.py::test_campaign_create_edit_forms
+0.42s call     gyrinx/core/tests/test_advancements.py::test_advancement_list_view
+0.42s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_requires_file
+0.42s setup    gyrinx/core/tests/test_upload.py::TestUploadedFileModel::test_check_user_quota
+0.42s call     gyrinx/core/tests/test_group_tags.py::test_campaigns_link_visible_for_all_authenticated_users
+0.42s call     gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_csrf_token_required
+0.42s call     gyrinx/core/tests/test_campaign_assets.py::test_create_asset_type_view
+0.42s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_file_too_large
+0.42s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_detail_shows_add_lists_button_for_owner
+0.41s setup    gyrinx/core/tests/test_upload.py::TestUploadedFileModel::test_file_url_without_cdn
+0.41s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_tracks_access
+0.41s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_daily_quota_limit
+0.41s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_generates_unique_filename
+0.41s setup    gyrinx/core/tests/test_upload.py::TestUploadedFileModel::test_file_url_with_cdn
+0.41s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_add_list_post
+0.41s setup    gyrinx/core/tests/test_upload.py::TestUploadedFileModel::test_get_user_usage_today
+0.41s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_successful_upload
+0.41s setup    gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_invalid_file_type
+0.41s call     gyrinx/core/tests/test_campaign_status.py::test_campaign_default_status
+0.40s setup    gyrinx/core/tests/test_list_archive.py::test_archive_list_requires_ownership
+0.38s setup    gyrinx/core/tests/test_models_core.py::test_invalid_equipment_upgrade
+0.36s call     gyrinx/core/tests/test_campaign_resources.py::test_campaign_start_allocates_resources
+0.36s call     gyrinx/core/tests/test_models_core.py::test_m2m_triggers_update_cost_cache
+0.36s call     gyrinx/core/tests/test_assignments.py::test_assign_accessory
+0.32s call     gyrinx/core/tests/test_list_status.py::test_campaign_start_clones_lists
+0.32s call     gyrinx/core/tests/test_list_status.py::test_regular_clone_preserves_public_flag
+0.31s call     gyrinx/core/tests/test_equipment_link.py::test_fighter_link_default_assignment
+0.30s call     gyrinx/core/tests/test_xp_tracking.py::test_fighter_card_shows_xp_in_campaign_mode
+0.30s call     gyrinx/core/tests/test_xp_tracking.py::test_multiple_xp_operations_sequence
+0.29s call     gyrinx/core/tests/test_fighter_injuries.py::test_injury_only_in_campaign_mode
+0.29s call     gyrinx/core/tests/test_injury_modifications.py::test_injury_phase_display
+0.29s call     gyrinx/core/tests/test_clone_linked_equipment.py::test_clone_fighter_with_linked_equipment
+0.29s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_with_spoon_and_not_other_assignments
+0.28s call     gyrinx/core/tests/test_campaign_assets.py::test_campaign_detail_shows_assets
+0.28s call     gyrinx/core/tests/test_fighter_injuries.py::test_injury_ordering
+0.28s call     gyrinx/core/tests/test_fighter_injuries.py::test_list_fighter_injury_date_tracking
+0.28s call     gyrinx/core/tests/test_assignments.py::test_upgrade_stat_mod
+0.28s call     gyrinx/core/tests/test_fighter_injuries.py::test_fighter_injuries_relationship
+0.28s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_can_have_lists
+0.27s call     gyrinx/core/tests/test_injury_modifications.py::test_injury_rule_addition
+0.27s call     gyrinx/core/tests/test_injury_modifications.py::test_injury_skill_addition
+0.27s call     gyrinx/core/tests/test_list_status.py::test_campaign_list_shows_original
+0.27s call     gyrinx/core/tests/test_injury_modifications.py::test_multiple_injuries_stat_stacking
+0.27s call     gyrinx/core/tests/test_fighter_injuries.py::test_injury_deletion_cascade
+0.27s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_without_description
+0.27s setup    gyrinx/core/tests/test_models_core.py::test_fighter_with_equipment_list_accessory
+0.27s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_weapon_profiles_individually
+0.27s call     gyrinx/core/tests/test_injury_modifications.py::test_injury_movement_modification
+0.27s call     gyrinx/core/tests/test_integration_core_functionality.py::test_non_public_lists_visibility
+0.26s call     gyrinx/core/tests/test_clone_linked_equipment.py::test_clone_list_with_linked_fighter
+0.26s call     gyrinx/core/tests/test_group_tags.py::test_in_group_filter_with_nonexistent_group
+0.26s call     gyrinx/core/tests/test_campaign_resources.py::test_resource_modification_requires_user
+0.26s call     gyrinx/core/tests/test_group_tags.py::test_in_group_filter_with_member
+0.26s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_reduce_validation
+0.26s call     gyrinx/core/tests/test_injury_modifications.py::test_injury_stat_modification_single
+0.26s call     gyrinx/core/tests/test_history_tracking.py::test_history_tracking_via_orm
+0.26s call     gyrinx/core/tests/test_injury_modifications.py::test_injury_with_no_modifiers
+0.26s call     gyrinx/core/tests/test_fighter_injuries.py::test_list_fighter_injury_creation
+0.26s setup    gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_no_change
+0.26s call     gyrinx/core/tests/test_group_tags.py::test_in_group_filter_with_non_member
+0.25s call     gyrinx/core/tests/test_history_aware_manager.py::test_delete_with_user
+0.25s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_with_manual_price
+0.25s call     gyrinx/core/tests/test_campaign_lists.py::test_campaign_detail_shows_lists
+0.25s call     gyrinx/core/tests/test_injury_modifiers.py::test_multiple_injury_modifiers_stack
+0.25s call     gyrinx/core/tests/test_injury_modifications.py::test_injury_stat_modification_multiple
+0.25s setup    gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_dead_redirects_to_kill
+0.25s setup    gyrinx/core/tests/test_advancements.py::test_advancement_list_view
+0.24s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_summary_page
+0.24s call     gyrinx/core/tests/test_history_tracking.py::test_bulk_create_with_history_method
+0.24s setup    gyrinx/core/tests/test_weapon_availability_filtering.py::test_armor_filtering_unchanged
+0.24s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_spend_operation
+0.24s call     gyrinx/core/tests/test_captured_linked_fighters.py::test_sold_linked_fighter_contributes_zero_to_gang_cost
+0.24s setup    gyrinx/core/tests/test_weapon_availability_filtering.py::test_common_items_visible_with_rarity_threshold
+0.24s call     gyrinx/core/tests/test_fighter_injuries.py::test_multiple_fighters_with_same_injury
+0.24s setup    gyrinx/core/tests/test_weapon_availability_filtering.py::test_equipment_list_items_always_shown
+0.24s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_requires_campaign_mode
+0.24s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_with_same_equipment_different_profiles
+0.24s call     gyrinx/core/tests/test_fighter_injuries.py::test_injury_history_tracking
+0.24s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_reduce_operation
+0.24s setup    gyrinx/core/tests/test_stash_fighter.py::test_only_one_stash_fighter_per_list
+0.24s setup    gyrinx/core/tests/test_weapon_availability_filtering.py::test_mal_filter_works_for_profiles
+0.24s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_with_dice_roll
+0.24s setup    gyrinx/core/tests/test_advancements.py::test_advancement_model_creation
+0.23s call     gyrinx/core/tests/test_campaign_assets.py::test_asset_transfer_requires_user
+0.23s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_add_weapon_with_ammo
+0.23s setup    gyrinx/core/tests/test_advancements.py::test_advancement_dice_choice_flow
+0.23s setup    gyrinx/core/tests/test_list_attributes.py::test_campaign_clone_with_attributes
+0.23s setup    gyrinx/core/tests/test_equipment_link.py::test_fighter_link_default_assignment_duplicated
+0.23s setup    gyrinx/core/tests/test_models_core.py::test_list_fighter_legacy
+0.23s call     gyrinx/core/tests/test_injury_modifiers.py::test_injury_modifiers_removed_when_injury_removed
+0.23s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_accessories_individually
+0.23s call     gyrinx/core/tests/test_campaign_assets.py::test_asset_transfer
+0.23s setup    gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_changes_state
+0.23s call     gyrinx/core/tests/test_injury_forms.py::test_add_injury_form_defaults_to_fighter_current_state
+0.23s setup    gyrinx/core/tests/test_advancements.py::test_skill_advancement_application
+0.23s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_add_operation
+0.23s setup    gyrinx/core/tests/test_list_credit_tracking.py::test_cannot_spend_more_than_available
+0.23s setup    gyrinx/core/tests/test_advancements.py::test_stat_advancement_application
+0.23s setup    gyrinx/core/tests/test_models_core.py::test_fighter_name_min_length
+0.23s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_spend_validation
+0.23s call     gyrinx/core/tests/test_group_tags.py::test_in_group_filter_in_template_non_member
+0.23s call     gyrinx/core/tests/test_injury_modifiers.py::test_injury_modifiers_only_apply_in_campaign_mode
+0.23s call     gyrinx/core/tests/test_advancements.py::test_advancement_start_requires_campaign_mode
+0.23s call     gyrinx/core/tests/test_fighter_injuries.py::test_injury_blank_notes
+0.23s call     gyrinx/core/tests/test_campaign.py::test_campaign_safe_html_allowed
+0.23s call     gyrinx/core/tests/test_campaign.py::test_campaign_list_view_html_content
+0.23s setup    gyrinx/core/tests/test_advancements.py::test_advancement_clean_validation
+0.23s call     gyrinx/core/tests/test_list_credit_tracking.py::test_cannot_spend_more_than_available
+0.23s call     gyrinx/core/tests/test_campaign_assets.py::test_asset_transfer_between_lists
+0.23s call     gyrinx/core/tests/test_history_aware_manager.py::test_bulk_create_with_history
+0.23s call     gyrinx/core/tests/test_xp_tracking.py::test_edit_fighter_xp_view_get
+0.22s setup    gyrinx/core/tests/test_list_attributes.py::test_single_select_validation
+0.22s call     gyrinx/core/tests/test_list_credit_tracking.py::test_reduce_credits
+0.22s call     gyrinx/core/tests/test_xp_tracking.py::test_archived_fighter_cannot_edit_xp
+0.22s setup    gyrinx/core/tests/test_list_archive.py::test_archive_button_in_dropdown_menu
+0.22s call     gyrinx/core/tests/test_list_credit_tracking.py::test_spend_credits
+0.22s call     gyrinx/core/tests/test_campaign_resources.py::test_resource_modification
+0.22s call     gyrinx/core/tests/test_campaign.py::test_campaign_detail_view
+0.22s call     gyrinx/core/tests/test_advancements.py::test_advancement_dice_choice_flow
+0.22s call     gyrinx/core/tests/test_campaign.py::test_campaign_xss_protection_recommendation
+0.22s call     gyrinx/core/tests/test_campaign_assets.py::test_create_asset_type
+0.22s call     gyrinx/core/tests/test_campaign_resources.py::test_campaign_detail_shows_resources
+0.22s setup    gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_user_profile
+0.22s call     gyrinx/core/tests/test_list_credit_tracking.py::test_add_credits_to_list
+0.22s call     gyrinx/core/tests/test_assignments.py::test_upgrade_fighter_stat_mod
+0.22s setup    gyrinx/core/tests/test_list_attributes.py::test_list_clone_with_attributes
+0.22s call     gyrinx/core/tests/test_csrf.py::test_csrf_failure_redirects_with_message
+0.22s call     gyrinx/core/tests/test_clone.py::test_list_clone_with_mods
+0.22s call     gyrinx/core/tests/test_integration_core_functionality.py::test_add_weapon_with_ammo
+0.21s setup    gyrinx/core/tests/test_clone_linked_equipment.py::test_clone_list_with_linked_fighter
+0.21s call     gyrinx/core/tests/test_campaign_resources.py::test_resource_modify_form_validation
+0.21s call     gyrinx/core/tests/test_campaign.py::test_campaign_xss_protection_direct_db
+0.21s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_search_weapons_by_name
+0.21s call     gyrinx/core/tests/test_list_status.py::test_list_default_status
+0.21s call     gyrinx/core/tests/test_campaign.py::test_campaign_detail_view_no_content
+0.21s call     gyrinx/core/tests/test_assignments.py::test_fighter_clone_default_assignment_conversion_to_full
+0.21s call     gyrinx/core/tests/test_campaign.py::test_campaign_list_view
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_fighter_with_default_spoon_weapon_assignment
+0.21s call     gyrinx/core/tests/test_history_aware_manager.py::test_save_with_user_defaults_to_owner
+0.21s call     gyrinx/core/tests/test_history_tracking.py::test_history_tracking_with_request_context
+0.21s call     gyrinx/core/tests/test_history_aware_manager.py::test_create_with_user_defaults_to_owner
+0.21s setup    gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_creates_campaign_action
+0.21s setup    gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_additional_rules
+0.21s setup    gyrinx/core/tests/test_list_credit_tracking.py::test_add_credits_to_list
+0.21s call     gyrinx/content/tests/test_contentpack.py::test_contentpack_ownership_and_visibility
+0.21s setup    gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_transfers_equipment_to_stash
+0.21s setup    gyrinx/core/tests/test_list_credit_tracking.py::test_reduce_credits
+0.21s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_requires_stash_fighter
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_fighter_cost_override_for_house
+0.21s call     gyrinx/core/tests/test_list_credit_tracking.py::test_edit_list_credits_view_requires_campaign_mode
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_assign_accessory
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_equipment_upgrades
+0.21s call     gyrinx/core/tests/test_campaign_resources.py::test_create_resource_type
+0.21s setup    gyrinx/content/tests/test_contentpack.py::test_contentpack_with_appbase_features
+0.21s call     gyrinx/core/tests/test_history_tracking.py::test_save_with_user_method
+0.21s setup    gyrinx/core/tests/test_list_credit_tracking.py::test_edit_list_credits_view_requires_campaign_mode
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_m2m_triggers_update_cost_cache
+0.21s call     gyrinx/core/tests/test_campaign_resources.py::test_resource_cannot_go_negative
+0.21s setup    gyrinx/core/tests/test_list_credit_tracking.py::test_list_has_credit_fields
+0.21s setup    gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_psyker_powers
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_assign_accessory_stat_mod
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_list_fighter_generic_house
+0.21s setup    gyrinx/core/tests/test_equipment_link.py::test_fighter_link_default_assignment_self_fails
+0.21s setup    gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_marks_as_dead_and_sets_cost_to_zero
+0.21s setup    gyrinx/core/tests/test_equipment_link.py::test_fighter_link_default_assignment
+0.21s setup    gyrinx/core/tests/test_list_credit_tracking.py::test_spend_credits
+0.21s setup    gyrinx/core/tests/test_list_archive.py::test_unarchive_list_post_request
+0.21s setup    gyrinx/content/tests/test_contentpack.py::test_contentpack_manytomany_relationships
+0.21s call     gyrinx/core/tests/test_history_tracking.py::test_history_user_tracking
+0.21s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_create_list_and_add_fighter
+0.21s setup    gyrinx/core/tests/test_psyker.py::test_psyker
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_fighter_stat_override
+0.21s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_remove_weapon
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_weapon_equipment_match
+0.21s setup    gyrinx/core/tests/test_psyker.py::test_psyker_default_power
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_list_fighter_house_matches_list
+0.21s setup    gyrinx/core/tests/test_equipment_link.py::test_basic_equipment_link
+0.21s setup    gyrinx/core/tests/test_advancements.py::test_advancement_start_requires_campaign_mode
+0.21s setup    gyrinx/content/tests/test_contentpack.py::test_contentpack_query_with_content
+0.21s setup    gyrinx/content/tests/test_contentpack.py::test_contentpack_reverse_relationships
+0.21s setup    gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_stat_overrides
+0.21s setup    gyrinx/core/tests/test_models_core.py::test_multi_equipment_upgrades
+0.21s setup    gyrinx/content/tests/test_contentpack.py::test_contentpack_creation
+0.21s setup    gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_cannot_kill_stash
+0.21s setup    gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_lists_page
+0.21s setup    gyrinx/core/tests/test_house_additional.py::test_house_additional_assignments
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_fighter_clone_default_assignment_conversion_to_full
+0.21s call     gyrinx/core/tests/test_campaign_assets.py::test_create_asset
+0.21s setup    gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_url_exists
+0.21s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_add_skills_to_fighter
+0.21s call     gyrinx/core/tests/test_history_aware_manager.py::test_create_with_user
+0.21s setup    gyrinx/core/tests/test_stash_fighter.py::test_stash_fighter_created_when_cloning_to_campaign
+0.21s setup    gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_legacy_content_fighter
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_fighter_default_assignment_conversion_to_full
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_fighter_disable_default_assignment
+0.21s setup    gyrinx/content/tests/test_contentpack.py::test_contentpack_default_values
+0.21s setup    gyrinx/content/tests/test_contentpack.py::test_contentpack_ownership_and_visibility
+0.21s setup    gyrinx/core/tests/test_clone_linked_equipment.py::test_clone_fighter_with_linked_equipment
+0.21s setup    gyrinx/core/tests/test_clone.py::test_fighter_clone_with_mods
+0.21s setup    gyrinx/core/tests/test_stash_fighter.py::test_stash_fighter_not_created_for_regular_clone
+0.21s setup    gyrinx/core/tests/test_equipment_link.py::test_fighter_link_archive
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_fighter_with_default_spoon_scope_assignment
+0.21s setup    gyrinx/core/tests/test_equipment_link.py::test_basic_fighter_link
+0.21s setup    gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_requires_campaign_mode
+0.21s setup    gyrinx/core/tests/test_equipment_link.py::test_default_equipment_link
+0.21s setup    gyrinx/core/tests/test_stash_fighter.py::test_stash_fighter_card_display
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_upgrade_fighter_stat_mod
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_upgrade_stat_mod
+0.21s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_rename_fighter
+0.21s setup    gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_campaign_add_lists
+0.21s setup    gyrinx/core/tests/test_equipment_link.py::test_list_ordering_with_link
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_negative_cost_item
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_equipment_fighter_stat_mod
+0.21s setup    gyrinx/core/tests/test_assignments.py::test_default_assignment_accessory_stat_mod
+0.20s setup    gyrinx/core/tests/test_list_archive.py::test_archive_list_post_request
+0.20s call     gyrinx/core/tests/test_group_tags.py::test_in_group_filter_in_template
+0.20s setup    gyrinx/core/tests/test_clone.py::test_list_clone_excludes_stash_fighter
+0.20s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_filter_weapons_by_category_and_availability
+0.20s setup    gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_requires_campaign_mode
+0.20s setup    gyrinx/core/tests/test_list_attributes.py::test_multi_select_allows_multiple_values
+0.20s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_add_another_fighter
+0.20s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_rename_list_and_change_properties
+0.20s setup    gyrinx/core/tests/test_list_archive.py::test_archived_list_display
+0.20s setup    gyrinx/core/tests/test_clone.py::test_basic_list_clone
+0.20s setup    gyrinx/core/tests/test_list_attributes.py::test_list_multiple_attributes
+0.20s setup    gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_home_page
+0.20s setup    gyrinx/core/tests/test_clone.py::test_list_clone_with_mods
+0.20s setup    gyrinx/core/tests/test_list_archive.py::test_archive_list_with_active_campaign
+0.20s setup    gyrinx/core/tests/test_list_attributes.py::test_list_attribute_assignment
+0.20s setup    gyrinx/core/tests/test_integration_core_functionality.py::test_non_public_lists_visibility
+0.20s setup    gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_selection_form
+0.20s setup    gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_confirmation_page
+0.20s setup    gyrinx/core/tests/test_list_archive.py::test_archive_list_get_request
+0.20s setup    gyrinx/core/tests/test_assignments.py::test_fighter_multiple_default_assigns_of_same_equipment
+0.20s setup    gyrinx/core/tests/test_list_archive.py::test_archive_list_url_exists
+0.19s call     gyrinx/core/tests/test_assignments.py::test_fighter_default_assignment_conversion_to_full
+0.19s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_list_fighter_equipment_assignment_upgrade_override
+0.19s call     gyrinx/core/tests/test_equipment_link.py::test_default_equipment_link
+0.18s call     gyrinx/core/tests/test_models_core.py::test_weapon_cost_legacy_equipment_list_override_with_profile
+0.18s call     gyrinx/core/tests/test_equipment_link.py::test_basic_equipment_link
+0.18s call     gyrinx/core/tests/test_models_core.py::test_weapon_cost_equipment_list_override_with_profile
+0.18s call     gyrinx/core/tests/test_equipment_link.py::test_fighter_link_archive
+0.17s call     gyrinx/core/tests/test_assignments.py::test_assign_accessory_stat_mod
+0.17s call     gyrinx/core/tests/test_models_core.py::test_fighter_with_equipment_list_accessory
+0.17s call     gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_transfers_equipment_to_stash
+0.17s call     gyrinx/core/tests/test_models_core.py::test_weapon_with_multiple_costed_profiles
+0.17s call     gyrinx/core/tests/test_equipment_link.py::test_basic_fighter_link
+0.16s call     gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_creates_campaign_action
+0.16s call     gyrinx/core/tests/test_integration_core_functionality.py::test_add_skills_to_fighter
+0.16s call     gyrinx/core/tests/test_models_core.py::test_multi_equipment_upgrades
+0.16s call     gyrinx/core/tests/test_equipment_link.py::test_list_ordering_with_link
+0.15s call     gyrinx/core/tests/test_models_core.py::test_virtual_assignments
+0.15s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_weapon_profiles_individually
+0.15s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_with_spoon_weapon
+0.15s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_accessories_individually
+0.14s call     gyrinx/core/tests/test_integration_core_functionality.py::test_remove_weapon
+0.14s call     gyrinx/core/tests/test_models_core.py::test_list_cost_with_fighter_cost_override
+0.13s call     gyrinx/core/tests/test_models_core.py::test_weapon_with_multiple_profiles
+0.13s call     gyrinx/core/tests/test_integration_core_functionality.py::test_filter_weapons_by_category_and_availability
+0.12s call     gyrinx/core/tests/test_clone.py::test_basic_list_clone
+0.12s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_virtual_equipment_assignment_active_methods_with_overrides
+0.12s call     gyrinx/core/tests/test_integration_core_functionality.py::test_rename_fighter
+0.11s call     gyrinx/core/tests/test_models_core.py::test_fighter_with_spoon_weapon_profile_with_cost
+0.11s call     gyrinx/core/tests/test_models_core.py::test_list_cost_cache
+0.11s call     gyrinx/core/tests/test_models_core.py::test_equipment_upgrades
+0.11s call     gyrinx/core/tests/test_integration_core_functionality.py::test_search_weapons_by_name
+0.11s call     gyrinx/core/tests/test_assignments.py::test_negative_cost_item
+0.11s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_with_dice_roll
+0.10s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_summary_page
+0.10s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_with_manual_price
+0.10s call     gyrinx/core/tests/test_models_core.py::test_weapon_cost_legacy_equipment_list_override_with_accessory
+0.10s call     gyrinx/core/tests/test_assignments.py::test_equipment_fighter_stat_mod
+0.09s call     gyrinx/core/tests/test_models_core.py::test_weapon_cost_legacy_equipment_list_override
+0.09s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_selection_form
+0.09s call     gyrinx/core/tests/test_models_core.py::test_list_cost_with_archived_fighter
+0.08s call     gyrinx/core/tests/test_weapon_availability_filtering.py::test_rare_profiles_visible_without_filter
+0.08s call     gyrinx/core/tests/test_integration_core_functionality.py::test_add_another_fighter
+0.08s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_cumulative_upgrade_costs_with_fighter_overrides
+0.08s call     gyrinx/core/tests/test_weapon_availability_filtering.py::test_mal_filter_works_for_profiles
+0.08s call     gyrinx/core/tests/test_integration_core_functionality.py::test_create_list_and_add_fighter
+0.08s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_virtual_equipment_assignment_active_methods_multi_mode
+0.08s call     gyrinx/core/tests/test_clone.py::test_list_clone_excludes_stash_fighter
+0.07s call     gyrinx/core/tests/test_stash_fighter.py::test_stash_fighter_created_when_cloning_to_campaign
+0.07s call     gyrinx/core/tests/test_models_core.py::test_invalid_equipment_upgrade
+0.07s call     gyrinx/core/tests/test_models_core.py::test_weapon_cost_equipment_list_override
+0.07s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_with_spoon
+0.07s call     gyrinx/content/tests/test_policy.py::test_equipment_policy
+0.07s call     gyrinx/core/tests/test_assignments.py::test_fighter_disable_default_assignment
+0.07s call     gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_marks_as_dead_and_sets_cost_to_zero
+0.07s call     gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_psyker_powers
+0.07s call     gyrinx/core/tests/test_psyker.py::test_psyker
+0.07s call     gyrinx/core/tests/test_house_additional.py::test_house_additional_assignments
+0.06s call     gyrinx/core/tests/test_psyker.py::test_psyker_default_power
+0.06s call     gyrinx/core/tests/test_integration_core_functionality.py::test_rename_list_and_change_properties
+0.06s call     gyrinx/core/tests/test_models_core.py::test_list_cost
+0.06s call     gyrinx/core/tests/test_weapon_availability_filtering.py::test_armor_filtering_unchanged
+0.06s call     gyrinx/core/tests/test_cost_display.py::TestModelCostDisplay::test_equipment_list_override_display
+0.06s call     gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_legacy_content_fighter
+0.06s call     gyrinx/core/tests/test_models_core.py::test_list_cost_variable
+0.05s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_legacy
+0.05s call     gyrinx/core/tests/test_stash_fighter.py::test_stash_fighter_not_created_for_regular_clone
+0.05s call     gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_stat_overrides
+0.05s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_requires_stash_fighter
+0.05s call     gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_changes_state
+0.04s call     gyrinx/core/tests/test_clone_psyker_and_additional.py::test_fighter_clone_with_additional_rules
+0.04s call     gyrinx/core/tests/test_equipment_sell.py::test_sell_equipment_requires_campaign_mode
+0.04s call     gyrinx/core/tests/test_captured_fighters.py::test_return_to_owner_view
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_sell_to_guilders_view
+0.04s call     gyrinx/core/tests/test_list_archive.py::test_archive_button_in_dropdown_menu
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_capture_fighter
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_sell_fighter_to_guilders
+0.04s call     gyrinx/content/tests/test_equipment_list.py::test_copy_to_house
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_return_to_owner_view
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_capture_permissions
+0.04s call     gyrinx/core/tests/test_captured_fighters.py::test_fighter_sorting_with_captured
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_sold_fighter_contributes_zero_to_gang_cost
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_captured_fighters_view
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_return_fighter_to_owner
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_fighter_sorting_with_captured
+0.04s setup    gyrinx/core/tests/test_captured_fighters.py::test_captured_fighter_contributes_zero_to_gang_cost
+0.04s call     gyrinx/core/tests/test_models_core.py::test_weapon_equipment_match
+0.04s call     gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_campaign_add_lists
+0.04s call     gyrinx/core/tests/test_assignments.py::test_fighter_multiple_default_assigns_of_same_equipment
+0.04s call     gyrinx/core/tests/test_list_attributes.py::test_campaign_clone_with_attributes
+0.04s call     gyrinx/core/tests/test_assignments.py::test_fighter_with_default_spoon_scope_assignment
+0.04s call     gyrinx/core/tests/test_assignments.py::test_default_assignment_accessory_stat_mod
+0.04s call     gyrinx/core/tests/test_models_core.py::test_fighter_stat_override
+0.04s call     gyrinx/core/tests/test_captured_fighters.py::test_sell_to_guilders_view
+0.04s call     gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_url_exists
+0.04s call     gyrinx/content/tests/test_contentpack.py::test_contentpack_manytomany_relationships
+0.03s call     gyrinx/core/tests/test_weapon_availability_filtering.py::test_common_items_visible_with_rarity_threshold
+0.03s call     gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_no_change
+0.03s call     gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_confirmation_page
+0.03s call     gyrinx/core/tests/test_weapon_availability_filtering.py::test_equipment_list_items_always_shown
+0.03s call     gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_home_page
+0.03s call     gyrinx/core/tests/test_list_attributes.py::test_list_clone_with_attributes
+0.03s call     gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_requires_campaign_mode
+0.03s call     gyrinx/core/tests/test_list_archive.py::test_archived_list_display
+0.03s call     gyrinx/core/tests/test_equipment_link.py::test_fighter_link_default_assignment_self_fails
+0.03s call     gyrinx/core/tests/test_assignments.py::test_fighter_with_default_spoon_weapon_assignment
+0.03s call     gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_dead_redirects_to_kill
+0.03s call     gyrinx/core/tests/test_list_archive.py::test_archive_list_with_active_campaign
+0.03s call     gyrinx/core/tests/test_fighter_state_edit.py::test_fighter_state_edit_requires_campaign_mode
+0.03s call     gyrinx/core/tests/test_kill_fighter.py::test_kill_fighter_cannot_kill_stash
+0.03s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_virtual_equipment_assignment_upgrade_override
+0.03s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_virtual_equipment_assignment_cumulative_upgrade_costs
+0.03s call     gyrinx/core/tests/test_models_core.py::test_fighter_cost_override_for_house
+0.03s call     gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_user_profile
+0.03s call     gyrinx/core/tests/test_list_archive.py::test_unarchive_list_post_request
+0.02s call     gyrinx/content/tests/test_equipment_list.py::test_content_equipment_manager
+0.02s call     gyrinx/core/tests/test_advancements.py::test_stat_advancement_application
+0.02s call     gyrinx/core/tests/test_stash_fighter.py::test_only_one_stash_fighter_per_list
+0.02s call     gyrinx/core/tests/test_list_archive.py::test_archived_lists_hidden_from_lists_page
+0.02s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_generic_house
+0.02s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_house_matches_list
+0.02s call     gyrinx/core/tests/test_captured_fighters.py::test_sold_fighter_contributes_zero_to_gang_cost
+0.02s call     gyrinx/content/tests/test_weapons.py::test_two_standard_stats
+0.02s call     gyrinx/core/tests/test_models_core.py::test_history
+0.02s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_copy_to_house_includes_upgrade_overrides
+0.02s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_content_fighter
+0.02s call     gyrinx/core/tests/test_stash_fighter.py::test_stash_fighter_card_display
+0.02s call     gyrinx/content/tests/test_weapons.py::test_autogun_combi_weapon
+0.02s call     gyrinx/core/tests/test_models_core.py::test_basic_list_fighter
+0.02s call     gyrinx/content/tests/test_migrations.py::test_pageref_refs
+0.02s call     gyrinx/core/tests/test_list_archive.py::test_archive_list_url_exists
+0.02s call     gyrinx/core/tests/test_list_archive.py::test_archive_list_post_request
+0.02s call     gyrinx/core/tests/test_captured_fighters.py::test_captured_fighters_view
+0.02s call     gyrinx/core/tests/test_captured_fighters.py::test_captured_fighter_contributes_zero_to_gang_cost
+0.02s call     gyrinx/core/tests/test_list_archive.py::test_archive_list_get_request
+0.02s call     gyrinx/content/tests/test_weapons.py::test_combi_weapon
+0.01s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_upgrade_with_cost_for_fighter_queryset
+0.01s call     gyrinx/core/tests/test_advancements.py::test_skill_advancement_application
+0.01s call     gyrinx/content/tests/test_weapons.py::test_special_ammo_weapon
+0.01s call     gyrinx/core/tests/test_list_attributes.py::test_list_multiple_attributes
+0.01s call     gyrinx/content/tests/test_default_assignment.py::test_default_assignment_with_weapon_profile
+0.01s call     gyrinx/core/tests/test_list_attributes.py::test_list_attribute_assignment
+0.01s call     gyrinx/content/tests/test_ordering.py::test_weapons_ordering_is_alphabetical
+0.01s call     gyrinx/core/tests/test_list_attributes.py::test_multi_select_allows_multiple_values
+0.01s call     gyrinx/core/tests/test_list_archive.py::test_archive_list_requires_ownership
+0.01s call     gyrinx/content/tests/test_equipment_list.py::test_equipment_weapon_profile_mismatch
+0.01s call     gyrinx/core/tests/test_models_core.py::test_archive_list
+0.01s call     gyrinx/core/tests/test_models_core.py::test_fighter_name_min_length
+0.01s call     gyrinx/content/tests/test_weapons.py::test_two_modes
+0.01s call     gyrinx/core/tests/test_list_attributes.py::test_single_select_validation
+0.01s call     gyrinx/content/tests/test_ordering.py::test_equipment_with_special_characters_ordering
+0.01s call     gyrinx/core/tests/test_captured_fighters.py::test_capture_permissions
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_equipment_cost_for_fighter_int_with_annotation
+0.01s call     gyrinx/core/tests/test_stash_fighter.py::test_stash_fighter_is_excluded_from_default_queryset
+0.01s call     gyrinx/content/tests/test_content.py::test_equipment_upgrades
+0.01s call     gyrinx/content/tests/test_ordering.py::test_multiple_categories_ordered_by_category_and_name
+0.01s call     gyrinx/content/tests/test_default_assignment.py::test_basic_default_assignment
+0.01s call     gyrinx/content/tests/test_ordering.py::test_content_equipment_default_ordering_is_alphabetical
+0.01s call     gyrinx/core/tests/test_models_core.py::test_list_fighter_requires_content_fighter
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_weapon_profile_cost_for_fighter_int_with_override
+0.01s call     gyrinx/content/tests/test_content.py::test_fighter_rules
+0.01s call     gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_generates_unique_filename
+0.01s call     gyrinx/content/tests/test_content.py::test_equipment_additional
+0.01s call     gyrinx/content/tests/test_house_skills.py::test_house_skills
+0.01s call     gyrinx/core/tests/test_models_core.py::test_basic_list
+0.01s call     gyrinx/content/tests/test_weapons.py::test_basic_weapon
+0.01s call     gyrinx/content/tests/test_ordering.py::test_non_weapons_ordering_is_alphabetical
+0.01s call     gyrinx/content/tests/test_equipment_list.py::test_equipment
+0.01s call     gyrinx/content/tests/test_injuries.py::test_injury_with_skill_modifiers
+0.01s call     gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_successful_upload
+0.01s call     gyrinx/content/tests/test_attributes.py::test_multiple_attributes
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_equipment_upgrade_cost_int_single_mode
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_fighter_equipment_list_upgrade_cost_int
+0.01s call     gyrinx/core/tests/test_upload.py::TestUploadedFileModel::test_get_user_usage_today
+0.01s call     gyrinx/content/tests/test_content.py::test_fighter_cost_for_house
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_fighter_default_assignment_cost_int
+0.01s call     gyrinx/content/tests/test_weapons.py::test_grenades
+0.01s call     gyrinx/core/tests/test_upload.py::TestTinyMCEUpload::test_upload_tracks_access
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_weapon_accessory_cost_for_fighter_int_with_override
+0.01s call     gyrinx/content/tests/test_attributes.py::test_content_attribute_value_creation
+0.01s call     gyrinx/content/tests/test_equipment_upgrade_overrides.py::test_content_fighter_equipment_list_upgrade_creation
+0.01s call     gyrinx/content/tests/test_content.py::test_equipment_multi_upgrade
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_fighter_equipment_list_upgrade_cost_display
+0.01s call     gyrinx/content/tests/test_content.py::test_basic_fighter
+0.01s call     gyrinx/content/tests/test_injuries.py::test_injury_with_stat_modifiers
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_fighter_default_assignment_cost_display
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_fighter_equipment_list_item_cost_int
+0.01s call     gyrinx/content/tests/test_mods.py::test_stat_mod
+0.01s call     gyrinx/pages/tests.py::test_waiting_list
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_fighter_equipment_list_item_cost_display
+0.01s call     gyrinx/core/tests/test_injury_forms.py::test_add_injury_form_queryset_ordering
+0.01s call     gyrinx/content/tests/test_cost_methods.py::test_content_fighter_equipment_list_weapon_accessory_cost_int
+0.01s call     gyrinx/content/tests/test_contentpack.py::test_contentpack_reverse_relationships
+0.01s call     gyrinx/content/tests/test_equipment_list.py::test_equipment_list_weapon_accessory
+
+(870 durations < 0.005s hidden.  Use -vv to show these durations.)
+================== 457 passed, 7 skipped in 150.68s (0:02:30) ==================
+Energy consumption in joules: 2672.950698852539 for 152.68295 sec of execution.
+
+
+========================================
+Completed before version at: do  4 dec 2025 19:34:09 CET
+========================================
+
+========================================
+All tests completed at: do  4 dec 2025 19:34:09 CET
+Log file: /data/SpeedUpSlowTest/versions/gyrinx_390//test_results_test_suite.log
+========================================
