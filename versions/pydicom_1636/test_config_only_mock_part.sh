@@ -6,7 +6,7 @@
 # PR #1636 testing: Run tests that involve downloading test data
 # This PR fixes issue #1611 about slow downloads with progress bars
 # The test_data_manager.py file contains tests that exercise the download functionality
-TEST_COMMAND="pytest pydicom/tests/test_data_manager.py::test_fetch_data_files --durations=0"
+TEST_COMMAND="pytest pydicom/tests/test_data_manager.py::test_fetch_data_files --durations=0 -vv"
 
 # Virtual environment path (relative to the version directory: before/ or after/)
 VENV_PATH=".venv"
