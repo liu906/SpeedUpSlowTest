@@ -1,0 +1,39 @@
+================================================================================
+CODE COVERAGE COMPARISON
+================================================================================
+
+Metric                                  before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+Total Coverage (%)                      61.96%          61.96%          +0.00%
+Lines Covered                              171             171              +0
+Total Statements                           276             276              +0
+Missing Lines                              105             105              +0
+Total Branches                               0               0              +0
+Branches Covered                             0               0              +0
+Missing Branches                             0               0              +0
+
+================================================================================
+FILE-LEVEL COVERAGE COMPARISON
+================================================================================
+
+File                                              before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+__init__.py                                      100.00%         100.00%          +0.00%
+bundle_manifest.py                                78.26%          78.26%          +0.00%
+local_test_cluster.py                             66.99%          66.99%          +0.00%
+manifest.py                                       65.85%          65.85%          +0.00%
+s3_bucket.py                                      39.06%          39.06%          +0.00%
+test_cluster.py                                   63.64%          63.64%          +0.00%
+
+Legend:
+  *** = Significant improvement (>5%)
+  !!! = Significant decrease (>5%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+✓ Coverage is IDENTICAL between before and after_careful_mock
+  Both versions have 61.96% coverage
+  This suggests that mocking did NOT reduce test effectiveness
+

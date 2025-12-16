@@ -1,0 +1,43 @@
+================================================================================
+CODE COVERAGE COMPARISON
+================================================================================
+
+Metric                                  before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+Total Coverage (%)                      17.40%          16.77%          -0.63%
+Lines Covered                              651             630             -21
+Total Statements                          3391            3391              +0
+Missing Lines                             2740            2761             +21
+Total Branches                            1200            1200              +0
+Branches Covered                           148             140              -8
+Missing Branches                          1052            1060              +8
+
+Branch Coverage (%)                     12.33%          11.67%          -0.67%
+
+================================================================================
+FILE-LEVEL COVERAGE COMPARISON
+================================================================================
+
+File                                              before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+__init__.py                                      100.00%         100.00%          +0.00%
+calibrate_utils.py                                 1.99%           1.99%          +0.00%
+datastore.py                                      20.82%          20.82%          +0.00%
+datastore_utils.py                                19.66%          19.66%          +0.00%
+io.py                                             33.12%          33.12%          +0.00%
+io_utils.py                                       28.01%          24.84%          -3.17%
+plot.py                                            1.90%           1.90%          +0.00%
+
+Legend:
+  *** = Significant improvement (>5%)
+  !!! = Significant decrease (>5%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+⚠ Coverage DECREASED by 0.63%
+  before: 17.40%
+  after_careful_mock: 16.77%
+  Review the mocking implementation - some code may no longer be executed
+

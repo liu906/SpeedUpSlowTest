@@ -1,0 +1,84 @@
+================================================================================
+CODE COVERAGE COMPARISON
+================================================================================
+
+Metric                                  before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+Total Coverage (%)                      63.53%          64.17%          +0.64%
+Lines Covered                             1026            1044             +18
+Total Statements                          1615            1627             +12
+Missing Lines                              589             583              -6
+Total Branches                               0               0              +0
+Branches Covered                             0               0              +0
+Missing Branches                             0               0              +0
+
+================================================================================
+FILE-LEVEL COVERAGE COMPARISON
+================================================================================
+
+File                                              before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+0001_initial.py                                  100.00%         100.00%          +0.00%
+0002_alert_updated.py                            100.00%         100.00%          +0.00%
+0003_alter_alert_updated.py                      100.00%         100.00%          +0.00%
+0004_login_index.py                              100.00%         100.00%          +0.00%
+0005_config.py                                   100.00%         100.00%          +0.00%
+0006_alert_is_vip.py                             100.00%         100.00%          +0.00%
+0007_login_event_id_login_ip.py                  100.00%         100.00%          +0.00%
+0008_usersip.py                                  100.00%         100.00%          +0.00%
+0009_config_ignored_ips_config_ignored_users_and_more.py         100.00%         100.00%          +0.00%
+0010_config_alert_max_days_config_distance_accepted_and_more.py         100.00%         100.00%          +0.00%
+0011_alert_filter_type_alert_is_filtered_and_more.py          61.90%          61.90%          +0.00%
+0012_remove_alert_valid_alert_filter_type_choices_and_more.py         100.00%         100.00%          +0.00%
+0013_remove_alert_valid_alert_name_choice_and_more.py         100.00%         100.00%          +0.00%
+0014_config_risk_score_increment_alerts.py         100.00%         100.00%          +0.00%
+0015_remove_alert_notified_alert_notified_status.py         100.00%         100.00%          +0.00%
+0016_alter_config_allowed_countries.py            78.26%          78.26%          +0.00%
+__init__.py                                      100.00%         100.00%          +0.00%
+admin.py                                          75.00%          75.00%          +0.00%
+alert_factory.py                                  74.36%          74.36%          +0.00%
+apps.py                                          100.00%         100.00%          +0.00%
+base_alerting.py                                  97.50%          97.50%          +0.00%
+celery.py                                         88.89%          88.89%          +0.00%
+certego.py                                        79.17%          79.17%          +0.00%
+constants.py                                      56.92%          56.92%          +0.00%
+discord_alerting.py                               74.29%          74.29%          +0.00%
+dummy_alerting.py                                 46.15%          46.15%          +0.00%
+email_alerting.py                                 26.67%          26.67%          +0.00%
+forms.py                                          84.62%          84.62%          +0.00%
+googlechat_alerting.py                            71.88%          71.88%          +0.00%
+http_request.py                                   20.14%          20.14%          +0.00%
+mattermost_alerting.py                            73.53%          73.53%          +0.00%
+microsoft_teams_alerting.py                       72.73%          72.73%          +0.00%
+models.py                                         65.52%          65.52%          +0.00%
+pushover_alerting.py                              73.53%          73.53%          +0.00%
+rocketchat_alerting.py                            74.29%          74.29%          +0.00%
+settings.py                                      100.00%         100.00%          +0.00%
+slack_alerting.py                                 71.88%          87.50%         +15.62% ***
+telegram_alerting.py                              77.78%          80.56%          +2.78%
+test_alert_discord.py                             68.42%          69.23%          +0.81%
+test_alert_factory.py                             48.84%          53.19%          +4.35%
+test_alert_googlechat.py                          64.10%          65.00%          +0.90%
+test_alert_mattermost.py                          62.50%          63.41%          +0.91%
+test_alert_microsoft_teams.py                     65.00%          65.85%          +0.85%
+test_alert_pushover.py                            62.50%          63.41%          +0.91%
+test_alert_rocketchat.py                          62.50%          63.41%          +0.91%
+test_alert_slack.py                               64.10%          65.00%          +0.90%
+test_alert_telegram.py                            60.98%          61.90%          +0.93%
+utils.py                                          36.84%          36.84%          +0.00%
+validators.py                                     20.93%          20.93%          +0.00%
+webhook.py                                        45.24%          45.24%          +0.00%
+
+Legend:
+  *** = Significant improvement (>5%)
+  !!! = Significant decrease (>5%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+✓ Coverage INCREASED by 0.64%
+  before: 63.53%
+  after_careful_mock: 64.17%
+  Mocking may have enabled additional code paths to be tested
+

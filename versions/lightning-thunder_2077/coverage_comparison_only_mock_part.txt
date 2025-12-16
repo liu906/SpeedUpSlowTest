@@ -1,0 +1,174 @@
+================================================================================
+CODE COVERAGE COMPARISON
+================================================================================
+
+Metric                                  before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+Total Coverage (%)                      40.85%          40.90%          +0.05%
+Lines Covered                            14855           14879             +24
+Total Statements                         36368           36383             +15
+Missing Lines                            21513           21504              -9
+Total Branches                               0               0              +0
+Branches Covered                             0               0              +0
+Missing Branches                             0               0              +0
+
+================================================================================
+FILE-LEVEL COVERAGE COMPARISON
+================================================================================
+
+File                                              before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+__about__.py                                     100.00%         100.00%          +0.00%
+__init__.py                                      100.00%         100.00%          +0.00%
+_appengine_environ.py                             90.91%          90.91%          +0.00%
+_collections.py                                   29.73%          29.73%          +0.00%
+_implementation.py                                13.89%          13.89%          +0.00%
+_version.py                                      100.00%         100.00%          +0.00%
+apex_entropyex_impl.py                            26.60%          26.60%          +0.00%
+apex_fused_rms_norm_impl.py                       66.67%          66.67%          +0.00%
+apexex.py                                        100.00%         100.00%          +0.00%
+autocast.py                                       47.41%          47.41%          +0.00%
+autodiff.py                                       71.86%          71.86%          +0.00%
+baseutils.py                                      57.76%          57.76%          +0.00%
+benchmark_utils.py                                39.31%          39.31%          +0.00%
+bf16.py                                           30.00%          30.00%          +0.00%
+big5freq.py                                      100.00%         100.00%          +0.00%
+big5prober.py                                     62.50%          62.50%          +0.00%
+bucketing.py                                      32.82%          32.82%          +0.00%
+chardistribution.py                               29.06%          29.06%          +0.00%
+charsetgroupprober.py                             15.07%          15.07%          +0.00%
+charsetprober.py                                  35.19%          35.19%          +0.00%
+ckqggro6ydigmsvsws4q2gupiaoyh3thr6x5dd477ud7evej4qwn.py          79.69%          79.69%          +0.00%
+codeutils.py                                      65.49%          65.49%          +0.00%
+codingstatemachine.py                             35.71%          35.71%          +0.00%
+column_wise.py                                    36.45%          36.45%          +0.00%
+common.py                                         31.16%          31.16%          +0.00%
+compile_data.py                                   78.05%          78.05%          +0.00%
+compiler.py                                       55.62%          55.62%          +0.00%
+compiler_graph_benchmark.py                       24.29%          24.29%          +0.00%
+conftest.py                                       26.09%          26.09%          +0.00%
+connection.py                                     32.39%          32.39%          +0.00%
+connectionpool.py                                 20.38%          20.38%          +0.00%
+constant_folding.py                               23.17%          23.17%          +0.00%
+core.py                                           10.88%          10.88%          +0.00%
+cp949prober.py                                    62.50%          62.50%          +0.00%
+cudagraph.py                                      17.44%          17.44%          +0.00%
+cudnn_layernormex.py                              48.53%          48.53%          +0.00%
+cudnnex.py                                        20.49%          20.49%          +0.00%
+data_dependent_partition.py                       52.04%          52.04%          +0.00%
+ddp.py                                            29.19%          29.19%          +0.00%
+default_torch_ops.py                             100.00%         100.00%          +0.00%
+devices.py                                        76.64%          76.64%          +0.00%
+dtypes.py                                         86.77%          86.77%          +0.00%
+enums.py                                          97.14%          97.14%          +0.00%
+escprober.py                                      22.41%          22.41%          +0.00%
+escsm.py                                         100.00%         100.00%          +0.00%
+eucjpprober.py                                    30.61%          30.61%          +0.00%
+euckrfreq.py                                     100.00%         100.00%          +0.00%
+euckrprober.py                                    62.50%          62.50%          +0.00%
+euctwfreq.py                                     100.00%         100.00%          +0.00%
+euctwprober.py                                    62.50%          62.50%          +0.00%
+exceptions.py                                     62.64%          62.64%          +0.00%
+extraction_only_prologue_transform.py             92.31%          92.31%          +0.00%
+fa3ex.py                                          33.90%          33.90%          +0.00%
+fields.py                                         22.47%          22.47%          +0.00%
+filepost.py                                       30.23%          30.23%          +0.00%
+framework.py                                      53.33%          53.33%          +0.00%
+fsdp.py                                           16.20%          16.20%          +0.00%
+functionalization.py                              10.41%          10.41%          +0.00%
+gb2312freq.py                                    100.00%         100.00%          +0.00%
+gb2312prober.py                                   62.50%          62.50%          +0.00%
+hebrewprober.py                                   37.66%          37.66%          +0.00%
+hf_bart_self_attn.py                              15.00%          15.00%          +0.00%
+idnadata.py                                      100.00%         100.00%          +0.00%
+interpreter.py                                    41.60%          41.63%          +0.02%
+intranges.py                                      20.00%          20.00%          +0.00%
+jisfreq.py                                       100.00%         100.00%          +0.00%
+jit_ext.py                                        51.27%          51.27%          +0.00%
+jpcntx.py                                         24.69%          24.69%          +0.00%
+langbulgarianmodel.py                            100.00%         100.00%          +0.00%
+langctx.py                                        92.11%          92.11%          +0.00%
+langctxs.py                                       80.56%          80.56%          +0.00%
+langgreekmodel.py                                100.00%         100.00%          +0.00%
+langhebrewmodel.py                               100.00%         100.00%          +0.00%
+langrussianmodel.py                              100.00%         100.00%          +0.00%
+langthaimodel.py                                 100.00%         100.00%          +0.00%
+langturkishmodel.py                              100.00%         100.00%          +0.00%
+latin1prober.py                                   44.23%          44.23%          +0.00%
+make_tensor.py                                    58.82%          58.82%          +0.00%
+materialization.py                                24.00%          24.00%          +0.00%
+mbcharsetprober.py                                25.00%          25.00%          +0.00%
+mbcsgroupprober.py                                78.57%          78.57%          +0.00%
+mbcssm.py                                        100.00%         100.00%          +0.00%
+module.py                                         20.38%          20.38%          +0.00%
+more.py                                           13.82%          13.82%          +0.00%
+nanogpt_model.py                                  19.70%          19.70%          +0.00%
+nvfuserex.py                                      45.16%          45.16%          +0.00%
+nvtx_profile_transform.py                         47.37%          47.37%          +0.00%
+options.py                                        65.00%          65.00%          +0.00%
+package_data.py                                  100.00%         100.00%          +0.00%
+passes.py                                         81.82%          81.82%          +0.00%
+poolmanager.py                                    24.62%          24.62%          +0.00%
+prims.py                                          32.08%          32.08%          +0.00%
+proxies.py                                        57.29%          57.47%          +0.19%
+proxy.py                                          21.43%          21.43%          +0.00%
+prune_prologue_checks.py                          14.29%          14.29%          +0.00%
+pythonex.py                                       83.15%          83.15%          +0.00%
+pytree.py                                         73.33%          73.33%          +0.00%
+qlora.py                                          10.79%          10.79%          +0.00%
+quantization.py                                   10.29%          10.29%          +0.00%
+queue.py                                          64.29%          64.29%          +0.00%
+recipe.py                                         32.32%          32.32%          +0.00%
+recipes.py                                        26.71%          26.71%          +0.00%
+rematerialization.py                              32.07%          32.07%          +0.00%
+report.py                                         32.71%          32.71%          +0.00%
+repro_script_template.py                         100.00%         100.00%          +0.00%
+request.py                                        52.00%          52.00%          +0.00%
+response.py                                       20.00%          20.00%          +0.00%
+retry.py                                          32.68%          32.68%          +0.00%
+row_wise.py                                       39.22%          39.22%          +0.00%
+sbcharsetprober.py                                22.37%          22.37%          +0.00%
+sbcsgroupprober.py                                61.11%          61.11%          +0.00%
+sdpaex.py                                         25.17%          25.17%          +0.00%
+six.py                                            51.10%          51.10%          +0.00%
+sjisprober.py                                     30.61%          30.61%          +0.00%
+socks.py                                          16.33%          16.33%          +0.00%
+splitter.py                                       89.23%          89.23%          +0.00%
+ssl_.py                                           44.03%          44.03%          +0.00%
+ssltransport.py                                    3.60%           3.60%          +0.00%
+symbol.py                                         81.51%          81.51%          +0.00%
+test_dynamo.py                                    18.11%          19.44%          +1.33%
+timeout.py                                        34.38%          34.38%          +0.00%
+torch_autograd.py                                 71.29%          71.29%          +0.00%
+torch_compile.py                                  46.32%          46.32%          +0.00%
+torchex.py                                        60.49%          60.66%          +0.16%
+trace.py                                          78.50%          78.50%          +0.00%
+trace_interpreter.py                              47.19%          47.19%          +0.00%
+transform_common.py                               62.93%          62.93%          +0.00%
+transformer_engineex.py                           29.44%          29.44%          +0.00%
+transforms.py                                     31.98%          31.98%          +0.00%
+triton_crossentropy.py                            66.67%          66.67%          +0.00%
+triton_crossentropy_impl.py                       15.61%          15.61%          +0.00%
+triton_utils.py                                   83.33%          83.33%          +0.00%
+universaldetector.py                              15.45%          15.45%          +0.00%
+update_aliases.py                                 15.85%          15.85%          +0.00%
+url.py                                            25.98%          25.98%          +0.00%
+utf8prober.py                                     32.56%          32.56%          +0.00%
+utils.py                                          14.29%          14.29%          +0.00%
+version.py                                       100.00%         100.00%          +0.00%
+vjp_utils.py                                      93.58%          93.58%          +0.00%
+wait.py                                           22.37%          22.37%          +0.00%
+
+Legend:
+  *** = Significant improvement (>5%)
+  !!! = Significant decrease (>5%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+✓ Coverage INCREASED by 0.05%
+  before: 40.85%
+  after_careful_mock: 40.90%
+  Mocking may have enabled additional code paths to be tested
+

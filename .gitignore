@@ -9,6 +9,7 @@ versions/**
 !versions/**/energy_data*.csv
 !versions/**/duration_data*.csv
 !versions/**/execution_time_data*.csv
+!versions/**/coverage*.txt
 
 # This requires us to not ignore the directories themselves
 !versions/

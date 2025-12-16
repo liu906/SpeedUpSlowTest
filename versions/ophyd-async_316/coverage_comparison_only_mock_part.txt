@@ -1,0 +1,54 @@
+================================================================================
+CODE COVERAGE COMPARISON
+================================================================================
+
+Metric                                  before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+Total Coverage (%)                      48.74%          47.90%          -0.84%
+Lines Covered                              753             740             -13
+Total Statements                          1545            1545              +0
+Missing Lines                              792             805             +13
+Total Branches                               0               0              +0
+Branches Covered                             0               0              +0
+Missing Branches                             0               0              +0
+
+================================================================================
+FILE-LEVEL COVERAGE COMPARISON
+================================================================================
+
+File                                              before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+__init__.py                                      100.00%         100.00%          +0.00%
+_aioca.py                                         58.96%          55.97%          -2.99%
+_epics_transport.py                               52.94%          52.94%          +0.00%
+_p4p.py                                           52.66%          47.87%          -4.79%
+_providers.py                                     78.57%          78.57%          +0.00%
+_version.py                                       77.78%          77.78%          +0.00%
+async_status.py                                   43.68%          43.68%          +0.00%
+common.py                                         23.08%          23.08%          +0.00%
+detector.py                                       52.76%          52.76%          +0.00%
+device.py                                         36.26%          36.26%          +0.00%
+device_save_loader.py                             34.25%          34.25%          +0.00%
+flyer.py                                          73.33%          73.33%          +0.00%
+mock_signal_backend.py                            35.19%          35.19%          +0.00%
+mock_signal_utils.py                              40.35%          40.35%          +0.00%
+protocols.py                                      78.57%          78.57%          +0.00%
+signal.py                                         38.71%          38.71%          +0.00%
+signal_backend.py                                100.00%         100.00%          +0.00%
+soft_signal_backend.py                            40.57%          40.57%          +0.00%
+standard_readable.py                              40.00%          40.00%          +0.00%
+utils.py                                          56.41%          56.41%          +0.00%
+
+Legend:
+  *** = Significant improvement (>5%)
+  !!! = Significant decrease (>5%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+⚠ Coverage DECREASED by 0.84%
+  before: 48.74%
+  after_careful_mock: 47.90%
+  Review the mocking implementation - some code may no longer be executed
+

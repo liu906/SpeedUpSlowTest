@@ -1,0 +1,56 @@
+================================================================================
+CODE COVERAGE COMPARISON
+================================================================================
+
+Metric                                  before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+Total Coverage (%)                      15.71%          13.95%          -1.75%
+Lines Covered                              587             523             -64
+Total Statements                          3737            3748             +11
+Missing Lines                             3150            3225             +75
+Total Branches                               0               0              +0
+Branches Covered                             0               0              +0
+Missing Branches                             0               0              +0
+
+================================================================================
+FILE-LEVEL COVERAGE COMPARISON
+================================================================================
+
+File                                              before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+__init__.py                                      100.00%         100.00%          +0.00%
+bathymetry.py                                      6.56%           6.56%          +0.00%
+coastlines.py                                     39.77%          13.64%         -26.14% !!!
+conftest.py                                       42.86%          42.86%          +0.00%
+data.py                                           28.57%          15.00%         -13.57% !!!
+deprecated.py                                     51.43%          51.43%          +0.00%
+download.py                                       27.82%          15.41%         -12.41% !!!
+energy_dissipation.py                             14.29%          14.29%          +0.00%
+errors.py                                        100.00%         100.00%          +0.00%
+get_nc.py                                          8.56%           8.56%          +0.00%
+get_nc_helpers.py                                 10.98%          10.98%          +0.00%
+hydrolib_helpers.py                                8.45%           8.45%          +0.00%
+interpolate_grid2bnd.py                           10.34%          10.34%          +0.00%
+linebuilder.py                                    21.57%          21.57%          +0.00%
+meshkernel_helpers.py                             18.59%          18.59%          +0.00%
+modelbuilder.py                                   11.68%          11.68%          +0.00%
+modplot.py                                        11.76%          11.76%          +0.00%
+observations.py                                    9.83%           9.83%          +0.00%
+test_coastlines.py                                43.64%          45.61%          +1.98%
+test_download.py                                  34.25%          37.37%          +3.11%
+xarray_helpers.py                                 11.18%          11.18%          +0.00%
+xugrid_helpers.py                                  7.31%           7.31%          +0.00%
+
+Legend:
+  *** = Significant improvement (>5%)
+  !!! = Significant decrease (>5%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+⚠ Coverage DECREASED by 1.75%
+  before: 15.71%
+  after_careful_mock: 13.95%
+  Review the mocking implementation - some code may no longer be executed
+

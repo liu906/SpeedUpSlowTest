@@ -1,0 +1,84 @@
+================================================================================
+CODE COVERAGE COMPARISON
+================================================================================
+
+Metric                                  before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+Total Coverage (%)                       3.20%           2.94%          -0.26%
+Lines Covered                              234             218             -16
+Total Statements                          7060            7060              +0
+Missing Lines                             6826            6842             +16
+Total Branches                            2530            2530              +0
+Branches Covered                            73              64              -9
+Missing Branches                          2457            2466              +9
+
+Branch Coverage (%)                      2.89%           2.53%          -0.36%
+
+================================================================================
+FILE-LEVEL COVERAGE COMPARISON
+================================================================================
+
+File                                              before after_careful_mock      Difference
+--------------------------------------------------------------------------------
+__init__.py                                      100.00%         100.00%          +0.00%
+ai_query_engine.py                                 0.00%           0.00%          +0.00%
+badge_generator.py                                 0.00%           0.00%          +0.00%
+bazbom_cli.py                                      0.00%           0.00%          +0.00%
+bazbom_config.py                                   0.00%           0.00%          +0.00%
+build_system.py                                    0.00%           0.00%          +0.00%
+changelog_generator.py                             0.00%           0.00%          +0.00%
+compliance_report.py                               0.00%           0.00%          +0.00%
+conflict_detector.py                               0.00%           0.00%          +0.00%
+container_scanner.py                               0.00%           0.00%          +0.00%
+contribution_tracker.py                            0.00%           0.00%          +0.00%
+csv_exporter.py                                    0.00%           0.00%          +0.00%
+cve_tracker.py                                     0.00%           0.00%          +0.00%
+dependency_scanner.py                              0.00%           0.00%          +0.00%
+dependency_verifier.py                             0.00%           0.00%          +0.00%
+drift_detector.py                                  0.00%           0.00%          +0.00%
+epss_enrichment.py                                54.87%          46.02%          -8.85% !!!
+extract_maven_deps.py                              0.00%           0.00%          +0.00%
+ghsa_enrichment.py                                 9.40%           9.40%          +0.00%
+graph_generator.py                                 0.00%           0.00%          +0.00%
+incremental_analyzer.py                            0.00%           0.00%          +0.00%
+interactive_fix.py                                 0.00%           0.00%          +0.00%
+intoto_attestation.py                              0.00%           0.00%          +0.00%
+kev_enrichment.py                                 44.37%          40.85%          -3.52%
+license_analyzer.py                                0.00%           0.00%          +0.00%
+license_extractor.py                               0.00%           0.00%          +0.00%
+license_scanner.py                                 0.00%           0.00%          +0.00%
+metrics_aggregator.py                              0.00%           0.00%          +0.00%
+osv_contributor.py                                 0.00%           0.00%          +0.00%
+osv_query.py                                       0.00%           0.00%          +0.00%
+policy_check.py                                    0.00%           0.00%          +0.00%
+provenance_builder.py                              0.00%           0.00%          +0.00%
+purl_generator.py                                  0.00%           0.00%          +0.00%
+rekor_integration.py                               0.00%           0.00%          +0.00%
+sarif_adapter.py                                   0.00%           0.00%          +0.00%
+sbom_diff.py                                       0.00%           0.00%          +0.00%
+sbom_signing.py                                    0.00%           0.00%          +0.00%
+scan_container.py                                  0.00%           0.00%          +0.00%
+supply_chain_risk.py                               0.00%           0.00%          +0.00%
+upgrade_recommender.py                             0.00%           0.00%          +0.00%
+validate_provenance.py                             0.00%           0.00%          +0.00%
+validate_sarif.py                                  0.00%           0.00%          +0.00%
+validate_sbom.py                                   0.00%           0.00%          +0.00%
+verify_sbom.py                                     0.00%           0.00%          +0.00%
+vex_processor.py                                   0.00%           0.00%          +0.00%
+vulncheck_enrichment.py                            9.02%           9.02%          +0.00%
+vulnerability_enrichment.py                       45.85%          45.85%          +0.00%
+write_sbom.py                                      0.00%           0.00%          +0.00%
+
+Legend:
+  *** = Significant improvement (>5%)
+  !!! = Significant decrease (>5%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+⚠ Coverage DECREASED by 0.26%
+  before: 3.20%
+  after_careful_mock: 2.94%
+  Review the mocking implementation - some code may no longer be executed
+
