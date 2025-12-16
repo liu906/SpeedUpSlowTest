@@ -1,0 +1,5 @@
+project,before_coverage,after_coverage,coverage_diff,lines_covered_before,lines_covered_after,lines_covered_diff,total_statements_before,total_statements_after,significant_decreases,significant_improvements,status
+detection-rules_2626,44.71,44.33,-0.38,5709,3679,-2030,12770,8300,0,0,UNKNOWN
+dfm_tools_976,15.71,13.95,-1.75,587,523,-64,3737,3748,3,0,UNKNOWN
+pydicom_1636,32.34,27.93,-4.41,4704,4063,-641,14546,14546,13,0,UNKNOWN
+roms-tools_107,36.11,34.66,-1.45,4440,4263,-177,12296,12300,4,0,UNKNOWN

@@ -2,11 +2,14 @@
 # Test configuration for BuffaLogs_399
 # This file is sourced by run_tests_generic.sh
 
+# Project type: Docker-based
+USE_DOCKER=true
+
 # Test command to run (without energibridge prefix)
 TEST_COMMAND="docker compose exec buffalogs pytest impossible_travel/tests/views/test_views.py --durations=0"
 
 # Optional: Setup command to run after containers are up (e.g., install dependencies)
-SETUP_COMMAND="docker compose exec buffalogs pip install pytest pytest-django"
+SETUP_COMMAND="docker compose exec buffalogs pip install pytest pytest-django coverage"
 
 # Optional: Wait time in seconds after docker compose up (for containers to be ready)
 WAIT_TIME=10

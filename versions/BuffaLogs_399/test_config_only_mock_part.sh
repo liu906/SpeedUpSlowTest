@@ -21,7 +21,7 @@ pytest \
   
 
 # Optional: Setup command to run after containers are up (e.g., install dependencies)
-SETUP_COMMAND="docker compose exec buffalogs pip install pytest pytest-django opensearch-py splunk-sdk"
+SETUP_COMMAND="docker compose exec buffalogs pip install pytest pytest-django opensearch-py splunk-sdk coverage"
 
 # Optional: Wait time in seconds after docker compose up (for containers to be ready)
 WAIT_TIME=10
