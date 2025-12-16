@@ -16,7 +16,7 @@ VENV_PATH=".venv"
 # Install the package with test and gui dependencies (matching CI workflow)
 # Note: 'tests' is an alias for 'test' in case of typo (both work)
 # Set SETUPTOOLS_SCM_PRETEND_VERSION to bypass git version detection (hatch-vcs requirement)
-SETUP_COMMAND="pip install -e . && pip install saneyaml psycopg2"
+SETUP_COMMAND="pip install -e . && pip install saneyaml psycopg2-binary"
 
 # Flag to indicate this is NOT a uv-based project
 USE_UV="false"
