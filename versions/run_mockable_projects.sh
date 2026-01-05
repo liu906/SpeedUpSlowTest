@@ -28,7 +28,7 @@
 # python3 parse_results_generic_optimized.py SDV_2158 only_mock_part
 # python3 parse_results_generic_optimized.py BazBOM_33 only_mock_part
 
-
+# python3 summarize_projects.py pyjelly_235 ert_11206 autosubmit_2367 blueprints_691 ophyd-async_316 quant-mind_58 nipoppy_697 vulnerablecode_490 SDV_2158 BazBOM_33 --suffix only_mock_part --output summary_all_projects_mockable.csv
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 # Coverage runs
