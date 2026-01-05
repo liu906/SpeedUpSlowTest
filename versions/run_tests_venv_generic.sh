@@ -170,8 +170,13 @@ run_version_tests() {
             # Use eval to properly handle complex commands with arguments
             eval "energibridge --summary --quiet $TEST_COMMAND" 2>&1 | tee -a "$LOG_FILE"
         else
-            # Use bash -c to ensure the virtualenv PATH is used
-            bash -c "source '$VENV_PATH/bin/activate' && energibridge --summary --quiet $TEST_COMMAND" 2>&1 | tee -a "$LOG_FILE"
+            # Replace 'python' with full path to venv python for energibridge
+            # energibridge executes commands in a subprocess that doesn't inherit sourced PATH
+            VENV_PYTHON="$VENV_PATH/bin/python"
+            MODIFIED_TEST_COMMAND="${TEST_COMMAND//python/$VENV_PYTHON}"
+
+            # Run energibridge with the modified command
+            energibridge --summary --quiet $MODIFIED_TEST_COMMAND 2>&1 | tee -a "$LOG_FILE"
         fi
 
         echo "" | tee -a "$LOG_FILE"

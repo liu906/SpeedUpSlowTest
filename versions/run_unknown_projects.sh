@@ -68,7 +68,8 @@ REPEAT=40
 # bash run_tests_venv_generic.sh evalml_2446 $REPEAT before after_careful_mock only_mock_part
 # python3 parse_results_generic_optimized.py evalml_2446 only_mock_part
 
-# python3 summarize_projects.py python-dts-calibration_197 opensearch-build_595 pydicom_1636 roms-tools_107 armi_1737  BuffaLogs_399 detection-rules_2626 lightning-thunder_2077 patientMatcher_262 dfm_tools_976 --suffix only_mock_part
+# python3 summarize_projects.py python-dts-calibration_197 opensearch-build_595 pydicom_1636 roms-tools_107 armi_1737  BuffaLogs_399 detection-rules_2626 lightning-thunder_2077 patientMatcher_262 dfm_tools_976 --suffix only_mock_part --output summary_all_projects_unknown.csv
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # Coverage runs
