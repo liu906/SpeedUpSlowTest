@@ -1,0 +1,139 @@
+% System Pipeline Flowchart for Research Paper
+% Requires: \usepackage{tikz}
+%          \usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+    node distance=0.8cm and 1.2cm,
+    % Style definitions
+    phase/.style={rectangle, rounded corners, minimum width=3cm, minimum height=0.8cm,
+                  text centered, draw=black, fill=blue!20, font=\small\bfseries},
+    process/.style={rectangle, minimum width=3.5cm, minimum height=0.7cm,
+                    text centered, draw=black, fill=orange!15, font=\scriptsize},
+    data/.style={rectangle, rounded corners=2pt, minimum width=3cm, minimum height=0.6cm,
+                 text centered, draw=black, fill=green!15, font=\scriptsize\ttfamily},
+    decision/.style={diamond, aspect=2, minimum width=2.5cm, minimum height=0.8cm,
+                     text centered, draw=black, fill=yellow!20, font=\scriptsize},
+    arrow/.style={-{Stealth[length=2mm]}, thick},
+    annotation/.style={font=\scriptsize\itshape, text width=2.5cm, align=center},
+]
+
+% Phase 1: Data Collection
+\node[phase] (phase1) {Phase 1: Data Collection};
+\node[process, below=of phase1] (fetch) {GitHub GraphQL Query\\(fix slow tests PRs)};
+\node[data, below=of fetch] (csv) {slow\_test\_issues.csv};
+\node[process, below=of csv] (select) {Manual PR Selection};
+\node[data, below=of select] (batch) {ListOptTestItself-\\batch*.txt};
+
+% Phase 2: Version Management
+\node[phase, right=3cm of phase1] (phase2) {Phase 2: Version Management};
+\node[process, below=of phase2] (download) {pr\_versions.py\\Clone Repositories};
+\node[data, below=of download] (versions) {before/ \& after/\\directories};
+
+% Phase 3: Mock Implementation
+\node[phase, below=3cm of phase2] (phase3) {Phase 3: Mock Implementation};
+\node[process, below=of phase3] (claude) {Claude Code\\+ Prompt Template};
+\node[data, below=of claude] (mock) {after\_careful\_mock/};
+\node[annotation, right=0.3cm of claude] (guideline) {Mock external deps\\Preserve logic};
+
+% Phase 4: Energy Measurement
+\node[phase, left=3cm of phase3] (phase4) {Phase 4: Energy Measurement};
+\node[process, below=of phase4] (energi) {run\_tests\_venv\_generic.sh\\N=10 runs + Energibridge};
+\node[data, below=of energi] (logs) {test\_results\_\\{suffix}.log};
+\node[process, below=of logs] (parse) {parse\_results\_\\generic\_optimized.py};
+\node[data, below=of parse] (energy_csv) {energy\_data.csv\\duration\_data.csv};
+\node[annotation, left=0.3cm of energi] (n_runs) {Statistical\\significance};
+
+% Phase 5: Coverage Verification
+\node[phase, right=3cm of phase4] (phase5) {Phase 5: Coverage\\Verification};
+\node[process, below=of phase5] (cov_run) {run\_tests\_venv\_\\generic\_coverage.sh};
+\node[data, below=of cov_run] (cov_json) {coverage\_\\{version}.json};
+\node[process, below=of cov_json] (compare) {compare\_coverage.py};
+\node[data, below=of compare] (cov_txt) {coverage\_\\comparison.txt};
+
+% Phase 6: Statistical Analysis
+\node[phase, below=3.5cm of phase4] (phase6) {Phase 6: Statistical Analysis};
+\node[process, below=of phase6] (filter) {IQR Outlier Filtering};
+\node[process, below=of filter] (visualize) {Generate Violin Plots\\Calculate Metrics};
+\node[data, below=of visualize] (plots) {comparison\_\\violin\_plots.png};
+
+% Phase 7: Multi-Project Aggregation
+\node[phase, below=3.5cm of phase5] (phase7) {Phase 7: Multi-Project\\Aggregation};
+\node[process, below=of phase7] (summarize) {summarize\_projects.py\\summarize\_coverage\_\\results.py};
+\node[data, below=of summarize] (summary) {project\_summary.csv\\coverage\_summary.csv};
+
+% Decision Diamond
+\node[decision, below=1.5cm of phase6] (decision) {Coverage\\Loss\\<10\%?};
+\node[data, below=0.8cm of decision] (accept) {\textbf{Accept}\\Optimization};
+\node[data, right=1.5cm of decision] (reject) {\textbf{Reject}\\Re-mock};
+
+% Arrows - Phase 1
+\draw[arrow] (phase1) -- (fetch);
+\draw[arrow] (fetch) -- (csv);
+\draw[arrow] (csv) -- (select);
+\draw[arrow] (select) -- (batch);
+
+% Arrows - Phase 2
+\draw[arrow] (batch) -- ++(2,0) |- (download);
+\draw[arrow] (phase2) -- (download);
+\draw[arrow] (download) -- (versions);
+
+% Arrows - Phase 3
+\draw[arrow] (versions) -- (phase3);
+\draw[arrow] (phase3) -- (claude);
+\draw[arrow] (claude) -- (mock);
+
+% Arrows - Phase 4
+\draw[arrow] (mock) -- ++(-2,0) |- (phase4);
+\draw[arrow] (phase4) -- (energi);
+\draw[arrow] (energi) -- (logs);
+\draw[arrow] (logs) -- (parse);
+\draw[arrow] (parse) -- (energy_csv);
+
+% Arrows - Phase 5
+\draw[arrow] (mock) -- ++(2,0) |- (phase5);
+\draw[arrow] (phase5) -- (cov_run);
+\draw[arrow] (cov_run) -- (cov_json);
+\draw[arrow] (cov_json) -- (compare);
+\draw[arrow] (compare) -- (cov_txt);
+
+% Arrows - Phase 6 & 7
+\draw[arrow] (energy_csv) -- (phase6);
+\draw[arrow] (phase6) -- (filter);
+\draw[arrow] (filter) -- (visualize);
+\draw[arrow] (visualize) -- (plots);
+\draw[arrow] (cov_txt) -- (phase7);
+\draw[arrow] (phase7) -- (summarize);
+\draw[arrow] (summarize) -- (summary);
+
+% Arrows - Decision
+\draw[arrow] (plots) -- (decision);
+\draw[arrow] (summary) -- ++(0,-1.8) -| (decision);
+\draw[arrow] (decision) -- node[right, font=\scriptsize] {Yes} (accept);
+\draw[arrow] (decision) -- node[above, font=\scriptsize] {No} (reject);
+\draw[arrow] (reject) |- (claude);
+
+% Background boxes for phases
+\begin{scope}[on background layer]
+    \node[fit=(phase1)(batch), fill=blue!5, rounded corners, inner sep=8pt] {};
+    \node[fit=(phase2)(versions), fill=blue!5, rounded corners, inner sep=8pt] {};
+    \node[fit=(phase3)(mock)(guideline), fill=blue!5, rounded corners, inner sep=8pt] {};
+    \node[fit=(phase4)(energy_csv)(n_runs), fill=blue!5, rounded corners, inner sep=8pt] {};
+    \node[fit=(phase5)(cov_txt), fill=blue!5, rounded corners, inner sep=8pt] {};
+    \node[fit=(phase6)(plots), fill=blue!5, rounded corners, inner sep=8pt] {};
+    \node[fit=(phase7)(summary), fill=blue!5, rounded corners, inner sep=8pt] {};
+\end{scope}
+
+% Metrics annotations
+\node[annotation, below=0.2cm of accept, fill=white, draw=black!30, rounded corners] (metrics) {
+    Metrics:\\
+    Energy $\downarrow$ 15-40\%\\
+    Speedup 1.2-2.0x\\
+    Coverage loss <10\%
+};
+
+\end{tikzpicture}
+\caption{System pipeline for evaluating energy-aware slow test optimization. The pipeline consists of seven phases: (1) identifying GitHub projects with slow test fixes, (2) downloading before/after PR versions, (3) applying mocking strategies using Claude Code, (4) measuring energy consumption across N=10 runs with Energibridge, (5) verifying test coverage preservation, (6) statistical analysis with outlier filtering, and (7) multi-project aggregation. Optimizations are accepted only if coverage loss is below 10\%.}
+\label{fig:system_pipeline}
+\end{figure*}

@@ -4,13 +4,15 @@ CODE COVERAGE COMPARISON
 
 Metric                                  before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Total Coverage (%)                      56.71%          56.24%          -0.47%
+Total Coverage (%)                      55.01%          54.19%          -0.82%
 Lines Covered                             1150            1163             +13
 Total Statements                          2028            2068             +40
 Missing Lines                              878             905             +27
-Total Branches                               0               0              +0
-Branches Covered                             0               0              +0
-Missing Branches                             0               0              +0
+Total Branches                             488             508             +20
+Branches Covered                           234             233              -1
+Missing Branches                           254             275             +21
+
+Branch Coverage (%)                     47.95%          45.87%          -2.08%
 
 ================================================================================
 FILE-LEVEL COVERAGE COMPARISON
@@ -20,32 +22,32 @@ File                                              before after_careful_mock     
 --------------------------------------------------------------------------------
 __init__.py                                      100.00%         100.00%          +0.00%
 __version__.py                                   100.00%         100.00%          +0.00%
-add.py                                            82.00%          82.00%          +0.00%
-auth.py                                          100.00%         100.00%          +0.00%
-commands.py                                       68.97%          68.97%          +0.00%
+add.py                                            79.31%          79.31%          +0.00%
+auth.py                                           90.91%          90.91%          +0.00%
+commands.py                                       67.74%          67.74%          +0.00%
 config.py                                        100.00%         100.00%          +0.00%
-conftest.py                                       81.61%          79.53%          -2.08%
-controllers.py                                    34.55%          34.55%          +0.00%
-delete.py                                         43.75%          43.75%          +0.00%
-disease.py                                        76.32%          76.32%          +0.00%
-ensembl_rest_client.py                            60.61%          60.61%          +0.00%
+conftest.py                                       82.47%          77.07%          -5.40% !!!
+controllers.py                                    31.54%          31.54%          +0.00%
+delete.py                                         44.44%          44.44%          +0.00%
+disease.py                                        75.47%          75.47%          +0.00%
+ensembl_rest_client.py                            53.66%          53.66%          +0.00%
 extensions.py                                    100.00%         100.00%          +0.00%
-gene.py                                           82.76%          58.62%         -24.14% !!!
-genotype_matcher.py                              100.00%         100.00%          +0.00%
-handler.py                                        40.00%          40.00%          +0.00%
-hpo.py                                            97.26%          97.26%          +0.00%
-notify.py                                         15.38%          15.38%          +0.00%
-patient.py                                        66.67%          66.67%          +0.00%
-phenotype_matcher.py                              97.18%          97.18%          +0.00%
-remove.py                                         44.19%          44.19%          +0.00%
-stats.py                                          16.13%          16.13%          +0.00%
+gene.py                                           81.40%          48.84%         -32.56% !!!
+genotype_matcher.py                               92.21%          92.21%          +0.00%
+handler.py                                        35.62%          35.62%          +0.00%
+hpo.py                                            97.60%          97.60%          +0.00%
+notify.py                                         13.28%          13.28%          +0.00%
+patient.py                                        60.98%          60.98%          +0.00%
+phenotype_matcher.py                              88.42%          88.42%          +0.00%
+remove.py                                         35.85%          35.85%          +0.00%
+stats.py                                          10.64%          10.64%          +0.00%
 test_GT_matching.py                              100.00%         100.00%          +0.00%
 test_add.py                                       39.53%          39.53%          +0.00%
-test_matching_handler.py                          36.36%          36.36%          +0.00%
-test_server_responses.py                          25.00%          25.00%          +0.00%
-update.py                                         35.00%          35.00%          +0.00%
-variant.py                                        90.00%          90.00%          +0.00%
-views.py                                          32.76%          32.76%          +0.00%
+test_matching_handler.py                          37.29%          37.29%          +0.00%
+test_server_responses.py                          26.49%          26.49%          +0.00%
+update.py                                         25.61%          25.61%          +0.00%
+variant.py                                        78.57%          78.57%          +0.00%
+views.py                                          27.78%          27.78%          +0.00%
 
 Legend:
   *** = Significant improvement (>5%)
@@ -55,8 +57,8 @@ Legend:
 SUMMARY
 ================================================================================
 
-⚠ Coverage DECREASED by 0.47%
-  before: 56.71%
-  after_careful_mock: 56.24%
+⚠ Coverage DECREASED by 0.82%
+  before: 55.01%
+  after_careful_mock: 54.19%
   Review the mocking implementation - some code may no longer be executed
 

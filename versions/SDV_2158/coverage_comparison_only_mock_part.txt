@@ -4,13 +4,15 @@ CODE COVERAGE COMPARISON
 
 Metric                                  before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Total Coverage (%)                      20.24%          20.06%          -0.18%
+Total Coverage (%)                      15.18%          15.12%          -0.06%
 Lines Covered                             1127            1149             +22
 Total Statements                          5568            5729            +161
 Missing Lines                             4441            4580            +139
-Total Branches                               0               0              +0
-Branches Covered                             0               0              +0
-Missing Branches                             0               0              +0
+Total Branches                            1928            1942             +14
+Branches Covered                            11              11              +0
+Missing Branches                          1917            1931             +14
+
+Branch Coverage (%)                      0.57%           0.57%          -0.00%
 
 ================================================================================
 FILE-LEVEL COVERAGE COMPARISON
@@ -19,31 +21,31 @@ FILE-LEVEL COVERAGE COMPARISON
 File                                              before after_careful_mock      Difference
 --------------------------------------------------------------------------------
 __init__.py                                      100.00%         100.00%          +0.00%
-_utils.py                                         21.88%          21.88%          +0.00%
-base.py                                           19.53%          19.53%          +0.00%
-conftest.py                                          N/A          13.66%        NEW FILE
-copulagan.py                                      27.45%          27.45%          +0.00%
-copulas.py                                        20.48%          20.48%          +0.00%
-ctgan.py                                          21.93%          21.93%          +0.00%
-data_processor.py                                 14.13%          14.13%          +0.00%
-datetime_formatter.py                             35.29%          35.29%          +0.00%
-demo.py                                           45.00%          45.00%          +0.00%
+_utils.py                                         15.62%          15.62%          +0.00%
+base.py                                           14.95%          14.95%          +0.00%
+conftest.py                                          N/A          12.57%        NEW FILE
+copulagan.py                                      22.95%          22.95%          +0.00%
+copulas.py                                        14.91%          14.91%          +0.00%
+ctgan.py                                          18.12%          18.12%          +0.00%
+data_processor.py                                 10.36%          10.36%          +0.00%
+datetime_formatter.py                             28.57%          28.57%          +0.00%
+demo.py                                           39.06%          39.06%          +0.00%
 errors.py                                        100.00%         100.00%          +0.00%
-hierarchical_sampler.py                           13.08%          13.08%          +0.00%
-hma.py                                            16.25%          16.25%          +0.00%
-independent_sampler.py                            18.18%          18.18%          +0.00%
-logger.py                                         24.59%          24.59%          +0.00%
-metadata_upgrader.py                               7.69%           7.69%          +0.00%
-multi_table.py                                    16.73%          16.73%          +0.00%
-numerical_formatter.py                            32.08%          32.08%          +0.00%
-par.py                                            17.73%          17.73%          +0.00%
+hierarchical_sampler.py                            8.92%           8.92%          +0.00%
+hma.py                                            12.40%          12.40%          +0.00%
+independent_sampler.py                            13.70%          13.70%          +0.00%
+logger.py                                         18.82%          18.82%          +0.00%
+metadata_upgrader.py                               5.26%           5.26%          +0.00%
+multi_table.py                                    12.19%          12.19%          +0.00%
+numerical_formatter.py                            22.08%          22.08%          +0.00%
+par.py                                            12.58%          12.58%          +0.00%
 relational.py                                    100.00%         100.00%          +0.00%
-single_table.py                                   15.52%          15.52%          +0.00%
+single_table.py                                   10.65%          10.65%          +0.00%
 tabular.py                                        60.00%          60.00%          +0.00%
 test_demo.py                                     100.00%         100.00%          +0.00%
 timeseries.py                                    100.00%         100.00%          +0.00%
-utils.py                                          17.31%          17.31%          +0.00%
-visualization.py                                  19.57%          19.57%          +0.00%
+utils.py                                          12.16%          12.16%          +0.00%
+visualization.py                                  15.00%          15.00%          +0.00%
 
 Legend:
   *** = Significant improvement (>5%)
@@ -53,8 +55,8 @@ Legend:
 SUMMARY
 ================================================================================
 
-⚠ Coverage DECREASED by 0.18%
-  before: 20.24%
-  after_careful_mock: 20.06%
+⚠ Coverage DECREASED by 0.06%
+  before: 15.18%
+  after_careful_mock: 15.12%
   Review the mocking implementation - some code may no longer be executed
 

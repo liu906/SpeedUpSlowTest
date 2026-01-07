@@ -4,15 +4,15 @@ CODE COVERAGE COMPARISON
 
 Metric                                  before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Total Coverage (%)                      10.66%          10.66%          +0.00%
-Lines Covered                             2554            2554              +0
+Total Coverage (%)                      10.77%          10.75%          -0.02%
+Lines Covered                             2576            2572              -4
 Total Statements                         17432           17432              +0
-Missing Lines                            14878           14878              +0
+Missing Lines                            14856           14860              +4
 Total Branches                            6728            6728              +0
-Branches Covered                            21              21              +0
-Missing Branches                          6707            6707              +0
+Branches Covered                            26              25              -1
+Missing Branches                          6702            6703              +1
 
-Branch Coverage (%)                      0.31%           0.31%          +0.00%
+Branch Coverage (%)                      0.39%           0.37%          -0.01%
 
 ================================================================================
 FILE-LEVEL COVERAGE COMPARISON
@@ -23,7 +23,7 @@ File                                              before after_careful_mock     
 __init__.py                                      100.00%         100.00%          +0.00%
 autosubmit.py                                      0.00%           0.00%          +0.00%
 autosubmit_git.py                                 11.72%          11.72%          +0.00%
-autosubmit_helper.py                              14.29%          14.29%          +0.00%
+autosubmit_helper.py                              46.43%          40.48%          -5.95% !!!
 data_transfer.py                                 100.00%         100.00%          +0.00%
 database_manager.py                               27.59%          27.59%          +0.00%
 database_models.py                               100.00%         100.00%          +0.00%
@@ -100,7 +100,8 @@ Legend:
 SUMMARY
 ================================================================================
 
-✓ Coverage is IDENTICAL between before and after_careful_mock
-  Both versions have 10.66% coverage
-  This suggests that mocking did NOT reduce test effectiveness
+⚠ Coverage DECREASED by 0.02%
+  before: 10.77%
+  after_careful_mock: 10.75%
+  Review the mocking implementation - some code may no longer be executed
 

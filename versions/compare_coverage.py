@@ -192,17 +192,35 @@ def generate_coverage_json(version_dir: Path, version_name: str, suffix: str = "
                                     temp_cov_file = tmp.name
 
                                 try:
-                                    # Create new coverage object
-                                    new_cov = coverage.Coverage(data_file=temp_cov_file)
+                                    # Create new coverage object with branch support
+                                    new_cov = coverage.Coverage(data_file=temp_cov_file, branch=True)
 
                                     # Copy data for files that exist
+                                    # Collect all lines and arcs first, then add them together
                                     new_data = coverage.CoverageData(basename=temp_cov_file)
+                                    lines_dict = {}
+                                    arcs_dict = {}
+
                                     for filename in all_files:
                                         if os.path.exists(filename):
                                             # Get the line data for this file
                                             lines = data.lines(filename)
                                             if lines:
-                                                new_data.add_lines({filename: lines})
+                                                lines_dict[filename] = lines
+
+                                            # Get the arc data (branch coverage) for this file
+                                            arcs = data.arcs(filename)
+                                            if arcs:
+                                                arcs_dict[filename] = arcs
+
+                                    # Add arcs first (branch coverage), then lines for files without arcs
+                                    if arcs_dict:
+                                        new_data.add_arcs(arcs_dict)
+
+                                    # Add line-only data for files that don't have arc data
+                                    lines_only = {f: l for f, l in lines_dict.items() if f not in arcs_dict}
+                                    if lines_only:
+                                        new_data.add_lines(lines_only)
 
                                     # Save the new data
                                     new_data.write()

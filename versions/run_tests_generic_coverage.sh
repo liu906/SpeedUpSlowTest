@@ -241,7 +241,7 @@ run_version_tests() {
                 # Create a compound command that runs tests and generates reports
                 # Write coverage files directly to /output (mounted volume) to avoid copy issues
                 # Use COVERAGE_FILE env var to specify the coverage data file location
-                COMPOUND_CMD="export COVERAGE_FILE=/output/.coverage && cd /home/worker/app && coverage run $COVERAGE_SOURCE -m pytest $TEST_ARGS && coverage report && coverage html -d /output/$HTML_DIR && coverage json -o /output/$JSON_FILE && echo 'Coverage reports generated successfully' && ls -la /output/$HTML_DIR /output/$JSON_FILE"
+                COMPOUND_CMD="export COVERAGE_FILE=/output/.coverage && cd /home/worker/app && coverage run --branch $COVERAGE_SOURCE -m pytest $TEST_ARGS && coverage report && coverage html -d /output/$HTML_DIR && coverage json -o /output/$JSON_FILE && echo 'Coverage reports generated successfully' && ls -la /output/$HTML_DIR /output/$JSON_FILE"
 
                 # Use bash as entrypoint to run the compound command
                 # Mount VERSION_DIR as /output so coverage files are written directly to host
@@ -251,18 +251,18 @@ run_version_tests() {
             elif [[ "$TEST_COMMAND" =~ docker[[:space:]]compose[[:space:]]exec[[:space:]]([^[:space:]]+)[[:space:]](.+) ]]; then
                 CONTAINER_NAME="${BASH_REMATCH[1]}"
                 INNER_COMMAND="${BASH_REMATCH[2]}"
-                # Replace pytest with coverage run in the inner command
-                COVERAGE_INNER_CMD=$(echo "$INNER_COMMAND" | sed -E 's/(python -m )?pytest/coverage run '"$COVERAGE_SOURCE"' -m pytest/')
+                # Replace pytest with coverage run --branch in the inner command
+                COVERAGE_INNER_CMD=$(echo "$INNER_COMMAND" | sed -E 's/(python -m )?pytest/coverage run --branch '"$COVERAGE_SOURCE"' -m pytest/')
                 COVERAGE_COMMAND="docker compose exec $CONTAINER_NAME $COVERAGE_INNER_CMD"
 
             else
-                # Fallback: just replace pytest with coverage run
+                # Fallback: just replace pytest with coverage run --branch
                 # This works for simple "docker compose run service pytest ..." commands
-                COVERAGE_COMMAND=$(echo "$TEST_COMMAND" | sed -E 's/(python -m )?pytest/coverage run '"$COVERAGE_SOURCE"' -m pytest/')
+                COVERAGE_COMMAND=$(echo "$TEST_COMMAND" | sed -E 's/(python -m )?pytest/coverage run --branch '"$COVERAGE_SOURCE"' -m pytest/')
             fi
         else
-            # For non-Docker, replace pytest with coverage run
-            COVERAGE_COMMAND=$(echo "$TEST_COMMAND" | sed -E 's/(python -m )?pytest/coverage run '"$COVERAGE_SOURCE"' -m pytest/')
+            # For non-Docker, replace pytest with coverage run --branch
+            COVERAGE_COMMAND=$(echo "$TEST_COMMAND" | sed -E 's/(python -m )?pytest/coverage run --branch '"$COVERAGE_SOURCE"' -m pytest/')
         fi
 
         echo "Running: $COVERAGE_COMMAND" | tee -a "$LOG_FILE"

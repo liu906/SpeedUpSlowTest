@@ -75,16 +75,16 @@ REPEAT=40
 # Coverage runs
 REPEAT=1
 
-# bash run_tests_venv_generic_coverage.sh opensearch-build_595 $REPEAT before after_careful_mock only_mock_part
-# bash run_tests_venv_generic_coverage.sh pydicom_1636 $REPEAT before after_careful_mock only_mock_part
-# bash run_tests_venv_generic_coverage.sh roms-tools_107 $REPEAT before after_careful_mock only_mock_part
-# bash run_tests_venv_generic_coverage.sh armi_1737 $REPEAT before after_careful_mock only_mock_part
-# bash ./run_tests_generic_coverage.sh BuffaLogs_399/ $REPEAT before after_careful_mock only_mock_part
-# bash run_tests_venv_generic_coverage.sh detection-rules_2626 $REPEAT before after_careful_mock only_mock_part
-# bash run_tests_venv_generic_coverage.sh lightning-thunder_2077 $REPEAT before after_careful_mock only_mock_part
-# bash ./run_tests_generic_coverage.sh patientMatcher_262/ $REPEAT before after_careful_mock only_mock_part
-# bash run_tests_venv_generic_coverage.sh dfm_tools_976 $REPEAT before after_careful_mock only_mock_part
-# bash run_tests_venv_generic_coverage.sh evalml_2446 $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh opensearch-build_595 $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh pydicom_1636 $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh roms-tools_107 $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh armi_1737 $REPEAT before after_careful_mock only_mock_part
+bash ./run_tests_generic_coverage.sh BuffaLogs_399/ $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh detection-rules_2626 $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh lightning-thunder_2077 $REPEAT before after_careful_mock only_mock_part
+bash ./run_tests_generic_coverage.sh patientMatcher_262/ $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh dfm_tools_976 $REPEAT before after_careful_mock only_mock_part
+bash run_tests_venv_generic_coverage.sh evalml_2446 $REPEAT before after_careful_mock only_mock_part
 
 
 python3 compare_coverage.py python-dts-calibration_197 before after_careful_mock only_mock_part
@@ -98,4 +98,4 @@ python3 compare_coverage.py lightning-thunder_2077 before after_careful_mock onl
 python3 compare_coverage.py patientMatcher_262 before after_careful_mock only_mock_part
 python3 compare_coverage.py dfm_tools_976 before after_careful_mock only_mock_part
 
-python3 summarize_coverage_results.py python-dts-calibration_197 opensearch-build_595 pydicom_1636 roms-tools_107 armi_1737 BuffaLogs_399 detection-rules_2626 lightning-thunder_2077 patientMatcher_262 dfm_tools_976
+python3 summarize_coverage_results.py -o summary_all_projects_unknown_codeCoverage.csv  python-dts-calibration_197 opensearch-build_595 pydicom_1636 roms-tools_107 armi_1737 BuffaLogs_399 detection-rules_2626 lightning-thunder_2077 patientMatcher_262 dfm_tools_976 

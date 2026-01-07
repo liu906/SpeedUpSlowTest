@@ -4,13 +4,15 @@ CODE COVERAGE COMPARISON
 
 Metric                                  before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Total Coverage (%)                      50.09%          52.40%          +2.31%
-Lines Covered                             1701            1833            +132
-Total Statements                          3396            3498            +102
-Missing Lines                             1695            1665             -30
-Total Branches                               0               0              +0
-Branches Covered                             0               0              +0
-Missing Branches                             0               0              +0
+Total Coverage (%)                      11.00%          11.00%          +0.00%
+Lines Covered                               54              54              +0
+Total Statements                           392             392              +0
+Missing Lines                              338             338              +0
+Total Branches                             108             108              +0
+Branches Covered                             1               1              +0
+Missing Branches                           107             107              +0
+
+Branch Coverage (%)                      0.93%           0.93%          +0.00%
 
 ================================================================================
 FILE-LEVEL COVERAGE COMPARISON
@@ -19,44 +21,9 @@ FILE-LEVEL COVERAGE COMPARISON
 File                                              before after_careful_mock      Difference
 --------------------------------------------------------------------------------
 __init__.py                                      100.00%         100.00%          +0.00%
-admin.py                                         100.00%         100.00%          +0.00%
-alpine_linux.py                                   94.83%          84.48%         -10.34% !!!
-apache_httpd.py                                   48.19%          48.19%          +0.00%
-apache_kafka.py                                   45.61%          45.61%          +0.00%
-apache_tomcat.py                                 100.00%         100.00%          +0.00%
-archlinux.py                                      56.52%          56.52%          +0.00%
-conftest.py                                       75.00%          75.00%          +0.00%
-data_source.py                                    50.94%          50.56%          -0.37%
-debian.py                                         91.80%          91.80%          +0.00%
-debian_oval.py                                    89.29%          89.29%          +0.00%
-elixir_security.py                                47.37%          47.37%          +0.00%
-gentoo.py                                         98.59%          98.59%          +0.00%
-github.py                                         33.33%          33.33%          +0.00%
-helpers.py                                        83.33%          91.03%          +7.69% ***
-importer_yielder.py                               33.33%          33.33%          +0.00%
-istio.py                                          32.22%          83.33%         +51.11% ***
-kaybee.py                                         96.97%          90.91%          -6.06% !!!
-lib_oval.py                                       15.74%          15.74%          +0.00%
-models.py                                         71.43%          71.43%          +0.00%
-nginx.py                                          31.52%          31.52%          +0.00%
-npm.py                                            37.25%          37.25%          +0.00%
-nvd.py                                            44.32%          44.32%          +0.00%
-openssl.py                                        50.00%          50.00%          +0.00%
-oval_parser.py                                    20.72%          20.72%          +0.00%
-package_managers.py                               56.13%          56.92%          +0.79%
-postgresql.py                                     85.48%          85.48%          +0.00%
-project_kb_msr2019.py                             97.30%          97.30%          +0.00%
-redhat.py                                         79.27%          70.73%          -8.54% !!!
-retiredotnet.py                                   47.92%          47.92%          +0.00%
-ruby.py                                           45.45%          45.45%          +0.00%
-rust.py                                           43.40%          43.40%          +0.00%
-safety_db.py                                      40.91%          40.91%          +0.00%
-settings.py                                       92.59%          92.59%          +0.00%
-severity_systems.py                               90.00%          90.00%          +0.00%
-suse_scores.py                                   100.00%         100.00%          +0.00%
-test_upstream.py                                 100.00%          93.86%          -6.14% !!!
-ubuntu.py                                         91.18%          91.18%          +0.00%
-ubuntu_usn.py                                     82.61%          80.43%          -2.17%
+data_source.py                                     5.79%           5.79%          +0.00%
+models.py                                          7.41%           7.41%          +0.00%
+settings.py                                       89.66%          89.66%          +0.00%
 
 Legend:
   *** = Significant improvement (>5%)
@@ -66,8 +33,7 @@ Legend:
 SUMMARY
 ================================================================================
 
-✓ Coverage INCREASED by 2.31%
-  before: 50.09%
-  after_careful_mock: 52.40%
-  Mocking may have enabled additional code paths to be tested
+✓ Coverage is IDENTICAL between before and after_careful_mock
+  Both versions have 11.00% coverage
+  This suggests that mocking did NOT reduce test effectiveness
 

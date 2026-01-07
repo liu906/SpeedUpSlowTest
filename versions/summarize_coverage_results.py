@@ -32,6 +32,16 @@ def parse_coverage_comparison(file_path: str) -> Optional[Dict]:
             'lines_covered_diff': None,
             'total_statements_before': None,
             'total_statements_after': None,
+            'total_branches_before': None,
+            'total_branches_after': None,
+            'branches_covered_before': None,
+            'branches_covered_after': None,
+            'branches_covered_diff': None,
+            'missing_branches_before': None,
+            'missing_branches_after': None,
+            'before_branch_coverage': None,
+            'after_branch_coverage': None,
+            'branch_coverage_diff': None,
             'significant_decreases': 0,
             'significant_improvements': 0,
             'status': None
@@ -80,6 +90,44 @@ def parse_coverage_comparison(file_path: str) -> Optional[Dict]:
             if statements_match:
                 result['total_statements_before'] = int(statements_match.group(1))
                 result['total_statements_after'] = int(statements_match.group(2))
+
+            # Total Branches
+            branches_match = re.search(
+                r'Total Branches\s+(\d+)\s+(\d+)\s+([-+]?\d+)',
+                metrics_text
+            )
+            if branches_match:
+                result['total_branches_before'] = int(branches_match.group(1))
+                result['total_branches_after'] = int(branches_match.group(2))
+
+            # Branches Covered
+            branches_covered_match = re.search(
+                r'Branches Covered\s+(\d+)\s+(\d+)\s+([-+]?\d+)',
+                metrics_text
+            )
+            if branches_covered_match:
+                result['branches_covered_before'] = int(branches_covered_match.group(1))
+                result['branches_covered_after'] = int(branches_covered_match.group(2))
+                result['branches_covered_diff'] = int(branches_covered_match.group(3))
+
+            # Missing Branches
+            missing_branches_match = re.search(
+                r'Missing Branches\s+(\d+)\s+(\d+)\s+([-+]?\d+)',
+                metrics_text
+            )
+            if missing_branches_match:
+                result['missing_branches_before'] = int(missing_branches_match.group(1))
+                result['missing_branches_after'] = int(missing_branches_match.group(2))
+
+        # Branch Coverage Percentage (appears after the metric table)
+        branch_coverage_match = re.search(
+            r'Branch Coverage \(%\)\s+([\d.]+)%\s+([\d.]+)%\s+([-+]?[\d.]+)%',
+            content
+        )
+        if branch_coverage_match:
+            result['before_branch_coverage'] = float(branch_coverage_match.group(1))
+            result['after_branch_coverage'] = float(branch_coverage_match.group(2))
+            result['branch_coverage_diff'] = float(branch_coverage_match.group(3))
 
         # Count significant changes in file-level coverage
         file_section = re.search(
@@ -174,18 +222,32 @@ def print_summary(results: List[Dict]):
     print()
 
     # Summary table
-    print(f"{'Project':<40} {'Before':<10} {'After':<10} {'Diff':<10} {'Status':<12} {'Files !!!':<10}")
+    print(f"{'Project':<40} {'Line Cov':<12} {'Branch Cov':<12} {'Diff':<10} {'Status':<12} {'Files !!!':<10}")
+    print(f"{'':40} {'Before→After':<12} {'Before→After':<12} {'(Line/Br)':<10}")
     print("-" * 120)
 
     for r in results:
         project = r['project'] or 'Unknown'
-        before = f"{r['before_coverage']:.2f}%" if r['before_coverage'] is not None else 'N/A'
-        after = f"{r['after_coverage']:.2f}%" if r['after_coverage'] is not None else 'N/A'
-        diff = f"{r['coverage_diff']:+.2f}%" if r['coverage_diff'] is not None else 'N/A'
+
+        # Line coverage
+        line_before = f"{r['before_coverage']:.2f}%" if r['before_coverage'] is not None else 'N/A'
+        line_after = f"{r['after_coverage']:.2f}%" if r['after_coverage'] is not None else 'N/A'
+        line_cov_str = f"{line_before}→{line_after}"
+
+        # Branch coverage
+        br_before = f"{r['before_branch_coverage']:.2f}%" if r['before_branch_coverage'] is not None else 'N/A'
+        br_after = f"{r['after_branch_coverage']:.2f}%" if r['after_branch_coverage'] is not None else 'N/A'
+        branch_cov_str = f"{br_before}→{br_after}"
+
+        # Diffs
+        line_diff = f"{r['coverage_diff']:+.2f}" if r['coverage_diff'] is not None else 'N/A'
+        br_diff = f"{r['branch_coverage_diff']:+.2f}" if r['branch_coverage_diff'] is not None else 'N/A'
+        diff_str = f"{line_diff}/{br_diff}"
+
         status = r['status'] or 'N/A'
         sig_decreases = r['significant_decreases']
 
-        print(f"{project:<40} {before:<10} {after:<10} {diff:<10} {status:<12} {sig_decreases:<10}")
+        print(f"{project:<40} {line_cov_str:<12} {branch_cov_str:<12} {diff_str:<10} {status:<12} {sig_decreases:<10}")
 
     print("=" * 120)
     print()
@@ -199,7 +261,13 @@ def print_summary(results: List[Dict]):
     improved = sum(1 for r in results if r['status'] == 'IMPROVED')
     identical = sum(1 for r in results if r['status'] == 'IDENTICAL')
 
+    # Line coverage statistics
     avg_coverage_diff = sum(r['coverage_diff'] for r in results if r['coverage_diff'] is not None) / total_projects
+
+    # Branch coverage statistics
+    branch_diffs = [r['branch_coverage_diff'] for r in results if r['branch_coverage_diff'] is not None]
+    avg_branch_coverage_diff = sum(branch_diffs) / len(branch_diffs) if branch_diffs else 0
+
     total_sig_decreases = sum(r['significant_decreases'] for r in results)
     total_sig_improvements = sum(r['significant_improvements'] for r in results)
 
@@ -208,7 +276,8 @@ def print_summary(results: List[Dict]):
     print(f"  - Coverage Improved:   {improved} ({improved/total_projects*100:.1f}%)")
     print(f"  - Coverage Identical:  {identical} ({identical/total_projects*100:.1f}%)")
     print()
-    print(f"Average Coverage Change: {avg_coverage_diff:+.2f}%")
+    print(f"Average Line Coverage Change: {avg_coverage_diff:+.2f}%")
+    print(f"Average Branch Coverage Change: {avg_branch_coverage_diff:+.2f}%")
     print(f"Total Files with Significant Decreases (>5%): {total_sig_decreases}")
     print(f"Total Files with Significant Improvements (>5%): {total_sig_improvements}")
     print()
@@ -240,19 +309,26 @@ def print_summary(results: List[Dict]):
 
 
 def save_csv_summary(results: List[Dict], output_file: str = "coverage_summary.csv"):
-    """Save results to a CSV file."""
+    """Save results to a CSV file, sorted by project name (case-insensitive)."""
     import csv
+
+    # Sort results by project name (case-insensitive, A-Z)
+    sorted_results = sorted(results, key=lambda x: (x['project'] or '').lower())
 
     with open(output_file, 'w', newline='') as f:
         fieldnames = [
             'project', 'before_coverage', 'after_coverage', 'coverage_diff',
             'lines_covered_before', 'lines_covered_after', 'lines_covered_diff',
             'total_statements_before', 'total_statements_after',
+            'before_branch_coverage', 'after_branch_coverage', 'branch_coverage_diff',
+            'total_branches_before', 'total_branches_after',
+            'branches_covered_before', 'branches_covered_after', 'branches_covered_diff',
+            'missing_branches_before', 'missing_branches_after',
             'significant_decreases', 'significant_improvements', 'status'
         ]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(results)
+        writer.writerows(sorted_results)
 
     print(f"\nDetailed results saved to: {output_file}")
 

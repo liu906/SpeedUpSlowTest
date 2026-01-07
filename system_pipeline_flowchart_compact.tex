@@ -1,0 +1,83 @@
+% Compact System Pipeline Flowchart for Research Paper (Single Column)
+% Requires: \usepackage{tikz}
+%          \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    % Style definitions
+    phase/.style={rectangle, rounded corners, minimum width=5cm, minimum height=0.6cm,
+                  text centered, draw=black, fill=blue!20, font=\footnotesize\bfseries},
+    process/.style={rectangle, minimum width=4.5cm, minimum height=0.5cm,
+                    text centered, draw=black, fill=orange!15, font=\tiny},
+    data/.style={rectangle, rounded corners=2pt, minimum width=4cm, minimum height=0.45cm,
+                 text centered, draw=black, fill=green!15, font=\tiny\ttfamily},
+    decision/.style={diamond, aspect=2.5, minimum width=3cm, minimum height=0.6cm,
+                     text centered, draw=black, fill=yellow!20, font=\tiny},
+    arrow/.style={-{Stealth[length=1.5mm]}, thick},
+    annotation/.style={font=\tiny\itshape, text width=2cm, align=right},
+]
+
+% Vertical pipeline
+\node[phase] (p1) {1. Data Collection};
+\node[data, below=of p1] (d1) {GitHub PRs (slow test fixes)};
+
+\node[phase, below=of d1] (p2) {2. Version Management};
+\node[data, below=of p2] (d2) {before/ \& after/ versions};
+
+\node[phase, below=of d2] (p3) {3. Mock Implementation};
+\node[process, below=of p3] (pr3) {Claude Code + Prompt Template};
+\node[data, below=of pr3] (d3) {after\_careful\_mock/};
+\node[annotation, right=0.1cm of pr3] (a3) {Mock external\\deps only};
+
+\node[phase, below=of d3] (p4) {4. Energy Measurement (N=10)};
+\node[process, below=of p4] (pr4) {Energibridge + pytest};
+\node[data, below=of pr4] (d4) {energy\_data.csv};
+
+\node[phase, below=of d4] (p5) {5. Coverage Verification};
+\node[process, below=of p5] (pr5) {coverage.py};
+\node[data, below=of pr5] (d5) {coverage\_comparison.txt};
+
+\node[phase, below=of d5] (p6) {6. Statistical Analysis};
+\node[process, below=of p6] (pr6) {IQR filtering + visualization};
+\node[data, below=of pr6] (d6) {violin\_plots.png};
+
+\node[phase, below=of d6] (p7) {7. Multi-Project Aggregation};
+\node[data, below=of p7] (d7) {project\_summary.csv};
+
+\node[decision, below=0.7cm of d7] (dec) {Coverage\\loss <10\%?};
+\node[data, below=0.6cm of dec, fill=green!30] (accept) {Accept};
+\node[data, right=1cm of dec, fill=red!30] (reject) {Reject};
+
+% Arrows
+\draw[arrow] (p1) -- (d1);
+\draw[arrow] (d1) -- (p2);
+\draw[arrow] (p2) -- (d2);
+\draw[arrow] (d2) -- (p3);
+\draw[arrow] (p3) -- (pr3);
+\draw[arrow] (pr3) -- (d3);
+\draw[arrow] (d3) -- (p4);
+\draw[arrow] (p4) -- (pr4);
+\draw[arrow] (pr4) -- (d4);
+\draw[arrow] (d4) -- (p5);
+\draw[arrow] (p5) -- (pr5);
+\draw[arrow] (pr5) -- (d5);
+\draw[arrow] (d5) -- (p6);
+\draw[arrow] (p6) -- (pr6);
+\draw[arrow] (pr6) -- (d6);
+\draw[arrow] (d6) -- (p7);
+\draw[arrow] (p7) -- (d7);
+\draw[arrow] (d7) -- (dec);
+\draw[arrow] (dec) -- node[right, font=\tiny] {Yes} (accept);
+\draw[arrow] (dec) -- node[above, font=\tiny] {No} (reject);
+\draw[arrow] (reject) |- ++(0,2.5) -| (pr3);
+
+% Parallel processes annotation with simple line
+\draw[thick] ([xshift=-0.3cm]p4.north west) -- ([xshift=-0.3cm]p5.south west);
+\node[font=\tiny, text width=1.2cm, align=right, left=0.35cm of p4] {Parallel execution};
+
+\end{tikzpicture}
+\caption{Energy-aware slow test optimization pipeline. The system evaluates test optimizations through seven automated phases, accepting optimizations only when coverage loss remains below 10\% while achieving significant energy reduction (15-40\%) and speedup (1.2-2.0$\times$).}
+\label{fig:pipeline_compact}
+\end{figure}

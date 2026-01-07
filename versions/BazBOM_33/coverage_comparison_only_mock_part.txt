@@ -4,15 +4,15 @@ CODE COVERAGE COMPARISON
 
 Metric                                  before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Total Coverage (%)                       3.20%           2.94%          -0.26%
-Lines Covered                              234             218             -16
+Total Coverage (%)                       3.38%           3.01%          -0.36%
+Lines Covered                              248             223             -25
 Total Statements                          7060            7060              +0
-Missing Lines                             6826            6842             +16
+Missing Lines                             6812            6837             +25
 Total Branches                            2530            2530              +0
-Branches Covered                            73              64              -9
-Missing Branches                          2457            2466              +9
+Branches Covered                            76              66             -10
+Missing Branches                          2454            2464             +10
 
-Branch Coverage (%)                      2.89%           2.53%          -0.36%
+Branch Coverage (%)                      3.00%           2.61%          -0.40%
 
 ================================================================================
 FILE-LEVEL COVERAGE COMPARISON
@@ -36,14 +36,14 @@ cve_tracker.py                                     0.00%           0.00%        
 dependency_scanner.py                              0.00%           0.00%          +0.00%
 dependency_verifier.py                             0.00%           0.00%          +0.00%
 drift_detector.py                                  0.00%           0.00%          +0.00%
-epss_enrichment.py                                54.87%          46.02%          -8.85% !!!
+epss_enrichment.py                                57.96%          44.69%         -13.27% !!!
 extract_maven_deps.py                              0.00%           0.00%          +0.00%
 ghsa_enrichment.py                                 9.40%           9.40%          +0.00%
 graph_generator.py                                 0.00%           0.00%          +0.00%
 incremental_analyzer.py                            0.00%           0.00%          +0.00%
 interactive_fix.py                                 0.00%           0.00%          +0.00%
 intoto_attestation.py                              0.00%           0.00%          +0.00%
-kev_enrichment.py                                 44.37%          40.85%          -3.52%
+kev_enrichment.py                                 51.41%          47.89%          -3.52%
 license_analyzer.py                                0.00%           0.00%          +0.00%
 license_extractor.py                               0.00%           0.00%          +0.00%
 license_scanner.py                                 0.00%           0.00%          +0.00%
@@ -77,8 +77,8 @@ Legend:
 SUMMARY
 ================================================================================
 
-⚠ Coverage DECREASED by 0.26%
-  before: 3.20%
-  after_careful_mock: 2.94%
+⚠ Coverage DECREASED by 0.36%
+  before: 3.38%
+  after_careful_mock: 3.01%
   Review the mocking implementation - some code may no longer be executed
 

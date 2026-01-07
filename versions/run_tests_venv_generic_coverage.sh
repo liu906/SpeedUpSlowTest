@@ -185,9 +185,9 @@ run_version_tests() {
         echo "=========================================" | tee -a "$LOG_FILE"
 
         # Modify TEST_COMMAND to use coverage
-        # Replace "pytest", "python -m pytest", or "python3.x -m pytest" with "coverage run"
+        # Replace "pytest", "python -m pytest", or "python3.x -m pytest" with "coverage run --branch"
         # Add -p no:cov to disable pytest-cov plugin and -o addopts="" to clear coverage-related options from pytest.ini
-        COVERAGE_COMMAND=$(echo "$TEST_COMMAND" | sed -E 's/(python[0-9.]* -m )?pytest/coverage run '"$COVERAGE_SOURCE"' -m pytest -p no:cov -o addopts=""/')
+        COVERAGE_COMMAND=$(echo "$TEST_COMMAND" | sed -E 's/(python[0-9.]* -m )?pytest/coverage run --branch '"$COVERAGE_SOURCE"' -m pytest -p no:cov -o addopts=""/')
 
         echo "Running: $COVERAGE_COMMAND" | tee -a "$LOG_FILE"
 

@@ -1,0 +1,33 @@
+% Minimal test file to verify flowchart compilation
+\documentclass[conference]{IEEEtran}
+
+% Required packages
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Test Document for System Pipeline Flowchart}
+\author{Test Author}
+\maketitle
+
+\section{Introduction}
+
+This document tests the compilation of the system pipeline flowcharts.
+
+\section{Methodology}
+
+Our pipeline is illustrated in Figure~\ref{fig:system_pipeline}.
+
+% Include the two-column flowchart
+\input{system_pipeline_flowchart}
+
+As shown in the figure, the pipeline consists of seven phases that evaluate slow test optimizations through energy measurement and coverage verification.
+
+\section{Conclusion}
+
+The flowchart compiles successfully without errors.
+
+\end{document}

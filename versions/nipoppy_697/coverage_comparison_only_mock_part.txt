@@ -4,13 +4,15 @@ CODE COVERAGE COMPARISON
 
 Metric                                  before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Total Coverage (%)                      36.16%          36.23%          +0.07%
+Total Coverage (%)                      29.09%          29.15%          +0.06%
 Lines Covered                             6127            6144             +17
 Total Statements                         16942           16957             +15
 Missing Lines                            10815           10813              -2
-Total Branches                               0               0              +0
-Branches Covered                             0               0              +0
-Missing Branches                             0               0              +0
+Total Branches                            5742            5746              +4
+Branches Covered                           472             474              +2
+Missing Branches                          5270            5272              +2
+
+Branch Coverage (%)                      8.22%           8.25%          +0.03%
 
 ================================================================================
 FILE-LEVEL COVERAGE COMPARISON
@@ -18,146 +20,146 @@ FILE-LEVEL COVERAGE COMPARISON
 
 File                                              before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Image.py                                          16.24%          16.24%          +0.00%
-ImageMode.py                                      27.78%          27.78%          +0.00%
-TiffTags.py                                       88.89%          88.89%          +0.00%
+Image.py                                          11.82%          11.82%          +0.00%
+ImageMode.py                                      20.83%          20.83%          +0.00%
+TiffTags.py                                       87.72%          87.72%          +0.00%
 __init__.py                                      100.00%         100.00%          +0.00%
 _appengine_environ.py                             90.91%          90.91%          +0.00%
 _binary.py                                        51.85%          51.85%          +0.00%
-_collections.py                                   29.26%          29.26%          +0.00%
+_collections.py                                   22.05%          22.05%          +0.00%
 _dicom_dict.py                                   100.00%         100.00%          +0.00%
-_implementation.py                                15.07%          15.07%          +0.00%
+_implementation.py                                 9.57%           9.57%          +0.00%
 _private_dict.py                                 100.00%         100.00%          +0.00%
 _uid_dict.py                                     100.00%         100.00%          +0.00%
 _util.py                                          63.64%          63.64%          +0.00%
 _version.py                                      100.00%         100.00%          +0.00%
-base.py                                           28.39%          28.39%          +0.00%
-bids_conversion.py                                38.33%          38.33%          +0.00%
+base.py                                           22.22%          22.22%          +0.00%
+bids_conversion.py                                27.38%          27.38%          +0.00%
 big5freq.py                                      100.00%         100.00%          +0.00%
 big5prober.py                                     62.50%          62.50%          +0.00%
 boutiques.py                                      84.62%          84.62%          +0.00%
-chardistribution.py                               29.06%          29.06%          +0.00%
-charset.py                                        13.10%          13.10%          +0.00%
-charsetgroupprober.py                             15.07%          15.07%          +0.00%
-charsetprober.py                                  34.55%          34.55%          +0.00%
-cli.py                                            67.66%          67.66%          +0.00%
-codingstatemachine.py                             35.71%          35.71%          +0.00%
-config.py                                         73.79%          73.79%          +0.00%
-conftest.py                                       53.38%          53.38%          +0.00%
-connection.py                                     31.94%          31.94%          +0.00%
-connectionpool.py                                 19.46%          19.46%          +0.00%
-console.py                                        81.03%          81.03%          +0.00%
-container.py                                      76.15%          76.15%          +0.00%
-core.py                                           12.07%          12.07%          +0.00%
+chardistribution.py                               22.82%          22.82%          +0.00%
+charset.py                                         9.12%           9.12%          +0.00%
+charsetgroupprober.py                              9.73%           9.73%          +0.00%
+charsetprober.py                                  26.76%          26.76%          +0.00%
+cli.py                                            66.26%          66.26%          +0.00%
+codingstatemachine.py                             33.33%          33.33%          +0.00%
+config.py                                         66.86%          66.86%          +0.00%
+conftest.py                                       46.31%          46.31%          +0.00%
+connection.py                                     26.00%          26.00%          +0.00%
+connectionpool.py                                 14.91%          14.91%          +0.00%
+console.py                                        78.79%          78.79%          +0.00%
+container.py                                      67.55%          67.55%          +0.00%
+core.py                                            7.35%           7.35%          +0.00%
 cp949prober.py                                    62.50%          62.50%          +0.00%
-curation_status.py                                68.93%          68.93%          +0.00%
-data_manager.py                                   23.08%          23.08%          +0.00%
-datadict.py                                       41.76%          41.76%          +0.00%
-dataelem.py                                       22.51%          22.51%          +0.00%
-dataset.py                                        19.22%          19.22%          +0.00%
-dataset_init.py                                   15.46%          15.46%          +0.00%
-dataset_status.py                                 16.35%          16.35%          +0.00%
-dicom_dir_map.py                                  95.12%          95.12%          +0.00%
-dicom_reorg.py                                    23.46%          23.46%          +0.00%
-dicomdir.py                                       19.57%          19.57%          +0.00%
-download.py                                       26.45%          26.45%          +0.00%
-encaps.py                                         10.71%          10.71%          +0.00%
+curation_status.py                                65.29%          65.29%          +0.00%
+data_manager.py                                   17.88%          17.88%          +0.00%
+datadict.py                                       36.94%          36.94%          +0.00%
+dataelem.py                                       15.45%          15.45%          +0.00%
+dataset.py                                        13.65%          13.65%          +0.00%
+dataset_init.py                                   10.79%          10.79%          +0.00%
+dataset_status.py                                 14.66%          14.66%          +0.00%
+dicom_dir_map.py                                  89.80%          89.80%          +0.00%
+dicom_reorg.py                                    17.76%          17.76%          +0.00%
+dicomdir.py                                       13.64%          13.64%          +0.00%
+download.py                                       22.15%          22.15%          +0.00%
+encaps.py                                          7.34%           7.34%          +0.00%
 enums.py                                          97.14%          97.14%          +0.00%
 env.py                                           100.00%         100.00%          +0.00%
-errors.py                                         62.50%          62.50%          +0.00%
-escprober.py                                      22.41%          22.41%          +0.00%
+errors.py                                         50.00%          50.00%          +0.00%
+escprober.py                                      15.85%          15.85%          +0.00%
 escsm.py                                         100.00%         100.00%          +0.00%
-eucjpprober.py                                    30.61%          30.61%          +0.00%
+eucjpprober.py                                    23.81%          23.81%          +0.00%
 euckrfreq.py                                     100.00%         100.00%          +0.00%
 euckrprober.py                                    62.50%          62.50%          +0.00%
 euctwfreq.py                                     100.00%         100.00%          +0.00%
 euctwprober.py                                    62.50%          62.50%          +0.00%
-exceptions.py                                     70.69%          70.69%          +0.00%
-extractor.py                                      40.58%          40.58%          +0.00%
-features.py                                       17.99%          17.99%          +0.00%
-fields.py                                         22.22%          22.22%          +0.00%
-filebase.py                                       39.02%          39.02%          +0.00%
-filepost.py                                       30.23%          30.23%          +0.00%
-filereader.py                                     11.28%          11.28%          +0.00%
-fileutil.py                                       10.43%          10.43%          +0.00%
-filewriter.py                                     14.29%          14.29%          +0.00%
+exceptions.py                                     68.33%          68.33%          +0.00%
+extractor.py                                      30.77%          30.77%          +0.00%
+features.py                                       12.44%          12.44%          +0.00%
+fields.py                                         16.13%          16.13%          +0.00%
+filebase.py                                       35.97%          35.97%          +0.00%
+filepost.py                                       21.31%          21.31%          +0.00%
+filereader.py                                      8.39%           8.39%          +0.00%
+fileutil.py                                        7.56%           7.56%          +0.00%
+filewriter.py                                     10.02%          10.02%          +0.00%
 gb2312freq.py                                    100.00%         100.00%          +0.00%
 gb2312prober.py                                   62.50%          62.50%          +0.00%
-gdcm.py                                           20.97%          20.97%          +0.00%
-gdcm_handler.py                                   22.95%          22.95%          +0.00%
-hebrewprober.py                                   37.66%          37.66%          +0.00%
-hexutil.py                                        41.67%          41.67%          +0.00%
-hpc.py                                            60.00%          86.67%         +26.67% ***
+gdcm.py                                           17.50%          17.50%          +0.00%
+gdcm_handler.py                                   18.18%          18.18%          +0.00%
+hebrewprober.py                                   28.16%          28.16%          +0.00%
+hexutil.py                                        31.25%          31.25%          +0.00%
+hpc.py                                            42.86%          80.95%         +38.10% ***
 idnadata.py                                      100.00%         100.00%          +0.00%
-install.py                                        68.67%          68.67%          +0.00%
-intranges.py                                      20.00%          20.00%          +0.00%
+install.py                                        60.36%          60.36%          +0.00%
+intranges.py                                      13.64%          13.64%          +0.00%
 jisfreq.py                                       100.00%         100.00%          +0.00%
-jpcntx.py                                         24.69%          24.69%          +0.00%
-jpeg_ls_handler.py                                43.18%          43.18%          +0.00%
-jsonrep.py                                        17.89%          17.89%          +0.00%
+jpcntx.py                                         17.70%          17.70%          +0.00%
+jpeg_ls_handler.py                                35.19%          35.19%          +0.00%
+jsonrep.py                                        12.02%          12.02%          +0.00%
 langbulgarianmodel.py                            100.00%         100.00%          +0.00%
 langgreekmodel.py                                100.00%         100.00%          +0.00%
 langhebrewmodel.py                               100.00%         100.00%          +0.00%
 langrussianmodel.py                              100.00%         100.00%          +0.00%
 langthaimodel.py                                 100.00%         100.00%          +0.00%
 langturkishmodel.py                              100.00%         100.00%          +0.00%
-latin1prober.py                                   44.23%          44.23%          +0.00%
-layout.py                                         94.81%          94.81%          +0.00%
-list.py                                           30.56%          30.56%          +0.00%
-logger.py                                         97.56%          97.56%          +0.00%
-main.py                                           82.35%          82.35%          +0.00%
-manifest.py                                       84.72%          84.72%          +0.00%
-mbcharsetprober.py                                25.00%          25.00%          +0.00%
+latin1prober.py                                   37.10%          37.10%          +0.00%
+layout.py                                         91.84%          91.84%          +0.00%
+list.py                                           23.91%          23.91%          +0.00%
+logger.py                                         91.84%          91.84%          +0.00%
+main.py                                           77.34%          77.34%          +0.00%
+manifest.py                                       77.91%          77.91%          +0.00%
+mbcharsetprober.py                                17.74%          17.74%          +0.00%
 mbcsgroupprober.py                                78.57%          78.57%          +0.00%
 mbcssm.py                                        100.00%         100.00%          +0.00%
-misc.py                                           28.57%          28.57%          +0.00%
-multival.py                                       42.11%          42.11%          +0.00%
-native.py                                         14.49%          14.49%          +0.00%
-numpy_handler.py                                  15.87%          15.87%          +0.00%
+misc.py                                           22.22%          22.22%          +0.00%
+multival.py                                       35.82%          35.82%          +0.00%
+native.py                                         10.10%          10.10%          +0.00%
+numpy_handler.py                                  12.35%          12.35%          +0.00%
 package_data.py                                  100.00%         100.00%          +0.00%
-pillow_handler.py                                 27.18%          27.18%          +0.00%
-pipeline.py                                       60.00%          60.00%          +0.00%
-pipeline_step.py                                  90.32%          90.32%          +0.00%
-pipeline_validation.py                            66.43%          73.43%          +6.99% ***
-poolmanager.py                                    25.25%          25.25%          +0.00%
-processing_status.py                              76.19%          76.19%          +0.00%
-proxy.py                                          21.43%          21.43%          +0.00%
-pylibjpeg.py                                      73.33%          73.33%          +0.00%
-pylibjpeg_handler.py                              38.32%          38.32%          +0.00%
-queue.py                                          64.29%          64.29%          +0.00%
-request.py                                        51.92%          51.92%          +0.00%
-response.py                                       18.42%          18.42%          +0.00%
-retry.py                                          32.68%          32.68%          +0.00%
-rle_handler.py                                    19.49%          19.49%          +0.00%
-runner.py                                         57.33%          57.33%          +0.00%
-sbcharsetprober.py                                22.37%          22.37%          +0.00%
+pillow_handler.py                                 19.58%          19.58%          +0.00%
+pipeline.py                                       52.49%          52.49%          +0.00%
+pipeline_step.py                                  84.62%          84.62%          +0.00%
+pipeline_validation.py                            63.39%          69.40%          +6.01% ***
+poolmanager.py                                    18.57%          18.57%          +0.00%
+processing_status.py                              66.67%          66.67%          +0.00%
+proxy.py                                          13.64%          13.64%          +0.00%
+pylibjpeg.py                                      70.59%          70.59%          +0.00%
+pylibjpeg_handler.py                              31.85%          31.85%          +0.00%
+queue.py                                          62.50%          62.50%          +0.00%
+request.py                                        46.05%          46.05%          +0.00%
+response.py                                       13.46%          13.46%          +0.00%
+retry.py                                          24.74%          24.74%          +0.00%
+rle_handler.py                                    14.56%          14.56%          +0.00%
+runner.py                                         46.70%          46.70%          +0.00%
+sbcharsetprober.py                                16.04%          16.04%          +0.00%
 sbcsgroupprober.py                                61.11%          61.11%          +0.00%
-search.py                                         94.74%          94.74%          +0.00%
-sequence.py                                       34.78%          34.78%          +0.00%
-six.py                                            51.29%          51.29%          +0.00%
-sjisprober.py                                     30.61%          30.61%          +0.00%
-socks.py                                          10.67%          10.67%          +0.00%
-ssl_.py                                           37.50%          37.50%          +0.00%
-ssltransport.py                                    3.60%           3.60%          +0.00%
-tag.py                                            45.26%          45.26%          +0.00%
-test_cli.py                                       33.01%          35.51%          +2.50%
-test_workflow_pipeline_store_install.py           39.61%          41.98%          +2.36%
-test_workflow_runner.py                           32.26%          33.07%          +0.81%
-timeout.py                                        34.38%          34.38%          +0.00%
-track_curation.py                                 30.00%          30.00%          +0.00%
-tracker.py                                        25.93%          25.93%          +0.00%
-uid.py                                            87.93%          87.93%          +0.00%
-universaldetector.py                              15.45%          15.45%          +0.00%
-url.py                                            25.85%          25.85%          +0.00%
-utf8prober.py                                     32.56%          32.56%          +0.00%
-util.py                                            7.39%           7.39%          +0.00%
-utils.py                                          85.19%          85.19%          +0.00%
+search.py                                         93.48%          93.48%          +0.00%
+sequence.py                                       26.37%          26.37%          +0.00%
+six.py                                            46.44%          46.44%          +0.00%
+sjisprober.py                                     23.81%          23.81%          +0.00%
+socks.py                                           8.42%           8.42%          +0.00%
+ssl_.py                                           30.62%          30.62%          +0.00%
+ssltransport.py                                    2.65%           2.65%          +0.00%
+tag.py                                            39.37%          39.37%          +0.00%
+test_cli.py                                       32.38%          34.86%          +2.48%
+test_workflow_pipeline_store_install.py           38.61%          41.76%          +3.16%
+test_workflow_runner.py                           29.20%          29.96%          +0.77%
+timeout.py                                        25.58%          25.58%          +0.00%
+track_curation.py                                 26.47%          26.47%          +0.00%
+tracker.py                                        20.59%          20.59%          +0.00%
+uid.py                                            81.68%          81.68%          +0.00%
+universaldetector.py                               9.36%           9.36%          +0.00%
+url.py                                            17.73%          17.73%          +0.00%
+utf8prober.py                                     23.73%          23.73%          +0.00%
+util.py                                            5.19%           5.19%          +0.00%
+utils.py                                          77.73%          77.73%          +0.00%
 validate.py                                       61.54%          61.54%          +0.00%
-valuerep.py                                       31.94%          31.94%          +0.00%
-values.py                                         23.96%          23.96%          +0.00%
+valuerep.py                                       24.20%          24.20%          +0.00%
+values.py                                         17.56%          17.56%          +0.00%
 version.py                                       100.00%         100.00%          +0.00%
-wait.py                                           23.38%          23.38%          +0.00%
-zenodo_api.py                                     39.57%          31.65%          -7.91% !!!
+wait.py                                           18.10%          18.10%          +0.00%
+zenodo_api.py                                     34.36%          26.15%          -8.21% !!!
 
 Legend:
   *** = Significant improvement (>5%)
@@ -167,8 +169,8 @@ Legend:
 SUMMARY
 ================================================================================
 
-✓ Coverage INCREASED by 0.07%
-  before: 36.16%
-  after_careful_mock: 36.23%
+✓ Coverage INCREASED by 0.06%
+  before: 29.09%
+  after_careful_mock: 29.15%
   Mocking may have enabled additional code paths to be tested
 

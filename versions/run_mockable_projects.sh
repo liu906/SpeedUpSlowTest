@@ -43,7 +43,7 @@ bash ./run_tests_generic_coverage.sh quant-mind_58/ $REPEAT before after_careful
 bash ./run_tests_generic_coverage.sh nipoppy_697/ $REPEAT before after_careful_mock only_mock_part
 bash ./run_tests_venv_generic_coverage.sh vulnerablecode_490 $REPEAT before after_careful_mock only_mock_part
 bash ./run_tests_venv_generic_coverage.sh SDV_2158 $REPEAT before after_careful_mock only_mock_part
-bash run_tests_venv_generic_coverage.sh BazBOM_33 $REPEAT before after_careful_mock only_mock_part
+bash ./run_tests_venv_generic_coverage.sh BazBOM_33 $REPEAT before after_careful_mock only_mock_part
 
 python3 compare_coverage.py pyjelly_235 before after_careful_mock only_mock_part
 python3 compare_coverage.py ert_11206 before after_careful_mock only_mock_part
@@ -56,3 +56,4 @@ python3 compare_coverage.py vulnerablecode_490 before after_careful_mock only_mo
 python3 compare_coverage.py SDV_2158 before after_careful_mock only_mock_part
 python3 compare_coverage.py BazBOM_33 before after_careful_mock only_mock_part
 
+python3 summarize_coverage_results.py  -o summary_all_projects_mockable_codeCoverage.csv pyjelly_235 ert_11206 autosubmit_2367 blueprints_691 ophyd-async_316 quant-mind_58 nipoppy_697 vulnerablecode_490 SDV_2158 BazBOM_33

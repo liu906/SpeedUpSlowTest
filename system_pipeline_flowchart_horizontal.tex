@@ -1,0 +1,118 @@
+% Horizontal System Pipeline Flowchart (Landscape/Wide Format)
+% Best for: Presentations, wide-format papers, or landscape pages
+% Requires: \usepackage{tikz}
+%          \usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+    node distance=0.6cm and 1cm,
+    % Style definitions
+    phase/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=0.7cm,
+                  text centered, draw=black, fill=blue!20, font=\scriptsize\bfseries},
+    process/.style={rectangle, minimum width=2cm, minimum height=0.5cm,
+                    text centered, draw=black, fill=orange!15, font=\tiny},
+    data/.style={rectangle, rounded corners=2pt, minimum width=2cm, minimum height=0.45cm,
+                 text centered, draw=black, fill=green!15, font=\tiny\ttfamily},
+    metrics/.style={rectangle, rounded corners, minimum width=1.8cm, minimum height=1.2cm,
+                    text centered, draw=black, fill=purple!10, font=\tiny, align=center},
+    decision/.style={diamond, aspect=2, minimum width=2cm, minimum height=0.6cm,
+                     text centered, draw=black, fill=yellow!20, font=\tiny},
+    arrow/.style={-{Stealth[length=2mm]}, thick},
+    backarrow/.style={-{Stealth[length=2mm]}, thick, dashed, red},
+    annotation/.style={font=\tiny\itshape, text width=1.8cm, align=center},
+]
+
+% Row 1: Phase headers
+\node[phase] (p1) {1. Data\\Collection};
+\node[phase, right=of p1] (p2) {2. Version\\Management};
+\node[phase, right=of p2] (p3) {3. Mock\\Implementation};
+\node[phase, right=of p3] (p4) {4. Energy\\Measurement};
+\node[phase, right=of p4] (p5) {5. Coverage\\Verification};
+\node[phase, right=of p5] (p6) {6. Statistical\\Analysis};
+\node[phase, right=of p6] (p7) {7. Multi-Project\\Aggregation};
+
+% Row 2: Main processes
+\node[process, below=of p1] (pr1) {GitHub\\GraphQL API};
+\node[process, below=of p2] (pr2) {Clone\\Repos};
+\node[process, below=of p3] (pr3) {Claude Code\\+ Prompt};
+\node[process, below=of p4] (pr4) {pytest +\\Energibridge\\(N=10 runs)};
+\node[process, below=of p5] (pr5) {coverage.py\\+ compare};
+\node[process, below=of p6] (pr6) {IQR Filter\\+ Visualize};
+\node[process, below=of p7] (pr7) {Aggregate\\Results};
+
+% Row 3: Data outputs
+\node[data, below=of pr1] (d1) {slow\_test\\issues.csv};
+\node[data, below=of pr2] (d2) {before/\\after/};
+\node[data, below=of pr3] (d3) {after\_\\careful\_mock/};
+\node[data, below=of pr4] (d4) {energy\_data\\duration\_data};
+\node[data, below=of pr5] (d5) {coverage\\comparison};
+\node[data, below=of pr6] (d6) {violin\_plots\\metrics};
+\node[data, below=of pr7] (d7) {summary.csv};
+
+% Decision diamond and outcome
+\node[decision, below=1.5cm of d6] (dec) {Coverage\\loss <10\%?};
+\node[data, below=0.7cm of dec, fill=green!30, font=\scriptsize\bfseries] (accept) {Accept};
+\node[data, left=0.5cm of dec, fill=red!30, font=\scriptsize\bfseries] (reject) {Reject};
+
+% Metrics box
+\node[metrics, right=0.5cm of d7] (metrics_box) {
+    \textbf{Target Metrics:}\\[2pt]
+    Energy $\downarrow$ 15-40\%\\
+    Speedup 1.2-2.0$\times$\\
+    Coverage $\geq$ -10\%
+};
+
+% Vertical arrows (phase to process to data)
+\foreach \phase/\proc/\data in {p1/pr1/d1, p2/pr2/d2, p3/pr3/d3, p4/pr4/d4, p5/pr5/d5, p6/pr6/d6, p7/pr7/d7} {
+    \draw[arrow] (\phase) -- (\proc);
+    \draw[arrow] (\proc) -- (\data);
+}
+
+% Horizontal arrows (data to next phase)
+\foreach \from/\to in {d1/p2, d2/p3, d3/p4, d4/p6, d5/p6, d6/p7} {
+    \draw[arrow] (\from) -- (\to);
+}
+
+% Special arrow: d3 splits to p4 and p5
+\draw[arrow] (d3) -- ++(0,-0.8) -| (pr4);
+\draw[arrow] (d3) -- ++(0,-0.8) -| (pr5);
+
+% Arrows to decision
+\draw[arrow] (d6) -- (dec);
+\draw[arrow] (d7) -- ++(0,-1.5) -| (dec);
+
+% Decision outcomes
+\draw[arrow] (dec) -- node[right, font=\tiny] {Yes} (accept);
+\draw[arrow] (dec) -- node[above, font=\tiny] {No} (reject);
+
+% Feedback loop (rejection back to phase 3)
+\draw[backarrow] (reject) |- ++(-1,-0.5) -| (pr3);
+
+% Annotations
+\node[annotation, above=0.2cm of pr4] (a4) {Parallel\\execution};
+\node[annotation, below=0.2cm of d1] (a1) {PRs fixing\\slow tests};
+\node[annotation, below=0.2cm of d3] (a3) {Mock external\\deps only};
+
+% Background boxes
+\begin{scope}[on background layer]
+    \foreach \p/\pr/\d in {p1/pr1/d1, p2/pr2/d2, p3/pr3/d3, p4/pr4/d4, p5/pr5/d5, p6/pr6/d6, p7/pr7/d7} {
+        \node[fit=(\p)(\pr)(\d), fill=blue!3, rounded corners, inner sep=6pt] {};
+    }
+\end{scope}
+
+% Legend
+\node[draw, rounded corners, fill=white, inner sep=4pt, font=\tiny, align=left,
+      below right] at (current bounding box.south east) {
+    \textbf{Legend:}\\
+    \tikz\node[phase, minimum width=1cm, minimum height=0.3cm] {};\ Phase\\
+    \tikz\node[process, minimum width=1cm, minimum height=0.3cm] {};\ Process\\
+    \tikz\node[data, minimum width=1cm, minimum height=0.3cm] {};\ Data\\
+    \tikz\draw[arrow] (0,0) -- (0.5,0);\ Flow\\
+    \tikz\draw[backarrow] (0,0) -- (0.5,0);\ Feedback
+};
+
+\end{tikzpicture}
+\caption{Horizontal view of the energy-aware slow test optimization pipeline. The seven-phase workflow processes GitHub projects through automated testing, energy measurement, and coverage verification, with a feedback loop for optimizations that fail quality criteria.}
+\label{fig:pipeline_horizontal}
+\end{figure*}

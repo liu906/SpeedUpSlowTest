@@ -1,0 +1,218 @@
+% ============================================================================
+% SYSTEM PIPELINE FLOWCHART - USAGE GUIDE
+% ============================================================================
+% This file contains instructions for using the flowchart in your paper
+% ============================================================================
+
+% ============================================================================
+% PREAMBLE REQUIREMENTS
+% ============================================================================
+% Add these packages to your LaTeX document preamble:
+
+\documentclass{article} % or your conference/journal class
+
+% Required packages
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% Optional: For better positioning in two-column layouts
+\usepackage{dblfloatfix}
+
+% ============================================================================
+% USAGE INSTRUCTIONS
+% ============================================================================
+
+% Option 1: Include the full two-column flowchart
+% Best for: Two-column papers (IEEE, ACM) with sufficient space
+% Location: Top of page with [t] placement
+% File: system_pipeline_flowchart.tex
+
+% In your paper, use:
+% \input{system_pipeline_flowchart}
+
+% ============================================================================
+
+% Option 2: Include the compact single-column flowchart
+% Best for: Single-column papers or space-constrained layouts
+% Location: Can be placed in either column with [t] or [h] placement
+% File: system_pipeline_flowchart_compact.tex
+
+% In your paper, use:
+% \input{system_pipeline_flowchart_compact}
+
+% ============================================================================
+% EXAMPLE PAPER STRUCTURE
+% ============================================================================
+
+\begin{document}
+
+\title{Energy-Aware Slow Test Optimization Using Automated Mocking}
+\author{Your Name}
+\maketitle
+
+\begin{abstract}
+This paper presents an automated pipeline for evaluating and optimizing slow tests in software projects...
+\end{abstract}
+
+\section{Introduction}
+Software testing is crucial for quality assurance, but slow tests can significantly impact developer productivity and energy consumption...
+
+\section{Methodology}
+
+Our approach consists of seven phases as illustrated in Figure~\ref{fig:system_pipeline}.
+
+% TWO-COLUMN VERSION (for IEEE, ACM double-column formats)
+\input{system_pipeline_flowchart}
+
+% OR
+
+% SINGLE-COLUMN COMPACT VERSION
+% \input{system_pipeline_flowchart_compact}
+
+\subsection{Phase 1: Data Collection}
+We use GitHub's GraphQL API to identify projects with pull requests that address slow test issues. Our query searches for PRs with keywords such as ``fix slow test'', ``optimize test performance'', and ``speed up tests''. We filter results by repository popularity (minimum 100 stars) and PR status (merged and closed).
+
+\subsection{Phase 2: Version Management}
+For each identified PR, we download two versions of the project: the \texttt{before} version (PR base commit) and the \texttt{after} version (PR merge commit). This enables direct comparison of the original slow test implementation with the developer's fix.
+
+\subsection{Phase 3: Mock Implementation}
+Using Claude Code~\cite{claude_code} and our prompt template guidelines, we generate a third version (\texttt{after\_careful\_mock}) that applies mocking to external dependencies while preserving internal business logic. The mocking strategy targets:
+\begin{itemize}
+    \item Network I/O (HTTP requests, API calls)
+    \item Database operations (queries, connections)
+    \item File system operations (large file reads/writes)
+    \item Subprocess calls (external program execution)
+\end{itemize}
+
+\subsection{Phase 4: Energy Measurement}
+We execute each test version 10 times using Energibridge~\cite{energibridge}, a tool that measures energy consumption at the process level. Multiple runs enable statistical analysis and outlier detection. For each run, we collect:
+\begin{itemize}
+    \item Total energy consumption (joules)
+    \item Average power draw (watts)
+    \item Execution time (seconds)
+    \item Individual test durations
+\end{itemize}
+
+\subsection{Phase 5: Coverage Verification}
+To ensure that optimizations do not harm test effectiveness, we measure code coverage using Coverage.py~\cite{coverage_py}. We compare line and branch coverage between versions, rejecting any optimization that causes coverage loss exceeding 10\%.
+
+\subsection{Phase 6: Statistical Analysis}
+Raw measurements are processed using Interquartile Range (IQR) outlier filtering to remove anomalies caused by system background processes. We calculate:
+\begin{equation}
+    \text{Speedup Ratio} = \frac{T_{\text{before}}}{T_{\text{after}}}
+\end{equation}
+\begin{equation}
+    \text{Energy Reduction} = \frac{E_{\text{before}} - E_{\text{after}}}{E_{\text{before}}} \times 100\%
+\end{equation}
+
+\subsection{Phase 7: Multi-Project Aggregation}
+Results from individual projects are aggregated to identify trends across the entire dataset. We rank projects by energy reduction, speedup ratio, and coverage preservation.
+
+\section{Results}
+
+Table~\ref{tab:results} summarizes our findings across 25 open-source projects.
+
+\begin{table}[t]
+\centering
+\caption{Summary of optimization results}
+\label{tab:results}
+\begin{tabular}{lrrr}
+\hline
+\textbf{Metric} & \textbf{Min} & \textbf{Median} & \textbf{Max} \\
+\hline
+Energy Reduction (\%) & 15.2 & 32.5 & 41.8 \\
+Speedup Ratio & 1.2 & 1.45 & 2.0 \\
+Coverage Loss (\%) & -0.3 & 2.1 & 9.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+As shown in Figure~\ref{fig:system_pipeline}, our pipeline successfully identifies and evaluates test optimizations while maintaining test quality...
+
+\section{Conclusion}
+Our automated pipeline demonstrates that careful application of mocking can reduce test energy consumption by 15-40\% while preserving test coverage...
+
+% Bibliography (examples)
+\begin{thebibliography}{9}
+\bibitem{claude_code}
+Anthropic. Claude Code: AI-Assisted Development Tool. 2024.
+
+\bibitem{energibridge}
+Energibridge: Process-Level Energy Measurement Tool. \url{https://github.com/energibridge/energibridge}
+
+\bibitem{coverage_py}
+Coverage.py: Code Coverage Measurement for Python. \url{https://coverage.readthedocs.io/}
+\end{thebibliography}
+
+\end{document}
+
+% ============================================================================
+% CUSTOMIZATION OPTIONS
+% ============================================================================
+
+% 1. Change colors:
+%    - Blue phases: fill=blue!20 → fill=purple!20
+%    - Orange processes: fill=orange!15 → fill=teal!15
+%    - Green data: fill=green!15 → fill=cyan!15
+%    - Yellow decision: fill=yellow!20 → fill=pink!20
+
+% 2. Adjust spacing:
+%    - node distance=0.8cm → node distance=1.0cm (more space)
+%    - node distance=0.5cm → node distance=0.4cm (less space)
+
+% 3. Change fonts:
+%    - font=\small → font=\footnotesize (smaller)
+%    - font=\scriptsize → font=\tiny (even smaller)
+
+% 4. Modify arrow style:
+%    - arrow/.style={-{Stealth[length=2mm]}, thick}
+%    - arrow/.style={-{Latex[length=3mm]}, very thick} (bolder)
+
+% 5. Add thicker borders:
+%    - Change: draw=black → draw=black, line width=1pt
+
+% 6. Grayscale version (for black & white printing):
+%    - Replace all fill colors with grayscale:
+%      fill=blue!20 → fill=black!10
+%      fill=orange!15 → fill=black!15
+%      fill=green!15 → fill=black!20
+%      fill=yellow!20 → fill=black!5
+
+% ============================================================================
+% COMMON ISSUES & SOLUTIONS
+% ============================================================================
+
+% Issue 1: Figure too large for page
+% Solution: Reduce node distances and font sizes in compact version
+
+% Issue 2: Text overlapping in nodes
+% Solution: Increase minimum width/height values
+
+% Issue 3: Arrows crossing incorrectly
+% Solution: Adjust coordinate offsets in \draw commands
+
+% Issue 4: Compilation errors
+% Solution: Ensure all required TikZ libraries are loaded
+
+% Issue 5: Figure placement issues
+% Solution: Use [t!] or [h!] for stronger placement hints
+
+% ============================================================================
+% COMPILATION
+% ============================================================================
+
+% Compile with:
+% pdflatex your_paper.tex
+% bibtex your_paper (if using BibTeX)
+% pdflatex your_paper.tex
+% pdflatex your_paper.tex
+
+% For XeLaTeX:
+% xelatex your_paper.tex
+
+% For LuaLaTeX:
+% lualatex your_paper.tex
+
+% ============================================================================

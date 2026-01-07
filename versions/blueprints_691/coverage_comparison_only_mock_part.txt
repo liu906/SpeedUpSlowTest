@@ -4,13 +4,15 @@ CODE COVERAGE COMPARISON
 
 Metric                                  before after_careful_mock      Difference
 --------------------------------------------------------------------------------
-Total Coverage (%)                      32.30%          32.30%          +0.00%
+Total Coverage (%)                      25.08%          25.08%          +0.00%
 Lines Covered                             1628            1628              +0
 Total Statements                          5041            5041              +0
 Missing Lines                             3413            3413              +0
-Total Branches                               0               0              +0
-Branches Covered                             0               0              +0
-Missing Branches                             0               0              +0
+Total Branches                            1772            1772              +0
+Branches Covered                            81              81              +0
+Missing Branches                          1691            1691              +0
+
+Branch Coverage (%)                      4.57%           4.57%          +0.00%
 
 ================================================================================
 FILE-LEVEL COVERAGE COMPARISON
@@ -20,68 +22,68 @@ File                                              before after_careful_mock     
 --------------------------------------------------------------------------------
 __init__.py                                      100.00%         100.00%          +0.00%
 _appengine_environ.py                             90.91%          90.91%          +0.00%
-_collections.py                                   29.26%          29.26%          +0.00%
-_implementation.py                                15.07%          15.07%          +0.00%
+_collections.py                                   22.05%          22.05%          +0.00%
+_implementation.py                                 9.57%           9.57%          +0.00%
 _version.py                                      100.00%         100.00%          +0.00%
 big5freq.py                                      100.00%         100.00%          +0.00%
 big5prober.py                                     62.50%          62.50%          +0.00%
-chardistribution.py                               29.06%          29.06%          +0.00%
-charsetgroupprober.py                             15.07%          15.07%          +0.00%
-charsetprober.py                                  34.55%          34.55%          +0.00%
-codingstatemachine.py                             35.71%          35.71%          +0.00%
+chardistribution.py                               22.82%          22.82%          +0.00%
+charsetgroupprober.py                              9.73%           9.73%          +0.00%
+charsetprober.py                                  26.76%          26.76%          +0.00%
+codingstatemachine.py                             33.33%          33.33%          +0.00%
 conftest.py                                        5.41%           5.41%          +0.00%
-connection.py                                     31.94%          31.94%          +0.00%
-connectionpool.py                                 19.46%          19.46%          +0.00%
-core.py                                           12.07%          12.07%          +0.00%
+connection.py                                     26.00%          26.00%          +0.00%
+connectionpool.py                                 14.91%          14.91%          +0.00%
+core.py                                            7.35%           7.35%          +0.00%
 cp949prober.py                                    62.50%          62.50%          +0.00%
 enums.py                                          97.14%          97.14%          +0.00%
-escprober.py                                      22.41%          22.41%          +0.00%
+escprober.py                                      15.85%          15.85%          +0.00%
 escsm.py                                         100.00%         100.00%          +0.00%
-eucjpprober.py                                    30.61%          30.61%          +0.00%
+eucjpprober.py                                    23.81%          23.81%          +0.00%
 euckrfreq.py                                     100.00%         100.00%          +0.00%
 euckrprober.py                                    62.50%          62.50%          +0.00%
 euctwfreq.py                                     100.00%         100.00%          +0.00%
 euctwprober.py                                    62.50%          62.50%          +0.00%
-exceptions.py                                     70.69%          70.69%          +0.00%
-fields.py                                         22.22%          22.22%          +0.00%
-filepost.py                                       30.23%          30.23%          +0.00%
+exceptions.py                                     68.33%          68.33%          +0.00%
+fields.py                                         16.13%          16.13%          +0.00%
+filepost.py                                       21.31%          21.31%          +0.00%
 gb2312freq.py                                    100.00%         100.00%          +0.00%
 gb2312prober.py                                   62.50%          62.50%          +0.00%
-hebrewprober.py                                   37.66%          37.66%          +0.00%
+hebrewprober.py                                   28.16%          28.16%          +0.00%
 idnadata.py                                      100.00%         100.00%          +0.00%
-intranges.py                                      20.00%          20.00%          +0.00%
+intranges.py                                      13.64%          13.64%          +0.00%
 jisfreq.py                                       100.00%         100.00%          +0.00%
-jpcntx.py                                         24.69%          24.69%          +0.00%
+jpcntx.py                                         17.70%          17.70%          +0.00%
 langbulgarianmodel.py                            100.00%         100.00%          +0.00%
 langgreekmodel.py                                100.00%         100.00%          +0.00%
 langhebrewmodel.py                               100.00%         100.00%          +0.00%
 langrussianmodel.py                              100.00%         100.00%          +0.00%
 langthaimodel.py                                 100.00%         100.00%          +0.00%
 langturkishmodel.py                              100.00%         100.00%          +0.00%
-latin1prober.py                                   44.23%          44.23%          +0.00%
-mbcharsetprober.py                                25.00%          25.00%          +0.00%
+latin1prober.py                                   37.10%          37.10%          +0.00%
+mbcharsetprober.py                                17.74%          17.74%          +0.00%
 mbcsgroupprober.py                                78.57%          78.57%          +0.00%
 mbcssm.py                                        100.00%         100.00%          +0.00%
 package_data.py                                  100.00%         100.00%          +0.00%
-poolmanager.py                                    25.25%          25.25%          +0.00%
-proxy.py                                          21.43%          21.43%          +0.00%
-queue.py                                          64.29%          64.29%          +0.00%
-request.py                                        51.92%          51.92%          +0.00%
-response.py                                       18.42%          18.42%          +0.00%
-retry.py                                          32.68%          32.68%          +0.00%
-sbcharsetprober.py                                22.37%          22.37%          +0.00%
+poolmanager.py                                    18.57%          18.57%          +0.00%
+proxy.py                                          13.64%          13.64%          +0.00%
+queue.py                                          62.50%          62.50%          +0.00%
+request.py                                        46.05%          46.05%          +0.00%
+response.py                                       13.46%          13.46%          +0.00%
+retry.py                                          24.74%          24.74%          +0.00%
+sbcharsetprober.py                                16.04%          16.04%          +0.00%
 sbcsgroupprober.py                                61.11%          61.11%          +0.00%
-six.py                                            51.29%          51.29%          +0.00%
-sjisprober.py                                     30.61%          30.61%          +0.00%
-socks.py                                          10.67%          10.67%          +0.00%
-ssl_.py                                           37.50%          37.50%          +0.00%
-ssltransport.py                                    3.60%           3.60%          +0.00%
-timeout.py                                        34.38%          34.38%          +0.00%
-universaldetector.py                              15.45%          15.45%          +0.00%
-url.py                                            25.85%          25.85%          +0.00%
-utf8prober.py                                     32.56%          32.56%          +0.00%
+six.py                                            46.44%          46.44%          +0.00%
+sjisprober.py                                     23.81%          23.81%          +0.00%
+socks.py                                           8.42%           8.42%          +0.00%
+ssl_.py                                           30.62%          30.62%          +0.00%
+ssltransport.py                                    2.65%           2.65%          +0.00%
+timeout.py                                        25.58%          25.58%          +0.00%
+universaldetector.py                               9.36%           9.36%          +0.00%
+url.py                                            17.73%          17.73%          +0.00%
+utf8prober.py                                     23.73%          23.73%          +0.00%
 version.py                                       100.00%         100.00%          +0.00%
-wait.py                                           23.38%          23.38%          +0.00%
+wait.py                                           18.10%          18.10%          +0.00%
 
 Legend:
   *** = Significant improvement (>5%)
@@ -92,6 +94,6 @@ SUMMARY
 ================================================================================
 
 ✓ Coverage is IDENTICAL between before and after_careful_mock
-  Both versions have 32.30% coverage
+  Both versions have 25.08% coverage
   This suggests that mocking did NOT reduce test effectiveness
 
