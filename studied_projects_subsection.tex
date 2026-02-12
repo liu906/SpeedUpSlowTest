@@ -1,0 +1,38 @@
+\subsection{Studied Projects}
+\label{subsec:studied-projects}
+
+To evaluate our approach, we selected 20 real-world open-source Python projects from GitHub, each containing at least one pull request (PR) that addresses slow test execution issues. These projects span various domains including scientific computing, data processing, web frameworks, and machine learning. The selection criteria focused on projects where developers explicitly identified and fixed performance bottlenecks in their test suites.
+
+We categorize the 20 projects into two groups based on the developers' actual fix strategies:
+
+\textbf{Mockable Projects (10 projects):} These projects were fixed by developers using mock-based strategies in their PRs, demonstrating that mocking external dependencies or expensive operations was the appropriate solution for speeding up their slow tests. The mockable projects include:
+
+\begin{itemize}
+    \item \textbf{pyjelly} (PR \#235): A Python library for jellium calculations
+    \item \textbf{ert} (PR \#11206): Ensemble-based Reservoir Tool for reservoir modeling
+    \item \textbf{autosubmit} (PR \#2367): A workflow manager for climate and weather simulations
+    \item \textbf{blueprints} (PR \#691): A Flask microframework for structuring applications
+    \item \textbf{ophyd-async} (PR \#316): Asynchronous hardware abstraction for Bluesky experiment control
+    \item \textbf{quant-mind} (PR \#58): Quantitative finance and machine learning library
+    \item \textbf{nipoppy} (PR \#697): Neuroimaging data pipeline tool
+    \item \textbf{vulnerablecode} (PR \#490): A vulnerability database and package scanner
+    \item \textbf{SDV} (PR \#2158): Synthetic Data Vault for generating synthetic datasets
+    \item \textbf{BazBOM} (PR \#33): Bill of Materials management system
+\end{itemize}
+
+\textbf{Unknown Strategy Projects (10 projects):} These projects were fixed by developers using non-mock strategies (e.g., algorithm optimization, caching, test restructuring), indicating that whether they could benefit from mocking is initially unclear and requires investigation. The unknown strategy projects include:
+
+\begin{itemize}
+    \item \textbf{python-dts-calibration} (PR \#197): Distributed Temperature Sensing calibration tool
+    \item \textbf{opensearch-build} (PR \#595): Build infrastructure for OpenSearch
+    \item \textbf{pydicom} (PR \#1636): DICOM medical imaging file processing library
+    \item \textbf{roms-tools} (PR \#107): Regional Ocean Modeling System preprocessing tools
+    \item \textbf{armi} (PR \#1737): Advanced Reactor Modeling Interface for nuclear reactor simulation
+    \item \textbf{BuffaLogs} (PR \#399): Log analysis and monitoring tool
+    \item \textbf{detection-rules} (PR \#2626): Elastic Security detection rules
+    \item \textbf{lightning-thunder} (PR \#2077): PyTorch Lightning deep learning framework extension
+    \item \textbf{patientMatcher} (PR \#262): Clinical genomics patient matching tool
+    \item \textbf{dfm\_tools} (PR \#976): Delft3D Flexible Mesh modeling toolkit
+\end{itemize}
+
+All selected projects are actively maintained, have comprehensive test suites, and represent realistic scenarios where test execution time is a critical concern for developer productivity. The diversity in project domains and fix strategies allows us to evaluate our approach's effectiveness across different contexts and validate whether our system can correctly identify mockable opportunities even when developers chose alternative solutions.

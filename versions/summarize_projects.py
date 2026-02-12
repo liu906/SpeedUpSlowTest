@@ -34,6 +34,7 @@ import statistics
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend
+from scipy.stats import mannwhitneyu
 
 
 def read_csv_data(csv_file):
@@ -410,6 +411,118 @@ def create_violin_plots(all_plot_data, output_dir, log_suffix):
         print(f"Violin plot saved: {output_file}")
 
 
+def compute_cohens_d(group1, group2):
+    """
+    Compute Cohen's d effect size for two independent groups.
+
+    Uses pooled standard deviation. Positive d means group1 > group2.
+    """
+    n1, n2 = len(group1), len(group2)
+    if n1 < 2 or n2 < 2:
+        return float('nan')
+
+    mean1 = sum(group1) / n1
+    mean2 = sum(group2) / n2
+
+    var1 = sum((x - mean1) ** 2 for x in group1) / (n1 - 1)
+    var2 = sum((x - mean2) ** 2 for x in group2) / (n2 - 1)
+    pooled_std = ((var1 * (n1 - 1) + var2 * (n2 - 1)) / (n1 + n2 - 2)) ** 0.5
+
+    if pooled_std == 0:
+        return float('nan')
+
+    return (mean1 - mean2) / pooled_std
+
+
+def cohens_d_magnitude(d):
+    """Classify Cohen's d into magnitude categories based on absolute value."""
+    import math
+    if isinstance(d, float) and math.isnan(d):
+        return 'N/A'
+    abs_d = abs(d)
+    if abs_d < 0.2:
+        return 'negligible'
+    elif abs_d < 0.5:
+        return 'small'
+    elif abs_d < 0.8:
+        return 'medium'
+    else:
+        return 'large'
+
+
+def generate_statistical_tests_csv(all_plot_data, output_path):
+    """
+    Generate a CSV with Mann-Whitney U test p-values and Cohen's d effect sizes
+    comparing before vs. after for energy consumption and test time.
+
+    Uses Mann-Whitney U test (Wilcoxon rank-sum) because the data are not paired.
+
+    Args:
+        all_plot_data: Dict mapping project names to their plot data
+                       (each containing 'energy' and/or 'duration' dicts
+                       with 'before'/'after' lists of filtered values)
+        output_path: Path for the output CSV file
+    """
+    fieldnames = [
+        'project_name',
+        'energy_mann_whitney_U',
+        'energy_p_value',
+        'energy_cohens_d',
+        'energy_cohens_d_magnitude',
+        'test_time_mann_whitney_U',
+        'test_time_p_value',
+        'test_time_cohens_d',
+        'test_time_cohens_d_magnitude',
+    ]
+
+    results = []
+
+    for project_name in sorted(all_plot_data.keys(), key=str.lower):
+        plot_data = all_plot_data[project_name]
+        row = {'project_name': project_name}
+
+        # Energy: Mann-Whitney U and Cohen's d
+        if 'energy' in plot_data:
+            before = plot_data['energy']['before']
+            after = plot_data['energy']['after']
+            stat, p_value = mannwhitneyu(before, after, alternative='two-sided')
+            row['energy_mann_whitney_U'] = stat
+            row['energy_p_value'] = p_value
+            d = compute_cohens_d(before, after)
+            row['energy_cohens_d'] = d
+            row['energy_cohens_d_magnitude'] = cohens_d_magnitude(d)
+        else:
+            row['energy_mann_whitney_U'] = 'N/A'
+            row['energy_p_value'] = 'N/A'
+            row['energy_cohens_d'] = 'N/A'
+            row['energy_cohens_d_magnitude'] = 'N/A'
+
+        # Test time: Mann-Whitney U and Cohen's d
+        if 'duration' in plot_data:
+            before = plot_data['duration']['before']
+            after = plot_data['duration']['after']
+            stat, p_value = mannwhitneyu(before, after, alternative='two-sided')
+            row['test_time_mann_whitney_U'] = stat
+            row['test_time_p_value'] = p_value
+            d = compute_cohens_d(before, after)
+            row['test_time_cohens_d'] = d
+            row['test_time_cohens_d_magnitude'] = cohens_d_magnitude(d)
+        else:
+            row['test_time_mann_whitney_U'] = 'N/A'
+            row['test_time_p_value'] = 'N/A'
+            row['test_time_cohens_d'] = 'N/A'
+            row['test_time_cohens_d_magnitude'] = 'N/A'
+
+        results.append(row)
+
+    with open(output_path, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(results)
+
+    print(f"\nStatistical tests CSV written to: {output_path}")
+
+
 def main():
     if len(sys.argv) < 2:
         print("Error: No projects specified")
@@ -537,6 +650,11 @@ def main():
         print("\nGenerating violin plots...")
         create_violin_plots(all_plot_data, script_dir, log_suffix)
         print("Violin plots generated successfully!")
+
+        # Generate statistical tests CSV
+        stats_output_name = output_file.replace('.csv', '_stats.csv')
+        stats_output_path = script_dir / stats_output_name
+        generate_statistical_tests_csv(all_plot_data, stats_output_path)
     else:
         print("\nNo data could be processed for any project.")
         sys.exit(1)

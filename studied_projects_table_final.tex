@@ -1,0 +1,36 @@
+\begin{table*}[t]
+\centering
+\caption{Overview of the 20 studied projects with slow test issues. Projects are categorized by the fix strategy developers used in their PRs: mock-based strategies indicate the project benefits from mocking, while non-mock strategies indicate the mockability is initially unclear.}
+\label{tab:studied-projects}
+\small
+\begin{tabular}{@{}llcccrr@{}}
+\toprule
+\textbf{Project} & \textbf{Domain} & \textbf{PR} & \textbf{Fix Strategy} & \textbf{KLOC} & \textbf{\#Tests} \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Mockable Projects (Fixed by Developers with Mock-based Strategies)}} \\
+pyjelly & Scientific Computing & \#235 & Mock-based & 4.1 & 89 \\
+ert & Scientific Computing & \#11206 & Mock-based & 61.4 & 3,018 \\
+autosubmit & Workflow Management & \#2367 & Mock-based & 34.2 & 671 \\
+blueprints & Web Framework & \#691 & Mock-based & 36.3 & 1,301 \\
+ophyd-async & Scientific Computing & \#316 & Mock-based & 7.5 & 1,110 \\
+quant-mind & ML/Finance & \#58 & Mock-based & 9.5 & 1,261 \\
+nipoppy & Data Processing & \#697 & Mock-based & 9.2 & 1,810 \\
+vulnerablecode & Security & \#490 & Mock-based & 9.2 & 168 \\
+SDV & Machine Learning & \#2158 & Mock-based & 15.4 & 3,127 \\
+BazBOM & Data Management & \#33 & Mock-based & 18.1 & 68 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Unknown Strategy Projects (Fixed by Developers with Non-mock Strategies)}} \\
+python-dts-calibration & Scientific Computing & \#197 & Non-mock & 11.4 & 2,943 \\
+opensearch-build & Build Infrastructure & \#595 & Non-mock & 2.9 & 82 \\
+pydicom & Medical Imaging & \#1636 & Non-mock & 124.9 & 47 \\
+roms-tools & Scientific Computing & \#107 & Non-mock & 7.1 & 2,397 \\
+armi & Scientific Computing & \#1737 & Non-mock & 97.7 & 971 \\
+BuffaLogs & Monitoring & \#399 & Non-mock & 12.0 & 53 \\
+detection-rules & Security & \#2626 & Non-mock & 25.3 & 28 \\
+lightning-thunder & Machine Learning & \#2077 & Non-mock & 72.4 & 2,617 \\
+patientMatcher & Healthcare & \#262 & Non-mock & 3.4 & 20 \\
+dfm\_tools & Scientific Computing & \#976 & Non-mock & 7.1 & 2,715 \\
+\bottomrule
+\end{tabular}
+\vspace{-2mm}
+\end{table*}

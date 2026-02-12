@@ -1,0 +1,51 @@
+Case,Category,PR URL
+JSON data cache for tests,Resource Reuse,https://github.com/aazuspan/eerepr/pull/22
+monkeypatch as manual mock,Mocking,https://github.com/aboutcode-org/vulnerablecode/pull/490
+Reducing redundancy + merging tests + skipping unrealistic checks,Redundant Workflow Elimination,https://github.com/aeon-toolkit/aeon/pull/595
+adjust initialization position of ifo,Redundant Workflow Elimination,https://github.com/bilby-dev/bilby/pull/986
+cached properties for mocks/events,Resource Reuse,https://github.com/bluesky/ophyd-async/pull/316
+set TIMEOUT via monkeypatch,Timeout/Hang Prevention,https://github.com/BSC-ES/autosubmit/pull/2367
+fix misuse of monkeypatch for timeout,Timeout/Hang Prevention,https://github.com/BSC-ES/autosubmit/pull/2367
+use APITestCase built-in client,Redundant Workflow Elimination,https://github.com/certego/BuffaLogs/pull/405
+setUp → setUpTestData (70% less DB ops),Redundant Workflow Elimination,https://github.com/certego/BuffaLogs/pull/400
+Django setUpTestData (92% DB reduction),Redundant Workflow Elimination,https://github.com/certego/BuffaLogs/pull/399
+clear CuPy FFT plan cache,Resource Reuse,https://github.com/cupy/cupy/pull/5811
+zarr + parameterized fixtures,IO Overhead Elimination,https://github.com/CWorthy-ocean/roms-tools/pull/107
+reduce parsing/looping/logging,Redundant Workflow Elimination,https://github.com/DataBiosphere/azul/pull/5057
+reduce redundant function calls,Redundant Workflow Elimination,https://github.com/DataBiosphere/azul/pull/5057
+disable logging + remove FS + remove redundant params,IO Overhead Elimination,https://github.com/DiamondLightSource/hyperion/pull/1256
+@lru_cache for rules,Resource Reuse,https://github.com/elastic/detection-rules/pull/2626
+fix mock executing real ops (120s → 1.5s),Mocking,https://github.com/equinor/ert/pull/11206
+fix mock + pytest.mark.timeout,Timeout/Hang Prevention,https://github.com/equinor/ert/pull/11206
+set timeout,Timeout/Hang Prevention,https://github.com/equinor/ert/pull/11901
+test pollution + centralized fixtures,Redundant Workflow Elimination,https://github.com/Galileo-Galilei/kedro-mlflow/pull/478
+replace heavy deps with light ones,IO Overhead Elimination,https://github.com/gardenlinux/gardenlinux/pull/3474
+reuse Spark connection,Resource Reuse,https://github.com/getsentry/sentry-python/pull/4822
+mock and resource reuse,Resource Reuse,https://github.com/getsentry/sentry-python/pull/4822
+remove very large molecule,Problem Size reduction,https://github.com/grimme-lab/dxtb/pull/74
+remove heavy fixtures + mock expensive ops,Redundant Workflow Elimination,https://github.com/gyrinx-app/gyrinx/pull/914
+patch async_setup_entry,Mocking,https://github.com/home-assistant/core/pull/60348
+mock external network (Hue),Mocking,https://github.com/home-assistant/core/pull/60683
+reduce model size,Problem Size reduction,https://github.com/huggingface/transformers/pull/38480
+reduce ALBERT parameters,Problem Size reduction,https://github.com/huggingface/transformers/pull/38480
+HTTP mocking,Mocking,https://github.com/Jelly-RDF/pyjelly/pull/235
+reduce arrays + remove unnecessary calls,Problem Size reduction,https://github.com/JeschkeLab/DeerLab/pull/141
+reduce default timeouts + mock IO,Timeout/Hang Prevention,https://github.com/LLMQuant/quant-mind/pull/58
+clone().detach(),Computational Acceleration,https://github.com/LMCache/LMCache/pull/50
+fix intermittent timeouts by fixing mock,Timeout/Hang Prevention,https://github.com/mantidproject/mantidimaging/pull/1439
+reduce subjects 4–10 → 3,Problem Size reduction,https://github.com/nilearn/nilearn/pull/5768
+mock Zenodo,Mocking,https://github.com/nipoppy/nipoppy/pull/697
+mock to eliminate waiting,Mocking,https://github.com/opensearch-project/opensearch-build/pull/595
+mock external http,Mocking,https://github.com/ProjectTech4DevAI/ai-platform/pull/325
+refactor API tests to mock helpers,Mocking,https://github.com/ProjectTech4DevAI/ai-platform/pull/325
+chunked I/O,IO Overhead Elimination,https://github.com/pydicom/pydicom/pull/1636
+NULL_MODEM mock network,Mocking,https://github.com/pymodbus-dev/pymodbus/pull/1995
+mypy cache directories,Resource Reuse,https://github.com/python-trio/trio/pull/2664
+async batching,Computational Acceleration,https://github.com/python-zeroconf/python-zeroconf/pull/853
+mock is_faker_function,Mocking,https://github.com/sdv-dev/SDV/pull/2158
+reduce ShapeDTW parameter space,Problem Size reduction,https://github.com/sktime/sktime/pull/8324
+threading regression fix,Computational Acceleration,https://github.com/sonic-net/sonic-mgmt/pull/6122
+simplify tests + reduce data + remove ops,Problem Size reduction,https://github.com/stfc/janus-core/pull/300
+minimal fixture,Problem Size reduction,https://github.com/terrapower/armi/pull/1737
+lazy & minimal verification,Computational Acceleration,https://github.com/xarray-contrib/xarray-regrid/pull/45
+NumPy → JAX + vmap,Computational Acceleration,https://github.com/zincware/MDSuite/pull/552
