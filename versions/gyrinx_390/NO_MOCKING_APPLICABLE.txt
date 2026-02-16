@@ -1,0 +1,99 @@
+================================================================
+MOCK-BASED TEST SPEEDUP ANALYSIS RESULT
+================================================================
+
+Project: gyrinx_390
+Analysis Date: 2025-12-04
+
+RESULT: NO MOCKING APPLICABLE
+
+All 5 analyzed tests are NOT MOCKABLE because:
+
+1. Slowness is in TEST SETUP (Django database migrations), not test execution
+2. No external dependencies to mock (no HTTP, API, file I/O, subprocess)
+3. Database operations cannot be mocked without destroying test effectiveness
+
+================================================================
+TEST BREAKDOWN
+================================================================
+
+Test 1: test_content_attribute_creation
+  Setup: 49.03s | Call: ~0.00s | Teardown: 0.09s
+  Status: ❌ NOT MOCKABLE
+  Reason: Django DB migrations + ORM model testing
+
+Test 2: test_pages_path_segment
+  Setup: ~0.00s | Call: 0.07s | Teardown: ~0.00s
+  Status: ❌ NOT MOCKABLE (not actually slow)
+  Reason: Pure Python logic, no external dependencies
+
+Test 3: test_upload_file_too_large
+  Setup: 27.86s | Call: 0.21s | Teardown: 0.09s
+  Status: ❌ NOT MOCKABLE
+  Reason: Django DB migrations + full request/response cycle
+
+Test 4: test_resource_modify_view_permissions
+  Setup: 26.66s | Call: 1.47s | Teardown: 0.08s
+  Status: ❌ NOT MOCKABLE
+  Reason: Django DB migrations + auth/permissions testing
+
+Test 5: test_campaign_status_permissions
+  Setup: 26.85s | Call: 1.06s | Teardown: 0.08s
+  Status: ❌ NOT MOCKABLE
+  Reason: Django DB migrations + state machine testing
+
+================================================================
+ROOT CAUSE
+================================================================
+
+The slowness is caused by Django running 201 migration files to create
+the test database schema. This happens during test SETUP, not during
+actual test execution.
+
+Time breakdown:
+  - 80-95%: Test SETUP (database migrations)
+  - 5-20%: Actual test execution
+  - <1%: Test teardown
+
+================================================================
+RECOMMENDED ALTERNATIVES
+================================================================
+
+Since mocking is not applicable, use these alternatives:
+
+1. pytest --reuse-db
+   → 80-95% speedup for subsequent runs
+
+2. pytest -n auto
+   → 2-4x speedup with parallel execution
+
+3. Use SQLite instead of PostgreSQL for tests
+   → 2-5x faster database setup
+
+4. Squash old migrations
+   → 30-50% faster migration runs
+
+5. Combine strategies:
+   pytest --reuse-db -n auto
+   → Maximum speedup with minimal trade-offs
+
+================================================================
+SUMMARY
+================================================================
+
+Tests analyzed: 5
+Mock misuse found: 0
+New mocks added: 0
+Tests modified: 0
+Tests skipped (not mockable): 5
+Speedup achieved: 0% (mocking not applicable)
+Test effectiveness preserved: 100% (no changes made)
+
+================================================================
+DETAILED ANALYSIS
+================================================================
+
+See MOCK_ANALYSIS.md for detailed test-by-test analysis
+See SUMMARY_REPORT.md for full summary report
+
+================================================================

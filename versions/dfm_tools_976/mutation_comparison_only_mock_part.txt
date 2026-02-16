@@ -1,0 +1,19 @@
+============================================================
+Mutation Testing Comparison
+============================================================
+
+Metric                               Before        After         Diff
+------------------------------------------------------------------
+Total Mutants                         11397        11397            0
+Killed                                  222            9         -213
+Survived                                 87           70          -17
+Timeout                                  95            0          -95
+No Tests                              10993        11318         +325
+Suspicious                                0            0            0
+Skipped                                   0            0            0
+Segfault                                  0            0            0
+Testable                                404           79         -325
+------------------------------------------------------------------
+Mutation Score (%)                    54.95        11.39       -43.56
+
+Status: DECREASED (mutation score decreased by 43.56%) !!!

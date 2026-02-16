@@ -1,0 +1,9 @@
+Mutation Score Results
+=====================
+Subdir:          before
+Test:            test_deleteCache
+Total mutants:   9
+Killed:          5
+Survived:        4
+Errors:          0
+Mutation Score:  55.6%

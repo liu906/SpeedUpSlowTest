@@ -1,0 +1,74 @@
+================================================================================
+QUICK FIX: python-zeroconf_853 Test Failures
+================================================================================
+
+PROBLEM: 32/204 tests fail with "async def functions are not natively supported"
+
+ROOT CAUSE: Missing pytest-asyncio dependency
+
+SOLUTION (choose one):
+================================================================================
+
+Option 1: AUTOMATED FIX (Recommended)
+--------------------------------------
+cd /home/xutong/SpeedUpSlowTest/versions/python-zeroconf_853
+bash fix_and_test.sh
+
+  ↳ This fixes ownership, installs pytest-asyncio, and runs tests
+
+
+Option 2: QUICK MANUAL FIX
+---------------------------
+cd /home/xutong/SpeedUpSlowTest/versions/python-zeroconf_853/before
+sudo chown -R xutong:xutong .venv
+source .venv/bin/activate
+pip install pytest-asyncio
+python -m pytest --durations=0
+
+  ↳ 4 commands to fix and verify
+
+
+Option 3: ONE-LINER (if you have sudo access)
+----------------------------------------------
+cd /home/xutong/SpeedUpSlowTest/versions/python-zeroconf_853/before && sudo chown -R xutong:xutong .venv && source .venv/bin/activate && pip install pytest-asyncio && python -m pytest --durations=0
+
+================================================================================
+
+EXPECTED RESULT AFTER FIX:
+--------------------------
+Before: 32 failed, 171 passed, 1 skipped
+After:  204 passed, 1 skipped  ✅
+
+================================================================================
+
+WHY THIS HAPPENED:
+------------------
+1. Test runner was run with sudo → .venv owned by root
+2. Test runner installed pytest but NOT pytest-asyncio
+3. Project HAS pytest-asyncio in requirements-dev.txt (line 14)
+4. But test runner doesn't install requirements-dev.txt
+
+NOT A BUG IN PROJECT - Just test environment setup issue!
+
+================================================================================
+
+DETAILS:
+--------
+See these files for more information:
+  - COMPLETE_ANALYSIS.md     (Full technical analysis)
+  - SOLUTION_SUMMARY.md      (Summary of problem & solution)
+  - README_FIX.md           (Detailed fix instructions)
+
+================================================================================
+
+AFTER FIXING:
+-------------
+You can then proceed with the mock speedup analysis described in:
+  prompt_template_mock_speedup.md
+
+Slowest tests to analyze for mocking:
+  4.53s  tests/test_services.py::ListenerTest::test_integration_with_listener_class
+  3.31s  tests/test_core.py::Framework::test_handle_response
+  3.21s  tests/services/test_browser.py::TestServiceBrowser::test_update_record
+
+================================================================================
