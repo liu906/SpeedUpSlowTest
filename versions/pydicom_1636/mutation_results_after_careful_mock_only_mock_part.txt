@@ -1,0 +1,321 @@
+    pydicom.data.download.x_calculate_file_hash__mutmut_1: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_2: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_3: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_4: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_5: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_6: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_7: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_8: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_9: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_10: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_11: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_12: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_13: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_14: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_15: no tests
+    pydicom.data.download.x_calculate_file_hash__mutmut_16: no tests
+    pydicom.data.download.x_get_config_dir__mutmut_1: killed
+    pydicom.data.download.x_get_config_dir__mutmut_2: killed
+    pydicom.data.download.x_get_config_dir__mutmut_3: survived
+    pydicom.data.download.x_get_config_dir__mutmut_4: survived
+    pydicom.data.download.x_get_config_dir__mutmut_5: killed
+    pydicom.data.download.x_get_config_dir__mutmut_6: killed
+    pydicom.data.download.x_get_data_dir__mutmut_1: killed
+    pydicom.data.download.x_get_data_dir__mutmut_2: killed
+    pydicom.data.download.x_get_data_dir__mutmut_3: survived
+    pydicom.data.download.x_get_data_dir__mutmut_4: survived
+    pydicom.data.download.x_get_data_dir__mutmut_5: killed
+    pydicom.data.download.x_get_data_dir__mutmut_6: killed
+    pydicom.data.download.x_get_url__mutmut_1: no tests
+    pydicom.data.download.x_get_url__mutmut_2: no tests
+    pydicom.data.download.x_get_url__mutmut_3: no tests
+    pydicom.data.download.x_get_url__mutmut_4: no tests
+    pydicom.data.download.x_get_url__mutmut_5: no tests
+    pydicom.data.download.x_get_url__mutmut_6: no tests
+    pydicom.data.download.x_get_url__mutmut_7: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_1: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_2: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_3: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_4: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_5: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_6: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_7: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_8: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_9: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_10: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_11: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_12: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_13: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_14: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_15: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_16: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_17: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_18: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_19: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_20: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_21: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_22: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_23: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_24: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_25: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_26: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_27: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_28: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_29: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_30: no tests
+    pydicom.data.download.x_data_path_with_download__mutmut_31: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_1: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_2: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_3: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_4: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_5: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_6: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_7: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_8: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_9: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_10: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_11: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_12: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_13: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_14: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_15: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_16: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_17: no tests
+    pydicom.data.download.x_get_cached_filehash__mutmut_18: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_1: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_2: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_3: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_4: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_5: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_6: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_7: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_8: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_9: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_10: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_11: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_12: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_13: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_14: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_15: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_16: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_17: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_18: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_19: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_20: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_21: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_22: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_23: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_24: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_25: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_26: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_27: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_28: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_29: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_30: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_31: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_32: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_33: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_34: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_35: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_36: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_37: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_38: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_39: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_40: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_41: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_42: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_43: no tests
+    pydicom.data.download.x_data_file_hash_check__mutmut_44: no tests
+    pydicom.data.data_manager.x__check_data_hash__mutmut_1: no tests
+    pydicom.data.data_manager.x__check_data_hash__mutmut_2: no tests
+    pydicom.data.data_manager.x__check_data_hash__mutmut_3: no tests
+    pydicom.data.data_manager.x__check_data_hash__mutmut_4: no tests
+    pydicom.data.data_manager.x__check_data_hash__mutmut_5: no tests
+    pydicom.data.data_manager.x__check_data_hash__mutmut_6: no tests
+    pydicom.data.data_manager.x__check_data_hash__mutmut_7: no tests
+    pydicom.data.data_manager.x_get_external_sources__mutmut_1: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_2: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_3: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_4: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_5: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_6: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_7: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_8: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_9: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_10: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_11: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_12: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_13: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_14: survived
+    pydicom.data.data_manager.x_get_external_sources__mutmut_15: survived
+    pydicom.data.data_manager.x_external_data_sources__mutmut_1: survived
+    pydicom.data.data_manager.x_external_data_sources__mutmut_2: survived
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_1: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_2: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_3: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_4: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_5: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_6: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_7: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_8: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_9: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_10: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_11: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_12: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_13: no tests
+    pydicom.data.data_manager.x_online_test_file_dummy_paths__mutmut_14: no tests
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_1: killed
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_2: killed
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_3: killed
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_4: killed
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_5: survived
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_6: killed
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_7: survived
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_8: survived
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_9: survived
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_10: survived
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_11: survived
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_12: survived
+    pydicom.data.data_manager.x_fetch_data_files__mutmut_13: survived
+    pydicom.data.data_manager.x_get_files__mutmut_1: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_2: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_3: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_4: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_5: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_6: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_7: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_8: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_9: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_10: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_11: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_12: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_13: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_14: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_15: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_16: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_17: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_18: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_19: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_20: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_21: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_22: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_23: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_24: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_25: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_26: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_27: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_28: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_29: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_30: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_31: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_32: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_33: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_34: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_35: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_36: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_37: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_38: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_39: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_40: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_41: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_42: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_43: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_44: no tests
+    pydicom.data.data_manager.x_get_files__mutmut_45: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_1: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_2: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_3: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_4: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_5: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_6: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_7: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_8: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_9: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_10: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_11: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_12: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_13: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_14: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_15: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_16: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_17: no tests
+    pydicom.data.data_manager.x_get_palette_files__mutmut_18: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_1: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_2: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_3: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_4: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_5: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_6: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_7: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_8: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_9: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_10: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_11: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_12: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_13: no tests
+    pydicom.data.data_manager.x_get_testdata_file__mutmut_14: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_1: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_2: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_3: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_4: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_5: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_6: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_7: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_8: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_9: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_10: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_11: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_12: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_13: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_14: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_15: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_16: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_17: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_18: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_19: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_20: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_21: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_22: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_23: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_24: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_25: no tests
+    pydicom.data.data_manager.x__get_testdata_file__mutmut_26: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_1: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_2: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_3: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_4: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_5: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_6: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_7: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_8: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_9: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_10: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_11: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_12: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_13: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_14: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_15: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_16: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_17: no tests
+    pydicom.data.data_manager.x_get_testdata_files__mutmut_18: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_1: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_2: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_3: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_4: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_5: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_6: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_7: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_8: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_9: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_10: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_11: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_12: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_13: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_14: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_15: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_16: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_17: no tests
+    pydicom.data.data_manager.x_get_charset_files__mutmut_18: no tests
+    pydicom.data.retry.x_retry__mutmut_1: survived
+    pydicom.data.retry.x_retry__mutmut_2: survived
+    pydicom.data.retry.x_retry__mutmut_3: survived
