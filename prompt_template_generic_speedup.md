@@ -1,4 +1,7 @@
-PROJECT_PATH=versions/dfm_tools_976
+[if you are gonna reach the limit during this task, stop before you reach the token limit and tell me why this task cause timeout]
+
+
+PROJECT_PATH=versions/python-dts-calibration_197
 
 here is my sudo pwd in case you need: 19970321
 # Prompt: Test Speedup
@@ -25,37 +28,11 @@ Analyze slow tests and apply developers' best practices to speed up test executi
 Given a list of slowest tests from project `{PROJECT_PATH}/before` with "venv/" :
 
 ```
-331.62s call     tests/test_download.py::test_cds_credentials
-127.41s call     tests/test_coastlines.py::test_get_coastlines_gdb_global
-38.31s call     tests/test_download.py::test_download_hycom
-34.56s call     tests/test_examples.py::test_run_examples[postprocess_mapnc_ugrid]
-21.80s call     tests/test_dfm_tools.py::test_intersect_edges
-20.69s call     tests/test_interpolate_grid2bnd.py::test_interpolate_tide_to_forcingmodel
-11.93s call     tests/test_observations.py::test_ssh_catalog_subset[rwsddl]
-11.64s call     tests/test_examples.py::test_run_examples[postprocess_exporttoshapefile]
-9.46s call     tests/test_data.py::test_data_map
-7.12s call     tests/test_observations.py::test_ssh_retrieve_data[rwsddl]
-6.79s call     tests/test_examples.py::test_run_examples[postprocess_map_monthlymean]
-6.16s call     tests/test_observations.py::test_rwsddl_ssh_get_time_max
-5.87s call     tests/test_observations.py::test_ssh_netcdf_overview
-5.69s call     tests/test_observations.py::test_ssh_catalog_subset_expected_fields[rwsddl]
-5.14s call     tests/test_hydrolib_helpers.py::test_geodataframe_with_Polygon_to_PolyFile
-4.51s call     tests/test_observations.py::test_ssh_catalog_subset_expected_fields[ioc]
-4.27s call     tests/test_external_packages.py::test_ctx_add_basemap
-4.18s call     tests/test_examples.py::test_run_examples[postprocess_hisnc]
-4.08s call     tests/test_examples.py::test_run_examples[postprocess_interpolate_edgevar_tofaces]
-3.97s call     tests/test_observations.py::test_ssh_catalog_subset_expected_fields[uhslc-fast]
-3.63s call     tests/test_examples.py::test_run_examples[preprocess_meshkernel_creategrid]
-3.62s call     tests/test_data.py::test_data_his
-3.58s call     tests/test_examples.py::test_run_examples[preprocess_merge_meteofiles]
-3.53s call     tests/test_examples.py::test_run_examples[preprocess_hydrolib_readtim]
-3.51s call     tests/test_observations.py::test_ssh_retrieve_data[ioc]
-3.48s call     tests/test_examples.py::test_run_examples[postprocess_delft3D4_netcdf]
-3.28s call     tests/test_examples.py::test_run_examples[postprocess_mapfile_to_regulargrid]
-3.18s call     tests/test_examples.py::test_run_examples[postprocess_CMCC_plotting]
-3.13s call     tests/test_observations.py::test_ssh_catalog_subset[ioc]
-3.03s call     tests/test_examples.py::test_run_examples[preprocess_hydrolib_readxyz_readxyn_readcrs]
-
+3.30s call     pydicom/tests/test_pillow_pixel_data.py::TestPillowHandler_JPEG::test_color_3d
+0.95s call     pydicom/tests/test_data_manager.py::test_fetch_data_files
+0.41s call     pydicom/tests/test_pillow_pixel_data.py::TestPillowHandler_JPEG2K::test_properties[/root/.pydicom/data/RG1_J2KR.dcm-data11]
+0.41s call     pydicom/tests/test_pillow_pixel_data.py::TestPillowHandler_JPEG2K::test_array[/root/.pydicom/data/RG1_J2KR.dcm-/root/.pydicom/data/RG1_UNCR.dcm-fixes3]
+0.18s call     pydicom/tests/test_pillow_pixel_data.py::TestPillowHandler_JPEG::test_properties[/root/.pydicom/data/color3d_jpeg_baseline.dcm-data0]
 
 
 ```
@@ -130,7 +107,7 @@ Status: ✅ PASS
 Verification preserved: ✅ YES
 ```
 
-### 4. Summary Report
+### 4. Summary Report write to file system as a readme file
 ```markdown
 
 ### Tests Analyzed: 5
